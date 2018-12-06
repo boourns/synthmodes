@@ -1,0 +1,1930 @@
+<module name="Disting mk4" id="disting-mk4">
+        <algorithms>
+        <algorithm name="A1 Precision Adder">
+<tags>
+<tag>utility</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">offset, in 1v increments</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">X + Y + offset, or X + offset</distingControl>
+    <distingControl name="B">X - Y + offset, or Y +/- offset</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="1" default="0">When 1, Z offset is not quantized to 1v steps.</distingParameter>
+<distingParameter pos="1" min="0" max="2" default="0">Sum mode.
+0: A=X+Y+offset, B=X-Y-offset
+1: A=X+offset, B=Y-offset
+2: A=X+offset, B=Y+offset</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="A2 Four Quadrant Multiplier">
+<tags>
+<tag>utility</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">scale, from 1/10th to 10x</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">X * Y * scale</distingControl>
+    <distingControl name="B">-X * Y * scale</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="1" default="0">When 1, Z scale is not quantized to integer values</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="A3 Full-wave Rectifier / abs()">
+<tags>
+<tag>utility</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">mode.  &apos;-0&apos; indicates independent mode, 0 indicates combined mode</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">abs(X) in independent mode
+abs(X + Y) in combined mode</distingControl>
+    <distingControl name="B">abs(Y) in independent mode
+abs(X - Y) in combined mode</distingControl>
+</section>
+
+<section title="Description">
+<text>Provides either full-wave rectifier, or absolute value function, depending on value of Z</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="A4 Minimum / Maximum">
+<tags>
+<tag>utility</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">Gate.  Above 2.5V, outputs follow inputs, Below -1.5V, outputs are frozen.</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">min(X, Y)</distingControl>
+    <distingControl name="B">max(X, Y)</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="A5 Linear / Exponential Converter">
+<tags>
+<tag>utility</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">Gate.  Above 2.5V, outputs follow inputs, Below -1.5V, outputs are frozen.</distingControl>
+    <distingControl name="X">exponential input</distingControl>
+    <distingControl name="Y">linear input</distingControl>
+    <distingControl name="A">min(X, Y)</distingControl>
+    <distingControl name="B">max(X, Y)</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="A6 Quantizer">
+<tags>
+<tag>quantizer</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">Scale &amp; function of Y</distingControl>
+    <distingControl name="X">Unquantized pitch CV</distingControl>
+    <distingControl name="Y">When Z is positive, acts as transpose
+When Z is negative, triggers quantizer to update output.</distingControl>
+    <distingControl name="A">quantized value of X</distingControl>
+    <distingControl name="B">trigger on note change</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-1" max="31" default="31">Attenuation of input X</distingParameter>
+<distingParameter pos="1" min="0" max="1" default="0">Transpose mode.
+When 0, transposition occurs after quantization.
+When 1, transposition occurs before quantization.</distingParameter>
+<distingParameter pos="2" min="-31" max="31" default="0">Key.  Adjusts root of quantization scale by semitones.</distingParameter>
+<distingParameter pos="3" min="0" max="31" default="0">Time delay of B output gate.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="A7 Comparator">
+<tags>
+<tag>logic</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">hysteresis</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">gate when X &gt; Y (+5V)</distingControl>
+    <distingControl name="B">gate when X &lt; Y (+5V)</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="A8 Dual Waveshaper">
+<tags>
+<tag>effect</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">gain</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">folded X</distingControl>
+    <distingControl name="B">triangle-to-sine Y</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="B1 Sample and Hold">
+<tags>
+<tag>utility</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">slew rate</distingControl>
+    <distingControl name="X">input signal</distingControl>
+    <distingControl name="Y">input S&amp;H control (see parameter 0)</distingControl>
+    <distingControl name="A">S&amp;H output</distingControl>
+    <distingControl name="B">noise (+/- 8V)</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="1" default="0">Mode.
+When 0, output A is updated when trigger input Y goes over 1V.
+When 1, output A follows X while input Y is over 1V.</distingParameter>
+<distingParameter pos="1" min="0" max="31" default="0">Time delay between trigger and sampling.</distingParameter>
+<distingParameter pos="2" min="0" max="3" default="1">Noise colour:
+0: Violet
+1: White
+2: Pink
+3: Red</distingParameter>
+</section>
+<section title="Description">
+<text>Pressing Z triggers a sample manually.</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="B2 Slew Rate Limiter">
+<tags>
+<tag>utility</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">slew rate</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">linear slew rate limited X+Y</distingControl>
+    <distingControl name="B">logarithmic slew rate limited X+Y</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="B3 Pitch &amp; Envelope Tracker">
+<tags>
+<tag>external</tag>
+<tag>envelope</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">envelope slew rate</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">V/oct pitch offset</distingControl>
+    <distingControl name="A">V/oct pitch derived from X, plus Y</distingControl>
+    <distingControl name="B">envelope derived from X</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="B4 Clockable Delay/Echo">
+<tags>
+<tag>effect</tag>
+<tag>delay</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">feedback</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">clock input</distingControl>
+    <distingControl name="A">dry + delay in ratio according to feedback</distingControl>
+    <distingControl name="B">delay signal only</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-15" max="8" default="0">Delay time multiplier, from 1/64 to x16</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="B5 LFO">
+<tags>
+<tag>LFO</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">tune (+/-10Hz)</distingControl>
+    <distingControl name="X">Hz/V frequency</distingControl>
+    <distingControl name="Y">waveshape</distingControl>
+    <distingControl name="A">saw -&gt; sine -&gt; triangle</distingControl>
+    <distingControl name="B">pulse -&gt; square -&gt; pulse</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-1" max="31" default="31">attenuation for output A</distingParameter>
+<distingParameter pos="1" min="-1" max="31" default="31">attenuation for output B</distingParameter>
+<distingParameter pos="2" min="-31" max="31" default="0">offset for output A</distingParameter>
+<distingParameter pos="3" min="-31" max="31" default="0">offset for output B</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="B6 Clocked LFO">
+<tags>
+<tag>LFO</tag>
+<tag>clocked</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">rate divider / multiplier</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">waveshape</distingControl>
+    <distingControl name="A">saw -&gt; sine -&gt; triangle</distingControl>
+    <distingControl name="B">pulse -&gt; square -&gt; pulse</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-1" max="31" default="31">attenuation for both outputs</distingParameter>
+</section>
+<section title="Description">
+<text>tap tempo by pressing Z</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="B7 VCO with linear FM">
+<tags>
+<tag>oscillator</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">tune +/- 0.5 octave</distingControl>
+    <distingControl name="X">V/oct input</distingControl>
+    <distingControl name="Y">linear FM input</distingControl>
+    <distingControl name="A">selectable output waveform</distingControl>
+    <distingControl name="B">selectable output waveform</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-16" max="8" default="0">octave shift</distingParameter>
+<distingParameter pos="1" min="0" max="32" default="32">attenuation for output A</distingParameter>
+<distingParameter pos="2" min="0" max="32" default="32">attenuation for output B</distingParameter>
+<distingParameter pos="3" min="0" max="4" default="1">waveform A.
+0: triangle
+1: sine
+2: square
+3: saw
+4: sub-octave square</distingParameter>
+<distingParameter pos="4" min="0" max="4" default="3">waveform B.  Same list as above.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="B8 VCO with waveshaping">
+<tags>
+<tag>oscillator</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">tune +/- 0.5 octave</distingControl>
+    <distingControl name="X">V/oct input</distingControl>
+    <distingControl name="Y">waveshape / PWM</distingControl>
+    <distingControl name="A">selectable output waveforms</distingControl>
+    <distingControl name="B">selectable output waveforms</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-16" max="8" default="0">octave shift</distingParameter>
+<distingParameter pos="1" min="0" max="32" default="32">attenuation for output A</distingParameter>
+<distingParameter pos="2" min="0" max="32" default="32">attenuation for output B</distingParameter>
+<distingParameter pos="3" min="-32" max="32" default="0">input Y offset</distingParameter>
+<distingParameter pos="4" min="0" max="2" default="0">output waveforms.
+0: A=triangle/saw, B= square/pulse
+1: A=triangle/saw, B=sub-octave square
+2: A=square/pulse, B=sub octave square</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="C1 Precision Adder (fractional offsets)">
+<tags>
+<tag>utility</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">offset, in increments of 1/parameter of an octave</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">X + Y + offset</distingControl>
+    <distingControl name="B">X - Y + offset</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="1" max="12" default="12">Controls Z offset divisor, from 1/1 of an octave to 1/12 an octave(semitones).</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="C2 Voltage Controlled Delay Line">
+<tags>
+<tag>effect</tag>
+<tag>delay</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">feedback (bipolar)</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">delay time</distingControl>
+    <distingControl name="A">delay output</distingControl>
+    <distingControl name="B">delay output plus input</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-31" max="31" default="0">Applies offset to Y input</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="C3 Clockable Ping Pong Delay (Z feedback)">
+<tags>
+<tag>effect</tag>
+<tag>delay</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">feedback</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">clock</distingControl>
+    <distingControl name="A">left output</distingControl>
+    <distingControl name="B">right output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="1" default="0">Output mode.
+When 0, outputs are dry&amp;wet mixed.
+When 1, outputs are only wet signal.</distingParameter>
+</section>
+<section title="Description">
+<text>Tap tempo enabled.</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="C4 Clockable Ping Pong Delay (Z input pan)">
+<tags>
+<tag>effect</tag>
+<tag>delay</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">input pan</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">clock</distingControl>
+    <distingControl name="A">left output</distingControl>
+    <distingControl name="B">right output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="31" default="24">Feedback</distingParameter>
+</section>
+<section title="Description">
+<text>Tap tempo enabled.</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="C5 Resonator">
+<tags>
+<tag>effect</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">gain</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">centre frequency (pitch, V/oct)</distingControl>
+    <distingControl name="A">audio output</distingControl>
+    <distingControl name="B">envelope of audio out</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-31" max="31" default="0">Y input offset (semitones)</distingParameter>
+</section>
+<section title="Description">
+<text>press Z to strike</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="C6 Vocoder">
+<tags>
+<tag>effect</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">decay time</distingControl>
+    <distingControl name="X">modulator input</distingControl>
+    <distingControl name="Y">carrier input</distingControl>
+    <distingControl name="A">audio output</distingControl>
+    <distingControl name="B">envelope output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="1" default="0">Filter bank selection</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="C7 Phaser">
+<tags>
+<tag>effect</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">feedback (bipolar)</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">sweep</distingControl>
+    <distingControl name="A">phase-shifted output plus input</distingControl>
+    <distingControl name="B">phase-shifted output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-31" max="31" default="0">Y input offset</distingParameter>
+<distingParameter pos="1" min="1" max="10" default="10">Number of phaser stages</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="C8 Bit Crusher">
+<tags>
+<tag>effect</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">bit reduction</distingControl>
+    <distingControl name="X">signal input</distingControl>
+    <distingControl name="Y">sample rate input</distingControl>
+    <distingControl name="A">signal output</distingControl>
+    <distingControl name="B">comparator out: +5V when A is above 0</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-31" max="31" default="0">Y input offset</distingParameter>
+<distingParameter pos="1" min="0" max="7" default="0">bit reduction mode</distingParameter>
+<distingParameter pos="2" min="0" max="7" default="0">bit mangling mode.  Bit swap, rotation, or XOR depending on value.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="D2 Tape Delay">
+<tags>
+<tag>effect</tag>
+<tag>delay</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">feedback</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">tape speed</distingControl>
+    <distingControl name="A">output (depends on mode)</distingControl>
+    <distingControl name="B">output (depends on mode)</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="43" default="43">tape length</distingParameter>
+<distingParameter pos="1" min="-9" max="9" default="0">fine length control</distingParameter>
+<distingParameter pos="2" min="-8" max="16" default="0">tape speed</distingParameter>
+<distingParameter pos="3" min="0" max="2" default="0">output mode.
+0: A mix, B delay only.
+1: A &amp; B are mix.
+2: A &amp; B are delay only.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="D3 Waveform Animator">
+<tags>
+<tag>effect</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">separation</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">threshold</distingControl>
+    <distingControl name="A">animated output</distingControl>
+    <distingControl name="B">square waves output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-1" max="31" default="11">LFO depth</distingParameter>
+<distingParameter pos="1" min="-31" max="31" default="0">Y offset</distingParameter>
+<distingParameter pos="2" min="0" max="31" default="23">LFO rate</distingParameter>
+<distingParameter pos="3" min="-1" max="31" default="-1">Scale.
+When -1, an envelope tracker is used so LFO amplitude matches input.
+Other values set LFO amplitude directly.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="D4 State Variable Filter">
+<tags>
+<tag>filter</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">filter type</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">filter frequency</distingControl>
+    <distingControl name="A">filter output LP-&gt;BP-&gt;HP</distingControl>
+    <distingControl name="B">filter output HP-&gt;BP-&gt;LP</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="31" default="0">Filter resonance</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="D5 LP/HP Filter">
+<tags>
+<tag>filter</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">filter resonance</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">filter frequency</distingControl>
+    <distingControl name="A">LP filter output</distingControl>
+    <distingControl name="B">HP filter output</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="D6 LP/BP Filter">
+<tags>
+<tag>filter</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">filter resonance</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">filter frequency</distingControl>
+    <distingControl name="A">LP filter output</distingControl>
+    <distingControl name="B">BP filter output</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="D7 BP/HP Filter">
+<tags>
+<tag>filter</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">filter resonance</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">filter frequency</distingControl>
+    <distingControl name="A">BP filter output</distingControl>
+    <distingControl name="B">HP filter output</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="D8 BP/Notch Filter">
+<tags>
+<tag>filter</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">filter resonance</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">filter frequency</distingControl>
+    <distingControl name="A">BP filter output</distingControl>
+    <distingControl name="B">notch filter output</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="E1 AR Envelope">
+<tags>
+<tag>modulation</tag>
+<tag>envelope</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">envelope times</distingControl>
+    <distingControl name="X">trigger input</distingControl>
+    <distingControl name="Y">trigger input</distingControl>
+    <distingControl name="A">envelope output</distingControl>
+    <distingControl name="B">envelope output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="2" default="0">Trigger Mode.
+When 0, acts as AR envelope, holding envelope high as long as trigger is high.
+When 1, executes one full A/D when gate goes high.
+When 2, loops A/D as long as the trigger is high.</distingParameter>
+<distingParameter pos="1" min="0" max="1" default="0">Z mode.
+When 0, Z sweeps from short A&amp;D -&gt; short A, long D -&gt; long A&amp;D -&gt; long A, short D
+When 1, sets A&amp;D to same value.</distingParameter>
+<distingParameter pos="2" min="-32" max="32" default="32">Output A Attenuverter</distingParameter>
+<distingParameter pos="3" min="-32" max="32" default="32">Output B Attenuverter</distingParameter>
+<distingParameter pos="4" min="-32" max="32" default="0">Output A Offset</distingParameter>
+<distingParameter pos="4" min="-32" max="32" default="0">Output B Offset</distingParameter>
+<distingParameter pos="5" min="0" max="32" default="26">Attack shape</distingParameter>
+<distingParameter pos="6" min="0" max="32" default="10">Release shape</distingParameter>
+</section>
+<section title="Description">
+<text>Push Z to manually trigger envelope</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="E2 AR Envelope &amp; VCA">
+<tags>
+<tag>modulation</tag>
+<tag>envelope</tag>
+<tag>VCA</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">envelope times</distingControl>
+    <distingControl name="X">trigger input</distingControl>
+    <distingControl name="Y">VCA input</distingControl>
+    <distingControl name="A">envelope output</distingControl>
+    <distingControl name="B">VCA output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="2" default="0">Trigger Mode.
+When 0, acts as AR envelope, holding envelope high as long as trigger is high.
+When 1, executes one full A/D when gate goes high.
+When 2, loops A/D as long as the trigger is high.</distingParameter>
+<distingParameter pos="1" min="0" max="1" default="0">Z mode.
+When 0, Z sweeps from short A&amp;D -&gt; short A, long D -&gt; long A&amp;D -&gt; long A, short D
+When 1, sets A&amp;D to same value.</distingParameter>
+<distingParameter pos="2" min="-32" max="32" default="32">Output A Attenuverter</distingParameter>
+<distingParameter pos="3" min="-32" max="32" default="32">Output B Attenuverter</distingParameter>
+<distingParameter pos="4" min="-32" max="32" default="0">Output A Offset</distingParameter>
+<distingParameter pos="5" min="-32" max="32" default="0">Output B Offset</distingParameter>
+<distingParameter pos="6" min="0" max="32" default="26">Attack shape</distingParameter>
+<distingParameter pos="7" min="0" max="32" default="10">Release shape</distingParameter>
+</section>
+<section title="Description">
+<text>Push Z to manually trigger envelope</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="E3 Dual AR Envelope">
+<tags>
+<tag>modulation</tag>
+<tag>envelope</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">envelope times</distingControl>
+    <distingControl name="X">trigger input A</distingControl>
+    <distingControl name="Y">trigger input B</distingControl>
+    <distingControl name="A">envelope output A</distingControl>
+    <distingControl name="B">envelope output B</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="2" default="0">Trigger Mode.
+When 0, acts as AR envelope, holding envelope high as long as trigger is high.
+When 1, executes one full A/D when gate goes high.
+When 2, loops A/D as long as the trigger is high.</distingParameter>
+<distingParameter pos="1" min="0" max="1" default="0">Z mode.
+When 0, Z sweeps from short A&amp;D -&gt; short A, long D -&gt; long A&amp;D -&gt; long A, short D
+When 1, sets A&amp;D to same value.</distingParameter>
+<distingParameter pos="2" min="-32" max="32" default="32">Output A Attenuverter</distingParameter>
+<distingParameter pos="3" min="-32" max="32" default="32">Output B Attenuverter</distingParameter>
+<distingParameter pos="4" min="-32" max="32" default="0">Output A Offset</distingParameter>
+<distingParameter pos="4" min="-32" max="32" default="0">Output B Offset</distingParameter>
+</section>
+<section title="Description">
+<text>Push Z to manually trigger envelope</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="E4 Stereo Compressor">
+<tags>
+<tag>effect</tag>
+<tag>compressor</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">compression ratio</distingControl>
+    <distingControl name="X">left input</distingControl>
+    <distingControl name="Y">right input</distingControl>
+    <distingControl name="A">left output</distingControl>
+    <distingControl name="B">right output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-36" max="0" default="-12">Threshold</distingParameter>
+<distingParameter pos="1" min="0" max="99" default="20">Attack time</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="20">Release time</distingParameter>
+<distingParameter pos="3" min="-1" max="36" default="0">Make-up gain</distingParameter>
+<distingParameter pos="4" min="0" max="99" default="0">Lookahead</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="E5 Side-chain Compressor">
+<tags>
+<tag>effect</tag>
+<tag>compressor</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">side-chain input</distingControl>
+    <distingControl name="X">left input</distingControl>
+    <distingControl name="Y">right input</distingControl>
+    <distingControl name="A">left output</distingControl>
+    <distingControl name="B">right output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-36" max="0" default="-12">Threshold</distingParameter>
+<distingParameter pos="1" min="0" max="99" default="20">Attack time</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="20">Release time</distingParameter>
+<distingParameter pos="3" min="-1" max="36" default="0">Make-up gain</distingParameter>
+<distingParameter pos="4" min="0" max="99" default="0">Lookahead</distingParameter>
+<distingParameter pos="5" min="0" max="99" default="50">Compression ratio</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="E6 Mono Compressor">
+<tags>
+<tag>effect</tag>
+<tag>compressor</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">compression ratio</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">side-chain input</distingControl>
+    <distingControl name="A">audio output</distingControl>
+    <distingControl name="B">gain reduction output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-36" max="0" default="-12">Threshold</distingParameter>
+<distingParameter pos="1" min="0" max="99" default="20">Attack time</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="20">Release time</distingParameter>
+<distingParameter pos="3" min="-1" max="36" default="0">Make-up gain</distingParameter>
+<distingParameter pos="4" min="0" max="99" default="0">Lookahead</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="E7 Euro to Buchla Converter">
+<tags>
+<tag>utility</tag>
+<tag>external</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">tune +/- 0.5 octaves</distingControl>
+    <distingControl name="X">1V/oct input</distingControl>
+    <distingControl name="Y">gate input</distingControl>
+    <distingControl name="A">1.2V/oct output</distingControl>
+    <distingControl name="B">gate/trigger output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-8" max="8" default="0">Octave shift</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="E8 Buchla to Euro Converter">
+<tags>
+<tag>utility</tag>
+<tag>external</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">tune +/- 0.5 octaves</distingControl>
+    <distingControl name="X">1.2V/oct input</distingControl>
+    <distingControl name="Y">gate/trigger input</distingControl>
+    <distingControl name="A">1V/oct output</distingControl>
+    <distingControl name="B">trigger output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-8" max="8" default="0">Octave shift</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="F1 Clockable AD Envelope (w/ mute)">
+<tags>
+<tag>modulation</tag>
+<tag>envelope</tag>
+<tag>clocked</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">envelope shape</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">mute input</distingControl>
+    <distingControl name="A">envelope output</distingControl>
+    <distingControl name="B">envelope output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-15" max="8" default="0">Delay time multiplier</distingParameter>
+<distingParameter pos="1" min="-32" max="32" default="32">Output A Attenuverter</distingParameter>
+<distingParameter pos="2" min="-32" max="32" default="32">Output B Attenuverter</distingParameter>
+</section>
+<section title="Description">
+<text>Tap tempo by pressing Z</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="F2 Clockable AD Envelope (w/ gate)">
+<tags>
+<tag>modulation</tag>
+<tag>envelope</tag>
+<tag>clocked</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">envelope shape</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">gate input</distingControl>
+    <distingControl name="A">envelope output</distingControl>
+    <distingControl name="B">envelope output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-15" max="8" default="0">Delay time multiplier</distingParameter>
+<distingParameter pos="1" min="-32" max="32" default="32">Output A Attenuverter</distingParameter>
+<distingParameter pos="2" min="-32" max="32" default="32">Output B Attenuverter</distingParameter>
+</section>
+<section title="Description">
+<text>Tap tempo by pressing Z</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="F3 Clockable AD Envelope (w/ trigger)">
+<tags>
+<tag>modulation</tag>
+<tag>envelope</tag>
+<tag>clocked</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">envelope shape</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">trigger input</distingControl>
+    <distingControl name="A">envelope output</distingControl>
+    <distingControl name="B">envelope output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-15" max="8" default="0">Delay time multiplier</distingParameter>
+<distingParameter pos="1" min="-32" max="32" default="32">Output A Attenuverter</distingParameter>
+<distingParameter pos="2" min="-32" max="32" default="32">Output B Attenuverter</distingParameter>
+</section>
+<section title="Description">
+<text>Tap tempo by pressing Z</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="F4 Clockable AD Envelope &amp; VCA)">
+<tags>
+<tag>modulation</tag>
+<tag>envelope</tag>
+<tag>VCA</tag>
+<tag>clocked</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">envelope shape</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">VCA input</distingControl>
+    <distingControl name="A">envelope output</distingControl>
+    <distingControl name="B">VCA output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-15" max="8" default="0">Delay time multiplier</distingParameter>
+<distingParameter pos="1" min="-32" max="32" default="32">Output A Attenuverter</distingParameter>
+<distingParameter pos="2" min="-32" max="32" default="32">Output B Attenuverter</distingParameter>
+</section>
+<section title="Description">
+<text>Tap tempo by pressing Z</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="F5 Shift Register Random CVs">
+<tags>
+<tag>modulation</tag>
+<tag>random</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">randomness</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">modify input</distingControl>
+    <distingControl name="A">unipolar output</distingControl>
+    <distingControl name="B">bipolar output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="1" default="0">Direction</distingParameter>
+<distingParameter pos="1" min="1" max="16" default="8">Length</distingParameter>
+<distingParameter pos="2" min="0" max="31" default="0">Slew rate</distingParameter>
+<distingParameter pos="3" min="-1" max="31" default="31">Output attenuator</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="F6 Shift Register Random Quantized CVs">
+<tags>
+<tag>modulation</tag>
+<tag>random</tag>
+<tag>quantizer</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">randomness</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">modify input</distingControl>
+    <distingControl name="A">quantized CV output</distingControl>
+    <distingControl name="B">trigger output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="1" default="0">Direction</distingParameter>
+<distingParameter pos="1" min="1" max="16" default="8">Length</distingParameter>
+<distingParameter pos="2" min="0" max="15" default="0">Scale</distingParameter>
+<distingParameter pos="3" min="-1" max="31" default="31">Output attenuator</distingParameter>
+<distingParameter pos="4" min="0" max="1" default="0">MIDI Gate</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="F7 Shift Register Random Triggers">
+<tags>
+<tag>modulation</tag>
+<tag>random</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">randomness</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">modify input</distingControl>
+    <distingControl name="A">trigger output</distingControl>
+    <distingControl name="B">inverse trigger output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="1" max="16" default="8">Length</distingParameter>
+</section>
+<section title="Description">
+<text>Press Z to modify sequence</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="F8 Shift Register Random Dual Triggers">
+<tags>
+<tag>modulation</tag>
+<tag>random</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">randomness</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">modify input</distingControl>
+    <distingControl name="A">trigger output A</distingControl>
+    <distingControl name="B">trigger output B</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="1" max="16" default="8">Length A</distingParameter>
+<distingParameter pos="1" min="1" max="16" default="8">Length B</distingParameter>
+</section>
+<section title="Description">
+<text>Press Z to modify sequence</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="G1 ES-1 Emulation">
+<tags>
+<tag>utility</tag>
+<tag>external</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">trim</distingControl>
+    <distingControl name="X">input 1</distingControl>
+    <distingControl name="Y">input 2</distingControl>
+    <distingControl name="A">output 1</distingControl>
+    <distingControl name="B">output 2</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="G2 ES-2 Emulation">
+<tags>
+<tag>utility</tag>
+<tag>external</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">trim</distingControl>
+    <distingControl name="X">input 1</distingControl>
+    <distingControl name="Y">input 2</distingControl>
+    <distingControl name="A">output 1</distingControl>
+    <distingControl name="B">output 2</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="G3 Pitch Reference">
+<tags>
+<tag>utility</tag>
+<tag>reference</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">output amplitude</distingControl>
+    <distingControl name="X">not used</distingControl>
+    <distingControl name="Y">not used</distingControl>
+    <distingControl name="A">sine output</distingControl>
+    <distingControl name="B">output 2</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="11" default="0">Semitone</distingParameter>
+<distingParameter pos="1" min="-1" max="9" default="4">Octave</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="G4 Frequency Reference">
+<tags>
+<tag>utility</tag>
+<tag>reference</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">output amplitude</distingControl>
+    <distingControl name="X">not used</distingControl>
+    <distingControl name="Y">not used</distingControl>
+    <distingControl name="A">sine output</distingControl>
+    <distingControl name="B">output 2</distingControl>
+</section>
+
+<section title="Description">
+<text>See manual for explanation how to set frequency with S and Z.</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="G5 Tuner">
+<tags>
+<tag>utility</tag>
+<tag>reference</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">output B amplitude</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">not used</distingControl>
+    <distingControl name="A">copy of X</distingControl>
+    <distingControl name="B">sine wave at tracked pitch</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="G6 MIDI Clock">
+<tags>
+<tag>utility</tag>
+<tag>midi</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">unused</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">run/stop input</distingControl>
+    <distingControl name="A">clock output</distingControl>
+    <distingControl name="B">clock output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-2" max="12" default="6">Clock divisor for output A</distingParameter>
+<distingParameter pos="1" min="-2" max="12" default="-2">Clock divisor for output B</distingParameter>
+<distingParameter pos="2" min="0" max="11" default="8">MIDI clock divisor</distingParameter>
+<distingParameter pos="3" min="0" max="1" default="0">Y mode.
+When 0, Y is unused and output starts when clock is present on X.
+When 1, output starts when Y goes high and stops when Y low.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="G7 MIDI/CV">
+<tags>
+<tag>utility</tag>
+<tag>midi</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">unused</distingControl>
+    <distingControl name="X">unused</distingControl>
+    <distingControl name="Y">unused</distingControl>
+    <distingControl name="A">pitch CV output</distingControl>
+    <distingControl name="B">gate output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-31" max="31" default="0">Transpose</distingParameter>
+<distingParameter pos="1" min="0" max="24" default="2">Pitch bend depth</distingParameter>
+<distingParameter pos="2" min="-1" max="31" default="-1">Microtonal Scale. -1 is disabled, see Scala Support in manual</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="G8 CV/MIDI">
+<tags>
+<tag>utility</tag>
+<tag>midi</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">mod wheel / velocity CV input</distingControl>
+    <distingControl name="X">pitch CV input</distingControl>
+    <distingControl name="Y">gate input</distingControl>
+    <distingControl name="A">pitch CV output</distingControl>
+    <distingControl name="B">gate output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="16">Gate delay.  Used to let pitch CV settle before sampling when gate arrives.</distingParameter>
+<distingParameter pos="1" min="0" max="1" default="0">Z mode.
+When 0, Z sets velocity.
+When 1, Z generates mod wheel.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="H1 Crossfade/Pan">
+<tags>
+<tag>utility</tag>
+<tag>VCA</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">mix control</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">mix of X&amp;Y</distingControl>
+    <distingControl name="B">inverted mix of X&amp;Y, according to Z.  Or LFO output.</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="3" default="0">Crossfade/pan law.
+0: Equal gain
+1: Equal power
+2: DJ-style crossfade
+3: FX Loop: A=unattenuated X + faded amount of Y</distingParameter>
+<distingParameter pos="1" min="0" max="2" default="0">Clip mode.
+0: Legacy, with digital overflows
+1: Hard clip
+2: Soft clip</distingParameter>
+<distingParameter pos="2" min="-1" max="99" default="0">Output B option/LFO speed. -1=input copy. 0 = disabled.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="H2 Dual Sample and Hold">
+<tags>
+<tag>utility</tag>
+<tag>noise</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">gate</distingControl>
+    <distingControl name="X">input A</distingControl>
+    <distingControl name="Y">input B</distingControl>
+    <distingControl name="A">X when Z exceeds 1V</distingControl>
+    <distingControl name="B">Y when Z exceeds 1V</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="1" default="0">Mode.
+0: Output is a sample of input when trigger Z goes over 1V.
+1: Output follows input while Z is high (track &amp; hold)</distingParameter>
+<distingParameter pos="1" min="0" max="31" default="0">Time delay between gate high and sampling.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="H3 Dual Quantizer (Z scale)">
+<tags>
+<tag>quantizer</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">scale</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">quantized(X)</distingControl>
+    <distingControl name="B">quantized(Y)</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-1" max="31" default="31">Input X attenuation</distingParameter>
+<distingParameter pos="1" min="-1" max="31" default="31">Input Y attenuation</distingParameter>
+<distingParameter pos="2" min="-31" max="31" default="0">X transpose</distingParameter>
+<distingParameter pos="3" min="-31" max="31" default="0">Y transpose</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="H4 Dual Quantizer">
+<tags>
+<tag>quantizer</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">trigger</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">quantized(X)</distingControl>
+    <distingControl name="B">quantized(Y)</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-1" max="31" default="31">Input X attenuation</distingParameter>
+<distingParameter pos="1" min="-1" max="31" default="31">Input Y attenuation</distingParameter>
+<distingParameter pos="2" min="-16" max="16" default="0">X scale/trigger mode.
+When negative, outputs only update on trigger.</distingParameter>
+<distingParameter pos="3" min="-16" max="16" default="0">Y scale/trigger mode.
+When negative, outputs only update on trigger.</distingParameter>
+<distingParameter pos="4" min="0" max="1" default="0">MIDI gate</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="H4 Dual Euclidean Patterns">
+<tags>
+<tag>random</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">sets pulses for pattern 2</distingControl>
+    <distingControl name="X">clock input</distingControl>
+    <distingControl name="Y">reset input</distingControl>
+    <distingControl name="A">pattern 1 out</distingControl>
+    <distingControl name="B">pattern 2 out</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="1" max="16" default="16">Steps</distingParameter>
+<distingParameter pos="1" min="1" max="16" default="4">Pulses (pattern 1)</distingParameter>
+<distingParameter pos="2" min="0" max="16" default="0">Rotation</distingParameter>
+<distingParameter pos="3" min="0" max="31" default="0">Pulse length</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="H6 Dual Delayed Pulse Generator">
+<tags>
+<tag>utility</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">depends on parameter 0</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">pulse triggered by X above 1V</distingControl>
+    <distingControl name="B">pulse triggered by Y above 1V</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="1" max="6" default="0">Sets Z control.
+0: delay
+1: length
+2: Override (high)
+3: Override (low)
+4: Input enable
+5: Input disabled
+6: Z triggers both outputs</distingParameter>
+<distingParameter pos="1" min="0" max="12" default="6">Range</distingParameter>
+<distingParameter pos="2" min="-1" max="31" default="-1">Delay</distingParameter>
+<distingParameter pos="3" min="0" max="31" default="7">Length</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="H7 Noise">
+<tags>
+<tag>noise</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">blend</distingControl>
+    <distingControl name="X">output A scale</distingControl>
+    <distingControl name="Y">output B scale</distingControl>
+    <distingControl name="A">noise A output</distingControl>
+    <distingControl name="B">noise B output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-1" max="3" default="-1">Type A</distingParameter>
+<distingParameter pos="1" min="-1" max="3" default="-1">Type B</distingParameter>
+<distingParameter pos="2" min="-1" max="31" default="31">Attenuation A</distingParameter>
+<distingParameter pos="3" min="-1" max="31" default="31">Attenuation B</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="H8 Quantizer 2">
+<tags>
+<tag>quantizer</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">interval between A &amp; B, conforming to scale and key</distingControl>
+    <distingControl name="X">pitch CV input</distingControl>
+    <distingControl name="Y">trigger in or pitch CV input</distingControl>
+    <distingControl name="A">quantized CV out</distingControl>
+    <distingControl name="B">quantized CV out</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="N/A" max="N/A" default="N/A">Pattern</distingParameter>
+<distingParameter pos="1" min="0" max="2" default="0">Scale.
+0: Major
+1:Natural Minor
+2: Harmonic Minor</distingParameter>
+<distingParameter pos="2" min="-12" max="12" default="0">Key.  Values follow circle of fifths</distingParameter>
+<distingParameter pos="3" min="0" max="32" default="32">Input X attenuation</distingParameter>
+<distingParameter pos="4" min="-1" max="31" default="-1">Trigger mode/offset/Y attenuation.
+When negative, Y is CV input attenuated by parameter.
+When positive, Y is trigger input and parameter sets pitch CV sampling delay</distingParameter>
+<distingParameter pos="5" min="0" max="32" default="0">Slew rate</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="I1 Audio Playback">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">selects sample</distingControl>
+    <distingControl name="X">retrigger input</distingControl>
+    <distingControl name="Y">start position CV</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="0" max="99" default="0">Envelope time</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="I2 Clocked Audio Playback">
+<tags>
+<tag>wave</tag>
+<tag>clocked</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">selects sample</distingControl>
+    <distingControl name="X">retrigger input</distingControl>
+    <distingControl name="Y">clock</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="0" max="99" default="0">Envelope time</distingParameter>
+</section>
+<section title="Description">
+<text>Use playlist to set number of clocks per sample.</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="I3 Audio Playback (V/oct)">
+<tags>
+<tag>wave</tag>
+<tag>oscillator</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">selects sample</distingControl>
+    <distingControl name="X">retrigger input</distingControl>
+    <distingControl name="Y">V/oct pitch CV</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="-8" max="8" default="0">Octave shift</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="0">Envelope time</distingParameter>
+<distingParameter pos="3" min="-1" max="4" default="-1">MIDI mode. See manual.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="I4 Audio Playback (Z speed)">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">playback speed</distingControl>
+    <distingControl name="X">retrigger input</distingControl>
+    <distingControl name="Y">start position CV</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="0" max="99" default="0">Selects sample</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="0">Envelope time</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="I5 Audio Playback (with reverse)">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">playback speed</distingControl>
+    <distingControl name="X">retrigger input</distingControl>
+    <distingControl name="Y">selects sample</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="-49" max="49" default="0">Y offset</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="0">Envelope time</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="I6 Audio Playback (with scrub)">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">selects sample</distingControl>
+    <distingControl name="X">not used</distingControl>
+    <distingControl name="Y">playback position</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="1" max="99" default="16">Speed limit</distingParameter>
+<distingParameter pos="2" min="0" max="20" default="0">Slew limit</distingParameter>
+<distingParameter pos="3" min="-32" max="32" default="0">Y offset</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="I7 Dual audio playback">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">selects sample</distingControl>
+    <distingControl name="X">trigger A</distingControl>
+    <distingControl name="Y">trigger B</distingControl>
+    <distingControl name="A">output (see pan parameter)</distingControl>
+    <distingControl name="B">output (see pan parameter)</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="0" max="1" default="0">Panning option.
+0: A emits sample X, B emits sample Y
+1: A/B act as L/R output of both samples.</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="0">Envelope time</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="I8 Dual audio playback (Z speed)">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">speed</distingControl>
+    <distingControl name="X">trigger A</distingControl>
+    <distingControl name="Y">trigger B</distingControl>
+    <distingControl name="A">output (see pan parameter)</distingControl>
+    <distingControl name="B">output (see pan parameter)</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="0" max="99" default="0">Selects sample A</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="1">selects sample B</distingParameter>
+<distingParameter pos="3" min="0" max="1" default="0">Panning option.
+0: A emits sample X, B emits sample Y
+1: A/B act as L/R output of both samples.</distingParameter>
+<distingParameter pos="4" min="0" max="3" default="0">Selects which samples are affected by Z</distingParameter>
+<distingParameter pos="5" min="0" max="99" default="0">Envelope time</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="J1 MIDI file playback (clocked)">
+<tags>
+<tag>midi</tag>
+<tag>clocked</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">selects MIDI file</distingControl>
+    <distingControl name="X">clock</distingControl>
+    <distingControl name="Y">retrigger CV</distingControl>
+    <distingControl name="A">pitch CV output</distingControl>
+    <distingControl name="B">gate output</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="J3 MIDI file playback (Free Running)">
+<tags>
+<tag>midi</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">playback speed</distingControl>
+    <distingControl name="X">V/oct speed CV</distingControl>
+    <distingControl name="Y">retrigger CV</distingControl>
+    <distingControl name="A">pitch CV output</distingControl>
+    <distingControl name="B">gate output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="31" default="0">MIDI file selection</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="J4 Audio Playback (end position CV)">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">end position CV when negative, retrigger input when positive</distingControl>
+    <distingControl name="X">opposite of Z function</distingControl>
+    <distingControl name="Y">start position CV</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="0" max="99" default="0">Sample</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="0">Envelope time</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="J5 Audio Recorder">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">recording while Z exceeds 1V</distingControl>
+    <distingControl name="X">left audio input</distingControl>
+    <distingControl name="Y">right audio input</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="J6 Multisample Audio Playback">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">tune +/- 0.5 octaves</distingControl>
+    <distingControl name="X">retrigger CV</distingControl>
+    <distingControl name="Y">V/oct pitch CV</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="-8" max="8" default="0">Octave shift</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="0">Envelope time</distingParameter>
+<distingParameter pos="3" min="-1" max="4" default="-1">MIDI mode.  See manual.</distingParameter>
+</section>
+<section title="Description">
+<text>See manual for how to set up multisample playlists</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="J7 Audio Recorder">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">recording while Z exceeds 1V</distingControl>
+    <distingControl name="X">left audio input</distingControl>
+    <distingControl name="Y">unused</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">unused</distingControl>
+</section>
+
+
+</content>
+</algorithm>
+<algorithm name="J8 Audio Playback with Crossfade">
+<tags>
+<tag>wave</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">selects the sample</distingControl>
+    <distingControl name="X">gate/clock CV</distingControl>
+    <distingControl name="Y">V/oct pitch CV</distingControl>
+    <distingControl name="A">left audio output</distingControl>
+    <distingControl name="B">right audio output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Folder</distingParameter>
+<distingParameter pos="1" min="-8" max="8" default="0">Octave shift</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="50">Crossfade time</distingParameter>
+<distingParameter pos="3" min="0" max="2" default="1">Gate mode.
+0: X is gate, starting &amp; stopping CV.
+1: sample plays continuously
+2: sample plays continuously, X is clock CV.</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="K1 Wavetable VCO">
+<tags>
+<tag>wave</tag>
+<tag>oscillator</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">tune +/-0.5 octaves</distingControl>
+    <distingControl name="X">V/oct pitch CV</distingControl>
+    <distingControl name="Y">Wavetable position</distingControl>
+    <distingControl name="A">wavetable output</distingControl>
+    <distingControl name="B">sub-octave square output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Chooses Wavetable</distingParameter>
+<distingParameter pos="1" min="-8" max="8" default="0">Octave shift</distingParameter>
+<distingParameter pos="2" min="-31" max="31" default="0">Y offset</distingParameter>
+</section>
+<section title="Description">
+<text>See manual for wavetable SD card setup</text>
+</section>
+</content>
+</algorithm>
+<algorithm name="K5 Programmable Quantizer">
+<tags>
+<tag>quantizer</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">slew</distingControl>
+    <distingControl name="X">input pitch CV</distingControl>
+    <distingControl name="Y">input pitch CV</distingControl>
+    <distingControl name="A">quantized(X+Y)</distingControl>
+    <distingControl name="B">trigger on note change</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="31" default="0">Scale</distingParameter>
+<distingParameter pos="1" min="-1" max="31" default="31">Input X attenuation</distingParameter>
+<distingParameter pos="2" min="-2" max="31" default="31">Input Y attenuation</distingParameter>
+<distingParameter pos="3" min="-31" max="31" default="0">Transpose</distingParameter>
+<distingParameter pos="4" min="0" max="31" default="0">Time delay of B output gate</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="L1 Stereo Reverb">
+<tags>
+<tag>effect</tag>
+<tag>reverb</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">wet/dry</distingControl>
+    <distingControl name="X">left input</distingControl>
+    <distingControl name="Y">right input</distingControl>
+    <distingControl name="A">left output</distingControl>
+    <distingControl name="B">right output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="31" default="15">Size</distingParameter>
+<distingParameter pos="1" min="0" max="31" default="23">Feedback</distingParameter>
+<distingParameter pos="2" min="0" max="5" default="1">Character</distingParameter>
+<distingParameter pos="3" min="-1" max="31" default="8">Lowpass filter</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="L2 Mono-to-Stereo Reverb">
+<tags>
+<tag>effect</tag>
+<tag>reverb</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">wet/dry</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">feedback CV</distingControl>
+    <distingControl name="A">left output</distingControl>
+    <distingControl name="B">right output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="31" default="15">Size</distingParameter>
+<distingParameter pos="1" min="0" max="31" default="23">Feedback</distingParameter>
+<distingParameter pos="2" min="0" max="5" default="1">Character</distingParameter>
+<distingParameter pos="3" min="-1" max="31" default="8">Lowpass filter</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="L3 Dual Reverb">
+<tags>
+<tag>effect</tag>
+<tag>reverb</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">wet/dry</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">audio input</distingControl>
+    <distingControl name="A">X plus reverb</distingControl>
+    <distingControl name="B">Y plus reverb</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="31" default="15">Size</distingParameter>
+<distingParameter pos="1" min="0" max="31" default="23">Feedback</distingParameter>
+<distingParameter pos="2" min="0" max="5" default="1">Character</distingParameter>
+<distingParameter pos="3" min="-1" max="31" default="8">Lowpass filter</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="L5 Stereo Chorus">
+<tags>
+<tag>effect</tag>
+<tag>reverb</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">wet/dry</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">LFO rate</distingControl>
+    <distingControl name="A">left output</distingControl>
+    <distingControl name="B">right output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="31" default="8">LFO depth</distingParameter>
+<distingParameter pos="1" min="-31" max="31" default="0">Y offset</distingParameter>
+<distingParameter pos="2" min="-31" max="31" default="0">Feedback</distingParameter>
+<distingParameter pos="3" min="-1" max="31" default="-1">Lowpass filter</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="L6 Mono Chorus">
+<tags>
+<tag>effect</tag>
+<tag>reverb</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">wet/dry</distingControl>
+    <distingControl name="X">audio input</distingControl>
+    <distingControl name="Y">LFO rate</distingControl>
+    <distingControl name="A">blended output</distingControl>
+    <distingControl name="B">wet output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="31" default="8">LFO depth</distingParameter>
+<distingParameter pos="1" min="-31" max="31" default="0">Y offset</distingParameter>
+<distingParameter pos="2" min="-31" max="31" default="0">Feedback</distingParameter>
+<distingParameter pos="3" min="-1" max="31" default="-1">Lowpass filter</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="L8 Noise Gate">
+<tags>
+<tag>effect</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">threshold</distingControl>
+    <distingControl name="X">left input</distingControl>
+    <distingControl name="Y">right input</distingControl>
+    <distingControl name="A">left output</distingControl>
+    <distingControl name="B">right output</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="99" default="0">Attack time</distingParameter>
+<distingParameter pos="1" min="0" max="99" default="0">Hold time</distingParameter>
+<distingParameter pos="2" min="0" max="99" default="0">Release time</distingParameter>
+<distingParameter pos="3" min="0" max="99" default="0">Lookahead</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="M1 Delayed LFO">
+<tags>
+<tag>modulation</tag>
+<tag>LFO</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">LFO speed</distingControl>
+    <distingControl name="X">trigger input</distingControl>
+    <distingControl name="Y">ramp time</distingControl>
+    <distingControl name="A">LFO, ramp, or ramped LFO</distingControl>
+    <distingControl name="B">LFO, ramp, or ramped LFO</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="6" default="1">Output type A.
+0: ramp
+1: triangle affected by ramp
+2:sine affected by ramp
+3:square affected by ramp
+4:triangle
+5:sine
+6:square</distingParameter>
+<distingParameter pos="1" min="0" max="6" default="1">Output type B. Same list as above.</distingParameter>
+<distingParameter pos="2" min="-32" max="32" default="0">LFO speed range</distingParameter>
+<distingParameter pos="3" min="-32" max="32" default="0">Ramp time range</distingParameter>
+<distingParameter pos="4" min="-32" max="32" default="32">Attenuverter A</distingParameter>
+<distingParameter pos="5" min="-32" max="32" default="32">Attenuverter B</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="M2 Scaled LFO">
+<tags>
+<tag>modulation</tag>
+<tag>LFO</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">LFO speed</distingControl>
+    <distingControl name="X">min, or offset</distingControl>
+    <distingControl name="Y">max, or scale</distingControl>
+    <distingControl name="A">LFO A out</distingControl>
+    <distingControl name="B">LFO B out</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="0" max="4" default="1">Output type A.
+0: triangle
+1: sine
+2: square
+3: rising ramp
+4: falling ramp</distingParameter>
+<distingParameter pos="1" min="0" max="6" default="1">Output type B. Same list as above.</distingParameter>
+<distingParameter pos="2" min="-32" max="32" default="0">LFO speed range</distingParameter>
+<distingParameter pos="3" min="0" max="1" default="0">Mode.
+0: X/Y set LFO min/max.
+1: X/Y set LFO center/amplitude.</distingParameter>
+<distingParameter pos="4" min="-48" max="48" default="0">X offset</distingParameter>
+<distingParameter pos="5" min="-48" max="48" default="0">Y offset</distingParameter>
+</section>
+
+</content>
+</algorithm>
+<algorithm name="M3 Logic">
+<tags>
+<tag>utility</tag>
+<tag>logic</tag>
+</tags>
+<content>
+<section title="Controls">
+    <distingControl name="Z">logical operation for output A</distingControl>
+    <distingControl name="X">input</distingControl>
+    <distingControl name="Y">input</distingControl>
+    <distingControl name="A">logic out</distingControl>
+    <distingControl name="B">logic out</distingControl>
+</section>
+<section title="Parameters">
+<distingParameter pos="0" min="-2" max="5" default="0">Output B logical operation.
+-2: B follows A
+1: B is inverse of A
+0: AND
+1: OR
+2: XOR
+3: NAND
+4: NOR
+5: XNOR</distingParameter>
+<distingParameter pos="1" min="-100" max="100" default="20">Input X threshold</distingParameter>
+<distingParameter pos="2" min="-100" max="100" default="20">Input Y threshold</distingParameter>
+<distingParameter pos="3" min="-100" max="100" default="10">Input X hysteresis</distingParameter>
+<distingParameter pos="4" min="-100" max="100" default="10">Input Y hysteresis</distingParameter>
+</section>
+
+</content>
+</algorithm>
+        </algorithms>
+        </module>
