@@ -1,3 +1,4 @@
+<modules>
 <module name="Disting mk4" id="disting-mk4">
         <algorithms>
         <algorithm name="A1 Precision Adder">
@@ -1928,3 +1929,4 @@ When positive, Y is trigger input and parameter sets pitch CV sampling delay</di
 </algorithm>
         </algorithms>
         </module>
+</modules>

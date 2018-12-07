@@ -1,0 +1,16 @@
+<module>
+<algorithms>
+<algorithm name="Algorithm 1" content="a2.html">
+<tags>
+<tag>first</tag>
+<tag>second</tag>
+</tags>
+</algorithm>
+<algorithm name="Algorithm 2" content="a2.html">
+<tags>
+<tag>second</tag>
+</tags>
+</algorithm>
+
+</algorithms>
+</module>
