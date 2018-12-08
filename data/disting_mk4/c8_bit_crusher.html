@@ -1,0 +1,43 @@
+
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="stylesheet" href="disting.css" />
+  </head>
+  <body>
+<h3>Controls</h3>
+<table><tr><td><div class="control">Z</div></td><td>bit reduction</td></tr>
+<tr><td><div class="control">X</div></td><td>signal input</td></tr>
+<tr><td><div class="control">Y</div></td><td>sample rate input</td></tr>
+<tr><td><div class="control">A</div></td><td>signal output</td></tr>
+<tr><td><div class="control">B</div></td><td>comparator out: +5V when A is above 0</td></tr></table>
+<h3>Parameters</h3>
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">0</td><td class="parameter">-31</td><td class="parameter">31</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Y input offset</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">1</td><td class="parameter">0</td><td class="parameter">7</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>bit reduction mode</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">2</td><td class="parameter">0</td><td class="parameter">7</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>bit mangling mode.  Bit swap, rotation, or XOR depending on value.</td></tr>
+      </table><br />
+    
+        </body>
+</html>

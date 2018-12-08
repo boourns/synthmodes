@@ -1,0 +1,80 @@
+
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="stylesheet" href="disting.css" />
+  </head>
+  <body>
+<h3>Controls</h3>
+<table><tr><td><div class="control">Z</div></td><td>envelope times</td></tr>
+<tr><td><div class="control">X</div></td><td>trigger input</td></tr>
+<tr><td><div class="control">Y</div></td><td>VCA input</td></tr>
+<tr><td><div class="control">A</div></td><td>envelope output</td></tr>
+<tr><td><div class="control">B</div></td><td>VCA output</td></tr></table>
+<h3>Parameters</h3>
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">0</td><td class="parameter">0</td><td class="parameter">2</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Trigger Mode.<br />When 0, acts as AR envelope, holding envelope high as long as trigger is high.<br />When 1, executes one full A/D when gate goes high.<br />When 2, loops A/D as long as the trigger is high.</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">1</td><td class="parameter">0</td><td class="parameter">1</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Z mode.<br />When 0, Z sweeps from short A&D -> short A, long D -> long A&D -> long A, short D<br />When 1, sets A&D to same value.</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">2</td><td class="parameter">-32</td><td class="parameter">32</td><td class="parameter">32</td></tr>
+        <tr><td colspan=4>Output A Attenuverter</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">3</td><td class="parameter">-32</td><td class="parameter">32</td><td class="parameter">32</td></tr>
+        <tr><td colspan=4>Output B Attenuverter</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">4</td><td class="parameter">-32</td><td class="parameter">32</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Output A Offset</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">5</td><td class="parameter">-32</td><td class="parameter">32</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Output B Offset</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">6</td><td class="parameter">0</td><td class="parameter">32</td><td class="parameter">26</td></tr>
+        <tr><td colspan=4>Attack shape</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">7</td><td class="parameter">0</td><td class="parameter">32</td><td class="parameter">10</td></tr>
+        <tr><td colspan=4>Release shape</td></tr>
+      </table><br />
+    
+<h3>Description</h3>
+Push Z to manually trigger envelope
+        </body>
+</html>

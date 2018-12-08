@@ -1,0 +1,50 @@
+
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="stylesheet" href="disting.css" />
+  </head>
+  <body>
+<h3>Controls</h3>
+<table><tr><td><div class="control">Z</div></td><td>unused</td></tr>
+<tr><td><div class="control">X</div></td><td>clock input</td></tr>
+<tr><td><div class="control">Y</div></td><td>run/stop input</td></tr>
+<tr><td><div class="control">A</div></td><td>clock output</td></tr>
+<tr><td><div class="control">B</div></td><td>clock output</td></tr></table>
+<h3>Parameters</h3>
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">0</td><td class="parameter">-2</td><td class="parameter">12</td><td class="parameter">6</td></tr>
+        <tr><td colspan=4>Clock divisor for output A</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">1</td><td class="parameter">-2</td><td class="parameter">12</td><td class="parameter">-2</td></tr>
+        <tr><td colspan=4>Clock divisor for output B</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">2</td><td class="parameter">0</td><td class="parameter">11</td><td class="parameter">8</td></tr>
+        <tr><td colspan=4>MIDI clock divisor</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">3</td><td class="parameter">0</td><td class="parameter">1</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Y mode.<br />When 0, Y is unused and output starts when clock is present on X.<br />When 1, output starts when Y goes high and stops when Y low.</td></tr>
+      </table><br />
+    
+        </body>
+</html>

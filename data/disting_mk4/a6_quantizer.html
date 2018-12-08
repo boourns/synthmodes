@@ -1,0 +1,50 @@
+
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="stylesheet" href="disting.css" />
+  </head>
+  <body>
+<h3>Controls</h3>
+<table><tr><td><div class="control">Z</div></td><td>Scale & function of Y</td></tr>
+<tr><td><div class="control">X</div></td><td>Unquantized pitch CV</td></tr>
+<tr><td><div class="control">Y</div></td><td>When Z is positive, acts as transpose<br />When Z is negative, triggers quantizer to update output.</td></tr>
+<tr><td><div class="control">A</div></td><td>quantized value of X</td></tr>
+<tr><td><div class="control">B</div></td><td>trigger on note change</td></tr></table>
+<h3>Parameters</h3>
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">0</td><td class="parameter">-1</td><td class="parameter">31</td><td class="parameter">31</td></tr>
+        <tr><td colspan=4>Attenuation of input X</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">1</td><td class="parameter">0</td><td class="parameter">1</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Transpose mode.<br />When 0, transposition occurs after quantization.<br />When 1, transposition occurs before quantization.</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">2</td><td class="parameter">-31</td><td class="parameter">31</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Key.  Adjusts root of quantization scale by semitones.</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">3</td><td class="parameter">0</td><td class="parameter">31</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Time delay of B output gate.</td></tr>
+      </table><br />
+    
+        </body>
+</html>

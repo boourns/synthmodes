@@ -1,0 +1,36 @@
+
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="stylesheet" href="disting.css" />
+  </head>
+  <body>
+<h3>Controls</h3>
+<table><tr><td><div class="control">Z</div></td><td>offset, in 1v increments</td></tr>
+<tr><td><div class="control">X</div></td><td>input</td></tr>
+<tr><td><div class="control">Y</div></td><td>input</td></tr>
+<tr><td><div class="control">A</div></td><td>X + Y + offset, or X + offset</td></tr>
+<tr><td><div class="control">B</div></td><td>X - Y + offset, or Y +/- offset</td></tr></table>
+<h3>Parameters</h3>
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">0</td><td class="parameter">0</td><td class="parameter">1</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>When 1, Z offset is not quantized to 1v steps.</td></tr>
+      </table><br />
+    
+
+      <table>
+        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><td class="parameter">1</td><td class="parameter">0</td><td class="parameter">2</td><td class="parameter">0</td></tr>
+        <tr><td colspan=4>Sum mode.<br />0: A=X+Y+offset, B=X-Y-offset<br />1: A=X+offset, B=Y-offset<br />2: A=X+offset, B=Y+offset</td></tr>
+      </table><br />
+    
+        </body>
+</html>
