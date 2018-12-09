@@ -74,7 +74,7 @@ class DistingParameter < ElementBase
     des = @description.gsub("\n", "<br />")
     %{
       <table>
-        <tr><th>pos</th><th>min</th><th>max</th><th>default</th></tr>
+        <tr><th width="25%">pos</th><th width="25%">min</th><th width="25%">max</th><th width="25%">default</th></tr>
         <tr>#{par}</tr>
         <tr><td colspan=4>#{des}</td></tr>
       </table><br />

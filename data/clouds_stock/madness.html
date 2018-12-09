@@ -1,0 +1,41 @@
+
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="stylesheet" href="clouds.css" />
+  </head>
+  <body>
+   <div class="centered">
+    <div class="content">
+<h3>Mode</h3>
+<div class="leds">
+<div class="led"></div>
+<div class="led"></div>
+<div class="led"></div>
+<div class="led orange"></div>
+</div>
+<h3>Controls</h3>
+<p style="text-align: left;">
+<b>POSITION</b> = selects in which buffer the audio is poured (when <b>FREEZE</b> is not active), or from which buffer the audio is synthesised (when <b>FREEZE</b> is active).<br /><br />
+
+Example:<br />
+Set <b>POSITION</b> to minimum value. <b>FREEZE</b>. You get a first texture. Set <b>POSITION</b> to maximum value. <b>UNFREEZE</b>. Wait for something else to happen in the incoming audio. <b>FREEZE</b> again. By moving <b>POSITION</b> you interpolate between the two textures which had been captured at the press of <b>FREEZE</b>. Depending on the quality settings there are 2 to 7 buffers laid out on the course of the <b>POSITION</b> knob. So it's a bit like morphing between FFT slices.<br /><br />
+<b>SIZE</b> = change the coefficients of a polynomial that determines how frequencies are mapped between the analysis and synthesis buffers. It's like a 1-knob GRM Warp. Over the course of the knob it'll do spectral shifting, but also spectral reversal.<br /><br />
+<b>PITCH</b> = pitch-shifting.<br /><br />
+<b>DENSITY</b> determines how results from the analyzer are passed to the resynthesizer. Below 12 o'clock, there's some increasing probability that a given FFT bin won't get updated, causing a kind of partial freeze. After 12 o'clock, adjacent analysis frames are increasingly merged together (like a low-pass filter in the amplitude each frequency bin). At extreme settings, random phase modulation is applied to smooth things - giving you different flavours of spectral muddling/reverb.<br /><br />
+<b>TEXTURE</b> does two things: below 12 o'clock, it increasingly quantize the amplitudes of the spectral components, like a very low-bitrate audio file (a long time ago I loved making super harsh noise textures by loading text files as raw audio files in an audio editor... then encoding as mp3 or real audio with super low bitrate to make it sound like some underwater brian eno). After 12 o'clock, it increasingly weakens the strongest partials and amplifies the weakest ones. This has the effect of making the spectrum more noise-like.<br /><br />
+
+- Olivier Gillet, via Muffwiggler
+
+</p>
+
+    </div>
+  </div>
+        </body>
+</html>

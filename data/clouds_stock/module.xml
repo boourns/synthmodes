@@ -1,0 +1,10 @@
+<module>
+<sections>
+<section name="Modes" modelist="true">
+<page name="Granular Processor" content="granular.html"></page>
+<page name="Pitch Shifter / Time Stretch" content="pitchshift.html"></page>
+<page name="Looping Delay" content="delay.html"></page>
+<page name="Spectral Processor" content="madness.html"></page>
+</section>
+</sections>
+</module>
