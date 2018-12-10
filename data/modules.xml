@@ -1,0 +1,6 @@
+<modules>
+<module name="Disting mk4" id="disting_mk4" index="disting_mk4/module.xml" />
+<module name="Clouds (Stock)" id="clouds_stock" index="clouds_stock/module.xml" />
+<module name="Clouds (Parasites)" id="clouds_parasites" index="clouds_parasites/module.xml" />
+<module name="Rings" id="rings" index="rings/module.xml" />
+</modules>
