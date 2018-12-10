@@ -5,15 +5,11 @@ body {
   background-color: #ff9e20;
 }
 
-.green {
-  background-color: #00ee00;
-}
-
 .red {
   background-color: #f41252;
 }
 
-.blue {
+.green {
   background-color: #00928f;
 }
 
@@ -32,27 +28,7 @@ body {
   border: 1px solid;
   text-align: center;
   display: inline-block;
-  margin: 10px;
-}
-
-.bigknob {
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-  border: 3px solid;
-  text-align: center;
-  display: inline-block;
-  margin: 10px;
-}
-
-.smallknob {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 3px solid;
-  text-align: center;
-  display: inline-block;
-  margin: 10px;
+  margin-right: 10px;
 }
 
 .centered {
@@ -71,14 +47,4 @@ text-align: center;
 
 h3 {
   text-align: left;
-}
-
-td {
-    text-align: center;
-    vertical-align: top;
-}
-
-.blend {
-  text-align: left;
-  vertical-align: middle;
 }
