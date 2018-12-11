@@ -1,0 +1,8 @@
+{
+  "modules": [
+    { "name": "Disting mk4", "id": "disting_mk4", "index": "disting_mk4/module.json"},
+    { "name": "Clouds (Stock)", "id": "clouds_stock", "index": "clouds_stock/module.json"},
+    { "name": "Clouds (Parasites)", "id": "clouds_parasites", "index": "clouds_parasites/module.json"},
+    { "name": "Rings", "id": "disting_mk4", "rings": "rings/module.json"},
+  ]
+}

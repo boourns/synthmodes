@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'byebug'
+require 'json'
 
 $html_prelude = %{
 <html class="no-js">
@@ -163,6 +164,14 @@ class Algorithm
     "<page name=#{@name.encode(:xml => :attr)} content=\"#{filename}\">#{tags}</page>"
   end
 
+  def render_json
+    {
+      "name" => @name,
+      "content" => filename,
+      "tags" => tags
+    }
+  end
+
   def filename
     "#{path}.html"
   end
@@ -183,7 +192,16 @@ end
 
 index = "<module><sections><section name=\"Algorithms\" modelist=\"true\">" + algorithms.map { |a| a.render_index }.join("\n") + "</section></sections></module>"
 
+json = {
+  "sections" => {
+    "name" => "Modes",
+    "modelist" => "true",
+    "pages" => algorithms.map { |a| a.render_json }
+  }
+}.to_json
+
 File.write("data/disting_mk4/module.xml", index)
+File.write("data/disting_mk4/module.json", json)
 
 algorithms.each do |alg|
   File.write("data/disting_mk4/#{alg.filename}", alg.render)
