@@ -1,0 +1,17 @@
+{
+  "sections": [
+    {
+      "name": "Modes",
+      "modelist": "true",
+      "pages": [
+        {"name": "Modal Resonator", "content": "resonator.html"},
+        {"name": "Sympathetic Strings", "content": "sympathetic.html"},
+        {"name": "Modulated / Inharmonic Strings", "content": "inharmonic.html"},
+        {"name": "FM Voice", "content": "fm.html"},
+        {"name": "Western Chords", "content": "western.html"},
+        {"name": "String &amp; Reverb", "content": "reverb.html"},
+        {"name": "Disastrous Peace", "content": "peace.html"}
+      ]
+    }
+  ]
+}

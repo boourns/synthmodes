@@ -7,7 +7,7 @@
         {"name": "Granular Processor", "content": "granular.html"},
         {"name": "Pitch Shifter / Time Stretch", "content": "pitchshift.html"},
         {"name": "Looping Delay", "content": "delay.html"},
-        {"name": "Spectral Processor", "content": "madness.html"},
+        {"name": "Spectral Processor", "content": "madness.html"}
       ]
     }
   ]

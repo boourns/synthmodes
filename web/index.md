@@ -5,6 +5,6 @@
 layout: home
 ---
 
-{% if 1 %}
-true!
-{% endif %}
+{% for module in site.data.modules %}
+{{ module.name }}
+{% endfor %}

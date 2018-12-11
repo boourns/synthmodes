@@ -1675,6 +1675,12 @@ When positive, Y is trigger input and parameter sets pitch CV sampling delay</di
 <distingParameter pos="0" min="0" max="99" default="0">Chooses Wavetable</distingParameter>
 <distingParameter pos="1" min="-8" max="8" default="0">Octave shift</distingParameter>
 <distingParameter pos="2" min="-31" max="31" default="0">Y offset</distingParameter>
+<distingParameter pos="3" min="-3" max="99" default="0">Output B option/detune
+-3: squarewave 1 octave below A
+-2: Wavetable VCO one octave below output A
+-1: Wavetable VCO one octave above output A
+0-99: Wavetable VCO detuned relative to output A; output A is also detuned in the opposite direction.
+</distingParameter>
 </section>
 <section title="Description">
 <text>See manual for wavetable SD card setup</text>
@@ -1912,7 +1918,7 @@ When positive, Y is trigger input and parameter sets pitch CV sampling delay</di
 <section title="Parameters">
 <distingParameter pos="0" min="-2" max="5" default="0">Output B logical operation.
 -2: B follows A
-1: B is inverse of A
+-1: B is inverse of A
 0: AND
 1: OR
 2: XOR

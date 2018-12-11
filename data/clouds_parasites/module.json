@@ -9,7 +9,7 @@
         {"name": "Looping Delay", "content": "delay.html"},
         {"name": "Spectral Processor", "content": "madness.html"},
         {"name": "Oliverb", "content": "oliverb.html"},
-        {"name": "Resonester", "content": "resonester.html"},
+        {"name": "Resonester", "content": "resonester.html"}
       ]
     }
   ]
