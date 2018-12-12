@@ -1,5 +1,6 @@
 # synthmodes
 Mobile-friendly cheat sheets for synthesizer modules
+
 This repo powers https://www.synthmodes.com, and the Modes app for iOS.
 
 # contributing
