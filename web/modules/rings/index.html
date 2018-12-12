@@ -2,7 +2,152 @@
 layout: page
 title: Rings
 ---
-Modes<br /><a href="#resonator">Modal Resonator</a><br />
+<style>body {
+     font-family: -apple-system, sans-serif;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.orange {
+  background-color: #ff9e20;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.green {
+  background-color: #00928f;
+}
+
+.flashing-green {
+  border: 0px;
+  background-color: #00928f;
+  box-shadow: 0 0 10px #00928f, inset 0 0 10px #00928f;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.leds {
+  text-align: center;
+}
+
+.centered {
+text-align: center;
+}
+
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.centered {
+  margin: auto;
+}
+
+.knob {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-wiper {
+  width: 18px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
+}
+
+.att {
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+td {
+  text-align: center;
+}
+
+h3 {
+  text-align: left;
+}</style>Modes<br /><a href="#resonator">Modal Resonator</a><br />
 <a href="#sympathetic">Sympathetic Strings</a><br />
 <a href="#inharmonic">Modulated / Inharmonic Strings</a><br />
 <a href="#fm">FM Voice</a><br />
@@ -52,7 +197,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
 
     </div>
   </div>
-        <a name="sympathetic"></a><h2>Sympathetic Strings</h2>
+        <br /><br /><a name="sympathetic"></a><h2>Sympathetic Strings</h2>
    <div class="centered">
     <div class="content">
 <h3>Mode</h3>
@@ -96,7 +241,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
 
     </div>
   </div>
-        <a name="inharmonic"></a><h2>Modulated / Inharmonic Strings</h2>
+        <br /><br /><a name="inharmonic"></a><h2>Modulated / Inharmonic Strings</h2>
    <div class="centered">
     <div class="content">
 <h3>Mode</h3>
@@ -140,7 +285,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
 
     </div>
   </div>
-        <a name="fm"></a><h2>FM Voice</h2>
+        <br /><br /><a name="fm"></a><h2>FM Voice</h2>
    <div class="centered">
     <div class="content">
 <h3>Mode</h3>
@@ -185,7 +330,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
 
     </div>
   </div>
-        <a name="western"></a><h2>Western Chords</h2>
+        <br /><br /><a name="western"></a><h2>Western Chords</h2>
    <div class="centered">
     <div class="content">
 <h3>Mode</h3>
@@ -229,7 +374,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
 
     </div>
   </div>
-        <a name="reverb"></a><h2>String & Reverb</h2>
+        <br /><br /><a name="reverb"></a><h2>String & Reverb</h2>
    <div class="centered">
     <div class="content">
 <h3>Mode</h3>
@@ -273,7 +418,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
 
     </div>
   </div>
-        <a name="peace"></a><h2>Disastrous Peace</h2>
+        <br /><br /><a name="peace"></a><h2>Disastrous Peace</h2>
    <div class="centered">
     <div class="content">
 <h3>Mode</h3>
@@ -422,4 +567,4 @@ Then, a long press on either button will enter (or exit) the easter egg mode.
 
     </div>
   </div>
-        
+        <br /><br />

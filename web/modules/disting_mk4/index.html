@@ -2,7 +2,47 @@
 layout: page
 title: Disting mk4
 ---
-Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
+<style>body {
+     font-family: -apple-system, sans-serif;
+}
+ th {
+     color: grey;
+     font-weight: normal;
+}
+ td {
+     margin: 5px;
+     padding: 5px;
+}
+ table {
+     border: 1px solid black;
+     padding: 5px;
+     border-collapse: collapse;
+     width: 100%;
+}
+ tr td:first-child{
+     width:1%;
+}
+
+ .control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+ .parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
+}
+
+.wrap {
+     word-wrap: break-word;
+}</style>Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#a2_four_quadrant_multiplier">A2 Four Quadrant Multiplier</a><br />
 <a href="#a3_full_wave_rectifier_abs">A3 Full-wave Rectifier / abs()</a><br />
 <a href="#a4_minimum_maximum">A4 Minimum / Maximum</a><br />
@@ -151,7 +191,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
       </table>
 <br>
     
-        <a name="a2_four_quadrant_multiplier"></a><h2>A2 Four Quadrant Multiplier</h2>
+        <br /><br /><a name="a2_four_quadrant_multiplier"></a><h2>A2 Four Quadrant Multiplier</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -194,7 +234,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
       </table>
 <br>
     
-        <a name="a3_full_wave_rectifier_abs"></a><h2>A3 Full-wave Rectifier / abs()</h2>
+        <br /><br /><a name="a3_full_wave_rectifier_abs"></a><h2>A3 Full-wave Rectifier / abs()</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -220,7 +260,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 </table>
 <h3>Description</h3>
 Provides either full-wave rectifier, or absolute value function, depending on value of Z
-        <a name="a4_minimum_maximum"></a><h2>A4 Minimum / Maximum</h2>
+        <br /><br /><a name="a4_minimum_maximum"></a><h2>A4 Minimum / Maximum</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -244,7 +284,7 @@ Provides either full-wave rectifier, or absolute value function, depending on va
 <td>max(X, Y)</td>
 </tr>
 </table>
-        <a name="a5_linear_exponential_converter"></a><h2>A5 Linear / Exponential Converter</h2>
+        <br /><br /><a name="a5_linear_exponential_converter"></a><h2>A5 Linear / Exponential Converter</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -268,7 +308,7 @@ Provides either full-wave rectifier, or absolute value function, depending on va
 <td>max(X, Y)</td>
 </tr>
 </table>
-        <a name="a6_quantizer"></a><h2>A6 Quantizer</h2>
+        <br /><br /><a name="a6_quantizer"></a><h2>A6 Quantizer</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -365,7 +405,7 @@ Provides either full-wave rectifier, or absolute value function, depending on va
       </table>
 <br>
     
-        <a name="a7_comparator"></a><h2>A7 Comparator</h2>
+        <br /><br /><a name="a7_comparator"></a><h2>A7 Comparator</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -389,7 +429,7 @@ Provides either full-wave rectifier, or absolute value function, depending on va
 <td>gate when X &lt; Y (+5V)</td>
 </tr>
 </table>
-        <a name="a8_dual_waveshaper"></a><h2>A8 Dual Waveshaper</h2>
+        <br /><br /><a name="a8_dual_waveshaper"></a><h2>A8 Dual Waveshaper</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -413,7 +453,7 @@ Provides either full-wave rectifier, or absolute value function, depending on va
 <td>triangle-to-sine Y</td>
 </tr>
 </table>
-        <a name="b1_sample_and_hold"></a><h2>B1 Sample and Hold</h2>
+        <br /><br /><a name="b1_sample_and_hold"></a><h2>B1 Sample and Hold</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -494,7 +534,7 @@ Provides either full-wave rectifier, or absolute value function, depending on va
     
 <h3>Description</h3>
 Pressing Z triggers a sample manually.
-        <a name="b2_slew_rate_limiter"></a><h2>B2 Slew Rate Limiter</h2>
+        <br /><br /><a name="b2_slew_rate_limiter"></a><h2>B2 Slew Rate Limiter</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -518,7 +558,7 @@ Pressing Z triggers a sample manually.
 <td>logarithmic slew rate limited X+Y</td>
 </tr>
 </table>
-        <a name="b3_pitch_envelope_tracker"></a><h2>B3 Pitch & Envelope Tracker</h2>
+        <br /><br /><a name="b3_pitch_envelope_tracker"></a><h2>B3 Pitch & Envelope Tracker</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -542,7 +582,7 @@ Pressing Z triggers a sample manually.
 <td>envelope derived from X</td>
 </tr>
 </table>
-        <a name="b4_clockable_delayecho"></a><h2>B4 Clockable Delay/Echo</h2>
+        <br /><br /><a name="b4_clockable_delayecho"></a><h2>B4 Clockable Delay/Echo</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -585,7 +625,7 @@ Pressing Z triggers a sample manually.
       </table>
 <br>
     
-        <a name="b5_lfo"></a><h2>B5 LFO</h2>
+        <br /><br /><a name="b5_lfo"></a><h2>B5 LFO</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -682,7 +722,7 @@ Pressing Z triggers a sample manually.
       </table>
 <br>
     
-        <a name="b6_clocked_lfo"></a><h2>B6 Clocked LFO</h2>
+        <br /><br /><a name="b6_clocked_lfo"></a><h2>B6 Clocked LFO</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -727,7 +767,7 @@ Pressing Z triggers a sample manually.
     
 <h3>Description</h3>
 tap tempo by pressing Z
-        <a name="b7_vco_with_linear_fm"></a><h2>B7 VCO with linear FM</h2>
+        <br /><br /><a name="b7_vco_with_linear_fm"></a><h2>B7 VCO with linear FM</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -842,7 +882,7 @@ tap tempo by pressing Z
       </table>
 <br>
     
-        <a name="b8_vco_with_waveshaping"></a><h2>B8 VCO with waveshaping</h2>
+        <br /><br /><a name="b8_vco_with_waveshaping"></a><h2>B8 VCO with waveshaping</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -957,7 +997,7 @@ tap tempo by pressing Z
       </table>
 <br>
     
-        <a name="c1_precision_adder_fractional_offsets"></a><h2>C1 Precision Adder (fractional offsets)</h2>
+        <br /><br /><a name="c1_precision_adder_fractional_offsets"></a><h2>C1 Precision Adder (fractional offsets)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1000,7 +1040,7 @@ tap tempo by pressing Z
       </table>
 <br>
     
-        <a name="c2_voltage_controlled_delay_line"></a><h2>C2 Voltage Controlled Delay Line</h2>
+        <br /><br /><a name="c2_voltage_controlled_delay_line"></a><h2>C2 Voltage Controlled Delay Line</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1043,7 +1083,7 @@ tap tempo by pressing Z
       </table>
 <br>
     
-        <a name="c3_clockable_ping_pong_delay_z_feedback"></a><h2>C3 Clockable Ping Pong Delay (Z feedback)</h2>
+        <br /><br /><a name="c3_clockable_ping_pong_delay_z_feedback"></a><h2>C3 Clockable Ping Pong Delay (Z feedback)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1088,7 +1128,7 @@ tap tempo by pressing Z
     
 <h3>Description</h3>
 Tap tempo enabled.
-        <a name="c4_clockable_ping_pong_delay_z_input_pan"></a><h2>C4 Clockable Ping Pong Delay (Z input pan)</h2>
+        <br /><br /><a name="c4_clockable_ping_pong_delay_z_input_pan"></a><h2>C4 Clockable Ping Pong Delay (Z input pan)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1133,7 +1173,7 @@ Tap tempo enabled.
     
 <h3>Description</h3>
 Tap tempo enabled.
-        <a name="c5_resonator"></a><h2>C5 Resonator</h2>
+        <br /><br /><a name="c5_resonator"></a><h2>C5 Resonator</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1178,7 +1218,7 @@ Tap tempo enabled.
     
 <h3>Description</h3>
 press Z to strike
-        <a name="c6_vocoder"></a><h2>C6 Vocoder</h2>
+        <br /><br /><a name="c6_vocoder"></a><h2>C6 Vocoder</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1221,7 +1261,7 @@ press Z to strike
       </table>
 <br>
     
-        <a name="c7_phaser"></a><h2>C7 Phaser</h2>
+        <br /><br /><a name="c7_phaser"></a><h2>C7 Phaser</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1282,7 +1322,7 @@ press Z to strike
       </table>
 <br>
     
-        <a name="c8_bit_crusher"></a><h2>C8 Bit Crusher</h2>
+        <br /><br /><a name="c8_bit_crusher"></a><h2>C8 Bit Crusher</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1361,7 +1401,7 @@ press Z to strike
       </table>
 <br>
     
-        <a name="d2_tape_delay"></a><h2>D2 Tape Delay</h2>
+        <br /><br /><a name="d2_tape_delay"></a><h2>D2 Tape Delay</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1458,7 +1498,7 @@ press Z to strike
       </table>
 <br>
     
-        <a name="d3_waveform_animator"></a><h2>D3 Waveform Animator</h2>
+        <br /><br /><a name="d3_waveform_animator"></a><h2>D3 Waveform Animator</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1555,7 +1595,7 @@ press Z to strike
       </table>
 <br>
     
-        <a name="d4_state_variable_filter"></a><h2>D4 State Variable Filter</h2>
+        <br /><br /><a name="d4_state_variable_filter"></a><h2>D4 State Variable Filter</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1598,7 +1638,7 @@ press Z to strike
       </table>
 <br>
     
-        <a name="d5_lphp_filter"></a><h2>D5 LP/HP Filter</h2>
+        <br /><br /><a name="d5_lphp_filter"></a><h2>D5 LP/HP Filter</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1622,7 +1662,7 @@ press Z to strike
 <td>HP filter output</td>
 </tr>
 </table>
-        <a name="d6_lpbp_filter"></a><h2>D6 LP/BP Filter</h2>
+        <br /><br /><a name="d6_lpbp_filter"></a><h2>D6 LP/BP Filter</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1646,7 +1686,7 @@ press Z to strike
 <td>BP filter output</td>
 </tr>
 </table>
-        <a name="d7_bphp_filter"></a><h2>D7 BP/HP Filter</h2>
+        <br /><br /><a name="d7_bphp_filter"></a><h2>D7 BP/HP Filter</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1670,7 +1710,7 @@ press Z to strike
 <td>HP filter output</td>
 </tr>
 </table>
-        <a name="d8_bpnotch_filter"></a><h2>D8 BP/Notch Filter</h2>
+        <br /><br /><a name="d8_bpnotch_filter"></a><h2>D8 BP/Notch Filter</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1694,7 +1734,7 @@ press Z to strike
 <td>notch filter output</td>
 </tr>
 </table>
-        <a name="e1_ar_envelope"></a><h2>E1 AR Envelope</h2>
+        <br /><br /><a name="e1_ar_envelope"></a><h2>E1 AR Envelope</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -1865,7 +1905,7 @@ press Z to strike
     
 <h3>Description</h3>
 Push Z to manually trigger envelope
-        <a name="e2_ar_envelope_vca"></a><h2>E2 AR Envelope & VCA</h2>
+        <br /><br /><a name="e2_ar_envelope_vca"></a><h2>E2 AR Envelope & VCA</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2036,7 +2076,7 @@ Push Z to manually trigger envelope
     
 <h3>Description</h3>
 Push Z to manually trigger envelope
-        <a name="e3_dual_ar_envelope"></a><h2>E3 Dual AR Envelope</h2>
+        <br /><br /><a name="e3_dual_ar_envelope"></a><h2>E3 Dual AR Envelope</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2171,7 +2211,7 @@ Push Z to manually trigger envelope
     
 <h3>Description</h3>
 Push Z to manually trigger envelope
-        <a name="e4_stereo_compressor"></a><h2>E4 Stereo Compressor</h2>
+        <br /><br /><a name="e4_stereo_compressor"></a><h2>E4 Stereo Compressor</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2286,7 +2326,7 @@ Push Z to manually trigger envelope
       </table>
 <br>
     
-        <a name="e5_side_chain_compressor"></a><h2>E5 Side-chain Compressor</h2>
+        <br /><br /><a name="e5_side_chain_compressor"></a><h2>E5 Side-chain Compressor</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2419,7 +2459,7 @@ Push Z to manually trigger envelope
       </table>
 <br>
     
-        <a name="e6_mono_compressor"></a><h2>E6 Mono Compressor</h2>
+        <br /><br /><a name="e6_mono_compressor"></a><h2>E6 Mono Compressor</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2534,7 +2574,7 @@ Push Z to manually trigger envelope
       </table>
 <br>
     
-        <a name="e7_euro_to_buchla_converter"></a><h2>E7 Euro to Buchla Converter</h2>
+        <br /><br /><a name="e7_euro_to_buchla_converter"></a><h2>E7 Euro to Buchla Converter</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2577,7 +2617,7 @@ Push Z to manually trigger envelope
       </table>
 <br>
     
-        <a name="e8_buchla_to_euro_converter"></a><h2>E8 Buchla to Euro Converter</h2>
+        <br /><br /><a name="e8_buchla_to_euro_converter"></a><h2>E8 Buchla to Euro Converter</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2620,7 +2660,7 @@ Push Z to manually trigger envelope
       </table>
 <br>
     
-        <a name="f1_clockable_ad_envelope_w_mute"></a><h2>F1 Clockable AD Envelope (w/ mute)</h2>
+        <br /><br /><a name="f1_clockable_ad_envelope_w_mute"></a><h2>F1 Clockable AD Envelope (w/ mute)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2701,7 +2741,7 @@ Push Z to manually trigger envelope
     
 <h3>Description</h3>
 Tap tempo by pressing Z
-        <a name="f2_clockable_ad_envelope_w_gate"></a><h2>F2 Clockable AD Envelope (w/ gate)</h2>
+        <br /><br /><a name="f2_clockable_ad_envelope_w_gate"></a><h2>F2 Clockable AD Envelope (w/ gate)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2782,7 +2822,7 @@ Tap tempo by pressing Z
     
 <h3>Description</h3>
 Tap tempo by pressing Z
-        <a name="f3_clockable_ad_envelope_w_trigger"></a><h2>F3 Clockable AD Envelope (w/ trigger)</h2>
+        <br /><br /><a name="f3_clockable_ad_envelope_w_trigger"></a><h2>F3 Clockable AD Envelope (w/ trigger)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2863,7 +2903,7 @@ Tap tempo by pressing Z
     
 <h3>Description</h3>
 Tap tempo by pressing Z
-        <a name="f4_clockable_ad_envelope_vca"></a><h2>F4 Clockable AD Envelope & VCA)</h2>
+        <br /><br /><a name="f4_clockable_ad_envelope_vca"></a><h2>F4 Clockable AD Envelope & VCA)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -2944,7 +2984,7 @@ Tap tempo by pressing Z
     
 <h3>Description</h3>
 Tap tempo by pressing Z
-        <a name="f5_shift_register_random_c_vs"></a><h2>F5 Shift Register Random CVs</h2>
+        <br /><br /><a name="f5_shift_register_random_c_vs"></a><h2>F5 Shift Register Random CVs</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3041,7 +3081,7 @@ Tap tempo by pressing Z
       </table>
 <br>
     
-        <a name="f6_shift_register_random_quantized_c_vs"></a><h2>F6 Shift Register Random Quantized CVs</h2>
+        <br /><br /><a name="f6_shift_register_random_quantized_c_vs"></a><h2>F6 Shift Register Random Quantized CVs</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3156,7 +3196,7 @@ Tap tempo by pressing Z
       </table>
 <br>
     
-        <a name="f7_shift_register_random_triggers"></a><h2>F7 Shift Register Random Triggers</h2>
+        <br /><br /><a name="f7_shift_register_random_triggers"></a><h2>F7 Shift Register Random Triggers</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3201,7 +3241,7 @@ Tap tempo by pressing Z
     
 <h3>Description</h3>
 Press Z to modify sequence
-        <a name="f8_shift_register_random_dual_triggers"></a><h2>F8 Shift Register Random Dual Triggers</h2>
+        <br /><br /><a name="f8_shift_register_random_dual_triggers"></a><h2>F8 Shift Register Random Dual Triggers</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3264,7 +3304,7 @@ Press Z to modify sequence
     
 <h3>Description</h3>
 Press Z to modify sequence
-        <a name="g1_es_1_emulation"></a><h2>G1 ES-1 Emulation</h2>
+        <br /><br /><a name="g1_es_1_emulation"></a><h2>G1 ES-1 Emulation</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3288,7 +3328,7 @@ Press Z to modify sequence
 <td>output 2</td>
 </tr>
 </table>
-        <a name="g2_es_2_emulation"></a><h2>G2 ES-2 Emulation</h2>
+        <br /><br /><a name="g2_es_2_emulation"></a><h2>G2 ES-2 Emulation</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3312,7 +3352,7 @@ Press Z to modify sequence
 <td>output 2</td>
 </tr>
 </table>
-        <a name="g3_pitch_reference"></a><h2>G3 Pitch Reference</h2>
+        <br /><br /><a name="g3_pitch_reference"></a><h2>G3 Pitch Reference</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3373,7 +3413,7 @@ Press Z to modify sequence
       </table>
 <br>
     
-        <a name="g4_frequency_reference"></a><h2>G4 Frequency Reference</h2>
+        <br /><br /><a name="g4_frequency_reference"></a><h2>G4 Frequency Reference</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3399,7 +3439,7 @@ Press Z to modify sequence
 </table>
 <h3>Description</h3>
 See manual for explanation how to set frequency with S and Z.
-        <a name="g5_tuner"></a><h2>G5 Tuner</h2>
+        <br /><br /><a name="g5_tuner"></a><h2>G5 Tuner</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3423,7 +3463,7 @@ See manual for explanation how to set frequency with S and Z.
 <td>sine wave at tracked pitch</td>
 </tr>
 </table>
-        <a name="g6_midi_clock"></a><h2>G6 MIDI Clock</h2>
+        <br /><br /><a name="g6_midi_clock"></a><h2>G6 MIDI Clock</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3520,7 +3560,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="g7_midicv"></a><h2>G7 MIDI/CV</h2>
+        <br /><br /><a name="g7_midicv"></a><h2>G7 MIDI/CV</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3599,7 +3639,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="g8_cvmidi"></a><h2>G8 CV/MIDI</h2>
+        <br /><br /><a name="g8_cvmidi"></a><h2>G8 CV/MIDI</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3660,7 +3700,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="h1_crossfadepan"></a><h2>H1 Crossfade/Pan</h2>
+        <br /><br /><a name="h1_crossfadepan"></a><h2>H1 Crossfade/Pan</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3739,7 +3779,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="h2_dual_sample_and_hold"></a><h2>H2 Dual Sample and Hold</h2>
+        <br /><br /><a name="h2_dual_sample_and_hold"></a><h2>H2 Dual Sample and Hold</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3800,7 +3840,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="h3_dual_quantizer_z_scale"></a><h2>H3 Dual Quantizer (Z scale)</h2>
+        <br /><br /><a name="h3_dual_quantizer_z_scale"></a><h2>H3 Dual Quantizer (Z scale)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -3897,7 +3937,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="h4_dual_quantizer"></a><h2>H4 Dual Quantizer</h2>
+        <br /><br /><a name="h4_dual_quantizer"></a><h2>H4 Dual Quantizer</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4012,7 +4052,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="h4_dual_euclidean_patterns"></a><h2>H4 Dual Euclidean Patterns</h2>
+        <br /><br /><a name="h4_dual_euclidean_patterns"></a><h2>H4 Dual Euclidean Patterns</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4109,7 +4149,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="h6_dual_delayed_pulse_generator"></a><h2>H6 Dual Delayed Pulse Generator</h2>
+        <br /><br /><a name="h6_dual_delayed_pulse_generator"></a><h2>H6 Dual Delayed Pulse Generator</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4206,7 +4246,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="h7_noise"></a><h2>H7 Noise</h2>
+        <br /><br /><a name="h7_noise"></a><h2>H7 Noise</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4303,7 +4343,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="h8_quantizer_2"></a><h2>H8 Quantizer 2</h2>
+        <br /><br /><a name="h8_quantizer_2"></a><h2>H8 Quantizer 2</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4436,7 +4476,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="i1_audio_playback"></a><h2>I1 Audio Playback</h2>
+        <br /><br /><a name="i1_audio_playback"></a><h2>I1 Audio Playback</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4497,7 +4537,7 @@ See manual for explanation how to set frequency with S and Z.
       </table>
 <br>
     
-        <a name="i2_clocked_audio_playback"></a><h2>I2 Clocked Audio Playback</h2>
+        <br /><br /><a name="i2_clocked_audio_playback"></a><h2>I2 Clocked Audio Playback</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4560,7 +4600,7 @@ See manual for explanation how to set frequency with S and Z.
     
 <h3>Description</h3>
 Use playlist to set number of clocks per sample.
-        <a name="i3_audio_playback_voct"></a><h2>I3 Audio Playback (V/oct)</h2>
+        <br /><br /><a name="i3_audio_playback_voct"></a><h2>I3 Audio Playback (V/oct)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4657,7 +4697,7 @@ Use playlist to set number of clocks per sample.
       </table>
 <br>
     
-        <a name="i4_audio_playback_z_speed"></a><h2>I4 Audio Playback (Z speed)</h2>
+        <br /><br /><a name="i4_audio_playback_z_speed"></a><h2>I4 Audio Playback (Z speed)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4736,7 +4776,7 @@ Use playlist to set number of clocks per sample.
       </table>
 <br>
     
-        <a name="i5_audio_playback_with_reverse"></a><h2>I5 Audio Playback (with reverse)</h2>
+        <br /><br /><a name="i5_audio_playback_with_reverse"></a><h2>I5 Audio Playback (with reverse)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4815,7 +4855,7 @@ Use playlist to set number of clocks per sample.
       </table>
 <br>
     
-        <a name="i6_audio_playback_with_scrub"></a><h2>I6 Audio Playback (with scrub)</h2>
+        <br /><br /><a name="i6_audio_playback_with_scrub"></a><h2>I6 Audio Playback (with scrub)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4912,7 +4952,7 @@ Use playlist to set number of clocks per sample.
       </table>
 <br>
     
-        <a name="i7_dual_audio_playback"></a><h2>I7 Dual audio playback</h2>
+        <br /><br /><a name="i7_dual_audio_playback"></a><h2>I7 Dual audio playback</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -4991,7 +5031,7 @@ Use playlist to set number of clocks per sample.
       </table>
 <br>
     
-        <a name="i8_dual_audio_playback_z_speed"></a><h2>I8 Dual audio playback (Z speed)</h2>
+        <br /><br /><a name="i8_dual_audio_playback_z_speed"></a><h2>I8 Dual audio playback (Z speed)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5124,7 +5164,7 @@ Use playlist to set number of clocks per sample.
       </table>
 <br>
     
-        <a name="j1_midi_file_playback_clocked"></a><h2>J1 MIDI file playback (clocked)</h2>
+        <br /><br /><a name="j1_midi_file_playback_clocked"></a><h2>J1 MIDI file playback (clocked)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5148,7 +5188,7 @@ Use playlist to set number of clocks per sample.
 <td>gate output</td>
 </tr>
 </table>
-        <a name="j3_midi_file_playback_free_running"></a><h2>J3 MIDI file playback (Free Running)</h2>
+        <br /><br /><a name="j3_midi_file_playback_free_running"></a><h2>J3 MIDI file playback (Free Running)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5191,7 +5231,7 @@ Use playlist to set number of clocks per sample.
       </table>
 <br>
     
-        <a name="j4_audio_playback_end_position_cv"></a><h2>J4 Audio Playback (end position CV)</h2>
+        <br /><br /><a name="j4_audio_playback_end_position_cv"></a><h2>J4 Audio Playback (end position CV)</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5270,7 +5310,7 @@ Use playlist to set number of clocks per sample.
       </table>
 <br>
     
-        <a name="j5_audio_recorder"></a><h2>J5 Audio Recorder</h2>
+        <br /><br /><a name="j5_audio_recorder"></a><h2>J5 Audio Recorder</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5294,7 +5334,7 @@ Use playlist to set number of clocks per sample.
 <td>right audio output</td>
 </tr>
 </table>
-        <a name="j6_multisample_audio_playback"></a><h2>J6 Multisample Audio Playback</h2>
+        <br /><br /><a name="j6_multisample_audio_playback"></a><h2>J6 Multisample Audio Playback</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5393,7 +5433,7 @@ Use playlist to set number of clocks per sample.
     
 <h3>Description</h3>
 See manual for how to set up multisample playlists
-        <a name="j7_audio_recorder"></a><h2>J7 Audio Recorder</h2>
+        <br /><br /><a name="j7_audio_recorder"></a><h2>J7 Audio Recorder</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5417,7 +5457,7 @@ See manual for how to set up multisample playlists
 <td>unused</td>
 </tr>
 </table>
-        <a name="j8_audio_playback_with_crossfade"></a><h2>J8 Audio Playback with Crossfade</h2>
+        <br /><br /><a name="j8_audio_playback_with_crossfade"></a><h2>J8 Audio Playback with Crossfade</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5514,7 +5554,7 @@ See manual for how to set up multisample playlists
       </table>
 <br>
     
-        <a name="k1_wavetable_vco"></a><h2>K1 Wavetable VCO</h2>
+        <br /><br /><a name="k1_wavetable_vco"></a><h2>K1 Wavetable VCO</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5614,7 +5654,7 @@ See manual for how to set up multisample playlists
     
 <h3>Description</h3>
 See manual for wavetable SD card setup
-        <a name="k5_programmable_quantizer"></a><h2>K5 Programmable Quantizer</h2>
+        <br /><br /><a name="k5_programmable_quantizer"></a><h2>K5 Programmable Quantizer</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5729,7 +5769,7 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        <a name="l1_stereo_reverb"></a><h2>L1 Stereo Reverb</h2>
+        <br /><br /><a name="l1_stereo_reverb"></a><h2>L1 Stereo Reverb</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5826,7 +5866,7 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        <a name="l2_mono_to_stereo_reverb"></a><h2>L2 Mono-to-Stereo Reverb</h2>
+        <br /><br /><a name="l2_mono_to_stereo_reverb"></a><h2>L2 Mono-to-Stereo Reverb</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -5923,7 +5963,7 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        <a name="l3_dual_reverb"></a><h2>L3 Dual Reverb</h2>
+        <br /><br /><a name="l3_dual_reverb"></a><h2>L3 Dual Reverb</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -6020,7 +6060,7 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        <a name="l5_stereo_chorus"></a><h2>L5 Stereo Chorus</h2>
+        <br /><br /><a name="l5_stereo_chorus"></a><h2>L5 Stereo Chorus</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -6117,7 +6157,7 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        <a name="l6_mono_chorus"></a><h2>L6 Mono Chorus</h2>
+        <br /><br /><a name="l6_mono_chorus"></a><h2>L6 Mono Chorus</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -6214,7 +6254,7 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        <a name="l8_noise_gate"></a><h2>L8 Noise Gate</h2>
+        <br /><br /><a name="l8_noise_gate"></a><h2>L8 Noise Gate</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -6311,7 +6351,7 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        <a name="m1_delayed_lfo"></a><h2>M1 Delayed LFO</h2>
+        <br /><br /><a name="m1_delayed_lfo"></a><h2>M1 Delayed LFO</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -6444,7 +6484,7 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        <a name="m2_scaled_lfo"></a><h2>M2 Scaled LFO</h2>
+        <br /><br /><a name="m2_scaled_lfo"></a><h2>M2 Scaled LFO</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -6577,7 +6617,7 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        <a name="m3_logic"></a><h2>M3 Logic</h2>
+        <br /><br /><a name="m3_logic"></a><h2>M3 Logic</h2>
 <h3>Controls</h3>
 <table>
 <tr>
@@ -6692,4 +6732,4 @@ See manual for wavetable SD card setup
       </table>
 <br>
     
-        
+        <br /><br />

@@ -42,7 +42,7 @@ class Section
       html = File.open("#{@directory}/#{page[:content]}") { |f| Nokogiri::HTML(f) }
       page_html += html.xpath("//html//body").inner_html
 
-      content += page_html
+      content += page_html + "<br /><br />"
     end
     content
   end
@@ -53,6 +53,7 @@ class ModuleEntry
   attr_reader :id
   attr_reader :index
   attr_reader :sections
+  attr_reader :directory
 
   def initialize(xml)
     @name = xml.attributes["name"].value
@@ -60,11 +61,12 @@ class ModuleEntry
     @index = xml.attributes["index"].value
 
     filename = "data/#{@index}"
+    @directory = File.dirname(filename)
 
     doc = File.open(filename) { |f| Nokogiri::XML(f) }
     @sections = []
     doc.xpath("//module//sections//section").each do |xml|
-      @sections << Section.new(xml, File.dirname(filename))
+      @sections << Section.new(xml, @directory)
     end
   end
 
@@ -73,7 +75,11 @@ class ModuleEntry
 layout: page
 title: #{@name}
 ---
-" + @sections.map { |s| s.content_for_index }.join("\n") + @sections.map { |s| s.content_for_web }.join("\n")
+" + css + @sections.map { |s| s.content_for_index }.join("\n") + @sections.map { |s| s.content_for_web }.join("\n")
+  end
+
+  def css
+    "<style>" + Dir["#{@directory}/*.css"].map { |f| File.read(f) }.join("\n") + "</style>"
   end
 end
 
