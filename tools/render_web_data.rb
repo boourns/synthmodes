@@ -1,11 +1,95 @@
 require 'byebug'
-require 'json'
+require 'nokogiri'
+require 'fileutils'
 
-moduleList = JSON.parse(File.read('data/modules.json'))
-
-moduleList["modules"].each_with_index do |m, index|
-  moduleData = JSON.parse(File.read("data/#{m["index"]}"))
-  moduleList["modules"][index]["sections"] = moduleData["sections"]
+class String
+  def underscore
+    self.gsub(/::/, '/').
+    gsub(/([A-Z]+)([A-Z][a-z])/,'\1_\2').
+    gsub(/([a-z\d])([A-Z])/,'\1_\2').
+    tr("-", "_").
+    tr(" ", "_").
+    gsub(/\/*\\*\(*\)*/, "").
+    gsub("&", "").
+    gsub("__", "_").
+    downcase
+  end
 end
 
-File.write("web/_data/modules.json", moduleList["modules"].to_json)
+class Section
+  def initialize(xml, directory)
+    @name = xml.attributes["name"].value
+    @modeList = (xml.attributes["modelist"].value == "true")
+    @directory = directory
+    @pages = xml.xpath("page").map do |xml|
+      content = xml.attributes["content"].value
+      {
+        name: xml.attributes["name"].value,
+        content: content,
+        anchor: File.basename(content).gsub(".html", "")
+      }
+    end
+  end
+  
+  def content_for_index
+    "#{@name}<br />" + @pages.map { |page| "<a href=\"##{page[:anchor]}\">#{page[:name]}</a><br />" }.join("\n")
+  end
+
+  def content_for_web
+    content = "<h2>#{@name}</h2>"
+    @pages.each do |page|
+      page_html="<a name=\"#{page[:anchor]}\"></a><h2>#{page[:name]}</h2>"
+      html = File.open("#{@directory}/#{page[:content]}") { |f| Nokogiri::HTML(f) }
+      page_html += html.xpath("//html//body").inner_html
+
+      content += page_html
+    end
+    content
+  end
+end
+
+class ModuleEntry
+  attr_reader :name
+  attr_reader :id
+  attr_reader :index
+  attr_reader :sections
+
+  def initialize(xml)
+    @name = xml.attributes["name"].value
+    @id = xml.attributes["id"].value
+    @index = xml.attributes["index"].value
+
+    filename = "data/#{@index}"
+
+    doc = File.open(filename) { |f| Nokogiri::XML(f) }
+    @sections = []
+    doc.xpath("//module//sections//section").each do |xml|
+      @sections << Section.new(xml, File.dirname(filename))
+    end
+  end
+
+  def content_for_web
+    content = "---
+layout: page
+title: #{@name}
+---
+" + @sections.map { |s| s.content_for_index }.join("\n") + @sections.map { |s| s.content_for_web }.join("\n")
+  end
+end
+
+doc = File.open("data/modules.xml") { |f| Nokogiri::XML(f) }
+
+modules = []
+
+doc.xpath("//modules//module").each do |xml|
+  modules << ModuleEntry.new(xml)
+end
+
+modules.each do |m|
+  dir = "web/modules/#{File.dirname(m.index)}"
+  begin
+    FileUtils.mkdir(dir)
+  rescue Errno::EEXIST
+  end
+  File.write("#{dir}/index.html", m.content_for_web)
+end

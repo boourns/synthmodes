@@ -24,9 +24,9 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
