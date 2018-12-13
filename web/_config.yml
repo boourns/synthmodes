@@ -16,11 +16,10 @@
 title: Synth Modes
 email: tom@burns.ca
 description: >- # this means to ignore newlines until "baseurl:"
-  Mobile friendly cheat sheets for eurorack synthesizer modules like Expert Sleepers Disting manual, Mutable Instruments Clouds, Mutable Instruments Rings
+  Mobile friendly cheat sheets for eurorack synthesizer modules
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://synthmodes.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+github_repo:  boourns/synthmodes
 
 # Build settings
 markdown: kramdown
