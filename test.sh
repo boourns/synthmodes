@@ -8,3 +8,8 @@ done
 # TODO
 # format of xml files
 # existence of referenced HTML files
+
+for i in data/*/*.html; do
+  tidy -e $i
+done
+
