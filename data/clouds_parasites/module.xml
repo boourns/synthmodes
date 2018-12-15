@@ -1,12 +1,13 @@
+<?xml version="1.0"?>
 <module>
-<sections>
-<section name="Modes" modelist="true">
-<page name="Granular Processor" content="granular.html"></page>
-<page name="Pitch Shifter / Time Stretch" content="pitchshift.html"></page>
-<page name="Looping Delay" content="delay.html"></page>
-<page name="Spectral Processor" content="madness.html"></page>
-<page name="Oliverb" content="oliverb.html"></page>
-<page name="Resonester" content="resonester.html"></page>
-</section>
-</sections>
+  <sections>
+    <section name="Modes" modelist="true">
+      <page name="Granular Processor" content="granular.html"/>
+      <page name="Pitch Shifter / Time Stretch" content="pitchshift.html"/>
+      <page name="Looping Delay" content="delay.html"/>
+      <page name="Spectral Processor" content="madness.html"/>
+      <page name="Oliverb" content="oliverb.html"/>
+      <page name="Resonester" content="resonester.html"/>
+    </section>
+  </sections>
 </module>

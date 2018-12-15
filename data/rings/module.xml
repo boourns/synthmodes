@@ -1,13 +1,14 @@
+<?xml version="1.0"?>
 <module>
-<sections>
-<section name="Modes" modelist="true">
-<page name="Modal Resonator" content="resonator.html"></page>
-<page name="Sympathetic Strings" content="sympathetic.html"></page>
-<page name="Modulated / Inharmonic Strings" content="inharmonic.html"></page>
-<page name="FM Voice" content="fm.html"></page>
-<page name="Western Chords" content="western.html"></page>
-<page name="String &amp; Reverb" content="reverb.html"></page>
-<page name="Disastrous Peace" content="peace.html"></page>
-</section>
-</sections>
+  <sections>
+    <section name="Modes" modelist="true">
+      <page name="Modal Resonator" content="resonator.html"/>
+      <page name="Sympathetic Strings" content="sympathetic.html"/>
+      <page name="Modulated / Inharmonic Strings" content="inharmonic.html"/>
+      <page name="FM Voice" content="fm.html"/>
+      <page name="Western Chords" content="western.html"/>
+      <page name="String &amp; Reverb" content="reverb.html"/>
+      <page name="Disastrous Peace" content="peace.html"/>
+    </section>
+  </sections>
 </module>
