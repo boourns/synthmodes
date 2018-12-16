@@ -1,0 +1,41 @@
+body {
+     font-family: -apple-system, sans-serif;
+}
+ th {
+     color: grey;
+     font-weight: normal;
+}
+ td {
+     margin: 5px;
+     padding: 5px;
+}
+ table {
+     border: 1px solid black;
+     padding: 5px;
+     border-collapse: collapse;
+     width: 100%;
+}
+ tr td:first-child{
+     width:1%;
+}
+
+ .control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+ .parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
+}
+
+.wrap {
+     word-wrap: break-word;
+}

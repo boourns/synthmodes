@@ -25,7 +25,8 @@
         </div>
       </td>
 
-      <td>Hz/V scale, centred on 1kHz</td>
+      <td>mode. '-0' indicates independent mode, 0 indicates
+      combined mode</td>
     </tr>
 
     <tr>
@@ -35,7 +36,7 @@
         </div>
       </td>
 
-      <td>exponential input</td>
+      <td>input</td>
     </tr>
 
     <tr>
@@ -45,7 +46,7 @@
         </div>
       </td>
 
-      <td>linear input</td>
+      <td>input</td>
     </tr>
 
     <tr>
@@ -55,7 +56,8 @@
         </div>
       </td>
 
-      <td>min(X, Y)</td>
+      <td>abs(X) in independent mode<br>
+      abs(X + Y) in combined mode</td>
     </tr>
 
     <tr>
@@ -65,8 +67,12 @@
         </div>
       </td>
 
-      <td>max(X, Y)</td>
+      <td>abs(Y) in independent mode<br>
+      abs(X - Y) in combined mode</td>
     </tr>
   </table>
+
+  <h3>Description</h3>Provides either full-wave rectifier, or
+  absolute value function, depending on value of Z
 </body>
 </html>

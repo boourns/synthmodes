@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="Bank 1/a" modelist="true">
+      <page name="1-a Precision Adder" content="a1_precision_adder.html">
+        <tags>
+          <tag>utility</tag>
+        </tags>
+      </page>
+      <page name="1-b Four Quadrant Multiplier" content="a2_four_quadrant_multiplier.html">
+        <tags>
+          <tag>utility</tag>
+        </tags>
+      </page>
+      <page name="1-c Full-wave Rectifier / abs()" content="a3_full_wave_rectifier_abs.html">
+        <tags>
+          <tag>utility</tag>
+        </tags>
+      </page>
+      <page name="1-d Minimum / Maximum" content="a4_minimum_maximum.html">
+        <tags>
+          <tag>utility</tag>
+        </tags>
+      </page>
+      <page name="2-a Linear / Exponential Converter" content="a5_linear_exponential_converter.html">
+        <tags>
+          <tag>utility</tag>
+        </tags>
+      </page>
+      <page name="2-b Quantizer" content="a6_quantizer.html">
+        <tags>
+          <tag>quantizer</tag>
+        </tags>
+      </page>
+      <page name="2-c Comparator" content="a7_comparator.html">
+        <tags>
+          <tag>logic</tag>
+        </tags>
+      </page>
+      <page name="2-d Dual Waveshaper" content="a8_dual_waveshaper.html">
+        <tags>
+          <tag>effect</tag>
+        </tags>
+      </page>
+      <page name="3-a Sample and Hold" content="b1_sample_and_hold.html">
+        <tags>
+          <tag>utility</tag>
+        </tags>
+      </page>
+      <page name="3-b Slew Rate Limiter" content="b2_slew_rate_limiter.html">
+        <tags>
+          <tag>utility</tag>
+        </tags>
+      </page>
+      <page name="3-c Pitch &amp; Envelope Tracker" content="b3_pitch_envelope_tracker.html">
+        <tags>
+          <tag>external</tag>
+          <tag>envelope</tag>
+        </tags>
+      </page>
+      <page name="3-d Clockable Delay/Echo" content="b4_clockable_delayecho.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+        </tags>
+      </page>
+      <page name="4-a LFO" content="b5_lfo.html">
+        <tags>
+          <tag>LFO</tag>
+        </tags>
+      </page>
+      <page name="4-b Clocked LFO" content="b6_clocked_lfo.html">
+        <tags>
+          <tag>LFO</tag>
+          <tag>clocked</tag>
+        </tags>
+      </page>
+      <page name="4-c VCO with linear FM" content="b7_vco_with_linear_fm.html">
+        <tags>
+          <tag>oscillator</tag>
+        </tags>
+      </page>
+      <page name="4-d VCO with waveshaping" content="b8_vco_with_waveshaping.html">
+        <tags>
+          <tag>oscillator</tag>
+        </tags>
+      </page>
+    </section>
+    <section name="Bank 1/b" modelist="true">
+      <page name="1-a Precision Adder (fractional offsets)" content="c1_precision_adder_fractional_offsets.html">
+        <tags>
+          <tag>utility</tag>
+        </tags>
+      </page>
+      <page name="1-b Voltage Controlled Delay Line" content="c2_voltage_controlled_delay_line.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+        </tags>
+      </page>
+      <page name="1-c Clockable Ping Pong Delay (Z feedback)" content="c3_clockable_ping_pong_delay_z_feedback.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+        </tags>
+      </page>
+      <page name="1-d Clockable Ping Pong Delay (Z input pan)" content="c4_clockable_ping_pong_delay_z_input_pan.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+        </tags>
+      </page>
+      <page name="2-a Resonator" content="c5_resonator.html">
+        <tags>
+          <tag>effect</tag>
+        </tags>
+      </page>
+      <page name="2-b Vocoder" content="c6_vocoder.html">
+        <tags>
+          <tag>effect</tag>
+        </tags>
+      </page>
+      <page name="2-c Phaser" content="c7_phaser.html">
+        <tags>
+          <tag>effect</tag>
+        </tags>
+      </page>
+      <page name="2-d Bit Crusher" content="c8_bit_crusher.html">
+        <tags>
+          <tag>effect</tag>
+        </tags>
+      </page>
+      <page name="3-b Tape Delay" content="d2_tape_delay.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+        </tags>
+      </page>
+      <page name="3-c Waveform Animator" content="d3_waveform_animator.html">
+        <tags>
+          <tag>effect</tag>
+        </tags>
+      </page>
+      <page name="3-d State Variable Filter" content="d4_state_variable_filter.html">
+        <tags>
+          <tag>filter</tag>
+        </tags>
+      </page>
+      <page name="4-a LP/HP Filter" content="d5_lphp_filter.html">
+        <tags>
+          <tag>filter</tag>
+        </tags>
+      </page>
+      <page name="4-b LP/BP Filter" content="d6_lpbp_filter.html">
+        <tags>
+          <tag>filter</tag>
+        </tags>
+      </page>
+      <page name="4-c BP/HP Filter" content="d7_bphp_filter.html">
+        <tags>
+          <tag>filter</tag>
+        </tags>
+      </page>
+      <page name="4-d BP/Notch Filter" content="d8_bpnotch_filter.html">
+        <tags>
+          <tag>filter</tag>
+        </tags>
+      </page>
+    </section>
+    <section name="Bank 1/c" modelist="true">
+      <page name="1-a AR Envelope" content="e1_ar_envelope.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+        </tags>
+      </page>
+      <page name="1-b AR Envelope (w/ push)" content="e1_ar_envelope_push.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+        </tags>
+      </page>
+      <page name="1-c AR Envelope &amp; VCA" content="e2_ar_envelope_vca.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+          <tag>VCA</tag>
+        </tags>
+      </page>
+      <page name="1-d AR Envelope &amp; VCA (w/ push)" content="e2_ar_envelope_vca_push.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+          <tag>VCA</tag>
+        </tags>
+      </page>
+      <page name="2-a Dual AR Envelope" content="e3_dual_ar_envelope.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+        </tags>
+      </page>
+      <page name="2-b Dual AR Envelope (w/push)" content="e3_dual_ar_envelope_push.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+        </tags>
+      </page>
+      <page name="2-c Euro to Buchla Converter" content="e7_euro_to_buchla_converter.html">
+        <tags>
+          <tag>utility</tag>
+          <tag>external</tag>
+        </tags>
+      </page>
+      <page name="2-d Buchla to Euro Converter" content="e8_buchla_to_euro_converter.html">
+        <tags>
+          <tag>utility</tag>
+          <tag>external</tag>
+        </tags>
+      </page>
+      <page name="3-a Clockable AD Envelope (w/ mute)" content="f1_clockable_ad_envelope_w_mute.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+          <tag>clocked</tag>
+        </tags>
+      </page>
+      <page name="3-b Clockable AD Envelope (w/ gate)" content="f2_clockable_ad_envelope_w_gate.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+          <tag>clocked</tag>
+        </tags>
+      </page>
+      <page name="3-c Clockable AD Envelope (w/ trigger)" content="f3_clockable_ad_envelope_w_trigger.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+          <tag>clocked</tag>
+        </tags>
+      </page>
+      <page name="3-d Clockable AD Envelope &amp; VCA)" content="f4_clockable_ad_envelope_vca.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>envelope</tag>
+          <tag>VCA</tag>
+          <tag>clocked</tag>
+        </tags>
+      </page>
+      <page name="4-a Shift Register Random CVs" content="f5_shift_register_random_c_vs.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>random</tag>
+        </tags>
+      </page>
+      <page name="4-b Shift Register Random Quantized CVs" content="f6_shift_register_random_quantized_c_vs.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>random</tag>
+          <tag>quantizer</tag>
+        </tags>
+      </page>
+      <page name="4-c Shift Register Random Triggers" content="f7_shift_register_random_triggers.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>random</tag>
+        </tags>
+      </page>
+      <page name="4-d Shift Register Random Dual Triggers" content="f8_shift_register_random_dual_triggers.html">
+        <tags>
+          <tag>modulation</tag>
+          <tag>random</tag>
+        </tags>
+      </page>
+    </section>
+    <section name="Bank 1/d" modelist="true">
+      <page name="1-a ES-1 Emulation" content="g1_es_1_emulation.html">
+        <tags>
+          <tag>utility</tag>
+          <tag>external</tag>
+        </tags>
+      </page>
+      <page name="1-b ES-2 Emulation" content="g2_es_2_emulation.html">
+        <tags>
+          <tag>utility</tag>
+          <tag>external</tag>
+        </tags>
+      </page>
+      <page name="2-a Dual Quantizer (Z scale)" content="h3_dual_quantizer_z_scale.html">
+        <tags>
+          <tag>quantizer</tag>
+        </tags>
+      </page>
+      <page name="2-b Dual Quantizer" content="h4_dual_quantizer.html">
+        <tags>
+          <tag>quantizer</tag>
+        </tags>
+      </page>
+      <page name="2-c Dual Delayed Pulse Generator" content="h6_dual_delayed_pulse_generator.html">
+        <tags>
+          <tag>utility</tag>
+        </tags>
+      </page>
+      <page name="2-d Noise" content="h7_noise.html">
+        <tags>
+          <tag>noise</tag>
+        </tags>
+      </page>
+     <page name="3-a Crossfade/Pan" content="h1_crossfadepan.html">
+        <tags>
+          <tag>utility</tag>
+          <tag>VCA</tag>
+        </tags>
+      </page>
+      <page name="3-b Dual Sample and Hold" content="h2_dual_sample_and_hold.html">
+        <tags>
+          <tag>utility</tag>
+          <tag>noise</tag>
+        </tags>
+      </page>
+      <page name="4-a Dual Euclidean Patterns" content="h4_dual_euclidean_patterns.html">
+        <tags>
+          <tag>random</tag>
+        </tags>
+      </page>
+    </section>
+    <section name="Bank 2/a" modelist="true">
+      <page name="1-a Audio Playback" content="i1_audio_playback.html">
+        <tags>
+          <tag>wave</tag>
+        </tags>
+      </page>
+      <page name="1-c Audio Playback (V/oct)" content="i3_audio_playback_voct.html">
+        <tags>
+          <tag>wave</tag>
+          <tag>oscillator</tag>
+        </tags>
+      </page>
+      <page name="1-d Audio Playback (Z speed)" content="i4_audio_playback_z_speed.html">
+        <tags>
+          <tag>wave</tag>
+        </tags>
+      </page>
+      <page name="3-a MIDI file playback (clocked)" content="j1_midi_file_playback_clocked.html">
+        <tags>
+          <tag>midi</tag>
+          <tag>clocked</tag>
+        </tags>
+      </page>
+      <page name="3-c MIDI file playback (Free Running)" content="j3_midi_file_playback_free_running.html">
+        <tags>
+          <tag>midi</tag>
+        </tags>
+      </page>
+      <page name="3-d Audio Playback (end position CV)" content="j4_audio_playback_end_position_cv.html">
+        <tags>
+          <tag>wave</tag>
+        </tags>
+      </page>
+    </section>
+    <section name="Bank 2/b" modelist="true">
+      <page name="1-a Clocked Audio Playback" content="i2_clocked_audio_playback.html">
+        <tags>
+          <tag>wave</tag>
+          <tag>clocked</tag>
+        </tags>
+      </page>
+      <page name="3-a Audio Recorder" content="j5_audio_recorder.html">
+        <tags>
+          <tag>wave</tag>
+        </tags>
+      </page>
+    </section>
+    <section name="Bank 2/c" modelist="true">
+      <page name="1-a Wavetable VCO" content="k1_wavetable_vco.html">
+        <tags>
+          <tag>wave</tag>
+          <tag>oscillator</tag>
+        </tags>
+      </page>
+    </section>
+    <section name="Bank 3/a" modelist="true">
+      <page name="1-a Stereo Reverb" content="l1_stereo_reverb.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>reverb</tag>
+        </tags>
+      </page>
+      <page name="1-b Mono-to-Stereo Reverb" content="l2_mono_to_stereo_reverb.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>reverb</tag>
+        </tags>
+      </page>
+      <page name="1-c Dual Reverb" content="l3_dual_reverb.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>reverb</tag>
+        </tags>
+      </page>
+      <page name="2-a Stereo Chorus" content="l5_stereo_chorus.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>reverb</tag>
+        </tags>
+      </page>
+      <page name="2-b Mono Chorus" content="l6_mono_chorus.html">
+        <tags>
+          <tag>effect</tag>
+          <tag>reverb</tag>
+        </tags>
+      </page>
+    </section>
+  </sections>
+</module>
