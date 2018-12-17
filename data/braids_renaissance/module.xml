@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="Modes" modelist="true">
+      <page name="CSAW" content="csaw.html"/>
+      <page name="/\/|-_-_" content="classic_waves.html"/>
+      <page name="/|/|-_-_" content="saw_pwm.html"/>
+      <page name="FOLD" content="fold.html"/>
+      <page name="_|_|_|_|_" content="sine_comb.html"/>
+      <page name="SYN-_-_" content="sync_square.html"/>
+      <page name="SYN/|" content="sync_saw.html"/>
+      <page name="/|/|x3" content="3saw.html"/>
+      <page name="-_-_x3" content="3square.html"/>
+      <page name="/\x3" content="3tri.html"/>
+      <page name="SIx3" content="3sin.html"/>
+      <page name="RING" content="ring.html"/>
+      <page name="/|/|/|/|" content="supersaw.html"/>
+      <page name="/|/|_|_|_" content="saw_comb.html"/>
+      <page name="TOY*" content="toy.html"/>
+      <page name="ZLPF" content="zlpf.html"/>
+      <page name="ZPKF" content="zpkf.html"/>
+      <page name="ZBPF" content="zbpf.html"/>
+      <page name="ZHPF" content="zhpf.html"/>
+      <page name="VOSM" content="vosm.html"/>
+      <page name="VOWL" content="vowl.html"/>
+      <page name="VFOF" content="vfof.html"/>
+      <page name="HARM" content="harm.html"/>
+      <page name="FM" content="fm.html"/>
+      <page name="FBFM" content="fbfm.html"/>
+      <page name="WTFM" content="wtfm.html"/>
+      <page name="PLUK" content="pluk.html"/>
+      <page name="BOWD" content="bowd.html"/>
+      <page name="BLOW" content="blow.html"/>
+      <page name="FLUT" content="flute.html"/>
+      <page name="BELL" content="bell.html"/>
+      <page name="DRUM" content="drum.html"/>
+      <page name="KICK" content="kick.html"/>
+      <page name="CYMB" content="cymbal.html"/>
+      <page name="SNAR" content="snare.html"/>
+      <page name="WTBL" content="wavetable.html"/>
+      <page name="WMAP" content="wmap.html"/>
+      <page name="WLIN" content="wlin.html"/>
+      <page name="WTX4" content="wtx4.html"/>
+      <page name="NOIS" content="nois.html"/>
+      <page name="TWNQ" content="twnq.html"/>
+      <page name="CLKN" content="clkn.html"/>
+      <page name="CLOU" content="clou.html"/>
+      <page name="PRTC" content="prtc.html"/>
+      <page name="QPSK" content="qpsk.html"/>
+    </section>
+  </sections>
+</module>

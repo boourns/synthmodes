@@ -1,0 +1,1489 @@
+---
+layout: page
+title: Braids (Stock)
+---
+<style>body {
+     font-family: -apple-system, sans-serif;
+}
+.orange {
+  background-color: #ff9e20;
+}
+
+.green {
+  background-color: #00ee00;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.leds {
+  text-align: center;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.centered {
+text-align: center;
+}
+
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+h3 {
+  text-align: left;
+}
+
+td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.blend {
+  text-align: left;
+  vertical-align: middle;
+}</style>Modes<br /><a href="#csaw">CSAW</a><br />
+<a href="#classic_waves">/\/|-_-_</a><br />
+<a href="#saw_pwm">/|/|-_-_</a><br />
+<a href="#fold">FOLD</a><br />
+<a href="#sine_comb">_|_|_|_|_</a><br />
+<a href="#sync_square">SYN-_-_</a><br />
+<a href="#sync_saw">SYN/|</a><br />
+<a href="#3saw">/|/|x3</a><br />
+<a href="#3square">-_-_x3</a><br />
+<a href="#3tri">/\x3</a><br />
+<a href="#3sin">SIx3</a><br />
+<a href="#ring">RING</a><br />
+<a href="#supersaw">/|/|/|/|</a><br />
+<a href="#saw_comb">/|/|_|_|_</a><br />
+<a href="#toy">TOY*</a><br />
+<a href="#zlpf">ZLPF</a><br />
+<a href="#zpkf">ZPKF</a><br />
+<a href="#zbpf">ZBPF</a><br />
+<a href="#zhpf">ZHPF</a><br />
+<a href="#vosm">VOSM</a><br />
+<a href="#vowl">VOWL</a><br />
+<a href="#vfof">VFOF</a><br />
+<a href="#harm">HARM</a><br />
+<a href="#fm">FM</a><br />
+<a href="#fbfm">FBFM</a><br />
+<a href="#wtfm">WTFM</a><br />
+<a href="#pluk">PLUK</a><br />
+<a href="#bowd">BOWD</a><br />
+<a href="#blow">BLOW</a><br />
+<a href="#flute">FLUT</a><br />
+<a href="#bell">BELL</a><br />
+<a href="#drum">DRUM</a><br />
+<a href="#kick">KICK</a><br />
+<a href="#cymbal">CYMB</a><br />
+<a href="#snare">SNAR</a><br />
+<a href="#wavetable">WTBL</a><br />
+<a href="#wmap">WMAP</a><br />
+<a href="#wlin">WLIN</a><br />
+<a href="#wtx4">WTX4</a><br />
+<a href="#nois">NOIS</a><br />
+<a href="#twnq">TWNQ</a><br />
+<a href="#clkn">CLKN</a><br />
+<a href="#clou">CLOU</a><br />
+<a href="#prtc">PRTC</a><br />
+<a href="#qpsk">QPSK</a><br /><h2>Modes</h2><a name="csaw"></a><h2>CSAW</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+
+CS80-like sawtooth with 'notch'.
+
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">notch width</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">notch depth and polarity</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="classic_waves"></a><h2>/\/|-_-_</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+
+Classic variable wave analog-style oscillator.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">triangle to sawtooth to square to pulse</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">tone, from a 1-pole filter to a waveshaper</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="saw_pwm"></a><h2>/|/|-_-_</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+
+Morph from dephased saw to square with pulse width control
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">dephasing of saw, pulse width of square</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">waveshape, saw to square</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="fold"></a><h2>FOLD</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+
+Blend of sine/triangle oscillators sent to wavefolder
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">wavefolder strength</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">sine -&gt; triangle</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="sine_comb"></a><h2>_|_|_|_|_</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Two detuned variable sine-&gt;comb waveforms.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">sine -&gt; dirac comb</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">detune</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="sync_square"></a><h2>SYN-_-_</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Two square-wave oscillators, one hardsynced to another.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">interval between primary/secondary osc</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">oscillator mix</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="sync_saw"></a><h2>SYN/|</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Two saw oscillators, one hardsynced to another.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">interval between primary/secondary osc</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">oscillator mix</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="3saw"></a><h2>/|/|x3</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Three independently tuned saw oscillators
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">relative frequency of 2nd osc</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">relative frequency of 3rd osc</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="3square"></a><h2>-_-_x3</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Three independently tuned square oscillators
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">relative frequency of 2nd osc</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">relative frequency of 3rd osc</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="3tri"></a><h2>/\x3</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Three independently tuned triangle oscillators
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">relative frequency of 2nd osc</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">relative frequency of 3rd osc</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="3sin"></a><h2>SIx3</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Three independently tuned sine oscillators
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">relative frequency of 2nd osc</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">relative frequency of 3rd osc</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="ring"></a><h2>RING</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Three sine wave oscillators ring modulated -&amp;gt waveshaper
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">relative frequency of 2nd osc</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">relative frequency of 3rd osc</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="supersaw"></a><h2>/|/|/|/|</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Supersaw.  7 saw waves mixed.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">detuning</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">highpass filter</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="saw_comb"></a><h2>/|/|_|_|_</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Saw -&gt; tuned comb filter
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">relative tuning of comb filter</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">negative/positive feedback</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="toy"></a><h2>TOY*</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Circuit bent toy emulation
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">toy clock rate</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">data line short circuiting</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="zlpf"></a><h2>ZLPF</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Synthesis of the response of a lowpass filter excited by a waveform. 
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">filter frequency</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">waveshape saw-&gt;square-&gt;triangle</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="zpkf"></a><h2>ZPKF</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Synthesis of the response of a peaking filter excited by a waveform. 
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">filter frequency</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">waveshape saw-&gt;square-&gt;triangle</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="zbpf"></a><h2>ZBPF</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Synthesis of the response of a bandpass filter excited by a waveform. 
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">filter frequency</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">waveshape saw-&gt;square-&gt;triangle</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="zhpf"></a><h2>ZHPF</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Synthesis of the response of a highpass filter excited by a waveform. 
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">filter frequency</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">waveshape saw-&gt;square-&gt;triangle</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="vosm"></a><h2>VOSM</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+VOSIM formant synthesis emulation.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">relative frequency of formant</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">relative frequency of formant</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="vowl"></a><h2>VOWL</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Vowel speech synthesis
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">vowel, a e i o u</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">formant frequency shift</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="vfof"></a><h2>VFOF</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Vowel speech synthesis
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">vowel, a e i o u</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">formant frequency shift</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="harm"></a><h2>HARM</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Additive synthesis of 12 sine harmonics
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">amplitude distribution</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">center frequency for amplitude distribution</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="fm"></a><h2>FM</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+2-operator phase-modulation synthesis
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">modulation amount</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">relative frequency</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="fbfm"></a><h2>FBFM</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+2-operator phase-modulation synthesis, with carrier feedback
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">modulation amount</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">relative frequency</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="wtfm"></a><h2>WTFM</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+2-operator phase-modulation synthesis, with 2 feedback paths
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">modulation amount</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">relative frequency</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="pluk"></a><h2>PLUK</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Plucked string synthesis.  Requires trigger signal.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">damping</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">plucking position</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="bowd"></a><h2>BOWD</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Bowed string modelling.  Requires trigger signal.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">friction</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">bowing position</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="blow"></a><h2>BLOW</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Reed instrument modelling
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">air pressure</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">instrtument geometry</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="flute"></a><h2>FLUT</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Flute instrument modelling
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">air pressure</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">instrtument geometry</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="bell"></a><h2>BELL</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Bell additive synthesis
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">damping</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">inharmonicity</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="drum"></a><h2>DRUM</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Metal drum synthesis
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">damping</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">brightness</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="kick"></a><h2>KICK</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Simulation of Roland TR808 kick
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">decay time</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">brightness/tone</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="cymbal"></a><h2>CYMB</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Simulation of Roland TR808 cymbal
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">bandpass filter frequency</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">oscillator/noise balance</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="snare"></a><h2>SNAR</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Simulation of Roland TR808 snare
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">tone</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">noise/"snappy"</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="wavetable"></a><h2>WTBL</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Wavetable synthesis
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">sweeps wavetable</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">picks wavetable</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="wmap"></a><h2>WMAP</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+2-dimensional wavetable synthesis.  Waves placed in a 16-by-16 grid, Interpolated in both dimensions.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">sweeps wavetable in X direction</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">sweeps wavetable in Y direction</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="wlin"></a><h2>WLIN</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Wavetable synthesis, 1-dimensional scanning through all wavetables.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">sweeps wavetables</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">interpolation method. Past 12oclock, decreases playback resolution.</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="wtx4"></a><h2>WTX4</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+4-voice paraphonic wavetable chords
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">interpolates through 16 different waves</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">chord structure</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="nois"></a><h2>NOIS</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+White noise through a state-variable filter.  Pitch input controls filter frequency.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">filter resonance</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">crossfade between lowpass and highpass</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="twnq"></a><h2>TWNQ</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+White noise processed by two bandpass filters
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">filter resonance</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">filter frequency spacing</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="clkn"></a><h2>CLKN</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Random samples generated at rate determined by main pitch.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">periodicity</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">quantization, from 2 to 32 distinct values per sample</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="clou"></a><h2>CLOU</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Texture generator by mixing short grains of windowed sine waves
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">density and overlap of grains</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">frequency randomization</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="prtc"></a><h2>PRTC</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Texture generator by mixing short decaying "pings" of sound
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">density and overlap of grains</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">frequency randomization</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="qpsk"></a><h2>QPSK</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Generates audio frequency QPSK encoded data
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">bit rate</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">8-bit value</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br />
