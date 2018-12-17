@@ -40,13 +40,13 @@
       <page name="WTBL" content="wavetable.html"/>
       <page name="WMAP" content="wmap.html"/>
       <page name="WLIN" content="wlin.html"/>
-      <page name="WTX4" content="wtx4.html"/>
+      <page name="SAM1" content="sam.html"/>
+      <page name="SAM2" content="sam.html"/>
       <page name="NOIS" content="nois.html"/>
       <page name="TWNQ" content="twnq.html"/>
       <page name="CLKN" content="clkn.html"/>
       <page name="CLOU" content="clou.html"/>
       <page name="PRTC" content="prtc.html"/>
-      <page name="QPSK" content="qpsk.html"/>
     </section>
   </sections>
 </module>
