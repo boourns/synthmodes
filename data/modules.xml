@@ -7,4 +7,5 @@
   <module name="Clouds (Stock)" id="clouds_stock" index="clouds_stock/module.xml"/>
   <module name="Clouds (Parasites)" id="clouds_parasites" index="clouds_parasites/module.xml"/>
   <module name="Rings" id="rings" index="rings/module.xml"/>
+  <module name="Peaks (stock" id="peaks_stock" index="peaks_stock/module.xml"/>
 </modules>
