@@ -1,0 +1,432 @@
+<html class="no-js">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="o_c.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+
+	
+<h2 id="sequins">Sequins</h2>
+<p><img src="./sequins.svg" alt="Sequins" class="img-responsive"></p>
+
+<div class = "info">
+
+<p><em>Sequins</em> is a basic, <strong>dual-channel sequencer</strong>. The app provides four 16-step sequences per channel, and CV-control over various channel parameters, including scale mask, octave, pulsewidth, clock multiplication and division. The four sequences can be <strong>chained</strong> in various ways, providing sequences from <strong>4 to up to 64 notes</strong>. The sequence data is stored along with the other settings (whenever settings are saved).</p>
+
+
+<ul>
+  <li>the <strong>sequence editor</strong> works similarly to the scale editor in the quantizer modes:
+    <ul>
+      <li>in the main menu, select which sequence to edit by adjusting the <code class="highlighter-rouge">sequence #</code> parameter.</li>
+      <li>then right-click on the item displayed right below (<code class="highlighter-rouge">--&gt; edit</code>) to <strong>open the sequence-editor</strong>.</li>
+      <li><strong>mute/unmute</strong> notes by clicking the left encoder: the step value is displayed in a format x+y.yy, where x is the octave (above or below 0.00V) and y.yy gives the semitone offset. for instance <code class="highlighter-rouge">+2+2.23</code> = 2.23 semitones above octave #2 (=~ 2.000V).</li>
+      <li>adjust the sequence <strong>length</strong> by pointing the cursor to the far right, then turn the right encoder.</li>
+      <li>(<strong>simultaneously</strong> push down the <em>left</em> encoder to also <strong>mute/clear</strong> the steps that are being added while expanding the sequence).</li>
+      <li>to adjust the <strong>pitch</strong>, simply move the cursor to a given slot, then turn the right encoder: this will increase or decrease the pitch in <strong>semitones</strong> (= step size: <code class="highlighter-rouge">1.00</code>). note these values are <strong>pre-quantization</strong>, so the effect this has will depend on the chosen scale.</li>
+      <li>to <strong>fine-tune</strong> the pitch (= step size: ~ <code class="highlighter-rouge">0.01</code>), hold down the left encoder <strong>while</strong> turning the right encoder.</li>
+      <li><strong>note</strong>: the number displayed when adjusting the note values is the actual (pre-quantization) DAC code (that’s far from ideal, i know …). details on what those numbers mean can be found <a href="http://ornament-and-cri.me/custom-scales/">here</a>.</li>
+      <li>in the sequence-editor, you can use the <strong>up/down</strong> buttons to select which sequence to edit (<code class="highlighter-rouge">#1</code> - <code class="highlighter-rouge">#4</code>). (this makes it possible to edit sequences ‘offline’, ie make adjustments to, say, sequence #2 while sequence #1 is playing).</li>
+      <li><strong>copy+paste</strong>: in the sequence-editor, long-press the left encoder to <strong>copy</strong> the selected sequence. select a different sequence slot, then long-press the down button to <strong>paste</strong> it into that slot. copy+paste works across channels. (note: once copied (or pasted), sequence data will be stored in a temporary buffer for about 15 seconds, after which it’ll expire.)</li>
+    </ul>
+  </li>
+  <li>
+    <p>the <code class="highlighter-rouge">playmode</code> and <code class="highlighter-rouge">direction</code> settings offer various ways of moving through the sequence(s):</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">-</code> (default): advance by trigger, using the chosen sequence and direction settings.</li>
+      <li><code class="highlighter-rouge">SEQ+1 - SEQ+3</code>: ditto, but <strong>cycling</strong> through 2, 3, or 4 adjacent sequences (= allows up to 64 notes).</li>
+      <li><code class="highlighter-rouge">TR+1 - TR+3</code>: ditto, but <strong>jumps</strong> to the next sequence only <em>if/when</em> a trigger is received at the <strong>aux.</strong> trigger inputs.</li>
+      <li><code class="highlighter-rouge">ARP</code>: <strong>arpeggiate</strong> the sequence.</li>
+      <li><code class="highlighter-rouge">S+H#1 - S+H#4</code>: CV-address, when triggered (<strong>sample and hold</strong>).</li>
+      <li><code class="highlighter-rouge">CV#1 - CV#4</code>: CV-address, <strong>free-running</strong>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>note: when in CV-address mode, the <code class="highlighter-rouge">CV adr. range</code> setting adjusts the resolution of the chosen input (CV1-CV4), relative to the length of the sequence (ie, you’ll either need <code class="highlighter-rouge">5V</code> or <code class="highlighter-rouge">10V</code> to move through the entire span of the sequence).</p>
+  </li>
+  <li>the secondary/aux. clock inputs (TR2, TR4) can be used to either <strong>cycle</strong> through the sequences (see above), or they can be selected as a <strong>reset/mute</strong> signal (<code class="highlighter-rouge">reset/mute</code>). the options are: <code class="highlighter-rouge">RST2</code>, <code class="highlighter-rouge">RST4</code> (reset) and <code class="highlighter-rouge">=HI2</code>, <code class="highlighter-rouge">=LO2</code>, <code class="highlighter-rouge">=HI4</code>, and <code class="highlighter-rouge">=LO4</code> (mute when aux. clock goes high, respectively low.). NB: When using a clock divider or the like (or anything that will introduce latency relative to the main clock inputs TR1/TR3), it can/will make sense to increase the trigger-to-processing latency (see the <code class="highlighter-rouge">Trigger delay</code> setting). This will make sure the auxiliary trigger (or control voltage) is processed within the current update window. (Also see <em>Quantermain</em> above for an extended discussion of the trigger delay setting).</li>
+</ul>
+
+<h3 id="inputs-and-outputs-4">Inputs and outputs</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>I/O</th>
+      <th>Function</th>
+      <th>-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TR1</td>
+      <td>clock input #1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>TR2</td>
+      <td>aux clock input #1 / reset/mute #1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>TR3</td>
+      <td>clock input #2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>TR4</td>
+      <td>aux clock input #2 / reset/mute #2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CV1</td>
+      <td>(mappable)</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CV2</td>
+      <td>(mappable)</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CV3</td>
+      <td>(mappable)</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CV4</td>
+      <td>(mappable)</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>A, B</td>
+      <td>CV outputs #1, #2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>C, D</td>
+      <td>aux outputs #1, #2 (default to gate output)</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="available-settings-per-channel-3">Available settings (per-channel)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">scale</code></td>
+      <td>current scale</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; edit</code></td>
+      <td>edit scale mask (for details see <a href="http://ornament-and-cri.me/user-manual-v1_3/#active-note-scale-mask-and-scale-editing">here</a>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">sequence #</code></td>
+      <td>select sequence <code class="highlighter-rouge">#1 - #4</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; edit </code></td>
+      <td>edit sequence</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">playmode</code></td>
+      <td>chain sequences (<code class="highlighter-rouge">SEQ+x</code>), advance by trigger (<code class="highlighter-rouge">TR+x</code>), or CV-address</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">direction</code></td>
+      <td>forward, reverse, pendulum1, pendulum2 (repeat first/last), random, Brownian</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt;brown prob</code></td>
+      <td>(if <code class="highlighter-rouge">direction</code>=<code class="highlighter-rouge">brwn</code> (Brownian)) probability (<em>p</em>) that sequence direction (up or down will reverse on the next step, 0 means <em>p</em>=0, 255 means <em>p</em>=1)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">mult/div</code></td>
+      <td>set clock multiplier / divider</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">octave</code></td>
+      <td>offset octave</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">aux. mode</code></td>
+      <td>aux channel output: <code class="highlighter-rouge">gate</code> (see note below), <code class="highlighter-rouge">copy</code>, <code class="highlighter-rouge">AD</code>, <code class="highlighter-rouge">ADR</code>, <code class="highlighter-rouge">ADSR</code> (the last three are envelopes, see below for details)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CV adr. range</code></td>
+      <td>toggle <code class="highlighter-rouge">5V/10V</code> (in CV address mode)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; pw</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">gate</code>) pulse-width of triggers at C/D outputs</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; aux +/-</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">copy</code>) offset at C/D outputs (in octaves)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; att dur</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">AD</code>, <code class="highlighter-rouge">ADR</code> or <code class="highlighter-rouge">ADSR</code>) duration of the attack segment of the envelope output on the auxillary channels (C or D outputs)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; att shape</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">AD</code>, <code class="highlighter-rouge">ADR</code> or <code class="highlighter-rouge">ADSR</code>) shape of the attack segment of the envelope output on the auxillary channels (C or D outputs). See the <em>Piqued</em> app for details of envelope segment shapes.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; dec dur</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">AD</code>, <code class="highlighter-rouge">ADR</code> or <code class="highlighter-rouge">ADSR</code>) duration of the decay segment of the envelope output on the auxillary channels (C or D outputs)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; dec shape</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">AD</code>, <code class="highlighter-rouge">ADR</code> or <code class="highlighter-rouge">ADSR</code>) shape of the decay segment of the envelope output on the auxillary channels (C or D outputs). See the <em>Piqued</em> app for details of envelope segment shapes.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; sus dur</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">ADSR</code>) duration of the sustain segment of the envelope output on the auxillary channels (C or D outputs)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; sus level</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">ADR</code> or <code class="highlighter-rouge">ADSR</code>) level of the sustain segment of the envelope output (for <code class="highlighter-rouge">ADSR</code> envelopes), or the level at which the the decay segment transitions into the release segment (for <code class="highlighter-rouge">ADR</code> envelopes) on the auxillary channels (C or D outputs).</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; rel dur</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">ADR</code> or <code class="highlighter-rouge">ADSR</code>) duration of the release segment of the envelope output on the auxillary channels (C or D outputs)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; rel shape</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">ADR</code> or <code class="highlighter-rouge">ADSR</code>) shape of the release segment of the envelope output on the auxillary channels (C or D outputs)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; loops</code></td>
+      <td>(if <code class="highlighter-rouge">aux. mode</code>=<code class="highlighter-rouge">AD</code> or <code class="highlighter-rouge">ADR</code> or <code class="highlighter-rouge">ADSR</code>) sets the number of loops for each envelope output on the auxillary channels (C or D outputs), defaults to 1 (see also the Tip below)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">reset/mute</code></td>
+      <td>select reset/mute source (mute being more like ‘pause’)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">clock src</code></td>
+      <td>choose channel clock source (<code class="highlighter-rouge">TR1</code> or <code class="highlighter-rouge">TR3</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">trigger delay</code></td>
+      <td>trigger-to-processing latency (accessed via CV menu): details see <em>Quantermain</em> above</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note</strong>: There is a bug in the v1.3.3 firmware which prevents the gate auxillary output from working unless the <code class="highlighter-rouge">mult/div</code> for that channel is set to <code class="highlighter-rouge">x2</code> or above. This bug was fixed in v1.3.3b firmware.</p>
+
+<h3 id="controls-8">Controls</h3>
+
+<h4 id="main-menu-1">main menu</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Left encoder (turn)</td>
+      <td>select channel</td>
+    </tr>
+    <tr>
+      <td>Left encoder (press)</td>
+      <td>re-sync channels (reset)</td>
+    </tr>
+    <tr>
+      <td>Left encoder (long press)</td>
+      <td>copy selected scale to other channel</td>
+    </tr>
+    <tr>
+      <td>Right encoder (turn)</td>
+      <td>Navigation mode: move up and down through the menu items. Edit mode: increase or decrease the value being edited</td>
+    </tr>
+    <tr>
+      <td>Right encoder (press)</td>
+      <td>Toggle between menu navigation (selection) mode and value editing mode</td>
+    </tr>
+    <tr>
+      <td>Right encoder (long press)</td>
+      <td>app selection menu</td>
+    </tr>
+    <tr>
+      <td>Up button</td>
+      <td>toggle octave up (parameter menu)</td>
+    </tr>
+    <tr>
+      <td>Down button</td>
+      <td>enter CV menu</td>
+    </tr>
+    <tr>
+      <td>Up button (long press)</td>
+      <td>invoke screensaver</td>
+    </tr>
+    <tr>
+      <td>Down button (long press)</td>
+      <td>toggle sequence-select behaviour (instant update vs. update at end-of-sequence)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cv-menu">CV menu</h3>
+
+<ul>
+  <li><strong>enter</strong> the CV menu by pushing the down button:
+    <ul>
+      <li>use the right encoder to assign CV input channels 1-4 to a channel parameter (currently available parameters are: <code class="highlighter-rouge">transposition</code> (in octaves), <code class="highlighter-rouge">scale mask</code>, <code class="highlighter-rouge">sequence number</code> (1-4), <code class="highlighter-rouge">sequence length</code>, <code class="highlighter-rouge">direction</code>, <code class="highlighter-rouge">multiplier/divisor</code> and <code class="highlighter-rouge">pulsewidth</code>. The quantiser/sampling <code class="highlighter-rouge">trigger delay</code> (see notes for <code class="highlighter-rouge">Trigger delay</code> in <em>Quantermain</em>) and the <code class="highlighter-rouge">clock src</code> (clock source) can also be specified in this sub-menu, as well as CV input mappings to these envelope parameters: <code class="highlighter-rouge">att dur</code>, <code class="highlighter-rouge">dec dur</code>, <code class="highlighter-rouge">sus lvl</code>, <code class="highlighter-rouge">rel dur</code> and <code class="highlighter-rouge">env loops</code>. By using CV to control <code class="highlighter-rouge">env loops</code>, a sort of psuedo-ratchetting effect can be obtained. Other envelope behaviours can also be specified (see the <em>Piqued</em> app for details): <code class="highlighter-rouge">att rest</code>, <code class="highlighter-rouge">att fall gt</code> and <code class="highlighter-rouge">dec/rel reset</code>.</li>
+      <li><strong>return</strong> to the main menu by either pressing the <strong>up</strong> or <strong>down</strong> buttons, or by moving the cursor to an empty field and then pressing the right encoder button.</li>
+      <li><strong>clear</strong> all mappings (per channel) by long-pressing the down button (in CV menu)</li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Left encoder (turn)</td>
+      <td>select channel</td>
+    </tr>
+    <tr>
+      <td>Left encoder (press)</td>
+      <td>re-sync channels (reset)</td>
+    </tr>
+    <tr>
+      <td>Left encoder (long press)</td>
+      <td>copy selected scale to other channel</td>
+    </tr>
+    <tr>
+      <td>Right encoder (turn)</td>
+      <td>Navigation mode: move up and down through the menu items. Edit mode: increase or decrease the value being edited</td>
+    </tr>
+    <tr>
+      <td>Right encoder (press)</td>
+      <td>toggle editing mode, if applicable; return to main menu otherwise</td>
+    </tr>
+    <tr>
+      <td>Right encoder (long press)</td>
+      <td>app selection menu</td>
+    </tr>
+    <tr>
+      <td>Up button</td>
+      <td>return to main menu</td>
+    </tr>
+    <tr>
+      <td>Down button</td>
+      <td>return to main menu</td>
+    </tr>
+    <tr>
+      <td>Up button (long press)</td>
+      <td>screensaver</td>
+    </tr>
+    <tr>
+      <td>Down button (long press)</td>
+      <td>clear CV mappings</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sequence-editor">sequence editor</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Left encoder (turn)</td>
+      <td>select step</td>
+    </tr>
+    <tr>
+      <td>Left encoder (press)</td>
+      <td>activate/de-active step</td>
+    </tr>
+    <tr>
+      <td>Right encoder (turn)</td>
+      <td>1) adjust pitch in semitones; <strong>push left encoder switch</strong> while turning to <strong>fine-tune</strong>. 2) adjust sequence <strong>length</strong> by pointing the cursor to the far right, then turn; <strong>push left encoder switch</strong> while turning to also <strong>clear</strong> the sequence mask (when expanding the pattern)</td>
+    </tr>
+    <tr>
+      <td>Right encoder (press)</td>
+      <td>exit editor</td>
+    </tr>
+    <tr>
+      <td>Up button</td>
+      <td>go to next sequence (edit ‘offline’)</td>
+    </tr>
+    <tr>
+      <td>Down button</td>
+      <td>go to previous sequence (edit ‘offline’)</td>
+    </tr>
+    <tr>
+      <td>Left encoder (long press)</td>
+      <td><strong>copy</strong> selected pattern</td>
+    </tr>
+    <tr>
+      <td>Down button long press</td>
+      <td><strong>paste</strong> previously copied sequence</td>
+    </tr>
+    <tr>
+      <td>Down button <strong>and</strong> Left encoder long press</td>
+      <td><strong>clear</strong> sequence (including pitch data)</td>
+    </tr>
+    <tr>
+      <td>Right encoder (long press)</td>
+      <td>– (app selection menu)</td>
+    </tr>
+    <tr>
+      <td>Up button (long press)</td>
+      <td>– (screensaver)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Tips:</strong></p>
+<ul>
+  <li>if identical sequences are set up on both sequencer channels, and the same clock input is used to drive both channels, then <a href="https://en.wikipedia.org/wiki/Piano_Phase">Steve Reich “Piano Phase”</a> type effcts can be acheived by setting the <code class="highlighter-rouge">mult/div</code> setting for one channel to, say, <code class="highlighter-rouge">/32</code> (divide by 32), and to <code class="highlighter-rouge">/31</code> on the other channel, and then using a fast clock. The two sequences will slowly move out of phase. By varying the division up and done in one channel, the two sequences can be moved in and out of phase as required.</li>
+  <li>If you set the <code class="highlighter-rouge">aux. mode</code> to one of the envelope types (as an alternative to just gate or trigger out), then an additional setting <code class="highlighter-rouge">--&gt; loops</code> will appear in the menu. This setting defaults to 1, but you can increase that, and then each time the envelope triggers, it will loop that set number of times. Tthat gives you a fixed ratchet-like effect, which might be useful in some circumstances.
+    <ul>
+      <li>However, in the CV assignment menu (see above), you can assign an input CV to the loops parameter using the <code class="highlighter-rouge">env loops -&gt;</code> setting. If you do that, and also set <code class="highlighter-rouge">--&gt; loops</code> to 1 in the main menu and you can then use an external voltage (which could be a gate signal, suitably attenuated) to vary the number of loops for each new step in the sequence between 1 and 127 (usually you would want between 1 and 3 or 4). Of course, the voltage to do that can come from the other channel of Sequins, so you can set the number of envelope loops at each step in channel A by a sequence in channel B, clocked from the same source, and cross-patched to one of the CV inputs configured to affect the loops parameter for channel A. Or you can use external voltages, of course, including controllers such as joysticks etc.</li>
+      <li>You can do something similar in the Piqued app, because there is a Loops parameter for the looping envelope types, and you can put that under external CV control.</li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+</div>
+</div>
+</body>

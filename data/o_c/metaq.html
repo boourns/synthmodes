@@ -1,0 +1,349 @@
+<html class="no-js">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="o_c.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+	
+	
+<h2 id="meta-q">Meta-Q</h2>
+<p><img src="./metaq.svg" alt="Meta-Q" class="img-responsive"></p>
+<div class = "info">
+
+<p><em>Meta-Q</em> is a dual-channel quantiser that’s basically similar to <em>Quantermain</em>, except, of course, there are only two channels. It has fewer internal CV sources (currently, only LFSR. See <em>Copiermaschine</em>/<em>Quantermain</em> for details), but comes with four ‘scale slots’ per channel — a package of scale, mask, root and transpose values —, which themselves can be <strong>sequenced</strong> to provide a lot of additional, structured variation to the input CV sequences (or the LFSR internal CV source).</p>
+
+
+<h4 id="scale-slots--seq-mode">scale ‘slots’ / seq mode:</h4>
+
+<ul>
+  <li>
+    <p>Each scale ‘slot’ (= <code class="highlighter-rouge">scale #</code>) can be mapped to any of the available preset and user scales and/or scale masks (via the main menu or scale editor). The scale slots can also be assigned their own root and transpose settings.</p>
+  </li>
+  <li>
+    <p>The scale editor in <em>Meta-Q</em> thus is slightly more complex than in the other modes: it allows you to edit the four scales-slots (not just one scale) from within the editor, ie both scale as well as the root and transpose values. In basic use, it works much the same as in <em>Quantermain</em> or <em>Copiermaschine</em>; notably, the <code class="highlighter-rouge">up</code> button behaves slighlty differently, however: in the <em>Meta-Q</em> scale editor it assumes a ‘shift’ functionality to access the (slot-specific) root and (diatonic) transpose settings (details see below).</p>
+  </li>
+  <li>
+    <p>What is more, said four scale-slots can be sequenced (or just toggled) by using a clock signal and/or by modulating the slot-parameter with a control voltage:</p>
+
+    <ul>
+      <li>
+        <p>Use the auxiliary trigger inputs <strong>TR2</strong> resp. <strong>TR4</strong> to cycle through either 2, 3, or 4 <em>adjacent</em> scale slots: see the <code class="highlighter-rouge">seq mode</code> setting. Available settings are <strong>TR+1</strong> (= plus next scale), <strong>TR+2</strong> (= plus next two scales), <strong>TR+3</strong> (= plus next three scales). Things wrap around slot #4. Thus, for example, when selecting <code class="highlighter-rouge">scale #</code> = 3 and <code class="highlighter-rouge">seq mode</code> = TR+2 (= scale #3 plus next two scales), when clocked via the aux. trigger input, the scale slots will step through the following sequence: #3, #4, #1, #3, #4, #1, #3, #4, #1, #3, #4, #1, #3 …</p>
+      </li>
+      <li>
+        <p>Setting the <code class="highlighter-rouge">CV aux.</code> parameter to <code class="highlighter-rouge">scl#</code> (= scale #) allows modulation of the slot-parameter with a CV signal applied to CV2 (channel #1) or CV4 (channel #2). (Alternatively, <strong>CV aux.</strong> can be routed to root, mask (= scale mask), trns (= transpose/scale degrees), or oct (transpose/octaves)).</p>
+      </li>
+      <li>
+        <p><strong>NB</strong>: inputs TR2 and CV2 are hardcoded to service channel #1, TR4 and CV4 to service channel #2.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="aux-outputs-c-d">aux. outputs (C, D):</h4>
+
+<ul>
+  <li>
+    <p>when <code class="highlighter-rouge">trigger source</code> = TR1 - TR4, the <strong>aux. outputs</strong> (C, D) simply pass through the main trigger signal, with adjustable pulse-width (<code class="highlighter-rouge">--&gt; pw</code>); when set to continuous (<code class="highlighter-rouge">cnt</code>), the aux. output goes high if/when the note <strong>changes</strong> (= trigger-on-note-change).</p>
+  </li>
+  <li>
+    <p>the aux. outputs can alternatively output a transposed copy of the main channel CV (aux.output = <code class="highlighter-rouge">copy</code>), or output said CV, delayed by one clock (aux.output = <code class="highlighter-rouge">asr</code>).</p>
+  </li>
+</ul>
+
+<h3 id="inputs-and-outputs-2">Inputs and outputs</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>I/O</th>
+      <th>Function</th>
+      <th>-</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TR1</td>
+      <td>clock input #1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>TR2</td>
+      <td>aux. / scale sequencer clock #1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>TR3</td>
+      <td>clock input #2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>TR4</td>
+      <td>aux. / scale sequencer clock #2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CV1</td>
+      <td>sample in # 1</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CV2</td>
+      <td>(mappable)</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CV3</td>
+      <td>sample in # 2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>CV4</td>
+      <td>(mappable)</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>A, B</td>
+      <td>CV outputs #1, #2</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>C, D</td>
+      <td>aux outputs #1, #2 (default to gate output)</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="available-settings-per-channel-1">Available settings (per-channel)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">scale</code></td>
+      <td>selected scale</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; edit</code></td>
+      <td>edit scale mask (for details see <em>Quantermain</em> and below)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">seq mode</code></td>
+      <td>number of slots (-, 2, 3, or 4) to advance scale sequencer before reset (via <code class="highlighter-rouge">TR2</code> resp. <code class="highlighter-rouge">TR4</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">scale #</code></td>
+      <td>selected scale slot (<code class="highlighter-rouge">#1</code> - <code class="highlighter-rouge">#4</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">root #n</code></td>
+      <td>root note for scale slot n</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">transpose #n</code></td>
+      <td>offset (in scale degrees) for scale slot n</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">octave</code></td>
+      <td>offset in octaves (for all scale slots)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CV source</code></td>
+      <td>sample input, internal/external (<code class="highlighter-rouge">CV1</code> - <code class="highlighter-rouge">CV4</code>, <code class="highlighter-rouge">LFSR</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CV aux.</code></td>
+      <td>auxiliary CV input destination: <code class="highlighter-rouge">scale #</code>, <code class="highlighter-rouge">root</code>, <code class="highlighter-rouge">transpose</code>, <code class="highlighter-rouge">octave</code>, <code class="highlighter-rouge">mask</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">trigger source</code></td>
+      <td>main trigger source: <code class="highlighter-rouge">TR1</code> - <code class="highlighter-rouge">TR4 </code>, <code class="highlighter-rouge">cnt+</code>, <code class="highlighter-rouge">cnt-</code> (†)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; latency</code></td>
+      <td>trigger-to-quantization latency (default: <code class="highlighter-rouge">0</code> = 60 us). Note: this is equivalent to the <code class="highlighter-rouge">Trigger delay</code> setting in several of the other apps, please see the <em>Quantermain</em> app documentation for a discussion of this setting.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">aux.output</code></td>
+      <td>aux channel output: <code class="highlighter-rouge">gate</code>, <code class="highlighter-rouge">copy</code>, <code class="highlighter-rouge">asr</code> (††)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; pw</code></td>
+      <td>pulse-width of triggers at C/D outputs (<code class="highlighter-rouge">gate</code> mode)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">--&gt; aux +/-</code></td>
+      <td>pitch offset at C/D outputs (in octaves) (<code class="highlighter-rouge">copy</code> and <code class="highlighter-rouge">asr</code> modes)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt; LFSR length</code></td>
+      <td>length of shift register (when in LFSR mode)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt; LFSR p</code></td>
+      <td>probability of flipping (when in LFSR mode)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt; LFSR range </code></td>
+      <td>output range (when in LFSR mode)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt; LFSR CV</code></td>
+      <td>destination of <code class="highlighter-rouge">CV1</code> resp. <code class="highlighter-rouge">CV3</code> (when in LFSR mode)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt; LFSR TRIG</code></td>
+      <td>aux channel output (when in LFSR mode): <code class="highlighter-rouge">echo</code>, <code class="highlighter-rouge">lsb</code>, <code class="highlighter-rouge">chng</code>: clock through, track LSB, and output on note-change</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>notes:
+    <ul>
+      <li>(†) <code class="highlighter-rouge">cnt+</code> and <code class="highlighter-rouge">cnt-</code>= continuous quantization; in this case, a gate applied to <code class="highlighter-rouge">TR1</code> resp. <code class="highlighter-rouge">TR3</code> will shift the pitch up (<code class="highlighter-rouge">cnt+</code>) or down (<code class="highlighter-rouge">cnt-</code>) by one octave.</li>
+      <li>(††) <code class="highlighter-rouge">copy</code> simply duplicates the main channel output to the aux channel output. <code class="highlighter-rouge">asr</code> does the same, but delayed by one clock.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="controls-4">Controls:</h3>
+
+<h4 id="main-menu">main menu</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Left encoder (turn)</td>
+      <td>select channel</td>
+    </tr>
+    <tr>
+      <td>Left encoder (press)</td>
+      <td>toggle channel</td>
+    </tr>
+    <tr>
+      <td>Left encoder (long press)</td>
+      <td>copy selected scale/mask to <em>all</em> channels/slots</td>
+    </tr>
+    <tr>
+      <td>Right encoder (turn)</td>
+      <td>Navigation mode: move up and down through the menu items. Edit mode: increase or decrease the value being edited</td>
+    </tr>
+    <tr>
+      <td>Right encoder (press)</td>
+      <td>Toggle between menu navigation (selection) mode and value editing mode</td>
+    </tr>
+    <tr>
+      <td>Right encoder (long press)</td>
+      <td>app selection menu</td>
+    </tr>
+    <tr>
+      <td>Up button</td>
+      <td>Transpose up: one octave (parameter menu)</td>
+    </tr>
+    <tr>
+      <td>Down button</td>
+      <td>Transpose down: one octave (parameter menu)</td>
+    </tr>
+    <tr>
+      <td>Up button (long press)</td>
+      <td>invoke screensaver</td>
+    </tr>
+    <tr>
+      <td>Down button (long press)</td>
+      <td>reset scale mask</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="scale-editor">scale editor</h4>
+
+<ul>
+  <li>
+    <p>works <strong>mostly</strong> the same (as in the other quantising modes). Notably, the <code class="highlighter-rouge">up</code> and <code class="highlighter-rouge">down</code> buttons behave slighlty differently, however: pushing <code class="highlighter-rouge">up</code> will point the editor to the next scale-slot, pushing <code class="highlighter-rouge">down</code> will point it to the previous scale-slot. This way, you can edit all the scale-slots more easily from within the editor.</p>
+  </li>
+  <li>
+    <p>In the editor, you can also change the scale-type, root, and transpose settings: to do so, <strong>hold</strong> the <code class="highlighter-rouge">up</code> button (= ‘shift’) while turning the <strong>left</strong> encoder: that’ll change the scale, just like in the regular menu. to edit the root and transpose values, <strong>hold</strong> the <code class="highlighter-rouge">up</code> button, then push the left encoder (= ‘shift’ + push left): that’ll open a new window, displaying the slot’s root and transpose values. you can select which parameter to edit by using the left encoder; adjust the value by turning the right encoder; or use the up / down buttons to advance to a different slot. push the left encoder again to return to the basic scale editor.</p>
+  </li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Left encoder (turn)</td>
+      <td>select note</td>
+    </tr>
+    <tr>
+      <td>Left encoder (push)</td>
+      <td>activate/de-active note</td>
+    </tr>
+    <tr>
+      <td>Right encoder (turn)</td>
+      <td>rotate mask</td>
+    </tr>
+    <tr>
+      <td>Right encoder (push)</td>
+      <td>exit editor</td>
+    </tr>
+    <tr>
+      <td>Up button (push)</td>
+      <td><strong>go to next scale slot</strong></td>
+    </tr>
+    <tr>
+      <td>Down button (push)</td>
+      <td><strong>go to previous scale slot</strong></td>
+    </tr>
+    <tr>
+      <td>Up button (hold) + Left encoder (turn)</td>
+      <td><strong>shift: select scale</strong></td>
+    </tr>
+    <tr>
+      <td>Up button (hold) + Left encoder (push)</td>
+      <td><strong>shift: toggle root/transpose view</strong></td>
+    </tr>
+    <tr>
+      <td>Right encoder (long press)</td>
+      <td>– (app selection menu)</td>
+    </tr>
+    <tr>
+      <td>Up button long press</td>
+      <td>– (screensaver)</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+</body>

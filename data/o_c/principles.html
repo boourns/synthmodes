@@ -1,0 +1,111 @@
+<html class="no-js">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="o_c.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+
+<div class = "info">
+<h1 id="operational-principles">Operational principles</h1>
+
+<h2 id="startup">Startup</h2>
+
+<p>Immediately after power-on, the start-up phase is indicated by a line at the bottom of the display which progressively shrinks right-to-left. By default, following start-up phase, the module boots into the last saved app, unless one of the encoders is held down:</p>
+<ul>
+  <li>hold down the Left encoder: Boot into calibration mode (unchanged from the original o_C firmware - please see the calibration procedure <a href="http://ornament-and-cri.me/calibration/">here</a></li>
+  <li>hold down the Right encoder: Enter the app selection menu</li>
+</ul>
+
+<h2 id="app-selection">App Selection</h2>
+
+<p>The <strong>app selection menu</strong> can be reached either when the module is first powered on, as described above, or by depressing the right encoder for two seconds or longer (a long press) during normal use.</p>
+
+<ul>
+  <li>Turn the right encoder to select an app.</li>
+  <li>Press the right encoder to switch to the selected app.</li>
+  <li>Pressing the Up button (the upper button to the right of the display) while the App Selection screen is displayed toggles encoder acceleration on and off (there is no visual indication of this). Encoder acceleration increases the amount by which values are incremented or decremented on each encoder rotational click when you are rapidly spinning the encoder in value edit mode, rather than advancing it slowly one click at a time. This speeds up sweeping across the full range of values, while still retaining full precision when moving the encoder one step at a time.</li>
+</ul>
+
+<h2 id="save-settings--module-state">Save Settings / Module State</h2>
+
+<p>The settings for each o_C app are <strong>NOT</strong> saved automagically. To save the current state/settings, enter the <strong>app selection menu</strong> (see above), then <strong>long press</strong> the right encoder (&gt; 2s) <strong>a second time</strong> to save the module state and make the selected app the default at the next boot. A confirmatory expanding quadrilateral will briefly be displayed. Note that the current settings for <strong>all apps</strong> are saved each time you save the settings, not just the settings for the currently selected app.</p>
+
+<ul>
+  <li><strong>Note:</strong> the operation of the module is briefly <strong>paused</strong> while the settings are saved. (That’s intentional). Normally this pause is of no consequence, but you may need to take it into account if/when you are using your o_C in a live performance setting. The module does not pause when switching from one app to another, only when settings are saved.</li>
+  <li>The settings are saved permanently in the Teensy 3.2 EEPROM storage. (EEPROM memory can only be written to a certain number of times before it becomes unreliable. The EEPROM storage is good for at least 100,000 write cycles, and probably a lot more. Thus, you are very unlikely to wear out the EEPROM memory in the Teensy/MK20 processor in normal use. In the unlikely event that you do wear it out, just replace the Teensy at a cost of about US$25.)</li>
+</ul>
+
+<h2 id="reset-app-settings-to-default">Reset app settings to default</h2>
+
+<p>To <strong>reset</strong> the app settings to their default state, push the up and down buttons <strong>simultanously</strong> during start-up (the ‘splash screen’). (This won’t reset the calibration data, of course).</p>
+
+<h2 id="general-operation-of-the-apps">General operation of the apps</h2>
+
+<p>Each app has two display pages, a settings mode and a “screensaver” mode. The apps drop into screensaver mode after a short period of inactivity (that is, no user interaction); the timeout period can be set in the <a href="http://ornament-and-cri.me/calibration/#4-screensaver-timeout-period">calibration menu</a>. Alternatively, <strong>long press</strong> (&gt; ~ 1.5 sec) the <code class="highlighter-rouge">up button</code> to <strong>invoke</strong> the screensaver.</p>
+
+<ul>
+  <li>
+    <p>In the background, the module functions the same regardless of whether settings are displayed or the screensaver is displayed. When the screensaver is displayed, clicking or rotating either of the two encoders, or pressing the Up or Down buttons will immediately swap back to the settings display.</p>
+  </li>
+  <li>
+    <p>In settings mode, for most of the apps, the right encoder is used to scroll up and down the list of available settings, and clicking on the right encoder will toggle edit mode, indicated by one or two small up/down triangles next to the setting. Turning the right encoder when in edit mode will increment (increase) or decrement (decrease) the relevant setting. Clicking again on the right encoder toggles back to settings selection mode.</p>
+  </li>
+  <li>
+    <p>In multi-channel apps, the left encoder selects which of the four channel (A to D) settings are currently displayed (and editable). All channels remain active in the background, all the time, even while editing settings. The channel can be changed even when value edit mode is active, making it easy to edit the same setting on each of the four channels.</p>
+  </li>
+  <li>
+    <p>In other apps, the left encoder is used to set a root note or a transposition, or to set frequency or rate, or a scale. Its exact behaviour is noted below in the documentation for each of the apps.</p>
+  </li>
+  <li>
+    <p>The two buttons to the right of the display (the <strong>Up</strong> and <strong>Down</strong> buttons) either transpose notes up or down an octave, or increase or decrease frequency or speed in steps of 32 (with a few exceptions for some apps, as noted below).</p>
+  </li>
+</ul>
+
+<p><a class="anchor" id="anchor-tunings"></a></p>
+
+<h2 id="scales-custom-scales-and-non-octaval-non-1voct-tunings">Scales, custom-scales, and non-octaval (non-1V/oct) tunings.</h2>
+
+<ul>
+  <li>
+    <p>o_C comes with &gt; 100 predefined scales (modifiable in the source code) plus 4 user-defined scales editable directly through the module user interface; for details on the scale-editor, see <a href="http://ornament-and-cri.me/user-manual-v1_3/#anchor-quantermain"><em>Quantermain</em></a> below; for more information on custom scales see <a href="http://ornament-and-cri.me/custom-scales/">here</a>; for a list of the predefined scales, see <a href="http://ornament-and-cri.me/predefined_scales/">here</a>.</p>
+  </li>
+  <li>
+    <p>many of the predefined scales are microtonal i.e. they have more than 12 notes per octave, or they are subsets of tunings with more than 12 notes per octave. o_C supports scales with up to 16 notes per octave (but those 16 notes are arbitrary and themselves can be subsets of scales with many more than 16 notes per octave).</p>
+  </li>
+</ul>
+
+<h3 id="non-octaval-tunings-for-the-xenharmonically-obsessed">Non-octaval tunings for the xenharmonically obsessed</h3>
+
+<ul>
+  <li>
+    <p>in addition, it’s possible to select from a choice of alternative non-octaval tunings (per channel):</p>
+
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Wendy_Carlos">Wendy Carlos</a> <a href="https://en.wikipedia.org/wiki/Alpha_scale">alpha scale</a></li>
+      <li>Wendy Carlos <a href="https://en.wikipedia.org/wiki/Beta_scale">beta scale</a></li>
+      <li>Wendy Carlos <a href="https://en.wikipedia.org/wiki/Gamma_scale">gamma scale</a></li>
+      <li>Tritaval tuning (as used by the <a href="https://en.wikipedia.org/wiki/Bohlen%E2%80%93Pierce_scale">Bohlen-Pierce macrotonal scale</a>), and</li>
+      <li><a href="https://en.wikipedia.org/wiki/Quarter_tone">Quartertone scale</a> (which essentially downscales to 0.5V/oct)</li>
+    </ul>
+  </li>
+  <li>some of these non-octaval tunings are designed to work with particular scales eg the Carlos tunings work well with normal 12-TET scales, while the tritaval tuning is intended to work specifically with the Bohlen-Pierce scales and related harmonic scales — see the full list <a href="http://ornament-and-cri.me/predefined_scales/#tritaval-scales">here</a>.</li>
+  <li>the alternative tunings can be accessed by <strong>long-pressing</strong> the left encoder in the scale-editor. (Select the channel turning the right encoder; the left encoder is used to select from the choice of tunings). Use of alternative tunings is indicated by a <strong>dashed line</strong> underneath the top menu row (the line is solid when using the default 1V/oct).</li>
+</ul>
+
+</div>
+</div>
+</div>
+</body>

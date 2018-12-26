@@ -8,4 +8,5 @@
   <module name="Clouds (Parasites)" id="clouds_parasites" index="clouds_parasites/module.xml"/>
   <module name="Rings" id="rings" index="rings/module.xml"/>
   <module name="Peaks (Stock)" id="peaks_stock" index="peaks_stock/module.xml"/>
+  <module name="Ornament & Crime" id="ornament_and_crime" index="o_c/module.xml"/>
 </modules>

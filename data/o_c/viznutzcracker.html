@@ -1,0 +1,268 @@
+<html class="no-js">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="o_c.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+
+	
+<h2 id="viznutcracker-sweet">Viznutcracker, sweet!</h2>
+<p><img src="./viznutzcracker.svg" alt="viznutcracker-sweet" class="img-responsive"></p>
+
+<div class = "info">
+
+<h3 id="controls-10">Controls</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Left encoder (turn)</td>
+      <td>Select channel A to D to edit (all channels always active)</td>
+    </tr>
+    <tr>
+      <td>Right encoder (turn)</td>
+      <td>Navigation mode: move up and down through the menu items. Edit mode: increase or decrease the value being edited.</td>
+    </tr>
+    <tr>
+      <td>Right encoder (press)</td>
+      <td>Toggle between menu navigation (selection) mode and value editing mode</td>
+    </tr>
+    <tr>
+      <td>Right encoder (long press)</td>
+      <td>App selection menu</td>
+    </tr>
+    <tr>
+      <td>Up button (long press)</td>
+      <td>invoke screensaver</td>
+    </tr>
+    <tr>
+      <td>Up button</td>
+      <td>Next bytebeat equation</td>
+    </tr>
+    <tr>
+      <td>Down button</td>
+      <td>Previous bytebeat equation</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="available-settings-per-channel-5">Available settings (per-channel)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Equation</code></td>
+      <td>Byte beat equation (see table below)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Speed</code></td>
+      <td>0 to 255. 255 equates to a 16.7 kHz sample rate (i.e. the phase accumulator advances 16,666 times per second). There is a rough quadratic scaling of lower rates, meaning that 0 is quite slow.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Pitch</code></td>
+      <td>1 to 255. This is a very rough pitch setting, which behaves differently with each equation. Increasing values of <code class="highlighter-rouge">Pitch</code> will increase the pitch (frequency) of some elements of the equation output, but not necessarily all components, so it may not sound like a normal pitch increase or decrease. However, its effect does sound different to the <code class="highlighter-rouge">Speed</code> parameter. (shrugs shoulders)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Parameter 0</code></td>
+      <td>The first adjustable parameter in the chosen equation. Range 0 to 255, but some parameter settings in some equations do not produce any output, or do not produce output for all values of the phase accumulator (be patient!)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Parameter 1</code></td>
+      <td>ditto for the second adjustable parameter in the equation</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Parameter 2</code></td>
+      <td>ditto for the third adjustable parameter in the equation</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Loop mode</code></td>
+      <td>Enables loop mode, in which the phase accumulator is constrained to loop between specific start and end values, instead of between 0 and 4,294,967,296.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Loop begin ++</code></td>
+      <td>Coarse loop begin point, range 0-255</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Loop begin +</code></td>
+      <td>Medium loop begin point, range 0-255</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Loop begin</code></td>
+      <td>Fine loop begin point, range 0 - 255</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Loop end ++</code></td>
+      <td>Coarse loop end point, range 0-255</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Loop end +</code></td>
+      <td>Medium loop end point, range 0-255</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Loop end</code></td>
+      <td>Fine loop end point, range 0 - 255</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Trigger input</code></td>
+      <td>Specified which of the 4 trigger inputs (TR1 to TR4) is used for the trigger input for <code class="highlighter-rouge">Step mode</code>, or when <code class="highlighter-rouge">Step Mode</code> is off, which trigger input is used to reset the phase accumulator for that channel.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Step mode</code></td>
+      <td>When set to on, the phase accumulator is incremented when a trigger or clock pulse is received on the digital (trigger) input specified by the <code class="highlighter-rouge">Trigger input</code> setting. When set to off, a trigger (or rising edge of a pulse or clock) received on the trigger input specified by the <code class="highlighter-rouge">Trigger Input</code> setting will reset the phase accumulator (the <em>t</em> variable in byte beat equations), which has the effect of resetting the byte beats “tune” or “melody” back to its beginning, or back to the start of the loop start point if loop mode is enabled.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CV1 -&gt;</code></td>
+      <td>specifies which parameter CV1 is mapped to for this channel. Choices are <code class="highlighter-rouge">off</code>, <code class="highlighter-rouge">eqn</code>, <code class="highlighter-rouge">spd</code>, <code class="highlighter-rouge">p0</code>, <code class="highlighter-rouge">p1</code>, <code class="highlighter-rouge">p2</code>, <code class="highlighter-rouge">beg++</code>, <code class="highlighter-rouge">beg</code>, <code class="highlighter-rouge">end++</code>, <code class="highlighter-rouge">end</code> and <code class="highlighter-rouge">pitch</code>.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CV2 -&gt;</code></td>
+      <td>ditto for CV2</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CV3 -&gt;</code></td>
+      <td>ditto for CV3</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">CV4 -&gt;</code></td>
+      <td>ditto for CV4</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equation name</th>
+      <th>Source of equation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">hope</code></td>
+      <td>“atmospheric, hopeful” via <a href="http://royal-paw.com/2012/01/bytebeats-in-c-and-python-generative-symphonies-from-extremely-small-programs/">royal paw</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">love</code></td>
+      <td>the equation by stephth via <a href="https://www.youtube.com/watch?v=tCRPUv8V22o">here</a> at 3:38</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">life</code></td>
+      <td>the second equation listed <a href="http://xifeng.weebly.com/bytebeats.html">here</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">age</code></td>
+      <td>“Arp rotator” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankPtah.cpp">Ptah bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">clysm</code></td>
+      <td>“BitWiz Transplant” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankPtah.cpp">Ptah bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">monk</code></td>
+      <td>“Vocaliser” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankKhepri.cpp">Khepri bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">NERV</code></td>
+      <td>“Chewie” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankKhepri.cpp">Khepri bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Trurl</code></td>
+      <td>“Tinbot” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankSobek.cpp">Sobek bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Pirx</code></td>
+      <td>“My Loud Friend” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankPtah.cpp">Ptah bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Snaut</code></td>
+      <td>"”A bit high-frequency, but keeper anyhow” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankKhepri.cpp">Khepri bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Hari</code></td>
+      <td>“The Signs” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankPtah.cpp">Ptah bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Kris</code></td>
+      <td>“Light Reactor” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankPtah.cpp">Ptah bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Tichy</code></td>
+      <td>“Alpha” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankKhepri.cpp">Khepri bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Bregg</code></td>
+      <td>“Hooks” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankKhepri.cpp">Khepri bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Avon</code></td>
+      <td>“Widerange” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankKhepri.cpp">Khepri bank</a></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Orac</code></td>
+      <td>“Abducted” via <a href="http://microbemodular.com/products/equation-composer/overview">Microbe Modular</a> Equation Composer <a href="https://github.com/clone45/EquationComposer/blob/master/EquationBankPtah.cpp">Ptah bank</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="inputs-and-outputs-6">Inputs and outputs</h3>
+
+<p>Trigger inputs and CV1 to CV4 are mappable per-channel via the menu. Outputs for channels A to D appear on outputs A to D respectively.</p>
+
+<h3>Summary</h3>
+<p>This is a experimental implementation of several bytebeats signal generators. “bytebeats” are equations (actually, recursive functions), expressed usually as a single line of programme code, typically involving various bit-level operators, which when evaluated with an incrementing phase value at audio rates produce all manner of harsh digital noises, some of which sound musical, or at least, interesting. bytebeats were first <a href="http://countercomplex.blogspot.com/2011/10/algorithmic-symphonies-from-one-line-of.html">described</a> in 2011 by viznut (aka Ville-Matias Heikkilä).</p>
+
+
+<p>The output, if used as an audio signal, usually needs to be fairly heavily filtered through a low-pass filter to remove at least some of the unpleasant digital “screech” due to high-frequency aliasing and other effects which are characteristics of bytebeats. This digital aliasing is a fundamental characteristic of the way bytebeats work, and isn’t due to any hardware limitations of the o_C module.</p>
+
+<p>The <em>Viznutcracker, sweet!</em> app current provides access to 16 different byte beat equations. The app provides four independent byte beat generators, on channels A to D, which all run independently. The equation, speed/frequency and three equation parameter values (p0, p1 and p2) can be set via the menus and/or voltage-controlled for each generator via mappable CV inputs.</p>
+
+<p>Perhaps uniquely amongst byte beat generator modules, the <em>Viznutcracker, sweet!</em> apps permits the byte beat generators to be run at very slow rates, and because the o_C module outputs are DC-coupled, they can therefore be used as sources of stepped control voltages. For example, the outputs can be fed into a quantiser (such as another o_C module) to create potentially interesting pitch sequences (possibly even melodies…). Furthermore, the app allows each byte beat equation to be incremented by an external clock/trigger input, so that these stepped voltages can be generated in synchrony with other external processes.</p>
+
+
+
+<h3 id="tips-5">Tips</h3>
+
+<ul>
+  <li>
+    <p>as noted above, use the byte beat generators at very slow rates to generate DC control voltages. Feed these to a quantiser to produced pitch sequences, or pass them through a portamento or slew-limiting module to create interesting smooth modulation signals, or use them as-is, to modulate filters etc.</p>
+  </li>
+  <li>
+    <p>process the byte beats outputs running at audio rates through a low-pass or shelf filter to remove some of the high-pitched screech</p>
+  </li>
+  <li>
+    <p>process the output through band-pass filters (such as the <a href="http://mutable-instruments.net/modules/shelves">Mutable Instruments Shelves</a> filter), or other complex filtering arrangements subject to slow modulation (by another o_C module, perhaps)</p>
+  </li>
+  <li>
+    <p>process the output through a VCA and/or filter with a percussive envelope to produce interesting, well, percussive sounds. Use the same trigger or gate signal used to fire the envelopes also reset the phase on the byte beat generator. Use slow modulation to slowly vary the frequency/rate, and/or to “scrub” loop start and end points in order to vary the nature of the percussive sound.</p>
+  </li>
+</ul>
+
+</div>
+</div>
+</div>
+</body>

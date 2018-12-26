@@ -1,0 +1,290 @@
+<html class="no-js">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="o_c.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+	
+<h2 id="low-rents">Low-rents</h2>
+<p><img src="./lowrents.svg" alt="low-rents" class="img-responsive"></p>
+<div class = "info">
+
+<table>
+  <thead>
+    <tr>
+      <th>I/O</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TR1</td>
+      <td>Reset phase of generator 1</td>
+    </tr>
+    <tr>
+      <td>TR2</td>
+      <td>Reset phase of generator 2</td>
+    </tr>
+    <tr>
+      <td>TR3</td>
+      <td>Rest phase of both generators</td>
+    </tr>
+    <tr>
+      <td>TR4</td>
+      <td>Freeze (both generators stop in their tracks and hold current value while TR4 is high)</td>
+    </tr>
+    <tr>
+      <td>CV1</td>
+      <td>Frequency/speed of generator 1</td>
+    </tr>
+    <tr>
+      <td>CV2</td>
+      <td>Rho or c parameter for generator 1</td>
+    </tr>
+    <tr>
+      <td>CV3</td>
+      <td>Frequency/speed of generator 2</td>
+    </tr>
+    <tr>
+      <td>CV4</td>
+      <td>Rho or c parameter for generator 2</td>
+    </tr>
+    <tr>
+      <td>A, B, C, D</td>
+      <td>Mappable outputs from the two generators (see table below)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="controls-6">Controls</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Left encoder (turn)</td>
+      <td>Increase or decrease frequency of currently selected generator (1 or 2)</td>
+    </tr>
+    <tr>
+      <td>Left encoder (press)</td>
+      <td>Toggle currently selected generator frequency control</td>
+    </tr>
+    <tr>
+      <td>Right encoder (turn)</td>
+      <td>Navigation mode: move up and down through the menu items. Edit mode: increase or decrease the value being edited.</td>
+    </tr>
+    <tr>
+      <td>Right encoder (press)</td>
+      <td>Toggle between menu navigation (selection) mode and value editing mode</td>
+    </tr>
+    <tr>
+      <td>Right encoder (long press)</td>
+      <td>App selection menu</td>
+    </tr>
+    <tr>
+      <td>Up button (long press)</td>
+      <td>invoke screensaver</td>
+    </tr>
+    <tr>
+      <td>Up button (press)</td>
+      <td>Increment frequency of currently selected generator  by 32</td>
+    </tr>
+    <tr>
+      <td>Down button (press)</td>
+      <td>Decrement frequency of currently selected generator by 32</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="settings-2">Settings</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Freq 1</code></td>
+      <td>Frequency/speed of generator 1, range is 0-255</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Freq 2</code></td>
+      <td>Frequency/speed of generator 2, range is 0-255</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Rho/c 1</code></td>
+      <td>Rho (for Lorenz attractor) or c (for the Rössler attractor) parameters for generator 1</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Rho/c 2</code></td>
+      <td>Rho (for Lorenz attractor) or c (for the Rössler attractor) parameters for generator 2</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">LFreq 1 Rng</code></td>
+      <td>frequency/speed range of Lorenz and Rössler generator 1, ranges from ‘sloth’ to ‘fast’.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">LFreq 2 Rng</code></td>
+      <td>frequency/speed range of Lorenz  and Rössler generator 2, ranges from ‘sloth’ to ‘fast’.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">out A</code></td>
+      <td>output mapping for output A. Available choices shown in the table below.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">out B</code></td>
+      <td>output mapping for output B. Available choices shown in the table below.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">out C</code></td>
+      <td>output mapping for output C. Available choices shown in the table below.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">out D</code></td>
+      <td>output mapping for output D. Available choices shown in the table below.</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Output mapping value</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1</code></td>
+      <td>Generator 1 Lorenz attractor <em>x</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Ly1</code></td>
+      <td>Generator 1 Lorenz attractor <em>y</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lz1</code></td>
+      <td>Generator 1 Lorenz attractor <em>z</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx2</code></td>
+      <td>Generator 2 Lorenz attractor <em>x</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Ly2</code></td>
+      <td>Generator 2 Lorenz attractor <em>y</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lz2</code></td>
+      <td>Generator 2 Lorenz attractor <em>z</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Rx1</code></td>
+      <td>Generator 1 Rössler attractor <em>x</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Ry1</code></td>
+      <td>Generator 1 Rössler attractor <em>y</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Rz1</code></td>
+      <td>Generator 1 Rössler attractor <em>z</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Rx2</code></td>
+      <td>Generator 2 Rössler attractor <em>x</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Ry2</code></td>
+      <td>Generator 2 Rössler attractor <em>y</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Rz2</code></td>
+      <td>Generator 2 Rössler attractor <em>z</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1+Rx1</code></td>
+      <td>Sum of Generator 1 Lorenz attractor <em>x</em> value and Generator 1 Rössler attractor <em>x</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1+Rz1</code></td>
+      <td>Sum of Generator 1 Lorenz attractor <em>x</em> value and Generator 1 Rössler attractor <em>z</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1+Ly2</code></td>
+      <td>Sum of Generator 1 Lorenz attractor <em>x</em> value and Generator 2 Lorenz attractor <em>y</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1+Lz2</code></td>
+      <td>Sum of Generator 1 Lorenz attractor <em>x</em> value and Generator 2 Lorenz attractor <em>z</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1+Rx2</code></td>
+      <td>Sum of Generator 1 Lorenz attractor <em>x</em> value and Generator 2 Rössler attractor <em>x</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1+Rz2</code></td>
+      <td>Sum of Generator 1 Lorenz attractor <em>x</em> value and Generator 2 Rössler attractor <em>z</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1xLy1</code></td>
+      <td>Bit-wise XOR of Generator 1 Lorenz attractor <em>x</em> value and Generator 1 Lorenz attractor <em>y</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1xLx2</code></td>
+      <td>Bit-wise XOR of Generator 1 Lorenz attractor <em>x</em> value and Generator 2 Lorenz attractor <em>x</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1xRx1</code></td>
+      <td>Bit-wise XOR of Generator 1 Lorenz attractor <em>x</em> value and Generator 1 Rössler attractor <em>x</em> value</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">Lx1xRx2</code></td>
+      <td>Bit-wise XOR of Generator 1 Lorenz attractor <em>x</em> value and Generator 2 Rössler attractor <em>x</em> value</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Low-rents is a port of the <a href="https://en.wikipedia.org/wiki/Lorenz_system">Lorenz attractor</a> modulation generator from the “Easter egg” in the Mutable Instruments <a href="http://mutable-instruments.net/modules/streams">Streams</a> module, to which <a href="https://en.wikipedia.org/wiki/R%C3%B6ssler_attractor">Rössler attractors</a> have been added.</p>
+
+<p>Two independent function generators are provided (referred to here as Generator 1 and Generator 2), with each generator calculating <em>both</em> the Lorenz and Rössler functions simultaneously, using the same phase accumulator, but with the rate/speed of each generator independently settable. Both the Lorenz and the Rössler functions output three values (<em>x</em>, <em>y</em> &amp; <em>z</em>), and various combinations of these can be mapped to the four output channels. The chaotic strange attractors work best as slow modulation functions.</p>
+
+<p>Note that the output voltage range of the o_C module is asymmetrical (about -3V to +6V) — because it was designed to process pitch CVs. Therefore the output of the <em>Low-rents</em> app is not centred about 0V.</p>
+
+
+<p>The Rho and c parameters for the Lorenz and Rössler attractors respectively determine the degree of variability in the chaotic generator system. Note that the values have been constrained so that the functions do not collapse, but some combinations of extreme settings may cause the generator functions to collapse completely. If this happens, change the Rho/c setting and send a rest pulse to the relevant trigger input to reset the function generator.</p>
+
+<h3 id="screensaver-display-5">Screensaver display</h3>
+
+<p>The screensaver show the A and B outputs in a vectorscope (X/Y) display on the left half of the screen, and the C and D outputs as a vectorscope display on the right half of the screen.</p>
+
+<h3 id="tips-4">Tips</h3>
+
+<p>If you have an oscilloscope capable of displaying X/Y (vectorscope) signals, try patching pairs of the <em>x</em>, <em>y</em> and <em>z</em> outputs from either type of generator into it to observe the classic strange attractor patterns.</p>
+
+
+</div>
+</div>
+</div>
+</body>
