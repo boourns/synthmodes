@@ -125,13 +125,13 @@ td {
 <a href="#wavetable">WTBL</a><br />
 <a href="#wmap">WMAP</a><br />
 <a href="#wlin">WLIN</a><br />
-<a href="#wtx4">WTX4</a><br />
+<a href="#sam">SAM1</a><br />
+<a href="#sam">SAM2</a><br />
 <a href="#nois">NOIS</a><br />
 <a href="#twnq">TWNQ</a><br />
 <a href="#clkn">CLKN</a><br />
 <a href="#clou">CLOU</a><br />
-<a href="#prtc">PRTC</a><br />
-<a href="#qpsk">QPSK</a><br /><h2>Modes</h2><a name="csaw"></a><h2>CSAW</h2>
+<a href="#prtc">PRTC</a><br /><h2>Modes</h2><a name="csaw"></a><h2>CSAW</h2>
   <div class="centered">
     <div class="content">
       <h3>Description</h3>
@@ -1276,11 +1276,11 @@ Wavetable synthesis, 1-dimensional scanning through all wavetables.
 
     </div>
   </div>
-<br /><br /><a name="wtx4"></a><h2>WTX4</h2>
+<br /><br /><a name="sam"></a><h2>SAM1</h2>
   <div class="centered">
     <div class="content">
       <h3>Description</h3>
-4-voice paraphonic wavetable chords
+Classic voice synthesizer, configured as a 16-word granular sample player.  Trigger plays back word from TIMBRE position to word end.
       <h3>Controls</h3>
       <table>
         <tr>
@@ -1289,7 +1289,7 @@ Wavetable synthesis, 1-dimensional scanning through all wavetables.
 <br>TIMBRE
           </td>
 
-          <td class="blend">interpolates through 16 different waves</td>
+          <td class="blend">which 'slice' of the word to play, from start of word to end of word.  Apply a ramp shape to play word from start to end.</td>
         </tr>
       </table>
 
@@ -1300,7 +1300,37 @@ Wavetable synthesis, 1-dimensional scanning through all wavetables.
 <br>COLOR
           </td>
 
-          <td class="blend">chord structure</td>
+          <td class="blend">which word to play</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="sam"></a><h2>SAM2</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+Classic voice synthesizer, configured as a 16-word granular sample player.  Trigger plays back word from TIMBRE position to word end.
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td class="blend">which 'slice' of the word to play, from start of word to end of word.  Apply a ramp shape to play word from start to end.</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td class="blend">which word to play</td>
         </tr>
       </table>
 
@@ -1451,36 +1481,6 @@ Texture generator by mixing short decaying "pings" of sound
           </td>
 
           <td class="blend">frequency randomization</td>
-        </tr>
-      </table>
-
-    </div>
-  </div>
-<br /><br /><a name="qpsk"></a><h2>QPSK</h2>
-  <div class="centered">
-    <div class="content">
-      <h3>Description</h3>
-Generates audio frequency QPSK encoded data
-      <h3>Controls</h3>
-      <table>
-        <tr>
-          <td>
-            <div class="bigknob blue"></div>
-<br>TIMBRE
-          </td>
-
-          <td class="blend">bit rate</td>
-        </tr>
-      </table>
-
-      <table>
-        <tr>
-          <td>
-            <div class="bigknob red"></div>
-<br>COLOR
-          </td>
-
-          <td class="blend">8-bit value</td>
         </tr>
       </table>
 
