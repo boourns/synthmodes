@@ -2,7 +2,7 @@
 <module>
   <sections>
     <section name="Modes" modelist="true">
-      <page name="Envelope" content="envelope.html"/>
+      <page name="Envelope" content="env.html"/>
       <page name="LFO" content="lfo.html"/>
       <page name="Tap" content="tap.html"/>
       <page name="Drum" content="drum.html"/>
