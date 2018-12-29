@@ -9,7 +9,7 @@ done
 # format of xml files
 # existence of referenced HTML files
 
-for i in data/*/*.html; do
-  tidy -e $i
-done
+#for i in data/*/*.html; do
+#  tidy -e $i
+#done
 
