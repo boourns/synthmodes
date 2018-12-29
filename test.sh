@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
-xmllint data/modules.xml
+xmllint data/modules.xml > /dev/null
 for i in data/*/*.xml; do
-  xmllint $i
+  xmllint $i > /dev/null
 done
 
 # TODO
