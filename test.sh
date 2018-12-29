@@ -13,3 +13,4 @@ done
 #  tidy -e $i
 #done
 
+bundle exec ruby ./tools/render_web_data.rb 
