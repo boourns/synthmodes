@@ -1,0 +1,49 @@
+<html class="no-js">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="just_friends.css" type="text/css">
+</head>
+
+<body>
+<div class="centered">
+	<div class="content">
+	<h2>Sound/Sustain</h2>
+	<h3>Summary</h3>
+		
+		<p style="text-align: left;">6 triggered trapezoidal impulse oscillators; bipolar 10v pp outputs.   Use audio rate <em>TRIGGERS</em> to drive oscillation.  Accepts gates; impulses are shaped by interaction between <em>TIME</em>/<em>INTONE</em> and <em>TRIGGER</em> sources' pulsewidths.</p>  
+		<h3>Controls</h3>
+		<p style="text-align: left;">
+			<b>TIME</b>: Controls the duration of <em>IDENTITY</em>'s total rise/fall times.  Frequency of entire oscillation determined by <em>TRIGGER</em> frequencies, not <em>TIME</em>.<br>
+			<br>
+			<b>INTONE</b>: Controls the ratio of each of <em>2N</em> through <em>6N</em>'s rise/fall durations to </em>IDENTITY</em>'s.  At noon, all durations are equal to <em>IDENTITY</em>'s.  Clockwise accelerates each of <em>2N</em> through <em>6N</em> towards integer multiples as defined by their labels, vs elongation into integer divisions counterclockwise.<br>
+			<br>
+			<b>FM Input + Attenuverter</b>: AC-coupled (digitally). CW provides linear FM of all rise/fall durations in equal amounts. Turning CCW towards <em>INTONE</em> allows provides linear modulation in amounts accourding to <em>OUT</em> names.  Thus <em>IDENTITY</em> is unaffected, while <em>6N</em> is heavily modulated.<br>
+			<br>
+			<b>RAMP</b>: Controls the ratio of rise time to fall time.  Like <em>MANGROVE</em>'s barrel, the overall <em>TIME</em> is maintained, while blending the shape (sets the ratio of rise to fall time without adjusting total duration).<br>
+			<br>
+			<b>CURVE</b>: Blends the slopes from default linear gradients at 12:00.  CW passes through lazy 'log' shapes, and reaches cosines at the extreme.  CCW twists to snappy 'expo' envelopes then slides through trapezoids and into squares.<br>
+			<br>
+			<b>TRIGGERS</b>: Normalized from right to left, a <em>TRIGGER</em> in the rightmost will apply to all six.  Any slope that receives a <em>TRIGGER</em> slopes high, then falls once the input goes low.  If the slope reaches maximum it will sustain as long as the gate input is high. Use audio rate gates to generate trapezoidal oscillations whose impulse shape/duration are decoupled from oscillation frequency.  PWM effects via width of gates.<br>
+			<br>
+		</p>
+		<h3>Outputs</h3>
+		<p style="text-align: left;">
+			<b>INDIVIDUAL OUTS</b> are 10v pp bipolar oscillations.<br>
+			<br>			
+			<b>MIX</b> provides a combination of all active slopes. A musically balanced sum is output, floating around 10v pp.<br>
+			<br>
+		</p>
+    </div>
+  </div>
+</body>
+</html>
