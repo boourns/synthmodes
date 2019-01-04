@@ -1,0 +1,36 @@
+body {
+     font-family: -apple-system, sans-serif;
+}
+
+
+
+
+
+.centered {
+text-align: center;
+}
+
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.centered {
+  margin: auto;
+}
+
+
+
+
+td {
+  text-align: center;
+}
+
+h3 {
+  text-align: left;
+}

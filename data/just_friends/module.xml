@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="Standard Modes" modelist="true">
+      <page name="Shape/Cycle" content="shape_cycle.html"/>
+      <page name="Shape/Sustain" content="shape_sustain.html"/>
+      <page name="Shape/Transient" content="shape_transient.html"/>
+      <page name="Sound/Cycle" content="sound_cycle.html"/>
+      <page name="Sound/Sustain" content="sound_sustain.html"/>
+      <page name="Sound/Transient" content="sound_transient.html"/>
+	</section>
+    <section name="Run Modes" modelist="true">
+	  <page name="Shape/Cycle/Run (VOLLEY)" content="shape_cycle_run.html"/>
+      <page name="Shape/Sustain/Run (STRATA)" content="shape_sustain_run.html"/>
+      <page name="Shape/Transient/Run (SHIFT)" content="shape_transient_run.html"/>
+      <page name="Sound/Cycle/Run (FLOOM)" content="sound_cycle_run.html"/>
+      <page name="Sound/Sustain/Run (PLUME)" content="sound_sustain_run.html"/>
+      <page name="Sound/Transient/Run (SPILL)" content="sound_transient_run.html"/>
+	</section>
+	   
+
+   
+  </sections>
+</module>

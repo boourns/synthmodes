@@ -1,0 +1,50 @@
+<html class="no-js">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="just_friends.css" type="text/css">
+</head>
+
+<body>
+<div class="centered">
+	<div class="content">
+	  <h2>Shape/Cycle</h2>
+
+		<h3>Summary</h3>
+		<p style="text-align: left;">6 LFOs with reset triggers; 0-8v outputs.  All slopes are free-running, cycling up & down at rates defined by <em>TIME</em> & <em>INTONE</em>.</p>
+		<h3>Controls</h3>
+		<p style="text-align: left;">
+			<b>TIME</b>: Controls the period of <em>IDENTITY</em>'s cycle.<br>
+			<br>
+			<b>INTONE</b>: Defines tempic relationships of each generator by controlling the ratio of each of <em>2N</em> through <em>6N</em>'s period to </em>IDENTITY</em>'s.  At noon, all periods are equal to <em>IDENTITY</em>'s.  Clockwise accelerates each of <em>2N</em> through <em>6N</em> towards integer multiples as defined by their labels, vs elongation into integer divisions counterclockwise.<br>
+			<br>
+			<b>FM Input + Attenuverter</b>: Turning CCW towards <em>INTONE</em> allows attenuated modulation of <em>INTONE</em>.  Turn clockwise to allow attenuated linear FM.  With nothing patched, there is a positive offset (digitally) normalled, allowing detune control CW and additional <em>INTONE</em> control CCW. To ensure accuracy of the <em>INTONE</em> pot, set <em>FM</em> to 12:00.<br>
+			<br>
+			<b>RAMP</b>: Skews slopes from sawtooth, through asymetrical triangles to ramp waves.  Like <em>MANGROVE</em>'s barrel, the overall <em>TIME</em> is maintained, while blending the shape (sets the ratio of rise to fall time without adjusting total duration).<br>
+			<br>
+			<b>CURVE</b>: Blends the slopes from default linear gradients at 12:00.  CW passes through lazy 'log' shapes, and reaches cosines at the extreme.  CCW twists to snappy 'expo' curves then slides through trapezoids and into squares (with pulsewidth set by <em>RAMP</em>).<br>
+			<br>
+			<b>TRIGGERS</b>: Normalized from right to left, a <em>TRIGGER</em> in the rightmost will apply to all six.  Any slope that receives a <em>TRIGGER</em> immediately restarts its cycle immediately at the start of its attack phase.  <em>TRIGGER</em>ing only 6N will synchronize all channels due to their normalization.<br>
+			<br>
+		</p>
+		<h3>Outputs</h3>
+		<p style="text-align: left;">
+			<b>INDIVIDUAL OUTS</b> are 0-8v unipolar LFOs.<br>
+			<br>			
+			<b>MIX</b> provides a combination of all active slopes.  After dividing each slope by its <em>OUT</em> number, the maximum value is output.<br>
+			<br>
+		</p>
+
+    </div>
+  </div>
+</body>
+</html>
