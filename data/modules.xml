@@ -7,7 +7,6 @@
   <module name="Disting mk3" id="disting_mk3" index="disting_mk3/module.xml"/>
   <module name="Disting mk4" id="disting_mk4" index="disting_mk4/module.xml"/>
   <module name="Just Friends" id="just_friends" index="just_friends/module.xml" />
-  <module name="Ornament &amp; Crime" id="ornament_and_crime" index="o_c/module.xml"/>
   <module name="Peaks (Stock)" id="peaks_stock" index="peaks_stock/module.xml"/>
   <module name="Rings" id="rings" index="rings/module.xml"/>
 </modules>
