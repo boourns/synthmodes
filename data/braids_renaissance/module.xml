@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <module>
   <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
     <section name="Modes" modelist="true">
       <page name="CSAW" content="csaw.html"/>
       <page name="/\/|-_-_" content="classic_waves.html"/>
