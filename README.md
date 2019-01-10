@@ -6,6 +6,8 @@ This repo powers https://www.synthmodes.com, and the Modes app for iOS.
 # contributing
 The cheat sheets are written in HTML with some CSS for styling.  If you want to contribute in that format, that is great.  If you don't have the skills, formatted text or markdown in an issue is a great start.
 
+Please note, all contributions must be original work free from other copyright.  Please no copy & paste content unless you have explicit livense or permission from the copyright holder.
+
 # code of conduct
 see CODE_OF_CONDUCT.md
 
