@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <module>
   <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
     <section name="Modes" modelist="true">
       <page name="Envelope" content="env.html"/>
       <page name="LFO" content="lfo.html"/>

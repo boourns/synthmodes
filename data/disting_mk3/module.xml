@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <module>
   <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
     <section name="Bank 1/a" modelist="true">
       <page name="1-a Precision Adder" content="a1_precision_adder.html">
         <tags>

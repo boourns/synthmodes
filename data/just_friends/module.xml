@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <module>
   <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
     <section name="Standard Modes" modelist="true">
       <page name="Shape/Cycle" content="shape_cycle.html"/>
       <page name="Shape/Sustain" content="shape_sustain.html"/>

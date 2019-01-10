@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <module>
   <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
     <section name="Algorithms" modelist="true">
       <page name="A1 Precision Adder" content="a1_precision_adder.html">
         <tags>
