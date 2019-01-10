@@ -5,44 +5,106 @@ title: Disting mk3
 <style>body {
      font-family: -apple-system, sans-serif;
 }
- th {
-     color: grey;
-     font-weight: normal;
-}
- td {
-     margin: 5px;
-     padding: 5px;
-}
- table {
-     border: 1px solid black;
-     padding: 5px;
-     border-collapse: collapse;
-     width: 100%;
-}
- tr td:first-child{
-     width:1%;
+.orange {
+  background-color: #ff9e20;
 }
 
- .control {
-     background-color: #000000;
-     color: #ffffff;
-     padding: 10px;
-     margin: 3px;
-     display: inline-block;
-     border-radius: 4px;
-     font-size: large;
+.green {
+  background-color: #00ee00;
 }
 
- .parameter {
-     text-align: center;
-     padding-bottom: 3px;
-     width: 25%;
-     padding: 0px;
+.red {
+  background-color: #f41252;
 }
 
-.wrap {
-     word-wrap: break-word;
-}</style>Bank 1/a<br /><a href="#a1_precision_adder">1-a Precision Adder</a><br />
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.leds {
+  text-align: center;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.centered {
+text-align: center;
+}
+
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+h3 {
+  text-align: left;
+}
+
+td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.blend {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+</style>General<br /><a href="#info">Info</a><br />
+Bank 1/a<br /><a href="#a1_precision_adder">1-a Precision Adder</a><br />
 <a href="#a2_four_quadrant_multiplier">1-b Four Quadrant Multiplier</a><br />
 <a href="#a3_full_wave_rectifier_abs">1-c Full-wave Rectifier / abs()</a><br />
 <a href="#a4_minimum_maximum">1-d Minimum / Maximum</a><br />
@@ -111,7 +173,19 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <a href="#l2_mono_to_stereo_reverb">1-b Mono-to-Stereo Reverb</a><br />
 <a href="#l3_dual_reverb">1-c Dual Reverb</a><br />
 <a href="#l5_stereo_chorus">2-a Stereo Chorus</a><br />
-<a href="#l6_mono_chorus">2-b Mono Chorus</a><br /><h2>Bank 1/a</h2><a name="a1_precision_adder"></a><h2>1-a Precision Adder</h2>
+<a href="#l6_mono_chorus">2-b Mono Chorus</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Disting mk3</h3>
+      <p>Disting mk3 is a eurorack swift army knife.  It is made by <a href="http://www.expert-sleepers.co.uk">Expert Sleepers</a>.<br><br>
+        The Disting firmware gets updated regularly, be sure to check the firmware page for the latest version and latest manual.
+      </p>
+<h3>Links</h3>
+      <a href="http://www.expert-sleepers.co.uk/distingmk3firmwareupdates.html">Disting mk3 Firmware &amp; Manual</a><br>
+    </div>
+  </div>
+<br /><br />
+<h2>Bank 1/a</h2><a name="a1_precision_adder"></a><h2>1-a Precision Adder</h2>
   <h3>Controls</h3>
 
   <table>

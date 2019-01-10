@@ -5,34 +5,20 @@ title: Peaks (Stock)
 <style>body {
      font-family: -apple-system, sans-serif;
 }
-
-.led {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 1px solid;
-  text-align: center;
-  display: inline-block;
-  margin-right: 10px;
+.orange {
+  background-color: #ff9e20;
 }
-
 
 .green {
-  background-color: #00928f;
+  background-color: #00ee00;
 }
 
-.flashing-green {
-  border: 0px;
-  background-color: #00928f;
-  box-shadow: 0 0 10px #00928f, inset 0 0 10px #00928f;
-}
-
-
-
-.flashing-red {
-  border: 0px;
+.red {
   background-color: #f41252;
-  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.blue {
+  background-color: #00928f;
 }
 
 .white {
@@ -43,6 +29,37 @@ title: Peaks (Stock)
   text-align: center;
 }
 
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
 .centered {
 text-align: center;
 }
@@ -50,75 +67,64 @@ text-align: center;
 .content {
   max-width: 700px;
   align-self: center;
-  display: inline-block
+  display: inline-block;
+  text-align: left;
 }
 
 .fullwidth {
   width: 100%;
 }
 
-.centered {
-  margin: auto;
-}
-
-
-.knob-cell {
-	width: 70px;
-	height: 70px;
-	margin: auto;
-}
-.knob {
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  border: 5px solid;
-  border-radius: 50%;
-}
-
-.knob-ccw {
-  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
-  transform-origin: left;
-}
-
-.knob-cw {
-  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
-  transform-origin: left;
-}
-
-.knob-center {
-  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
-  transform-origin: left;
-}
-
-.knob-wiper {
-  width: 18px;
-  display: block;
-  height: 6px;
-  background-color: white;
-  color: green;
-}
-
-.steel {
-  background-color: #bbbbbb;
-  text-align: center;
-  max-width: 300px;
+h3 {
+  text-align: left;
 }
 
 td {
-  text-align: center;
+    text-align: center;
+    vertical-align: top;
 }
 
-h3 {
+.blend {
   text-align: left;
-}</style>Modes<br /><a href="#env">Envelope</a><br />
+  vertical-align: middle;
+}
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+</style>General<br /><a href="#info">Info</a><br />
+Modes<br /><a href="#env">Envelope</a><br />
 <a href="#lfo">LFO</a><br />
 <a href="#tap">Tap</a><br />
 <a href="#drum">Drum</a><br />
 <a href="#sequencer">Seq (Env Alt)</a><br />
 <a href="#gate_delay">Trig Delay/Shaper (LFO Alt)</a><br />
 <a href="#trig_randomizer">Trig Stream Randomizer (Tap Alt)</a><br />
-<a href="#drum_alt">Drum (Alt)</a><br /><h2>Modes</h2><a name="env"></a><h2>Envelope</h2>
+<a href="#drum_alt">Drum (Alt)</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Peaks</h3>
+      <p>Peaks is a multi-function modulation generator by Mutable Instruments.<br><br>
+      
+      </p>
+<h3>Links</h3>
+      <a class="button" href="https://mutable-instruments.net/modules/peaks/">Peaks Home</a><br>
+      <a class="button" href="https://mutable-instruments.net/modules/peaks/manual/">Peaks Manual</a><br>
+    </div>
+  </div>
+<br /><br />
+<h2>Modes</h2><a name="env"></a><h2>Envelope</h2>
   <div class="centered">
     <div class="content">
       <h3>Mode</h3>

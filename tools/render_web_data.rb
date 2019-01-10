@@ -79,7 +79,7 @@ title: #{@name}
   end
 
   def css
-    "<style>" + Dir["#{@directory}/*.css"].map { |f| File.read(f) }.join("\n") + "</style>"
+    "<style>" + Dir["data/common.css"].map { |f| File.read(f) }.join("\n") + "</style>"
   end
 end
 
