@@ -57,7 +57,7 @@ body {
 }
 
 .centered {
-text-align: center;
+  text-align: center;
 }
 
 .content {
@@ -75,12 +75,17 @@ h3 {
   text-align: left;
 }
 
-td {
+.panel td {
     text-align: center;
     vertical-align: top;
 }
 
-.blend {
+.knoblist td:first-child {
+    text-align: center;
+    vertical-align: top;
+}
+
+td {
   text-align: left;
   vertical-align: middle;
 }
@@ -98,4 +103,21 @@ td {
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
+}
+
+ .control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+ .parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
 }
