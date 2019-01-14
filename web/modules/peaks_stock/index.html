@@ -5,47 +5,6 @@ title: Peaks (Stock)
 <style>body {
      font-family: -apple-system, sans-serif;
 }
-.orange {
-  background-color: #ff9e20;
-}
-
-.green {
-  background-color: #00ee00;
-}
-
-.red {
-  background-color: #f41252;
-}
-
-.blue {
-  background-color: #00928f;
-}
-
-.white {
-  background-color: #ffffff;
-}
-
-.flashing-green {
-  border: 0px;
-  background-color: #00928f;
-  box-shadow: 0 0 10px #00928f, inset 0 0 10px #00928f;
-}
-
-.flashing-orange {
-  border: 0px;
-  background-color: #ff9e20;
-  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
-}
-
-.flashing-red {
-  border: 0px;
-  background-color: #f41252;
-  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
-}
-
-.leds {
-  text-align: center;
-}
 
 .led {
   height: 20px;
@@ -54,96 +13,105 @@ title: Peaks (Stock)
   border: 1px solid;
   text-align: center;
   display: inline-block;
-  margin: 10px;
-}
-
-.bigknob {
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-  border: 3px solid;
-  text-align: center;
-  display: inline-block;
   margin-right: 10px;
-  margin-left: 10px;
 }
 
-.smallknob {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 3px solid;
+
+.green {
+  background-color: #00928f;
+}
+
+.flashing-green {
+  border: 0px;
+  background-color: #00928f;
+  box-shadow: 0 0 10px #00928f, inset 0 0 10px #00928f;
+}
+
+
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.leds {
   text-align: center;
-  display: inline-block;
-  margin: 10px;
 }
 
 .centered {
-  text-align: center;
+text-align: center;
 }
 
 .content {
   max-width: 700px;
   align-self: center;
-  display: inline-block;
-  text-align: left;
+  display: inline-block
 }
 
 .fullwidth {
   width: 100%;
 }
 
-h3 {
-  text-align: left;
+.centered {
+  margin: auto;
 }
 
-.panel td {
-    text-align: center;
-    vertical-align: top;
+
+.knob-cell {
+	width: 70px;
+	height: 70px;
+	margin: auto;
+}
+.knob {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
 }
 
-.knoblist td:first-child {
-    text-align: center;
-    vertical-align: top;
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-wiper {
+  width: 18px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
 }
 
 td {
-  text-align: left;
-  vertical-align: middle;
-}
-
-.button {
-  background-color: #007dd8;
-  border: none;
-  color: white;
-  padding: 10px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 6px;
-  width: 100%;
-  box-sizing: border-box;
 }
 
- .control {
-     background-color: #000000;
-     color: #ffffff;
-     padding: 10px;
-     margin: 3px;
-     display: inline-block;
-     border-radius: 4px;
-     font-size: large;
-}
-
- .parameter {
-     text-align: center;
-     padding-bottom: 3px;
-     width: 25%;
-     padding: 0px;
-}
-</style>General<br /><a href="#info">Info</a><br />
+h3 {
+  text-align: left;
+}</style>General<br /><a href="#info">Info</a><br />
 Modes<br /><a href="#env">Envelope</a><br />
 <a href="#lfo">LFO</a><br />
 <a href="#tap">Tap</a><br />

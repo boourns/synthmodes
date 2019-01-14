@@ -5,126 +5,22 @@ title: Disting mk4
 <style>body {
      font-family: -apple-system, sans-serif;
 }
-.orange {
-  background-color: #ff9e20;
+ th {
+     color: grey;
+     font-weight: normal;
 }
-
-.green {
-  background-color: #00ee00;
+ td {
+     margin: 5px;
+     padding: 5px;
 }
-
-.red {
-  background-color: #f41252;
+ table {
+     border: 1px solid black;
+     padding: 5px;
+     border-collapse: collapse;
+     width: 100%;
 }
-
-.blue {
-  background-color: #00928f;
-}
-
-.white {
-  background-color: #ffffff;
-}
-
-.flashing-green {
-  border: 0px;
-  background-color: #00928f;
-  box-shadow: 0 0 10px #00928f, inset 0 0 10px #00928f;
-}
-
-.flashing-orange {
-  border: 0px;
-  background-color: #ff9e20;
-  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
-}
-
-.flashing-red {
-  border: 0px;
-  background-color: #f41252;
-  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
-}
-
-.leds {
-  text-align: center;
-}
-
-.led {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 1px solid;
-  text-align: center;
-  display: inline-block;
-  margin: 10px;
-}
-
-.bigknob {
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-  border: 3px solid;
-  text-align: center;
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.smallknob {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 3px solid;
-  text-align: center;
-  display: inline-block;
-  margin: 10px;
-}
-
-.centered {
-  text-align: center;
-}
-
-.content {
-  max-width: 700px;
-  align-self: center;
-  display: inline-block;
-  text-align: left;
-}
-
-.fullwidth {
-  width: 100%;
-}
-
-h3 {
-  text-align: left;
-}
-
-.panel td {
-    text-align: center;
-    vertical-align: top;
-}
-
-.knoblist td:first-child {
-    text-align: center;
-    vertical-align: top;
-}
-
-td {
-  text-align: left;
-  vertical-align: middle;
-}
-
-.button {
-  background-color: #007dd8;
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 6px;
-  width: 100%;
-  box-sizing: border-box;
+ tr td:first-child{
+     width:1%;
 }
 
  .control {
@@ -143,7 +39,10 @@ td {
      width: 25%;
      padding: 0px;
 }
-</style>General<br /><a href="#info">Info</a><br />
+
+.wrap {
+     word-wrap: break-word;
+}</style>General<br /><a href="#info">Info</a><br />
 Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#a2_four_quadrant_multiplier">A2 Four Quadrant Multiplier</a><br />
 <a href="#a3_full_wave_rectifier_abs">A3 Full-wave Rectifier / abs()</a><br />
