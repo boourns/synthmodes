@@ -61,7 +61,7 @@ title: Clouds (Stock)
 }
 
 .centered {
-text-align: center;
+  text-align: center;
 }
 
 .content {
@@ -79,12 +79,17 @@ h3 {
   text-align: left;
 }
 
-td {
+.panel td {
     text-align: center;
     vertical-align: top;
 }
 
-.blend {
+.knoblist td:first-child {
+    text-align: center;
+    vertical-align: top;
+}
+
+td {
   text-align: left;
   vertical-align: middle;
 }
@@ -102,6 +107,23 @@ td {
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
+}
+
+ .control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+ .parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
 }
 </style>General<br /><a href="#info">Info</a><br />
 Modes<br /><a href="#granular">Granular Processor</a><br />
@@ -142,12 +164,12 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             <div class="led"></div>
           </td>
 
-          <td class="blend">Press to freeze buffer / hold to
+          <td>Press to freeze buffer / hold to
           reverse</td>
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="bigknob red"></div>
@@ -169,7 +191,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="smallknob red"></div>
@@ -213,7 +235,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Dry/Wet</td>
+          <td>Dry/Wet</td>
         </tr>
 
         <tr>
@@ -229,7 +251,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Stereo Spread</td>
+          <td>Stereo Spread</td>
         </tr>
 
         <tr>
@@ -245,7 +267,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Feedback</td>
+          <td>Feedback</td>
         </tr>
 
         <tr>
@@ -261,7 +283,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Reverb</td>
+          <td>Reverb</td>
         </tr>
       </table>
     </div>
@@ -289,11 +311,11 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             <div class="led"></div>
           </td>
 
-          <td class="blend">loop</td>
+          <td>loop</td>
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="bigknob red"></div>
@@ -315,7 +337,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="smallknob red"></div>
@@ -360,7 +382,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Dry/Wet</td>
+          <td>Dry/Wet</td>
         </tr>
 
         <tr>
@@ -376,7 +398,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Stereo Spread</td>
+          <td>Stereo Spread</td>
         </tr>
 
         <tr>
@@ -392,7 +414,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Feedback</td>
+          <td>Feedback</td>
         </tr>
 
         <tr>
@@ -408,7 +430,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Reverb</td>
+          <td>Reverb</td>
         </tr>
       </table>
     </div>
@@ -436,11 +458,11 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             <div class="led"></div>
           </td>
 
-          <td class="blend">loop / hold to reverse loop</td>
+          <td>loop / hold to reverse loop</td>
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="bigknob red"></div>
@@ -463,7 +485,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="smallknob red"></div>
@@ -507,7 +529,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Dry/Wet</td>
+          <td>Dry/Wet</td>
         </tr>
 
         <tr>
@@ -523,7 +545,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Stereo Spread</td>
+          <td>Stereo Spread</td>
         </tr>
 
         <tr>
@@ -539,7 +561,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Feedback</td>
+          <td>Feedback</td>
         </tr>
 
         <tr>
@@ -555,7 +577,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Reverb</td>
+          <td>Reverb</td>
         </tr>
       </table>
     </div>

@@ -61,7 +61,7 @@ title: Braids (Stock)
 }
 
 .centered {
-text-align: center;
+  text-align: center;
 }
 
 .content {
@@ -79,12 +79,17 @@ h3 {
   text-align: left;
 }
 
-td {
+.panel td {
     text-align: center;
     vertical-align: top;
 }
 
-.blend {
+.knoblist td:first-child {
+    text-align: center;
+    vertical-align: top;
+}
+
+td {
   text-align: left;
   vertical-align: middle;
 }
@@ -102,6 +107,23 @@ td {
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
+}
+
+ .control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+ .parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
 }
 </style>General<br /><a href="#info">Info</a><br />
 Modes<br /><a href="#csaw">CSAW</a><br />
@@ -168,25 +190,23 @@ Modes<br /><a href="#csaw">CSAW</a><br />
 CS80-like sawtooth with 'notch'.
 
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">notch width</td>
+          <td>notch width</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">notch depth and polarity</td>
+          <td>notch depth and polarity</td>
         </tr>
       </table>
 
@@ -199,25 +219,23 @@ CS80-like sawtooth with 'notch'.
 
 Classic variable wave analog-style oscillator.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">triangle to sawtooth to square to pulse</td>
+          <td>triangle to sawtooth to square to pulse</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">tone, from a 1-pole filter to a waveshaper</td>
+          <td>tone, from a 1-pole filter to a waveshaper</td>
         </tr>
       </table>
 
@@ -230,25 +248,23 @@ Classic variable wave analog-style oscillator.
 
 Morph from dephased saw to square with pulse width control
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">dephasing of saw, pulse width of square</td>
+          <td>dephasing of saw, pulse width of square</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">waveshape, saw to square</td>
+          <td>waveshape, saw to square</td>
         </tr>
       </table>
 
@@ -261,25 +277,23 @@ Morph from dephased saw to square with pulse width control
 
 Blend of sine/triangle oscillators sent to wavefolder
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">wavefolder strength</td>
+          <td>wavefolder strength</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">sine -&gt; triangle</td>
+          <td>sine -&gt; triangle</td>
         </tr>
       </table>
 
@@ -291,25 +305,23 @@ Blend of sine/triangle oscillators sent to wavefolder
       <h3>Description</h3>
 Two detuned variable sine-&gt;comb waveforms.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">sine -&gt; dirac comb</td>
+          <td>sine -&gt; dirac comb</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">detune</td>
+          <td>detune</td>
         </tr>
       </table>
 
@@ -321,25 +333,23 @@ Two detuned variable sine-&gt;comb waveforms.
       <h3>Description</h3>
 Two square-wave oscillators, one hardsynced to another.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">interval between primary/secondary osc</td>
+          <td>interval between primary/secondary osc</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">oscillator mix</td>
+          <td>oscillator mix</td>
         </tr>
       </table>
 
@@ -351,25 +361,23 @@ Two square-wave oscillators, one hardsynced to another.
       <h3>Description</h3>
 Two saw oscillators, one hardsynced to another.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">interval between primary/secondary osc</td>
+          <td>interval between primary/secondary osc</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">oscillator mix</td>
+          <td>oscillator mix</td>
         </tr>
       </table>
 
@@ -381,25 +389,23 @@ Two saw oscillators, one hardsynced to another.
       <h3>Description</h3>
 Three independently tuned saw oscillators
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">relative frequency of 2nd osc</td>
+          <td>relative frequency of 2nd osc</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">relative frequency of 3rd osc</td>
+          <td>relative frequency of 3rd osc</td>
         </tr>
       </table>
 
@@ -411,25 +417,23 @@ Three independently tuned saw oscillators
       <h3>Description</h3>
 Three independently tuned square oscillators
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">relative frequency of 2nd osc</td>
+          <td>relative frequency of 2nd osc</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">relative frequency of 3rd osc</td>
+          <td>relative frequency of 3rd osc</td>
         </tr>
       </table>
 
@@ -441,25 +445,23 @@ Three independently tuned square oscillators
       <h3>Description</h3>
 Three independently tuned triangle oscillators
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">relative frequency of 2nd osc</td>
+          <td>relative frequency of 2nd osc</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">relative frequency of 3rd osc</td>
+          <td>relative frequency of 3rd osc</td>
         </tr>
       </table>
 
@@ -471,25 +473,22 @@ Three independently tuned triangle oscillators
       <h3>Description</h3>
 Three independently tuned sine oscillators
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">relative frequency of 2nd osc</td>
+          <td>relative frequency of 2nd osc</td>
         </tr>
-      </table>
-
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">relative frequency of 3rd osc</td>
+          <td>relative frequency of 3rd osc</td>
         </tr>
       </table>
 
@@ -501,25 +500,23 @@ Three independently tuned sine oscillators
       <h3>Description</h3>
 Three sine wave oscillators ring modulated -&amp;gt waveshaper
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">relative frequency of 2nd osc</td>
+          <td>relative frequency of 2nd osc</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">relative frequency of 3rd osc</td>
+          <td>relative frequency of 3rd osc</td>
         </tr>
       </table>
 
@@ -531,25 +528,23 @@ Three sine wave oscillators ring modulated -&amp;gt waveshaper
       <h3>Description</h3>
 Supersaw.  7 saw waves mixed.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">detuning</td>
+          <td>detuning</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">highpass filter</td>
+          <td>highpass filter</td>
         </tr>
       </table>
 
@@ -561,25 +556,23 @@ Supersaw.  7 saw waves mixed.
       <h3>Description</h3>
 Saw -&gt; tuned comb filter
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">relative tuning of comb filter</td>
+          <td>relative tuning of comb filter</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">negative/positive feedback</td>
+          <td>negative/positive feedback</td>
         </tr>
       </table>
 
@@ -591,25 +584,23 @@ Saw -&gt; tuned comb filter
       <h3>Description</h3>
 Circuit bent toy emulation
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">toy clock rate</td>
+          <td>toy clock rate</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">data line short circuiting</td>
+          <td>data line short circuiting</td>
         </tr>
       </table>
 
@@ -621,25 +612,23 @@ Circuit bent toy emulation
       <h3>Description</h3>
 Synthesis of the response of a lowpass filter excited by a waveform. 
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">filter frequency</td>
+          <td>filter frequency</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">waveshape saw-&gt;square-&gt;triangle</td>
+          <td>waveshape saw-&gt;square-&gt;triangle</td>
         </tr>
       </table>
 
@@ -651,25 +640,22 @@ Synthesis of the response of a lowpass filter excited by a waveform.
       <h3>Description</h3>
 Synthesis of the response of a peaking filter excited by a waveform. 
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">filter frequency</td>
+          <td>filter frequency</td>
         </tr>
-      </table>
-
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">waveshape saw-&gt;square-&gt;triangle</td>
+          <td>waveshape saw-&gt;square-&gt;triangle</td>
         </tr>
       </table>
 
@@ -681,25 +667,23 @@ Synthesis of the response of a peaking filter excited by a waveform.
       <h3>Description</h3>
 Synthesis of the response of a bandpass filter excited by a waveform. 
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">filter frequency</td>
+          <td>filter frequency</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">waveshape saw-&gt;square-&gt;triangle</td>
+          <td>waveshape saw-&gt;square-&gt;triangle</td>
         </tr>
       </table>
 
@@ -711,25 +695,23 @@ Synthesis of the response of a bandpass filter excited by a waveform.
       <h3>Description</h3>
 Synthesis of the response of a highpass filter excited by a waveform. 
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">filter frequency</td>
+          <td>filter frequency</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">waveshape saw-&gt;square-&gt;triangle</td>
+          <td>waveshape saw-&gt;square-&gt;triangle</td>
         </tr>
       </table>
 
@@ -741,25 +723,23 @@ Synthesis of the response of a highpass filter excited by a waveform.
       <h3>Description</h3>
 VOSIM formant synthesis emulation.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">relative frequency of formant</td>
+          <td>relative frequency of formant</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">relative frequency of formant</td>
+          <td>relative frequency of formant</td>
         </tr>
       </table>
 
@@ -771,25 +751,23 @@ VOSIM formant synthesis emulation.
       <h3>Description</h3>
 Vowel speech synthesis
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">vowel, a e i o u</td>
+          <td>vowel, a e i o u</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">formant frequency shift</td>
+          <td>formant frequency shift</td>
         </tr>
       </table>
 
@@ -801,25 +779,23 @@ Vowel speech synthesis
       <h3>Description</h3>
 Vowel speech synthesis
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">vowel, a e i o u</td>
+          <td>vowel, a e i o u</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">formant frequency shift</td>
+          <td>formant frequency shift</td>
         </tr>
       </table>
 
@@ -831,25 +807,23 @@ Vowel speech synthesis
       <h3>Description</h3>
 Additive synthesis of 12 sine harmonics
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">amplitude distribution</td>
+          <td>amplitude distribution</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">center frequency for amplitude distribution</td>
+          <td>center frequency for amplitude distribution</td>
         </tr>
       </table>
 
@@ -861,25 +835,23 @@ Additive synthesis of 12 sine harmonics
       <h3>Description</h3>
 2-operator phase-modulation synthesis
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">modulation amount</td>
+          <td>modulation amount</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">relative frequency</td>
+          <td>relative frequency</td>
         </tr>
       </table>
 
@@ -891,25 +863,23 @@ Additive synthesis of 12 sine harmonics
       <h3>Description</h3>
 2-operator phase-modulation synthesis, with carrier feedback
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">modulation amount</td>
+          <td>modulation amount</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">relative frequency</td>
+          <td>relative frequency</td>
         </tr>
       </table>
 
@@ -921,25 +891,23 @@ Additive synthesis of 12 sine harmonics
       <h3>Description</h3>
 2-operator phase-modulation synthesis, with 2 feedback paths
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">modulation amount</td>
+          <td>modulation amount</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">relative frequency</td>
+          <td>relative frequency</td>
         </tr>
       </table>
 
@@ -958,7 +926,7 @@ Plucked string synthesis.  Requires trigger signal.
 <br>TIMBRE
           </td>
 
-          <td class="blend">damping</td>
+          <td>damping</td>
         </tr>
       </table>
 
@@ -969,7 +937,7 @@ Plucked string synthesis.  Requires trigger signal.
 <br>COLOR
           </td>
 
-          <td class="blend">plucking position</td>
+          <td>plucking position</td>
         </tr>
       </table>
 
@@ -981,25 +949,23 @@ Plucked string synthesis.  Requires trigger signal.
       <h3>Description</h3>
 Bowed string modelling.  Requires trigger signal.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">friction</td>
+          <td>friction</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">bowing position</td>
+          <td>bowing position</td>
         </tr>
       </table>
 
@@ -1011,25 +977,23 @@ Bowed string modelling.  Requires trigger signal.
       <h3>Description</h3>
 Reed instrument modelling
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">air pressure</td>
+          <td>air pressure</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">instrtument geometry</td>
+          <td>instrtument geometry</td>
         </tr>
       </table>
 
@@ -1041,25 +1005,23 @@ Reed instrument modelling
       <h3>Description</h3>
 Flute instrument modelling
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">air pressure</td>
+          <td>air pressure</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">instrtument geometry</td>
+          <td>instrtument geometry</td>
         </tr>
       </table>
 
@@ -1071,25 +1033,23 @@ Flute instrument modelling
       <h3>Description</h3>
 Bell additive synthesis
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">damping</td>
+          <td>damping</td>
         </tr>
-      </table>
-
-      <table>
+  
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">inharmonicity</td>
+          <td>inharmonicity</td>
         </tr>
       </table>
 
@@ -1101,25 +1061,23 @@ Bell additive synthesis
       <h3>Description</h3>
 Metal drum synthesis
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">damping</td>
+          <td>damping</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">brightness</td>
+          <td>brightness</td>
         </tr>
       </table>
 
@@ -1131,25 +1089,23 @@ Metal drum synthesis
       <h3>Description</h3>
 Simulation of Roland TR808 kick
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">decay time</td>
+          <td>decay time</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">brightness/tone</td>
+          <td>brightness/tone</td>
         </tr>
       </table>
 
@@ -1161,25 +1117,23 @@ Simulation of Roland TR808 kick
       <h3>Description</h3>
 Simulation of Roland TR808 cymbal
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">bandpass filter frequency</td>
+          <td>bandpass filter frequency</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">oscillator/noise balance</td>
+          <td>oscillator/noise balance</td>
         </tr>
       </table>
 
@@ -1191,25 +1145,23 @@ Simulation of Roland TR808 cymbal
       <h3>Description</h3>
 Simulation of Roland TR808 snare
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">tone</td>
+          <td>tone</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">noise/"snappy"</td>
+          <td>noise/"snappy"</td>
         </tr>
       </table>
 
@@ -1221,25 +1173,23 @@ Simulation of Roland TR808 snare
       <h3>Description</h3>
 Wavetable synthesis
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">sweeps wavetable</td>
+          <td>sweeps wavetable</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">picks wavetable</td>
+          <td>picks wavetable</td>
         </tr>
       </table>
 
@@ -1251,25 +1201,23 @@ Wavetable synthesis
       <h3>Description</h3>
 2-dimensional wavetable synthesis.  Waves placed in a 16-by-16 grid, Interpolated in both dimensions.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">sweeps wavetable in X direction</td>
+          <td>sweeps wavetable in X direction</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">sweeps wavetable in Y direction</td>
+          <td>sweeps wavetable in Y direction</td>
         </tr>
       </table>
 
@@ -1281,25 +1229,23 @@ Wavetable synthesis
       <h3>Description</h3>
 Wavetable synthesis, 1-dimensional scanning through all wavetables.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">sweeps wavetables</td>
+          <td>sweeps wavetables</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">interpolation method. Past 12oclock, decreases playback resolution.</td>
+          <td>interpolation method. Past 12oclock, decreases playback resolution.</td>
         </tr>
       </table>
 
@@ -1311,25 +1257,23 @@ Wavetable synthesis, 1-dimensional scanning through all wavetables.
       <h3>Description</h3>
 4-voice paraphonic wavetable chords
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">interpolates through 16 different waves</td>
+          <td>interpolates through 16 different waves</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">chord structure</td>
+          <td>chord structure</td>
         </tr>
       </table>
 
@@ -1341,25 +1285,23 @@ Wavetable synthesis, 1-dimensional scanning through all wavetables.
       <h3>Description</h3>
 White noise through a state-variable filter.  Pitch input controls filter frequency.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">filter resonance</td>
+          <td>filter resonance</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">crossfade between lowpass and highpass</td>
+          <td>crossfade between lowpass and highpass</td>
         </tr>
       </table>
 
@@ -1371,25 +1313,23 @@ White noise through a state-variable filter.  Pitch input controls filter freque
       <h3>Description</h3>
 White noise processed by two bandpass filters
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">filter resonance</td>
+          <td>filter resonance</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">filter frequency spacing</td>
+          <td>filter frequency spacing</td>
         </tr>
       </table>
 
@@ -1401,25 +1341,23 @@ White noise processed by two bandpass filters
       <h3>Description</h3>
 Random samples generated at rate determined by main pitch.
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">periodicity</td>
+          <td>periodicity</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">quantization, from 2 to 32 distinct values per sample</td>
+          <td>quantization, from 2 to 32 distinct values per sample</td>
         </tr>
       </table>
 
@@ -1431,25 +1369,23 @@ Random samples generated at rate determined by main pitch.
       <h3>Description</h3>
 Texture generator by mixing short grains of windowed sine waves
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">density and overlap of grains</td>
+          <td>density and overlap of grains</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">frequency randomization</td>
+          <td>frequency randomization</td>
         </tr>
       </table>
 
@@ -1461,25 +1397,23 @@ Texture generator by mixing short grains of windowed sine waves
       <h3>Description</h3>
 Texture generator by mixing short decaying "pings" of sound
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">density and overlap of grains</td>
+          <td>density and overlap of grains</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">frequency randomization</td>
+          <td>frequency randomization</td>
         </tr>
       </table>
 
@@ -1491,25 +1425,23 @@ Texture generator by mixing short decaying "pings" of sound
       <h3>Description</h3>
 Generates audio frequency QPSK encoded data
       <h3>Controls</h3>
-      <table>
+      <table class="knoblist">
         <tr>
           <td>
             <div class="bigknob blue"></div>
 <br>TIMBRE
           </td>
 
-          <td class="blend">bit rate</td>
+          <td>bit rate</td>
         </tr>
-      </table>
 
-      <table>
         <tr>
           <td>
             <div class="bigknob red"></div>
 <br>COLOR
           </td>
 
-          <td class="blend">8-bit value</td>
+          <td>8-bit value</td>
         </tr>
       </table>
 
