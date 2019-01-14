@@ -25,6 +25,24 @@ title: Braids (Renaissance)
   background-color: #ffffff;
 }
 
+.flashing-green {
+  border: 0px;
+  background-color: #00928f;
+  box-shadow: 0 0 10px #00928f, inset 0 0 10px #00928f;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
 .leds {
   text-align: center;
 }
@@ -138,6 +156,16 @@ Modes<br /><a href="#csaw">CSAW</a><br />
 <a href="#3tri">/\x3</a><br />
 <a href="#3sin">SIx3</a><br />
 <a href="#ring">RING</a><br />
+<a href="#saw_chord">/|/|CH</a><br />
+<a href="#square_chord">-_-_CH</a><br />
+<a href="#triangle_chord">/\CH</a><br />
+<a href="#sine_chord">SICH</a><br />
+<a href="#wavetable_chord">WTCH</a><br />
+<a href="#saw_stack">/|/|x6</a><br />
+<a href="#square_stack">-_-_x6</a><br />
+<a href="#triangle_stack">/\x6</a><br />
+<a href="#sine_stack">SIx6</a><br />
+<a href="#wavetable_stack">WTx6</a><br />
 <a href="#supersaw">/|/|/|/|</a><br />
 <a href="#saw_comb">/|/|_|_|_</a><br />
 <a href="#toy">TOY*</a><br />
@@ -519,6 +547,301 @@ Three sine wave oscillators ring modulated -&amp;gt waveshaper
           </td>
 
           <td>relative frequency of 3rd osc</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="saw_chord"></a><h2>/|/|CH</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of two saw oscillators with controllable detune.<br>
+When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Saw detune</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Chord extension</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="square_chord"></a><h2>-_-_CH</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of a pulse oscillator with variable width.<br>
+When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Pulse width</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Chord extension</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="triangle_chord"></a><h2>/\CH</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of a triangle wave through a wavefolder.<br>
+When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Wavefolder amount</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Chord extension</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="sine_chord"></a><h2>SICH</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of a sine wave through a waveshaper.<br>
+When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Wavefolder amount</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Chord extension</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="wavetable_chord"></a><h2>WTCH</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of a wavetable oscillator that picks a wave from a fixed linear table (same as original WTx4 mode).<br>
+When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Wavetable index</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Chord extension</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="saw_stack"></a><h2>/|/|x6</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of two saw waveforms with variable detuning.
+When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
+<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Saw detune</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Note spacing</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="square_stack"></a><h2>-_-_x6</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of a pulse oscillator with variable width.
+When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
+<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Pulse width</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Note spacing</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="triangle_stack"></a><h2>/\x6</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of a triangle oscillator through a wavefolder.<br>
+When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
+<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Wavefolder amount</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Note spacing</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="sine_stack"></a><h2>SIx6</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of a sine oscillator through a wavefolder.<br>
+When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
+<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Wavefolder amount</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Note spacing</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+<br /><br /><a name="wavetable_stack"></a><h2>WTx6</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Description</h3>
+(Up to) 6 note chords.  Each note consists of a wavetable oscillator that picks a wave from a fixed linear table (same as original WTx4 mode).<br>
+When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
+<br>
+      <h3>Controls</h3>
+      <table class="knoblist">
+        <tr>
+          <td>
+            <div class="bigknob blue"></div>
+<br>TIMBRE
+          </td>
+
+          <td>Wavetable index</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="bigknob red"></div>
+<br>COLOR
+          </td>
+
+          <td>Note spacing</td>
         </tr>
       </table>
 

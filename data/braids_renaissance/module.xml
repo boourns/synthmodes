@@ -17,6 +17,16 @@
       <page name="/\x3" content="3tri.html"/>
       <page name="SIx3" content="3sin.html"/>
       <page name="RING" content="ring.html"/>
+      <page name="/|/|CH" content="saw_chord.html"/>
+      <page name="-_-_CH" content="square_chord.html"/>
+      <page name="/\CH" content="triangle_chord.html"/>
+      <page name="SICH" content="sine_chord.html"/>
+      <page name="WTCH" content="wavetable_chord.html"/>
+      <page name="/|/|x6" content="saw_stack.html"/>
+      <page name="-_-_x6" content="square_stack.html"/>
+      <page name="/\x6" content="triangle_stack.html"/>
+      <page name="SIx6" content="sine_stack.html"/>
+      <page name="WTx6" content="wavetable_stack.html"/>
       <page name="/|/|/|/|" content="supersaw.html"/>
       <page name="/|/|_|_|_" content="saw_comb.html"/>
       <page name="TOY*" content="toy.html"/>
