@@ -14,3 +14,9 @@ see CODE_OF_CONDUCT.md
 # license
 This repository is provided under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license.  You are free to share and adapt the contents as long as you provide attribution
 
+# permission
+While explicit permission for writing documentation for someone else's module is not really necessary, the following firmware and module developers have been contacted and have responded positively to the content of this application and documentation project.
+
+- Andrew Ostler (Expert Sleepers)
+- Émilie Gillet (Mutable Instruments)
+- Matthias Puech (Parasites)
