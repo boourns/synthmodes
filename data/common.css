@@ -75,14 +75,19 @@ body {
 }
 
 @media (min-width: 700px) {
-  .centered {
-    text-align: center;
+  .content {
+    min-width: 375px;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
   }
 }
 
 .content {
   max-width: 700px;
-  min-width: 375px;
   align-self: center;
   display: inline-block;
   text-align: left;
