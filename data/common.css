@@ -74,12 +74,15 @@ body {
   margin: 10px;
 }
 
-.centered {
-  text-align: center;
+@media (min-width: 700px) {
+  .centered {
+    text-align: center;
+  }
 }
 
 .content {
   max-width: 700px;
+  min-width: 375px;
   align-self: center;
   display: inline-block;
   text-align: left;
@@ -91,6 +94,10 @@ body {
 
 h3 {
   text-align: left;
+}
+
+table {
+  width: 100%;
 }
 
 .panel td {

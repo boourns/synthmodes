@@ -327,7 +327,6 @@
       <page name="H2 Dual Sample and Hold" content="h2_dual_sample_and_hold.html">
         <tags>
           <tag>utility</tag>
-          <tag>noise</tag>
         </tags>
       </page>
       <page name="H3 Dual Quantizer (Z scale)" content="h3_dual_quantizer_z_scale.html">
