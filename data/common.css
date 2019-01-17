@@ -1,6 +1,21 @@
 body {
-     font-family: -apple-system, sans-serif;
+  font-family: -apple-system, sans-serif;
 }
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
 .orange {
   background-color: #ff9e20;
 }
@@ -97,27 +112,22 @@ body {
   width: 100%;
 }
 
-h3 {
-  text-align: left;
-}
-
-table {
-  width: 100%;
-}
 
 .panel td {
     text-align: center;
     vertical-align: top;
 }
 
-.knoblist td:first-child {
+.parameters tr td:first-child {
     text-align: center;
     vertical-align: top;
+    width:1%;
 }
 
-td {
-  text-align: left;
-  vertical-align: middle;
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
 }
 
 .button {
