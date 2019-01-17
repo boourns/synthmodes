@@ -58,6 +58,49 @@ table {
   text-align: center;
 }
 
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
 .led {
   height: 20px;
   width: 20px;
@@ -67,6 +110,8 @@ table {
   display: inline-block;
   margin: 10px;
 }
+
+/* just big circles - braids, clouds */
 
 .bigknob {
   height: 55px;
@@ -89,46 +134,96 @@ table {
   margin: 10px;
 }
 
-@media (min-width: 700px) {
-  .content {
-    min-width: 375px;
-  }
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
 }
 
-@media (max-width: 700px) {
-  .content {
-    width: 100%;
-  }
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
 }
 
-.content {
-  max-width: 700px;
-  align-self: center;
-  display: inline-block;
-  text-align: left;
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
 }
 
-.fullwidth {
-  width: 100%;
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
 }
 
-
-.panel td {
-    text-align: center;
-    vertical-align: top;
+.knob-wiper {
+  width: 18px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
 }
 
-.parameters tr td:first-child {
-    text-align: center;
-    vertical-align: top;
-    width:1%;
+.att {
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
 }
 
-.bordered {
-  border: 1px solid black;
-  border-collapse: collapse;
-  padding: 3px;
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
 }
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
+}
+
+/* iOS-like button */
 
 .button {
   background-color: #007dd8;
@@ -143,21 +238,4 @@ table {
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
-}
-
- .control {
-     background-color: #000000;
-     color: #ffffff;
-     padding: 10px;
-     margin: 3px;
-     display: inline-block;
-     border-radius: 4px;
-     font-size: large;
-}
-
- .parameter {
-     text-align: center;
-     padding-bottom: 3px;
-     width: 25%;
-     padding: 0px;
 }
