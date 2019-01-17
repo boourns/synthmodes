@@ -78,8 +78,16 @@ title: Just Friends
   margin: 10px;
 }
 
-.centered {
-  text-align: center;
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
 }
 
 .content {
@@ -95,6 +103,10 @@ title: Just Friends
 
 h3 {
   text-align: left;
+}
+
+table {
+  width: 100%;
 }
 
 .panel td {
