@@ -74,6 +74,10 @@ table {
   .content {
     min-width: 375px;
   }
+
+  .centered {
+    text-align: center;
+  }
 }
 
 @media (max-width: 700px) {

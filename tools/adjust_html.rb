@@ -10,7 +10,9 @@ Dir["./*.html"].each do |filename|
   # end
 
   # remove custom styles
-  html.xpath('//@style').remove
+  #html.xpath('//@style').remove
 
+  # update a meta tag
+  
   File.write(filename, html.inner_html)
 end
