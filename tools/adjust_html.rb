@@ -13,6 +13,8 @@ Dir["./*.html"].each do |filename|
   #html.xpath('//@style').remove
 
   # update a meta tag
-  
+  html.xpath("//meta[@name='viewport']").each_with_index do |meta, index|
+   	  meta["content"] = "width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui"
+   end
   File.write(filename, html.inner_html)
 end
