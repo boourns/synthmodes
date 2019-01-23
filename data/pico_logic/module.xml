@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+  	<section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Modes" modelist="true">
+      <page name="Digital Logic" content="logic.html"/>
+      <page name="Clock Divider" content="clock.html"/>
+    </section>
+  </sections>
+</module>
