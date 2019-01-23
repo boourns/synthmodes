@@ -3,8 +3,23 @@ layout: page
 title: Braids (Renaissance)
 ---
 <style>body {
-     font-family: -apple-system, sans-serif;
+  font-family: -apple-system, sans-serif;
 }
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
 .orange {
   background-color: #ff9e20;
 }
@@ -47,6 +62,53 @@ title: Braids (Renaissance)
   text-align: center;
 }
 
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
 .led {
   height: 20px;
   width: 20px;
@@ -56,6 +118,8 @@ title: Braids (Renaissance)
   display: inline-block;
   margin: 10px;
 }
+
+/* just big circles - braids, clouds */
 
 .bigknob {
   height: 55px;
@@ -78,51 +142,97 @@ title: Braids (Renaissance)
   margin: 10px;
 }
 
-@media (min-width: 700px) {
-  .content {
-    min-width: 375px;
-  }
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
 }
 
-@media (max-width: 700px) {
-  .content {
-    width: 100%;
-  }
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
 }
 
-.content {
-  max-width: 700px;
-  align-self: center;
-  display: inline-block;
-  text-align: left;
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
 }
 
-.fullwidth {
-  width: 100%;
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
 }
 
-h3 {
-  text-align: left;
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
 }
 
-table {
-  width: 100%;
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
 }
 
-.panel td {
-    text-align: center;
-    vertical-align: top;
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
 }
 
-.knoblist td:first-child {
-    text-align: center;
-    vertical-align: top;
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
 }
 
-td {
-  text-align: left;
-  vertical-align: middle;
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
 }
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
+}
+
+/* iOS-like button */
 
 .button {
   background-color: #007dd8;
@@ -137,25 +247,7 @@ td {
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
-}
-
- .control {
-     background-color: #000000;
-     color: #ffffff;
-     padding: 10px;
-     margin: 3px;
-     display: inline-block;
-     border-radius: 4px;
-     font-size: large;
-}
-
- .parameter {
-     text-align: center;
-     padding-bottom: 3px;
-     width: 25%;
-     padding: 0px;
-}
-</style>General<br /><a href="#info">Info</a><br />
+}</style>General<br /><a href="#info">Info</a><br />
 Modes<br /><a href="#csaw">CSAW</a><br />
 <a href="#classic_waves">/\/|-_-_</a><br />
 <a href="#saw_pwm">/|/|-_-_</a><br />
@@ -232,7 +324,7 @@ Modes<br /><a href="#csaw">CSAW</a><br />
 CS80-like sawtooth with 'notch'.
 
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -261,7 +353,7 @@ CS80-like sawtooth with 'notch'.
 
 Classic variable wave analog-style oscillator.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -290,7 +382,7 @@ Classic variable wave analog-style oscillator.
 
 Morph from dephased saw to square with pulse width control
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -319,7 +411,7 @@ Morph from dephased saw to square with pulse width control
 
 Blend of sine/triangle oscillators sent to wavefolder
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -347,7 +439,7 @@ Blend of sine/triangle oscillators sent to wavefolder
       <h3>Description</h3>
 Two detuned variable sine-&gt;comb waveforms.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -375,7 +467,7 @@ Two detuned variable sine-&gt;comb waveforms.
       <h3>Description</h3>
 Two square-wave oscillators, one hardsynced to another.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -403,7 +495,7 @@ Two square-wave oscillators, one hardsynced to another.
       <h3>Description</h3>
 Two saw oscillators, one hardsynced to another.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -431,7 +523,7 @@ Two saw oscillators, one hardsynced to another.
       <h3>Description</h3>
 Three independently tuned saw oscillators
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -459,7 +551,7 @@ Three independently tuned saw oscillators
       <h3>Description</h3>
 Three independently tuned square oscillators
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -487,7 +579,7 @@ Three independently tuned square oscillators
       <h3>Description</h3>
 Three independently tuned triangle oscillators
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -515,7 +607,7 @@ Three independently tuned triangle oscillators
       <h3>Description</h3>
 Three independently tuned sine oscillators
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -542,7 +634,7 @@ Three independently tuned sine oscillators
       <h3>Description</h3>
 Three sine wave oscillators ring modulated -&amp;gt waveshaper
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -571,7 +663,7 @@ Three sine wave oscillators ring modulated -&amp;gt waveshaper
 (Up to) 6 note chords.  Each note consists of two saw oscillators with controllable detune.<br>
 When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -600,7 +692,7 @@ When quantizer disabled, chords are picked from a fixed list.  When quantizer is
 (Up to) 6 note chords.  Each note consists of a pulse oscillator with variable width.<br>
 When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -629,7 +721,7 @@ When quantizer disabled, chords are picked from a fixed list.  When quantizer is
 (Up to) 6 note chords.  Each note consists of a triangle wave through a wavefolder.<br>
 When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -658,7 +750,7 @@ When quantizer disabled, chords are picked from a fixed list.  When quantizer is
 (Up to) 6 note chords.  Each note consists of a sine wave through a waveshaper.<br>
 When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -687,7 +779,7 @@ When quantizer disabled, chords are picked from a fixed list.  When quantizer is
 (Up to) 6 note chords.  Each note consists of a wavetable oscillator that picks a wave from a fixed linear table (same as original WTx4 mode).<br>
 When quantizer disabled, chords are picked from a fixed list.  When quantizer is enabled, chords are built using the root, third, fifth, and extension based on the quantizer root and scale.<br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -717,7 +809,7 @@ When quantizer disabled, chords are picked from a fixed list.  When quantizer is
 When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
 <br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -747,7 +839,7 @@ When quantizer is disabled, the notes are spaced by a controllable number of sem
 When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
 <br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -777,7 +869,7 @@ When quantizer is disabled, the notes are spaced by a controllable number of sem
 When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
 <br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -807,7 +899,7 @@ When quantizer is disabled, the notes are spaced by a controllable number of sem
 When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
 <br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -837,7 +929,7 @@ When quantizer is disabled, the notes are spaced by a controllable number of sem
 When quantizer is disabled, the notes are spaced by a controllable number of semitones.  When quantizer is enabled, the notes are spaced by a controllable number of scale steps.
 <br>
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -865,7 +957,7 @@ When quantizer is disabled, the notes are spaced by a controllable number of sem
       <h3>Description</h3>
 Supersaw.  7 saw waves mixed.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -893,7 +985,7 @@ Supersaw.  7 saw waves mixed.
       <h3>Description</h3>
 Saw -&gt; tuned comb filter
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -921,7 +1013,7 @@ Saw -&gt; tuned comb filter
       <h3>Description</h3>
 Circuit bent toy emulation
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -949,7 +1041,7 @@ Circuit bent toy emulation
       <h3>Description</h3>
 Synthesis of the response of a lowpass filter excited by a waveform. 
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -977,7 +1069,7 @@ Synthesis of the response of a lowpass filter excited by a waveform.
       <h3>Description</h3>
 Synthesis of the response of a peaking filter excited by a waveform. 
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1004,7 +1096,7 @@ Synthesis of the response of a peaking filter excited by a waveform.
       <h3>Description</h3>
 Synthesis of the response of a bandpass filter excited by a waveform. 
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1032,7 +1124,7 @@ Synthesis of the response of a bandpass filter excited by a waveform.
       <h3>Description</h3>
 Synthesis of the response of a highpass filter excited by a waveform. 
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1060,7 +1152,7 @@ Synthesis of the response of a highpass filter excited by a waveform.
       <h3>Description</h3>
 VOSIM formant synthesis emulation.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1088,7 +1180,7 @@ VOSIM formant synthesis emulation.
       <h3>Description</h3>
 Vowel speech synthesis
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1116,7 +1208,7 @@ Vowel speech synthesis
       <h3>Description</h3>
 Vowel speech synthesis
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1144,7 +1236,7 @@ Vowel speech synthesis
       <h3>Description</h3>
 Additive synthesis of 12 sine harmonics
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1172,7 +1264,7 @@ Additive synthesis of 12 sine harmonics
       <h3>Description</h3>
 2-operator phase-modulation synthesis
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1200,7 +1292,7 @@ Additive synthesis of 12 sine harmonics
       <h3>Description</h3>
 2-operator phase-modulation synthesis, with carrier feedback
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1228,7 +1320,7 @@ Additive synthesis of 12 sine harmonics
       <h3>Description</h3>
 2-operator phase-modulation synthesis, with 2 feedback paths
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1286,7 +1378,7 @@ Plucked string synthesis.  Requires trigger signal.
       <h3>Description</h3>
 Bowed string modelling.  Requires trigger signal.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1314,7 +1406,7 @@ Bowed string modelling.  Requires trigger signal.
       <h3>Description</h3>
 Reed instrument modelling
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1342,7 +1434,7 @@ Reed instrument modelling
       <h3>Description</h3>
 Flute instrument modelling
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1370,7 +1462,7 @@ Flute instrument modelling
       <h3>Description</h3>
 Bell additive synthesis
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1398,7 +1490,7 @@ Bell additive synthesis
       <h3>Description</h3>
 Metal drum synthesis
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1426,7 +1518,7 @@ Metal drum synthesis
       <h3>Description</h3>
 Simulation of Roland TR808 kick
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1454,7 +1546,7 @@ Simulation of Roland TR808 kick
       <h3>Description</h3>
 Simulation of Roland TR808 cymbal
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1482,7 +1574,7 @@ Simulation of Roland TR808 cymbal
       <h3>Description</h3>
 Simulation of Roland TR808 snare
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1510,7 +1602,7 @@ Simulation of Roland TR808 snare
       <h3>Description</h3>
 Wavetable synthesis
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1538,7 +1630,7 @@ Wavetable synthesis
       <h3>Description</h3>
 2-dimensional wavetable synthesis.  Waves placed in a 16-by-16 grid, Interpolated in both dimensions.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1566,7 +1658,7 @@ Wavetable synthesis
       <h3>Description</h3>
 Wavetable synthesis, 1-dimensional scanning through all wavetables.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1594,7 +1686,7 @@ Wavetable synthesis, 1-dimensional scanning through all wavetables.
       <h3>Description</h3>
 Classic voice synthesizer, configured as a 16-word granular sample player.  Trigger plays back word from TIMBRE position to word end.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1622,7 +1714,7 @@ Classic voice synthesizer, configured as a 16-word granular sample player.  Trig
       <h3>Description</h3>
 Classic voice synthesizer, configured as a 16-word granular sample player.  Trigger plays back word from TIMBRE position to word end.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1650,7 +1742,7 @@ Classic voice synthesizer, configured as a 16-word granular sample player.  Trig
       <h3>Description</h3>
 White noise through a state-variable filter.  Pitch input controls filter frequency.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1678,7 +1770,7 @@ White noise through a state-variable filter.  Pitch input controls filter freque
       <h3>Description</h3>
 White noise processed by two bandpass filters
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1706,7 +1798,7 @@ White noise processed by two bandpass filters
       <h3>Description</h3>
 Random samples generated at rate determined by main pitch.
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1734,7 +1826,7 @@ Random samples generated at rate determined by main pitch.
       <h3>Description</h3>
 Texture generator by mixing short grains of windowed sine waves
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>
@@ -1762,7 +1854,7 @@ Texture generator by mixing short grains of windowed sine waves
       <h3>Description</h3>
 Texture generator by mixing short decaying "pings" of sound
       <h3>Controls</h3>
-      <table class="knoblist">
+      <table class="parameters">
         <tr>
           <td>
             <div class="bigknob blue"></div>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Basic" modelist="true">
+      <page name="Envelope" content="env.html"/>
+      <page name="LFO" content="lfo.html"/>
+      <page name="Tap" content="tap.html"/>
+      <page name="Drum" content="drum.html"/>
+    </section>
+    <section name="Envelope Modes" modelist="true">
+      <page name="Double Attack" content="env_double_attack.html"/>
+      <page name="Repeating Attack" content="env_repeating_attack.html"/>
+      <page name="Looping Env" content="env_looping.html"/>
+      <page name="Randomized AD" content="env_randomized.html"/>
+      <page name="Bouncing Ball" content="env_bouncing.html"/>
+    </section>
+    <section name="LFO Modes" modelist="true">
+      <page name="Folded Sine FM" content="lfo_sine_fm.html"/>
+      <page name="Random FM" content="lfo_random_fm.html"/>
+      <page name="Folded Sine Mods Shape" content="lfo_sine_shape.html"/>
+      <page name="Random Shape Modulation" content="lfo_rand_shape.html"/>
+      <page name="Phase locked loop Osc" content="lfo_pll.html"/>
+    </section>
+    <section name="Tap Modes" modelist="true">
+      <page name="Sequencer" content="tap_sequencer.html"/>
+      <page name="ModSequencer" content="tap_modsequencer.html"/>
+      <page name="Pulse Shaper" content="tap_pulse_shaper.html"/>
+      <page name="Pulse Randomizer" content="tap_pulse_randomizer.html"/>
+      <page name="Turing Machine" content="tap_turing.html"/>
+      <page name="Byte Beats" content="tap_bytebeats.html"/>
+    </section>
+    <section name="Drum modes" modelist="true">
+      <page name="FM Drums" content="drum_fm.html"/>
+      <page name="Randomized Drums" content="drum_random.html"/>
+      <page name="Randomized High Hat" content="drum_hihat.html"/>
+    </section>
+
+  </sections>
+</module>

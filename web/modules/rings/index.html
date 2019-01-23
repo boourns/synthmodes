@@ -3,29 +3,41 @@ layout: page
 title: Rings
 ---
 <style>body {
-     font-family: -apple-system, sans-serif;
+  font-family: -apple-system, sans-serif;
 }
 
-.led {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 1px solid;
-  text-align: center;
-  display: inline-block;
-  margin-right: 10px;
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
 }
 
 .orange {
   background-color: #ff9e20;
 }
 
+.green {
+  background-color: #00ee00;
+}
+
 .red {
   background-color: #f41252;
 }
 
-.green {
+.blue {
   background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
 }
 
 .flashing-green {
@@ -46,34 +58,94 @@ title: Rings
   box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
 }
 
-.white {
-  background-color: #ffffff;
-}
-
 .leds {
   text-align: center;
 }
 
-.centered {
-text-align: center;
-}
-
+/* Page Layout */
 .content {
   max-width: 700px;
   align-self: center;
-  display: inline-block
+  display: inline-block;
+  text-align: left;
 }
 
 .fullwidth {
   width: 100%;
 }
 
-.centered {
-  margin: auto;
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
 }
 
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* just big circles - braids, clouds */
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* white knobs with wipers -rings, peaks */
 .knob {
-  margin: auto;
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
   width: 50px;
   height: 50px;
   background-color: white;
@@ -97,7 +169,7 @@ text-align: center;
 }
 
 .knob-wiper {
-  width: 18px;
+  width: 22px;
   display: block;
   height: 6px;
   background-color: white;
@@ -105,7 +177,7 @@ text-align: center;
 }
 
 .att {
-  margin: auto;
+  margin: auto; /* this centers the block within it's container (usually a td) */
   width: 20px;
   height: 20px;
   background-color: black;
@@ -141,13 +213,26 @@ text-align: center;
   color: green;
 }
 
-td {
-  text-align: center;
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
 }
 
-h3 {
-  text-align: left;
+.parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
 }
+
+/* iOS-like button */
 
 .button {
   background-color: #007dd8;
@@ -187,36 +272,46 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
     <div class="content">
       <h3>Mode</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led green"></div>Solid green
+            <div class="led green"></div>
           </td>
+          <td>Solid green</td>
         </tr>
       </table>
 
       <h3>Polyphony</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led green"></div>One
+            <div class="led green"></div>
+          </td>
+          <td>
+            One
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led orange"></div>Two
+            <div class="led orange"></div>
+          </td>
+          <td>
+            Two
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led red"></div>Four
+            <div class="led red"></div>
+          </td>
+          <td>
+            Four
           </td>
         </tr>
       </table>
@@ -242,36 +337,48 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
     <div class="content">
       <h3>Mode</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led orange"></div>Solid orange
+            <div class="led orange"></div>
+          </td>
+          <td>
+            Solid orange
           </td>
         </tr>
       </table>
 
       <h3>Polyphony</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led green"></div>One
+            <div class="led green"></div>
+          </td>
+          <td>
+            One
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led orange"></div>Two
+            <div class="led orange"></div>
+          </td>
+          <td>
+            Two
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led red"></div>Four
+            <div class="led red"></div>
+          </td>
+          <td>
+            Four
           </td>
         </tr>
       </table>
@@ -297,36 +404,48 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
     <div class="content">
       <h3>Mode</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led red"></div>Solid red
+            <div class="led red"></div>
+          </td>
+          <td>
+            Solid red
           </td>
         </tr>
       </table>
 
       <h3>Polyphony</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led green"></div>One
+            <div class="led green"></div>
+          </td>
+          <td>
+            One
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led orange"></div>Two
+            <div class="led orange"></div>
+          </td>
+          <td>
+            Two
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led red"></div>Four
+            <div class="led red"></div>
+          </td>
+          <td>
+            Four
           </td>
         </tr>
       </table>
@@ -351,40 +470,49 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
     <div class="content">
       <h3>Mode</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led flashing-green"></div>Flashing green
+            <div class="led flashing-green"></div>
           </td>
+          <td>Flashing green</td>
         </tr>
       </table>
 
       <h3>Polyphony</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led green"></div>One
+            <div class="led green"></div>
+          </td>
+          <td>
+            One
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led orange"></div>Two
+            <div class="led orange"></div>
+          </td>
+          <td>
+            Two
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led red"></div>Four
+            <div class="led red"></div>
+          </td>
+          <td>
+            Four
           </td>
         </tr>
       </table>
-
       <h3>Controls</h3>
 
       <p style="text-align: left;"><b>STRUCTURE</b> controls the
@@ -406,39 +534,52 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
     <div class="content">
       <h3>Mode</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led flashing-orange"></div>Flashing orange
+            <div class="led flashing-orange"></div>
+          </td>
+          <td>
+            Flashing orange
           </td>
         </tr>
       </table>
 
       <h3>Polyphony</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led green"></div>One
+            <div class="led green"></div>
+          </td>
+          <td>
+            One
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led orange"></div>Two
+            <div class="led orange"></div>
+          </td>
+          <td>
+            Two
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led red"></div>Four
+            <div class="led red"></div>
+          </td>
+          <td>
+            Four
           </td>
         </tr>
       </table>
+
 
       <h3>Controls</h3>
 
@@ -460,36 +601,48 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
     <div class="content">
       <h3>Mode</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led flashing-red"></div>Flashing red
+            <div class="led flashing-red"></div>
+          </td>
+          <td>
+            Flashing red
           </td>
         </tr>
       </table>
 
       <h3>Polyphony</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led green"></div>One
+            <div class="led green"></div>
+          </td>
+          <td>
+            One
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led orange"></div>Two
+            <div class="led orange"></div>
+          </td>
+          <td>
+            Two
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led red"></div>Four
+            <div class="led red"></div>
+          </td>
+          <td>
+            Four
           </td>
         </tr>
       </table>
@@ -523,26 +676,35 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
 
       <h3>Polyphony</h3>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led green"></div>One 8-note chord
+            <div class="led green"></div>
+          </td>
+          <td>
+            One 8-note chord
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led orange"></div>Two 6-note chords
+            <div class="led orange"></div>
+          </td>
+          <td>
+            Two 6-note chords
           </td>
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
-            <div class="led red"></div>Four 3-note chords
+            <div class="led red"></div>
+          </td>
+          <td>
+            Four 3-note chords
           </td>
         </tr>
       </table>
@@ -553,7 +715,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
       applied to the string synth. Long-press mode for FX
       variant.</p>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
             <div class="led green"></div>
@@ -563,7 +725,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
             <div class="led orange"></div>
@@ -576,7 +738,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
         </tr>
       </table>
 
-      <table>
+      <table class="parameters">
         <tr>
           <td>
             <div class="led red"></div>
@@ -611,7 +773,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
       mode, set knobs as follows:</p>
 
       <div class="steel">
-        <table class="fullwidth">
+        <table class="panel">
           <tr>
             <td>
               <div class="knob">
@@ -627,7 +789,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
           </tr>
         </table>
 
-        <table class="fullwidth">
+        <table class="panel">
           <tr>
             <td>
               <div class="knob">
@@ -649,7 +811,7 @@ Modes<br /><a href="#resonator">Modal Resonator</a><br />
           </tr>
         </table>
 
-        <table class="fullwidth">
+        <table class="panel">
           <tr>
             <td>
               <div class="att">
