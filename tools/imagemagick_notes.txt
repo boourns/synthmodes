@@ -1,4 +1,12 @@
 
 add padding to image:
-convert led.png -gravity center -extent 440x640 led_small.png
+convert $i -gravity center -extent 440x840 $i
 
+
+final sizes:
+for i in *; do convert $i -gravity center -extent 1760x840 $i; done
+
+for i in *; do convert $i -resize x160 $i; done
+
+concat horizontally
+convert off.png off.png off.png flash.png +append eight.png
