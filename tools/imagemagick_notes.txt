@@ -1,0 +1,4 @@
+
+add padding to image:
+convert led.png -gravity center -extent 440x640 led_small.png
+

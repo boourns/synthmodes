@@ -5,14 +5,14 @@
       <page name="Info" content="info.html"/>
     </section>
     <section name="Modes" modelist="true">
-      <page name="Envelope" content="env.html"/>
-      <page name="LFO" content="lfo.html"/>
-      <page name="Tap" content="tap.html"/>
-      <page name="Drum" content="drum.html"/>
-      <page name="Seq (Env Alt)" content="sequencer.html"/>
-      <page name="Trig Delay/Shaper (LFO Alt)" content="gate_delay.html"/>
-      <page name="Trig Stream Randomizer (Tap Alt)" content="trig_randomizer.html"/>
-      <page name="Drum (Alt)" content="drum_alt.html"/>
+      <page name="Envelope" icon="img/one.png" content="env.html"/>
+      <page name="LFO" icon="img/two.png" content="lfo.html"/>
+      <page name="Tap" icon="img/three.png" content="tap.html"/>
+      <page name="Drum" icon="img/four.png" content="drum.html"/>
+      <page name="Seq (Env Alt)" icon="img/five.png" content="sequencer.html"/>
+      <page name="Trig Delay/Shaper (LFO Alt)" icon="img/six.png" content="gate_delay.html"/>
+      <page name="Trig Stream Randomizer (Tap Alt)" icon="img/seven.png" content="trig_randomizer.html"/>
+      <page name="Drum (Alt)" icon="img/eight.png"  content="drum_alt.html"/>
     </section>
   </sections>
 </module>

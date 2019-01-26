@@ -5,12 +5,12 @@
       <page name="Info" content="info.html"/>
     </section>
     <section name="Modes" modelist="true">
-      <page name="Modal Resonator" content="resonator.html"/>
-      <page name="Sympathetic Strings" content="sympathetic.html"/>
-      <page name="Modulated / Inharmonic Strings" content="inharmonic.html"/>
-      <page name="FM Voice" content="fm.html"/>
-      <page name="Western Chords" content="western.html"/>
-      <page name="String &amp; Reverb" content="reverb.html"/>
+      <page name="Modal Resonator" icon="img/led_green.png" content="resonator.html"/>
+      <page name="Sympathetic Strings" icon="img/led_orange.png" content="sympathetic.html"/>
+      <page name="Modulated / Inharmonic Strings" icon="img/led_red.png" content="inharmonic.html"/>
+      <page name="FM Voice" icon="img/led_flashing_green.png" content="fm.html"/>
+      <page name="Western Chords" icon="img/led_flashing_orange.png" content="western.html"/>
+      <page name="String &amp; Reverb" icon="img/led_flashing_red.png" content="reverb.html"/>
       <page name="Disastrous Peace" content="peace.html"/>
     </section>
   </sections>
