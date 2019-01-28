@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Warps
+title: Warps (Parasites)
 ---
 <style>body {
   font-family: -apple-system, sans-serif;
@@ -248,28 +248,306 @@ table {
   width: 100%;
   box-sizing: border-box;
 }</style>General<br /><a href="#info">Info</a><br />
-Modes<br /><a href="#crossfade">Crossfade</a><br />
+Modes<br /><a href="#doppler">Doppler Panner</a><br />
+<a href="#wavefolder">Wavefolder</a><br />
+<a href="#chebyshev">Waveshaper</a><br />
+<a href="#shifter">Frequency Shifter</a><br />
+<a href="#mangler">Dual Bit Mangler</a><br />
+<a href="#compare">Comparator</a><br />
+<a href="#vocoder">Vocoder</a><br />
+<a href="#delay">Delay</a><br />
+<a href="#meta">Meta Mode</a><br />
+Meta Mode<br /><a href="#crossfade">Crossfade</a><br />
 <a href="#crossfold">Crossfold</a><br />
 <a href="#diode_ring">Diode Ring-Modulation</a><br />
 <a href="#digital_ring">Digital Ring-Modulation</a><br />
 <a href="#xor">XOR Modulation</a><br />
-<a href="#compare">Comparison / Rectifier</a><br />
-<a href="#vocoder">Vocoder</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+<a href="#meta_compare">Comparison / Rectifier</a><br />
+<a href="#meta_vocoder">Vocoder</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
   <div class="centered">
     <div class="content">
-      <h3>Warps</h3>
-      <p>Warps is a multi-function cross-modulator by Mutable Instruments.<br><br></p>
+      <h3>Warps Parasites</h3>
+      <p>Warps is a multi-function cross-modulator by Mutable Instruments.</p>
+      <p>Warps Parasites is an alternate firmware by Matthias Puech, extending the original modes and adding completely new modes.</p>
+<p>
+      </p>
+<p>To change modes, hold the "Int Osc" Button and turn the Algorithm knob</p>
       <p>
         Warps icons are extracted from Warps panel design, available on Github under CC-BY-SA-3.0 license.
       </p>
 <h3>Links</h3>
       <a class="button" href="https://mutable-instruments.net/modules/warps/">Warps Home</a><br>
       <a class="button" href="https://mutable-instruments.net/modules/warps/manual/">Warps Manual</a><br>
+      <a class="button" href="https://mqtthiqs.github.io/parasites/warps.html">Warps Parasites</a><br>
       <a class="button" href="https://github.com/pichenettes/eurorack">Mutable Instruments GitHub</a><br>
     </div>
   </div>
 <br /><br />
-<h2>Modes</h2><a name="crossfade"></a><h2>Crossfade</h2>
+<h2>Modes</h2><a name="doppler"></a><h2>Doppler Panner</h2>
+  <div class="centered">
+    <div class="content">
+      <div style="width: 40px;">
+        <img src="img/01_doppler.svg">
+      </div>
+<br>
+      Binaural Doppler panner.<br><br>
+
+      <b>Outputs</b> are L/R stereo pair.
+
+      <h3>Inputs</h3>
+      <table>
+        <tr>
+          <td><b>In 1</b></td>
+          <td>Sound source</td>
+        </tr>
+        <tr>
+          <td><b>In 2</b></td>
+          <td>Second sound source, placed opposite side of head</td>
+        </tr>
+      </table>
+
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td><b>Algorithm</b></td>
+          <td>X coordinate</td>
+        </tr>
+        <tr>
+          <td><b>Timbre</b></td>
+          <td>Y coordinate</td>
+        </tr>
+        <tr>
+          <td><b>Int Osc button</b></td>
+          <td>Space size</td>
+        </tr>        
+        <tr>
+          <td><b>1</b></td>
+          <td>LFO speed</td>
+        </tr>
+        <tr>
+          <td><b>2</b></td>
+          <td>LFO amplitude</td>
+        </tr>
+      </table>
+      <br>
+    </div>
+  </div>
+<br /><br /><a name="wavefolder"></a><h2>Wavefolder</h2>
+  <div class="centered">
+    <div class="content">
+      <div style="width: 40px;">
+        <img src="img/02_wavefolder.svg">
+      </div>
+<br>
+      Wavefolder<br><br>
+
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td><b>Algorithm</b></td>
+          <td>Amount of folds</td>
+        </tr>
+        <tr>
+          <td><b>Timbre</b></td>
+          <td>Bias</td>
+        </tr>     
+      </table>
+      <br>
+    </div>
+  </div>
+<br /><br /><a name="chebyshev"></a><h2>Waveshaper</h2>
+  <div class="centered">
+    <div class="content">
+      <div style="width: 40px;">
+        <img src="img/03_chebyshev.svg">
+      </div>
+<br>
+      Chebyshev Waveshaper<br><br>
+
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td><b>Algorithm</b></td>
+          <td>Chebyshev order, CW = more harmonics</td>
+        </tr>
+        <tr>
+          <td><b>Timbre</b></td>
+          <td>Waveshaper gain</td>
+        </tr>     
+      </table>
+      <br>
+    </div>
+  </div>
+<br /><br /><a name="shifter"></a><h2>Frequency Shifter</h2>
+  <div class="centered">
+    <div class="content">
+      <div style="width: 40px;">
+        <img src="img/04_shifter.svg">
+      </div>
+<br>
+      Binaural Doppler panner.<br><br>
+
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td><b>Algorithm</b></td>
+          <td>Frequency Shift</td>
+        </tr>
+        <tr>
+          <td><b>Timbre</b></td>
+          <td>Crossfade between up/down outputs</td>
+        </tr>
+        <tr>
+          <td><b>Int Osc button</b></td>
+          <td>Space size</td>
+        </tr>        
+        <tr>
+          <td><b>1</b></td>
+          <td>Feedback</td>
+        </tr>
+        <tr>
+          <td><b>2</b></td>
+          <td>Dry/wet</td>
+        </tr>
+      </table>
+      <br>
+    </div>
+  </div>
+<br /><br /><a name="mangler"></a><h2>Dual Bit Mangler</h2>
+  <div class="centered">
+    <div class="content">
+      <div style="width: 40px;">
+        <img src="img/05_mangler.svg">
+      </div>
+<br>
+      Dual bit-mangler.  Can be used in stereo.<br><br>
+
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td><b>Algorithm</b></td>
+          <td>Bit degredation amount</td>
+        </tr>
+        <tr>
+          <td><b>Timbre</b></td>
+          <td>Morphs dry -&gt; bitwise AND -&gt; bitwise OR</td>
+        </tr>
+        <tr>
+          <td><b>Int Osc button</b></td>
+          <td>Space size</td>
+        </tr>        
+        <tr>
+          <td><b>1</b></td>
+          <td>Feedback</td>
+        </tr>
+        <tr>
+          <td><b>2</b></td>
+          <td>Dry/wet</td>
+        </tr>
+      </table>
+      <br>
+    </div>
+  </div>
+<br /><br /><a name="compare"></a><h2>Comparator</h2>
+  <div class="centered">
+    <div class="content">
+      <div style="width: 40px;">
+        <img src="img/06_comparator.svg">
+      </div>
+<br>
+      Generates derivative signals by running inputs through various functions.<br><br>
+
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td><b>Algorithm</b></td>
+          <td>Morphs between 8 comparator functions</td>
+        </tr>
+        <tr>
+          <td><b>Timbre</b></td>
+          <td>Waveshaper order</td>
+        </tr>
+      </table>
+      <br>
+    </div>
+  </div>
+<br /><br /><a name="vocoder"></a><h2>Vocoder</h2>
+  <div class="centered">
+    <div class="content">
+      <div style="width: 40px;">
+        <img src="img/07_vocoder.svg">
+      </div>
+<br>
+      Vocoder<br><br>
+
+      <h3>Controls</h3>
+      <table>
+        <tr>
+          <td><b>Algorithm</b></td>
+          <td>Frequency warping</td>
+        </tr>
+        <tr>
+          <td><b>Timbre</b></td>
+          <td>Release time</td>
+        </tr>
+      </table>
+      <br>
+    </div>
+  </div>
+<br /><br /><a name="delay"></a><h2>Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <div style="width: 40px;">
+        <img src="img/08_delay.svg">
+      </div>
+<br>
+      Tape Delay<br><br>
+
+      <h3>Controls</h3>
+      <table class="parameters">
+        <tr>
+          <td><b>Algorithm</b></td>
+          <td>Speed and direction of tape</td>
+        </tr>
+        <tr>
+          <td><b>Timbre</b></td>
+          <td>Distance between read/write heads</td>
+        </tr>
+        <tr>
+          <td><b>Int Osc button</b></td>
+          <td>Mode<br>
+            <b>Unlit</b>: Open feedback loop.  Aux is feedback send, In 2 is feedback return.<br>
+            <b>Green</b>: Dual delay.<br>
+            <b>Orange</b>: Tape simulation.<br>
+            <b>Red</b>: Ping-pong<br>
+          </td>
+        </tr>        
+        <tr>
+          <td><b>1</b></td>
+          <td>Feedback</td>
+        </tr>
+        <tr>
+          <td><b>2</b></td>
+          <td>Dry/wet</td>
+        </tr>
+      </table>
+      <br>
+    </div>
+  </div>
+<br /><br /><a name="meta"></a><h2>Meta Mode</h2>
+  <div class="centered">
+    <div class="content">
+      <div style="width: 40px;">
+        <img src="img/09_meta.svg">
+      </div>
+<br>
+      Meta mode<br><br>
+      Warps now acts like the stock firmware, with <b>Algorithm</b> smoothly morphing between modes.
+      <br>
+    </div>
+  </div>
+<br /><br />
+<h2>Meta Mode</h2><a name="crossfade"></a><h2>Crossfade</h2>
   <div class="centered">
     <div class="content">
       <div style="width: 40px;">
@@ -364,7 +642,7 @@ Modes<br /><a href="#crossfade">Crossfade</a><br />
       <br>
     </div>
   </div>
-<br /><br /><a name="compare"></a><h2>Comparison / Rectifier</h2>
+<br /><br /><a name="meta_compare"></a><h2>Comparison / Rectifier</h2>
   <div class="centered">
     <div class="content">
       <div style="width: 40px;">
@@ -383,7 +661,7 @@ Modes<br /><a href="#crossfade">Crossfade</a><br />
       <br>
     </div>
   </div>
-<br /><br /><a name="vocoder"></a><h2>Vocoder</h2>
+<br /><br /><a name="meta_vocoder"></a><h2>Vocoder</h2>
   <div class="centered">
     <div class="content">
       <div style="width: 40px; display: inline-block">
