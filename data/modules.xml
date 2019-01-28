@@ -1,16 +1,15 @@
 <?xml version="1.0"?>
 <modules>
-  <module name="Braids (Stock)" id="braids_stock" index="braids_stock/module.xml"/>
+  <module name="Braids" id="braids_stock" index="braids_stock/module.xml"/>
   <module name="Braids (Renaissance)" id="braids_renaissance" index="braids_renaissance/module.xml"/>
-  <module name="Clouds (Stock)" id="clouds_stock" index="clouds_stock/module.xml"/>
+  <module name="Clouds" id="clouds_stock" index="clouds_stock/module.xml"/>
   <module name="Clouds (Parasites)" id="clouds_parasites" index="clouds_parasites/module.xml"/>
   <module name="Disting mk3" id="disting_mk3" index="disting_mk3/module.xml"/>
   <module name="Disting mk4" id="disting_mk4" index="disting_mk4/module.xml"/>
   <module name="Just Friends" id="just_friends" index="just_friends/module.xml" />
-  <module name="Peaks (Stock)" id="peaks_stock" index="peaks_stock/module.xml"/>
+  <module name="Peaks" id="peaks_stock" index="peaks_stock/module.xml"/>
   <module name="Peaks (Dead Man's Catch)" id="peaks_dmc" index="peaks_dmc/module.xml"/>
   <module name="Pico Logic" id="pico_logic" index="pico_logic/module.xml"/>
   <module name="Rings" id="rings" index="rings/module.xml"/>
-  <module name="Warps (stock)" id="warps_stock" index="warps_stock/module.xml"/>
-
+  <module name="Warps" id="warps_stock" index="warps_stock/module.xml"/>
 </modules>

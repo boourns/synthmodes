@@ -1,0 +1,136 @@
+---
+layout: page
+title: Pico Logic
+---
+<style>.erica-black {
+  background-color: #000000;
+}
+.erica-red {
+  background-color: #B9242B;
+}
+.erica-green {
+  background-color: #399945;
+}
+.erica-dark-blue {
+  background-color: #2A316A;
+}
+.erica-yellow {
+  background-color: #FCEC24;
+}
+.erica-light-blue {
+  background-color: #2C8FC1;
+}
+.erica-orange {
+  background-color: #D8552B;
+}
+.erica-pink {
+  background-color: #E0719F;
+}
+
+.blinking::after {
+  display: block;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  animation: blinking 0.8s infinite;
+}
+
+@keyframes blinking {
+  0% {opacity: 0}
+  49% {opacity: 0}
+  50% {opacity: 1}
+  100% {opacity: 1}
+}</style>General<br /><a href="#info">Info</a><br />
+Modes<br /><a href="#logic">Digital Logic</a><br />
+<a href="#clock">Clock Divider</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Pico Logic</h3>
+      <p>Pico Logic is a dual digital logic and clock divider module by Erica Synths.<br>
+      </p>
+      <p>To switch a section between the two modes, hold the button for 2 seconds.<br><br>
+      </p>
+<h3>Links</h3>
+      <a class="button" href="https://www.ericasynths.lv/media/Pico_LOGIC_Manual.pdf">Pico Logic Manual</a><br>
+    </div>
+  </div>
+<br /><br />
+<h2>Modes</h2><a name="logic"></a><h2>Digital Logic</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Modes</h3>
+      <table class="parameters">
+        <tr>
+          <td><div class="led erica-black"></div></td>
+          <td class="centered">SET-RESET</td>
+        </tr>
+        <tr>
+          <td><div class="led erica-red"></div></td>
+          <td class="centered">OR</td>
+        </tr>
+        <tr>
+          <td><div class="led erica-green"></div></td>
+          <td class="centered">AND</td>
+        </tr>
+        <tr>
+          <td><div class="led erica-dark-blue"></div></td>
+          <td class="centered">XOR</td>
+        </tr>
+        <tr>
+          <td><div class="led blinking erica-red"></div></td>
+          <td class="centered">NOR</td>
+        </tr>
+        <tr>
+          <td><div class="led blinking erica-green"></div></td>
+          <td class="centered">NAND</td>
+        </tr>
+        <tr>
+          <td><div class="led blinking erica-dark-blue"></div></td>
+          <td class="centered">NXOR</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<br /><br /><a name="clock"></a><h2>Clock Divider</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Modes</h3>
+      <table class="parameters">
+        <tr>
+          <td><div class="led erica-yellow"></div></td>
+          <td class="centered">/2</td>
+        </tr>
+        <tr>
+          <td><div class="led erica-light-blue"></div></td>
+          <td class="centered">/4</td>
+        </tr>
+        <tr>
+          <td><div class="led erica-orange"></div></td>
+          <td class="centered">/8</td>
+        </tr>
+        <tr>
+          <td><div class="led erica-pink"></div></td>
+          <td class="centered">/16</td>
+        </tr>
+        <tr>
+          <td><div class="led blinking erica-yellow"></div></td>
+          <td class="centered">/32</td>
+        </tr>
+        <tr>
+          <td><div class="led blinking erica-light-blue"></div></td>
+          <td class="centered">/64</td>
+        </tr>
+        <tr>
+          <td><div class="led blinking erica-orange"></div></td>
+          <td class="centered">/128</td>
+        </tr>
+        <tr>
+          <td><div class="led blinking erica-pink"></div></td>
+          <td class="centered">/256</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<br /><br />
