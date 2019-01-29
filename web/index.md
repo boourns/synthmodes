@@ -7,7 +7,9 @@ layout: home
 
 Collection of mobile-friendly synthesizer cheat sheets.<br /><br />
 
-{%- for my_page in site.pages -%}
+{% assign sorted_pages = site.pages | sort: 'title' %}
+
+{%- for my_page in sorted_pages -%}
   {%- if my_page.title -%}
   <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a><br />
   {%- endif -%}
