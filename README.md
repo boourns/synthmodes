@@ -1,12 +1,12 @@
 # synthmodes
 Mobile-friendly cheat sheets for synthesizer modules
 
-This repo powers https://www.synthmodes.com, and the Modes app for iOS.
+This repo powers https://www.synthmodes.com, and the [Modes app for iOS](https://itunes.apple.com/ca/app/modes/id1445358435?mt=8).
 
 # contributing
 The cheat sheets are written in HTML with some CSS for styling.  If you want to contribute in that format, that is great.  If you don't have the skills, formatted text or markdown in an issue is a great start.
 
-Please note, all contributions must be original work free from other copyright.  Please no copy & paste content unless you have explicit livense or permission from the copyright holder.
+Please note, all contributions must be original work free from other copyright.  Please do not copy & paste content unless you have explicit license or permission from the copyright holder.
 
 # code of conduct
 see CODE_OF_CONDUCT.md
