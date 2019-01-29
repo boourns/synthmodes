@@ -85,6 +85,10 @@ title: #{@name}
     end
     "<style>" + css_files.map { |f| File.read(f) }.join("\n") + "</style>"
   end
+
+  def images_dir
+    "#{@directory}/img"
+  end
 end
 
 doc = File.open("data/modules.xml") { |f| Nokogiri::XML(f) }
@@ -101,5 +105,9 @@ modules.each do |m|
     FileUtils.mkdir(dir)
   rescue Errno::EEXIST
   end
+  if File.exist?(m.images_dir)
+    `cp -R #{m.images_dir} #{dir}`
+  end
   File.write("#{dir}/index.html", m.content_for_web)
+
 end
