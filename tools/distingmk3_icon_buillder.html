@@ -1,0 +1,46 @@
+<html>
+<head>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+<canvas id="canvas" width=120 height=120 />
+
+<script type="text/javascript">
+  var canvas = document.getElementById('canvas')
+  var context = canvas.getContext("2d");
+
+  function render(a,b) {
+    for (var i = 0; i < 2; i++) {
+      for (var j = 0; j < 4; j++) {
+        context.beginPath();
+        var x = 35 + (i * 30)
+        var y = 5 + (j * 30)
+        context.rect(x, y, 20, 20);
+        if ((i == 0 && j == a) || (i == 1 && j == b)) {
+          context.fillStyle = "#ffc58b";
+        } else {
+          context.fillStyle = "#777777";
+        }
+        context.fill();
+        context.closePath();
+      }
+    }
+  }
+
+
+  render(3,3)  
+  canvas.toBlob(function(blob) {
+    saveAs(blob, "4-d.png");
+  });
+
+</script>
+</body>
+</html>
