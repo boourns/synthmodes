@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Algorithms" modelist="true">
+      <page name="1 Dual Delay" content="dual_delay.html"/>
+      <page name="2 Chirp Delay" content="chirp_delay.html"/>
+      <page name="3 Lowpass Delay" content="lowpass_delay.html"/>
+      <page name="4 Highpass Delay" content="highpass_delay.html"/>
+      <page name="5 Tap Tap Delay" content="tap_tap_delay.html"/>
+      <page name="6 Hellraiser Delay" content="hellraiser_delay.html"/>
+      <page name="7 Phased Delay" content="phased_delay.html"/>
+      <page name="8 Granular Delay" content="granular_delay.html"/>
+      <page name="9 Pitch Shift Delay" content="pitch_shift_delay.html"/>
+      <page name="10 Shimmer Drift" content="shimmer_drift.html"/>
+      <page name="11 Shimmer+" content="shimmer_plus.html"/>
+      <page name="12 Shimmer-" content="shimmer_minus.html"/>
+      <page name="13 Big / Hall Reverb" content="big_hall_reverb.html"/>
+      <page name="14 Room Reverb" content="room_reverb.html"/>
+      <page name="15 Stalker Reverb" content="stalker_reverb.html"/>
+      <page name="16 Saturated Reverb" content="saturated_reverb.html"/>
+      <page name="17 Havoc Chorus" content="havoc_chorus.html"/>
+      <page name="18 Servo Flanger" content="servo_flanger.html"/>
+      <page name="19 Ripper" content="ripper.html"/>
+      <page name="20 Space Phaser" content="space_phaser.html"/>
+      <page name="21 Dual Pitch Shifter" content="dual_pitch_shifter.html"/>
+      <page name="22 LP Freezer" content="lp_freezer.html"/>
+      <page name="23 HP Freezer" content="hp_freezer.html"/>
+      <page name="24 Drone Bank" content="drone_bank.html"/>
+      -->
+    </section>
+  </sections>
+</module>
