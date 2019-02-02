@@ -19,13 +19,16 @@ Generally speaking, stick to no inline CSS, no javascript.  Use the existing sty
 
 Please note, all contributions must be original work free from other copyright.  Please do not copy & paste content unless you have explicit license or permission from the copyright holder.
 
-## Testing the XML
+## Testing the XML and building the doc pages
+Requirements: a recent version Ruby and bundler
 
-If you run `./test.sh` it will run some basic sanity checks of the XML, as well as run the website builder (which will detect if any documentation files are missing).  You will need a recent version of Ruby and possibly some gems to run it.  If your system isn't well set up for this, you can also push your code to github and open a PR.  Travis-CI will run the tests for you and report on the branch if it passes or fails.
+Run `bundle install` to set up dependencies. Run `./test.sh` to run some basic sanity checks of the XML, as well as run the website builder (which will detect if any documentation files are missing). If your system isn't well set up for this, you can also push your code to github and open a PR.  Travis-CI will run the tests for you and report on the branch if it passes or fails.
 
 ## Testing the documentation pages
 
 Unfortunately the app is set up right now to load third party module files, however since the styles are so simple, the best way to test is to just set up a narrow browser tab as your testing environment.  Safari would be the closest browser engine if possible, but generally speaking if the HTML/CSS is simple it should be cross-platform.
+
+You can run the website locally after running `./test.sh` by navigating to the /web directory and running `bundle` to set up dependencies and then `bundle exec jekyll serve` this starts a server on http://127.0.0.1:4000/
 
 Feel free to open PRs early to get feedback or help if you get stuck, or open issues if these instructions are unclear.
 
