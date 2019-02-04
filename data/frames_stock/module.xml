@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="Settings" content="settings.html"/>
+    </section>
+    <section name="Modes" modelist="true">
+      <page name="Regular" content="regular.html"/>
+      <page name="Sequencer" content="sequencer.html"/>
+      <page name="Quad Oscillator" content="oscillator.html"/>
+    </section>
+  </sections>
+</module>
