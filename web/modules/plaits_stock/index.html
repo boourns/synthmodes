@@ -1,0 +1,674 @@
+---
+layout: page
+title: Plaits
+---
+<style>body {
+     font-family: -apple-system, sans-serif;
+}
+.orange {
+  background-color: #ff9e20;
+}
+
+.green {
+  background-color: #00ee00;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.leds {
+  text-align: center;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.centered {
+text-align: center;
+}
+
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+h3 {
+  text-align: left;
+}
+
+td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.blend {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+</style>General<br /><a href="#info">Info</a><br />
+Modes<br /><a href="#classic">Pair of classic waveforms</a><br />
+<a href="#waveshaping">Waveshaping oscillator</a><br />
+<a href="#2opfm">Two operator FM</a><br />
+<a href="#granular">Granular formant oscillator</a><br />
+<a href="#harmonic">Harmonic oscillator</a><br />
+<a href="#wavetable">Wavetable oscillator</a><br />
+<a href="#chords">Chords</a><br />
+<a href="#speech">Vowel and speech synthesis</a><br />
+<a href="#cloud">Granular cloud</a><br />
+<a href="#noise">Filtered noise</a><br />
+<a href="#particle">Particle noise</a><br />
+<a href="#string">String modeling / Modal resonator</a><br />
+<a href="#bass_drum">Analog bass drum model</a><br />
+<a href="#snare_drum">Analog snare drum model</a><br />
+<a href="#hihat_drum">Analog hi-hat model</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Plaits</h3>
+      <p>Plaits is the spiritual successor of Mutable Instruments’ best-selling voltage-controlled sound source, Braids. Not just a mkII version: its hardware and software have been redesigned from scratch.</p>
+      <p>Just like its predecessor, it offers direct access to a large palette of easily tweakable raw sonic material, covering the whole gamut of synthesis techniques.</p>
+      <h3>Links</h3>
+      <a class="button" href="https://mutable-instruments.net/modules/plaits/">Braids Home</a><br>
+      <a class="button" href="https://mutable-instruments.net/modules/plaits/manual/">Braids Manual</a><br>
+      <br>
+      <p class="license">Text and diagrams by <a href="href=" https:>Mutable Instruments</a> and is Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+    </div>
+  </div>
+<br /><br />
+<h2>Modes</h2><a name="classic"></a><h2>Pair of classic waveforms</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">Virtual-analog synthesis of classic waveforms.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>detuning</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>variable square</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>variable saw</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">Sum of two hardsync’ed waveforms, the shape of which is controlled by MORPH and detuning by HARMONICS.</p>
+
+        <h3>Notes</h3>
+        <p style="text-align: left;">A narrow pulse or wide notch results in silence! Use this trick if you want to silence one of the two oscillators, to get just a variable square or variable saw.</p>
+        <img src="https://mutable-instruments.net/modules/plaits/images/model_01_knobs.png">
+  </div>
+</div><br /><br /><a name="waveshaping"></a><h2>Waveshaping oscillator</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">An asymmetric triangle processed by a waveshaper and a wavefolder. i.e. Tides at audio rate.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>waveshaper waveform</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>wavefolder amount</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>waveform asymmetry</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">variant employing another wavefolder curve, as available in Warps.</p>
+
+  </div>
+</div><br /><br /><a name="2opfm"></a><h2>Two operator FM</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">Two sine-wave oscillators modulating each other’s phase.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>ratio</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>mod index</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>feedback</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">sub osc</p>
+
+        <h3>Notes</h3>
+        <p style="text-align: left;">turn MORPH fully CCW to get the same range of sounds as Braids’ WTFM. Turn MORPH fully CW to recreate the same sounds as Braids’ FBFM. A gentler palette equivalent to Braids’ FM is found with MORPH at 12 o’clock.</p>
+
+  </div>
+</div><br /><br /><a name="granular"></a><h2>Granular formant oscillator</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">Simulation of formants and filtered waveforms through the multiplication, addition and synchronization of segments of sine waves.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>ratio</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>formant frequency</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>width / shape</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">simulation of filtered waveforms by windowed sine waves – a recreation of Braids’ Z*** models. HARMONICS controls the filter type (peaking, LP, BP, HP), with smooth variation from one response to another.</p>
+
+  </div>
+</div><br /><br /><a name="harmonic"></a><h2>Harmonic oscillator</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">An additive mixture of harmonically-related sine waves</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div># of bumps</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>index</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>bump shape</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">variant including only the subset of harmonics present in the drawbars of a Hammond organ (frequency ratios of 1, 2, 3, 4, 6, 8, 10 and 12).</p>
+
+  </div>
+</div><br /><br /><a name="wavetable"></a><h2>Wavetable oscillator</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">Four banks of 8x8 waveforms, accessed by row and column, with or without interpolation.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>bank selection</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>row</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>column</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">low-fi (5-bit) output.</p>
+
+        <h3>Notes</h3>
+        <p style="text-align: left;">
+        <strong>Bank A:</strong> harmonically poor waveforms obtained by additive synthesis (sine harmonics, drawbar organ waveforms).<br><br>
+        <strong>Bank B:</strong> harmonically rich waveforms obtained by formant synthesis or waveshaping.<br><br>
+        <strong>Bank C:</strong> wavetables from the Shruthi-1 / Ambika, sampled from classic wavetable or ROM playback synths.<br><br>
+        <strong>Bank D:</strong> a joyous semi-random permutation of waveforms from the other 3 banks.
+        </p>
+
+  </div>
+</div><br /><br /><a name="chords"></a><h2>Chords</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">Four-note chords, played by virtual analogue or wavetable oscillators. The virtual analogue oscillators emulate the stack of harmonically-related square or sawtooth waveforms generated by vintage string&amp;organ machines.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>chord shape</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>inversion</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>waveform</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">Root note of the chord.</p>
+
+        <h3>Notes</h3>
+        <p style="text-align: left;">The first half of the knob goes through a selection of string-machine like raw waveforms (different combinations of the organ and string “drawbars”), the second half of the knob scans a small wavetable containing 16 waveforms.</p>
+
+  </div>
+</div><br /><br /><a name="speech"></a><h2>Vowel and speech synthesis</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">A collection of speech synthesis algorithms.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>formants / SAM / LPC</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>species</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>phoneme / word segment</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">Unfiltered vocal cords’ signal.</p>
+
+  </div>
+</div><br /><br /><a name="cloud"></a><h2>Granular cloud</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">A swarm of 8 enveloped sawtooth waves.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>pitch randomization</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>density</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>duration / overlap</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">Variant with sine wave oscillators.</p>
+
+        <h3>Notes</h3>
+        <p style="text-align: left;">To get a nice “supersaw” waveform, try a moderate amount of pitch randomization and grain density, with full grain overlap.</p>
+
+  </div>
+</div><br /><br /><a name="noise"></a><h2>Filtered noise</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">Variable-clock white noise processed by a resonant filter. The cutoff frequency of the filter is controlled by the FREQUENCY knob and the V/OCT CV input. This allows proper tracking!</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>LP / BP / HP</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>clock frequency</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>resonance</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">Variant employing two band-pass filters, with their separation controlled by HARMONICS.</p>
+
+  </div>
+</div><br /><br /><a name="particle"></a><h2>Particle noise</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">Dust noise processed by networks of all-pass or band-pass filters.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>frequency randomization</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>particle density</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>filter type</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">Raw dust noise.</p>
+
+  </div>
+</div><br /><br /><a name="string"></a><h2>String modeling / Modal resonator</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">Modulated/inharmonic string synthesis, and modal resonators. A mini-rings.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>inharmonicity / material selection</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>brightness / density</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>decay</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">Raw exciter signal.</p>
+
+        <h3>Notes</h3>
+        <p style="text-align: left;">Plaits uses a less powerful processor than Rings, and is thus limited to 3 voices of polyphony in inharmonic string modeling mode, and 1 voice of polyphony with 24 partials in modal resonator mode. Plaits does not allow you to control the position of the excitation, which is set to 25% of the length of the string/bar/tube.</p>
+
+        <p style="text-align: left;">When the TRIG input is not patched, the string/resonator is excited by dust (particle) noise. Otherwise, the string is excited by a short burst of filtered white noise, or by a low-pass filtered click.</p>
+
+  </div>
+</div><br /><br /><a name="bass_drum"></a><h2>Analog bass drum model</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">Simulation of circuits from classic drum machines. The drum machine emulated on OUT employs a bridged T-network excited by a nicely shaped pulse.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>attack / drive</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>brightness</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>decay</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">Frequency-modulated triangle VCO, turned into a sine with a pair of diodes, and shaped by a dirty VCA.</p>
+
+        <h3>Notes</h3>
+        <p style="text-align: left;">Without any signal patched to the TRIG input, a continuous tone is produced. Not particularly useful, but its amplitude can still be modulated by the MORPH knob and CV input!</p>
+
+  </div>
+</div><br /><br /><a name="snare_drum"></a><h2>Analog snare drum model</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">The drum machine emulated on OUT employs a bunch of bridged T-networks, one for each mode of the shell, excited by a nicely shaped pulse; plus some band-pass filtered noise.</p>
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>tone / noise</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>modes</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>decay</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">Based on a pair of frequency-modulated sine VCO, mixed with high-pass filtered noise.</p>
+
+  </div>
+</div><br /><br /><a name="hihat_drum"></a><h2>Analog hi-hat model</h2>
+    <div class="centered">
+      <div class="content">
+        <h3>Description</h3>
+        <p style="text-align: left;">6 square Square oscillators generate a harsh, metallic tone. The resulting signal is mixed with clocked noise, sent to a HPF, then to a dirty transitor VCA.</p>
+
+        <h3>Controls</h3>
+
+        <table class="fullwidth">
+          <tr>
+            <td>
+              <div class="bigknob white"></div>
+              <div></div>
+            </td>
+            <td>
+              <div class="bigknob white"></div>
+              <div>metal / noise</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="smallknob white"></div>
+              <div>high pass</div>
+            </td>
+            <td>
+              <div class="smallknob white"></div>
+              <div>decay</div>
+            </td>
+          </tr>
+        </table>
+
+        <h3>Aux Out</h3>
+        <p style="text-align: left;">three pairs of square oscillators ring-modulating each other, and a clean, linear VCA.</p>
+
+  </div>
+</div><br /><br />

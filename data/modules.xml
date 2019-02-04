@@ -9,4 +9,5 @@
   <module name="Just Friends" id="just_friends" index="just_friends/module.xml" />
   <module name="Peaks (Stock)" id="peaks_stock" index="peaks_stock/module.xml"/>
   <module name="Rings" id="rings" index="rings/module.xml"/>
+  <module name="Plaits" id="plaits" index="plaits_stock/module.xml"/>
 </modules>

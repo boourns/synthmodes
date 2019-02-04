@@ -1,0 +1,7 @@
+table tr:nth-child(even) {
+  background: none;
+}
+
+.license {
+  font-size: 8px;
+}

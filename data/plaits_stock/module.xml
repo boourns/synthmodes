@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Modes" modelist="true">
+      <page icon="img/model_01.png" name="Pair of classic waveforms" content="classic.html"/>
+      <page icon="img/model_02.png" name="Waveshaping oscillator" content="waveshaping.html"/>
+      <page icon="img/model_03.png" name="Two operator FM" content="2opfm.html"/>
+      <page icon="img/model_04.png" name="Granular formant oscillator" content="granular.html"/>
+      <page icon="img/model_05.png" name="Harmonic oscillator" content="harmonic.html"/>
+      <page icon="img/model_06.png" name="Wavetable oscillator" content="wavetable.html"/>
+      <page icon="img/model_07.png" name="Chords" content="chords.html"/>
+      <page icon="img/model_08.png" name="Vowel and speech synthesis" content="speech.html"/>
+      <page icon="img/model_09.png" name="Granular cloud" content="cloud.html"/>
+      <page icon="img/model_10.png" name="Filtered noise" content="noise.html"/>
+      <page icon="img/model_11.png" name="Particle noise" content="particle.html"/>
+      <page icon="img/model_12.png" name="String modeling / Modal resonator" content="string.html"/>
+      <page icon="img/model_14.png" name="Analog bass drum model" content="bass_drum.html"/>
+      <page icon="img/model_15.png" name="Analog snare drum model" content="snare_drum.html"/>
+      <page icon="img/model_16.png" name="Analog hi-hat model" content="hihat_drum.html"/>
+    </section>
+  </sections>
+</module>
