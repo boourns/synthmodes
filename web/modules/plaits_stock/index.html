@@ -2,106 +2,12 @@
 layout: page
 title: Plaits
 ---
-<style>body {
-     font-family: -apple-system, sans-serif;
-}
-.orange {
-  background-color: #ff9e20;
+<style>table tr:nth-child(even) {
+  background: none;
 }
 
-.green {
-  background-color: #00ee00;
-}
-
-.red {
-  background-color: #f41252;
-}
-
-.blue {
-  background-color: #00928f;
-}
-
-.white {
-  background-color: #ffffff;
-}
-
-.leds {
-  text-align: center;
-}
-
-.led {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  border: 1px solid;
-  text-align: center;
-  display: inline-block;
-  margin: 10px;
-}
-
-.bigknob {
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-  border: 3px solid;
-  text-align: center;
-  display: inline-block;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.smallknob {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 3px solid;
-  text-align: center;
-  display: inline-block;
-  margin: 10px;
-}
-
-.centered {
-text-align: center;
-}
-
-.content {
-  max-width: 700px;
-  align-self: center;
-  display: inline-block;
-  text-align: left;
-}
-
-.fullwidth {
-  width: 100%;
-}
-
-h3 {
-  text-align: left;
-}
-
-td {
-    text-align: center;
-    vertical-align: top;
-}
-
-.blend {
-  text-align: left;
-  vertical-align: middle;
-}
-
-.button {
-  background-color: #007dd8;
-  border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 6px;
-  width: 100%;
-  box-sizing: border-box;
+.license {
+  font-size: 8px;
 }
 </style>General<br /><a href="#info">Info</a><br />
 Modes<br /><a href="#classic">Pair of classic waveforms</a><br />
@@ -167,7 +73,7 @@ Modes<br /><a href="#classic">Pair of classic waveforms</a><br />
 
         <h3>Notes</h3>
         <p style="text-align: left;">A narrow pulse or wide notch results in silence! Use this trick if you want to silence one of the two oscillators, to get just a variable square or variable saw.</p>
-        <img src="https://mutable-instruments.net/modules/plaits/images/model_01_knobs.png">
+        <img src="img/diagrams/model_01_knobs.png">
   </div>
 </div><br /><br /><a name="waveshaping"></a><h2>Waveshaping oscillator</h2>
     <div class="centered">
@@ -238,7 +144,7 @@ Modes<br /><a href="#classic">Pair of classic waveforms</a><br />
 
         <h3>Notes</h3>
         <p style="text-align: left;">turn MORPH fully CCW to get the same range of sounds as Braids’ WTFM. Turn MORPH fully CW to recreate the same sounds as Braids’ FBFM. A gentler palette equivalent to Braids’ FM is found with MORPH at 12 o’clock.</p>
-
+        <img src="img/diagrams/model_03_knobs.jpg">
   </div>
 </div><br /><br /><a name="granular"></a><h2>Granular formant oscillator</h2>
     <div class="centered">
@@ -272,7 +178,7 @@ Modes<br /><a href="#classic">Pair of classic waveforms</a><br />
 
         <h3>Aux Out</h3>
         <p style="text-align: left;">simulation of filtered waveforms by windowed sine waves – a recreation of Braids’ Z*** models. HARMONICS controls the filter type (peaking, LP, BP, HP), with smooth variation from one response to another.</p>
-
+        <img src="img/diagrams/model_04_knobs.png">
   </div>
 </div><br /><br /><a name="harmonic"></a><h2>Harmonic oscillator</h2>
     <div class="centered">
@@ -306,7 +212,7 @@ Modes<br /><a href="#classic">Pair of classic waveforms</a><br />
 
         <h3>Aux Out</h3>
         <p style="text-align: left;">variant including only the subset of harmonics present in the drawbars of a Hammond organ (frequency ratios of 1, 2, 3, 4, 6, 8, 10 and 12).</p>
-
+        <img src="img/diagrams/model_05_knobs.png">
   </div>
 </div><br /><br /><a name="wavetable"></a><h2>Wavetable oscillator</h2>
     <div class="centered">
@@ -348,7 +254,7 @@ Modes<br /><a href="#classic">Pair of classic waveforms</a><br />
         <strong>Bank C:</strong> wavetables from the Shruthi-1 / Ambika, sampled from classic wavetable or ROM playback synths.<br><br>
         <strong>Bank D:</strong> a joyous semi-random permutation of waveforms from the other 3 banks.
         </p>
-
+        <img src="img/diagrams/model_06_knobs.png">
   </div>
 </div><br /><br /><a name="chords"></a><h2>Chords</h2>
     <div class="centered">
@@ -385,7 +291,7 @@ Modes<br /><a href="#classic">Pair of classic waveforms</a><br />
 
         <h3>Notes</h3>
         <p style="text-align: left;">The first half of the knob goes through a selection of string-machine like raw waveforms (different combinations of the organ and string “drawbars”), the second half of the knob scans a small wavetable containing 16 waveforms.</p>
-
+        <img src="img/diagrams/model_07_knobs.png">
   </div>
 </div><br /><br /><a name="speech"></a><h2>Vowel and speech synthesis</h2>
     <div class="centered">
@@ -490,7 +396,7 @@ Modes<br /><a href="#classic">Pair of classic waveforms</a><br />
 
         <h3>Aux Out</h3>
         <p style="text-align: left;">Variant employing two band-pass filters, with their separation controlled by HARMONICS.</p>
-
+        <img src="img/diagrams/model_10_knobs.png">
   </div>
 </div><br /><br /><a name="particle"></a><h2>Particle noise</h2>
     <div class="centered">
