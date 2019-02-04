@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Modes" modelist="true">
+      <page name="Doppler Panner" icon="img/01_doppler.png" content="doppler.html"/>
+      <page name="Wavefolder" icon="img/02_wavefolder.png" content="wavefolder.html"/>
+      <page name="Waveshaper" icon="img/03_chebyshev.png" content="chebyshev.html"/>
+      <page name="Frequency Shifter" icon="img/04_shifter.png" content="shifter.html"/>
+      <page name="Dual Bit Mangler" icon="img/05_mangler.png" content="mangler.html"/>
+      <page name="Comparator" icon="img/06_comparator.png" content="compare.html"/>
+      <page name="Vocoder" icon="img/07_vocoder.png" content="vocoder.html"/>
+      <page name="Delay" icon="img/08_delay.png" content="delay.html"/>
+      <page name="Meta Mode" icon="img/09_meta.png" content="meta.html"/>
+    </section>
+    <section name="Meta Mode" modelist="false">
+      <page name="Crossfade" icon="img/01_doppler.png" content="crossfade.html"/>
+      <page name="Crossfold" icon="img/02_wavefolder.png" content="crossfold.html"/>
+      <page name="Diode Ring-Modulation" icon="img/03_chebyshev.png" content="diode_ring.html"/>
+      <page name="Digital Ring-Modulation" icon="img/04_shifter.png" content="digital_ring.html"/>
+      <page name="XOR Modulation" icon="img/05_mangler.png" content="xor.html"/>
+      <page name="Comparison / Rectifier" icon="img/06_comparator.png" content="meta_compare.html"/>
+      <page name="Vocoder" icon="img/07_vocoder.png" content="meta_vocoder.html"/>
+    </section>
+  </sections>
+</module>

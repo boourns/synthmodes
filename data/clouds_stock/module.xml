@@ -5,10 +5,10 @@
       <page name="Info" content="info.html"/>
     </section>
     <section name="Modes" modelist="true">
-      <page name="Granular Processor" content="granular.html"/>
-      <page name="Pitch Shifter / Time Stretch" content="pitchshift.html"/>
-      <page name="Looping Delay" content="delay.html"/>
-      <page name="Spectral Processor" content="madness.html"/>
+      <page name="Granular Processor" icon="img/one.png" content="granular.html"/>
+      <page name="Pitch Shifter / Time Stretch" icon="img/two.png" content="pitchshift.html"/>
+      <page name="Looping Delay" icon="img/three.png" content="delay.html"/>
+      <page name="Spectral Processor" icon="img/four.png" content="madness.html"/>
     </section>
   </sections>
 </module>

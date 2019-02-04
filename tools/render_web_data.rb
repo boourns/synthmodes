@@ -79,7 +79,15 @@ title: #{@name}
   end
 
   def css
-    "<style>" + Dir["data/common.css"].map { |f| File.read(f) }.join("\n") + "</style>"
+    css_files = Dir["#{@directory}/*.css"]
+    if css_files.empty?
+      css_files = Dir["data/common.css"]
+    end
+    "<style>" + css_files.map { |f| File.read(f) }.join("\n") + "</style>"
+  end
+
+  def images_dir
+    "#{@directory}/img"
   end
 end
 
@@ -97,5 +105,9 @@ modules.each do |m|
     FileUtils.mkdir(dir)
   rescue Errno::EEXIST
   end
+  if File.exist?(m.images_dir)
+    `cp -R #{m.images_dir} #{dir}`
+  end
   File.write("#{dir}/index.html", m.content_for_web)
+
 end

@@ -3,8 +3,23 @@ layout: page
 title: Disting mk3
 ---
 <style>body {
-     font-family: -apple-system, sans-serif;
+  font-family: -apple-system, sans-serif;
 }
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
 .orange {
   background-color: #ff9e20;
 }
@@ -25,8 +40,73 @@ title: Disting mk3
   background-color: #ffffff;
 }
 
+.flashing-green {
+  border: 0px;
+  background-color: #00928f;
+  box-shadow: 0 0 10px #00928f, inset 0 0 10px #00928f;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
 .leds {
   text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
 }
 
 .led {
@@ -38,6 +118,8 @@ title: Disting mk3
   display: inline-block;
   margin: 10px;
 }
+
+/* just big circles - braids, clouds */
 
 .bigknob {
   height: 55px;
@@ -60,34 +142,97 @@ title: Disting mk3
   margin: 10px;
 }
 
-.centered {
-text-align: center;
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
 }
 
-.content {
-  max-width: 700px;
-  align-self: center;
-  display: inline-block;
-  text-align: left;
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
 }
 
-.fullwidth {
-  width: 100%;
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
 }
 
-h3 {
-  text-align: left;
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
 }
 
-td {
-    text-align: center;
-    vertical-align: top;
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
 }
 
-.blend {
-  text-align: left;
-  vertical-align: middle;
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
 }
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
+}
+
+/* iOS-like button */
 
 .button {
   background-color: #007dd8;
@@ -102,8 +247,7 @@ td {
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
-}
-</style>General<br /><a href="#info">Info</a><br />
+}</style>General<br /><a href="#info">Info</a><br />
 Bank 1/a<br /><a href="#a1_precision_adder">1-a Precision Adder</a><br />
 <a href="#a2_four_quadrant_multiplier">1-b Four Quadrant Multiplier</a><br />
 <a href="#a3_full_wave_rectifier_abs">1-c Full-wave Rectifier / abs()</a><br />
@@ -177,18 +321,18 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   <div class="centered">
     <div class="content">
       <h3>Disting mk3</h3>
-      <p>Disting mk3 is a eurorack swift army knife.  It is made by <a href="http://www.expert-sleepers.co.uk">Expert Sleepers</a>.<br><br>
+      <p>Disting mk3 is a eurorack swift army knife.  It is made by Expert Sleepers.<br><br>
         The Disting firmware gets updated regularly, be sure to check the firmware page for the latest version and latest manual.
       </p>
 <h3>Links</h3>
-      <a href="http://www.expert-sleepers.co.uk/distingmk3firmwareupdates.html">Disting mk3 Firmware &amp; Manual</a><br>
+      <a class="button" href="http://www.expert-sleepers.co.uk/distingmk3firmwareupdates.html">Disting mk3 Firmware &amp; Manual</a><br>
     </div>
   </div>
 <br /><br />
 <h2>Bank 1/a</h2><a name="a1_precision_adder"></a><h2>1-a Precision Adder</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -242,7 +386,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -272,7 +416,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="a2_four_quadrant_multiplier"></a><h2>1-b Four Quadrant Multiplier</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -326,7 +470,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -356,7 +500,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="a3_full_wave_rectifier_abs"></a><h2>1-c Full-wave Rectifier / abs()</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -416,7 +560,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="a4_minimum_maximum"></a><h2>1-d Minimum / Maximum</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -471,7 +615,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="a5_linear_exponential_converter"></a><h2>2-a Linear / Exponential Converter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -525,7 +669,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="a6_quantizer"></a><h2>2-b Quantizer</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -580,7 +724,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -607,7 +751,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -636,7 +780,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -666,7 +810,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="a7_comparator"></a><h2>2-c Comparator</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -720,7 +864,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="a8_dual_waveshaper"></a><h2>2-d Dual Waveshaper</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -774,7 +918,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="b1_sample_and_hold"></a><h2>3-a Sample and Hold</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -828,7 +972,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -862,7 +1006,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="b2_slew_rate_limiter"></a><h2>3-b Slew Rate Limiter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -916,7 +1060,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="b3_pitch_envelope_tracker"></a><h2>3-c Pitch & Envelope Tracker</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -970,7 +1114,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="b4_clockable_delayecho"></a><h2>3-d Clockable Delay/Echo</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1024,7 +1168,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1053,7 +1197,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="b5_lfo"></a><h2>4-a LFO</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1107,7 +1251,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1134,7 +1278,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1161,7 +1305,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1188,7 +1332,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1217,7 +1361,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="b6_clocked_lfo"></a><h2>4-b Clocked LFO</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1271,7 +1415,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1302,7 +1446,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="b7_vco_with_linear_fm"></a><h2>4-c VCO with linear FM</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1356,7 +1500,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1383,7 +1527,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1410,7 +1554,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1440,7 +1584,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="b8_vco_with_waveshaping"></a><h2>4-d VCO with waveshaping</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1494,7 +1638,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1521,7 +1665,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1548,7 +1692,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1575,7 +1719,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1606,7 +1750,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <h2>Bank 1/b</h2><a name="c1_precision_adder_fractional_offsets"></a><h2>1-a Precision Adder (fractional offsets)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1660,7 +1804,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1690,7 +1834,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="c2_voltage_controlled_delay_line"></a><h2>1-b Voltage Controlled Delay Line</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1744,7 +1888,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1773,7 +1917,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="c3_clockable_ping_pong_delay_z_feedback"></a><h2>1-c Clockable Ping Pong Delay (Z feedback)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1827,7 +1971,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1860,7 +2004,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="c4_clockable_ping_pong_delay_z_input_pan"></a><h2>1-d Clockable Ping Pong Delay (Z input pan)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1914,7 +2058,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1945,7 +2089,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="c5_resonator"></a><h2>2-a Resonator</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1999,7 +2143,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2030,7 +2174,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="c6_vocoder"></a><h2>2-b Vocoder</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2084,7 +2228,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2113,7 +2257,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="c7_phaser"></a><h2>2-c Phaser</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2167,7 +2311,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2194,7 +2338,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2223,7 +2367,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="c8_bit_crusher"></a><h2>2-d Bit Crusher</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2277,7 +2421,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2304,7 +2448,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2331,7 +2475,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2361,7 +2505,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="d2_tape_delay"></a><h2>3-b Tape Delay</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2415,7 +2559,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2442,7 +2586,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2472,7 +2616,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="d3_waveform_animator"></a><h2>3-c Waveform Animator</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2526,7 +2670,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2553,7 +2697,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2580,7 +2724,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2607,7 +2751,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2639,7 +2783,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="d4_state_variable_filter"></a><h2>3-d State Variable Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2693,7 +2837,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2722,7 +2866,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="d5_lphp_filter"></a><h2>4-a LP/HP Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2776,7 +2920,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="d6_lpbp_filter"></a><h2>4-b LP/BP Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2830,7 +2974,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="d7_bphp_filter"></a><h2>4-c BP/HP Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2884,7 +3028,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="d8_bpnotch_filter"></a><h2>4-d BP/Notch Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2939,7 +3083,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <h2>Bank 1/c</h2><a name="e1_ar_envelope"></a><h2>1-a AR Envelope</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2993,7 +3137,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3024,7 +3168,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3054,7 +3198,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3081,7 +3225,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3110,7 +3254,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="e1_ar_envelope_push"></a><h2>1-b AR Envelope (w/ push)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3164,7 +3308,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3198,7 +3342,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="e2_ar_envelope_vca"></a><h2>1-c AR Envelope & VCA</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3252,7 +3396,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3283,7 +3427,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3313,7 +3457,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3340,7 +3484,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3370,7 +3514,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="e2_ar_envelope_vca_push"></a><h2>1-d AR Envelope & VCA (w/ push)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3424,7 +3568,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3455,7 +3599,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3490,7 +3634,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="e3_dual_ar_envelope"></a><h2>2-a Dual AR Envelope</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3544,7 +3688,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3575,7 +3719,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3605,7 +3749,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3632,7 +3776,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3661,7 +3805,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="e3_dual_ar_envelope_push"></a><h2>2-b Dual AR Envelope (w/push)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3715,7 +3859,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3750,7 +3894,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="e7_euro_to_buchla_converter"></a><h2>2-c Euro to Buchla Converter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3804,7 +3948,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3833,7 +3977,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="e8_buchla_to_euro_converter"></a><h2>2-d Buchla to Euro Converter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3887,7 +4031,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3916,7 +4060,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="f1_clockable_ad_envelope_w_mute"></a><h2>3-a Clockable AD Envelope (w/ mute)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3970,7 +4114,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4001,7 +4145,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="f2_clockable_ad_envelope_w_gate"></a><h2>3-b Clockable AD Envelope (w/ gate)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4055,7 +4199,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4087,7 +4231,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="f3_clockable_ad_envelope_w_trigger"></a><h2>3-c Clockable AD Envelope (w/ trigger)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4141,7 +4285,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4172,7 +4316,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="f4_clockable_ad_envelope_vca"></a><h2>3-d Clockable AD Envelope & VCA)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4226,7 +4370,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4257,7 +4401,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="f5_shift_register_random_c_vs"></a><h2>4-a Shift Register Random CVs</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4311,7 +4455,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4338,7 +4482,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4365,7 +4509,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4392,7 +4536,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4421,7 +4565,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="f6_shift_register_random_quantized_c_vs"></a><h2>4-b Shift Register Random Quantized CVs</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4475,7 +4619,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4502,7 +4646,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4529,7 +4673,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4556,7 +4700,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4585,7 +4729,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="f7_shift_register_random_triggers"></a><h2>4-c Shift Register Random Triggers</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4639,7 +4783,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4670,7 +4814,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="f8_shift_register_random_dual_triggers"></a><h2>4-d Shift Register Random Dual Triggers</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4724,7 +4868,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4751,7 +4895,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4783,7 +4927,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <h2>Bank 1/d</h2><a name="g1_es_1_emulation"></a><h2>1-a ES-1 Emulation</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4837,7 +4981,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="g2_es_2_emulation"></a><h2>1-b ES-2 Emulation</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4891,7 +5035,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="h3_dual_quantizer_z_scale"></a><h2>2-a Dual Quantizer (Z scale)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4945,7 +5089,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4972,7 +5116,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4999,7 +5143,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5026,7 +5170,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5055,7 +5199,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="h4_dual_quantizer"></a><h2>2-b Dual Quantizer</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5109,7 +5253,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5136,7 +5280,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5163,7 +5307,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5191,7 +5335,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5221,7 +5365,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="h6_dual_delayed_pulse_generator"></a><h2>2-c Dual Delayed Pulse Generator</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5275,7 +5419,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5309,7 +5453,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5336,7 +5480,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5363,7 +5507,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5392,7 +5536,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="h7_noise"></a><h2>2-d Noise</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5446,7 +5590,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5473,7 +5617,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5500,7 +5644,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5527,7 +5671,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5556,7 +5700,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="h1_crossfadepan"></a><h2>3-a Crossfade/Pan</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5610,7 +5754,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5643,7 +5787,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="h2_dual_sample_and_hold"></a><h2>3-b Dual Sample and Hold</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5697,7 +5841,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5730,7 +5874,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="h4_dual_euclidean_patterns"></a><h2>4-a Dual Euclidean Patterns</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5784,7 +5928,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5811,7 +5955,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5838,7 +5982,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5865,7 +6009,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5895,7 +6039,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <h2>Bank 2/a</h2><a name="i1_audio_playback"></a><h2>1-a Audio Playback</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5950,7 +6094,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="i3_audio_playback_voct"></a><h2>1-c Audio Playback (V/oct)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6004,7 +6148,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6033,7 +6177,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="i4_audio_playback_z_speed"></a><h2>1-d Audio Playback (Z speed)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6087,7 +6231,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6117,7 +6261,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="j1_midi_file_playback_clocked"></a><h2>3-a MIDI file playback (clocked)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6171,7 +6315,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="j3_midi_file_playback_free_running"></a><h2>3-c MIDI file playback (Free Running)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6225,7 +6369,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6254,7 +6398,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="j4_audio_playback_end_position_cv"></a><h2>3-d Audio Playback (end position CV)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6309,7 +6453,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6339,7 +6483,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <h2>Bank 2/b</h2><a name="i2_clocked_audio_playback"></a><h2>1-a Clocked Audio Playback</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6396,7 +6540,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="j5_audio_recorder"></a><h2>3-a Audio Recorder</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6451,7 +6595,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <h2>Bank 2/c</h2><a name="k1_wavetable_vco"></a><h2>1-a Wavetable VCO</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6505,7 +6649,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6537,7 +6681,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <h2>Bank 3/a</h2><a name="l1_stereo_reverb"></a><h2>1-a Stereo Reverb</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6591,7 +6735,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6618,7 +6762,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6645,7 +6789,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6672,7 +6816,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6701,7 +6845,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="l2_mono_to_stereo_reverb"></a><h2>1-b Mono-to-Stereo Reverb</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6755,7 +6899,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6782,7 +6926,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6809,7 +6953,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6836,7 +6980,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6865,7 +7009,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="l3_dual_reverb"></a><h2>1-c Dual Reverb</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6919,7 +7063,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6946,7 +7090,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6973,7 +7117,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7000,7 +7144,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7029,7 +7173,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="l5_stereo_chorus"></a><h2>2-a Stereo Chorus</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -7083,7 +7227,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7110,7 +7254,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7137,7 +7281,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7164,7 +7308,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7193,7 +7337,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 <br /><br /><a name="l6_mono_chorus"></a><h2>2-b Mono Chorus</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -7247,7 +7391,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7274,7 +7418,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7301,7 +7445,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7328,7 +7472,7 @@ Bank 3/a<br /><a href="#l1_stereo_reverb">1-a Stereo Reverb</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 

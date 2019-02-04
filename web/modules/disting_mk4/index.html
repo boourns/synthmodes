@@ -3,8 +3,23 @@ layout: page
 title: Disting mk4
 ---
 <style>body {
-     font-family: -apple-system, sans-serif;
+  font-family: -apple-system, sans-serif;
 }
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
 .orange {
   background-color: #ff9e20;
 }
@@ -25,8 +40,73 @@ title: Disting mk4
   background-color: #ffffff;
 }
 
+.flashing-green {
+  border: 0px;
+  background-color: #00928f;
+  box-shadow: 0 0 10px #00928f, inset 0 0 10px #00928f;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
 .leds {
   text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
 }
 
 .led {
@@ -38,6 +118,8 @@ title: Disting mk4
   display: inline-block;
   margin: 10px;
 }
+
+/* just big circles - braids, clouds */
 
 .bigknob {
   height: 55px;
@@ -60,34 +142,97 @@ title: Disting mk4
   margin: 10px;
 }
 
-.centered {
-text-align: center;
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
 }
 
-.content {
-  max-width: 700px;
-  align-self: center;
-  display: inline-block;
-  text-align: left;
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
 }
 
-.fullwidth {
-  width: 100%;
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
 }
 
-h3 {
-  text-align: left;
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
 }
 
-td {
-    text-align: center;
-    vertical-align: top;
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
 }
 
-.blend {
-  text-align: left;
-  vertical-align: middle;
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
 }
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
+}
+
+/* iOS-like button */
 
 .button {
   background-color: #007dd8;
@@ -102,8 +247,7 @@ td {
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
-}
-</style>General<br /><a href="#info">Info</a><br />
+}</style>General<br /><a href="#info">Info</a><br />
 Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#a2_four_quadrant_multiplier">A2 Four Quadrant Multiplier</a><br />
 <a href="#a3_full_wave_rectifier_abs">A3 Full-wave Rectifier / abs()</a><br />
@@ -196,19 +340,19 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   <div class="centered">
     <div class="content">
       <h3>Disting mk4</h3>
-      <p>Disting mk3 is a eurorack swift army knife.  It is made by <a href="http://www.expert-sleepers.co.uk">Expert Sleepers</a>.<br><br>
+      <p>Disting mk3 is a eurorack swift army knife.  It is made by Expert Sleepers.<br><br>
         The Disting firmware gets updated regularly, be sure to check the firmware page for the latest version and latest manual.
       </p>
 <h3>Links</h3>
-      <a href="http://www.expert-sleepers.co.uk/disting.html">Disting mk4 information</a><br>
-      <a href="http://www.expert-sleepers.co.uk/distingfirmwareupdates.html">Disting mk4 Firmware &amp; Manual</a><br>
+      <a class="button" href="http://www.expert-sleepers.co.uk/disting.html">Disting mk4 information</a><br>
+      <a class="button" href="http://www.expert-sleepers.co.uk/distingfirmwareupdates.html">Disting mk4 Firmware &amp; Manual</a><br>
     </div>
   </div>
 <br /><br />
 <h2>Algorithms</h2><a name="a1_precision_adder"></a><h2>A1 Precision Adder</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -262,7 +406,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -290,7 +434,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -322,7 +466,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="a2_four_quadrant_multiplier"></a><h2>A2 Four Quadrant Multiplier</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -376,7 +520,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -406,7 +550,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="a3_full_wave_rectifier_abs"></a><h2>A3 Full-wave Rectifier / abs()</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -466,7 +610,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="a4_minimum_maximum"></a><h2>A4 Minimum / Maximum</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -521,7 +665,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="a5_linear_exponential_converter"></a><h2>A5 Linear / Exponential Converter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -575,7 +719,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="a6_quantizer"></a><h2>A6 Quantizer</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -630,7 +774,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -657,7 +801,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -686,7 +830,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -714,7 +858,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -743,7 +887,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="a7_comparator"></a><h2>A7 Comparator</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -797,7 +941,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="a8_dual_waveshaper"></a><h2>A8 Dual Waveshaper</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -851,7 +995,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="b1_sample_and_hold"></a><h2>B1 Sample and Hold</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -905,7 +1049,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -935,7 +1079,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -962,7 +1106,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -997,7 +1141,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="b2_slew_rate_limiter"></a><h2>B2 Slew Rate Limiter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1051,7 +1195,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="b3_pitch_envelope_tracker"></a><h2>B3 Pitch & Envelope Tracker</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1105,7 +1249,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="b4_clockable_delayecho"></a><h2>B4 Clockable Delay/Echo</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1159,7 +1303,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1188,7 +1332,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="b5_lfo"></a><h2>B5 LFO</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1242,7 +1386,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1269,7 +1413,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1296,7 +1440,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1323,7 +1467,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1352,7 +1496,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="b6_clocked_lfo"></a><h2>B6 Clocked LFO</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1406,7 +1550,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1437,7 +1581,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="b7_vco_with_linear_fm"></a><h2>B7 VCO with linear FM</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1491,7 +1635,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1518,7 +1662,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1545,7 +1689,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1572,7 +1716,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1604,7 +1748,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1633,7 +1777,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="b8_vco_with_waveshaping"></a><h2>B8 VCO with waveshaping</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1687,7 +1831,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1714,7 +1858,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1741,7 +1885,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1768,7 +1912,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1795,7 +1939,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1827,7 +1971,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="c1_precision_adder_fractional_offsets"></a><h2>C1 Precision Adder (fractional offsets)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1881,7 +2025,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1911,7 +2055,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="c2_voltage_controlled_delay_line"></a><h2>C2 Voltage Controlled Delay Line</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -1965,7 +2109,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -1994,7 +2138,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="c3_clockable_ping_pong_delay_z_feedback"></a><h2>C3 Clockable Ping Pong Delay (Z feedback)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2048,7 +2192,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2081,7 +2225,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="c4_clockable_ping_pong_delay_z_input_pan"></a><h2>C4 Clockable Ping Pong Delay (Z input pan)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2135,7 +2279,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2166,7 +2310,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="c5_resonator"></a><h2>C5 Resonator</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2220,7 +2364,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2251,7 +2395,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="c6_vocoder"></a><h2>C6 Vocoder</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2305,7 +2449,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2334,7 +2478,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="c7_phaser"></a><h2>C7 Phaser</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2388,7 +2532,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2415,7 +2559,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2444,7 +2588,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="c8_bit_crusher"></a><h2>C8 Bit Crusher</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2498,7 +2642,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2525,7 +2669,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2552,7 +2696,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2582,7 +2726,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="d2_tape_delay"></a><h2>D2 Tape Delay</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2636,7 +2780,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2663,7 +2807,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2690,7 +2834,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2717,7 +2861,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2749,7 +2893,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="d3_waveform_animator"></a><h2>D3 Waveform Animator</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2803,7 +2947,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2830,7 +2974,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2857,7 +3001,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2884,7 +3028,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2916,7 +3060,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="d4_state_variable_filter"></a><h2>D4 State Variable Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -2970,7 +3114,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -2999,7 +3143,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="d5_lphp_filter"></a><h2>D5 LP/HP Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3053,7 +3197,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="d6_lpbp_filter"></a><h2>D6 LP/BP Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3107,7 +3251,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="d7_bphp_filter"></a><h2>D7 BP/HP Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3161,7 +3305,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="d8_bpnotch_filter"></a><h2>D8 BP/Notch Filter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3215,7 +3359,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="e1_ar_envelope"></a><h2>E1 AR Envelope</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3269,7 +3413,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3300,7 +3444,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3330,7 +3474,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3357,7 +3501,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3384,7 +3528,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3411,7 +3555,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3438,7 +3582,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3465,7 +3609,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3496,7 +3640,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="e2_ar_envelope_vca"></a><h2>E2 AR Envelope & VCA</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3550,7 +3694,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3581,7 +3725,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3611,7 +3755,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3638,7 +3782,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3665,7 +3809,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3692,7 +3836,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3719,7 +3863,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3746,7 +3890,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3777,7 +3921,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="e3_dual_ar_envelope"></a><h2>E3 Dual AR Envelope</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -3831,7 +3975,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3862,7 +4006,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3892,7 +4036,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3919,7 +4063,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3946,7 +4090,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -3973,7 +4117,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4004,7 +4148,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="e4_stereo_compressor"></a><h2>E4 Stereo Compressor</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4058,7 +4202,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4085,7 +4229,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4112,7 +4256,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4139,7 +4283,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4166,7 +4310,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4195,7 +4339,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="e5_side_chain_compressor"></a><h2>E5 Side-chain Compressor</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4249,7 +4393,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4276,7 +4420,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4303,7 +4447,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4330,7 +4474,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4357,7 +4501,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4384,7 +4528,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4413,7 +4557,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="e6_mono_compressor"></a><h2>E6 Mono Compressor</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4467,7 +4611,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4494,7 +4638,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4521,7 +4665,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4548,7 +4692,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4575,7 +4719,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4604,7 +4748,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="e7_euro_to_buchla_converter"></a><h2>E7 Euro to Buchla Converter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4658,7 +4802,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4687,7 +4831,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="e8_buchla_to_euro_converter"></a><h2>E8 Buchla to Euro Converter</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4741,7 +4885,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4770,7 +4914,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="f1_clockable_ad_envelope_w_mute"></a><h2>F1 Clockable AD Envelope (w/ mute)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4824,7 +4968,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4851,7 +4995,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4878,7 +5022,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4909,7 +5053,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="f2_clockable_ad_envelope_w_gate"></a><h2>F2 Clockable AD Envelope (w/ gate)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -4963,7 +5107,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -4990,7 +5134,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5017,7 +5161,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5048,7 +5192,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="f3_clockable_ad_envelope_w_trigger"></a><h2>F3 Clockable AD Envelope (w/ trigger)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5102,7 +5246,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5129,7 +5273,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5156,7 +5300,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5187,7 +5331,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="f4_clockable_ad_envelope_vca"></a><h2>F4 Clockable AD Envelope & VCA)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5241,7 +5385,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5268,7 +5412,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5295,7 +5439,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5326,7 +5470,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="f5_shift_register_random_c_vs"></a><h2>F5 Shift Register Random CVs</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5380,7 +5524,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5407,7 +5551,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5434,7 +5578,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5461,7 +5605,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5490,7 +5634,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="f6_shift_register_random_quantized_c_vs"></a><h2>F6 Shift Register Random Quantized CVs</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5544,7 +5688,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5571,7 +5715,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5598,7 +5742,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5625,7 +5769,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5652,7 +5796,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5681,7 +5825,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="f7_shift_register_random_triggers"></a><h2>F7 Shift Register Random Triggers</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5735,7 +5879,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5766,7 +5910,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="f8_shift_register_random_dual_triggers"></a><h2>F8 Shift Register Random Dual Triggers</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5820,7 +5964,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5847,7 +5991,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -5878,7 +6022,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="g1_es_1_emulation"></a><h2>G1 ES-1 Emulation</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5932,7 +6076,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="g2_es_2_emulation"></a><h2>G2 ES-2 Emulation</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -5986,7 +6130,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="g3_pitch_reference"></a><h2>G3 Pitch Reference</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6040,7 +6184,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6067,7 +6211,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6096,7 +6240,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="g4_frequency_reference"></a><h2>G4 Frequency Reference</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6153,7 +6297,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="g5_tuner"></a><h2>G5 Tuner</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6207,7 +6351,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="g6_midi_clock"></a><h2>G6 MIDI Clock</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6261,7 +6405,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6288,7 +6432,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6315,7 +6459,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6342,7 +6486,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6375,7 +6519,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="g7_midicv"></a><h2>G7 MIDI/CV</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6429,7 +6573,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6456,7 +6600,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6483,7 +6627,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6513,7 +6657,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="g8_cvmidi"></a><h2>G8 CV/MIDI</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6567,7 +6711,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6595,7 +6739,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6626,7 +6770,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="h1_crossfadepan"></a><h2>H1 Crossfade/Pan</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6681,7 +6825,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6712,7 +6856,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6742,7 +6886,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6772,7 +6916,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="h2_dual_sample_and_hold"></a><h2>H2 Dual Sample and Hold</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6826,7 +6970,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6857,7 +7001,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6887,7 +7031,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="h3_dual_quantizer_z_scale"></a><h2>H3 Dual Quantizer (Z scale)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -6941,7 +7085,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6968,7 +7112,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -6995,7 +7139,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7022,7 +7166,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7051,7 +7195,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="h4_dual_quantizer"></a><h2>H4 Dual Quantizer</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -7105,7 +7249,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7132,7 +7276,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7159,7 +7303,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7187,7 +7331,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7215,7 +7359,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7244,7 +7388,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="h4_dual_euclidean_patterns"></a><h2>H4 Dual Euclidean Patterns</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -7298,7 +7442,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7325,7 +7469,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7352,7 +7496,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7379,7 +7523,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7408,7 +7552,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="h6_dual_delayed_pulse_generator"></a><h2>H6 Dual Delayed Pulse Generator</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -7462,7 +7606,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7496,7 +7640,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7523,7 +7667,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7550,7 +7694,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7579,7 +7723,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="h7_noise"></a><h2>H7 Noise</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -7633,7 +7777,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7660,7 +7804,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7687,7 +7831,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7714,7 +7858,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7743,7 +7887,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="h8_quantizer_2"></a><h2>H8 Quantizer 2</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -7798,7 +7942,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7825,7 +7969,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7855,7 +7999,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7882,7 +8026,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7909,7 +8053,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7939,7 +8083,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -7968,7 +8112,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="i1_audio_playback"></a><h2>I1 Audio Playback</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -8022,7 +8166,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8049,7 +8193,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8078,7 +8222,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="i2_clocked_audio_playback"></a><h2>I2 Clocked Audio Playback</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -8132,7 +8276,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8159,7 +8303,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8191,7 +8335,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="i3_audio_playback_voct"></a><h2>I3 Audio Playback (V/oct)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -8245,7 +8389,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8272,7 +8416,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8299,7 +8443,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8326,7 +8470,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8355,7 +8499,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="i4_audio_playback_z_speed"></a><h2>I4 Audio Playback (Z speed)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -8409,7 +8553,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8436,7 +8580,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8463,7 +8607,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8492,7 +8636,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="i5_audio_playback_with_reverse"></a><h2>I5 Audio Playback (with reverse)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -8546,7 +8690,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8573,7 +8717,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8600,7 +8744,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8629,7 +8773,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="i6_audio_playback_with_scrub"></a><h2>I6 Audio Playback (with scrub)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -8683,7 +8827,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8710,7 +8854,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8737,7 +8881,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8764,7 +8908,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8793,7 +8937,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="i7_dual_audio_playback"></a><h2>I7 Dual audio playback</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -8847,7 +8991,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8874,7 +9018,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8903,7 +9047,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -8932,7 +9076,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="i8_dual_audio_playback_z_speed"></a><h2>I8 Dual audio playback (Z speed)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -8986,7 +9130,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9013,7 +9157,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9040,7 +9184,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9067,7 +9211,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9096,7 +9240,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9123,7 +9267,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9152,7 +9296,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="j1_midi_file_playback_clocked"></a><h2>J1 MIDI file playback (clocked)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -9206,7 +9350,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="j3_midi_file_playback_free_running"></a><h2>J3 MIDI file playback (Free Running)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -9260,7 +9404,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9289,7 +9433,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="j4_audio_playback_end_position_cv"></a><h2>J4 Audio Playback (end position CV)</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -9344,7 +9488,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9371,7 +9515,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9398,7 +9542,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9427,7 +9571,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="j5_audio_recorder"></a><h2>J5 Audio Recorder</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -9481,7 +9625,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="j6_multisample_audio_playback"></a><h2>J6 Multisample Audio Playback</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -9535,7 +9679,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9562,7 +9706,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9589,7 +9733,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9616,7 +9760,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9648,7 +9792,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="j7_audio_recorder"></a><h2>J7 Mono Audio Recorder</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -9702,7 +9846,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="j8_audio_playback_with_crossfade"></a><h2>J8 Audio Playback with Crossfade</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -9756,7 +9900,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9783,7 +9927,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9810,7 +9954,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9837,7 +9981,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9869,7 +10013,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="k1_wavetable_vco"></a><h2>K1 Wavetable VCO</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -9923,7 +10067,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9950,7 +10094,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -9977,7 +10121,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10004,7 +10148,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10041,7 +10185,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="k5_programmable_quantizer"></a><h2>K5 Programmable Quantizer</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -10095,7 +10239,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10122,7 +10266,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10149,7 +10293,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10176,7 +10320,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10203,7 +10347,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10232,7 +10376,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="l1_stereo_reverb"></a><h2>L1 Stereo Reverb</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -10286,7 +10430,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10313,7 +10457,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10340,7 +10484,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10367,7 +10511,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10396,7 +10540,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="l2_mono_to_stereo_reverb"></a><h2>L2 Mono-to-Stereo Reverb</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -10450,7 +10594,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10477,7 +10621,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10504,7 +10648,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10531,7 +10675,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10560,7 +10704,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="l3_dual_reverb"></a><h2>L3 Dual Reverb</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -10614,7 +10758,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10641,7 +10785,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10668,7 +10812,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10695,7 +10839,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10724,7 +10868,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="l5_stereo_chorus"></a><h2>L5 Stereo Chorus</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -10778,7 +10922,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10805,7 +10949,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10832,7 +10976,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10859,7 +11003,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10888,7 +11032,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="l6_mono_chorus"></a><h2>L6 Mono Chorus</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -10942,7 +11086,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10969,7 +11113,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -10996,7 +11140,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11023,7 +11167,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11052,7 +11196,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="l8_noise_gate"></a><h2>L8 Noise Gate</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -11106,7 +11250,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11133,7 +11277,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11160,7 +11304,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11187,7 +11331,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11216,7 +11360,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="m1_delayed_lfo"></a><h2>M1 Delayed LFO</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -11270,7 +11414,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11304,7 +11448,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11331,7 +11475,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11358,7 +11502,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11385,7 +11529,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11412,7 +11556,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11441,7 +11585,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="m2_scaled_lfo"></a><h2>M2 Scaled LFO</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -11495,7 +11639,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11527,7 +11671,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11554,7 +11698,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11581,7 +11725,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11610,7 +11754,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11637,7 +11781,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11666,7 +11810,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br /><br /><a name="m3_logic"></a><h2>M3 Logic</h2>
   <h3>Controls</h3>
 
-  <table>
+  <table class="parameters bordered">
     <tr>
       <td>
         <div class="control">
@@ -11720,7 +11864,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11755,7 +11899,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11782,7 +11926,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11809,7 +11953,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 
@@ -11836,7 +11980,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
   </table>
 <br>
 
-  <table>
+  <table class="bordered">
     <tr>
       <th width="25%">pos</th>
 

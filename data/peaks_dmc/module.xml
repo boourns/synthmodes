@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Basic" modelist="true">
+      <page name="Envelope" icon="img/one.png" content="env.html"/>
+      <page name="LFO" icon="img/two.png" content="lfo.html"/>
+      <page name="Tap" icon="img/three.png" content="tap.html"/>
+      <page name="Drum" icon="img/four.png" content="drum.html"/>
+    </section>
+    <section name="Envelope Modes" modelist="true">
+      <page name="Double Attack" icon="img/env_1.png" content="env_double_attack.html"/>
+      <page name="Repeating Attack" icon="img/env_2.png" content="env_repeating_attack.html"/>
+      <page name="Looping Env" icon="img/env_3.png" content="env_looping.html"/>
+      <page name="Randomized AD" icon="img/env_4.png" content="env_randomized.html"/>
+      <page name="Bouncing Ball" icon="img/env_5.png" content="env_bouncing.html"/>
+    </section>
+    <section name="LFO Modes" modelist="true">
+      <page name="Folded Sine FM" icon="img/lfo_1.png" content="lfo_sine_fm.html"/>
+      <page name="Random FM" icon="img/lfo_2.png" content="lfo_random_fm.html"/>
+      <page name="Folded Sine Mods Shape" icon="img/lfo_3.png" content="lfo_sine_shape.html"/>
+      <page name="Random Shape Modulation" icon="img/lfo_4.png" content="lfo_rand_shape.html"/>
+      <page name="Phase locked loop Osc" icon="img/lfo_5.png" content="lfo_pll.html"/>
+    </section>
+    <section name="Tap Modes" modelist="true">
+      <page name="Sequencer" icon="img/tap_1.png" content="tap_sequencer.html"/>
+      <page name="ModSequencer" icon="img/tap_2.png" content="tap_modsequencer.html"/>
+      <page name="Pulse Shaper" icon="img/tap_3.png" content="tap_pulse_shaper.html"/>
+      <page name="Pulse Randomizer" icon="img/tap_4.png" content="tap_pulse_randomizer.html"/>
+      <page name="Turing Machine" icon="img/tap_5.png" content="tap_turing.html"/>
+      <page name="Byte Beats" icon="img/tap_6.png" content="tap_bytebeats.html"/>
+    </section>
+    <section name="Drum modes" modelist="true">
+      <page name="FM Drums" icon="img/drum_1.png" content="drum_fm.html"/>
+      <page name="Randomized Drums" icon="img/drum_2.png" content="drum_random.html"/>
+      <page name="Randomized High Hat" icon="img/drum_3.png" content="drum_hihat.html"/>
+    </section>
+
+  </sections>
+</module>

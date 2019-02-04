@@ -3,8 +3,23 @@ layout: page
 title: Clouds (Parasites)
 ---
 <style>body {
-     font-family: -apple-system, sans-serif;
+  font-family: -apple-system, sans-serif;
 }
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
 .orange {
   background-color: #ff9e20;
 }
@@ -25,8 +40,73 @@ title: Clouds (Parasites)
   background-color: #ffffff;
 }
 
+.flashing-green {
+  border: 0px;
+  background-color: #00928f;
+  box-shadow: 0 0 10px #00928f, inset 0 0 10px #00928f;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
 .leds {
   text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
 }
 
 .led {
@@ -38,6 +118,8 @@ title: Clouds (Parasites)
   display: inline-block;
   margin: 10px;
 }
+
+/* just big circles - braids, clouds */
 
 .bigknob {
   height: 55px;
@@ -60,34 +142,97 @@ title: Clouds (Parasites)
   margin: 10px;
 }
 
-.centered {
-text-align: center;
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
 }
 
-.content {
-  max-width: 700px;
-  align-self: center;
-  display: inline-block;
-  text-align: left;
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
 }
 
-.fullwidth {
-  width: 100%;
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
 }
 
-h3 {
-  text-align: left;
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
 }
 
-td {
-    text-align: center;
-    vertical-align: top;
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
 }
 
-.blend {
-  text-align: left;
-  vertical-align: middle;
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
 }
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     text-align: center;
+     padding-bottom: 3px;
+     width: 25%;
+     padding: 0px;
+}
+
+/* iOS-like button */
 
 .button {
   background-color: #007dd8;
@@ -102,8 +247,7 @@ td {
   border-radius: 6px;
   width: 100%;
   box-sizing: border-box;
-}
-</style>General<br /><a href="#info">Info</a><br />
+}</style>General<br /><a href="#info">Info</a><br />
 Modes<br /><a href="#granular">Granular Processor</a><br />
 <a href="#pitchshift">Pitch Shifter / Time Stretch</a><br />
 <a href="#delay">Looping Delay</a><br />
@@ -114,12 +258,14 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
     <div class="content">
       <h3>Clouds Parasites</h3>
       <p>Clouds is a multi-function granular audio processor by Mutable Instruments.<br><br>
-      Clouds Parasites is a free alternate firmware for Clouds by Matthias Puech that adds functionality to existing modes, as well as adding dedicated reverb and resonator modes.
+      Clouds Parasites is a free alternate firmware for Clouds by Matthias Puech that adds functionality to existing modes, as well as adding dedicated reverb and resonator modes.<br><br>
+      The layout of these cheat sheets are inspired by the original cheat sheet by Erstlaub.
       </p>
 <h3>Links</h3>
       <a class="button" href="https://mutable-instruments.net/modules/clouds/">Clouds Home</a><br>
       <a class="button" href="https://mqtthiqs.github.io/parasites/clouds.html">Clouds Parasites Home</a><br>
       <a class="button" href="https://mutable-instruments.net/modules/clouds/manual/">Clouds Manual</a><br>
+      <a class="button" href="http://erstlaub.co.uk">Erstlaub home</a><br>
     </div>
   </div>
 <br /><br />
@@ -146,12 +292,12 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             <div class="led"></div>
           </td>
 
-          <td class="blend">Press to freeze buffer / hold to
+          <td>Press to freeze buffer / hold to
           reverse</td>
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="bigknob red"></div>
@@ -173,7 +319,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="smallknob red"></div>
@@ -217,7 +363,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Dry/Wet</td>
+          <td>Dry/Wet</td>
         </tr>
 
         <tr>
@@ -233,7 +379,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Stereo Spread</td>
+          <td>Stereo Spread</td>
         </tr>
 
         <tr>
@@ -249,7 +395,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Feedback</td>
+          <td>Feedback</td>
         </tr>
 
         <tr>
@@ -265,7 +411,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Reverb</td>
+          <td>Reverb</td>
         </tr>
       </table>
     </div>
@@ -293,11 +439,11 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             <div class="led"></div>
           </td>
 
-          <td class="blend">loop</td>
+          <td>loop</td>
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="bigknob red"></div>
@@ -319,7 +465,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="smallknob red"></div>
@@ -364,7 +510,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Dry/Wet</td>
+          <td>Dry/Wet</td>
         </tr>
 
         <tr>
@@ -380,7 +526,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Stereo Spread</td>
+          <td>Stereo Spread</td>
         </tr>
 
         <tr>
@@ -396,7 +542,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Feedback</td>
+          <td>Feedback</td>
         </tr>
 
         <tr>
@@ -412,7 +558,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Reverb</td>
+          <td>Reverb</td>
         </tr>
       </table>
     </div>
@@ -440,11 +586,11 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             <div class="led"></div>
           </td>
 
-          <td class="blend">loop / hold to reverse loop</td>
+          <td>loop / hold to reverse loop</td>
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="bigknob red"></div>
@@ -467,7 +613,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="smallknob red"></div>
@@ -511,7 +657,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Dry/Wet</td>
+          <td>Dry/Wet</td>
         </tr>
 
         <tr>
@@ -527,7 +673,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Stereo Spread</td>
+          <td>Stereo Spread</td>
         </tr>
 
         <tr>
@@ -543,7 +689,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Feedback</td>
+          <td>Feedback</td>
         </tr>
 
         <tr>
@@ -559,7 +705,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Reverb</td>
+          <td>Reverb</td>
         </tr>
       </table>
     </div>
@@ -626,7 +772,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
       weakest ones. This has the effect of making the spectrum more
       noise-like.<br>
       <br>
-      - Olivier Gillet, via Muffwiggler</p>
+      - Émilie Gillet, via Muffwiggler</p>
     </div>
   </div>
 <br /><br /><a name="oliverb"></a><h2>Oliverb</h2>
@@ -652,11 +798,11 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             <div class="led"></div>
           </td>
 
-          <td class="blend">infinite decay</td>
+          <td>infinite decay</td>
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="bigknob red"></div>
@@ -678,7 +824,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="smallknob red"></div>
@@ -722,7 +868,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Dry/Wet</td>
+          <td>Dry/Wet</td>
         </tr>
 
         <tr>
@@ -738,7 +884,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Diffusion</td>
+          <td>Diffusion</td>
         </tr>
 
         <tr>
@@ -754,7 +900,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Modulation Speed</td>
+          <td>Modulation Speed</td>
         </tr>
 
         <tr>
@@ -770,7 +916,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Modulation Amount</td>
+          <td>Modulation Amount</td>
         </tr>
       </table>
     </div>
@@ -798,11 +944,11 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             <div class="led"></div>
           </td>
 
-          <td class="blend">switch voices</td>
+          <td>switch voices</td>
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="bigknob red"></div>
@@ -825,7 +971,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
         </tr>
       </table>
 
-      <table class="fullwidth">
+      <table class="fullwidth panel">
         <tr>
           <td>
             <div class="smallknob red"></div>
@@ -869,7 +1015,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Random Modulation<br>
+          <td>Random Modulation<br>
           Of Comb Delay Time</td>
         </tr>
 
@@ -886,7 +1032,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Stereo Output</td>
+          <td>Stereo Output</td>
         </tr>
 
         <tr>
@@ -902,7 +1048,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Harmonics</td>
+          <td>Harmonics</td>
         </tr>
 
         <tr>
@@ -918,7 +1064,7 @@ Modes<br /><a href="#granular">Granular Processor</a><br />
             </div>
           </td>
 
-          <td class="blend">Scatter</td>
+          <td>Scatter</td>
         </tr>
       </table>
     </div>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Modes" modelist="true">
+      <page name="Crossfade" icon="img/01_doppler.png" content="crossfade.html"/>
+      <page name="Crossfold" icon="img/02_wavefolder.png" content="crossfold.html"/>
+      <page name="Diode Ring-Modulation" icon="img/03_chebyshev.png" content="diode_ring.html"/>
+      <page name="Digital Ring-Modulation" icon="img/04_shifter.png" content="digital_ring.html"/>
+      <page name="XOR Modulation" icon="img/05_mangler.png" content="xor.html"/>
+      <page name="Comparison / Rectifier" icon="img/06_comparator.png" content="compare.html"/>
+      <page name="Vocoder" icon="img/07_vocoder.png" content="vocoder.html"/>
+    </section>
+  </sections>
+</module>
