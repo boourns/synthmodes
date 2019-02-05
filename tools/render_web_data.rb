@@ -95,7 +95,7 @@ doc = File.open("data/modules.xml") { |f| Nokogiri::XML(f) }
 
 modules = []
 
-doc.xpath("//modules//module").each do |xml|
+doc.xpath("//modules//manufacturer//module").each do |xml|
   modules << ModuleEntry.new(xml)
 end
 
