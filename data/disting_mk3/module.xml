@@ -65,6 +65,7 @@
         <tags>
           <tag>effect</tag>
           <tag>delay</tag>
+          <tag>clocked</tag>
         </tags>
       </page>
       <page name="4-a LFO" content="b5_lfo.html" icon="img/4-a.png">
@@ -105,12 +106,14 @@
         <tags>
           <tag>effect</tag>
           <tag>delay</tag>
+          <tag>clocked</tag>
         </tags>
       </page>
       <page name="1-d Clockable Ping Pong Delay (Z input pan)" content="c4_clockable_ping_pong_delay_z_input_pan.html" icon="img/1-d.png">
         <tags>
           <tag>effect</tag>
           <tag>delay</tag>
+          <tag>clocked</tag>
         </tags>
       </page>
       <page name="2-a Resonator" content="c5_resonator.html" icon="img/2-a.png">
