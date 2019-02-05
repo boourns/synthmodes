@@ -79,10 +79,7 @@ title: #{@name}
   end
 
   def css
-    css_files = Dir["#{@directory}/*.css"]
-    if css_files.empty?
-      css_files = Dir["data/common.css"]
-    end
+    css_files = Dir["#{@directory}/*.css"] + Dir["data/common.css"]
     "<style>" + css_files.map { |f| File.read(f) }.join("\n") + "</style>"
   end
 
