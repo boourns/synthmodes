@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <modules>
+  <module name="Black Hole DSP 2" id="black_hole_dsp_2" index="black_hole_dsp_2/module.xml"/>
   <module name="Braids" id="braids_stock" index="braids_stock/module.xml"/>
   <module name="Braids (Renaissance)" id="braids_renaissance" index="braids_renaissance/module.xml"/>
   <module name="Clouds" id="clouds_stock" index="clouds_stock/module.xml"/>
@@ -13,6 +14,7 @@
   <module name="Peaks (Dead Man's Catch)" id="peaks_dmc" index="peaks_dmc/module.xml"/>
   <module name="Pico Logic" id="pico_logic" index="pico_logic/module.xml"/>
   <module name="Rings" id="rings" index="rings/module.xml"/>
+  <module name="Plaits" id="plaits" index="plaits_stock/module.xml"/>
   <module name="Warps" id="warps_stock" index="warps_stock/module.xml"/>
   <module name="Warps (Parasites)" id="warps_parasites" index="warps_parasites/module.xml"/>
 </modules>
