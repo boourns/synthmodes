@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="Settings" content="settings.html"/>
+    </section>
+    <section name="Modes" modelist="true">
+      <page name="Frame - Keyframer" content="regular.html"/>
+      <page name="Frame CW - Autoplay Keyframer" content="autoplay.html"/>
+      <page name="1 - Quad Sequencer" content="sequencer.html"/>
+      <page name="2 - Shift Register Sequencer" content="shift.html"/>
+      <page name="3 - Quad LFO" content="oscillator.html"/>
+      <page name="4 - Euclidean Sequencer" content="euclidean.html"/>
+    </section>
+  </sections>
+</module>
