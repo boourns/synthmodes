@@ -249,3 +249,7 @@ img {
   width: 100%;
   box-sizing: border-box;
 }
+
+a.button:visited {
+  color:white;
+}
