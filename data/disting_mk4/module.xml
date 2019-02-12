@@ -240,7 +240,7 @@
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="F4 Clockable AD Envelope &amp; VCA)" content="f4_clockable_ad_envelope_vca.html">
+      <page name="F4 Clockable AD Envelope &amp; VCA" content="f4_clockable_ad_envelope_vca.html">
         <tags>
           <tag>modulation</tag>
           <tag>envelope</tag>
@@ -342,7 +342,7 @@
           <tag>quantizer</tag>
         </tags>
       </page>
-      <page name="H5 Dual Euclidean Patterns" content="h4_dual_euclidean_patterns.html">
+      <page name="H5 Dual Euclidean Patterns" content="h5_dual_euclidean_patterns.html">
         <tags>
           <tag>random</tag>
         </tags>
@@ -394,12 +394,12 @@
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="I7 Dual audio playback" content="i7_dual_audio_playback.html">
+      <page name="I7 Dual Audio Playback" content="i7_dual_audio_playback.html">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="I8 Dual audio playback (Z speed)" content="i8_dual_audio_playback_z_speed.html">
+      <page name="I8 Dual Audio Playback (Z speed)" content="i8_dual_audio_playback_z_speed.html">
         <tags>
           <tag>wave</tag>
         </tags>
