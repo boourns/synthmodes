@@ -5,242 +5,242 @@
       <page name="Info" content="info.html"/>
     </section>
     <section name="Algorithms" modelist="true">
-      <page name="A1 Precision Adder" content="a1_precision_adder.html">
+      <page name="A1 Precision Adder" icon="img/a1.png" content="a1_precision_adder.html">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="A2 Four Quadrant Multiplier" content="a2_four_quadrant_multiplier.html">
+      <page name="A2 Four Quadrant Multiplier" icon="img/a2.png" content="a2_four_quadrant_multiplier.html">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="A3 Full-wave Rectifier / abs()" content="a3_full_wave_rectifier_abs.html">
+      <page name="A3 Full-wave Rectifier / abs()" content="a3_full_wave_rectifier_abs.html" icon="img/a3.png">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="A4 Minimum / Maximum" content="a4_minimum_maximum.html">
+      <page name="A4 Minimum / Maximum" content="a4_minimum_maximum.html" icon="img/a4.png">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="A5 Linear / Exponential Converter" content="a5_linear_exponential_converter.html">
+      <page name="A5 Linear / Exponential Converter" content="a5_linear_exponential_converter.html" icon="img/a5.png">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="A6 Quantizer" content="a6_quantizer.html">
+      <page name="A6 Quantizer" content="a6_quantizer.html" icon="img/a6.png">
         <tags>
           <tag>quantizer</tag>
         </tags>
       </page>
-      <page name="A7 Comparator" content="a7_comparator.html">
+      <page name="A7 Comparator" content="a7_comparator.html" icon="img/a7.png">
         <tags>
           <tag>logic</tag>
         </tags>
       </page>
-      <page name="A8 Dual Waveshaper" content="a8_dual_waveshaper.html">
+      <page name="A8 Dual Waveshaper" content="a8_dual_waveshaper.html" icon="img/a8.png">
         <tags>
           <tag>effect</tag>
         </tags>
       </page>
-      <page name="B1 Sample and Hold" content="b1_sample_and_hold.html">
+      <page name="B1 Sample and Hold" content="b1_sample_and_hold.html" icon="img/b1.png">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="B2 Slew Rate Limiter" content="b2_slew_rate_limiter.html">
+      <page name="B2 Slew Rate Limiter" content="b2_slew_rate_limiter.html" icon="img/b2.png">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="B3 Pitch &amp; Envelope Tracker" content="b3_pitch_envelope_tracker.html">
+      <page name="B3 Pitch &amp; Envelope Tracker" content="b3_pitch_envelope_tracker.html" icon="img/b3.png">
         <tags>
           <tag>external</tag>
           <tag>envelope</tag>
         </tags>
       </page>
-      <page name="B4 Clockable Delay/Echo" content="b4_clockable_delayecho.html">
+      <page name="B4 Clockable Delay/Echo" content="b4_clockable_delayecho.html" icon="img/b4.png">
         <tags>
           <tag>effect</tag>
           <tag>delay</tag>
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="B5 LFO" content="b5_lfo.html">
+      <page name="B5 LFO" content="b5_lfo.html" icon="img/b5.png">
         <tags>
           <tag>LFO</tag>
         </tags>
       </page>
-      <page name="B6 Clocked LFO" content="b6_clocked_lfo.html">
+      <page name="B6 Clocked LFO" content="b6_clocked_lfo.html" icon="img/b6.png">
         <tags>
           <tag>LFO</tag>
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="B7 VCO with linear FM" content="b7_vco_with_linear_fm.html">
+      <page name="B7 VCO with linear FM" content="b7_vco_with_linear_fm.html" icon="img/b7.png">
         <tags>
           <tag>oscillator</tag>
         </tags>
       </page>
-      <page name="B8 VCO with waveshaping" content="b8_vco_with_waveshaping.html">
+      <page name="B8 VCO with waveshaping" content="b8_vco_with_waveshaping.html" icon="img/b8.png">
         <tags>
           <tag>oscillator</tag>
         </tags>
       </page>
-      <page name="C1 Precision Adder (fractional offsets)" content="c1_precision_adder_fractional_offsets.html">
+      <page name="C1 Precision Adder (fractional offsets)" content="c1_precision_adder_fractional_offsets.html" icon="img/c1.png">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="C2 Voltage Controlled Delay Line" content="c2_voltage_controlled_delay_line.html">
+      <page name="C2 Voltage Controlled Delay Line" content="c2_voltage_controlled_delay_line.html" icon="img/c2.png">
         <tags>
           <tag>effect</tag>
           <tag>delay</tag>
         </tags>
       </page>
-      <page name="C3 Clockable Ping Pong Delay (Z feedback)" content="c3_clockable_ping_pong_delay_z_feedback.html">
-        <tags>
-          <tag>effect</tag>
-          <tag>delay</tag>
-          <tag>clocked</tag>
-        </tags>
-      </page>
-      <page name="C4 Clockable Ping Pong Delay (Z input pan)" content="c4_clockable_ping_pong_delay_z_input_pan.html">
+      <page name="C3 Clockable Ping Pong Delay (Z feedback)" content="c3_clockable_ping_pong_delay_z_feedback.html" icon="img/c3.png">
         <tags>
           <tag>effect</tag>
           <tag>delay</tag>
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="C5 Resonator" content="c5_resonator.html">
+      <page name="C4 Clockable Ping Pong Delay (Z input pan)" content="c4_clockable_ping_pong_delay_z_input_pan.html" icon="img/c4.png">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+          <tag>clocked</tag>
+        </tags>
+      </page>
+      <page name="C5 Resonator" content="c5_resonator.html" icon="img/c5.png">
         <tags>
           <tag>effect</tag>
         </tags>
       </page>
-      <page name="C6 Vocoder" content="c6_vocoder.html">
+      <page name="C6 Vocoder" content="c6_vocoder.html" icon="img/c6.png">
         <tags>
           <tag>effect</tag>
         </tags>
       </page>
-      <page name="C7 Phaser" content="c7_phaser.html">
+      <page name="C7 Phaser" content="c7_phaser.html" icon="img/c7.png">
         <tags>
           <tag>effect</tag>
         </tags>
       </page>
-      <page name="C8 Bit Crusher" content="c8_bit_crusher.html">
+      <page name="C8 Bit Crusher" content="c8_bit_crusher.html" icon="img/c8.png">
         <tags>
           <tag>effect</tag>
         </tags>
       </page>
-      <page name="D2 Tape Delay" content="d2_tape_delay.html">
+      <page name="D2 Tape Delay" content="d2_tape_delay.html" icon="img/d2.png">
         <tags>
           <tag>effect</tag>
           <tag>delay</tag>
         </tags>
       </page>
-      <page name="D3 Waveform Animator" content="d3_waveform_animator.html">
+      <page name="D3 Waveform Animator" content="d3_waveform_animator.html" icon="img/d3.png">
         <tags>
           <tag>effect</tag>
         </tags>
       </page>
-      <page name="D4 State Variable Filter" content="d4_state_variable_filter.html">
+      <page name="D4 State Variable Filter" content="d4_state_variable_filter.html" icon="img/d4.png">
         <tags>
           <tag>filter</tag>
         </tags>
       </page>
-      <page name="D5 LP/HP Filter" content="d5_lphp_filter.html">
+      <page name="D5 LP/HP Filter" content="d5_lphp_filter.html" icon="img/d5.png">
         <tags>
           <tag>filter</tag>
         </tags>
       </page>
-      <page name="D6 LP/BP Filter" content="d6_lpbp_filter.html">
+      <page name="D6 LP/BP Filter" content="d6_lpbp_filter.html" icon="img/d6.png">
         <tags>
           <tag>filter</tag>
         </tags>
       </page>
-      <page name="D7 BP/HP Filter" content="d7_bphp_filter.html">
+      <page name="D7 BP/HP Filter" content="d7_bphp_filter.html" icon="img/d7.png">
         <tags>
           <tag>filter</tag>
         </tags>
       </page>
-      <page name="D8 BP/Notch Filter" content="d8_bpnotch_filter.html">
+      <page name="D8 BP/Notch Filter" content="d8_bpnotch_filter.html" icon="img/d8.png">
         <tags>
           <tag>filter</tag>
         </tags>
       </page>
-      <page name="E1 AR Envelope" content="e1_ar_envelope.html">
+      <page name="E1 AR Envelope" content="e1_ar_envelope.html" icon="img/e1.png">
         <tags>
           <tag>modulation</tag>
           <tag>envelope</tag>
         </tags>
       </page>
-      <page name="E2 AR Envelope &amp; VCA" content="e2_ar_envelope_vca.html">
+      <page name="E2 AR Envelope &amp; VCA" content="e2_ar_envelope_vca.html" icon="img/e2.png">
         <tags>
           <tag>modulation</tag>
           <tag>envelope</tag>
           <tag>VCA</tag>
         </tags>
       </page>
-      <page name="E3 Dual AR Envelope" content="e3_dual_ar_envelope.html">
+      <page name="E3 Dual AR Envelope" content="e3_dual_ar_envelope.html" icon="img/e3.png">
         <tags>
           <tag>modulation</tag>
           <tag>envelope</tag>
         </tags>
       </page>
-      <page name="E4 Stereo Compressor" content="e4_stereo_compressor.html">
+      <page name="E4 Stereo Compressor" content="e4_stereo_compressor.html" icon="img/e4.png">
         <tags>
           <tag>effect</tag>
           <tag>compressor</tag>
         </tags>
       </page>
-      <page name="E5 Side-chain Compressor" content="e5_side_chain_compressor.html">
+      <page name="E5 Side-chain Compressor" content="e5_side_chain_compressor.html" icon="img/e5.png">
         <tags>
           <tag>effect</tag>
           <tag>compressor</tag>
         </tags>
       </page>
-      <page name="E6 Mono Compressor" content="e6_mono_compressor.html">
+      <page name="E6 Mono Compressor" content="e6_mono_compressor.html" icon="img/e6.png">
         <tags>
           <tag>effect</tag>
           <tag>compressor</tag>
         </tags>
       </page>
-      <page name="E7 Euro to Buchla Converter" content="e7_euro_to_buchla_converter.html">
+      <page name="E7 Euro to Buchla Converter" content="e7_euro_to_buchla_converter.html" icon="img/e7.png">
         <tags>
           <tag>utility</tag>
           <tag>external</tag>
         </tags>
       </page>
-      <page name="E8 Buchla to Euro Converter" content="e8_buchla_to_euro_converter.html">
+      <page name="E8 Buchla to Euro Converter" content="e8_buchla_to_euro_converter.html" icon="img/e8.png">
         <tags>
           <tag>utility</tag>
           <tag>external</tag>
         </tags>
       </page>
-      <page name="F1 Clockable AD Envelope (w/ mute)" content="f1_clockable_ad_envelope_w_mute.html">
+      <page name="F1 Clockable AD Envelope (w/ mute)" content="f1_clockable_ad_envelope_w_mute.html" icon="img/f1.png">
         <tags>
           <tag>modulation</tag>
           <tag>envelope</tag>
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="F2 Clockable AD Envelope (w/ gate)" content="f2_clockable_ad_envelope_w_gate.html">
+      <page name="F2 Clockable AD Envelope (w/ gate)" content="f2_clockable_ad_envelope_w_gate.html" icon="img/f2.png">
         <tags>
           <tag>modulation</tag>
           <tag>envelope</tag>
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="F3 Clockable AD Envelope (w/ trigger)" content="f3_clockable_ad_envelope_w_trigger.html">
+      <page name="F3 Clockable AD Envelope (w/ trigger)" content="f3_clockable_ad_envelope_w_trigger.html" icon="img/f3.png">
         <tags>
           <tag>modulation</tag>
           <tag>envelope</tag>
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="F4 Clockable AD Envelope &amp; VCA" content="f4_clockable_ad_envelope_vca.html">
+      <page name="F4 Clockable AD Envelope &amp; VCA" content="f4_clockable_ad_envelope_vca.html" icon="img/f4.png">
         <tags>
           <tag>modulation</tag>
           <tag>envelope</tag>
@@ -248,257 +248,257 @@
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="F5 Shift Register Random CVs" content="f5_shift_register_random_c_vs.html">
+      <page name="F5 Shift Register Random CVs" content="f5_shift_register_random_c_vs.html" icon="img/f5.png">
         <tags>
           <tag>modulation</tag>
           <tag>random</tag>
         </tags>
       </page>
-      <page name="F6 Shift Register Random Quantized CVs" content="f6_shift_register_random_quantized_c_vs.html">
+      <page name="F6 Shift Register Random Quantized CVs" content="f6_shift_register_random_quantized_c_vs.html" icon="img/f6.png">
         <tags>
           <tag>modulation</tag>
           <tag>random</tag>
           <tag>quantizer</tag>
         </tags>
       </page>
-      <page name="F7 Shift Register Random Triggers" content="f7_shift_register_random_triggers.html">
+      <page name="F7 Shift Register Random Triggers" content="f7_shift_register_random_triggers.html" icon="img/f7.png">
         <tags>
           <tag>modulation</tag>
           <tag>random</tag>
         </tags>
       </page>
-      <page name="F8 Shift Register Random Dual Triggers" content="f8_shift_register_random_dual_triggers.html">
+      <page name="F8 Shift Register Random Dual Triggers" content="f8_shift_register_random_dual_triggers.html" icon="img/f8.png">
         <tags>
           <tag>modulation</tag>
           <tag>random</tag>
         </tags>
       </page>
-      <page name="G1 ES-1 Emulation" content="g1_es_1_emulation.html">
+      <page name="G1 ES-1 Emulation" content="g1_es_1_emulation.html" icon="img/g1.png">
         <tags>
           <tag>utility</tag>
           <tag>external</tag>
         </tags>
       </page>
-      <page name="G2 ES-2 Emulation" content="g2_es_2_emulation.html">
+      <page name="G2 ES-2 Emulation" content="g2_es_2_emulation.html" icon="img/g2.png">
         <tags>
           <tag>utility</tag>
           <tag>external</tag>
         </tags>
       </page>
-      <page name="G3 Pitch Reference" content="g3_pitch_reference.html">
+      <page name="G3 Pitch Reference" content="g3_pitch_reference.html" icon="img/g3.png">
         <tags>
           <tag>utility</tag>
           <tag>reference</tag>
         </tags>
       </page>
-      <page name="G4 Frequency Reference" content="g4_frequency_reference.html">
+      <page name="G4 Frequency Reference" content="g4_frequency_reference.html" icon="img/g4.png">
         <tags>
           <tag>utility</tag>
           <tag>reference</tag>
         </tags>
       </page>
-      <page name="G5 Tuner" content="g5_tuner.html">
+      <page name="G5 Tuner" content="g5_tuner.html" icon="img/g5.png">
         <tags>
           <tag>utility</tag>
           <tag>reference</tag>
         </tags>
       </page>
-      <page name="G6 MIDI Clock" content="g6_midi_clock.html">
+      <page name="G6 MIDI Clock" content="g6_midi_clock.html" icon="img/g6.png">
         <tags>
           <tag>utility</tag>
           <tag>midi</tag>
         </tags>
       </page>
-      <page name="G7 MIDI/CV" content="g7_midicv.html">
+      <page name="G7 MIDI/CV" content="g7_midicv.html" icon="img/g7.png">
         <tags>
           <tag>utility</tag>
           <tag>midi</tag>
         </tags>
       </page>
-      <page name="G8 CV/MIDI" content="g8_cvmidi.html">
+      <page name="G8 CV/MIDI" content="g8_cvmidi.html" icon="img/g8.png">
         <tags>
           <tag>utility</tag>
           <tag>midi</tag>
         </tags>
       </page>
-      <page name="H1 Crossfade/Pan" content="h1_crossfadepan.html">
+      <page name="H1 Crossfade/Pan" content="h1_crossfadepan.html" icon="img/h1.png">
         <tags>
           <tag>utility</tag>
           <tag>VCA</tag>
         </tags>
       </page>
-      <page name="H2 Dual Sample and Hold" content="h2_dual_sample_and_hold.html">
+      <page name="H2 Dual Sample and Hold" content="h2_dual_sample_and_hold.html" icon="img/h2.png">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="H3 Dual Quantizer (Z scale)" content="h3_dual_quantizer_z_scale.html">
+      <page name="H3 Dual Quantizer (Z scale)" content="h3_dual_quantizer_z_scale.html" icon="img/h3.png">
         <tags>
           <tag>quantizer</tag>
         </tags>
       </page>
-      <page name="H4 Dual Quantizer" content="h4_dual_quantizer.html">
+      <page name="H4 Dual Quantizer" content="h4_dual_quantizer.html" icon="img/h4.png">
         <tags>
           <tag>quantizer</tag>
         </tags>
       </page>
-      <page name="H5 Dual Euclidean Patterns" content="h5_dual_euclidean_patterns.html">
+      <page name="H5 Dual Euclidean Patterns" content="h5_dual_euclidean_patterns.html" icon="img/h5.png">
         <tags>
           <tag>random</tag>
         </tags>
       </page>
-      <page name="H6 Dual Delayed Pulse Generator" content="h6_dual_delayed_pulse_generator.html">
+      <page name="H6 Dual Delayed Pulse Generator" content="h6_dual_delayed_pulse_generator.html" icon="img/h6.png">
         <tags>
           <tag>utility</tag>
         </tags>
       </page>
-      <page name="H7 Noise" content="h7_noise.html">
+      <page name="H7 Noise" content="h7_noise.html" icon="img/h7.png">
         <tags>
           <tag>noise</tag>
         </tags>
       </page>
-      <page name="H8 Quantizer 2" content="h8_quantizer_2.html">
+      <page name="H8 Quantizer 2" content="h8_quantizer_2.html" icon="img/h8.png">
         <tags>
           <tag>quantizer</tag>
         </tags>
       </page>
-      <page name="I1 Audio Playback" content="i1_audio_playback.html">
+      <page name="I1 Audio Playback" content="i1_audio_playback.html" icon="img/i1.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="I2 Clocked Audio Playback" content="i2_clocked_audio_playback.html">
+      <page name="I2 Clocked Audio Playback" content="i2_clocked_audio_playback.html" icon="img/i2.png">
         <tags>
           <tag>wave</tag>
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="I3 Audio Playback (V/oct)" content="i3_audio_playback_voct.html">
+      <page name="I3 Audio Playback (V/oct)" content="i3_audio_playback_voct.html" icon="img/i3.png">
         <tags>
           <tag>wave</tag>
           <tag>oscillator</tag>
         </tags>
       </page>
-      <page name="I4 Audio Playback (Z speed)" content="i4_audio_playback_z_speed.html">
+      <page name="I4 Audio Playback (Z speed)" content="i4_audio_playback_z_speed.html" icon="img/i4.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="I5 Audio Playback (with reverse)" content="i5_audio_playback_with_reverse.html">
+      <page name="I5 Audio Playback (with reverse)" content="i5_audio_playback_with_reverse.html" icon="img/i5.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="I6 Audio Playback (with scrub)" content="i6_audio_playback_with_scrub.html">
+      <page name="I6 Audio Playback (with scrub)" content="i6_audio_playback_with_scrub.html" icon="img/i6.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="I7 Dual Audio Playback" content="i7_dual_audio_playback.html">
+      <page name="I7 Dual Audio Playback" content="i7_dual_audio_playback.html" icon="img/i7.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="I8 Dual Audio Playback (Z speed)" content="i8_dual_audio_playback_z_speed.html">
+      <page name="I8 Dual Audio Playback (Z speed)" content="i8_dual_audio_playback_z_speed.html" icon="img/i8.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="J1 MIDI file playback (clocked)" content="j1_midi_file_playback_clocked.html">
+      <page name="J1 MIDI file playback (clocked)" content="j1_midi_file_playback_clocked.html" icon="img/j1.png">
         <tags>
           <tag>midi</tag>
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="J3 MIDI file playback (Free Running)" content="j3_midi_file_playback_free_running.html">
+      <page name="J3 MIDI file playback (Free Running)" content="j3_midi_file_playback_free_running.html" icon="img/j3.png">
         <tags>
           <tag>midi</tag>
         </tags>
       </page>
-      <page name="J4 Audio Playback (end position CV)" content="j4_audio_playback_end_position_cv.html">
+      <page name="J4 Audio Playback (end position CV)" content="j4_audio_playback_end_position_cv.html" icon="img/j4.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="J5 Audio Recorder" content="j5_audio_recorder.html">
+      <page name="J5 Audio Recorder" content="j5_audio_recorder.html" icon="img/j5.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="J6 Multisample Audio Playback" content="j6_multisample_audio_playback.html">
+      <page name="J6 Multisample Audio Playback" content="j6_multisample_audio_playback.html" icon="img/j6.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="J7 Mono Audio Recorder" content="j7_audio_recorder.html">
+      <page name="J7 Mono Audio Recorder" content="j7_audio_recorder.html" icon="img/j7.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="J8 Audio Playback with Crossfade" content="j8_audio_playback_with_crossfade.html">
+      <page name="J8 Audio Playback with Crossfade" content="j8_audio_playback_with_crossfade.html" icon="img/j8.png">
         <tags>
           <tag>wave</tag>
         </tags>
       </page>
-      <page name="K1 Wavetable VCO" content="k1_wavetable_vco.html">
+      <page name="K1 Wavetable VCO" content="k1_wavetable_vco.html" icon="img/k1.png">
         <tags>
           <tag>wave</tag>
           <tag>oscillator</tag>
         </tags>
       </page>
-      <page name="K5 Programmable Quantizer" content="k5_programmable_quantizer.html">
+      <page name="K5 Programmable Quantizer" content="k5_programmable_quantizer.html" icon="img/k5.png">
         <tags>
           <tag>quantizer</tag>
         </tags>
       </page>
-      <page name="L1 Stereo Reverb" content="l1_stereo_reverb.html">
+      <page name="L1 Stereo Reverb" content="l1_stereo_reverb.html" icon="img/l1.png">
         <tags>
           <tag>effect</tag>
           <tag>reverb</tag>
         </tags>
       </page>
-      <page name="L2 Mono-to-Stereo Reverb" content="l2_mono_to_stereo_reverb.html">
+      <page name="L2 Mono-to-Stereo Reverb" content="l2_mono_to_stereo_reverb.html" icon="img/l2.png">
         <tags>
           <tag>effect</tag>
           <tag>reverb</tag>
         </tags>
       </page>
-      <page name="L3 Dual Reverb" content="l3_dual_reverb.html">
+      <page name="L3 Dual Reverb" content="l3_dual_reverb.html" icon="img/l3.png">
         <tags>
           <tag>effect</tag>
           <tag>reverb</tag>
         </tags>
       </page>
-      <page name="L5 Stereo Chorus" content="l5_stereo_chorus.html">
+      <page name="L5 Stereo Chorus" content="l5_stereo_chorus.html" icon="img/l5.png">
         <tags>
           <tag>effect</tag>
           <tag>reverb</tag>
         </tags>
       </page>
-      <page name="L6 Mono Chorus" content="l6_mono_chorus.html">
+      <page name="L6 Mono Chorus" content="l6_mono_chorus.html" icon="img/l6.png">
         <tags>
           <tag>effect</tag>
           <tag>reverb</tag>
         </tags>
       </page>
-      <page name="L8 Noise Gate" content="l8_noise_gate.html">
+      <page name="L8 Noise Gate" content="l8_noise_gate.html" icon="img/l8.png">
         <tags>
           <tag>effect</tag>
         </tags>
       </page>
-      <page name="M1 Delayed LFO" content="m1_delayed_lfo.html">
+      <page name="M1 Delayed LFO" content="m1_delayed_lfo.html" icon="img/m1.png">
         <tags>
           <tag>modulation</tag>
           <tag>LFO</tag>
         </tags>
       </page>
-      <page name="M2 Scaled LFO" content="m2_scaled_lfo.html">
+      <page name="M2 Scaled LFO" content="m2_scaled_lfo.html" icon="img/m2.png">
         <tags>
           <tag>modulation</tag>
           <tag>LFO</tag>
         </tags>
       </page>
-      <page name="M3 Logic" content="m3_logic.html">
+      <page name="M3 Logic" content="m3_logic.html" icon="img/m3.png">
         <tags>
           <tag>utility</tag>
           <tag>logic</tag>

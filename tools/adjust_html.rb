@@ -26,10 +26,8 @@ def adjust_xml
   xml = File.open("module.xml") { |f| Nokogiri::XML(f) }
 
   xml.xpath("//module//sections//section//page").each do |page|
-    if page["name"][1] == "-"
-      ref = page["name"][0..2]
-      page["icon"] = "img/#{ref}.png"
-    end
+    ref = page["name"][0..1].downcase
+    page["icon"] = "img/#{ref}.png"
   end
 
   File.write("module.xml", xml.to_s)
