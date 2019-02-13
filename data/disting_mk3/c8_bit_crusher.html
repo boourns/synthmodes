@@ -119,7 +119,7 @@
     </tr>
 
     <tr>
-      <td colspan="4">bit reduction mode</td>
+      <td colspan="4">bit reduction mode.  See table below.</td>
     </tr>
   </table>
 <br>
@@ -146,10 +146,45 @@
     </tr>
 
     <tr>
-      <td colspan="4">bit mangling mode. Bit swap, rotation, or XOR
-      depending on value.</td>
+      <td colspan="4">bit mangling mode.  See table below.</td>
     </tr>
   </table>
-<br>
+
+  <p>
+    <h3>Bit Reduction Modes</h3>
+    There are 2 bit reduction modes.<br>
+    <b>Type I</b>: sample treated as 16 bit values, low bits thrown away.  Each step in bit reduction halves the resolution.<br>
+    <b>Type II</b>: sample is divided by a factor.  Allows for a smoother reduction of resolution.<br>
+    Parameter 1 controls which bit reduction type applies to negative and positive values.<br><br>
+    <table class="bordered chart">
+      <tr>
+        <th>Parameter&nbsp;1</th><th>Positive</th><th>Negative</th>
+      </tr>
+      <tr><td>0</td><td>Type I</td><td>Type I</td></tr>
+      <tr><td>1</td><td>Type II</td><td>Type II</td></tr>
+      <tr><td>2</td><td>Type I</td><td>Type II</td></tr>
+      <tr><td>3</td><td>Type II</td><td>Type I</td></tr>
+      <tr><td>4</td><td>Type I</td><td>None</td></tr>
+      <tr><td>5</td><td>Type II</td><td>None</td></tr>
+      <tr><td>6</td><td>None</td><td>Type I</td></tr>
+      <tr><td>7</td><td>None</td><td>Type I</td></tr>
+    </table>
+  </p>
+  <p>
+    <h3>Bit Mangling Modes</h3>
+    <table class="bordered chart">
+      <tr>
+        <th>Parameter&nbsp;2</th><th>Operation</th>
+      </tr>
+      <tr><td>0</td><td>None</td></tr>
+      <tr><td>1</td><td>Bit swap 1</td></tr>
+      <tr><td>2</td><td>Bit swap 1</td></tr>
+      <tr><td>3</td><td>Bit swap 1</td></tr>
+      <tr><td>4</td><td>Bit rotation</td></tr>
+      <tr><td>5</td><td>Previous sample XOR 1</td></tr>
+      <tr><td>6</td><td>Previous sample XOR 2</td></tr>
+      <tr><td>7</td><td>Previous sample XOR 3</td></tr>
+    </table>
+  </p>
 </body>
 </html>

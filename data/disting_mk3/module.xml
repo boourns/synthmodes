@@ -245,7 +245,7 @@
           <tag>clocked</tag>
         </tags>
       </page>
-      <page name="3-d Clockable AD Envelope &amp; VCA)" content="f4_clockable_ad_envelope_vca.html" icon="img/3-d.png">
+      <page name="3-d Clockable AD Envelope &amp; VCA" content="f4_clockable_ad_envelope_vca.html" icon="img/3-d.png">
         <tags>
           <tag>modulation</tag>
           <tag>envelope</tag>
