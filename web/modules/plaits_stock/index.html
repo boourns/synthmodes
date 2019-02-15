@@ -2,16 +2,16 @@
 layout: page
 title: Plaits
 ---
-<style>table tr:nth-child(even) {
-  background: none;
-}
-
-.license {
+<style>.license {
   font-size: 12px;
 }
 
 body {
   font-family: -apple-system, sans-serif;
+}
+
+th {
+  text-align: left;
 }
 
 td {
@@ -114,6 +114,14 @@ img {
     text-align: center;
     vertical-align: top;
     width:1%;
+}
+
+.chart tr th {
+  padding-right: 8px;
+}
+
+.chart tr td:first-child {
+  width:1%;
 }
 
 .bordered {
@@ -239,10 +247,8 @@ img {
 }
 
 .parameter {
-     text-align: center;
-     padding-bottom: 3px;
+     /*text-align: center; */
      width: 25%;
-     padding: 0px;
 }
 
 /* iOS-like button */

@@ -6,6 +6,10 @@ title: Just Friends
   font-family: -apple-system, sans-serif;
 }
 
+th {
+  text-align: left;
+}
+
 td {
   text-align: left;
   vertical-align: middle;
@@ -106,6 +110,14 @@ img {
     text-align: center;
     vertical-align: top;
     width:1%;
+}
+
+.chart tr th {
+  padding-right: 8px;
+}
+
+.chart tr td:first-child {
+  width:1%;
 }
 
 .bordered {
@@ -231,10 +243,8 @@ img {
 }
 
 .parameter {
-     text-align: center;
-     padding-bottom: 3px;
+     /*text-align: center; */
      width: 25%;
-     padding: 0px;
 }
 
 /* iOS-like button */
@@ -513,7 +523,7 @@ Run Modes<br /><a href="#shape_cycle_run">Shape/Cycle/Run (VOLLEY)</a><br />
 			<br>
 			Negative voltages bring the sensitivity forward in the cycle to 'always' (-5v), while positive votlages push toward the end-of-cycle, operating equivalently to <em>SHAPE/TRANSIENT</em> at +5v.
 			<br>
-			Modulating <em>SHIFT</em> is particularly effective for slow envelopes with shark attacks!<br>
+			Modulating <em>SHIFT</em> is particularly effective for slow envelopes with sharp attacks!<br>
 			<br>
 			Other controls are inherited from <em>SHAPE/TRANSIENT</em>.
 		</p>

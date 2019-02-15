@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+
+    <section name="Programming" modelist="false">
+      <page name="Human" content="human.html"/>
+      <page name="Machine Tempo" content="machine.html"/>
+      <page name="Phase" content="phase.html"/>
+	  </section>
+
+    <section name="Pages" modelist="false">
+      <page name="Mute" content="mute.html"/>
+      <page name="Mod" content="mod.html"/>
+      <page name="Program Edit" content="program.html"/>
+	 	  <page name="State Edit" content="state.html"/>
+      <page name="Bank Edit" content="bank.html"/>
+      <page name="Clock Edit" content="clock.html"/>
+    </section> 
+  </sections>
+</module>
