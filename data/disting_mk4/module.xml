@@ -365,90 +365,131 @@
       <page name="I1 Audio Playback" content="i1_audio_playback.html" icon="img/i1.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="I2 Clocked Audio Playback" content="i2_clocked_audio_playback.html" icon="img/i2.png">
         <tags>
           <tag>wave</tag>
           <tag>clocked</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="I3 Audio Playback (V/oct)" content="i3_audio_playback_voct.html" icon="img/i3.png">
         <tags>
           <tag>wave</tag>
           <tag>oscillator</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="I4 Audio Playback (Z speed)" content="i4_audio_playback_z_speed.html" icon="img/i4.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="I5 Audio Playback (with reverse)" content="i5_audio_playback_with_reverse.html" icon="img/i5.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="I6 Audio Playback (with scrub)" content="i6_audio_playback_with_scrub.html" icon="img/i6.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="I7 Dual Audio Playback" content="i7_dual_audio_playback.html" icon="img/i7.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="I8 Dual Audio Playback (Z speed)" content="i8_dual_audio_playback_z_speed.html" icon="img/i8.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="J1 MIDI file playback (clocked)" content="j1_midi_file_playback_clocked.html" icon="img/j1.png">
         <tags>
           <tag>midi</tag>
           <tag>clocked</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="J3 MIDI file playback (Free Running)" content="j3_midi_file_playback_free_running.html" icon="img/j3.png">
         <tags>
           <tag>midi</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="J4 Audio Playback (end position CV)" content="j4_audio_playback_end_position_cv.html" icon="img/j4.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="J5 Audio Recorder" content="j5_audio_recorder.html" icon="img/j5.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="J6 Multisample Audio Playback" content="j6_multisample_audio_playback.html" icon="img/j6.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="J7 Mono Audio Recorder" content="j7_audio_recorder.html" icon="img/j7.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="J8 Audio Playback with Crossfade" content="j8_audio_playback_with_crossfade.html" icon="img/j8.png">
         <tags>
           <tag>wave</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="K1 Wavetable VCO" content="k1_wavetable_vco.html" icon="img/k1.png">
         <tags>
           <tag>wave</tag>
           <tag>oscillator</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="K5 Programmable Quantizer" content="k5_programmable_quantizer.html" icon="img/k5.png">
         <tags>
           <tag>quantizer</tag>
+          <tag>sd</tag>
+        </tags>
+      </page>
+      <page name="K6 Clockable SD Delay" content="k6_clockable_sd_delay.html" icon="img/k6.png">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+          <tag>clocked</tag>
+          <tag>sd</tag>
+        </tags>
+      </page>
+      <page name="K7 Stereo Clockable SD Delay" content="k7_stereo_clockable_sd_delay.html" icon="img/k7.png">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+          <tag>clocked</tag>
+          <tag>sd</tag>
+        </tags>
+      </page>
+      <page name="K8 Stereo Clockable SD Delay (Z clock)" content="k8_stereo_clockable_sd_delay_z_clock.html" icon="img/k8.png">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+          <tag>clocked</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="L1 Stereo Reverb" content="l1_stereo_reverb.html" icon="img/l1.png">
@@ -469,21 +510,26 @@
           <tag>reverb</tag>
         </tags>
       </page>
+      <page name="L4 Dual Vowel Filter" content="l4_dual_vowel_filter.html" icon="img/l4.png">
+        <tags>
+          <tag>filter</tag>
+        </tags>
+      </page>
       <page name="L5 Stereo Chorus" content="l5_stereo_chorus.html" icon="img/l5.png">
         <tags>
           <tag>effect</tag>
-          <tag>reverb</tag>
+          <tag>chorus</tag>
         </tags>
       </page>
       <page name="L6 Mono Chorus" content="l6_mono_chorus.html" icon="img/l6.png">
         <tags>
           <tag>effect</tag>
-          <tag>reverb</tag>
+          <tag>chorus</tag>
         </tags>
       </page>
       <page name="L8 Noise Gate" content="l8_noise_gate.html" icon="img/l8.png">
         <tags>
-          <tag>effect</tag>
+          <tag>utility</tag>
         </tags>
       </page>
       <page name="M1 Delayed LFO" content="m1_delayed_lfo.html" icon="img/m1.png">
