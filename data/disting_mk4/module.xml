@@ -134,6 +134,11 @@
           <tag>effect</tag>
         </tags>
       </page>
+      <page name="D1 DJ Filter" content="d1_dj_filter.html" icon="img/d1.png">
+        <tags>
+          <tag>filter</tag>
+        </tags>
+      </page>
       <page name="D2 Tape Delay" content="d2_tape_delay.html" icon="img/d2.png">
         <tags>
           <tag>effect</tag>
@@ -462,6 +467,21 @@
           <tag>sd</tag>
         </tags>
       </page>
+      <page name="K2 Clockable Wavetable VCO" content="k2_clockable_wavetable_lfo.html" icon="img/k2.png">
+        <tags>
+          <tag>wave</tag>
+          <tag>lfo</tag>
+          <tag>clocked</tag>
+          <tag>sd</tag>
+        </tags>
+      </page>
+      <page name="K3 Wavetable Waveshaper" content="k3_wavetable_waveshaper.html" icon="img/k3.png">
+        <tags>
+          <tag>wave</tag>
+          <tag>effect</tag>
+          <tag>sd</tag>
+        </tags>
+      </page>
       <page name="K5 Programmable Quantizer" content="k5_programmable_quantizer.html" icon="img/k5.png">
         <tags>
           <tag>quantizer</tag>
@@ -525,6 +545,11 @@
         <tags>
           <tag>effect</tag>
           <tag>chorus</tag>
+        </tags>
+      </page>
+      <page name="L7 Mixer" content="l7_mixer.html" icon="img/l7.png">
+        <tags>
+          <tag>utility</tag>
         </tags>
       </page>
       <page name="L8 Noise Gate" content="l8_noise_gate.html" icon="img/l8.png">
