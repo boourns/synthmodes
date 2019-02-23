@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+  	<section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Settings" modelist="false">
+      <page name="Sequence Length" icon="img/green.png" content="length.html"/>
+      <page name="Scale"  icon="img/yellow.png" content="scale.html"/>
+      <page name="Play Mode" icon="img/red.png" content="playmode.html"/>
+      <page name="Octave Range" icon="img/yellow_flashing.png" content="octave.html"/>
+      <page name="Master Pitch Slide" icon="img/led.png" content="masterslide.html"/>
+    </section>
+    <section name="Step Sequencing" modelist="false">
+    	<page name="Enter Notes" icon="img/green.png" content="notes.html"/>
+    	<page name="Gate Length/Mute/Merge" icon="img/red.png" content="gates.html"/>
+    	<page name="Pitch Slide" icon="img/yellow.png" content="slide.html"/>
+    </section>
+    <section name="Pattern Modification" modelist="false">
+    	<page name="Transpose" icon="img/led.png" content="transpose.html"/>
+    	<page name="Randomize Pattern" icon="img/led.png" content="randomize.html"/>
+    </section>
+    <section name="Load/Save" modelist="false">
+    	<page name="Load" icon="img/green_flashing.png" content="load.html"/>
+    	<page name="Save" icon="img/red_flashing.png" content="save.html"/>
+    </section>
+  </sections>
+</module>

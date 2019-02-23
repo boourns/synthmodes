@@ -291,6 +291,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#c6_vocoder">C6 Vocoder</a><br />
 <a href="#c7_phaser">C7 Phaser</a><br />
 <a href="#c8_bit_crusher">C8 Bit Crusher</a><br />
+<a href="#d1_dj_filter">D1 DJ Filter</a><br />
 <a href="#d2_tape_delay">D2 Tape Delay</a><br />
 <a href="#d3_waveform_animator">D3 Waveform Animator</a><br />
 <a href="#d4_state_variable_filter">D4 State Variable Filter</a><br />
@@ -346,6 +347,8 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#j7_audio_recorder">J7 Mono Audio Recorder</a><br />
 <a href="#j8_audio_playback_with_crossfade">J8 Audio Playback with Crossfade</a><br />
 <a href="#k1_wavetable_vco">K1 Wavetable VCO</a><br />
+<a href="#k2_clockable_wavetable_lfo">K2 Clockable Wavetable VCO</a><br />
+<a href="#k3_wavetable_waveshaper">K3 Wavetable Waveshaper</a><br />
 <a href="#k5_programmable_quantizer">K5 Programmable Quantizer</a><br />
 <a href="#k6_clockable_sd_delay">K6 Clockable SD Delay</a><br />
 <a href="#k7_stereo_clockable_sd_delay">K7 Stereo Clockable SD Delay</a><br />
@@ -356,6 +359,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#l4_dual_vowel_filter">L4 Dual Vowel Filter</a><br />
 <a href="#l5_stereo_chorus">L5 Stereo Chorus</a><br />
 <a href="#l6_mono_chorus">L6 Mono Chorus</a><br />
+<a href="#l7_mixer">L7 Mixer</a><br />
 <a href="#l8_noise_gate">L8 Noise Gate</a><br />
 <a href="#m1_delayed_lfo">M1 Delayed LFO</a><br />
 <a href="#m2_scaled_lfo">M2 Scaled LFO</a><br />
@@ -367,7 +371,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
         The Disting firmware gets updated regularly, be sure to check the firmware page for the latest version and latest manual.
       </p>
       <p>
-        These cheat sheets cover firmware V4.9.
+        These cheat sheets cover firmware V4.10.
       </p>
       <p>
         To change algorithms, press S once to enter the menu, and a second time to select the first menu item.
@@ -376,7 +380,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
         Turn the S encoder to change the current selected parameter.  Press Z on algorithms that do not have knob recording, or press and turn S to change which parameter is selected.
       </p>
       <p>
-        For additional details about parameters, scales, and note numbers see the excellent cheatshhet by vo1t.
+        For additional details about parameters, scales, and note numbers see the excellent cheatsheet by vo1t.
       </p>
 <h3>Links</h3>
       <a class="button" href="http://www.expert-sleepers.co.uk/disting.html">Disting mk4 information</a><br>
@@ -1945,15 +1949,67 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">attenuation for both outputs</td>
+      <td colspan="4">Output A attenuverter</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">32</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Output B attenuverter</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Y offset</td>
     </tr>
   </table>
 <br>
@@ -3521,6 +3577,89 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     </table>
   
 <br>
+<br /><br /><a name="d1_dj_filter"></a><h2>D1 DJ Filter</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>filter sweep, lowpass -&gt; highpass</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>audio input L</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>audio input R</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>filter output L</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>filter output R</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">31</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Filter resonance</td>
+    </tr>
+  </table>
+<br>
 <br /><br /><a name="d2_tape_delay"></a><h2>D2 Tape Delay</h2>
   <h3>Controls</h3>
 
@@ -3912,6 +4051,33 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
   <h3>Parameters</h3>
 
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">0</td>
+
+        <td class="parameter">-80</td>
+
+        <td class="parameter">80</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Y offset</td>
+      </tr>
+    </table>
+  <br>
+
   <table class="bordered">
     <tr>
       <th width="25%">pos</th>
@@ -3924,7 +4090,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     </tr>
 
     <tr>
-      <td class="parameter">0</td>
+      <td class="parameter">1</td>
 
       <td class="parameter">0</td>
 
@@ -3992,6 +4158,35 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
       <td>HP filter output</td>
     </tr>
   </table>
+
+  <h3>Parameters</h3>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">0</td>
+
+        <td class="parameter">-80</td>
+
+        <td class="parameter">80</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Y offset</td>
+      </tr>
+    </table>
+  <br>
 <br /><br /><a name="d6_lpbp_filter"></a><h2>D6 LP/BP Filter</h2>
   <h3>Controls</h3>
 
@@ -4046,6 +4241,35 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
       <td>BP filter output</td>
     </tr>
   </table>
+  
+  <h3>Parameters</h3>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">0</td>
+
+        <td class="parameter">-80</td>
+
+        <td class="parameter">80</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Y offset</td>
+      </tr>
+    </table>
+  <br>
 <br /><br /><a name="d7_bphp_filter"></a><h2>D7 BP/HP Filter</h2>
   <h3>Controls</h3>
 
@@ -4100,6 +4324,34 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
       <td>HP filter output</td>
     </tr>
   </table>
+  <h3>Parameters</h3>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">0</td>
+
+        <td class="parameter">-80</td>
+
+        <td class="parameter">80</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Y offset</td>
+      </tr>
+    </table>
+  <br>
 <br /><br /><a name="d8_bpnotch_filter"></a><h2>D8 BP/Notch Filter</h2>
   <h3>Controls</h3>
 
@@ -4154,6 +4406,34 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
       <td>notch filter output</td>
     </tr>
   </table>
+  <h3>Parameters</h3>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">0</td>
+
+        <td class="parameter">-80</td>
+
+        <td class="parameter">80</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Y offset</td>
+      </tr>
+    </table>
+  <br>
 <br /><br /><a name="e1_ar_envelope"></a><h2>E1 AR Envelope</h2>
   <h3>Controls</h3>
 
@@ -7107,15 +7387,42 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output attenuator</td>
+      <td colspan="4">Output attenuverter</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Offset for both outputs</td>
     </tr>
   </table>
 <br>
@@ -7271,15 +7578,15 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output attenuator</td>
+      <td colspan="4">Output attenuverter</td>
     </tr>
   </table>
 <br>
@@ -7307,6 +7614,33 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
     <tr>
       <td colspan="4">MIDI Gate</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">5</td>
+
+      <td class="parameter">-48</td>
+
+      <td class="parameter">48</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Transpose.  See chart below.</td>
     </tr>
   </table>
 <br>
@@ -7381,6 +7715,117 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     <tr>
 <td>15</td>
 <td>harmonic minor scale</td>
+</tr>
+  </table>
+
+<p>
+  </p>
+<h3>Key</h3>
+  Chart assumes oscillator tuning 0v = C.
+  <table class="bordered chart">
+    <tr>
+      <th>Parameter 2</th>
+<th>Scale</th>
+    </tr>
+    <tr>
+<td>-12</td>
+<td>C</td>
+</tr>
+    <tr>
+<td>-11</td>
+<td>C#</td>
+</tr>
+    <tr>
+<td>-10</td>
+<td>D</td>
+</tr>
+    <tr>
+<td>-9</td>
+<td>D#</td>
+</tr>
+    <tr>
+<td>-8</td>
+<td>E</td>
+</tr>
+    <tr>
+<td>-7</td>
+<td>F</td>
+</tr>
+    <tr>
+<td>-6</td>
+<td>F#</td>
+</tr>
+    <tr>
+<td>-5</td>
+<td>G</td>
+</tr>
+    <tr>
+<td>-4</td>
+<td>G#</td>
+</tr>
+    <tr>
+<td>-3</td>
+<td>A</td>
+</tr>
+    <tr>
+<td>-2</td>
+<td>A#</td>
+</tr>
+    <tr>
+<td>-1</td>
+<td>B</td>
+</tr>
+    <tr>
+<td>0</td>
+<td>C</td>
+</tr>
+    <tr>
+<td>1</td>
+<td>C#</td>
+</tr>
+    <tr>
+<td>2</td>
+<td>D</td>
+</tr>
+    <tr>
+<td>3</td>
+<td>D#</td>
+</tr>
+    <tr>
+<td>4</td>
+<td>E</td>
+</tr>
+    <tr>
+<td>5</td>
+<td>F</td>
+</tr>
+    <tr>
+<td>6</td>
+<td>F#</td>
+</tr>
+    <tr>
+<td>7</td>
+<td>G</td>
+</tr>
+    <tr>
+<td>8</td>
+<td>G#</td>
+</tr>
+    <tr>
+<td>9</td>
+<td>A</td>
+</tr>
+    <tr>
+<td>10</td>
+<td>A#</td>
+</tr>
+    <tr>
+<td>11</td>
+<td>B</td>
+</tr>
+    <tr>
+<td>12</td>
+<td>C</td>
 </tr>
   </table>
 
@@ -12016,6 +12461,284 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br>
 
   <h3>Description</h3>See manual for wavetable SD card setup
+<br /><br /><a name="k2_clockable_wavetable_lfo"></a><h2>K2 Clockable Wavetable VCO</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>integer multiplier/divider</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>clock input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>Wavetable position</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>wavetable output</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>wavetable output</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Chooses Wavetable</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Y offset</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">2</td>
+
+        <td class="parameter">-32</td>
+
+        <td class="parameter">32</td>
+
+        <td class="parameter">32</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Output A attenuverter</td>
+      </tr>
+    </table>
+  <br>
+
+  <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">3</td>
+
+        <td class="parameter">-32</td>
+
+        <td class="parameter">32</td>
+
+        <td class="parameter">-32</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Output B attenuverter</td>
+      </tr>
+    </table>
+  <br>
+
+  <h3>Description</h3>See manual for wavetable SD card setup
+<br /><br /><a name="k3_wavetable_waveshaper"></a><h2>K3 Wavetable Waveshaper</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>gain</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>signal input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>Wavetable position</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>wavetable output</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>complementary wavetable output</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Chooses Wavetable</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Y offset</td>
+    </tr>
+  </table>
+<br>
+
+  <h3>Description</h3>See manual for wavetable SD card setup
 <br /><br /><a name="k5_programmable_quantizer"></a><h2>K5 Programmable Quantizer</h2>
   <h3>Controls</h3>
 
@@ -13922,6 +14645,143 @@ Scales are Scala files loaded off microSD card.
     </tr>
   </table>
 <br>
+<br /><br /><a name="l7_mixer"></a><h2>L7 Mixer</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>input X pan</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>input X</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>input Y</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>left output</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>right output</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">-40</td>
+
+      <td class="parameter">6</td>
+
+      <td class="parameter">-6</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Input X gain</td>
+    </tr>
+  </table>
+<br>
+  
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">1</td>
+
+        <td class="parameter">-40</td>
+
+        <td class="parameter">6</td>
+
+        <td class="parameter">-6</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Input Y gain</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">2</td>
+
+        <td class="parameter">-32</td>
+
+        <td class="parameter">32</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Input Y pan</td>
+      </tr>
+    </table>
+  <br>
 <br /><br /><a name="l8_noise_gate"></a><h2>L8 Noise Gate</h2>
   <h3>Controls</h3>
 

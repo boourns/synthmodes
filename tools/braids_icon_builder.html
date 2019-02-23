@@ -27,6 +27,10 @@ table {
   background-color: #ff9e20;
 }
 
+.yellow {
+  background-color: #fff821;
+}
+
 .green {
   background-color: #00ee00;
 }
@@ -55,6 +59,13 @@ table {
   border-color: #ffbe40;
   background-color: #ff9e20;
   box-shadow: 0 0 100px #ff9e20, inset 0 0 100px #ff9e20;
+}
+
+.flashing-yellow {
+  border: 0px;
+  border-color: #ffc926;
+  background-color: #fff821;
+  box-shadow: 0 0 100px #fff821, inset 0 0 100px #fff821;
 }
 
 .flashing-red {
@@ -276,13 +287,13 @@ body {
 </head>
 <body>
 <span id="capture" style="background-color: transparent; display: inline-block;">
-	<div class="lcd">CSAW</div>
+	<div class="led flashing-yellow"></div>
 </div>
 
 <script type="text/javascript">
 html2canvas(document.querySelector("#capture")).then(canvas => {
     canvas.toBlob(function(blob) {
-    	saveAs(blob, "csaw.png");
+    	saveAs(blob, "yellow-flashing.png");
 	});
 });
 </script>
