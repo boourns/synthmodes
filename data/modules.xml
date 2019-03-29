@@ -11,6 +11,7 @@
     <module name="Disting mk4" id="disting_mk4" index="disting_mk4/module.xml"/>
   </manufacturer>
   <manufacturer name="Make Noise">
+    <module name="Morphagene" id="morphagene" index="morphagene/module.xml"/>
     <module name="Tempi" id="tempi" index="tempi/module.xml"/>
   </manufacturer>
   <manufacturer name="Mutable Instruments">

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+
+    <section name="Reels" modelist="false">
+      <page name="Reel Mode" content="reel_mode.html"/>
+      <page name="Clear Reel" content="clear_reel.html"/>
+    </section>
+
+    <section name="Splices" modelist="false">
+      <page name="Record to Current" content="record_current_splice.html"/>
+      <page name="Record to New" content="record_new_splice.html"/>
+      <page name="Create Splice Marker" content="new_splice.html"/>
+      <page name="Delete Splice Marker" content="delete_splice_marker.html"/>
+      <page name="Delete All Splice Markers" content="delete_all_splice_markers.html"/>
+      <page name="Delete Splice Audio" content="delete_splice_audio.html"/>
+    </section>    
+
+    <section name="System" modelist="false">
+      <page name="Auto Level" content="autolevel.html"/>
+      <page name="Mount SD Card" content="mount.html"/>
+	  </section>
+
+  </sections>
+</module>
