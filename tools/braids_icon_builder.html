@@ -287,13 +287,13 @@ body {
 </head>
 <body>
 <span id="capture" style="background-color: transparent; display: inline-block;">
-	<div class="led flashing-yellow"></div>
+  <img src="svg/compressor.svg" style="width: 120px; height: 120px;">
 </div>
 
 <script type="text/javascript">
 html2canvas(document.querySelector("#capture")).then(canvas => {
     canvas.toBlob(function(blob) {
-    	saveAs(blob, "yellow-flashing.png");
+    	saveAs(blob, "compressor.png");
 	});
 });
 </script>

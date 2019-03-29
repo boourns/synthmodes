@@ -1,0 +1,113 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+  <link rel="stylesheet" href="streams.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+      <h3>Siamese Twin mode</h3>
+      <p>
+        Hold both mode buttons to enter Siamese Twins modes; mode indicator LEDs will alternately blink.
+      </p>
+      <p>
+        <h3>Compressor Modes</h3>
+        <p>All other controls are identical to non-Siamese operation.</p>
+        <table class="chart">
+          <tr>
+            <td><b>Ch1 SHAPE</b></td>
+            <td>Attack</td>
+          </tr>
+          <tr>
+            <td><b>Ch2 SHAPE</b></td>
+            <td>
+              Release
+            </td>
+          </tr>
+          <tr>
+            <td><b>Ch1 MOD</b></td>
+            <td>
+              Threshold
+            </td>
+          </tr>
+          <tr>
+            <td><b>Ch2 MOD</b></td>
+            <td>
+              Ratio &amp; Make-up gain
+            </td>
+          </tr>
+        </table>
+      </p>
+      <p>
+        <h3>Non-compressor Modes</h3>
+        <p>All other controls are identical to non-Siamese operation.</p>
+        <table class="chart">
+          <tr>
+            <td><b>Ch1 SHAPE</b></td>
+            <td>Attack</td>
+          </tr>
+          <tr>
+            <td><b>Ch2 SHAPE</b></td>
+            <td>
+              Decay
+            </td>
+          </tr>
+        </table>
+      </p>
+
+      <p>
+        <h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Vactrol exciter. Use trigs, gates, envelopes etc for typical LPG-style control of VCFA.</td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              VCFA signal input. Accepts CV and audio. Normalled to +3.3v, so with nothing patched, sending modulation curves to Excite will "vactrolize" the modulation.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      </p>
+      <p>
+        <h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>VCA CURVE</b></td>
+            <td>Should be linear for accurate vactrol responses... but play with it for other weird curves!</td>
+          </tr>
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td>Controls vactrol response speed. As SHAPE increases from fully CCW to noon, decay increases with small proprotional increase in attack. From noon to fully CW, vactrol response occurs backwards in time (longer attack, shorter decay).</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Controls how the filter cutoff tracks the amplitude modulation envelope; from fully CCW with no damping, to noon with full damping, to fully CW with no damping but an offset added to keep filter open.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Becomes attenuator for Level input when jack is patched.</td>
+          </tr>
+        </table>
+      </p>
+  </div>
+</body>
+</html>

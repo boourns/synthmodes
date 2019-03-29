@@ -1,0 +1,853 @@
+---
+layout: page
+title: Streams
+---
+<style>table.chart td {
+	vertical-align: top;
+}
+body {
+  font-family: -apple-system, sans-serif;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.orange {
+  background-color: #ff9e20;
+}
+
+.green {
+  background-color: #00ee00;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.darkgray {
+  background-color: #d5d5d5;
+}
+
+.flashing-green {
+  border: 0px;
+  background-color: #00ee00;
+  box-shadow: 0 0 10px #00ee00, inset 0 0 10px #00ee00;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.leds {
+  text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.chart tr th {
+  padding-right: 8px;
+}
+
+.chart tr td:first-child {
+  width:1%;
+}
+
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* just big circles - braids, clouds */
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
+}
+
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     /*text-align: center; */
+     width: 25%;
+}
+
+/* iOS-like button */
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a.button:visited {
+  color:white;
+}</style>General<br /><a href="#info">Info</a><br />
+Main Modes<br /><a href="#envelope">Envelope</a><br />
+<a href="#vactrol">Vactrol</a><br />
+<a href="#follower">Follower</a><br />
+<a href="#compressor">Compressor</a><br />
+Alternate Modes<br /><a href="#envelope">ASR Envelope</a><br />
+<a href="#plucked">Plucked Vactrol</a><br />
+<a href="#cutoff">Cutoff Controller</a><br />
+<a href="#soft">Slow, Soft Compressor</a><br />
+<a href="#direct">Direct VCF Control</a><br />
+Other<br /><a href="#siamese">Siamese Twin</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Streams</h3>
+      <p>Streams is a dynamics controller by Mutable Instruments.<br><br></p>
+      <p>
+        Streams icons are extracted from Warps panel design, available on Github under CC-BY-SA-3.0 license.
+      </p>
+      <h3>Alternate Modes</h3>
+      <p>
+        Access Alternate modes by holding the channel function button until mode LED turns red.
+      </p>
+<h3>Links</h3>
+      <a class="button" href="https://mutable-instruments.net/modules/streams/">Streams Home</a><br>
+      <a class="button" href="https://mutable-instruments.net/modules/streams/manual/">Streams Manual</a><br>
+      <a class="button" href="https://github.com/pichenettes/eurorack">Mutable Instruments GitHub</a><br>
+    </div>
+  </div>
+<br /><br />
+<h2>Main Modes</h2><a name="envelope"></a><h2>Envelope</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>VCFA w/ Internal Envelope</h3>
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Trigger or gate input. Sensitive to changes in amplitude, duration, and slew rate of trigger.</td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              VCFA signal input. Accepts CV and audio. Normalled to +3.3v, so with nothing patched, sending triggers to <b>EXCITE</b> will generate envelopes at output.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td>Controls shape of internal envelope; first it lengthens decay, then lengthens attack while decreasing decay, then it shortens both</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Controls how the envelope affects the filter cutoff via depth and offset. Fully CCW, the envelope does not affect Cutoff and the filter is fully closed. At noon, the envelope fully opens and closes the filter. As you increase past noon, depth of cutoff envelope decreases, but an offset is increasingly added so filter becomes more and more open without envelope. Fully CW, the filter is always fully open</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Becomes attenuator for Level input when jack is patched.</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br /><a name="vactrol"></a><h2>Vactrol</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>VCFA w/ Vactrol Responses</h3>
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Vactrol exciter. Use trigs, gates, envelopes etc for typical LPG-style control of VCFA.</td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              VCFA signal input. Accepts CV and audio. Normalled to +3.3v, so with nothing patched, sending modulation curves to Excite will "vactrolize" the modulation.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>VCA CURVE</b></td>
+            <td>Should be linear for accurate vactrol responses... but play with it for other weird curves!</td>
+          </tr>
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td>Controls vactrol response speed. As SHAPE increases from fully CCW to noon, decay increases with small proprotional increase in attack. From noon to fully CW, vactrol response occurs backwards in time (longer attack, shorter decay).</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Controls how the filter cutoff tracks the amplitude modulation envelope; from fully CCW with no damping, to noon with full damping, to fully CW with no damping but an offset added to keep filter open.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Becomes attenuator for Level input when jack is patched.</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br /><a name="follower"></a><h2>Follower</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Amplitude and Spectral Centroid Envelope Follower</h3>
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Signal to extract envelope information from. Amplitude (loudness) is tracked, as well as spectral centroid (weighted mean of frequencies present in spectrum, with amplitudes of frequencies as weights - roughly how 'bright' a sound is).
+            </td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              Amplitude and Spectral Centroid envelopes of the EXCITE input are applied to this signal input so that the IN signal mimics the loudness and brightness of the EXCITE input. Sending the same signal to EXCITE and IN allows for gating/expansion. With nothing patched, +3.3v normalled to IN, so sending a signal to EXCITE allows for the envelope follower output to be reproduced at OUT.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td> Controls how quickly the envelope follower tracks the EXCITE input. From fast (fully CCW) to muddy (noon) to wobbly (fully CW).</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Controls how the filter cutoff tracks the spectral centroid envelope; from fully CCW with no tracking, to noon with full tracking, to fully CW with no damping but an offset added to keep filter open.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Becomes attenuator for Level input when jack is patched.</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br /><a name="compressor"></a><h2>Compressor</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Dynamics Compressor.</h3>
+      <p>
+        The compressor has a fast detector (0.2ms attack time, 150ms release time) and a hard knee.
+      </p>
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Side chain input. If patched, then the level of the EXCITE input determines the amount of gain reduction to be applied to in. If not patched, the mode operates as a typical compressor on IN.
+            </td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              Signal to be compressed. With nothing patched, +3.3v normalled to In, so sending a signal to Excite allows for the sidechain gain reduction envelope to be reproduced at OuT.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>VCA Curve</b></td>
+            <td>Should be exponential for accurate compression.</td>
+          </tr>
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td>Controls compression threshold.</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>At noon, no compression applied. Turning CCW increases the compression but with no makeup gain, thus taming loud parts but leaving quiet untouched. Turning CW from noon increases compression ratio but adds make up gain, thus boosting quiet parts but leaving loud parts untouched.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Acts as an attenuator for LEVEL input when patched Should be at minimum for accurate compression.</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br />
+<h2>Alternate Modes</h2><a name="envelope"></a><h2>ASR Envelope</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>VCFA w/ Internal Envelope</h3>
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Trigger or gate input. Sensitive to changes in amplitude, duration, and slew rate of trigger.</td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              VCFA signal input. Accepts CV and audio. Normalled to +3.3v, so with nothing patched, sending triggers to <b>EXCITE</b> will generate envelopes at output.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td>Controls shape of internal envelope; first it lengthens decay, then lengthens attack while decreasing decay, then it shortens both</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Controls how the envelope affects the filter cutoff via depth and offset. Fully CCW, the envelope does not affect Cutoff and the filter is fully closed. At noon, the envelope fully opens and closes the filter. As you increase past noon, depth of cutoff envelope decreases, but an offset is increasingly added so filter becomes more and more open without envelope. Fully CW, the filter is always fully open</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Becomes attenuator for Level input when jack is patched.</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br /><a name="plucked"></a><h2>Plucked Vactrol</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Pingable Vactrol LPG</h3>
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Acts as trigger input for pinging virtual vactrol.</td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              VCFA signal input. Accepts CV and audio. Normalled to +3.3v, so with nothing patched, sending a trig to EXCITE will output a "vactrolized" envelope.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>VCA CURVE</b></td>
+            <td>Should be linear for accurate vactrol responses... but play with it for other weird curves!</td>
+          </tr>
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td>Controls vactrol response speed. As SHAPE increases from fully CCW to noon, decay increases with small proprotional increase in attack. From noon to fully CW, vactrol response occurs backwards in time (longer attack, shorter decay).</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Controls how the filter cutoff tracks the amplitude modulation envelope; from fully CCW with no damping, to noon with full damping, to fully CW with no damping but an offset added to keep filter open.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Becomes attenuator for Level input when jack is patched.</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br /><a name="cutoff"></a><h2>Cutoff Controller</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Cutoff (Spectral Centroid) Envelope</h3>
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Signal to extract envelope information from. Amplitude (loudness) is not tracked, only spectral centroid (weighted mean of frequencies present in spectrum, with amplitudes of frequencies as weights - roughly how 'bright' a sound is).
+            </td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              Spectral Centroid envelope of the EXCITE input are applied to the IN signal input's amplitude. With nothing patched, +3.3v normalled to IN, so sending a signal to EXCITE allows the "cutoff frequency" of the EXCITE input to be reproduced at OUT.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+             Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td> Controls how quickly the envelope follower tracks the EXCITE input. From fast (fully CCW) to muddy (noon) to wobbly (fully CW).</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Controls how the filter cutoff tracks the spectral centroid envelope; from fully CCW with no tracking, to noon with full tracking, to fully CW with no damping but an offset added to keep filter open.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Becomes attenuator for Level input when jack is patched.</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br /><a name="soft"></a><h2>Slow, Soft Compressor</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Dynamics Compressor.</h3>
+      <p>
+        The compressor has a slower detector and a softer knee than the default compressor.
+      </p>
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Side chain input. If patched, then the level of the EXCITE input determines the amount of gain reduction to be applied to in. If not patched, the mode operates as a typical compressor on IN.
+            </td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              Signal to be compressed. With nothing patched, +3.3v normalled to In, so sending a signal to Excite allows for the sidechain gain reduction envelope to be reproduced at OuT.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>VCA Curve</b></td>
+            <td>Should be exponential for accurate compression.</td>
+          </tr>
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td>Controls compression threshold.</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>At noon, no compression applied. Turning CCW increases the compression but with no makeup gain, thus taming loud parts but leaving quiet untouched. Turning CW from noon increases compression ratio but adds make up gain, thus boosting quiet parts but leaving loud parts untouched.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Acts as an attenuator for LEVEL input when patched Should be at minimum for accurate compression.</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br /><a name="direct"></a><h2>Direct VCF Control</h2>
+  <div class="centered">
+    <div class="content">
+      <p>
+        All mode LEDs lit
+      </p>
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Filter cutoff control input. Opens and closes VCF portion of VCFA
+            </td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              Signal to amplify and filter
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td>Cutoff frequency offset control</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Cutoff frequency attenuverter for EXCITE input.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to LEVEL. Acts as an attenuator for LEVEL input when patched</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br />
+<h2>Other</h2><a name="siamese"></a><h2>Siamese Twin</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Siamese Twin mode</h3>
+      <p>
+        Hold both mode buttons to enter Siamese Twins modes; mode indicator LEDs will alternately blink.
+      </p>
+      <p>
+        </p>
+<h3>Compressor Modes</h3>
+        <p>All other controls are identical to non-Siamese operation.</p>
+        <table class="chart">
+          <tr>
+            <td><b>Ch1 SHAPE</b></td>
+            <td>Attack</td>
+          </tr>
+          <tr>
+            <td><b>Ch2 SHAPE</b></td>
+            <td>
+              Release
+            </td>
+          </tr>
+          <tr>
+            <td><b>Ch1 MOD</b></td>
+            <td>
+              Threshold
+            </td>
+          </tr>
+          <tr>
+            <td><b>Ch2 MOD</b></td>
+            <td>
+              Ratio &amp; Make-up gain
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Non-compressor Modes</h3>
+        <p>All other controls are identical to non-Siamese operation.</p>
+        <table class="chart">
+          <tr>
+            <td><b>Ch1 SHAPE</b></td>
+            <td>Attack</td>
+          </tr>
+          <tr>
+            <td><b>Ch2 SHAPE</b></td>
+            <td>
+              Decay
+            </td>
+          </tr>
+        </table>
+      
+
+      <p>
+        </p>
+<h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Vactrol exciter. Use trigs, gates, envelopes etc for typical LPG-style control of VCFA.</td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              VCFA signal input. Accepts CV and audio. Normalled to +3.3v, so with nothing patched, sending modulation curves to Excite will "vactrolize" the modulation.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      
+      <p>
+        </p>
+<h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>VCA CURVE</b></td>
+            <td>Should be linear for accurate vactrol responses... but play with it for other weird curves!</td>
+          </tr>
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td>Controls vactrol response speed. As SHAPE increases from fully CCW to noon, decay increases with small proprotional increase in attack. From noon to fully CW, vactrol response occurs backwards in time (longer attack, shorter decay).</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Controls how the filter cutoff tracks the amplitude modulation envelope; from fully CCW with no damping, to noon with full damping, to fully CW with no damping but an offset added to keep filter open.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Becomes attenuator for Level input when jack is patched.</td>
+          </tr>
+        </table>
+      
+  </div>
+</div><br /><br />

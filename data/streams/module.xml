@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Main Modes" modelist="true">
+      <page name="Envelope" icon="img/envelope.png" content="envelope.html"/>
+      <page name="Vactrol" icon="img/vactrol.png" content="vactrol.html"/>
+      <page name="Follower" icon="img/follower.png" content="follower.html"/>
+      <page name="Compressor" icon="img/compressor.png" content="compressor.html"/>
+    </section>
+    <section name="Alternate Modes" modelist="true">
+      <page name="ASR Envelope" icon="img/envelope.png" content="envelope.html"/>
+      <page name="Plucked Vactrol" icon="img/vactrol.png" content="plucked.html"/>
+      <page name="Cutoff Controller" icon="img/follower.png" content="cutoff.html"/>
+      <page name="Slow, Soft Compressor" icon="img/compressor.png" content="soft.html"/>
+      <page name="Direct VCF Control" content="direct.html"/>
+    </section>
+    <section name="Other" modelist="true">
+      <page name="Siamese Twin" content="siamese.html"/>
+    </section>
+
+  </sections>
+</module>

@@ -1,0 +1,63 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+  <link rel="stylesheet" href="streams.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+      <h3>Amplitude and Spectral Centroid Envelope Follower</h3>
+
+      <p>
+        <h3>Inputs</h3>
+        <table class="chart">
+          <tr>
+            <td><b>EXCITE</b></td>
+            <td>Signal to extract envelope information from. Amplitude (loudness) is tracked, as well as spectral centroid (weighted mean of frequencies present in spectrum, with amplitudes of frequencies as weights - roughly how 'bright' a sound is).
+            </td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>
+              Amplitude and Spectral Centroid envelopes of the EXCITE input are applied to this signal input so that the IN signal mimics the loudness and brightness of the EXCITE input. Sending the same signal to EXCITE and IN allows for gating/expansion. With nothing patched, +3.3v normalled to IN, so sending a signal to EXCITE allows for the envelope follower output to be reproduced at OUT.
+            </td>
+          </tr>
+          <tr>
+            <td><b>LEVEL</b></td>
+            <td>
+              Directly wired to VCA control input. Opens and closes VCA portion of VCFA.
+            </td>
+          </tr>
+        </table>
+      </p>
+      <p>
+        <h3>Controls</h3>
+        <table class="chart">
+          <tr>
+            <td><b>SHAPE</b></td>
+            <td> Controls how quickly the envelope follower tracks the EXCITE input. From fast (fully CCW) to muddy (noon) to wobbly (fully CW).</td>
+          </tr>
+          <tr>
+            <td><b>MOD</b></td>
+            <td>Controls how the filter cutoff tracks the spectral centroid envelope; from fully CCW with no tracking, to noon with full tracking, to fully CW with no damping but an offset added to keep filter open.</td>
+          </tr>
+          <tr>
+            <td><b>LEVEL MOD</b></td>
+            <td>VCA control offset with nothing patched to Level. Becomes attenuator for Level input when jack is patched.</td>
+          </tr>
+        </table>
+      </p>
+  </div>
+</body>
+</html>
