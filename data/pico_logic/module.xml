@@ -4,7 +4,7 @@
   	<section name="General" modelist="false">
       <page name="Info" content="info.html"/>
     </section>
-    <section name="Modes" modelist="true">
+    <section name="Modes" modelist="false">
       <page name="Digital Logic" content="logic.html"/>
       <page name="Clock Divider" content="clock.html"/>
     </section>
