@@ -467,7 +467,7 @@
           <tag>sd</tag>
         </tags>
       </page>
-      <page name="K2 Clockable Wavetable VCO" content="k2_clockable_wavetable_lfo.html" icon="img/k2.png">
+      <page name="K2 Clockable Wavetable LFO" content="k2_clockable_wavetable_lfo.html" icon="img/k2.png">
         <tags>
           <tag>wave</tag>
           <tag>lfo</tag>
