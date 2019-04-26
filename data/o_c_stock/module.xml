@@ -29,6 +29,11 @@
           <tag>quantized</tag>
         </tags>
       </page>
+      <page name="Meta-Q" content="metaq.html">
+        <tags>
+          <tag>quantized</tag>
+        </tags>
+      </page>
     </section>
   </sections>
 </module>
