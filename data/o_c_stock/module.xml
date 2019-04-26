@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Modes" modelist="true">
+      <page name="CopierMaschine" content="copier.html">
+        <tags>
+          <tag>shift register</tag>
+          <tag>quantized</tag>
+        </tags>
+      </page>
+      <page name="Harrington 1200" content="harrington.html">
+        <tags>
+          <tag>chord</tag>
+          <tag>quantized</tag>
+        </tags>
+      </page>
+      <page name="Automatonnetz" content="automatonnetz.html">
+        <tags>
+          <tag>chord</tag>
+          <tag>quantized</tag>
+          <tag>arpeggiator</tag>
+        </tags>
+      </page>
+      <page name="Quantermain" content="quantermain.html">
+        <tags>
+          <tag>quantized</tag>
+        </tags>
+      </page>
+    </section>
+  </sections>
+</module>
