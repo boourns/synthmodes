@@ -18,9 +18,9 @@
     <div class="content">
       <h3>Description</h3>
 <p>
-  2 channel quantizer with four "slots" per channel, allowing 4-step sequencing of scale, mask, root, and transpose.<br /><br />
+  Reference voltage, tuner, frequency meter, tempo meter, calibration mode.<br /><br />
 
-  <a class="button" href="https://ornament-and-cri.me/user-manual-v1_3/#anchor-meta-q">Full Manual</a><br>
+  <a class="button" href="https://ornament-and-cri.me/user-manual-v1_3/#anchor-references">Full Manual</a><br>
 
 </p>
 
@@ -46,11 +46,11 @@
       <b>Up</b>
     </td>
     <td>
-      Push: Octave up<br />
       Long press: screensaver<br />
-      <i>Scale editor:<br />
-        Push: next scale slot<br />
-        <b>Hold: shift</b><br />
+      <i>
+        autotuner:<br />
+        "run": arm channel<br />
+        "run": stop (when running)
       </i>
     </td>
   </tr>
@@ -59,10 +59,9 @@
       <b>Down</b>
     </td>
     <td>
-      Push: Octave down<br />
-      Long press: reset scale mask<br />
-      <i>Scale editor:<br />
-        Push: prev scale slot<br />
+      <i>
+        autotuner:<br />
+        "run": run
       </i>
     </td>
   </tr>  
@@ -86,14 +85,12 @@
       <b>Left</b>
     </td>
     <td>
-      Turn and Push: select channel<br />
-      Long press: copy scale settings<br />
-      <i>Scale editor:<br />
-              Turn: move cursor<br />
-              Push: select/deselect note<br />
-              Turn+<b>shift</b>: set scale<br />
-              Push+<b>shift</b>: root settings
-            </i>
+      Turn: select channel<br />
+      <i>
+        autotuner:<br />
+        "use": choose calibration set<br />
+        "run": arm channel
+      </i>
     </td>
   </tr>
   <tr>
@@ -102,10 +99,10 @@
     </td>
     <td>
       Turn: move cursor<br />
-      Push: toggle edit<br />
+      Push: toggle edit mode<br />
       Long press: app menu<br />
       <i>
-      Scale editor: rotate mask
+        (close autotuner)
       </i>
     </td>
   </tr>
@@ -140,15 +137,14 @@
       <b>1</b>
     </td>
     <td>
-      Sample clock #1
+      Unused
     </td>
   </tr>
-  <tr>
     <td>
       <b>2</b>
     </td>
     <td>
-      Aux trigger #1
+      Unused
     </td>
   </tr>
   <tr>
@@ -156,7 +152,7 @@
       <b>3</b>
     </td>
     <td>
-      Sample clock #2
+      Unused
     </td>
   </tr>
   <tr>
@@ -164,7 +160,8 @@
       <b>4</b>
     </td>
     <td>
-      Aux trigger #2
+      Frequency meter input<br />
+      <i>Autotuner: signal input</i>
     </td>
   </tr>
 </table>
@@ -198,7 +195,7 @@
       <b>1</b>
     </td>
     <td>
-      Sample CV #1
+      Unused
     </td>
   </tr>
   <tr>
@@ -206,7 +203,7 @@
       <b>2</b>
     </td>
     <td>
-      Aux CV #1 (assignable)
+      Unused
     </td>
   </tr>
   <tr>
@@ -214,7 +211,7 @@
       <b>3</b>
     </td>
     <td>
-      Sample CV #2
+      Unused
     </td>
   </tr>
   <tr>
@@ -222,7 +219,7 @@
       <b>4</b>
     </td>
     <td>
-      Aux CV #2 (assignable)
+      Unused
     </td>
   </tr>
 </table>
@@ -256,7 +253,7 @@
       <b>1</b>
     </td>
     <td>
-      Pitch output #1
+      Output #1
     </td>
   </tr>
   <tr>
@@ -264,15 +261,15 @@
       <b>2</b>
     </td>
     <td>
-      Pitch output #2
-    </td>
+      Output #2
+          </td>
   </tr>
   <tr>
     <td>
       <b>3</b>
     </td>
     <td>
-      Gate output #1
+      Output #3
     </td>
   </tr>
   <tr>
@@ -280,7 +277,7 @@
       <b>4</b>
     </td>
     <td>
-      Gate output #2
+      Output #4
     </td>
   </tr>
 </table>

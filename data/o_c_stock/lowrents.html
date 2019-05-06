@@ -18,9 +18,9 @@
     <div class="content">
       <h3>Description</h3>
 <p>
-  2 channel quantizer with four "slots" per channel, allowing 4-step sequencing of scale, mask, root, and transpose.<br /><br />
+  Dual Lorenz attractor modulation generator.<br /><br />
 
-  <a class="button" href="https://ornament-and-cri.me/user-manual-v1_3/#anchor-meta-q">Full Manual</a><br>
+  <a class="button" href="https://ornament-and-cri.me/user-manual-v1_3/#anchor-low-rents">Full Manual</a><br>
 
 </p>
 
@@ -46,12 +46,8 @@
       <b>Up</b>
     </td>
     <td>
-      Push: Octave up<br />
+      Push: Increment frequency by 32<br />
       Long press: screensaver<br />
-      <i>Scale editor:<br />
-        Push: next scale slot<br />
-        <b>Hold: shift</b><br />
-      </i>
     </td>
   </tr>
   <tr>
@@ -59,11 +55,8 @@
       <b>Down</b>
     </td>
     <td>
-      Push: Octave down<br />
-      Long press: reset scale mask<br />
-      <i>Scale editor:<br />
-        Push: prev scale slot<br />
-      </i>
+      Push: Decrement frequency by 32<br />
+      Long press: reset phase (all channels)<br />
     </td>
   </tr>  
 </table>
@@ -86,14 +79,8 @@
       <b>Left</b>
     </td>
     <td>
-      Turn and Push: select channel<br />
-      Long press: copy scale settings<br />
-      <i>Scale editor:<br />
-              Turn: move cursor<br />
-              Push: select/deselect note<br />
-              Turn+<b>shift</b>: set scale<br />
-              Push+<b>shift</b>: root settings
-            </i>
+      Turn: inc/dec frequency for selected generator<br />
+      Push: toggle selected generator<br />
     </td>
   </tr>
   <tr>
@@ -104,9 +91,6 @@
       Turn: move cursor<br />
       Push: toggle edit<br />
       Long press: app menu<br />
-      <i>
-      Scale editor: rotate mask
-      </i>
     </td>
   </tr>
 </table>
@@ -140,7 +124,7 @@
       <b>1</b>
     </td>
     <td>
-      Sample clock #1
+      Generator 1: Reset phase
     </td>
   </tr>
   <tr>
@@ -148,7 +132,7 @@
       <b>2</b>
     </td>
     <td>
-      Aux trigger #1
+      Generator 2: Reset phase
     </td>
   </tr>
   <tr>
@@ -156,7 +140,7 @@
       <b>3</b>
     </td>
     <td>
-      Sample clock #2
+      Both Generators: Reset phase
     </td>
   </tr>
   <tr>
@@ -164,7 +148,7 @@
       <b>4</b>
     </td>
     <td>
-      Aux trigger #2
+      Both Generators: Freeze
     </td>
   </tr>
 </table>
@@ -198,7 +182,7 @@
       <b>1</b>
     </td>
     <td>
-      Sample CV #1
+      Generator 1: Frequency
     </td>
   </tr>
   <tr>
@@ -206,7 +190,7 @@
       <b>2</b>
     </td>
     <td>
-      Aux CV #1 (assignable)
+      Generator 1: Rho or c param
     </td>
   </tr>
   <tr>
@@ -214,7 +198,7 @@
       <b>3</b>
     </td>
     <td>
-      Sample CV #2
+      Generator 2: Frequency
     </td>
   </tr>
   <tr>
@@ -222,7 +206,7 @@
       <b>4</b>
     </td>
     <td>
-      Aux CV #2 (assignable)
+      Generator 2: Rho or c param
     </td>
   </tr>
 </table>
@@ -256,7 +240,7 @@
       <b>1</b>
     </td>
     <td>
-      Pitch output #1
+      Mappable output A
     </td>
   </tr>
   <tr>
@@ -264,7 +248,7 @@
       <b>2</b>
     </td>
     <td>
-      Pitch output #2
+      Mappable output B
     </td>
   </tr>
   <tr>
@@ -272,7 +256,7 @@
       <b>3</b>
     </td>
     <td>
-      Gate output #1
+      Mappable output C
     </td>
   </tr>
   <tr>
@@ -280,7 +264,7 @@
       <b>4</b>
     </td>
     <td>
-      Gate output #2
+      Mappable output D
     </td>
   </tr>
 </table>

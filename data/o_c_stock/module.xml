@@ -32,6 +32,50 @@
       <page name="Meta-Q" content="metaq.html">
         <tags>
           <tag>quantized</tag>
+          <tag>sequencer</tag>
+        </tags>
+      </page>
+      <page name="Quadraturia" content="quadraturia.html">
+        <tags>
+          <tag>LFO</tag>
+        </tags>
+      </page>
+      <page name="Low-rents" content="lowrents.html">
+        <tags>
+          <tag>LFO</tag>
+        </tags>
+      </page>
+      <page name="Piqued" content="piqued.html">
+        <tags>
+          <tag>envelope</tag>
+        </tags>
+      </page>
+      <page name="Sequins" content="sequins.html">
+        <tags>
+          <tag>sequencer</tag>
+        </tags>
+      </page>
+      <page name="Dialectic Ping Pong" content="pingpong.html">
+        <tags>
+          <tag>LFO</tag>
+        </tags>
+      </page>
+      <page name="Viznutcracker, sweet!" content="bytebeat.html">
+        <tags>
+          <tag>oscillator</tag>
+          <tag>LFO</tag>
+        </tags>
+      </page>
+      <page name="Acid curds" content="acidcurds.html">
+        <tags>
+          <tag>chord</tag>
+          <tag>sequencer</tag>
+        </tags>
+      </page>
+      <page name="References" content="references.html">
+        <tags>
+          <tag>reference</tag>
+          <tag>tuner</tag>
         </tags>
       </page>
     </section>

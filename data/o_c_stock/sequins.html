@@ -18,9 +18,9 @@
     <div class="content">
       <h3>Description</h3>
 <p>
-  2 channel quantizer with four "slots" per channel, allowing 4-step sequencing of scale, mask, root, and transpose.<br /><br />
+  Dual channel sequencer.<br /><br />
 
-  <a class="button" href="https://ornament-and-cri.me/user-manual-v1_3/#anchor-meta-q">Full Manual</a><br>
+  <a class="button" href="https://ornament-and-cri.me/user-manual-v1_3/#anchor-sequins">Full Manual</a><br>
 
 </p>
 
@@ -46,12 +46,9 @@
       <b>Up</b>
     </td>
     <td>
-      Push: Octave up<br />
+      Push: Toggle octave<br />
       Long press: screensaver<br />
-      <i>Scale editor:<br />
-        Push: next scale slot<br />
-        <b>Hold: shift</b><br />
-      </i>
+      <i>Sequence editor: next pattern<br /></i>
     </td>
   </tr>
   <tr>
@@ -59,11 +56,9 @@
       <b>Down</b>
     </td>
     <td>
-      Push: Octave down<br />
-      Long press: reset scale mask<br />
-      <i>Scale editor:<br />
-        Push: prev scale slot<br />
-      </i>
+      Push: CV menu<br />
+      Long press: clear CV mapping<br />
+      <i>Sequence editor: previous pattern</i>
     </td>
   </tr>  
 </table>
@@ -86,14 +81,13 @@
       <b>Left</b>
     </td>
     <td>
-      Turn and Push: select channel<br />
-      Long press: copy scale settings<br />
-      <i>Scale editor:<br />
-              Turn: move cursor<br />
-              Push: select/deselect note<br />
-              Turn+<b>shift</b>: set scale<br />
-              Push+<b>shift</b>: root settings
-            </i>
+      Push: select channel<br />
+      Long press: copy settings to other channel<br />
+      <i>Sequence editor:<br />
+        Turn: move cursor<br />
+        Push: select/deselect note<br />
+        Push + turn R: fine-tune step<br />
+      </i>
     </td>
   </tr>
   <tr>
@@ -101,11 +95,12 @@
       <b>Right</b>
     </td>
     <td>
-      Turn: move cursor<br />
-      Push: toggle edit<br />
+      Turn: move cursor or change segment duration<br />
+      Push: toggle edit mode<br />
       Long press: app menu<br />
       <i>
-      Scale editor: rotate mask
+        Sequence editor:<br />
+        tune step / adjust length
       </i>
     </td>
   </tr>
@@ -140,7 +135,7 @@
       <b>1</b>
     </td>
     <td>
-      Sample clock #1
+      Clock Channel #1
     </td>
   </tr>
   <tr>
@@ -148,7 +143,7 @@
       <b>2</b>
     </td>
     <td>
-      Aux trigger #1
+      Sequence / SH trigger #1
     </td>
   </tr>
   <tr>
@@ -156,7 +151,7 @@
       <b>3</b>
     </td>
     <td>
-      Sample clock #2
+      Clock Channel #2
     </td>
   </tr>
   <tr>
@@ -164,7 +159,7 @@
       <b>4</b>
     </td>
     <td>
-      Aux trigger #2
+      Sequence / SH trigger #2
     </td>
   </tr>
 </table>
@@ -198,7 +193,7 @@
       <b>1</b>
     </td>
     <td>
-      Sample CV #1
+      Assignable CV input #1
     </td>
   </tr>
   <tr>
@@ -206,7 +201,7 @@
       <b>2</b>
     </td>
     <td>
-      Aux CV #1 (assignable)
+      Assignable CV input #2
     </td>
   </tr>
   <tr>
@@ -214,7 +209,7 @@
       <b>3</b>
     </td>
     <td>
-      Sample CV #2
+      Assignable CV input #3
     </td>
   </tr>
   <tr>
@@ -222,7 +217,7 @@
       <b>4</b>
     </td>
     <td>
-      Aux CV #2 (assignable)
+      Assignable CV input #4
     </td>
   </tr>
 </table>
@@ -256,7 +251,7 @@
       <b>1</b>
     </td>
     <td>
-      Pitch output #1
+      Channel #1 output
     </td>
   </tr>
   <tr>
@@ -264,7 +259,7 @@
       <b>2</b>
     </td>
     <td>
-      Pitch output #2
+      Channel #2 output
     </td>
   </tr>
   <tr>
@@ -272,7 +267,7 @@
       <b>3</b>
     </td>
     <td>
-      Gate output #1
+      Gate #1 output
     </td>
   </tr>
   <tr>
@@ -280,7 +275,7 @@
       <b>4</b>
     </td>
     <td>
-      Gate output #2
+      Gate #2 output
     </td>
   </tr>
 </table>

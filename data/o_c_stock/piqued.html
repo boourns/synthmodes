@@ -18,9 +18,9 @@
     <div class="content">
       <h3>Description</h3>
 <p>
-  2 channel quantizer with four "slots" per channel, allowing 4-step sequencing of scale, mask, root, and transpose.<br /><br />
+  Quad envelope generator.<br /><br />
 
-  <a class="button" href="https://ornament-and-cri.me/user-manual-v1_3/#anchor-meta-q">Full Manual</a><br>
+  <a class="button" href="https://ornament-and-cri.me/user-manual-v1_3/#anchor-piqued">Full Manual</a><br>
 
 </p>
 
@@ -46,12 +46,8 @@
       <b>Up</b>
     </td>
     <td>
-      Push: Octave up<br />
+      Push: Increment selected segment duration by 32<br />
       Long press: screensaver<br />
-      <i>Scale editor:<br />
-        Push: next scale slot<br />
-        <b>Hold: shift</b><br />
-      </i>
     </td>
   </tr>
   <tr>
@@ -59,11 +55,7 @@
       <b>Down</b>
     </td>
     <td>
-      Push: Octave down<br />
-      Long press: reset scale mask<br />
-      <i>Scale editor:<br />
-        Push: prev scale slot<br />
-      </i>
+      Push: Decrement selected segment duration by 32<br />
     </td>
   </tr>  
 </table>
@@ -86,14 +78,9 @@
       <b>Left</b>
     </td>
     <td>
-      Turn and Push: select channel<br />
-      Long press: copy scale settings<br />
-      <i>Scale editor:<br />
-              Turn: move cursor<br />
-              Push: select/deselect note<br />
-              Turn+<b>shift</b>: set scale<br />
-              Push+<b>shift</b>: root settings
-            </i>
+      Push: toggle between settings and duration/visualization mode<br />
+      Turn (settings mode): select envelope type<br />
+      Turn (duration mode): select channel A to D<br />
     </td>
   </tr>
   <tr>
@@ -101,12 +88,9 @@
       <b>Right</b>
     </td>
     <td>
-      Turn: move cursor<br />
-      Push: toggle edit<br />
+      Turn: move cursor or change segment duration<br />
+      Push: toggle between env settings and segment duration mode<br />
       Long press: app menu<br />
-      <i>
-      Scale editor: rotate mask
-      </i>
     </td>
   </tr>
 </table>
@@ -140,7 +124,7 @@
       <b>1</b>
     </td>
     <td>
-      Sample clock #1
+      Trigger/gate #1
     </td>
   </tr>
   <tr>
@@ -148,7 +132,7 @@
       <b>2</b>
     </td>
     <td>
-      Aux trigger #1
+      Trigger/gate #2
     </td>
   </tr>
   <tr>
@@ -156,7 +140,7 @@
       <b>3</b>
     </td>
     <td>
-      Sample clock #2
+      Trigger/gate #3
     </td>
   </tr>
   <tr>
@@ -164,7 +148,7 @@
       <b>4</b>
     </td>
     <td>
-      Aux trigger #2
+      Trigger/gate #4
     </td>
   </tr>
 </table>
@@ -198,7 +182,7 @@
       <b>1</b>
     </td>
     <td>
-      Sample CV #1
+      Mappable CV input #1
     </td>
   </tr>
   <tr>
@@ -206,7 +190,7 @@
       <b>2</b>
     </td>
     <td>
-      Aux CV #1 (assignable)
+      Mappable CV input #2
     </td>
   </tr>
   <tr>
@@ -214,7 +198,7 @@
       <b>3</b>
     </td>
     <td>
-      Sample CV #2
+      Mappable CV input #3
     </td>
   </tr>
   <tr>
@@ -222,7 +206,7 @@
       <b>4</b>
     </td>
     <td>
-      Aux CV #2 (assignable)
+      Mappable CV input #4
     </td>
   </tr>
 </table>
@@ -256,7 +240,7 @@
       <b>1</b>
     </td>
     <td>
-      Pitch output #1
+      Envelope output A
     </td>
   </tr>
   <tr>
@@ -264,7 +248,7 @@
       <b>2</b>
     </td>
     <td>
-      Pitch output #2
+      Envelope output B
     </td>
   </tr>
   <tr>
@@ -272,7 +256,7 @@
       <b>3</b>
     </td>
     <td>
-      Gate output #1
+      Envelope output C
     </td>
   </tr>
   <tr>
@@ -280,7 +264,7 @@
       <b>4</b>
     </td>
     <td>
-      Gate output #2
+      Envelope output D
     </td>
   </tr>
 </table>
