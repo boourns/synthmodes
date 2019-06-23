@@ -1,0 +1,131 @@
+.mannequins p {
+  line-height: 1.3;
+}
+.mannequins hr {
+  height: 1px;
+  border: 0;
+  background: #ddd;
+  margin: 20px 0;
+  line-height: 1px;
+}
+.mannequins blockquote {
+  margin-left: 20px;
+  border-left: 2px solid #eee;
+  padding-left: 10px;
+  font-size: 90%;
+  line-height: 1.3;
+}
+
+.mannequins ul {
+  line-height: 1.5;
+  list-style: square;
+  padding: 0 0 0 2.5ex;
+}
+
+.mannequins ol {
+  line-height: 1.5;
+  padding: 0 0 0 3ex;
+}
+
+.mannequins ins {
+  text-decoration: none;
+  padding: 1px 3px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  line-height: 1;
+  font-size: 85%;
+}
+
+.mannequins kbd {
+  font: inherit;
+  font-style: italic;
+  background: #e7e7e7;
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+.mannequins hr + h3 {
+  margin-top:0 !important;
+}
+.mannequins h3:not(:first-child) {
+  margin-top: 2em;
+}
+
+.mannequins p.wleds {
+  line-height: 0.9;
+  margin:0;
+  padding: 0;
+}
+
+.mannequins span.wled {
+  display: inline-block;
+  height: 0.8ex;
+  width: 0.8ex;
+  border-radius: 50%;
+  margin-left: 2px;
+  margin-right: 2px;
+  background: #555;
+  border: 1px solid transparent;
+  vertical-align: middle;
+}
+.mannequins li span.wled {
+  height: 0.6ex;
+  width: 0.6ex;
+}
+
+.mannequins span.wled-orange {
+  background: #fb0;
+}
+
+.mannequins span.wled-white {
+  background: #fff;
+  border: 1px solid #cfcfcf;
+}
+
+@keyframes pulsing-orange {
+  0% { background: #333; }
+  20% { background: #fb0; }
+  80% { background: #fb0; }
+  100% { background: #333; }
+}
+
+@keyframes pulsing-white {
+  0% { background: #333; }
+  20% { background: white; }
+  80% { background: white; }
+  100% { background: #333; }
+}
+
+@keyframes pulsing-orange-alt {
+  0% { background: #333; }
+  20% { background: #cb9500; }
+  100% { background: #fb0; }
+}
+
+@keyframes pulsing-white-alt {
+  0% { background: #fff; }
+  80% { background: #fff; }
+  100% { background: #ccc; }
+}
+
+@keyframes blinking-white {
+  0% { background: #333; }
+  69% { background: #333; }
+  70% { background: white; }
+  100% { background: white; }
+}
+
+@keyframes blinking-orange {
+  0% { background: #333; }
+  69% { background: #333; }
+  70% { background: #fb0; }
+  100% { background: #fb0; }
+}
+
+.mannequins span.wled-white.wled-pulse { animation: pulsing-white 0.7s linear infinite; }
+.mannequins span.wled-orange.wled-pulse { animation: pulsing-orange 0.7s linear infinite; }
+.mannequins span.wled-white.wled-pulse-alt { animation: pulsing-white-alt 1.2s 0s linear infinite; }
+.mannequins span.wled-orange.wled-pulse-alt { animation: pulsing-orange-alt 1.2s 0s linear infinite; }
+.mannequins span.wled-white.wled-blink { animation: blinking-white 0.7s linear infinite; }
+.mannequins span.wled-orange.wled-blink { animation: blinking-orange 0.7s linear infinite; }
+.mannequins span.wled-white.wled-blink-alt { animation: blinking-white 0.7s 0.25s linear infinite; }
+.mannequins span.wled-orange.wled-blink-alt { animation: blinking-orange 0.7s 0.25s linear infinite; }
