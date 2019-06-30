@@ -29,6 +29,10 @@
     <module name="Warps" id="warps_stock" index="warps_stock/module.xml"/>
     <module name="Warps (Parasites)" id="warps_parasites" index="warps_parasites/module.xml"/>
   </manufacturer>
+  <manufacturer name="TipTop Audio">
+    <module name="ONE" id="tg_one" index="one/module.xml"/>
+	<module name="TG ONE" id="tg_one" index="tg_one/module.xml"/>
+  </manufacturer>
   <manufacturer name="Whimsical Raps">
     <module name="Just Friends" id="just_friends" index="just_friends/module.xml" />
   </manufacturer>

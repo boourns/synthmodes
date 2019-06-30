@@ -1,0 +1,46 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+      <h3>Settings</h3>
+      <p>
+	  A configuration file can be added to the SD card that tells ONE how it needs to boot up.
+	  </p>
+	  <p>
+	  <ul>
+		<li>File should be called <code>config.txt</code> and must be a plaintext file placed in the root directory of the SD card.</li>
+		<li>First must be a comment beginning with a <code>#</code>.</li>
+		<li>Second line sets the playback mode: "<code>Trigger</code>", "<code>Gate</code>", "<code>Fade</code>", "<code>Looping</code>", "<code>Sequence</code>".</li>
+		<li>Third line sets the CV mode: "<code>Free</code>", "<code>Quantize</code>", "<code>Select File</code>".</li>
+		<li>Fourth line sets the CV delay: "<code>Short</code>", "<code>Medium</code>", "<code>Long</code>".</li>
+		<li>Subsequent lines ignored, can be used for comments.</li>
+		<li>Parameters' first letter must be capitalized.</li>
+	  </ul>
+      </p>
+	  <h3>Example Configuration File</h3>
+	  <p>
+	  <code>
+	  # Example config.txt for ONE</br>
+	  Sequence</br>
+	  Quantize</br>
+	  Short</br>
+	  # Optional comments go here.
+	  </code>
+	  </p>
+  </div>
+</body>
+</html>
