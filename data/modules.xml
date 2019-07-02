@@ -34,5 +34,6 @@
   </manufacturer>
   <manufacturer name="Whimsical Raps">
     <module name="Just Friends" id="just_friends" index="just_friends/module.xml" />
+    <module name="W/" id="mannequins_w" index="mannequins_w/module.xml"/>
   </manufacturer>
 </modules>

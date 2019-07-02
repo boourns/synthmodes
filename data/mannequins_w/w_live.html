@@ -1,0 +1,89 @@
+<html class="no-js">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="">
+  <meta charset="utf-8">
+
+  <title>W/ Kuve Mode</title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+  <link rel="stylesheet" href="../mannequins.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content mannequins">
+      <h2>Live</h2>
+
+      <p class="wleds">
+        <span class="wled wled-orange wled-pulse-alt"></span>
+        <span class="wled wled-white wled-pulse-alt"></span>
+      </p>
+
+      <p>
+        from NAV, press <kbd>play</kbd> or <kbd>↓</kbd>+<kbd>play</kbd>.<br />
+        The tape plays to <ins>OUT</ins>.<br />
+        <ins>IN</ins> is mixed if enabled (default: on).
+      </p>
+
+
+      <h3>While playing</h3>
+
+      <p><kbd>play</kbd> to stop and exit to NAV.</p>
+
+      <ul>
+        <li><kbd>play</kbd>+<kbd>↑</kbd> double speed</li>
+        <li><kbd>play</kbd>+<kbd>↓</kbd> halve speed</li>
+      </ul>
+
+      <ul>
+        <li><kbd>loop</kbd>+<kbd>↑</kbd> next cue</li>
+        <li><kbd>loop</kbd>+<kbd>↓</kbd> previous cue</li>
+      </ul>
+
+      <ul>
+        <li><kbd>↑</kbd> add a cue (write to tape)</li>
+        <li><kbd>↓</kbd> add a cue and loop</li>
+      </ul>
+
+      <ul>
+        <li><kbd>loop</kbd> toggle looping</li>
+        <li><kbd>record</kbd> toggle recording from <ins>IN</ins></li>
+        <li><kbd>loop</kbd>+<kbd>record</kbd> add cue and record</li>
+        <li><kbd>record</kbd>+<kbd>↓</kbd> - toggle overdub/overwrite</li>
+      </ul>
+
+      <h3>CV</h3>
+      <p>in Dub mode (default)</p>
+      <ul>
+        <li><ins>THIS</ins> - trigger recording on/off</li>
+        <li>
+          <ins>THAT</ins> - (record) level ratio<br />
+          <small>
+            0V overdub<br />
+            -5V overwrite<br />
+            +5V previous material
+          </small>
+        </li>
+      </ul>
+
+      <hr />
+      <h4>Additional CV modes</h4>
+      <p>
+        Starting with firmware 1.2, <ins>THIS</ins> and <ins>THAT</ins> can be reconfigured in LIVE:
+      </p>
+      <ul>
+        <li>for cue &amp; speed control (like NAV)</li>
+        <li>as sampler controls (like CUE)</li>
+        <li>to record CV to the tape</li>
+        <li>output loop position and cue trigger</li>
+      </ul>
+      <p>See the firmware docs for setup details.</p>
+    </div>
+  </div>
+</body>
+</html>

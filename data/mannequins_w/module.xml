@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="w_info.html"/>
+      <page name="System" content="w_system.html"/>
+    </section>
+    <section name="Modes" modelist="true">
+      <page name="Nav" content="w_nav.html"/>
+      <page name="Live" content="w_live.html"/>
+      <page name="Cue" content="w_cue.html"/>
+      <page name="Global" content="w_global.html"/>
+    </section>
+  </sections>
+</module>

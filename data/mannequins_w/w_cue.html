@@ -1,0 +1,96 @@
+<html class="no-js">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="">
+  <meta charset="utf-8">
+
+  <title>W/ Cue Mode</title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+  <link rel="stylesheet" href="../mannequins.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content mannequins">
+      <h2>Cue</h2>
+
+      <p class="wleds">
+        <span class="wled"></span>
+        <span class="wled wled-white"></span>
+      </p>
+
+      <p>
+        Sampler behaviour and access to editing cues via playhead / cursor.
+      </p>
+
+      <ul>
+        <li>Enter from NAV: <kbd>loop</kbd>+<kbd>record</kbd></li>
+        <li>Exit to NAV: <kbd>loop</kbd></li>
+      </ul>
+
+      <h3>Cursor Navigation</h3>
+      <ul>
+        <li>hold <kbd>play</kbd> to audition. release returns.</li>
+        <li>hold <kbd>↑</kbd> to move cursor forward</li>
+        <li>hold <kbd>↓</kbd> to move cursor back</li>
+      </ul>
+
+      <ul>
+        <li><kbd>loop</kbd>+<kbd>↑</kbd> cursor to next cue</li>
+        <li><kbd>loop</kbd>+<kbd>↓</kbd> cursor to previous cue</li>
+      </ul>
+
+      <hr />
+
+      <h3>Sampler</h3>
+      <ul>
+        <li>
+          <ins>THIS</ins> = gate<br />
+          <small>
+            trigger &gt;15msec play and loop <br />
+            trigger &lt;15msec play without loop <br />
+            mix in CV to select cue: -1V prev, +1V next
+          </small>
+        </li>
+        <li><ins>THAT</ins> = 1V/oct pitch</li>
+      </ul>
+
+      <hr />
+
+      <h3>Cue Editing</h3>
+
+      <p>Disconnect <ins>THIS</ins> and <ins>THAT</ins>.</p>
+      <p>When the playhead/cursor is exactly at a cue point, the orange LED above
+        <kbd style="background: none">record</kbd> lights up.
+      </p>
+      <p>With the LEDs above <kbd style="background: none">record</kbd>:</p>
+      <ul style="list-style: none; padding: 0">
+        <li>
+          <span class="wled"></span>
+          <span class="wled wled-white"></span>
+
+          <kbd>loop</kbd>+<kbd>record</kbd> to add a new cue
+        </li>
+        <li>
+          <span class="wled"></span>
+          <span class="wled wled-white"></span>
+
+          <kbd>record</kbd> to relocate previous cue
+        </li>
+        <li>
+          <span class="wled wled-orange"></span>
+          <span class="wled"></span>
+
+          <kbd>record</kbd> to delete cue
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</body>
+</html>
