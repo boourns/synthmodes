@@ -1,0 +1,560 @@
+---
+layout: page
+title: ONE
+---
+<style>body {
+  font-family: -apple-system, sans-serif;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.orange {
+  background-color: #ff9e20;
+}
+
+.green {
+  background-color: #00ee00;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.darkgray {
+  background-color: #d5d5d5;
+}
+
+.flashing-green {
+  border: 0px;
+  background-color: #00ee00;
+  box-shadow: 0 0 10px #00ee00, inset 0 0 10px #00ee00;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.leds {
+  text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.chart tr th {
+  padding-right: 8px;
+}
+
+.chart tr td:first-child {
+  width:1%;
+}
+
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* just big circles - braids, clouds */
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
+}
+
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+.button-black {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: #999999;
+}
+
+.lcd {
+  width: 90%;
+  height: 90px;
+  border-radius: 5px;
+  border: 1px solid;
+  display: inline-block;
+  background-color: #eeeeee;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     /*text-align: center; */
+     width: 25%;
+}
+
+/* iOS-like button */
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a.button:visited {
+  color:white;
+}</style>General<br /><a href="#info">Info</a><br />
+Playback Modes<br /><a href="#trigger">Trigger</a><br />
+<a href="#gate">Gate</a><br />
+<a href="#fade">Fade</a><br />
+<a href="#looping">Looping</a><br />
+<a href="#sequence">Sequence</a><br />
+<a href="#combo">Combo</a><br />
+CV Modes<br /><a href="#free">Free</a><br />
+<a href="#quantize">Quantize</a><br />
+<a href="#file">File Select</a><br />
+Other<br /><a href="#playlists">Playlists</a><br />
+<a href="#settings">Settings</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>ONE</h3>
+      <p>ONE is a high-quality sample playback engine.<br><br></p>
+
+<h3>Links</h3>
+      <a class="button" href="http://tiptopaudio.com/one/">ONE Home</a><br>
+      <a class="button" href="http://www.tiptopaudio.com/manuals/Tiptop_Audio_one.pdf">ONE Manual</a><br>
+    </div>
+  </div>
+<br /><br />
+<h2>Playback Modes</h2><a name="trigger"></a><h2>Trigger</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Trigger Mode</h3>
+	   <div style="width: 100px">
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="img/red.svg">
+      </div>
+<br>
+      <p>
+	  Select by holding the <em>PLAY</em> button and moving the yellow <em>FILE</em> encoder until the <em>PLAY</em> LED is lit solid red.  Make sure no CV is attached to the <em>CV in</em> jack.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>Rising trigger edge initiates playback of sample from beginning to end.</li>
+		<li>New trigger pulses will interrupt playback and retrigger from beginning of sample.</li>
+		<li>Very low latency, recommended for use with percussive sequenced sounds.</li>
+	  </ul>
+      
+  </div>
+</div><br /><br /><a name="gate"></a><h2>Gate</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Gate Mode</h3>
+	  <div style="width: 100px">
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="img/blue.svg">
+      </div>
+<br>
+      <p>
+	  Select by holding the <em>PLAY</em> button and moving the yellow <em>FILE</em> encoder until the <em>PLAY</em> LED is lit solid blue.  Make sure no CV is attached to the <em>CV in</em> jack.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>Rising edge of gate initiates playback of sample.  Playback continues as long as gate is held high.  Playback stops when gate goes low.</li>
+		<li>Audio fades in and out (~10ms) to remove clicks.</li>
+		<li>Good for processing very long samples that do not require tight timing.</li>
+	  </ul>
+      
+  </div>
+</div><br /><br /><a name="fade"></a><h2>Fade</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Fade Mode</h3>
+	  <div style="width: 100px">
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="img/flashing_blue.svg">
+      </div>
+<br>
+      <p>
+	  Select by holding the <em>PLAY</em> button and moving the yellow <em>FILE</em> encoder until the <em>PLAY</em> LED is flashing blue.  Make sure no CV is attached to the <em>CV in</em> jack.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>Rising trigger edge initiates playback of sample from beginning to end with short fades on the head and tail.</li>
+		<li>New trigger pulses will fade out current audio before fading in new audio to remove clicks from audio discontinuities.</li>
+		<li>Useful for sounds that have little high frequency content where the 'click' is more obvious and distracting if not removed.  Some slight latency added due to the fading process.</li>
+	  </ul>
+      
+  </div>
+</div><br /><br /><a name="looping"></a><h2>Looping</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Looping Mode</h3>
+	  <div style="width: 100px">
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="img/flashing_red.svg">
+      </div>
+<br>
+      <p>
+	  Select by holding the <em>PLAY</em> button and moving the yellow <em>FILE</em> encoder until the <em>PLAY</em> LED is flashing red.  Make sure no CV is attached to the <em>CV in</em> jack.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>Sending a trigger (or pressing <em>PLAY</em>) will start playing a continuous loop.</li>
+		<li>Re-triggers reset playback to start of the audio file.</li>
+		<li>Selecting a new audio file with the <em>FILE</em> knob will stop playback.</li>
+		<li>In addition to drum and sequencer loops, this mode is great for turning ONE nto a CV generator with LFO, noise or other waveforms.  It can also act as a VCO with single-cycle waveforms.</li>
+	  </ul>
+      
+  </div>
+</div><br /><br /><a name="sequence"></a><h2>Sequence</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Sequence Mode</h3>
+	  <div style="width: 100px">
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="img/alternating.svg">
+      </div>
+<br>
+      <p>
+	  Select by holding the <em>PLAY</em> button and moving the yellow <em>FILE</em> encoder until the <em>PLAY</em> LED is alternating blue and red.  Make sure no CV is attached to the <em>CV in</em> jack.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>Each trigger initiates playback of the next file in ONE's file list.</li>
+		<li>File list is specified by creating a <code>playlist.txt</code> file.</li>
+	  </ul>
+      
+	  
+  </div>
+</div><br /><br /><a name="combo"></a><h2>Combo</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Combo Mode</h3>
+	  <div style="width: 100px">
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="img/purple.svg">
+      </div>
+<br>
+      <p>
+	  Select by holding the <em>PLAY</em> button and moving the yellow <em>FILE</em> encoder until the <em>PLAY</em> LED is purple (quickly alternating blue and red).  Make sure no CV is attached to the <em>CV in</em> jack.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>Combination of Looping and Sequence modes.</li>
+		<li>File continuously loops until next incoming trigger.</li>
+		<li>Incoming trigger advances to next file in sequence, immediately starts looping playback of new file.</li>
+	  </ul>
+      
+	  
+  </div>
+</div><br /><br />
+<h2>CV Modes</h2><a name="free"></a><h2>Free</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Free Pitch Mode</h3>
+	  <div style="width: 100px">
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="img/red.svg">
+      </div>
+<br>
+      <p>
+	  Select by holding the <em>PLAY</em> button and moving the white <em>CV</em> knob until the <em>PLAY</em> LED is lit solid red.  Make sure no CV is attached to the <em>CV in</em> jack.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>Playback rate is not quantized.</li>
+		<li>Approximately 3.5 octave range.</li>
+		<li>As pitch gets lower and playback speed gets longer and longer, the attack part of the sound gets longer and the onset of the sound is delayed.</li>
+	  </ul>
+      
+	  
+  </div>
+</div><br /><br /><a name="quantize"></a><h2>Quantize</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Quantized Pitch Mode</h3>
+	  <div style="width: 100px">
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="img/blue.svg">
+      </div>
+<br>
+      <p>
+	  Select by holding the <em>PLAY</em> button and moving the white <em>CV</em> knob until the <em>PLAY</em> LED is lit solid blue.  Make sure no CV is attached to the <em>CV in</em> jack.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>CV selects playback rate corresponding to speeds/pitches within the 12 tone equal temperament scale.</li>
+		<li>The <em>CV in</em> jack is not 1V/Oct but since it internally gets quantized, an external quantizer is unnecessary.</li>
+		<li>Approximately 3.5 octave range.</li>
+		<li>As pitch gets lower and playback speed gets longer and longer, the attack part of the sound gets longer and the onset of the sound is delayed.</li>
+	  </ul>
+      
+	  
+  </div>
+</div><br /><br /><a name="file"></a><h2>File Select</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>File Select Mode</h3>
+<div style="width: 100px">
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%" src="img/flashing_red.svg">
+      </div>
+<br>
+      <p>
+	  Select by holding the <em>PLAY</em> button and moving the white <em>CV</em> knob until the <em>PLAY</em> LED is lit flashing red.  Make sure no CV is attached to the <em>CV in</em> jack.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>CV points to a file in the card.  New triggers load that file.</li>
+<li>
+		</li>
+<li>CV acts as an offset added to the <em>FILE</em> selection encoder.  When CV is at 0V, the position of the encoder is used.</li>
+		<li>Changes are only applied when new trigger arrives, so a new file can be selected via CV without affecting playback.  The next trigger will activate the new sound.</li>
+		<li>Latency increases in this mode due to access time needed for finding and loading new file.</li>
+	  </ul>
+      
+	  
+  </div>
+</div><br /><br />
+<h2>Other</h2><a name="playlists"></a><h2>Playlists</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Playlists</h3>
+	  <p>
+	  </p>
+<ul>
+		<li>File must be called <code>playlist.txt</code> with no capitals and must be a plain text file.</li>
+		<li>
+<code>playlist.txt</code> should be placed in the root directory of the SD card.</li>
+		<li>Each audio file name should be placed on its own line.</li>
+		<li>List of file names determines sequence order (as well as the order the samples are loaded onto ONE).</li>
+		<li>File names can be up to 13 characters and must be alphanumeric.</li>
+		<li>Duplicate file names are allowed for sequencing the same file multiple times.</li>
+		<li>Max. 256 files in the list.</li>
+		<li>If a file is in the list but not on the card, ONE will stop scanning at that point and just use the files before the error.</li>
+	  </ul>
+	  
+  </div>
+</div><br /><br /><a name="settings"></a><h2>Settings</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Settings</h3>
+      <p>
+	  A configuration file can be added to the SD card that tells ONE how it needs to boot up.
+	  </p>
+	  <p>
+	  </p>
+<ul>
+		<li>File should be called <code>config.txt</code> and must be a plaintext file placed in the root directory of the SD card.</li>
+		<li>First must be a comment beginning with a <code>#</code>.</li>
+		<li>Second line sets the playback mode: "<code>Trigger</code>", "<code>Gate</code>", "<code>Fade</code>", "<code>Looping</code>", "<code>Sequence</code>".</li>
+		<li>Third line sets the CV mode: "<code>Free</code>", "<code>Quantize</code>", "<code>Select File</code>".</li>
+		<li>Fourth line sets the CV delay: "<code>Short</code>", "<code>Medium</code>", "<code>Long</code>".</li>
+		<li>Subsequent lines ignored, can be used for comments.</li>
+		<li>Parameters' first letter must be capitalized.</li>
+	  </ul>
+      
+	  <h3>Example Configuration File</h3>
+	  <p>
+	  <code>
+	  # Example config.txt for ONE
+	  Sequence
+	  Quantize
+	  Short
+	  # Optional comments go here.
+	  </code>
+	  </p>
+  </div>
+</div><br /><br />
