@@ -29,6 +29,9 @@
     <module name="Warps" id="warps_stock" index="warps_stock/module.xml"/>
     <module name="Warps (Parasites)" id="warps_parasites" index="warps_parasites/module.xml"/>
   </manufacturer>
+  <manufacturer name="Ornament &amp; Crime">
+    <module name="Ornament &amp; Crime" id="o_c_stock" index="o_c_stock/module.xml" />
+  </manufacturer>
   <manufacturer name="Whimsical Raps">
     <module name="Just Friends" id="just_friends" index="just_friends/module.xml" />
   </manufacturer>
