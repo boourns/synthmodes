@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Playback Modes" modelist="true">
+      <page name="Trigger" icon="img/red.png" content="trigger.html"/>
+      <page name="Gate" icon="img/blue.png" content="gate.html"/>
+      <page name="Fade" icon="img/flashing_blue.png" content="fade.html"/>
+      <page name="Looping" icon="img/flashing_red.png" content="looping.html"/>
+	  <page name="Sequence" icon="img/alternating.png" content="sequence.html"/>
+	  <page name="Combo" icon="img/purple.png" content="combo.html"/>
+
+    </section>
+    <section name="CV Modes" modelist="true">
+      <page name="Free" icon="img/red.png" content="free.html"/>
+      <page name="Quantize" icon="img/blue.png" content="quantize.html"/>
+      <page name="File Select" icon="img/flashing_red.png" content="file.html"/>
+    </section>
+	<section name = "Other" modelist="false">
+	  <page name="Playlists" content="playlists.html"/>
+	  <page name="Settings" content = "settings.html"/>
+	</section>
+  </sections>
+</module>

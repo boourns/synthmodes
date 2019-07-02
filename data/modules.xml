@@ -32,6 +32,10 @@
   <manufacturer name="Ornament &amp; Crime">
     <module name="Ornament &amp; Crime" id="o_c_stock" index="o_c_stock/module.xml" />
   </manufacturer>
+  <manufacturer name="TipTop Audio">
+    <module name="ONE" id="tg_one" index="one/module.xml"/>
+    <module name="TG ONE" id="tg_one" index="tg_one/module.xml"/>
+  </manufacturer>
   <manufacturer name="Whimsical Raps">
     <module name="Just Friends" id="just_friends" index="just_friends/module.xml" />
     <module name="W/" id="mannequins_w" index="mannequins_w/module.xml"/>
