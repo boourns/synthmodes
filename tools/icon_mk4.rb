@@ -1,4 +1,5 @@
-letters = %w(a b c d e f g h i j k l m)
+#letters = %w(a b c d e f g h i j k l m n)
+letters = %w(n)
 numbers = (1..8).to_a
 
 letters.each do |l|
