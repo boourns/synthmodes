@@ -424,6 +424,12 @@
           <tag>sd</tag>
         </tags>
       </page>
+      <page name="J2 Multisample Audio Playback" content="j2_multisample_2_audio_playback.html" icon="img/j2.png">
+        <tags>
+          <tag>wave</tag>
+          <tag>sd</tag>
+        </tags>
+      </page>
       <page name="J3 MIDI file playback (Free Running)" content="j3_midi_file_playback_free_running.html" icon="img/j3.png">
         <tags>
           <tag>midi</tag>
@@ -578,6 +584,12 @@
         </tags>
       </page>
       <page name="M3 Logic" content="m3_logic.html" icon="img/m3.png">
+        <tags>
+          <tag>utility</tag>
+          <tag>logic</tag>
+        </tags>
+      </page>
+      <page name="M4 Half-wave Rectifier" content="m4_halfwave_rectifier.html" icon="img/m4.png">
         <tags>
           <tag>utility</tag>
           <tag>logic</tag>

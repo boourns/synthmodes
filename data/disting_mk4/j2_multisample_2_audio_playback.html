@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>sets pulses for pattern 2</td>
+      <td>tune +/- 0.5 octaves</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>clock input</td>
+      <td>retrigger CV</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>reset input</td>
+      <td>V/oct pitch CV</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>pattern 1 out</td>
+      <td>left audio output</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>pattern 2 out</td>
+      <td>right audio output</td>
     </tr>
   </table>
 
@@ -84,15 +84,15 @@
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">99</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Steps</td>
+      <td colspan="4">Folder</td>
     </tr>
   </table>
 <br>
@@ -111,15 +111,15 @@
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">-8</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">8</td>
 
-      <td class="parameter">4</td>
+      <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Pulses (pattern 1)</td>
+      <td colspan="4">Octave shift</td>
     </tr>
   </table>
 <br>
@@ -140,13 +140,13 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">96</td>
+      <td class="parameter">99</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">A Rotation</td>
+      <td colspan="4">Trigger mode / decay envelope time.<br>0: trigger resets sample playback to start.<br>1-99: trigger acts as gate, value controls decay envelope time.</td>
     </tr>
   </table>
 <br>
@@ -165,15 +165,15 @@
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">-1</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">4</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">-1</td>
     </tr>
 
     <tr>
-      <td colspan="4">Pulse length</td>
+      <td colspan="4">MIDI mode. See manual.</td>
     </tr>
   </table>
 <br>
@@ -192,18 +192,19 @@
     <tr>
       <td class="parameter">4</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">96</td>
+      <td class="parameter">24</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">2</td>
     </tr>
 
     <tr>
-      <td colspan="4">B Rotation.  When -1, uses same value as A Rotation.</td>
+      <td colspan="4">Pitch bend depth<br>
     </tr>
   </table>
 <br>
+
 
   <table class="bordered">
     <tr>
@@ -221,15 +222,21 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">96</td>
+      <td class="parameter">1</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">1</td>
     </tr>
 
     <tr>
-      <td colspan="4">Number of steps before entire pattern resets.</td>
+      <td colspan="4">Panning option.<br>
+      0: A emits sample X, B emits sample Y<br>
+      1: A/B act as L/R output of both samples.</td>
     </tr>
   </table>
 <br>
+
+
+  <h3>Description</h3>See manual for how to set up multisample
+  playlists
 </body>
 </html>

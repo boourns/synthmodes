@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>sets pulses for pattern 2</td>
+      <td>Threshold.  Adjusts point of comparison for negative/positive.</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>clock input</td>
+      <td>input</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>reset input</td>
+      <td>input</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>pattern 1 out</td>
+      <td>output</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>pattern 2 out</td>
+      <td>output</td>
     </tr>
   </table>
 
@@ -84,15 +84,24 @@
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">2</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Steps</td>
+      <td colspan="4">Mode<br>
+        When 0,<br> 
+        A = positive part of X + negative part of Y<br>
+        B = negative part of X + positive part of Y<br>
+        When 1, inputs are summed,<br>
+        A = positive(X + Y)<br>
+        B = negative(X + Y)<br>
+        When 2, inputs are subtracted,<br>
+        A = positive(X - Y)<br>
+        B = negative(X - Y)<br>
     </tr>
   </table>
 <br>
@@ -111,15 +120,15 @@
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">-100</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">100</td>
 
-      <td class="parameter">4</td>
+      <td class="parameter">20</td>
     </tr>
 
     <tr>
-      <td colspan="4">Pulses (pattern 1)</td>
+      <td colspan="4">Input X threshold</td>
     </tr>
   </table>
 <br>
@@ -138,15 +147,15 @@
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">-100</td>
 
-      <td class="parameter">96</td>
+      <td class="parameter">100</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">20</td>
     </tr>
 
     <tr>
-      <td colspan="4">A Rotation</td>
+      <td colspan="4">Input Y threshold</td>
     </tr>
   </table>
 <br>
@@ -165,15 +174,15 @@
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">-100</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">100</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">10</td>
     </tr>
 
     <tr>
-      <td colspan="4">Pulse length</td>
+      <td colspan="4">Input X hysteresis</td>
     </tr>
   </table>
 <br>
@@ -192,42 +201,15 @@
     <tr>
       <td class="parameter">4</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">-100</td>
 
-      <td class="parameter">96</td>
+      <td class="parameter">100</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">10</td>
     </tr>
 
     <tr>
-      <td colspan="4">B Rotation.  When -1, uses same value as A Rotation.</td>
-    </tr>
-  </table>
-<br>
-
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
-
-      <th width="25%">min</th>
-
-      <th width="25%">max</th>
-
-      <th width="25%">default</th>
-    </tr>
-
-    <tr>
-      <td class="parameter">5</td>
-
-      <td class="parameter">0</td>
-
-      <td class="parameter">96</td>
-
-      <td class="parameter">0</td>
-    </tr>
-
-    <tr>
-      <td colspan="4">Number of steps before entire pattern resets.</td>
+      <td colspan="4">Input Y hysteresis</td>
     </tr>
   </table>
 <br>
