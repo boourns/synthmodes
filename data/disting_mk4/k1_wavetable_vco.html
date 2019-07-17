@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>sub-octave square output</td>
+      <td>sub-octave square, or detuned output</td>
     </tr>
   </table>
 
@@ -111,7 +111,7 @@
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-8</td>
+      <td class="parameter">-16</td>
 
       <td class="parameter">8</td>
 
@@ -138,9 +138,9 @@
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-31</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -173,7 +173,7 @@
     </tr>
 
     <tr>
-      <td colspan="4">Output B option/detune<br>
+      <td colspan="4">Output B option/detune.  Only applies when Parameter 4 is -1.<br>
       -3: squarewave 1 octave below A<br>
       -2: Wavetable VCO one octave below output A<br>
       -1: Wavetable VCO one octave above output A<br>
@@ -183,6 +183,37 @@
     </tr>
   </table>
 <br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">-1</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">-1</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Phase.<br>
+        When -1, output B is selected by Parameter 3.<br>
+        When 0-99, output B is a 0-99% phase-offset output of output A.<br>
+</td>
+    </tr>
+  </table>
+<br>
+
 
   <h3>Description</h3>See manual for wavetable SD card setup
 </body>

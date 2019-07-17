@@ -482,6 +482,14 @@
           <tag>sd</tag>
         </tags>
       </page>
+      <page name="K4 Clockable Wavetable Env" content="k4_clockable_wavetable_env.html" icon="img/k2.png">
+        <tags>
+          <tag>wave</tag>
+          <tag>envelope</tag>
+          <tag>clocked</tag>
+          <tag>sd</tag>
+        </tags>
+      </page>
       <page name="K5 Programmable Quantizer" content="k5_programmable_quantizer.html" icon="img/k5.png">
         <tags>
           <tag>quantizer</tag>
@@ -573,6 +581,14 @@
         <tags>
           <tag>utility</tag>
           <tag>logic</tag>
+        </tags>
+      </page>
+      <page name="N8 Clockable SD Ping Pong" content="n8_clockable_sd_ping_pong.html" icon="img/n8.png">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+          <tag>clocked</tag>
+          <tag>sd</tag>
         </tags>
       </page>
     </section>

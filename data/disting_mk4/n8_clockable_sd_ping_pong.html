@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>wet/dry or freeze. Press Z to "freeze"/"unfreeze" the reverb.</td>
+      <td>feedback</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>audio input</td>
+      <td>clock input</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>X plus reverb</td>
+      <td>output L</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>Y plus reverb</td>
+      <td>output R</td>
     </tr>
   </table>
 
@@ -84,19 +84,18 @@
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">-15</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">8</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Size</td>
+      <td colspan="4">Delay time multiplier.  See chart below</td>
     </tr>
   </table>
 <br>
-
   <table class="bordered">
     <tr>
       <th width="25%">pos</th>
@@ -111,19 +110,18 @@
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">8</td>
 
-      <td class="parameter">24</td>
+      <td class="parameter">8</td>
     </tr>
 
     <tr>
-      <td colspan="4">Feedback</td>
+      <td colspan="4">Maximum feedback</td>
     </tr>
   </table>
 <br>
-
   <table class="bordered">
     <tr>
       <th width="25%">pos</th>
@@ -140,17 +138,16 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">5</td>
-
       <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Character</td>
+      <td colspan="4">Output mode.  When 0, outputs mix of wet and dry.  When 1, outputs only wet signal.</td>
     </tr>
   </table>
 <br>
-
   <table class="bordered">
     <tr>
       <th width="25%">pos</th>
@@ -165,71 +162,51 @@
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-1</td>
-
-      <td class="parameter">31</td>
-
-      <td class="parameter">8</td>
-    </tr>
-
-    <tr>
-      <td colspan="4">Lowpass filter</td>
-    </tr>
-  </table>
-<br>
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
-
-      <th width="25%">min</th>
-
-      <th width="25%">max</th>
-
-      <th width="25%">default</th>
-    </tr>
-
-    <tr>
-      <td class="parameter">4</td>
-
-      <td class="parameter">0</td>
-
-      <td class="parameter">12</td>
-
-      <td class="parameter">0</td>
-    </tr>
-
-    <tr>
-      <td colspan="4">Reverb Gain</td>
-    </tr>
-  </table>
-<br>
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
-
-      <th width="25%">min</th>
-
-      <th width="25%">max</th>
-
-      <th width="25%">default</th>
-    </tr>
-
-    <tr>
-      <td class="parameter">5</td>
-
-      <td class="parameter">-33</td>
+      <td class="parameter">-32</td>
 
       <td class="parameter">32</td>
 
-      <td class="parameter">-33</td>
+      <td class="parameter">-32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Wet/dry.  When -33, wet/dry is set by turning Z.<br>
-      When -32 to 32, Parameter 5 sets wet/dry and high Z value enables reverb freeze.
-      </td>
+      <td colspan="4">Input L/R pan</td>
     </tr>
   </table>
 <br>
+<p>
+  <h3>Note</h3>
+  Tap tempo to set delay time by pressing Z
+</p>
+<p>
+  <h3>Delay Multiplier</h3>
+  <table class="chart bordered">
+    <tr><th>Parameter&nbsp;0</th><th>Multiplier</th></tr>
+    <tr><td>-15</td><td>1/64</td></tr>
+    <tr><td>-14</td><td>1/48</td></tr>
+    <tr><td>-13</td><td>1/32</td></tr>
+    <tr><td>-12</td><td>1/24</td></tr>
+    <tr><td>-11</td><td>1/16</td></tr>
+    <tr><td>-10</td><td>1/12</td></tr>
+    <tr><td>-9</td><td>1/8</td></tr>
+    <tr><td>-8</td><td>1/6</td></tr>
+    <tr><td>-7</td><td>3/16</td></tr>
+    <tr><td>-6</td><td>1/4</td></tr>
+    <tr><td>-5</td><td>5/16</td></tr>
+    <tr><td>-4</td><td>1/3</td></tr>
+    <tr><td>-3</td><td>3/8</td></tr>
+    <tr><td>-2</td><td>1/2</td></tr>
+    <tr><td>-1</td><td>3/4</td></tr>
+    <tr><td>0</td><td>x1</td></tr>
+    <tr><td>1</td><td>x1.5</td></tr>
+    <tr><td>2</td><td>x2</td></tr>
+    <tr><td>3</td><td>x3</td></tr>
+    <tr><td>4</td><td>x4</td></tr>
+    <tr><td>5</td><td>x5</td></tr>
+    <tr><td>6</td><td>x6</td></tr>
+    <tr><td>7</td><td>x8</td></tr>
+    <tr><td>8</td><td>x16</td></tr>
+  </table>
+</p>
 </body>
 </html>
