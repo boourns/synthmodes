@@ -368,6 +368,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#i7_dual_audio_playback">I7 Dual Audio Playback</a><br />
 <a href="#i8_dual_audio_playback_z_speed">I8 Dual Audio Playback (Z speed)</a><br />
 <a href="#j1_midi_file_playback_clocked">J1 MIDI file playback (clocked)</a><br />
+<a href="#j2_multisample_2_audio_playback">J2 Multisample Audio Playback</a><br />
 <a href="#j3_midi_file_playback_free_running">J3 MIDI file playback (Free Running)</a><br />
 <a href="#j4_audio_playback_end_position_cv">J4 Audio Playback (end position CV)</a><br />
 <a href="#j5_audio_recorder">J5 Audio Recorder</a><br />
@@ -377,6 +378,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#k1_wavetable_vco">K1 Wavetable VCO</a><br />
 <a href="#k2_clockable_wavetable_lfo">K2 Clockable Wavetable LFO</a><br />
 <a href="#k3_wavetable_waveshaper">K3 Wavetable Waveshaper</a><br />
+<a href="#k4_clockable_wavetable_env">K4 Clockable Wavetable Env</a><br />
 <a href="#k5_programmable_quantizer">K5 Programmable Quantizer</a><br />
 <a href="#k6_clockable_sd_delay">K6 Clockable SD Delay</a><br />
 <a href="#k7_stereo_clockable_sd_delay">K7 Stereo Clockable SD Delay</a><br />
@@ -391,7 +393,9 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#l8_noise_gate">L8 Noise Gate</a><br />
 <a href="#m1_delayed_lfo">M1 Delayed LFO</a><br />
 <a href="#m2_scaled_lfo">M2 Scaled LFO</a><br />
-<a href="#m3_logic">M3 Logic</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+<a href="#m3_logic">M3 Logic</a><br />
+<a href="#m4_halfwave_rectifier">M4 Half-wave Rectifier</a><br />
+<a href="#n8_clockable_sd_ping_pong">N8 Clockable SD Ping Pong</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
   <div class="centered">
     <div class="content">
       <h3>Disting mk4</h3>
@@ -785,6 +789,60 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
       <td>linear: log2(Y/scale)</td>
     </tr>
   </table>
+  <br>
+  <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">0</td>
+
+        <td class="parameter">0</td>
+
+        <td class="parameter">1</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Type A.  When enabled, output A acts as gate inverter.
+      </td>
+      </tr>
+    </table>
+    <br>
+    <table class="bordered">
+        <tr>
+          <th width="25%">pos</th>
+
+          <th width="25%">min</th>
+
+          <th width="25%">max</th>
+
+          <th width="25%">default</th>
+        </tr>
+
+        <tr>
+          <td class="parameter">1</td>
+
+          <td class="parameter">0</td>
+
+          <td class="parameter">1</td>
+
+          <td class="parameter">0</td>
+        </tr>
+
+        <tr>
+          <td colspan="4">Type B.  When enabled, output B acts as gate inverter.
+        </td>
+        </tr>
+      </table>
 <br /><br /><a name="a6_quantizer"></a><h2>A6 Quantizer</h2>
   <h3>Controls</h3>
 
@@ -2250,7 +2308,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
         </div>
       </td>
 
-      <td>tune +/- 0.5 octave</td>
+      <td>tune +/- 0.5 octave or sync</td>
     </tr>
 
     <tr>
@@ -2433,6 +2491,63 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     </tr>
   </table>
 <br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">5</td>
+
+      <td class="parameter">-12</td>
+
+      <td class="parameter">12</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Transpose
+    </td>
+</tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">6</td>
+
+      <td class="parameter">-51</td>
+
+      <td class="parameter">50</td>
+
+      <td class="parameter">-51</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Fine tune/enable sync.<br>
+        When -51, Z sets fine tune.<br>
+        When -50 to 50, Parameter 6 sets fine tune. Z becomes a sync input, resetting VCO phase when above 1V.<br>
+    </td>
+</tr>
+  </table>
+<br>
 <br /><br /><a name="c1_precision_adder_fractional_offsets"></a><h2>C1 Precision Adder (fractional offsets)</h2>
   <h3>Controls</h3>
 
@@ -2588,15 +2703,67 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-31</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
       <td colspan="4">Applies offset to Y input</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">32</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Y input attenuator.</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Enable saturation.</td>
     </tr>
   </table>
 <br>
@@ -3261,6 +3428,60 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     </tr>
   </table>
 <br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">64</td>
+
+      <td class="parameter">16</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Output A attenuation/gain.
+    </td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">2</td>
+
+        <td class="parameter">0</td>
+
+        <td class="parameter">64</td>
+
+        <td class="parameter">16</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Output B attenuation/gain.
+      </td>
+      </tr>
+    </table>
+  <br>
 <br /><br /><a name="c7_phaser"></a><h2>C7 Phaser</h2>
   <h3>Controls</h3>
 
@@ -8747,6 +8968,35 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     </tr>
   </table>
 <br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Portamento</td>
+    </tr>
+  </table>
+<br>
+<p>
+  Outputs can be controlled by MIDI notes (pitch/gate), MIDI CCs 33/34 (-5v to +5v range), or MIDI CCs 35/36 (0v to 10v range).
+</p>
 <br /><br /><a name="g8_cvmidi"></a><h2>G8 CV/MIDI</h2>
   <h3>Controls</h3>
 
@@ -9755,13 +10005,13 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
       <td class="parameter">0</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">96</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Rotation</td>
+      <td colspan="4">A Rotation</td>
     </tr>
   </table>
 <br>
@@ -9789,6 +10039,60 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
     <tr>
       <td colspan="4">Pulse length</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">-1</td>
+
+      <td class="parameter">96</td>
+
+      <td class="parameter">-1</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">B Rotation.  When -1, uses same value as A Rotation.</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">5</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">96</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Number of steps before entire pattern resets.</td>
     </tr>
   </table>
 <br>
@@ -10537,7 +10841,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
         </div>
       </td>
 
-      <td>selects sample</td>
+      <td>selects sample, or start position</td>
     </tr>
 
     <tr>
@@ -10633,6 +10937,32 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 
     <tr>
       <td colspan="4">Trigger mode / decay envelope time.<br>0: trigger resets sample playback to start.<br>1-99: trigger acts as gate, value controls decay envelope time.</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">-1</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">-1</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">When -1, sample is selected by Z.<br>When 0-99, Parameter 2 selects sample and Z controls start position.</td>
     </tr>
   </table>
 <br>
@@ -11654,6 +11984,260 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
       <td>gate output</td>
     </tr>
   </table>
+  <br>
+  <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">0</td>
+
+        <td class="parameter">-1</td>
+
+        <td class="parameter">31</td>
+
+        <td class="parameter">-1</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Selects MIDI file.  When -1, file chosen by Z.
+      </td>
+      </tr>
+    </table>
+  <br>
+<br /><br /><a name="j2_multisample_2_audio_playback"></a><h2>J2 Multisample Audio Playback</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>tune +/- 0.5 octaves</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>retrigger CV</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>V/oct pitch CV</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>left audio output</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>right audio output</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Folder</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-8</td>
+
+      <td class="parameter">8</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Octave shift</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Trigger mode / decay envelope time.<br>0: trigger resets sample playback to start.<br>1-99: trigger acts as gate, value controls decay envelope time.</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">-1</td>
+
+      <td class="parameter">4</td>
+
+      <td class="parameter">-1</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">MIDI mode. See manual.</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">24</td>
+
+      <td class="parameter">2</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Pitch bend depth<br>
+    </td>
+</tr>
+  </table>
+<br>
+
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">5</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">1</td>
+
+      <td class="parameter">1</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Panning option.<br>
+      0: A emits sample X, B emits sample Y<br>
+      1: A/B act as L/R output of both samples.</td>
+    </tr>
+  </table>
+<br>
+
+
+  <h3>Description</h3>See manual for how to set up multisample
+  playlists
 <br /><br /><a name="j3_midi_file_playback_free_running"></a><h2>J3 MIDI file playback (Free Running)</h2>
   <h3>Controls</h3>
 
@@ -12368,7 +12952,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
         </div>
       </td>
 
-      <td>sub-octave square output</td>
+      <td>sub-octave square, or detuned output</td>
     </tr>
   </table>
 
@@ -12415,7 +12999,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-8</td>
+      <td class="parameter">-16</td>
 
       <td class="parameter">8</td>
 
@@ -12442,9 +13026,9 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-31</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -12477,7 +13061,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     </tr>
 
     <tr>
-      <td colspan="4">Output B option/detune<br>
+      <td colspan="4">Output B option/detune.  Only applies when Parameter 4 is -1.<br>
       -3: squarewave 1 octave below A<br>
       -2: Wavetable VCO one octave below output A<br>
       -1: Wavetable VCO one octave above output A<br>
@@ -12487,6 +13071,37 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     </tr>
   </table>
 <br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">-1</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">-1</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Phase.<br>
+        When -1, output B is selected by Parameter 3.<br>
+        When 0-99, output B is a 0-99% phase-offset output of output A.<br>
+</td>
+    </tr>
+  </table>
+<br>
+
 
   <h3>Description</h3>See manual for wavetable SD card setup
 <br /><br /><a name="k2_clockable_wavetable_lfo"></a><h2>K2 Clockable Wavetable LFO</h2>
@@ -12767,6 +13382,306 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <br>
 
   <h3>Description</h3>See manual for wavetable SD card setup
+<br /><br /><a name="k4_clockable_wavetable_env"></a><h2>K4 Clockable Wavetable Env</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>trigger</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>clock input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>Wavetable position</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>wavetable output</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>wavetable output</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Chooses Wavetable</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Y offset</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">2</td>
+
+        <td class="parameter">-32</td>
+
+        <td class="parameter">32</td>
+
+        <td class="parameter">32</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Output A attenuverter</td>
+      </tr>
+    </table>
+  <br>
+
+  <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">3</td>
+
+        <td class="parameter">-32</td>
+
+        <td class="parameter">32</td>
+
+        <td class="parameter">-32</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Output B attenuverter</td>
+      </tr>
+    </table>
+  <br>
+
+  <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">4</td>
+
+        <td class="parameter">-15</td>
+
+        <td class="parameter">8</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Envelope time multiplier.  See chart below.</td>
+      </tr>
+    </table>
+  <br>
+
+  <h3>Description</h3>See manual for wavetable SD card setup
+
+  <p>
+    </p>
+<h3>Delay Multiplier</h3>
+    <table class="chart bordered">
+      <tr>
+<th>Parameter 0</th>
+<th>Multiplier</th>
+</tr>
+      <tr>
+<td>-15</td>
+<td>1/64</td>
+</tr>
+      <tr>
+<td>-14</td>
+<td>1/48</td>
+</tr>
+      <tr>
+<td>-13</td>
+<td>1/32</td>
+</tr>
+      <tr>
+<td>-12</td>
+<td>1/24</td>
+</tr>
+      <tr>
+<td>-11</td>
+<td>1/16</td>
+</tr>
+      <tr>
+<td>-10</td>
+<td>1/12</td>
+</tr>
+      <tr>
+<td>-9</td>
+<td>1/8</td>
+</tr>
+      <tr>
+<td>-8</td>
+<td>1/6</td>
+</tr>
+      <tr>
+<td>-7</td>
+<td>3/16</td>
+</tr>
+      <tr>
+<td>-6</td>
+<td>1/4</td>
+</tr>
+      <tr>
+<td>-5</td>
+<td>5/16</td>
+</tr>
+      <tr>
+<td>-4</td>
+<td>1/3</td>
+</tr>
+      <tr>
+<td>-3</td>
+<td>3/8</td>
+</tr>
+      <tr>
+<td>-2</td>
+<td>1/2</td>
+</tr>
+      <tr>
+<td>-1</td>
+<td>3/4</td>
+</tr>
+      <tr>
+<td>0</td>
+<td>x1</td>
+</tr>
+      <tr>
+<td>1</td>
+<td>x1.5</td>
+</tr>
+      <tr>
+<td>2</td>
+<td>x2</td>
+</tr>
+      <tr>
+<td>3</td>
+<td>x3</td>
+</tr>
+      <tr>
+<td>4</td>
+<td>x4</td>
+</tr>
+      <tr>
+<td>5</td>
+<td>x5</td>
+</tr>
+      <tr>
+<td>6</td>
+<td>x6</td>
+</tr>
+      <tr>
+<td>7</td>
+<td>x8</td>
+</tr>
+      <tr>
+<td>8</td>
+<td>x16</td>
+</tr>
+    </table>
+  
 <br /><br /><a name="k5_programmable_quantizer"></a><h2>K5 Programmable Quantizer</h2>
   <h3>Controls</h3>
 
@@ -13654,7 +14569,7 @@ Scales are Scala files loaded off microSD card.
         </div>
       </td>
 
-      <td>wet/dry</td>
+      <td>wet/dry or freeze. Press Z to "freeze"/"unfreeze" the reverb.</td>
     </tr>
 
     <tr>
@@ -13714,11 +14629,11 @@ Scales are Scala files loaded off microSD card.
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">1</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">15</td>
+      <td class="parameter">16</td>
     </tr>
 
     <tr>
@@ -13741,11 +14656,11 @@ Scales are Scala files loaded off microSD card.
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">1</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">23</td>
+      <td class="parameter">24</td>
     </tr>
 
     <tr>
@@ -13807,6 +14722,61 @@ Scales are Scala files loaded off microSD card.
     </tr>
   </table>
 <br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">12</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Reverb Gain</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">5</td>
+
+      <td class="parameter">-33</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">-33</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Wet/dry.  When -33, wet/dry is set by turning Z.<br>
+      When -32 to 32, Parameter 5 sets wet/dry and high Z value enables reverb freeze.
+      </td>
+    </tr>
+  </table>
+<br>
 <br /><br /><a name="l2_mono_to_stereo_reverb"></a><h2>L2 Mono-to-Stereo Reverb</h2>
   <h3>Controls</h3>
 
@@ -13818,7 +14788,7 @@ Scales are Scala files loaded off microSD card.
         </div>
       </td>
 
-      <td>wet/dry</td>
+      <td>wet/dry or freeze. Press Z to "freeze"/"unfreeze" the reverb.</td>
     </tr>
 
     <tr>
@@ -13878,11 +14848,11 @@ Scales are Scala files loaded off microSD card.
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">1</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">15</td>
+      <td class="parameter">16</td>
     </tr>
 
     <tr>
@@ -13905,11 +14875,11 @@ Scales are Scala files loaded off microSD card.
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">1</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">23</td>
+      <td class="parameter">24</td>
     </tr>
 
     <tr>
@@ -13971,6 +14941,60 @@ Scales are Scala files loaded off microSD card.
     </tr>
   </table>
 <br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">12</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Reverb Gain</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">5</td>
+
+      <td class="parameter">-33</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">-33</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Wet/dry.  When -33, wet/dry is set by turning Z.<br>
+      When -32 to 32, Parameter 5 sets wet/dry and high Z value enables reverb freeze.
+      </td>
+    </tr>
+  </table>
+<br>
 <br /><br /><a name="l3_dual_reverb"></a><h2>L3 Dual Reverb</h2>
   <h3>Controls</h3>
 
@@ -13982,7 +15006,7 @@ Scales are Scala files loaded off microSD card.
         </div>
       </td>
 
-      <td>wet/dry</td>
+      <td>wet/dry or freeze. Press Z to "freeze"/"unfreeze" the reverb.</td>
     </tr>
 
     <tr>
@@ -14042,11 +15066,11 @@ Scales are Scala files loaded off microSD card.
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">1</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">15</td>
+      <td class="parameter">16</td>
     </tr>
 
     <tr>
@@ -14069,11 +15093,11 @@ Scales are Scala files loaded off microSD card.
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">1</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">23</td>
+      <td class="parameter">24</td>
     </tr>
 
     <tr>
@@ -14132,6 +15156,60 @@ Scales are Scala files loaded off microSD card.
 
     <tr>
       <td colspan="4">Lowpass filter</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">12</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Reverb Gain</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">5</td>
+
+      <td class="parameter">-33</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">-33</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Wet/dry.  When -33, wet/dry is set by turning Z.<br>
+      When -32 to 32, Parameter 5 sets wet/dry and high Z value enables reverb freeze.
+      </td>
     </tr>
   </table>
 <br>
@@ -15623,4 +16701,477 @@ Scales are Scala files loaded off microSD card.
     </tr>
   </table>
 <br>
+<br /><br /><a name="m4_halfwave_rectifier"></a><h2>M4 Half-wave Rectifier</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>Threshold.  Adjusts point of comparison for negative/positive.</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>output</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>output</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Mode<br>
+        When 0,<br> 
+        A = positive part of X + negative part of Y<br>
+        B = negative part of X + positive part of Y<br>
+        When 1, inputs are summed,<br>
+        A = positive(X + Y)<br>
+        B = negative(X + Y)<br>
+        When 2, inputs are subtracted,<br>
+        A = positive(X - Y)<br>
+        B = negative(X - Y)<br>
+    </td>
+</tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-100</td>
+
+      <td class="parameter">100</td>
+
+      <td class="parameter">20</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Input X threshold</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">-100</td>
+
+      <td class="parameter">100</td>
+
+      <td class="parameter">20</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Input Y threshold</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">-100</td>
+
+      <td class="parameter">100</td>
+
+      <td class="parameter">10</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Input X hysteresis</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">-100</td>
+
+      <td class="parameter">100</td>
+
+      <td class="parameter">10</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Input Y hysteresis</td>
+    </tr>
+  </table>
+<br>
+<br /><br /><a name="n8_clockable_sd_ping_pong"></a><h2>N8 Clockable SD Ping Pong</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>feedback</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>audio input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>clock input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>output L</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>output R</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">-15</td>
+
+      <td class="parameter">8</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Delay time multiplier.  See chart below</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">8</td>
+
+      <td class="parameter">8</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Maximum feedback</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Output mode.  When 0, outputs mix of wet and dry.  When 1, outputs only wet signal.</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">-32</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Input L/R pan</td>
+    </tr>
+  </table>
+<br>
+<p>
+  </p>
+<h3>Note</h3>
+  Tap tempo to set delay time by pressing Z
+
+<p>
+  </p>
+<h3>Delay Multiplier</h3>
+  <table class="chart bordered">
+    <tr>
+<th>Parameter 0</th>
+<th>Multiplier</th>
+</tr>
+    <tr>
+<td>-15</td>
+<td>1/64</td>
+</tr>
+    <tr>
+<td>-14</td>
+<td>1/48</td>
+</tr>
+    <tr>
+<td>-13</td>
+<td>1/32</td>
+</tr>
+    <tr>
+<td>-12</td>
+<td>1/24</td>
+</tr>
+    <tr>
+<td>-11</td>
+<td>1/16</td>
+</tr>
+    <tr>
+<td>-10</td>
+<td>1/12</td>
+</tr>
+    <tr>
+<td>-9</td>
+<td>1/8</td>
+</tr>
+    <tr>
+<td>-8</td>
+<td>1/6</td>
+</tr>
+    <tr>
+<td>-7</td>
+<td>3/16</td>
+</tr>
+    <tr>
+<td>-6</td>
+<td>1/4</td>
+</tr>
+    <tr>
+<td>-5</td>
+<td>5/16</td>
+</tr>
+    <tr>
+<td>-4</td>
+<td>1/3</td>
+</tr>
+    <tr>
+<td>-3</td>
+<td>3/8</td>
+</tr>
+    <tr>
+<td>-2</td>
+<td>1/2</td>
+</tr>
+    <tr>
+<td>-1</td>
+<td>3/4</td>
+</tr>
+    <tr>
+<td>0</td>
+<td>x1</td>
+</tr>
+    <tr>
+<td>1</td>
+<td>x1.5</td>
+</tr>
+    <tr>
+<td>2</td>
+<td>x2</td>
+</tr>
+    <tr>
+<td>3</td>
+<td>x3</td>
+</tr>
+    <tr>
+<td>4</td>
+<td>x4</td>
+</tr>
+    <tr>
+<td>5</td>
+<td>x5</td>
+</tr>
+    <tr>
+<td>6</td>
+<td>x6</td>
+</tr>
+    <tr>
+<td>7</td>
+<td>x8</td>
+</tr>
+    <tr>
+<td>8</td>
+<td>x16</td>
+</tr>
+  </table>
+
 <br /><br />
