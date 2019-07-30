@@ -1,5 +1,5 @@
 .mannequins p {
-  line-height: 1.3;
+  line-height: 1.4;
 }
 .mannequins hr {
   height: 1px;
@@ -13,17 +13,17 @@
   border-left: 2px solid #eee;
   padding-left: 10px;
   font-size: 90%;
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .mannequins ul {
-  line-height: 1.5;
+  line-height: 1.6;
   list-style: square;
   padding: 0 0 0 2.5ex;
 }
 
 .mannequins ol {
-  line-height: 1.5;
+  line-height: 1.6;
   padding: 0 0 0 3ex;
 }
 
