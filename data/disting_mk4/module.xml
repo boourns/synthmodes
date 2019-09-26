@@ -595,6 +595,17 @@
           <tag>logic</tag>
         </tags>
       </page>
+      <page name="M5 Stereo Filter" content="m5_stereo_filter.html" icon="img/m5.png">
+        <tags>
+          <tag>filter</tag>
+        </tags>
+      </page>
+      <page name="M6 Stereo Tape Delay" content="m6_stereo_tape_delay.html" icon="img/m6.png">
+        <tags>
+          <tag>effect</tag>
+          <tag>delay</tag>
+        </tags>
+      </page>
       <page name="N8 Clockable SD Ping Pong" content="n8_clockable_sd_ping_pong.html" icon="img/n8.png">
         <tags>
           <tag>effect</tag>

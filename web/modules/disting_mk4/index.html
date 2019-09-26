@@ -395,6 +395,8 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
 <a href="#m2_scaled_lfo">M2 Scaled LFO</a><br />
 <a href="#m3_logic">M3 Logic</a><br />
 <a href="#m4_halfwave_rectifier">M4 Half-wave Rectifier</a><br />
+<a href="#m5_stereo_filter">M5 Stereo Filter</a><br />
+<a href="#m6_stereo_tape_delay">M6 Stereo Tape Delay</a><br />
 <a href="#n8_clockable_sd_ping_pong">N8 Clockable SD Ping Pong</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
   <div class="centered">
     <div class="content">
@@ -403,7 +405,7 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
         The Disting firmware gets updated regularly, be sure to check the firmware page for the latest version and latest manual.
       </p>
       <p>
-        These cheat sheets cover firmware V4.12.
+        These cheat sheets cover firmware V4.13.
       </p>
       <p>
         To change algorithms, press S once to enter the menu, and a second time to select the first menu item.
@@ -1472,6 +1474,33 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
       1: White<br>
       2: Pink<br>
       3: Red</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">64</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Amount of noise added to input.</td>
     </tr>
   </table>
 <br>
@@ -2629,6 +2658,36 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     <tr>
       <td colspan="4">Controls Z offset divisor, from 1/1 of an
       octave to 1/12 an octave(semitones).</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Sum mode.<br>
+      0: A=X+Y+offset, B=X-Y-offset<br>
+      1: A=X+offset, B=Y-offset<br>
+      2: A=X+offset, B=Y+offset</td>
     </tr>
   </table>
 <br>
@@ -9371,6 +9430,61 @@ Algorithms<br /><a href="#a1_precision_adder">A1 Precision Adder</a><br />
     </tr>
   </table>
 <br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">64</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Amount of noise added to input X.</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">64</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Amount of noise added to input Y.</td>
+    </tr>
+  </table>
+<br>
+
 <br /><br /><a name="h3_dual_quantizer_z_scale"></a><h2>H3 Dual Quantizer (Z scale)</h2>
   <h3>Controls</h3>
 
@@ -15496,7 +15610,7 @@ Scales are Scala files loaded off microSD card.
 
       <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">99</td>
 
       <td class="parameter">8</td>
     </tr>
@@ -15521,9 +15635,9 @@ Scales are Scala files loaded off microSD card.
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-31</td>
+      <td class="parameter">-64</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -15548,9 +15662,9 @@ Scales are Scala files loaded off microSD card.
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-31</td>
+      <td class="parameter">-63</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">63</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -15587,6 +15701,115 @@ Scales are Scala files loaded off microSD card.
     </tr>
   </table>
 <br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">1</td>
+
+      <td class="parameter">64</td>
+
+      <td class="parameter">16</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Delay time</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">5</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Fine delay time</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">6</td>
+
+      <td class="parameter">1</td>
+
+      <td class="parameter">6</td>
+
+      <td class="parameter">6</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Stages</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">7</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Saturation</td>
+    </tr>
+  </table>
+<br>
+
 <br /><br /><a name="l6_mono_chorus"></a><h2>L6 Mono Chorus</h2>
   <h3>Controls</h3>
 
@@ -15644,113 +15867,222 @@ Scales are Scala files loaded off microSD card.
 
   <h3>Parameters</h3>
 
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
 
-      <th width="25%">min</th>
+        <th width="25%">min</th>
 
-      <th width="25%">max</th>
+        <th width="25%">max</th>
 
-      <th width="25%">default</th>
-    </tr>
+        <th width="25%">default</th>
+      </tr>
 
-    <tr>
-      <td class="parameter">0</td>
+      <tr>
+        <td class="parameter">0</td>
 
-      <td class="parameter">0</td>
+        <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+        <td class="parameter">99</td>
 
-      <td class="parameter">8</td>
-    </tr>
+        <td class="parameter">8</td>
+      </tr>
 
-    <tr>
-      <td colspan="4">LFO depth</td>
-    </tr>
-  </table>
-<br>
+      <tr>
+        <td colspan="4">LFO depth</td>
+      </tr>
+    </table>
+  <br>
 
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
 
-      <th width="25%">min</th>
+        <th width="25%">min</th>
 
-      <th width="25%">max</th>
+        <th width="25%">max</th>
 
-      <th width="25%">default</th>
-    </tr>
+        <th width="25%">default</th>
+      </tr>
 
-    <tr>
-      <td class="parameter">1</td>
+      <tr>
+        <td class="parameter">1</td>
 
-      <td class="parameter">-31</td>
+        <td class="parameter">-64</td>
 
-      <td class="parameter">31</td>
+        <td class="parameter">32</td>
 
-      <td class="parameter">0</td>
-    </tr>
+        <td class="parameter">0</td>
+      </tr>
 
-    <tr>
-      <td colspan="4">Y offset</td>
-    </tr>
-  </table>
-<br>
+      <tr>
+        <td colspan="4">Y offset</td>
+      </tr>
+    </table>
+  <br>
 
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
 
-      <th width="25%">min</th>
+        <th width="25%">min</th>
 
-      <th width="25%">max</th>
+        <th width="25%">max</th>
 
-      <th width="25%">default</th>
-    </tr>
+        <th width="25%">default</th>
+      </tr>
 
-    <tr>
-      <td class="parameter">2</td>
+      <tr>
+        <td class="parameter">2</td>
 
-      <td class="parameter">-31</td>
+        <td class="parameter">-63</td>
 
-      <td class="parameter">31</td>
+        <td class="parameter">63</td>
 
-      <td class="parameter">0</td>
-    </tr>
+        <td class="parameter">0</td>
+      </tr>
 
-    <tr>
-      <td colspan="4">Feedback</td>
-    </tr>
-  </table>
-<br>
+      <tr>
+        <td colspan="4">Feedback</td>
+      </tr>
+    </table>
+  <br>
 
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
 
-      <th width="25%">min</th>
+        <th width="25%">min</th>
 
-      <th width="25%">max</th>
+        <th width="25%">max</th>
 
-      <th width="25%">default</th>
-    </tr>
+        <th width="25%">default</th>
+      </tr>
 
-    <tr>
-      <td class="parameter">3</td>
+      <tr>
+        <td class="parameter">3</td>
 
-      <td class="parameter">-1</td>
+        <td class="parameter">-1</td>
 
-      <td class="parameter">31</td>
+        <td class="parameter">31</td>
 
-      <td class="parameter">-1</td>
-    </tr>
+        <td class="parameter">-1</td>
+      </tr>
 
-    <tr>
-      <td colspan="4">Lowpass filter</td>
-    </tr>
-  </table>
-<br>
+      <tr>
+        <td colspan="4">Lowpass filter</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">4</td>
+
+        <td class="parameter">1</td>
+
+        <td class="parameter">64</td>
+
+        <td class="parameter">16</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Delay time</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">5</td>
+
+        <td class="parameter">-32</td>
+
+        <td class="parameter">32</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Fine delay time</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">6</td>
+
+        <td class="parameter">1</td>
+
+        <td class="parameter">6</td>
+
+        <td class="parameter">6</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Stages</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">7</td>
+
+        <td class="parameter">0</td>
+
+        <td class="parameter">1</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Saturation</td>
+      </tr>
+    </table>
+  <br>
+  
 <br /><br /><a name="l7_mixer"></a><h2>L7 Mixer</h2>
   <h3>Controls</h3>
 
@@ -16774,7 +17106,7 @@ Scales are Scala files loaded off microSD card.
 
       <td class="parameter">0</td>
 
-      <td class="parameter">2</td>
+      <td class="parameter">3</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -16790,6 +17122,9 @@ Scales are Scala files loaded off microSD card.
         When 2, inputs are subtracted,<br>
         A = positive(X - Y)<br>
         B = negative(X - Y)<br>
+        When 3, operates as dual independent rectifiers.<br>
+        A = positive(X)<br>
+        B = positive(Y)<br>
     </td>
 </tr>
   </table>
@@ -16899,6 +17234,287 @@ Scales are Scala files loaded off microSD card.
 
     <tr>
       <td colspan="4">Input Y hysteresis</td>
+    </tr>
+  </table>
+<br>
+<br /><br /><a name="m5_stereo_filter"></a><h2>M5 Stereo Filter</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>frequency</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>left input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>right input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>left output</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>right output</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Mode: <br>
+      0: Low-pass<br>
+      1: Band-pass<br>
+      2: High-pass<br>
+    </td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">31</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Resonance</td>
+    </tr>
+  </table>
+<br>
+
+<br /><br /><a name="m6_stereo_tape_delay"></a><h2>M6 Stereo Tape Delay</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>tape speed</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>left input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>right input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>left output</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>right output</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">26</td>
+
+      <td class="parameter">26</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">tape length</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-9</td>
+
+      <td class="parameter">9</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">fine length control</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">36</td>
+
+      <td class="parameter">24</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Feedback</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">output mode.<br>
+      0: A &amp; B are mix.<br>
+      1: A &amp; B are delay only.</td>
     </tr>
   </table>
 <br>

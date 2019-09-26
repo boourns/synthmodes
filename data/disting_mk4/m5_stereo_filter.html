@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>offset, in increments of 1/parameter of an octave</td>
+      <td>frequency</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>input</td>
+      <td>left input</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>input</td>
+      <td>right input</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>X + Y + offset</td>
+      <td>left output</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>X - Y + offset</td>
+      <td>right output</td>
     </tr>
   </table>
 
@@ -84,16 +84,19 @@
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">12</td>
+      <td class="parameter">2</td>
 
-      <td class="parameter">12</td>
+      <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Controls Z offset divisor, from 1/1 of an
-      octave to 1/12 an octave(semitones).</td>
+      <td colspan="4">Mode: <br>
+      0: Low-pass<br>
+      1: Band-pass<br>
+      2: High-pass<br>
+    </td>
     </tr>
   </table>
 <br>
@@ -114,18 +117,16 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">2</td>
+      <td class="parameter">31</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Sum mode.<br>
-      0: A=X+Y+offset, B=X-Y-offset<br>
-      1: A=X+offset, B=Y-offset<br>
-      2: A=X+offset, B=Y+offset</td>
+      <td colspan="4">Resonance</td>
     </tr>
   </table>
 <br>
+
 </body>
 </html>
