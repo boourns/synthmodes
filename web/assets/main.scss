@@ -3,3 +3,24 @@
 ---
 
 @import "minima";
+
+.applink {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.samplepack {
+	background-color: #eeeeee;
+	margin: 20px;
+	border: 2px solid #999999;
+	border-radius: 5px;
+	padding: 7px;
+}
+
+.samplepack-content {
+	display: flex;
+}
+
+.samplepack-text {
+	margin-left: 10px;
+}
