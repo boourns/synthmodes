@@ -1,0 +1,43 @@
+.tableheader {
+	background-color: #eeeeee; 
+	padding: 5;
+}
+
+.knob {
+	margin: 5px;
+}
+
+.mbutton {
+	border: 5px solid;
+	border-radius: 15%;
+	width: 43pt;
+	height: 30pt;
+	margin: 5pt;
+}
+
+.triangle {
+	position: relative;
+	background-color: orange;
+	text-align: left;
+}
+.triangle:before,
+.triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  10em;
+	height: 10em;
+	border-top-right-radius: 30%;
+}
+
+.triangle {
+	transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+
+.triangle-left:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
