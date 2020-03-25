@@ -5,12 +5,14 @@
 layout: home
 ---
 
-Collection of mobile-friendly synthesizer cheat sheets.<br /><br />
-
-{% assign sorted_pages = site.pages | sort: 'title' %}
-
-{%- for my_page in sorted_pages -%}
-  {%- if my_page.title -%}
-  <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a><br />
-  {%- endif -%}
+Collection of mobile-friendly synthesizer cheat sheets.
+{% assign manufacturers = site.pages | group_by: 'manufacturer' | sort: 'name' %}
+{%- for manufacturer in manufacturers -%}
+<br><b>{{ manufacturer.name }}</b><br>
+{% assign pages = manufacturer.items | sort: 'title' %}
+	{%- for my_page in pages -%}
+	  {%- if my_page.title -%}
+	  	<a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a><br />
+	  {%- endif -%}
+  	{%- endfor -%}
 {%- endfor -%}

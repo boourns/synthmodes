@@ -32,7 +32,7 @@ class Section
   end
   
   def content_for_index
-    "#{@name}<br />" + @pages.map { |page| "<a href=\"##{page[:anchor]}\">#{page[:name]}</a><br />" }.join("\n")
+    "<b>#{@name}</b><br />" + @pages.map { |page| "<a href=\"##{page[:anchor]}\">#{page[:name]}</a><br />" }.join("\n")
   end
 
   def content_for_web
@@ -54,11 +54,13 @@ class ModuleEntry
   attr_reader :index
   attr_reader :sections
   attr_reader :directory
+  attr_reader :manufacturer
 
-  def initialize(xml)
+  def initialize(xml, manufacturer)
     @name = xml.attributes["name"].value
     @id = xml.attributes["id"].value
     @index = xml.attributes["index"].value
+    @manufacturer = manufacturer
 
     filename = "data/#{@index}"
     @directory = File.dirname(filename)
@@ -74,6 +76,7 @@ class ModuleEntry
     content = "---
 layout: page
 title: #{@name}
+manufacturer: #{@manufacturer}
 ---
 " + css + @sections.map { |s| s.content_for_index }.join("\n") + @sections.map { |s| s.content_for_web }.join("\n")
   end
@@ -88,12 +91,29 @@ title: #{@name}
   end
 end
 
+class Manufacturer
+  attr_reader :name
+  attr_reader :modules
+
+  def initialize(xml)
+    @name = xml.attributes["name"].value
+
+    @modules = []
+    xml.xpath("module").each do |xml|
+      @modules << ModuleEntry.new(xml, @name)
+    end
+  end
+end
+
 doc = File.open("data/modules.xml") { |f| Nokogiri::XML(f) }
 
+manufacturers = []
 modules = []
 
-doc.xpath("//modules//manufacturer//module").each do |xml|
-  modules << ModuleEntry.new(xml)
+doc.xpath("//modules//manufacturer").each do |xml|
+  m = Manufacturer.new(xml)
+  manufacturers << m
+  modules += m.modules
 end
 
 modules.each do |m|
