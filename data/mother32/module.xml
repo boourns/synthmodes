@@ -3,11 +3,14 @@
   <sections>
     <section name="General" modelist="false">
       <page name="Info" content="info.html"/>
+      <page name="Setup" content="setup.html"/>
     </section>
 
     <section name="Sequencer" modelist="false">
       <page name="Controls" content="controls.html"/>
-      <page name="Hot-Keys" content="hotkeys.html"/>
+      <page name="Performance" content="performance.html"/>
+      <page name="Keyboard Mode" content="keyboard.html"/>
+      <page name="Step Edit Mode" content="step.html"/>
     </section>
 
   </sections>

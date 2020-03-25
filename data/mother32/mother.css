@@ -4,15 +4,27 @@
 }
 
 .knob {
-	margin: 5px;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 3px;
 }
 
 .mbutton {
 	border: 5px solid;
 	border-radius: 15%;
-	width: 43pt;
-	height: 30pt;
-	margin: 5pt;
+	width: 35pt;
+	height: 24pt;
+	margin: auto;
+	margin-top: 5px;
+}
+
+.widerChart tr td:first-child {
+  margin: auto;
+  width: 25%;
+}
+
+.bordered tr {
+	border: 1px solid;
 }
 
 .triangle {

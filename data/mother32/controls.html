@@ -17,52 +17,19 @@
 <body>
   <div class="centered">
     <div class="content">
-
-      <table class="chart bordered">
+      <table class="widerChart bordered">
         <tr>
           <td colspan="2" class="tableheader">
-            <b>Pattern (Bank)</b>
+            <b>Sequencer: Controls</b>
           </td>
         </tr>
+        
         <tr>
-          <td>
-            <div class="mbutton"></div>
-          </td>
-          <td>
-            <table class="">
-              <tr>
-                <td>
-                  <b>Press</b>
-                </td>
-                <td>
-                  View/change active pattern.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <b>Shift&nbsp;+&nbsp;Press</b>
-                </td>
-                <td>
-                  View/change active pattern bank.
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-<br>
-
-      <table class="chart bordered">
-        <tr>
-          <td colspan="2" class="tableheader">
-            <b>Run/Stop (Rec)</b>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="mbutton"></div>
-          </td>
-          <td>
+            <td style="text-align: center">
+              <div class="mbutton"></div>
+              <b>Run/Stop (Rec)</b>
+            </td>    
+            <td>      
             <table class="">
               <tr>
                 <td>
@@ -91,180 +58,20 @@
             </table>
           </td>
         </tr>
-      </table>
-<br>
-
-      <table class="chart bordered">
         <tr>
-          <td colspan="2" class="tableheader">
-            <b>Reset/Accent</b>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="mbutton"></div>
-          </td>
-          <td>
-            <table class="">
-              <tr>
-                <td>
-                  <b>Press</b>
-                </td>
-                <td>
-                  When sequencer running, sets pattern back to step 1.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <b>Step&nbsp;Edit</b>
-                </td>
-                <td>
-                  Toggle step's accent output.
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-<br>
-
-      <table class="chart bordered">
-        <tr>
-          <td colspan="2" class="tableheader">
-            <b>Hold/Rest</b>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="mbutton"></div>
-          </td>
-          <td>
-            <table class="">
-              <tr>
-                <td>
-                  <b>Press</b>
-                </td>
-                <td>
-                  When sequencer running, holds sequence at current step while button held.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <b>Step&nbsp;Edit</b>
-                </td>
-                <td>
-                  Sets/unsets active step as a rest.
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-<br>
-
-      <table class="chart bordered">
-        <tr>
-          <td colspan="2" class="tableheader">
-            <b>Tempo / Gate Length (swing)</b>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="knob"></div>
-          </td>
-          <td>
-            <table class="">
-              <tr>
-                <td>
-                  <b>TURN</b>
-                </td>
-                <td>
-                  Adjust sequencer tempo.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <b>Step&nbsp;edit</b>
-                </td>
-                <td>
-                  Controls percentage of step that gate will remain high.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <b>Shift&nbsp;+&nbsp;Turn</b>
-                </td>
-                <td>
-                  Adjusts sequencer swing
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-<br>
-
-      <table class="chart bordered">
-        <tr>
-          <td colspan="2" class="tableheader">
-            <b>Glide (Ratchet)</b>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="knob"></div>
-          </td>
-          <td>
-            <table class="">
-              <tr>
-                <td>
-                  <b>TURN</b>
-                </td>
-                <td>
-                  Adjust oscillator glide
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <b>Shift+Turn (Step&nbsp;edit)</b>
-                </td>
-                <td>
-                  Sets number of gates (1-4) that will occur during currently edited step.
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-<br>
-
-      <table class="chart bordered">
-        <tr>
-          <td colspan="2" class="tableheader">
+          <td style="text-align: center">
+            <div style="margin: 5pt;">
+              <svg height="40pt" width="40pt" viewbox="0 0 100 100">
+                <polygon points="95,5 5,50 95,95" style="fill:white;stroke:black;stroke-width:5pt" />
+              </svg>
+            </div>
             <b>(KB)</b>
           </td>
-        </tr>
-        <tr>
-          <td>
-            <div style="margin: 5pt;">
-            <svg height="40pt" width="40pt" viewbox="0 0 100 100">
-              <polygon points="95,5 5,50 95,95" style="fill:white;stroke:black;stroke-width:5pt" />
-            </svg>
-          </div>
-          </td>
           <td>
             <table class="">
               <tr>
                 <td>
-                  <b>Press (step edit)</b>
-                </td>
-                <td>
-                  Decrements active step during step editing.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <b>Shift&nbsp;Press</b>
+                  <b>Shift+Press</b>
                 </td>
                 <td>
                   Sets sequencer mode to keyboard.
@@ -273,36 +80,23 @@
             </table>
           </td>
         </tr>
-      </table>
-<br>
-
-      <table class="chart bordered">
+        
         <tr>
-          <td colspan="2" class="tableheader">
-            <b>(Step)</b>
-          </td>
-        </tr>
-        <tr>
-          <td>
+          <td style="text-align: center">
             <div style="margin: 5pt;">
             <svg height="40pt" width="40pt" viewbox="0 0 100 100">
               <polygon points="5,5 95,50 5,95" style="fill:white;stroke:black;stroke-width:5pt" />
             </svg>
           </div>
+          <b>(Step)</b>
+
           </td>
           <td>
             <table class="">
+              
               <tr>
                 <td>
-                  <b>Press (step edit)</b>
-                </td>
-                <td>
-                  Increments active step during step editing.
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <b>Shift&nbsp;Press</b>
+                  <b>Shift+Press</b>
                 </td>
                 <td>
                   Sets sequencer mode to step editing.
@@ -311,9 +105,59 @@
             </table>
           </td>
         </tr>
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr>
+                <td style="text-align: center">
+                  <div class="mbutton"></div>
+                  <b>Shift</b>
+                </td>
+                <td>
+                  +
+                </td>
+                <td style="text-align: center">
+                  <div class="mbutton"></div>
+                  <b>Reset/Accent</b>
+                </td>
+                <td>
+                  +
+                </td>
+                <td style="text-align: center">
+                  <div class="mbutton"></div>
+                  <b>Pattern (Bank)</b>
+                </td>
+                <td>
+                  Initialize Current Pattern
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <table>
+              <tr>
+                <td style="text-align: center">
+                  <div class="mbutton"></div>
+                  <b>Reset/Accent</b>
+                </td>
+                <td>
+                  +
+                </td>
+                <td style="text-align: center">
+                  <div class="mbutton"></div>
+                  <b>Pattern (Bank)</b>
+                </td>
+                <td>
+                  Reload Current Pattern from saved state
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
       </table>
-<br>
-      
-  </div>
+      <br>
+</div>
 </body>
 </html>
