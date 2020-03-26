@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="Presets" content="preset.html"/>
+      <page name="Frontpanel" content="frontpanel.html"/>
+    </section>
+
+    <section name="Combo" modelist="true">
+      <page name="osc1" content="osc1.html"/>
+      <page name="ring" content="ring.html"/>
+      <page name="min" content="min.html"/>
+      <page name="pong" content="pong.html"/>
+      <page name="inlv" content="inlv.html"/>
+      <page name="and" content="and.html"/>
+      <page name="xor" content="xor.html"/>
+      <page name="gLcH" content="glch.html"/>
+    </section>
+
+    <section name="Sync" modelist="true">
+      
+    </section>
+
+    <section name="Pulse" modelist="true">
+      
+    </section>
+
+    <section name="Wavetables" modelist="true">
+      
+    </section>
+  </sections>
+</module>

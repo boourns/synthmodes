@@ -1,0 +1,20 @@
+.tableheader {
+	background-color: #eeeeee; 
+	padding: 5;
+}
+
+.widerChart tr td:first-child {
+  margin: auto;
+  width: 25%;
+}
+
+.bordered tr {
+	border: 1px solid;
+}
+
+.preset {
+	background-color: #c63e61;
+	color: white;
+	margin: 2px;
+	border-radius: 5%;
+}
