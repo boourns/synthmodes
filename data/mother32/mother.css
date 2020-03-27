@@ -23,6 +23,10 @@
   width: 25%;
 }
 
+.widerChart tr td {
+	padding: 5px;
+}
+
 .bordered tr {
 	border: 1px solid;
 }

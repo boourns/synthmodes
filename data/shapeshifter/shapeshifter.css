@@ -4,8 +4,12 @@
 }
 
 .widerChart tr td:first-child {
-  margin: auto;
+  margin: 5px;
   width: 25%;
+}
+
+.widerChart tr td {
+	padding: 5px;
 }
 
 .bordered tr {

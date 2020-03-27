@@ -1,0 +1,402 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+  <link rel="stylesheet" href="shapeshifter.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+
+      <table class="widerChart bordered">
+        <tr>
+          <td colspan="2" class="tableheader">
+            <b>Frontpanel</b>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            This section describes the frontpanel functionality of the Shapeshifter.  It also serves as a decent overview of the synthesis options available.<br>
+            After pressing a panel button, in most cases turn the left data encoder to change the value of the displayed parameter.<br>
+            Note: Preset mode is covered in it's own section.
+          </td>
+        </tr>
+      </table><br>
+
+<table class="widerChart bordered">
+  <tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Top Left</b>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <b>WAVE BANK</b>
+    </td>
+    <td>
+      <b>Press</b> to edit the wavetable bank for OSC1.  <b>Press</b> again to edit the wavetable bank for OSC2.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>SYNC / PULSE</b>
+    </td>
+    <td>
+      <b>Press</b> one or more times to edit (in order) OSC1 sync, OSC2 sync, Pulse output mode.  See the additional sections for description of sync and pulse modes.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>MOD A</b>
+    </td>
+    <td>
+      <b>Press</b> to edit the modulation destination for MODA input.  <b>Press</b> again to edit whether OSC2 output modifies SHAPE1, TILT, or nothing.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>MULTI / CHORD TYPE</b>
+    </td>
+    <td>
+      The MULTI setting for each oscillator joins subsequent waveforms from the wavetable into a single waveform.  For example when MULTI for OSC 1 is set to 2, OSC 1 will emit one cycle of the current waveform, then one cycle of the next waveform in the wavetable, then back to one cycle of the first waveform, etc.<br><br>
+      <b>Press</b> MULTI to edit OSC1 multi.  Press again to edit OSC2 multi.  If CHORD MODE is activated, press a third time to edit CHORD TYPE.  See "Chord Types" section for a description of all chord types available.
+    </td>
+  </tr>
+
+</table><br>
+
+<table class="widerChart bordered">
+  <tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Top Right</b>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <b>COMBO MODE</b>
+    </td>
+    <td>
+      <b>Press</b> to change the mode how OSC1 and OSC2 are combined before being sent to OUT1.<br><br>
+        <b>Press</b> a second time to enable MOD B control over COMBO MODE.  See "Combo Modes" sections for description of each combo mode.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>TILT / CHORD DRIVE</b>
+    </td>
+    <td>
+      TILT phase modulates OSC 1 with it's own output, effectively "tilting" the waveform.<br><br>
+      <b>Press</b> to modify the TILT level for OSC 1.    <b>Press</b> a second time to enable MOD B control over TILT.<br>
+      When CHORD MODE is active, this button edits CHORD DRIVE instead of TILT.  CHORD DRIVE amplifies, then clips, each voice in the chord.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>DELAY DEPTH</b>
+    </td>
+    <td>
+      OUT1 is optionally run through a delay line whose delay time is equal to OSC2 frequency.<br><br>
+
+      <b>Press</b> to edit delay depth, which sets both the amount of delay feedback and the wet/dry output ratio. <b>Press</b> again to enable MOD B modulation of DELAY DEPTH.<br><br>
+
+      Set OSC2 to LFO mode for a traditional delay effect, or set it to audio rate for the delay line to act as a resonator.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>CHORD DETUNE / PERC DECAY</b>
+    </td>
+    <td>
+      If CHORD MODE is enabled, <b>press</b> to edit CHORD DETUNE, which fattens the chord sound by detuning each oscillator.  <b>Press</b> a second time to enable MOD B modulation of CHORD DETUNE.<br><br>
+      If PERCUSSION MODE is enabled, the percussion envelope decay time (PERC DELAY) will be edited when this button is pressed instead.  <b>Press</b> a second time to enable MOD B modulation of PERC DELAY.<br>
+    </td>
+  </tr>
+
+</table><br>
+<table class="widerChart bordered">
+  <tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Middle Section</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>QUANT</b> and <b>RATIO/TIME</b>
+    </td>
+    <td>
+      When QUANT is disabled, OSC 2's frequency is controlled by PITCH 2, offset by RATIO.<br><br>
+      When QUANT is enabled, PITCH 2 input is ignored and OSC 2's frequency is a fixed fraction or multiple ratio OSC 1's frequency, controlled by RATIO.  The possible frequency ratios for OSC 2 are 1/8, 3/16, 1/4, 5/16, 3/8, 1/2, 5/8, 3/4, 1, 5/4, 3/2, 2, 3, 4, 6, 8.<br><br>
+      When QUANT is flashing, OSC 2's frequency is clocked to an incoming clock signal present on the PITCH 2 input.  RATIO controls a clock divider / multiplier with possible ratios of 1/24, 1/16, 1/12, 1/8, 1/6, 1/4, 1/3, 1/2, 1, 2, 3, 4, 6, 8, 12.  In this case, the LFO2 setting is ignored.<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>INT FM</b>
+    </td>
+    <td>
+      This knob, combined with the INT. FM CV input, controls how much OSC 2's output modulates OSC 1's frequency.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>INT. SYNC</b>
+    </td>
+    <td>
+      When lit, both OSC 1 and OSC 2 are synced to an internal oscillator running at the same base frequency as OSC 1 (but not affected by OSC 1 FM inputs).<br><br>
+      When flashing, the internal oscillator is set to half of OSC 1's frequency.<br><br>
+      See "Sync Modes" to understand how OSC 1 and OSC 2 will react to sync.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>COARSE</b> / <b>FINE</b>
+    </td>
+    <td>
+      These provide an offset to both OSC 1 and OSC 2 frequency.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>LFO</b> / <b>1</b> / <b>2</b>
+    </td>
+    <td>
+      Press to cycle through setting OSC 2, OSC 1, or both to LFO speeds, lowered by 7 octaves.<br>
+      When LFO 2 is enabled and QUANT is disabled, OSC 2's frequency is no longer affected by COARSE and FINE knobs.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>CHORD MODE</b>
+    </td>
+    <td>
+      When enabled, OSC1 emits 8-oscillator chords, controlled by CHORD TYPE and CHORD DETUNE.<br><br>  
+      Some other frontpanel buttons change functionality with CHORD MODE enabled.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>SHAPE 1 / SHAPE 2</b>
+    </td>
+    <td>
+      SHAPE 1 and SHAPE 2 (combined with their respective CV inputs) choose a smoothly interpolated waveform for OSC 1 and OSC 2 from their currently selected wave banks.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>PERC MODE</b>
+    </td>
+    <td>
+      When PERCUSSION MODE enabled, an envelope controls the gain of OUT 1.  The envelope decay time is controlled by the PERC DECAY parameter.<br><br>
+      Press PERC MODE once to enable PERCUSSION MODE, where the decay envelope is triggered by a rising edge on the SYNC input.<br><br>
+      Press PERC MODE a second time and the decay envelope will remain high as long as SYNC input is high.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FOLD</b>
+    </td>
+    <td>
+      FOLD knob plus FOLD CV input controls the depth of the analog wavefolding applied to the FOLD input (which is normaled to OUT 1).
+    </td>
+  </tr>
+</table>
+<br>
+
+<table class="widerChart bordered">
+  <tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Modulation Row</b>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <b>RATIO</b>
+    </td>
+    <td>
+      Combines with RATIO knob.  See <b>QUANT</b> / <b>RATIO</b> above.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <b>INT. FM</b>
+    </td>
+    <td>
+      Combines with INT. FM knob to determine the depth of internal frequency modulation.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FM 1</b>
+    </td>
+    <td>
+      Modulates OSC 1 frequency.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FOLD CV</b>
+    </td>
+    <td>
+      Combines with FOLD knob to determine depth of wavefolding applied to FOLD input.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>MOD A</b>
+    </td>
+    <td>
+      AC-coupled input to the MOD A modulation bus.  Note that it is normaled to OUT 1, so even with nothing plugged in the MOD A attenuator controls the depth of modulation and a signal is present.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>SHAPE 1 / SHAPE 2</b>
+    </td>
+    <td>
+      Combines with SHAPE 1 / SHAPE 2 knobs to calculate OSC 1 and OSC 2 positions within their active wavetable banks.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>MOD B</b>
+    </td>
+    <td>
+      Combines with MOD B knob to determine the value of the MOD B modulation bus.
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<table class="widerChart bordered">
+  <tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Bottom Row</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>PEAK / LFO 1</b>
+    </td>
+    <td>
+      When OSC 1 is not in LFO mode, this LED indicates either FM 1 or MOD A inputs are hitting the limits of their ranges and are clipping.<br>
+      When OSC 1 is in LFO mode, this LED is lit when OSC 1's polarity is positive.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>PITCH 1 / PITCH 2</b>
+    </td>
+    <td>
+      1V/oct voltage inputs for OSC 1 and OSC 2.  PITCH 2 is normalled to PITCH 1.  When QUANT mode is flashing, PITCH 2 expects a clock signal to sync to instead of a V/oct signal.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>SYNC</b>
+    </td>
+    <td>
+      Rising edges on this input will cause OSC 1 and OSC 2 to sync based on their active SYNC modes.<br><br>
+      When PERC mode is activated this input controls the percussion envelope.<br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FOLD IN</b>
+    </td>
+    <td>
+      Input to the onboard analog wavefolder, normalled to OUT 1.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>OUT 1</b>
+    </td>
+    <td>
+      Output 1, which is the result of OSC 1 optionally combined with OSC 2, optionally through the percussion mode envelope, then optionally through the delay line.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>OUT 2</b>
+    </td>
+    <td>
+      Oscillator 2 output.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>Pulse</b>
+    </td>
+    <td>
+      Configurable pulse (0-5v) output controlled by PULSE setting.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FOLD</b>
+    </td>
+    <td>
+      Output of the analog wavefolder.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>PULSE / LFO 2</b>
+    </td>
+    <td>
+      When OSC 2 is not in LFO mode, this LED indicates when the PULSE output is high.<br><br>
+      When OSC 2 is in LFO mode, this LED indicates when OSC 2 polarity is positive.
+    </td>
+  </tr>
+
+</table>
+
+
+</div>
+</div>
+</body>
+</html>
