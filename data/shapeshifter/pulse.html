@@ -1,0 +1,178 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+  <link rel="stylesheet" href="shapeshifter.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+
+<table class="widerChart bordered">
+  <tr>
+    <td colspan="2" class="tableheader">
+      <b>Pulse Modes</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      Pulse mode controls the <b>PULSE</b> output signal functionality, which outputs either a 0v or 5v value.<br>
+      Press <b>SYNC/PULSE</b> twice and rotate data encoder to modify PULSE function.<br>
+    </td>
+  </tr>
+</table><br>
+
+<table class="widerChart bordered">
+  <tr>
+    <td class="tableheader">
+      <b>Mode</b>
+    </td>
+    <td class="tableheader">
+      <b>PULSE output</b>
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <b>+o1</b>
+    </td>
+    <td>
+      high when either oscillator 1 is positive, otherwise 0.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>+o2</b>
+    </td>
+    <td>
+      high when either oscillator 2 is positive, otherwise 0.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>EOC</b>
+    </td>
+    <td>
+      high at the end of the <b>PERC MODE</b> envelope, low while <b>PERC MODE</b> envelope is decaying.  If <b>PERC MODE</b> is disabled, <b>PULSE</b> will always be high.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>-o2</b>
+    </td>
+    <td>
+      high when oscillator 2 is negative.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>OR</b>
+    </td>
+    <td>
+      high when oscillator 1 or 2 is positive.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>AND</b>
+    </td>
+    <td>
+      high when oscillator 1 and 2 is positive.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>XOR</b>
+    </td>
+    <td>
+      high when one of oscillator 1, or 2, but not both, are positive.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>gLcH</b>
+    </td>
+    <td>
+      high when the result of the gLcH combo mode would be positive.  This is available for PULSE even if gLcH is not the active COMBO MODE.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>sq1</b>
+    </td>
+    <td>
+      square wave with frequency equal to oscillator 1.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>sq2</b>
+    </td>
+    <td>
+      square wave with frequency equal to oscillator 2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>pmw1</b>
+    </td>
+    <td>
+      pulse width waveform with frequency equal to oscillator 1, and variable width controlled by <b>SHAPE 1</b>.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>pmw2</b>
+    </td>
+    <td>
+      pulse width waveform with frequency equal to oscillator 2, and variable width controlled by <b>SHAPE 2</b>.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>1>2</b>
+    </td>
+    <td>
+      high when the value of oscillator 1 is higher than oscillator 2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>1<2</b>
+    </td>
+    <td>
+      high when the value of oscillator 1 is lower than oscillator 2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>RND1</b>
+    </td>
+    <td>
+      random value, updated once at the start of every cycle of oscillator 1.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>RND2</b>
+    </td>
+    <td>
+      random value, updated once at the start of every cycle of oscillator 2.
+    </td>
+  </tr>
+  
+</table><br>
+
+</div>
+</div>
+</body>
+</html>

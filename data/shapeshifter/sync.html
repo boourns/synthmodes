@@ -1,0 +1,127 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+  <link rel="stylesheet" href="shapeshifter.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+
+<table class="widerChart bordered">
+  <tr>
+    <td colspan="2" class="tableheader">
+      <b>Sync Modes</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      Both oscillators can be synced:<br>
+      <ul>
+        <li>Externally when a value greater than 0.2 volts is present on <b>SYNC</b> input.</li>
+        <li>To an internal oscillator when <b>INT SYNC</b> is enabled.</li>
+      </ul>
+      When <b>INT SYNC</b> is pressed once the internal sync oscillator is the same base frequency as OSC1.<br>
+      When <b>INT SYNC</b> is flashing, the internal sync oscillator is half the frequency as OSC1.<br>
+      Press <b>SYNC/PULSE/STEP</b> and turn data encoder to select sync modes for each oscillator.
+    </td>
+  </tr>
+</table><br>
+
+<table class="widerChart bordered">
+  <tr>
+    <td class="tableheader">
+      <b>Mode</b>
+    </td>
+    <td class="tableheader">
+      <b>Description</b>
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <b>Hard</b>
+    </td>
+    <td>
+      Oscillator phase is reset to zero when sync occurs.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Soft</b>
+    </td>
+    <td>
+      Oscillator phase is reset to zero if it is within the first 1/4 of it's cycle when sync occurs.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Rev</b>
+    </td>
+    <td>
+      The oscillator direction is reversed when a sync event occurs.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Hold</b>
+    </td>
+    <td>
+      Oscillator switches between holding a steady value, and running normally, on each sync event.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>1shot</b>
+    </td>
+    <td>
+      Oscillator runs for one cycle of the waveform on each sync event.  Useful in LFO mode to act as a complex envelope.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Bump</b>
+    </td>
+    <td>
+      Oscillator's phase is incremented by 1/4 a wavecycle on each sync event.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>2=1 Sync</b>
+    </td>
+    <td>
+      Same as <b>Hard</b> mode, but also generates additional sync events on oscillator 2 whenever oscillator 2 and 1 have equal output values.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>1=2 Sync</b>
+    </td>
+    <td>
+      Same as <b>Hard</b> mode, but also generates additional sync events on oscillator 1 whenever oscillator 1 and 2 have equal output values.    
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Off</b>
+    </td>
+    <td>
+      Sync events have no effect on the oscillator.
+    </td>
+  </tr>
+</table><br>
+
+</div>
+</div>
+</body>
+</html>
