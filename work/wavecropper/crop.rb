@@ -138,4 +138,47 @@ def process_wave7
 	end
 end
 
-process_wave7
+def process_wave8
+	input = "wave8.png"
+	lines = 16
+	yOffset = 4
+	xOffset = 10
+
+	height = 102
+	size = "1254x#{height}"
+	lineOffset = 1
+
+	(0...lines).each do |l|
+		if l == 10
+			yOffset -= 2
+		end
+		y = yOffset + (l*height)
+		filename = "wave8/line#{lineOffset+l}.png"
+
+		`convert -crop #{size}+#{xOffset}+#{y} #{input} #{filename}`
+	end
+end
+
+def process_wave9
+	input = "wave9.png"
+	lines = 16
+	yOffset = 9
+	xOffset = 20
+
+	height = 98
+	size = "1254x#{height}"
+	lineOffset = 1
+
+	(0...lines).each do |l|
+		if l == 3 || l == 8 || l == 13
+			yOffset -= 2
+		end
+		y = yOffset + (l*height)
+		filename = "wave9/line#{lineOffset+l}.png"
+
+		`convert -crop #{size}+#{xOffset}+#{y} #{input} #{filename}`
+	end
+end
+
+
+process_wave9

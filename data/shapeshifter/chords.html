@@ -29,9 +29,6 @@
       When <b>CHORD MODE</b> is enabled, oscillator 1 emits 8 waveforms with the same shape, but different frequencies.<br>
       Press <b>CHORD MODE</b> and rotate data encoder to pick the chord shape (see table below).<br>
       Chord voices can also be detuned and overdriven via <b>CHORD DETUNE</b> and <b>CHORD DRIVE</b> functions which are active when <b>CHORD MODE</b> is active.<br>
-      
-
-
     </td>
   </tr>
 </table><br>
@@ -39,7 +36,7 @@
 <table class="widerChart bordered">
   <tr>
     <td class="tableheader">
-      <b>Mode</b>
+      <b>Chord Mode</b>
     </td>
     <td class="tableheader">
       <b>Description</b>
@@ -47,68 +44,516 @@
   </tr>  
   <tr>
     <td>
-      <b>osc1</b>
+      <b>uniso</b>
     </td>
     <td>
-      <b>OUT1</b> is the bitwise result of OSC1 AND OSC2.
+      Unison
     </td>
   </tr>
   <tr>
     <td>
-      <b>ring</b>
+      <b>m2nd</b>
     </td>
     <td>
-      <b>OUT1</b> is OSC1 ring modulated (or multiplied) by OSC2.
+      Minor 2nd interval (1 semitone)
     </td>
   </tr>
   <tr>
     <td>
-      <b>min</b>
+      <b>M2nd</b>
     </td>
     <td>
-      <b>OUT1</b> is equal to whichever OSC has a lower value.
+      Major 2nd interval
     </td>
   </tr>
   <tr>
     <td>
-      <b>pong</b>
+      <b>m3rd</b>
     </td>
     <td>
-      <b>OUT1</b> is OSC1 if it is positive, otherwise OSC2 if it is negative, otherwise 0.
+      Minor 3rd interval
     </td>
   </tr>
   <tr>
     <td>
-      <b>inlv</b>
+      <b>M3rd</b>
     </td>
     <td>
-      <b>OUT1</b> is the result of interleaving the bits of OSC1 and OSC2's values.  First bit from OSC1, then a bit from OSC2, ...
+      Major 3rd interval
     </td>
   </tr>
   <tr>
     <td>
-      <b>and</b>
+      <b>4th</b>
     </td>
     <td>
-      <b>OUT1</b> is the bitwise result of OSC1 AND OSC2.
+      4th interval
     </td>
   </tr>
   <tr>
     <td>
-      <b>xor</b>
+      <b>trito</b>
     </td>
     <td>
-      <b>OUT1</b> is the bitwise result of OSC1 XOR OSC2.
+      Tritone interval
     </td>
   </tr>
   <tr>
     <td>
-      <b>gLcH</b>
+      <b>5th</b>
     </td>
     <td>
-      <b>OUT1</b> is the result of a complex bitwise algorithm combining OSC1 and OSC2.
+      5th interval
     </td>
   </tr>
+  <tr>
+    <td>
+      <b>aug5</b>
+    </td>
+    <td>
+      Augmented 5th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>6th</b>
+    </td>
+    <td>
+      6th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>m7th</b>
+    </td>
+    <td>
+      Minor 7th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>M7th</b>
+    </td>
+    <td>
+      Major 7th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>octav</b>
+    </td>
+    <td>
+      Octave interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>suboc</b>
+    </td>
+    <td>
+      Suboctave
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>2oct</b>
+    </td>
+    <td>
+      Octave + 2octave
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>minor</b>
+    </td>
+    <td>
+      Minor triad
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>minI1</b>
+    </td>
+    <td>
+      Minor triad / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>minI2</b>
+    </td>
+    <td>
+      Minor triad / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>major</b>
+    </td>
+    <td>
+      Major triad
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>majI1</b>
+    </td>
+    <td>
+      Major triad / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>majI2</b>
+    </td>
+    <td>
+      Major triad / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>sus</b>
+    </td>
+    <td>
+      Suspended triad
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>aug</b>
+    </td>
+    <td>
+      Augmented triad
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <b>dim</b>
+    </td>
+    <td>
+      Diminished triad
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>maj6</b>
+    </td>
+    <td>
+      Major 6th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>maj7</b>
+    </td>
+    <td>
+      Major 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7M1st</b>
+    </td>
+    <td>
+      Major 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7M2nd</b>
+    </td>
+    <td>
+      Major 7th / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7M3rd</b>
+    </td>
+    <td>
+      Major 7th / 3rd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>dom</b>
+    </td>
+    <td>
+      Dominant 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7D1st</b>
+    </td>
+    <td>
+      Dominant 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7D2nd</b>
+    </td>
+    <td>
+      Dominant 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7D3rd</b>
+    </td>
+    <td>
+      Dominant 7th / 3rd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>min7</b>
+    </td>
+    <td>
+      Minor 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7m1st</b>
+    </td>
+    <td>
+      Minor 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7m2nd</b>
+    </td>
+    <td>
+      Minor 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7m3rd</b>
+    </td>
+    <td>
+      Minor 7th / 3rd inversion
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>hdim7</b>
+    </td>
+    <td>
+      Half diminished 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7h1st</b>
+    </td>
+    <td>
+      Half diminished 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7h2nd</b>
+    </td>
+    <td>
+      Half diminished 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7h3rd</b>
+    </td>
+    <td>
+      Half diminished 7th / 3rd inversion
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>dim7</b>
+    </td>
+    <td>
+      Diminished 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7d1st</b>
+    </td>
+    <td>
+      Diminished 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7d2nd</b>
+    </td>
+    <td>
+      Diminished 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7d3rd</b>
+    </td>
+    <td>
+      Diminished 7th / 3rd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7sus</b>
+    </td>
+    <td>
+      Suspended 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7s1st</b>
+    </td>
+    <td>
+      Suspended 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7s2nd</b>
+    </td>
+    <td>
+      Suspended 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7s3rd</b>
+    </td>
+    <td>
+      Suspended 7th / 3rd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>D9th</b>
+    </td>
+    <td>
+      Dominant 9th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9D2nd</b>
+    </td>
+    <td>
+      Dominant 9th / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Dm9th</b>
+    </td>
+    <td>
+      Dominant minor 9th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Dm9-2</b>
+    </td>
+    <td>
+      Dominant minor 9th / 2nd inversion
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>maj9</b>
+    </td>
+    <td>
+      Major 9th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9M2nd</b>
+    </td>
+    <td>
+      Major 9th / 2nd inversion
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>min9</b>
+    </td>
+    <td>
+      Minor 9th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9m2nd</b>
+    </td>
+    <td>
+      Minor 9th / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>M6/9</b>
+    </td>
+    <td>
+      Major 6/9
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>m6/9</b>
+    </td>
+    <td>
+      Minor 6/9
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9b5</b>
+    </td>
+    <td>
+      9th, flat 5th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9#5</b>
+    </td>
+    <td>
+      9th, sharp 5th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>D11th</b>
+    </td>
+    <td>
+      Dominant 11th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>m11th</b>
+    </td>
+    <td>
+      Minor 11th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>CH*(...)</b>
+    </td>
+    <td>
+      When Chord type begins with a *, it is controlled by <b>MODB</b>.  Enable by selecting the last entry in the chord type list.
+    </td>
+  </tr>
+
 </table><br>
 
 </div>
