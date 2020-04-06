@@ -1,5 +1,11 @@
 def render(dir, names)
-	
+	line = 0
+	names.each do |n|
+		line += 1
+		puts "<br>
+		<p>#{n}</p>
+		<img src=\"img/#{dir}/line#{line}.png\" />"
+	end
 end
 
 render("wave1", [
@@ -126,7 +132,7 @@ render("wave8", [
   "Raw1",
   "Raw2",
   "Raw3",
-  "ResPls"
+  "ResPls",
   "ResSaw",
   "ResSqu",
   "Saxoph",
