@@ -10,6 +10,9 @@
     <module name="Disting mk3" id="disting_mk3" index="disting_mk3/module.xml"/>
     <module name="Disting mk4" id="disting_mk4" index="disting_mk4/module.xml"/>
   </manufacturer>
+  <manufacturer name="Intellijel">
+    <module name="Shapeshifter" id="shapeshifter" index="shapeshifter/module.xml"/>
+  </manufacturer>
   <manufacturer name="Make Noise">
     <module name="Morphagene" id="morphagene" index="morphagene/module.xml"/>
     <module name="Tempi" id="tempi" index="tempi/module.xml"/>

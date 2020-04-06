@@ -8,8 +8,11 @@
     <section name="Sections" modelist="true">
       <page name="Frontpanel" content="frontpanel.html"/>
       <page name="Combo Modes" content="combo.html"/>
-      <page name="Pulse Modes" content="pulse.html"/>
+      <page name="Sync Modes" content="sync.html"/>
+      <page name="Pulse Modes" content="pulse.html"/>      
+      <page name="MOD A" content="moda.html"/>
       <page name="Wavetables" content="wavetables.html"/>
+      <page name="Chords" content="chords.html"/>
       <page name="Presets" content="preset.html"/>
     </section>
   </sections>
