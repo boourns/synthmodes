@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="morphagene.css" type="text/css">
 </head>
 
-<body>
+<body class="inputlevel">
   <div class="centered">
     <div class="content">
       <table class="panel">
@@ -42,10 +42,33 @@
           </td>
         </tr>
       </table>
+      <h3>Firmware v2</h3>
       <p>
-        <h3>Description</h3>
-        Hold <b>Rec</b>, then press <b>Shift</b>.  Internal gain will be set to normalize incoming audio.  Audio is continually monitored while <b>Rec</b> is held. 
+        Hold <b>Rec</b>, and press <b>Shift</b> to step through the gain settings:
       </p>
+      <ul class="nofx" style="line-height: 1.4; ">
+        <li>
+          <span class="indicator rect blue"></span>
+          <span class="value">-3</span>db (blue)
+        </li>
+        <li>
+          <span class="indicator rect green"></span>
+          <span class="value">0</span>db (green)
+        </li>
+        <li>
+          <span class="indicator rect orange"></span>
+          <span class="value">+6</span>db (orange)
+        </li>
+        <li>
+          <span class="indicator rect purple"></span>
+          <span class="value">+12</span>db (purple)
+        </li>
+      </ul>
+
+      <h3>Firmware v1</h3>
+      <p>Hold <b>Rec</b>, then press <b>Shift</b>. </p>
+      <p>Internal gain will be set to normalize incoming audio.</p>
+      <p>Audio is continually monitored while <b>Rec</b> is held.</p>
   </div>
 </body>
 </html>

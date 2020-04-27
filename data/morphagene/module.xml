@@ -17,10 +17,10 @@
       <page name="Delete Splice Marker" content="delete_splice_marker.html"/>
       <page name="Delete All Splice Markers" content="delete_all_splice_markers.html"/>
       <page name="Delete Splice Audio" content="delete_splice_audio.html"/>
-    </section>    
+    </section>
 
     <section name="System" modelist="false">
-      <page name="Auto Level" content="autolevel.html"/>
+      <page name="Input Level" content="inputlevel.html"/>
       <page name="Mount SD Card" content="mount.html"/>
 	  </section>
 
