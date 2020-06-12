@@ -1,0 +1,43 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content">
+      <h3>Grouping Segments</h3>
+      <p>
+        Complex modulations are built by grouping many segments into one modulation signal.
+      </p>
+      <p>
+        Inserting a jack in a GATE input marks the beginning of a group of segments. All unpatched segments at its right become part of this group. 
+      </p>
+      <h3>Segment outputs</h3>
+      <p>
+        The first output of a group generates the envelope signal itself. The following outputs generate segment activity signals – ramps going from 8V to 0V whenever the corresponding segment is active.
+      </p>
+      <img src="img/segment_activity.jpg" />
+      <h3>Segment Rules</h3>
+      <img src="img/segment_rules.png" />
+      <ol>
+      <li>The first RAMP segment ramps up to 8V, starting from whatever level the output currently stays at.</li>
+      <li>The last RAMP segment ramps down to 0V.</li>
+      <li>The level of a HOLD or STEP segment defines the start (end) level of the RAMP segment that follows (precedes) it. For example, in the preceding illustration, the end level of segment 3, and the start level of segment 5 are both set by the level of the HOLD segment 4.</li>
+      <li>If the end level of a RAMP segment cannot be determined by rules 1, 2 or 3, this level is explicitly set by the potentiometer [A]. For example, in the preceding illustration, the end level of segments 2 and 5 are set by their potentiometer.</li>
+      <li>If a LOOP is defined, the loop is played while the GATE signal is high. Once the GATE goes low, the envelope proceeds with the segment(s) that follow the loop end point. If the loop end is the last segment, there’s no escape from the loop, and the loop keeps going on forever.</li>
+      <li>If the envelope contains a STEP segment, it follows its course normally until it gets trapped at the first STEP segment. It will stay at this segment until the next trigger is received. When this trigger is received, it will then proceed to the next segment… until the last segment or another STEP segment is reached. If an envelope contains a STEP segment inside a loop, there is no way of escaping this loop!</li>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="Patching" content="patching.html" />
+    </section>
+    <section name="Segments" modelist="true">
+      <page name="Ramp" icon="img/led_green.png" content="ramp.html"/>
+      <page name="Step" icon="img/led_orange.png" content="step.html"/>
+      <page name="Hold" icon="img/led_hold.png" content="hold.html"/>
+    </section>
+    <section name="Single-Segment" modelist="true">
+      <page name="Decay Envelope" icon="img/led_green.png" content="decay.html"/>
+      <page name="LFO" icon="img/led_flashing_green.png" content="lfo.html"/>
+      <page name="Slew" icon="img/led_orange.png" content="slew.html"/>
+      <page name="Sample &amp; Hold" icon="img/led_orange.png" content="sample_and_hold.html"/>
+      <page name="CV Delay" icon="img/led_red.png" content="delay.html"/>
+      <page name="Pulse Generator" icon="img/led_red.png" content="pulse.html"/>
+    </section>
+  </sections>
+</module>

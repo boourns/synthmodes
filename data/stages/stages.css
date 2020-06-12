@@ -1,0 +1,25 @@
+.panel-button {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black;
+  margin: auto;
+}
+
+.wire {
+	position: relative;
+	margin-left: -1990px;
+	height: 8px;
+	margin-top: 4px;
+	width: 2000px;
+	background-color: black;
+}
+
+.segment {
+	border-spacing: 0px;
+}
+
+.segment tr td:first-child {
+	background-color: #eeeeee;
+	padding:8px 2px;
+}
