@@ -1,0 +1,48 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>While Enigma imposes a track-song workflow, Enigma, Jr. allows you to organize your Turing Machines via CV. It allows playback and temporary manipulation of registers in your Enigma Register Library.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 advances the register</li>
+<li>CV Ins: CV 1 is a bi-polar modulation of the pitch, and CV 2 is the Organize modulation (see below)</li>
+<li>CV Outs: Assignable</li>
+<li>Encoder: Choose Register, probability, or assign outputs</li>
+</ul>
+
+<p>In many respects, Enigma, Jr. is similar to ShiftReg. But instead of generating a random sixteen-bit register, Enigma, Jr. uses a Register from the Enigma Register Library. Enigma may be used to shape and curate this Library (see https://github.com/Chysn/O_C-HemisphereSuite/wiki/Enigma).</p>
+
+<p>Both outputs are assignable to any of the CV values that Enigma can use. These are:</p>
+
+<ul>
+<li><strong>Note</strong>: There are five depths of note data, from 3 bits to 7 bits. At 3-bit depth, melodies will be constrained to 8 notes of the selected scale. At 4-bit depth, 16 notes; at 5-bit depth, 32 notes; at 6-bit depth, 64 notes; and, at 7-bit depth, 128 notes (or the entire MIDI note range) is available. The note types look at the least-significant bits of the current Register.</li>
+<li><strong>Modulation/Expression</strong>: The least-significant 8 bits are used to generate a modulation value that&#39;s scaled to 0-5 volts. Modulation and Expression are identical for CV.</li>
+<li><strong>Gate</strong>: When bit 0 is 1, the assigned output emits 5V until the next time bit 0 is 0. That is, a high gate will span multiple rotations of the Register</li>
+<li><strong>Trigger</strong>: When bit 0 is 1, a trigger pulse is emitted at the assigned output</li>
+</ul>
+
+<h2>Organize</h2>
+
+<p>CV 2 is the Organize control. When a Register has advanced to the end of its length, CV 2 is read, and a new Register is loaded, based on the CV 2 modulation. If your Library has Registers marked as Favorites, the CV will choose from among your Favorites. If you have no Favorites selected, the CV will choose at random from among all 40 Registers in the Library.</p>
+
+<p>Enigma, Jr. is in Hemisphere Suite from v1.5.</p>
+    </div>
+  </div>
+</body>
+</html>

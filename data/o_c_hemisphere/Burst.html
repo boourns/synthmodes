@@ -1,0 +1,42 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>Burst is a burst generator based loosely on the Ladik S-075.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 is an optional timing clock, and Digital 2 triggers the bursts</li>
+<li>CV Ins: CV 1 sets the Number of bursts and CV 2 is bi-polar modulation of the Spacing</li>
+<li>Outputs: Output 1 is a series of 2ms triggers, and Output 2 is a gate that remains high while a series of bursts is in progress</li>
+<li>Encoder Push: Move cursor between Number and Spacing</li>
+<li>Encoder Turn: Update Number (1-12) and Spacing (8ms-500ms) settings. If Burst is clocked (see below), and the cursor is on Spacing, then clocked is turned off.</li>
+</ul>
+
+<p>When Burst receives a trigger at Digital 2, it begins a series of 2ms triggers from Output 1 and a gate from Output 2. The number of triggers is the Number setting. The time between each trigger (in milliseconds) is the Spacing setting. The Output 2 gate remains high until the final trigger has fired.</p>
+
+<p>If Burst receives another trigger at Digital 2 before the burst sequence has finished, a new sequence will start.</p>
+
+<p>When CV is received at CV 1, the Number setting at the panel is overridden. There is a center detent around 0V, so slightly more than 0V is required to change the Number.</p>
+
+<p>When CV is received at CV 2, the Spacing setting at the panel is modulated. There is a center detent around 0V, so slightly more than 0V is required to change the Spacing.</p>
+
+<p>When a clock signal is received at Digital 1, Burst becomes clocked. At the second clock, the Spacing value is calculated to be the clock tempo divided by Number. When Burst is clocked, this calculated Spacing value overrides both the panel and the signal at CV 2. Burst will remain clocked until you move the cursor to the Spacing value and change it. You probably want to stop the clock first, though, or Burst will become clocked again immediately.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>RunglBook is a chaotic shift-register modulation based on Rob Hordijk&#39;s rungler circuit.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 is the clock, and Digital 2 freezes the shift register to writing</li>
+<li>CV Ins: CV 1 is the signal</li>
+<li>CV Outs: A/C is the Rungle output based on the low three bits, and B/D is the Rungle output based on the high three bits</li>
+<li>Encoder: Set threshold in semitone increments</li>
+</ul>
+
+<p>When Digital 1 is clocked, the register is shifted one bit to the left, and the signal is read. If the signal exceeds the voltage threshold, bit low bit of the shift register is set to 1. Otherwise, it is set to 0.</p>
+
+<p>If Digital 2 is receiving a gate at the time the clock is received, the register is shifted, but no read is done; instead, the high bit is moved to bit 0.</p>
+
+<p>Three bits of the eight-bit register are scaled to 8 possible values between 0V and 5V, and sent to the outputs. These are the Rungle outputs.</p>
+
+<p>RunglBook is in Hemisphere Suite starting with v1.5.</p>
+    </div>
+  </div>
+</body>
+</html>

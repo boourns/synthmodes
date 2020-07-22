@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="Usage" content="usage.html"/>
+    </section>
+    <section name="Modes" modelist="true">
+                  <page name="ASR" content="ASR.html">
+                        <tags>
+      <tag>shift register</tag>
+      </tags>
+
+                  </page>
+                  <page name="AD EG" content="AD-EG.html">
+                        <tags>
+      <tag>modulation</tag>
+      <tag>envelope</tag>
+      </tags>
+
+                  </page>
+                  <page name="ADSR EG" content="ADSR-EG.html">
+                        <tags>
+      <tag>modulation</tag>
+      <tag>envelope</tag>
+      </tags>
+
+                  </page>
+                  <page name="Annular Fusion Euclidean Drummer" content="Annular-Fusion-Euclidean-Drummer.html">
+                        <tags>
+      <tag>generative</tag>
+      <tag>sequencer</tag>
+      <tag>gate</tag>
+      </tags>
+
+                  </page>
+                  <page name="AttenOff" content="AttenOff.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="Backup and Restore" content="Backup-and-Restore.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="Binary Counter" content="Binary-Counter.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>gate</tag>
+      </tags>
+
+                  </page>
+                  <page name="BootsNCat" content="BootsNCat.html">
+                        <tags>
+      <tag>audio</tag>
+      </tags>
+
+                  </page>
+                  <page name="Brancher" content="Brancher.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>logic</tag>
+      <tag>gate</tag>
+      </tags>
+
+                  </page>
+                  <page name="Burst" content="Burst.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>gate</tag>
+      </tags>
+
+                  </page>
+                  <page name="CV Recorder" content="CV-Recorder.html">
+                        <tags>
+      <tag>modulation</tag>
+      <tag>sequencer</tag>
+      </tags>
+
+                  </page>
+                  <page name="Calculate" content="Calculate.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>logic</tag>
+      </tags>
+
+                  </page>
+                  <page name="Captain MIDI" content="Captain-MIDI.html">
+                        <tags>
+      <tag>MIDI</tag>
+      </tags>
+
+                  </page>
+                  <page name="Carpeggio Cartesian Arpeggiator" content="Carpeggio-Cartesian-Arpeggiator.html">
+                        <tags>
+      <tag>generative</tag>
+      <tag>sequencer</tag>
+      </tags>
+
+                  </page>
+                  <page name="Clock Divider Multiplier" content="Clock-Divider-Multiplier.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>clock</tag>
+      </tags>
+
+                  </page>
+                  <page name="Clock Skipper" content="Clock-Skipper.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>clock</tag>
+      </tags>
+
+                  </page>
+                  <page name="Compare" content="Compare.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>logic</tag>
+      </tags>
+
+                  </page>
+                  <page name="Dr. Crusher" content="Dr.-Crusher.html">
+                        <tags>
+      <tag>audio</tag>
+      <tag>effect</tag>
+      </tags>
+
+                  </page>
+                  <page name="Dual Quantizer" content="Dual-Quantizer.html">
+                        <tags>
+      <tag>quantizer</tag>
+      </tags>
+
+                  </page>
+                  <page name="Enigma, Jr." content="Enigma,-Jr..html">
+                        <tags>
+      <tag>shift register</tag>
+      </tags>
+
+                  </page>
+                  <page name="Enigma" content="Enigma.html">
+                        <tags>
+      <tag>shift register</tag>
+      </tags>
+
+                  </page>
+                  <page name="Envelope Follower" content="Envelope-Follower.html">
+                        <tags>
+      <tag>modulation</tag>
+      </tags>
+
+                  </page>
+                  <page name="Gate Delay" content="Gate-Delay.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>gate</tag>
+      </tags>
+
+                  </page>
+                  <page name="Gated VCA" content="Gated-VCA.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="LoFi Tape" content="LoFi-Tape.html">
+                        <tags>
+      <tag>audio</tag>
+      <tag>looper</tag>
+      </tags>
+
+                  </page>
+                  <page name="Logic" content="Logic.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>logic</tag>
+      </tags>
+
+                  </page>
+                  <page name="LowerRenz" content="LowerRenz.html">
+                        <tags>
+      <tag>modulation</tag>
+      </tags>
+
+                  </page>
+                  <page name="MIDI In" content="MIDI-In.html">
+                        <tags>
+      <tag>MIDI</tag>
+      </tags>
+
+                  </page>
+                  <page name="MIDI Out" content="MIDI-Out.html">
+                        <tags>
+      <tag>MIDI</tag>
+      </tags>
+
+                  </page>
+                  <page name="Metronome" content="Metronome.html">
+                        <tags>
+      <tag>clock</tag>
+      </tags>
+
+                  </page>
+                  <page name="Mixer:Balance" content="Mixer:Balance.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="Neural Net" content="Neural-Net.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>logic</tag>
+      </tags>
+
+                  </page>
+                  <page name="Palimpsest Accent Sequencer" content="Palimpsest-Accent-Sequencer.html">
+                        <tags>
+      <tag>sequencer</tag>
+      </tags>
+
+                  </page>
+                  <page name="Pong" content="Pong.html">
+                        <tags>
+      <tag>game</tag>
+      <tag>modulation</tag>
+      </tags>
+
+                  </page>
+                  <page name="RunglBook" content="RunglBook.html">
+                        <tags>
+      <tag>shift register</tag>
+      </tags>
+
+                  </page>
+                  <page name="Scale Duet Quantizer" content="Scale-Duet-Quantizer.html">
+                        <tags>
+      <tag>quantizer</tag>
+      </tags>
+
+                  </page>
+                  <page name="Scale Editor" content="Scale-Editor.html">
+                        <tags>
+      <tag>quantizer</tag>
+      <tag>MIDI</tag>
+      </tags>
+
+                  </page>
+                  <page name="Schmitt Trigger" content="Schmitt-Trigger.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="Scope" content="Scope.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="Sequence5" content="Sequence5.html">
+                        <tags>
+      <tag>sequencer</tag>
+      </tags>
+
+                  </page>
+                  <page name="Shift Register (formerly Turing)" content="Shift-Register-(formerly-Turing).html">
+                        <tags>
+      <tag>shift register</tag>
+      </tags>
+
+                  </page>
+                  <page name="ShiftGate" content="ShiftGate.html">
+                        <tags>
+      <tag>shift register</tag>
+      <tag>gate</tag>
+      </tags>
+
+                  </page>
+                  <page name="Shuffle" content="Shuffle.html">
+                        <tags>
+      <tag>clock</tag>
+      </tags>
+
+                  </page>
+                  <page name="Skewed LFO" content="Skewed-LFO.html">
+                        <tags>
+      <tag>modulation</tag>
+      <tag>LFO</tag>
+      </tags>
+
+                  </page>
+                  <page name="Slew" content="Slew.html">
+                        <tags>
+      <tag>modulation</tag>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="Squanch Shifting Quantizer" content="Squanch---Shifting-Quantizer.html">
+                        <tags>
+      <tag>quantizer</tag>
+      </tags>
+
+                  </page>
+                  <page name="Switch" content="Switch.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="The Darkest Timeline 2.0" content="The-Darkest-Timeline-2.0.html">
+                        <tags>
+      <tag>sequencer</tag>
+      <tag>MIDI</tag>
+      </tags>
+
+                  </page>
+                  <page name="Threshold Logic Neuron" content="Threshold-Logic-Neuron.html">
+                        <tags>
+      <tag>utility</tag>
+      <tag>logic</tag>
+      </tags>
+
+                  </page>
+                  <page name="Trending" content="Trending.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="Trigger Sequencer 16" content="Trigger-Sequencer-16.html">
+                        <tags>
+      <tag>sequencer</tag>
+      </tags>
+
+                  </page>
+                  <page name="Trigger Sequencer" content="Trigger-Sequencer.html">
+                        <tags>
+      <tag>sequencer</tag>
+      </tags>
+
+                  </page>
+                  <page name="Tuner" content="Tuner.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="VectMorph" content="VectMorph.html">
+                        <tags>
+      <tag>modulation</tag>
+      </tags>
+
+                  </page>
+                  <page name="VectorEG" content="VectorEG.html">
+                        <tags>
+      <tag>modulation</tag>
+      <tag>envelope</tag>
+      </tags>
+
+                  </page>
+                  <page name="VectorLFO" content="VectorLFO.html">
+                        <tags>
+      <tag>modulation</tag>
+      <tag>LFO</tag>
+      </tags>
+
+                  </page>
+                  <page name="VectorMod" content="VectorMod.html">
+                        <tags>
+      <tag>modulation</tag>
+      </tags>
+
+                  </page>
+                  <page name="Voltage" content="Voltage.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+                  <page name="Waveform Editor" content="Waveform-Editor.html">
+                        <tags>
+      <tag>utility</tag>
+      </tags>
+
+                  </page>
+
+    </section>
+  </sections>
+</module>

@@ -1,0 +1,81 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>https://www.youtube.com/watch?v=UKX79rkSdIQ</p>
+
+<p>Scale Editor is a standalone application for editing and managing user-defined microtonal scales, and importing scales from the internal scale library, or via system exclusive. A web-based Scala-to-Hemisphere Suite converter is available (http://www.beigemaze.com/scala), which can generate system exclusive files from Scala documents.</p>
+
+<h2>Basic Controls and Navigation</h2>
+
+<ul>
+<li>CV Input 1/Output A: CV 1 is input for unquantized pitch CV. The quantized pitch appears at Output A, using the currently-selected user scale. Pitch is quantized in real time</li>
+<li>CV Output B: Quantized pitch for the currently-selected user scale and the selected note. </li>
+<li>Right Encoder: Selects note or length. Push the right encoder button to toggle between those two functions. For Output B, note selection can be used to set the octave of the currently-selected note&#39;s output. On the Import screen, the right encoder chooses the scale, and the right encoder button executes the import.</li>
+<li>Left Encoder: Changes the value of the currently-selected note by as little as 1.28 cents sharp or flat. Pressing the left encoder undoes the most recent note value change. Long-pressing the left encoder sends a system exclusive dump of the current scale data.</li>
+<li>Up/Down: Chooses the user scale. Long-pressing the Down button opens the Import screen.</li>
+</ul>
+
+<h2>Choosing a User Scale</h2>
+
+<p>Press the Up and Down buttons to choose a scale (from USER1 to USER4).</p>
+
+<h2>Selecting and Editing Notes</h2>
+
+<p>Use the right encoder to choose which note you&#39;re currently editing. The value of the note, in cents from the root, is shown at the bottom of the display.</p>
+
+<p>Turn the left encoder to change the value by as little as 1.28 cents. Turn clockwise for sharp, and counterclockwise for flat. Note values cannot overlap or exceed adjacent nodes, so the range of each note will be constrained based on the settings of the next note.</p>
+
+<h2>Undo</h2>
+
+<p>If you make a mistake, you don&#39;t need to remember the old value of the note. Press the left encoder button to undo a note value change. You can undo a change until you select a different note.</p>
+
+<h2>Monitoring</h2>
+
+<p>You can hear the changes you&#39;re making in real time with two different monitoring methods. Both methods update pitch in real time as you make changes:</p>
+
+<ul>
+<li>Full Scale Monitoring: Patch unquantized CV into Input 1, and patch Output A into an oscillator. Output A will continuously quantize Input 1 according to the currently-selected scale. The octave played will correspond to the input.</li>
+<li>Selected Note Monitoring: Output B will continuously output the quantized value of the currently-selected note. You can change the note&#39;s octave (within a 5-octave range) by turning the right encoder beyond the first or last note.</li>
+</ul>
+
+<h2>Changing Scale Length</h2>
+
+<p>User scales may contain between 4 and 16 notes. Press the right encoder button to enter the Scale Length screen. The display will show the number of notes. Now, use the right encoder to choose the number of notes. When you&#39;re done, press the right encoder to return to the Note Edit screen.</p>
+
+<h2>Importing Scales</h2>
+
+<p>The Import screen allows you to copy any scale in the scale library to the currently-selected user scale. Long-press the Down button to enter the Import screen. Then use the right encoder to choose a scale. To import the specified scale into the current user scale, press the right encoder (&quot;[IMPORT]&quot;). If you change your mind, press the left encoder (&quot;[CANCEL]&quot;).</p>
+
+<h2>System Exclusive</h2>
+
+<p>You may initiate a MIDI system exclusive dump of the current scale by long-pressing the left encoder, or by long-pressing the right encoder to return to the main menu. You may capture the system exclusive dump with a sysex librarian program on a connected computer.</p>
+
+<p>To restore a scale from a sysex dump, simply initiate the dump from the computer while Scale Editor is running. The received scale will be placed into the currently-selected scale.</p>
+
+<h2>Scala Format Import</h2>
+
+<p>With the help of a web-based tool (http://www.beigemaze.com/scala), you can bring Scala scales into Scale Editor. Upload (or paste) your Scala into the tool, and download the SysEx file. See &quot;System Exclusive&quot; (above) for how to send the file to Scale Editor.</p>
+
+<p>For your convenience, sysex files for about 3000 scales from the Scala Scale Archive are available here, along with the original Scala files and instructions:</p>
+
+<p><a href="http://beigemaze.com/downloads/HS_Scala_Archive.zip">http://beigemaze.com/downloads/HS<em>Scala</em>Archive.zip</a></p>
+
+<p>These scales are distributed with the kind permission of Manuel Op de Coul</p>
+    </div>
+  </div>
+</body>
+</html>

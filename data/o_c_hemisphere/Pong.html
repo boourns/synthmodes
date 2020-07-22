@@ -1,0 +1,42 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>Like twenty years ago, I owned a Kurzweil K2000. It had what we call today--but didn&#39;t call back then--an Easter Egg. It was a Pong game that you could play from the panel, and it generated MIDI notes when the ball bounced off a wall.</p>
+
+<p>This is the Pong we all know and love, with a few twists. As a ball bounces its way across the screen, the player defends the left side of the screen with a &quot;paddle,&quot; and the module defends the right side. It&#39;s an unfair game, though, because the module can&#39;t lose. As you return the ball and level up, the ball gets faster, and your paddle gets smaller and closer to your opponent. The odds are not in your favor!</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Up/Down Buttons: Move the paddle up and down. This is really to illustrate the use of the buttons&#39; event handler, and you really don&#39;t want to play the game with these things.</li>
+<li>Encoders: Both encoders move the paddle up and down.</li>
+<li>CV Input 1: Negative values move the paddle up, and positive values move the paddle down. There&#39;s a &quot;center detent,&quot; a small range that doesn&#39;t move the paddle at all. This is to compensate for noise that gets into the ADC.</li>
+<li>Output A: When the ball bounces off your paddle, a short 5V trigger is sent to Output A.</li>
+<li>Output B: When the ball bounces off anything else, a short 5V trigger is sent to Output B.</li>
+<li>Output C: Sends 0 to 4-ish volts, based on the Y position of the ball. 0V is the top of the screen.</li>
+<li>Output D: Sends 0 to 4-ish volts, based on the Y position of the player paddle. 0V is the top of the screen.</li>
+</ul>
+
+<p>Exercises
+1. Create a patch that can be played by this game
+1. Create a patch that can play this game</p>
+
+<p>My patch&#39;s high score is <strong>24</strong>, using Maths and Distro. <strong>Update 8/31/2018: 27 with just Maths!</strong></p>
+    </div>
+  </div>
+</body>
+</html>

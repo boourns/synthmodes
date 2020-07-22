@@ -1,0 +1,121 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>Neural Net is a highly-configurable logic processor with six <em>Neurons</em>, each of which can contain one of <a href="#logic-gate-reference">11 different logic gates</a>, including a Threshold Logic Neuron. Sources for each logic gate can be any of the eight inputs, any of the six Neurons, or a consistent ON/OFF value. Four Setups can be saved for later use, and Setups can be saved and loaded via MIDI system exclusive.</p>
+
+<h2>Basic Controls and Navigation</h2>
+
+<p>Neural Net has two basic setup screens, the Selection Screen (which shows all six Neurons), and the Edit Screen (which allows editing and monitoring of a single Neuron). The controls work exactly the same way on both screens, but some changes are only visible from the Edit Screen.</p>
+
+<ul>
+<li>Left Encoder: Specifies what is being edited. It can be any of the six Neurons, or the Output assignments.</li>
+<li>Left Encoder Press: Alternates between the Selection Screen and the Edit Screen.</li>
+<li>Left Encoder Long-Press: Toggles the All Connections display.</li>
+<li>Right Encoder: Changes the value at the cursor.</li>
+<li>Right Encoder Press: Advances the cursor.</li>
+<li>Up/Down Buttons: Selects which Setup (from 1-4) is active. If the down button is long-pressed, the active Setup may be copied to another Setup.</li>
+</ul>
+
+<h2>Selection Screen</h2>
+
+<p>The Selection Screen shows an overview of all six Neurons, all inputs, and all outputs. Use the left encoder to choose a different Neuron, or the outputs.</p>
+
+<p>The inputs are on the left side, with the Digital inputs (1-4) under the D, and the Control Voltage inputs (1-4) under the V. When an input is high, its corresponding number&#39;s display is reversed.</p>
+
+<p>The outputs (A-D) are on the right side. When an output is high, its corresponding letter&#39;s display is reversed. If the outputs are selected, a blinking line will appear to the left of the outputs.</p>
+
+<p>The six Neurons are in the center, with Neurons #1, #3, and #5 at the top, and Neurons #2, #4, and #6 at the bottom. Each Neuron shows the symbol of its selected logic gate. If a Neuron is selected, the logic gate type&#39;s name will blink, and lines from the Neuron&#39;s source(s) and dotted lines to assigned outputs (if any) will be displayed.</p>
+
+<p><strong>Note</strong>: When a new Neuron is selected, the Neuron&#39;s editing cursor is reset to the logic gate type. This means that you can use the right encoder to set the gate type without having to go to the Edit screen.</p>
+
+<p><strong>Another Note</strong>: Actually, you never <em>have</em> to go to the edit screen. Since the controls work the same way on both screens, you can cursor through the parameters and change everything right from the Selection Screen. But it&#39;s hard to do that blind, and you&#39;ll probably want to go to the Edit Screen.</p>
+
+<p>Long-press the left encoder to turn on All Connections. This will show source and assignment lines for all Neurons and outputs. Long-press the left encoder again to turn off All Connections.</p>
+
+<h2>Edit Screen</h2>
+
+<p>Press the left encoder button to alternate between the Selection Screen and the Edit Screen.</p>
+
+<p>The Edit Screen is split into two halves. The left half of the screen shows the logic gate type and the Neuron&#39;s parameters. The right half of the screen shows the logic gate symbol, along with its inputs and output state. For the Threshold Logic Neuron, the right half of the screen also allows editing of weights and threshold.</p>
+
+<p>Press the right encoder button to advance the cursor, and turn the right encoder to change the value. The following sources are available: <strong>Dig 1, Dig 2, Dig 3, Dig 4, CV 1, CV 2, CV 3, CV 4, Neuron 1, Neuron 2, Neuron 3, Neuron 4, ON, and OFF</strong>.</p>
+
+<h3>Edit Screen Parameter Names</h3>
+
+<p>The meanings of the parameters you&#39;ll see on the Edit Screen are below. See <a href="#logic-gate-reference">Logic Gate Reference</a> for details about what the settings actually do.</p>
+
+<ul>
+<li><strong>Opd</strong>: Source of an operand of a logical operation (NOT, AND, OR, XOR, etc.). All operands in a logical gate are &quot;commutative,&quot; meaning that the resulting state will be the same regardless of the order of the operands.</li>
+<li><strong>Data</strong>: Source of the Data input for the Data Flip-Flop.</li>
+<li><strong>Toggl</strong>: Source of the Toggle input for the Toggle Flip-Flop.</li>
+<li><strong>Clock</strong>: Source of the Clock input for the Flip-Flop.</li>
+<li><strong>Set</strong>: Source of the Set input for the Set-Reset Latch.</li>
+<li><strong>Reset</strong>: Source of the Reset input for the Set-Reset Latch.</li>
+<li><strong>Den 1-3</strong>: Source of a Dendrite input for the Threshold Logic Neuron.</li>
+</ul>
+
+<h3>Output Assignment</h3>
+
+<p>When the outputs are selected, the Edit Screen shows Outputs A-D, with a Neuron assigned to each. The state of the selected Neurons will be sent to the specified outputs.</p>
+
+<h2>Logic Gate Reference</h2>
+
+<ul>
+<li><strong>NOT</strong> is a unary (single-input) gate whose state is the opposite of its operand.</li>
+<li><strong>AND</strong> is a binary (two-input) gate whose state is ON if and only if both of its operands are ON.</li>
+<li><strong>OR</strong> is a binary gate whose state is ON if and only if at least one of its operands are ON.</li>
+<li><strong>XOR</strong> is a binary gate whose state is ON if and only if exactly one of its operands is ON.</li>
+<li><strong>NAND</strong> is a binary gate whose state is ON if and only if at least one of its operands are OFF.</li>
+<li><strong>NOR</strong>  is a binary gate whose state is ON if and only if both of its operands are OFF.</li>
+<li><strong>XNOR</strong> is a binary gate whose state is ON if and only if both of its operands are the same value.</li>
+<li><strong>D-FF</strong> is a <em>Data Flip-Flop</em>. When its Clock input goes high, its state becomes the value of its Data input.</li>
+<li><strong>T-FF</strong> is a <em>Toggle Flip-Flop</em>. When its Clock input goes high, its state flips if the value of its Toggle input is ON.</li>
+<li><strong>Latch</strong> is a <em>Set-Reset NOR Latch</em>. When its Set input goes ON, its state becomes ON. When its Reset input goes ON, its state becomes OFF.</li>
+<li><strong>TL Neuron</strong> is a Threshold Logic Neuron, a ternary (triple-input) gate whose state is ON if and only if the sum of the weights of ON inputs (dendrites) exceeds its specified threshold. <a href="https://github.com/Chysn/O_C-HemisphereSuite/wiki/Threshold-Logic-Neuron">See here</a> for more information about Threshold Logic Neurons.</li>
+</ul>
+
+<h2>Setups</h2>
+
+<p>Neural Net has four independent Setups. A Setup consists of information for Neuron logic gate assignments, source assignments, and output assignments. Use the Up and Down buttons to change the active Setup. The active Setup number is shown at the top of all of the Setup screens.</p>
+
+<h3>Copying Setups</h3>
+
+<p>To copy the information for the active Setup to another Setup, long-press the Down button. When you release the button, a Copy screen will open. Choose the copy&#39;s destination with the Up and Down buttons, and then push the right encoder (&quot;[Copy]&quot;) to execute the copy. To leave the Copy screen without changing any data, push the left encoder (&quot;[Cancel]&quot;) or long-press the Down button again.</p>
+
+<p>If you select a Setup as its own copy destination, the display will change to a SysEx dump screen. The right encoder option becomes &quot;[Dump]&quot;. If you push the right encoder, Neural Net will send a system exclusive file containing the data for the active Setup.</p>
+
+<h3>Saving Setups</h3>
+
+<p>There are two ways to save Setup data.</p>
+
+<p><strong>Save all four Setups in the module:</strong> Long-press the left encoder to get to the main menu, then long-press the left encoder again to save data for all apps. A solid rectangle will expand from the middle of the screen to confirm the save operation. The Ornament and Crime module will recall the saved Setups on power-up.</p>
+
+<p><strong>Save using MIDI system exclusive:</strong> Follow the SysEx dump procedure from the Copying Setups section above, and capture the system exclusive dump with SysEx librarian software. The restore a Setup from a SysEx dump, simply send the SysEx file back to the module whenever Neural Net is running.</p>
+
+<p><em>Shortcut: When you long-press the right encoder to go to the main menu, the current Setup&#39;s data also is dumped via SysEx.</em></p>
+
+<p>Notes about System Exclusive:</p>
+
+<ul>
+<li>A Setup from a received SysEx dump will always be placed in the active Setup, <em>regardless of the Setup&#39;s original location.</em></li>
+<li>You can use system exclusive to change Neural Net in an automated way during a performance.</li>
+<li>Data received from a SysEx dump will overwrite Setups in memory, but not data saved via the first save method; that is, unless you long-press to save the new Setup data, Neural Net will return to its previously-saved state at the next power-up.</li>
+</ul>
+    </div>
+  </div>
+</body>
+</html>

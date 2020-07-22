@@ -1,0 +1,54 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>&quot;A&quot;SR is an &quot;Analog&quot; Shift Register simulation with a 256-step ring buffer. When selected in one hemisphere, it has two indexed outputs. When selected in both hemispheres, the same buffer is used across all four outputs.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock pulse at Digital 1 advances the buffer, and a gate at Digital 2 freezes the buffer to writing</li>
+<li>CV Ins: CV 1 is the signal to be sampled, and CV 2 is bi-polar modulation of the index between -32 and 32 steps</li>
+<li>Outputs: Indexed outputs (see below)</li>
+<li>Encoders: Set index and scale</li>
+</ul>
+
+<h2>Unlinked Operation</h2>
+
+<p>When &quot;A&quot;SR is selected in one hemisphere (whether the left or the right), it operates as described above. The Out A/C is the most recent value, and Out B/D is a previous value based on the index; an index of <em>n</em> indicates that B/D will play <em>n</em> step(s) back. At an index of 0, both outputs will be the same. When the index value is modulated by CV, a small <em>CV</em> indicator displays below the value.</p>
+
+<h2>Linked Operation</h2>
+
+<p>When &quot;A&quot;SR is selected in both hemispheres, it becomes a &quot;linked&quot; applet. A link icon will appear in the upper right corner of the screen.</p>
+
+<p>When linked, the scale may be different for each hemisphere, but the base index will be the same. Digital 1, Digital 2, and CV 1 do nothing. The index for each side may be modulated independently using CV 2. When the index value is modulated by CV, a small <em>CV</em> indicator displays below the value.</p>
+
+<p>Linked outputs are routed as follows:</p>
+
+<ul>
+<li>Out A: The most recent sample</li>
+<li>Out B: <em>n</em> steps back</li>
+<li>Out C: <em>2n</em> steps back</li>
+<li>Out D: <em>3n</em> steps back</li>
+</ul>
+
+<p>where <em>n</em> is the index.</p>
+
+<p>&quot;A&quot;SR is in Hemisphere Suite from v1.5.</p>
+    </div>
+  </div>
+</body>
+</html>

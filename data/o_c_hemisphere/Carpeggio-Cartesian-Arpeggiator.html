@@ -1,0 +1,57 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p><em>Thanks to Roel Das for writing the chord pattern code, and generously allowing it to be used here.</em></p>
+
+<p>Carpeggio is an arpeggiator/sequencer that uses coordinates on a 4x4 Cartesian plane to select notes. Notes can be assigned to the plane from among 55 chord patterns. Carpeggio can also be clocked and reset, to function as a more traditional arpeggiator. Additionally, any of the 16 notes may be edited on the fly, allowing Carpeggio to function as a Cartesian or traditional 16-step sequencer.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock to Digital 1 plays the CV at the current position and advances to the next step (<em>x</em>, then <em>y</em>), and Digital 2 resets to (1,1)</li>
+<li>CV Ins: CV 1 is the <em>x</em> position on the plane, and CV 2 is the <em>y</em> position</li>
+<li>Outputs: Output 1 is the quantized pitch, Output 2 is a modulation output proportional to <em>x</em>*<em>y</em></li>
+<li>Encoder Push: Cycles the cursor between note, chord, and transpose</li>
+</ul>
+
+<h2>Cartesian Operation</h2>
+
+<p>Provide <em>x</em> and <em>y</em> CV (0-5V) to the CV inputs. The position will be displayed with cross hairs on the grid. To select the note at the current position for playing, provide a clock signal to Digital 1.</p>
+
+<h2>Linear Operation</h2>
+
+<p>To use Carpeggio as a more traditional linear arpeggiator or sequencer, disconnect the <em>x</em> and <em>y</em> CV (or set them both to 0V). A clock to Digital 1 will play the note at the current position, and then advance to the next position, from left to right, and top to bottom.</p>
+
+<p>A clock at Digital 2 will reset Carpeggio to (1,1), or upper-left.</p>
+
+<h2>Note Editing</h2>
+
+<p>When the cursor is flashing under the note number near the bottom of the screen, the note at the current step may be edited with the encoder. Such edits will be lost on power-down, or when the chord is changed.</p>
+
+<h2>Changing Chords</h2>
+
+<p>When the cursor is flashing under the chord name, select a chord with the encoder. If you change the chord and push the encoder, the sixteen steps will be filled with notes from that chord, removing any note edits you&#39;ve made. When you&#39;re changing chords, a checkmark will appear next to the currently-selected chord. If you press the encoder button at this chord, your note changes will <em>not</em> be overwritten.</p>
+
+<p>When you push the encoder button to change a chord, the cursor will remain at the chord selection setting, so that you can change chords multiple times without delay. To move the cursor to the Transpose setting, press the encoder button without changing the chord.</p>
+
+<h2>Transposition</h2>
+
+<p>Carpeggio has a four octave transposition range, 24 semitones in either direction.</p>
+    </div>
+  </div>
+</body>
+</html>

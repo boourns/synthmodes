@@ -1,0 +1,51 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>https://youtu.be/Hfowo8vF7CE</p>
+
+<p>MIDI In is a monophonic MIDI-to-CV interface that uses the USB port on the back of the Ornament and Crime module. The MIDI interface will appear in your computer as &quot;Hemisphere&quot;.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Outputs: Assignable</li>
+<li>Encoder Push: Cycle cursor between MIDI channel, Out A assignment, and Out B assignment</li>
+<li>Encoder Turn: Change channel or assignment</li>
+</ul>
+
+<p>Accepts MIDI data from the USB port on the back of the O_C module. If you installed Hemisphere Suite from a hex file, the MIDI driver will be called Hemisphere. If you compiled Hemisphere Suite from source, it will probably be Teensy MIDI.</p>
+
+<p>The following types of MIDI data are assignable to the outputs:</p>
+
+<ul>
+<li><strong>Note#</strong>: The output is a quantized value based on the MIDI note number</li>
+<li><strong>Trg</strong>: The output is a trigger signal on a MIDI note on message</li>
+<li><strong>Gate</strong>: The output is a 5 volt gate signal, starting at a note on, and ending at the corresponding note off. Since the applet is monophonic, the gate will only pay attention to one note at a time.</li>
+<li><strong>Veloc</strong>: The output is a scaled voltage (0-5 volts) corresponding the to last note&#39;s velocity</li>
+<li><strong>Mod</strong>: The output is a scaled voltage (0-5 volts) corresponding to the position of CC#1 (modulation wheel)</li>
+<li><strong>Aft</strong>: The output is a scaled voltage (0-5 volts) corresponding to the aftertouch value</li>
+<li><strong>Bend</strong>: The output is a scaled voltage (-3 to 5 volts) corresponding to the pitch bend value</li>
+<li><strong>Clock</strong>: The output is a clock signal every twelve pulses (eight notes). The clock can be reset by turning the encoder to the right.</li>
+</ul>
+
+<p>The screensaver for MIDI In displays the last six MIDI messages. It will always display note activity on the selected channel. Other data (note off, aftertouch, pitch bend, modulation) will only be shown if that data type is assigned to a CV output.</p>
+
+<p>MIDI In is available in Hemisphere Suite.</p>
+    </div>
+  </div>
+</body>
+</html>

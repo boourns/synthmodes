@@ -1,0 +1,44 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>ShiftGate is a dual shift register-based gate/trigger sequencer for creating aleatoric rhythm patterns.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Inputs: Digital 1 clocks the sequencer by shifting both registers to the left, and Digital 2 freezes the sequencer and locks out changes.</li>
+<li>CV Inputs: Flip input for each channel. When CV is high, the bit rotating off the left side of the corresponding channel&#39;s register will be replaced at bit 0 with the opposite value.</li>
+<li>Outputs: Trigger or gate output for each channel</li>
+<li>Encoders: Change the length and output type for each channel</li>
+</ul>
+
+<p>ShiftGate has two channels controlled by a single clock input. Each channel starts with a random 16-bit register*. When a clock is received at Digital 1, the following things happen:</p>
+
+<ol>
+<li>The register is shifted to the left. </li>
+<li>If Digital 2 is high, the register is frozen; the high bit (based on length) of the previous value is moved back to the beginning (bit 0), and skip to 4.</li>
+<li>If the CV input for the corresponding channel is low, the high bit (based on length) of the previous value is moved back to the beginning (bit 0). If the CV input is high, the high bit is flipped, and that value is put at the beginning. This is known as an XOR operation.</li>
+<li>The value of bit 0 is examined. If the channel&#39;s Type is set to &quot;Trig,&quot; then a trigger will be sent from the channel&#39;s output if the value is 1. If the channel&#39;s type is set to &quot;Gate,&quot; the gate state is high if the value is 1. The gate will then <em>remain</em> high until the next time the register&#39;s bit 0 is 0.</li>
+</ol>
+
+<p>ShiftGate is in Hemisphere Suite from v1.5.</p>
+
+<p><em>* When ShiftGate&#39;s state is saved via SysEx or system save, Output A&#39;s register is saved, and Output B&#39;s register is randomized.</em></p>
+    </div>
+  </div>
+</body>
+</html>

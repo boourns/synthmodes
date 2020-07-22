@@ -1,0 +1,46 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p>https://youtu.be/RNWCq8mW5wE</p>
+
+<p>ShiftReg (&quot;Turing&quot; prior to v1.4C) is a faithful implementation based on Tom Whitwell&#39;s original Turing Machine circuit.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock at Digital 1 shifts all bits left, after performing a probability calculation to determine whether the last bit should flip. A gate signal at Digital 2 unlocks probability changes.</li>
+<li>CV Inputs: CV 1 sets the length. CV 2 is bi-polar modulation of probability.</li>
+<li>Outputs: A/C is quantized output based on 5 bits, and B/D is voltage output based on 8 bits</li>
+<li>Encoder Push: Cycles cursor between Length and Probability settings</li>
+<li>Encoder Turn: Change the selected setting</li>
+</ul>
+
+<p>ShiftReg starts out with a random 16-bit register. The synthesist sets the pattern length and probability.</p>
+
+<p>When a clock is received at digital input 1, ShiftReg determines whether to change the value of the last bit in the pattern (bit <em>length</em> - 1) based on the set probability. At a probability of 0, the bit will never be changed, and at a probability of 100, the bit will always be changed. The entire 16-bit register is shifted, and the last bit&#39;s newly-calculated state is added to bit 0.</p>
+
+<p>Note that the old Turing Machine trick of getting a repeating 32-step pattern with a 100% probability is possible here.</p>
+
+<p><em>The sequence may be &quot;frozen&quot; by setting the probability to 0, or by moving the cursor to the Length setting. When the cursor is at the Length setting, the sequence will not change <strong>unless</strong> a high gate signal is present at Digital 2. *</em></p>
+
+<p>ShiftReg has two outputs. The first output is quantized to semitones over a 2.5 octave (32-note) range, and uses the first five bits of the register. The second output uses the first 8 bits of the register, and is proportioned to 5 volts. This output is similar to the output of the original Turing Machine.</p>
+
+<p>* <strong>Fun tip!</strong> To have total control over when a sequence is changed, set probability to 100%, then move the cursor to the length parameter to lock the probability. Now a high gate signal at Digital 2 will <em>always</em> flip bit 0.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+  <div class="centered">
+    <div class="content"><p><strong><em>Note: This documentation is for an unreleased feature in Hemisphere Suite. It will be released with Hemisphere Suite 1.6 on October 26, 2018.</em></strong></p>
+
+<p>Waveform Editor is an application for creating, editing, and saving Vector Oscillator waveforms.</p>
+
+<h2>What is a Vector Oscillator Waveform?</h2>
+
+<p>Waveforms are described by as few as two, and up to twelve segments. Each segment has a bi-polar <em>level</em> (between -128 and 127) and a <em>time</em> (between 0 and 9). The level and time are not fixed values, but depend on the application and its settings.</p>
+
+<p>Vector Oscillators are used in four Hemisphere applets:</p>
+
+<ul>
+<li>VectorLFO, as a cycling bi-polar modulation source</li>
+<li>VectorEG, as a non-cycling uni-polar gated envelope generator with sustain and release</li>
+<li>VectorMod, as a bi-polar triggered modulation source that can be either cycling or non-cycling</li>
+<li>Boots &#39;n Cats, as an audio oscillator and drum envelope generators</li>
+</ul>
+
+<h2>Level</h2>
+
+<p>The Level (-128 to 127) is scaled to the specific application. For example, the VectorLFO&#39;s range is -3V to 3V. When a Vector Oscillator is started, its signal level is set to the Level of the <em>last</em> segment, and immediately starts moving to the Level of the first segment, based on the segment&#39;s Time (see below).</p>
+
+<h2>Time</h2>
+
+<p>The Time of a segment specifies time relative to other segments in the waveform. Two segments with the same Time value will take the same time to complete, regardless of what that value actually is. The total time that it takes a segment to reach its Level will depend upon the Time value (specifically, its ratio to the sum of all Time values in the waveform) and the waveform&#39;s frequency (see below).</p>
+
+<h2>Frequency</h2>
+
+<p>Each Vector Oscillator application provides one or more ways to affect an oscillator&#39;s frequency. In most cases, a value in Hertz (cycles per second) is provided, which expresses how fast the oscillator will cycle (if it is cycling). Each segment in the waveform will be scaled based on its Time and the current frequency. Note that Hz values are approximate, due to hardware and software numeric precision limits.</p>
+
+<h2>Basic Controls and Navigation</h2>
+
+<ul>
+<li>Left Encoder: Turn to move through the waveform&#39;s segments. The selected segment will be a solid line. Press the left encoder button to insert a new segment after the selected segment. Long-press the left encoder button to delete the selected segment. <strong>Note</strong>: You cannot delete a segment if it would leave the waveform with fewer than 2 segments, or if it would leave the waveform with a total Time of 0.</li>
+<li>Right Encoder: Press to switch the cursor between editing of Level and Time. Turn the right encoder to set the selected segment&#39;s Level between -128 and 128, or the selected segment&#39;s Time between 0 and 9.</li>
+<li>Up/Down Buttons: Press to select a waveform. Long-press the Down button to activate a page to add a new waveform, or delete a waveform. <strong>Note</strong>: You cannot delete the last waveform, and you cannot add a waveform if there are fewer than 3 segments remaining.</li>
+<li>For jack I/O functions, see <strong>Monitoring</strong> below.</li>
+</ul>
+
+<h2>Segment Memory</h2>
+
+<p>Hemisphere Suite allocates 63 segments of waveform memory. The upper-right corner of the screen shows how many segments are remaining. You may add as many waveforms as you like, with the following limitations:</p>
+
+<ul>
+<li>At least 3 segments must be available to create a new waveform. This is because each waveform uses one segment as a table-of-contents entry, and each waveform must have at least two Level/Time segments.</li>
+<li>Each waveform may use up to 12 Level/Time segments</li>
+</ul>
+
+<h2>Choosing a Waveform</h2>
+
+<p>Press the Up and Down buttons to choose a waveform.</p>
+
+<h2>Selecting and Editing Segments</h2>
+
+<p>Use the left encoder to move through the segments. The selected segment will be shown as a solid line.</p>
+
+<p>Press the right encoder button to alternate the cursor between Level and Time. Turn the right encoder to set that value for the selected segment.</p>
+
+<h2>Adding and Deleting Segments</h2>
+
+<p>To add a new segment, press the left encoder button. A new segment will be inserted after the selected segment, and the newly-created segment will become selected. You cannot add a segment if the waveform already has 12 segments.</p>
+
+<p>To delete a segment, long-press the left encoder button. The selected segment will be deleted, and the next segment will become selected. You cannot delete a segment if doing so would leave only one segment in the waveform. You also cannot delete a segment if doing so would leave the waveform with a total Time of 0.</p>
+
+<h2>Monitoring</h2>
+
+<p>You may monitor the waveform you&#39;re editing in four different ways, one for each output:</p>
+
+<ul>
+<li>Out A: Bi-polar LFO (default 1Hz) - <em>Modulated by CV 1</em></li>
+<li>Out B: Bi-polar audio rate oscillator (default 440Hz) - <em>Modulated by CV 2</em></li>
+<li>Out C: Uni-polar gated EG with sustain and release - <em>Gated by Digital 3</em></li>
+<li>Out D: Bi-polar triggered one-shot modulation - <em>Triggered by Digital 4</em></li>
+</ul>
+
+<h2>Saving Waveforms</h2>
+
+<p>Waveform data can be saved in two ways:</p>
+
+<p>(1) <strong>With the built-in Ornament and Crime storage system</strong> Return to the main menu by long-pressing the right encoder. Then, long-press the right encoder again. This will save the state of all applications in the module.</p>
+
+<p>(2) <strong>System Exclusive Librarian</strong> Your current waveform library can be dumped to a system exclusive librarian program on a computer for permanent storage. When you long-press the right button to return to the main menu, the sysex dump will be initiated. When setting up your librarian software, select Hemisphere as the MIDI device.</p>
+
+<p>Waveform Editor sends your waveform library as four sysex messages, so make sure that your librarian captures all of them and stores them in the same file.</p>
+
+<p>To restore your waveforms, simply send the dump back any time Waveform Editor is running.</p>
+    </div>
+  </div>
+</body>
+</html>
