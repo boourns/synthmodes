@@ -1,3 +1,22 @@
+:root {
+  --blue: #4883b2;
+  --turquoise: #74b898;
+  --green: #6eb350;
+  --orange: #e18d4c;
+  --yellow: #e3bf52;
+  --red: #d52841;
+  --lightpink: #d998bf;
+  --purple: #b118cc;
+  --blue-hi: #5caae6;
+  --turquoise-hi: #73e6b0;
+  --green-hi: #6fd941;
+  --orange-hi: #ff8833;
+  --yellow-hi: #e6b82e;
+  --red-hi: #e61736;
+  --lightpink-hi: #f0a8d4;
+  --purple-hi: #d045e6;
+}
+
 td {
   width: 33%;
 }
@@ -66,4 +85,70 @@ td {
   border-bottom-color: #777777;;
   border-width: 13px;
   margin-left: -13px;
+}
+
+.indicator.rect {
+  border-radius: 3px;
+  min-width: 40px;
+  margin-right: 0.2ex;
+}
+
+.indicator.round {
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.2ex;
+  margin-bottom: 0.3ex;
+  vertical-align: middle;
+  min-width: 1.1em;
+  min-height: 1.1em;
+}
+
+.indicator:before {
+  content: "";
+  display: inline-block;
+}
+
+.indicator.rect:before {
+  width: 26px;
+}
+
+
+.indicator.blue {
+  background: radial-gradient(circle, var(--blue-hi) 10%, var(--blue) 120%);
+}
+.indicator.green {
+  background: radial-gradient(circle, var(--green-hi) 10%, var(--green) 120%);
+}
+.indicator.orange {
+  background: radial-gradient(circle, var(--orange-hi) 10%, var(--orange) 120%);
+}
+.indicator.yellow {
+  background: radial-gradient(circle, var(--yellow-hi) 10%, var(--yellow) 120%);
+}
+.indicator.red {
+  background: radial-gradient(circle, var(--red-hi) 10%, var(--red) 120%);
+}
+.indicator.lightpink {
+  background: radial-gradient(circle, var(--lightpink-hi) 10%, var(--lightpink) 120%);
+}
+.indicator.purple {
+  background: radial-gradient(circle, var(--purple-hi) 10%, var(--purple) 120%);
+}
+.indicator.turquoise {
+  background: radial-gradient(circle, var(--turquoise-hi) 10%, var(--turquoise) 120%);
+}
+
+ul.nofx {
+  padding-left: 0;
+  list-style: none;
+}
+
+h3:not(:first-of-type) {
+  margin-top: 2em;
+}
+
+body.inputlevel span.value {
+  display: inline-block;
+  min-width: 3.5ex;
+  text-align: right;
 }
