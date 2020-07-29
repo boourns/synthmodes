@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>randomness</td>
+      <td>control CV, or trigger (param 1)</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>clock input</td>
+      <td>Signal #1</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>modify input</td>
+      <td>Signal #2</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>trigger output</td>
+      <td>Signal #1, or #2</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>inverse trigger output</td>
+      <td>Signal #2, or #1</td>
     </tr>
   </table>
 
@@ -84,15 +84,17 @@
     <tr>
       <td class="parameter">0</td>
 
+      <td class="parameter">0</td>
+
       <td class="parameter">1</td>
 
-      <td class="parameter">16</td>
-
-      <td class="parameter">8</td>
+      <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Length</td>
+      <td colspan="4">Mode.<br>
+        When 0, Z acts as a switch at 0V.<br>
+        When 1, Z is a trigger.</td>
     </tr>
   </table>
 <br>
@@ -113,13 +115,13 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">3</td>
     </tr>
 
     <tr>
-      <td colspan="4">Pulse A length</td>
+      <td colspan="4">Hysteresis.<br>Higher values smoothes jitter on Z when Z is a 0V switch to prevent bouncing when Z near 0V.</td>
     </tr>
   </table>
 <br>
@@ -140,17 +142,17 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">99</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Pulse B length</td>
+      <td colspan="4">Fade
+      </td>
     </tr>
   </table>
 <br>
 
-  <h3>Description</h3>Press Z to modify sequence
 </body>
 </html>

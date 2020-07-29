@@ -82,11 +82,13 @@
       <page name="B7 VCO with linear FM" content="b7_vco_with_linear_fm.html" icon="img/b7.png">
         <tags>
           <tag>oscillator</tag>
+          <tag>midi</tag>
         </tags>
       </page>
       <page name="B8 VCO with waveshaping" content="b8_vco_with_waveshaping.html" icon="img/b8.png">
         <tags>
           <tag>oscillator</tag>
+          <tag>midi</tag>
         </tags>
       </page>
       <page name="C1 Precision Adder (fractional offsets)" content="c1_precision_adder_fractional_offsets.html" icon="img/c1.png">
@@ -365,6 +367,7 @@
       <page name="H8 Quantizer 2" content="h8_quantizer_2.html" icon="img/h8.png">
         <tags>
           <tag>quantizer</tag>
+          <tag>midi</tag>
         </tags>
       </page>
       <page name="I1 Audio Playback" content="i1_audio_playback.html" icon="img/i1.png">
@@ -471,6 +474,7 @@
           <tag>wave</tag>
           <tag>oscillator</tag>
           <tag>sd</tag>
+          <tag>midi</tag>
         </tags>
       </page>
       <page name="K2 Clockable Wavetable LFO" content="k2_clockable_wavetable_lfo.html" icon="img/k2.png">
@@ -604,6 +608,30 @@
         <tags>
           <tag>effect</tag>
           <tag>delay</tag>
+        </tags>
+      </page>
+      <page name="M7 Granular Pitch Shift" content="m7_granular_pitch_shifter.html" icon="img/m7.png">
+        <tags>
+          <tag>effect</tag>
+        </tags>
+      </page>
+      <page name="M8 Chaos" content="m8_chaos.html" icon="img/m8.png">
+        <tags>
+          <tag>modulation</tag>
+          <tag>LFO</tag>
+        </tags>
+      </page>
+      <page name="N1 Switch" content="n1_switch.html" icon="img/n1.png">
+        <tags>
+          <tag>utility</tag>
+          <tag>logic</tag>
+        </tags>
+      </page>
+      <page name="N5 Pulsar VCO" content="n5_pulsar_vco.html" icon="img/n5.png">
+        <tags>
+          <tag>wave</tag>
+          <tag>oscillator</tag>
+          <tag>sd</tag>
         </tags>
       </page>
       <page name="N8 Clockable SD Ping Pong" content="n8_clockable_sd_ping_pong.html" icon="img/n8.png">

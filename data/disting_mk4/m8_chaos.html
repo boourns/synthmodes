@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>randomness</td>
+      <td>Speed (Push to reset)</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>clock input</td>
+      <td>Influences chaos</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>modify input</td>
+      <td>Influences chaos</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>quantized CV output</td>
+      <td>Chaos output</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>trigger output</td>
+      <td>Chaos output</td>
     </tr>
   </table>
 
@@ -84,15 +84,15 @@
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Direction</td>
+      <td colspan="4">Range</td>
     </tr>
   </table>
 <br>
@@ -111,15 +111,17 @@
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">11</td>
 
-      <td class="parameter">8</td>
+      <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Length</td>
+      <td colspan="4">
+        Output mode (See table below)
+      </td>
     </tr>
   </table>
 <br>
@@ -138,15 +140,16 @@
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">-64</td>
 
-      <td class="parameter">15</td>
+      <td class="parameter">64</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Scale.  See table below</td>
+      <td colspan="4">Attenuator A
+      </td>
     </tr>
   </table>
 <br>
@@ -165,15 +168,16 @@
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-64</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">64</td>
 
       <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output attenuverter</td>
+      <td colspan="4">Attenuator B
+      </td>
     </tr>
   </table>
 <br>
@@ -192,15 +196,16 @@
     <tr>
       <td class="parameter">4</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">MIDI Gate</td>
+      <td colspan="4">offset A
+      </td>
     </tr>
   </table>
 <br>
@@ -219,15 +224,16 @@
     <tr>
       <td class="parameter">5</td>
 
-      <td class="parameter">-48</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">48</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Transpose.  See chart below.</td>
+      <td colspan="4">offset B
+      </td>
     </tr>
   </table>
 <br>
@@ -248,75 +254,74 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">1</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Slew</td>
+      <td colspan="4">Clamp<br>
+        Resets simulation when it becomes unstable
+      </td>
     </tr>
   </table>
 <br>
+<h3>Mode Table</h3>
+<table>
+  <tr>
+    <th>Parameter 1</th>
+    <th>Output A</th>
+    <th>Output B</th>
+  </tr>
+<tr>
+  <td>0</td>
+  <td>x</td><td>z</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>y</td><td>z</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>x</td><td>y</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>x-based gate</td><td>z</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>y-based gate</td><td>z</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>x-based gate</td><td>y</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>x</td><td>z-based gate</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>y</td><td>z-based gate</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>x</td><td>y-based gate</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>x-based gate</td><td>z-based gate</td>
+</tr>
+<tr>
+  <td>10</td>
+  <td>y-based gate</td><td>z-based gate</td>
+</tr>
+<tr>
+  <td>11</td>
+  <td>x-based gate</td><td>y-based gate</td>
+</tr>
+</table>
 
-
-<p>
-  <h3>Scales</h3>
-  <table class="bordered chart">
-    <tr>
-      <th>Number</th><th>Scale</th>
-    </tr>
-    <tr><td>0</td><td>chromatic</td></tr>
-    <tr><td>1</td><td>major scale</td></tr>
-    <tr><td>2</td><td>minor scale</td></tr>
-    <tr><td>3</td><td>major triad</td></tr>
-    <tr><td>4</td><td>minor triad</td></tr>
-    <tr><td>5</td><td>root+5th</td></tr>
-    <tr><td>6</td><td>major triad+6th</td></tr>
-    <tr><td>7</td><td>minor triad+6th</td></tr>
-    <tr><td>8</td><td>major triad+7th</td></tr>
-    <tr><td>9</td><td>minor triad+7th</td></tr>
-    <tr><td>10</td><td>root+5th+6th</td></tr>
-    <tr><td>11</td><td>root+5th+7th</td></tr>
-    <tr><td>12</td><td>pentatonic major</td></tr>
-    <tr><td>13</td><td>pentatonic minor</td></tr>
-    <tr><td>14</td><td>natural minor scale</td></tr>
-    <tr><td>15</td><td>harmonic minor scale</td></tr>
-  </table>
-</p>
-<p>
-  <h3>Key</h3>
-  Chart assumes oscillator tuning 0v = C.
-  <table class="bordered chart">
-    <tr>
-      <th>Parameter&nbsp;2</th><th>Scale</th>
-    </tr>
-    <tr><td>-12</td><td>C</td></tr>
-    <tr><td>-11</td><td>C#</td></tr>
-    <tr><td>-10</td><td>D</td></tr>
-    <tr><td>-9</td><td>D#</td></tr>
-    <tr><td>-8</td><td>E</td></tr>
-    <tr><td>-7</td><td>F</td></tr>
-    <tr><td>-6</td><td>F#</td></tr>
-    <tr><td>-5</td><td>G</td></tr>
-    <tr><td>-4</td><td>G#</td></tr>
-    <tr><td>-3</td><td>A</td></tr>
-    <tr><td>-2</td><td>A#</td></tr>
-    <tr><td>-1</td><td>B</td></tr>
-    <tr><td>0</td><td>C</td></tr>
-    <tr><td>1</td><td>C#</td></tr>
-    <tr><td>2</td><td>D</td></tr>
-    <tr><td>3</td><td>D#</td></tr>
-    <tr><td>4</td><td>E</td></tr>
-    <tr><td>5</td><td>F</td></tr>
-    <tr><td>6</td><td>F#</td></tr>
-    <tr><td>7</td><td>G</td></tr>
-    <tr><td>8</td><td>G#</td></tr>
-    <tr><td>9</td><td>A</td></tr>
-    <tr><td>10</td><td>A#</td></tr>
-    <tr><td>11</td><td>B</td></tr>
-    <tr><td>12</td><td>C</td></tr>
-  </table>
-</p>
 </body>
 </html>
