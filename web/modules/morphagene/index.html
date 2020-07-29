@@ -3,7 +3,26 @@ layout: page
 title: Morphagene
 manufacturer: Make Noise
 ---
-<style>td {
+<style>:root {
+  --blue: #4883b2;
+  --turquoise: #74b898;
+  --green: #6eb350;
+  --orange: #e18d4c;
+  --yellow: #e3bf52;
+  --red: #d52841;
+  --lightpink: #d998bf;
+  --purple: #b118cc;
+  --blue-hi: #5caae6;
+  --turquoise-hi: #73e6b0;
+  --green-hi: #6fd941;
+  --orange-hi: #ff8833;
+  --yellow-hi: #e6b82e;
+  --red-hi: #e61736;
+  --lightpink-hi: #f0a8d4;
+  --purple-hi: #d045e6;
+}
+
+td {
   width: 33%;
 }
 
@@ -72,6 +91,73 @@ manufacturer: Make Noise
   border-width: 13px;
   margin-left: -13px;
 }
+
+.indicator.rect {
+  border-radius: 3px;
+  min-width: 40px;
+  margin-right: 0.2ex;
+}
+
+.indicator.round {
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.2ex;
+  margin-bottom: 0.3ex;
+  vertical-align: middle;
+  min-width: 1.1em;
+  min-height: 1.1em;
+}
+
+.indicator:before {
+  content: "";
+  display: inline-block;
+}
+
+.indicator.rect:before {
+  width: 26px;
+}
+
+
+.indicator.blue {
+  background: radial-gradient(circle, var(--blue-hi) 10%, var(--blue) 120%);
+}
+.indicator.green {
+  background: radial-gradient(circle, var(--green-hi) 10%, var(--green) 120%);
+}
+.indicator.orange {
+  background: radial-gradient(circle, var(--orange-hi) 10%, var(--orange) 120%);
+}
+.indicator.yellow {
+  background: radial-gradient(circle, var(--yellow-hi) 10%, var(--yellow) 120%);
+}
+.indicator.red {
+  background: radial-gradient(circle, var(--red-hi) 10%, var(--red) 120%);
+}
+.indicator.lightpink {
+  background: radial-gradient(circle, var(--lightpink-hi) 10%, var(--lightpink) 120%);
+}
+.indicator.purple {
+  background: radial-gradient(circle, var(--purple-hi) 10%, var(--purple) 120%);
+}
+.indicator.turquoise {
+  background: radial-gradient(circle, var(--turquoise-hi) 10%, var(--turquoise) 120%);
+}
+
+ul.nofx {
+  padding-left: 0;
+  list-style: none;
+}
+
+h3:not(:first-of-type) {
+  margin-top: 2em;
+}
+
+body.inputlevel span.value {
+  display: inline-block;
+  min-width: 3.5ex;
+  text-align: right;
+}
+
 body {
   font-family: -apple-system, sans-serif;
 }
@@ -412,7 +498,7 @@ a.button:visited {
 <a href="#delete_splice_marker">Delete Splice Marker</a><br />
 <a href="#delete_all_splice_markers">Delete All Splice Markers</a><br />
 <a href="#delete_splice_audio">Delete Splice Audio</a><br />
-<b>System</b><br /><a href="#autolevel">Auto Level</a><br />
+<b>System</b><br /><a href="#inputlevel">Input Level</a><br />
 <a href="#mount">Mount SD Card</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
   <div class="centered">
     <div class="content">
@@ -758,7 +844,7 @@ a.button:visited {
       </div>
   </div>
 </div><br /><br />
-<h2>System</h2><a name="autolevel"></a><h2>Auto Level</h2>
+<h2>System</h2><a name="inputlevel"></a><h2>Input Level</h2>
   <div class="centered">
     <div class="content">
       <table class="panel">
@@ -786,11 +872,33 @@ a.button:visited {
           </td>
         </tr>
       </table>
+      <h3>Firmware v2</h3>
       <p>
-        </p>
-<h3>Description</h3>
-        Hold <b>Rec</b>, then press <b>Shift</b>.  Internal gain will be set to normalize incoming audio.  Audio is continually monitored while <b>Rec</b> is held. 
-      
+        Hold <b>Rec</b>, and press <b>Shift</b> to step through the gain settings:
+      </p>
+      <ul class="nofx" style="line-height: 1.4; ">
+        <li>
+          <span class="indicator rect blue"></span>
+          <span class="value">-3</span>db (blue)
+        </li>
+        <li>
+          <span class="indicator rect green"></span>
+          <span class="value">0</span>db (green)
+        </li>
+        <li>
+          <span class="indicator rect orange"></span>
+          <span class="value">+6</span>db (orange)
+        </li>
+        <li>
+          <span class="indicator rect purple"></span>
+          <span class="value">+12</span>db (purple)
+        </li>
+      </ul>
+
+      <h3>Firmware v1</h3>
+      <p>Hold <b>Rec</b>, then press <b>Shift</b>. </p>
+      <p>Internal gain will be set to normalize incoming audio.</p>
+      <p>Audio is continually monitored while <b>Rec</b> is held.</p>
   </div>
 </div><br /><br /><a name="mount"></a><h2>Mount SD Card</h2>
   <div class="centered">
