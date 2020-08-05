@@ -10,3 +10,15 @@ for i in *; do convert $i -resize x160 $i; done
 
 concat horizontally
 convert off.png off.png off.png flash.png +append eight.png
+
+
+for converting SVG to PNG with resize, transparency, recolor:
+
+(recolor: edit the SVG)
+
+/Applications/Inkscape.app/Contents/MacOS/Inkscape-bin 01_doppler.svg -w 1000 -h 1000 --export-file=01_doppler.png
+
+for i in *.svg; do 
+  /Applications/Inkscape.app/Contents/MacOS/Inkscape-bin $i -w 1000 -h 1000 --export-file=out.png
+  convert out.png -background transparent -gravity center -resize 78x78 -extent 80x80 `echo $i | sed 's/svg/png/'` 
+done

@@ -8,7 +8,7 @@
     <section name="Segments" modelist="true">
       <page name="Ramp" icon="img/led_green.png" content="ramp.html"/>
       <page name="Step" icon="img/led_orange.png" content="step.html"/>
-      <page name="Hold" icon="img/led_hold.png" content="hold.html"/>
+      <page name="Hold" icon="img/led_red.png" content="hold.html"/>
     </section>
     <section name="Single-Segment" modelist="true">
       <page name="Decay Envelope" icon="img/led_green.png" content="decay.html"/>
