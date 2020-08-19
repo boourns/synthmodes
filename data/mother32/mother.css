@@ -3,6 +3,17 @@
 	padding: 5;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  .tableHeader {
+  	background-color: #292a30; 
+  }
+
+  img {
+  	-webkit-filter: invert(100%);
+  	filter: invert(100%);
+  }
+}
+
 .knob {
 	margin: auto;
 	margin-top: 5px;

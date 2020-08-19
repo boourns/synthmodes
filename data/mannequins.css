@@ -39,13 +39,21 @@
 .mannequins kbd {
   font: inherit;
   font-style: italic;
-  background: #e7e7e7;
   padding: 1px 4px;
   border-radius: 4px;
+  background: none;
+
 }
+
+.mannequins kbd:not(.invert) {
+  color: black;
+  background: #e7e7e7;
+}
+
 .mannequins hr + h3 {
   margin-top:0 !important;
 }
+
 .mannequins h3:not(:first-child) {
   margin-top: 2em;
 }

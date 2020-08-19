@@ -27,6 +27,7 @@ td {
   border: 2px solid #000000;
   margin-top: 30px;
   padding: 5px;
+  color: black;
 }
 
 .dark_arrow_box:after, .dark_arrow_box:before {
@@ -60,6 +61,7 @@ td {
   border: 2px solid #777777;
   margin-top: 30px;
   padding: 5px;
+  color: black;
 }
 
 .light_arrow_box:after, .light_arrow_box:before {
