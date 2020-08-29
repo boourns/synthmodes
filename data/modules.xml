@@ -45,6 +45,7 @@
   <manufacturer name="TipTop Audio">
     <module name="ONE" id="one" index="one/module.xml"/>
     <module name="TG ONE" id="tg_one" index="tg_one/module.xml"/>
+    <module name="Z5000" id="z5000" index="z5000/module.xml"/>
   </manufacturer>
   <manufacturer name="Whimsical Raps">
     <module name="Just Friends" id="just_friends" index="just_friends/module.xml" />

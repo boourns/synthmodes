@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Reverb" modelist="true">
+      <page name="Hall" content="hall.html"/>
+      <page name="Plate" content="plate.html"/>
+      <page name="80s Verb" content="80sVerb.html"/>
+      <page name="Gate" content="gate.html"/>
+      <page name="Room" content="room.html"/>
+      <page name="Void" content="void.html"/>
+      <page name="Delay > Hall" content="delayHall.html"/>
+      <page name="Shimmer" content="shimmer.html"/>
+    </section>
+    <section name="Delay" modelist="true">
+      <page name="Mono Digital Delay" content="monoDigitalDelay.html"/>
+      <page name="Mono Tape Echo" content="monoTapeEcho.html"/>
+      <page name="Ping Pong Digital Delay" content="pingPongDigitalDelay.html"/>
+      <page name="Ping Pong Tape Echo" content="pingPongTapeEcho.html"/>
+      <page name="Tape Multi-Head Blend" content="tapeMultiHeadBlend.html"/>
+      <page name="Diffuse Band Delays" content="diffuseBandDelays.html"/>
+      <page name="Tape Chorus" content="tapeChorus.html"/>
+      <page name="Warp Pong" content="warpPong.html"/>
+    </section>
+    <section name="Pitch/Modulation" modelist="true">
+      <page name="Stereo Chorus" content="stereoChorus.html"/>
+      <page name="Stereo Flanger" content="stereoFlanger.html"/>
+      <page name="Vintage Ensemble" content="vintageEnsemble.html"/>
+      <page name="Ahhhnsemble" content="ahhhnsemble.html"/>
+      <page name="Formant Delay" content="formantDelay.html"/>
+      <page name="Dual Microshift Delay" content="dualMicroshiftDelay.html"/>
+      <page name="Dual Interval Delay" content="dualIntervalDelay.html"/>
+      <page name="Detuned Taps" content="detunedTaps.html"/>
+    </section>
+  </sections>
+</module>
