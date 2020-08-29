@@ -1,0 +1,1334 @@
+---
+layout: page
+title: ECHOZ
+manufacturer: TipTop Audio
+---
+<style>.yellow {
+  background-color: #fff200;
+}
+body {
+  font-family: -apple-system, sans-serif;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.orange {
+  background-color: #ff9e20;
+}
+
+.green {
+  background-color: #00ee00;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.darkgray {
+  background-color: #d5d5d5;
+}
+
+.flashing-green {
+  border: 0px;
+  background-color: #00ee00;
+  box-shadow: 0 0 10px #00ee00, inset 0 0 10px #00ee00;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.leds {
+  text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.chart tr th {
+  padding-right: 8px;
+}
+
+.chart tr td:first-child {
+  width:1%;
+}
+
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.led-small {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* just big circles - braids, clouds */
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
+}
+
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+.button-black {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: #999999;
+}
+
+.lcd {
+  width: 90%;
+  height: 90px;
+  border-radius: 5px;
+  border: 1px solid;
+  display: inline-block;
+  background-color: #eeeeee;
+}
+
+.slider {
+  margin: auto; 
+  margin-top: 10px;
+
+  width: 10px;
+  height: 100px;
+  border-radius: 2px;
+  background-color: black;
+  overflow: auto;
+}
+
+.slider-led {
+  width: 6px;
+  margin: 2px;
+  height: 10px;
+  border-radius: 0px;
+  background-color: white;
+  position: relative;
+}
+
+.jack {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: #888888;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: black;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     /*text-align: center; */
+     width: 25%;
+}
+
+/* iOS-like button */
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a.button:visited {
+  color:white;
+}</style><b>General</b><br /><a href="#info">Info</a><br />
+<b>Tape Echo</b><br /><a href="#monoTapeEcho">Mono Tape Echo</a><br />
+<a href="#pingPongTapeEcho">Ping Pong Tape Echo</a><br />
+<a href="#3headMixedEcho">3 Head Mixed Echo</a><br />
+<a href="#3headSwitchEcho">3 Head Switch Echo</a><br />
+<a href="#chorusEcho">Chorus Echo</a><br />
+<a href="#diffuseChorusEcho">Diffuse Chorus Echo</a><br />
+<a href="#wobblyTapeEcho">Wobbly Tape Echo</a><br />
+<a href="#warpPong">Warp Pong</a><br />
+<b>Digital Delay</b><br /><a href="#monoDigitalDelay">Mono Digital Delay</a><br />
+<a href="#pingPongDigitalDelay">Ping Pong Digital Delay</a><br />
+<a href="#shortBBD">Short BBD</a><br />
+<a href="#formantDelay">Formant Delay</a><br />
+<a href="#dualRatioTappedDelay">Dual Ratio Tapped Delay</a><br />
+<a href="#bandpassTapSelect">Bandpass Tap Select</a><br />
+<a href="#diffuseDelay">Diffuse Delay</a><br />
+<a href="#multiTapDiffuseBandDelays">Multi-Tap Diffuse Band Delay</a><br />
+<b>Pitch</b><br /><a href="#monoPitchShiftDelay">Mono Pitch Shift Delay</a><br />
+<a href="#monoIntervalShiftDelay">Mono Interval Shift Delay</a><br />
+<a href="#chordDelay">Chord Delay</a><br />
+<a href="#intervalFeedbackLoop">Interval Feedback Loop</a><br />
+<a href="#dualMicroshiftDelay">Dual Microshift Delay</a><br />
+<a href="#shimmerTaps">Shimmer Taps</a><br />
+<a href="#diffusePitchBandTaps">Diffuse Pitch Band Taps</a><br />
+<a href="#detunedTaps">Detuned Taps</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>ECHOZ</h3>
+      <p>The ECHOZ is a digital delay module from Tip Top Audio.<br><br></p>
+
+      <h3>General Controls</h3>
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TAPE, DIGITAL, PITCH MOD</b></td>
+            <td>Effects are divided into 3 banks. To select a bank, press and hold the relevant button. The currently selected effect will be briefly indicated by the pattern of lights on the buttons. After a few seconds, only the selected bank's button will be lit. To scroll between the effects in the bank, click the selected bank's button. To view the currently selected effect, click one of the inactive bank's buttons.</td>
+          </tr>
+          <tr>
+            <td><b>FIDELITY</b></td>
+            <td>Changes the frequency of the internal clock controlling the processing speed of the DSP chip. Altering this can result in anything from pitch shifting to degraded digital noise</td>
+          </tr>
+          <tr>
+            <td><b>IN</b></td>
+            <td>Exponential gain control on the audio</td>
+          </tr>
+          <tr>
+            <td><b>MIX</b></td>
+            <td>Dry/wet mix</td>
+          </tr>
+        </table>
+      
+
+
+      <h3>Links</h3>
+      <a class="button" href="http://tiptopaudio.com/zverb-echoz-z5000/">ECHOZ Home</a><br>
+      <a class="button" href="http://www.tiptopaudio.com/manuals/Tiptop_Audio_fx_manual.pdf">ECHOZ Manual</a><br>
+    </div>
+  </div>
+<br /><br />
+<h2>Tape Echo</h2><a name="monoTapeEcho"></a><h2>Mono Tape Echo</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        This is a single head style tape echo with mono output similar to the earliest tape units. The maximum delay time is tuned for shorter rhythmic, slapback and associated effects.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of bandpass filter</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="pingPongTapeEcho"></a><h2>Ping Pong Tape Echo</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A pair of delays where the input feeds the left channel and the output of the left delay feeds the input of the right delay. The feedback is taken from the output of the right side. Both delays have the same delay time for easy rhythmic effects.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of bandpass filter</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="3headMixedEcho"></a><h2>3 Head Mixed Echo</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A three head Echo in the style of some famous 70s units. The three heads are continuously blended between using the Filter control. The output is stereo.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of bandpass filter and mix of 3 heads</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="3headSwitchEcho"></a><h2>3 Head Switch Echo</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        The Filter control also switches between combinations of the 3 heads (1+2, 1+3, 2+3, 1+2+3). Note that there may be slight jumps in the sound when switching. Stereo output.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of bandpass filter and switching between heads</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="chorusEcho"></a><h2>Chorus Echo</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        Like the Mono Echo in program 1, but with a stereo Chorus after the delay. The speed of the Chorus increases as the Filter control moves to high pass.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of bandpass filter and chorus rate</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="diffuseChorusEcho"></a><h2>Diffuse Chorus Echo</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        Adds Diffusion to the input and echo repeats creating more of a detuned wash to the sound. The diffusion is modulated by internal LFOs for detuning/chorusing and the output is in stereo.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of bandpass filter</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="wobblyTapeEcho"></a><h2>Wobbly Tape Echo</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        An internal LFO modulates the delay time slightly to give some wobble chorus/vibrato to the sound. The modulation rate is tied to the Filter control and speeds up as the filter cutoff increases. Both the Feedback amount and Delay time influence the depth of the wobble: High feedback increases the wobble effect as does shorter delay times. Mono output.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of bandpass filter</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="warpPong"></a><h2>Warp Pong</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        Stereo Ping Pong delays with internal LFOs modulating the delay time. Each side has a different modulation rate that increases as the Filter control is raised. Feedback and delay Time also change the depth of the modulation. Stereo output.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of bandpass filter</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br />
+<h2>Digital Delay</h2><a name="monoDigitalDelay"></a><h2>Mono Digital Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A simple mono delay line with a low pass filter in the feedback path to roll off the high end of repeats. This program has the longest single delay time of any ECHOZ programs.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of bandpass filter</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="pingPongDigitalDelay"></a><h2>Ping Pong Digital Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        Two delay lines, Left and Right. Input enters the Left delay line and is output to the Left output and also the input of the Right delay line. The output of the Right delay line is fed back into the Left input. The effect is the echo bouncing from Left to Right and back again.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of low pass filter</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="shortBBD"></a><h2>Short BBD</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A very short mono delay that emulates early analog ‘bucket brigade delays’ (BBD). This program is designed for short flange, chorus, slapback and Karplus-Strong effects. The latter is achieved by turning up the feedback to a high level and using the delay time to set the pitch of the string pluck. Use short percussive sounds (or triggers) to excite the delay line and try it with Vocals too.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of low pass filter</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="formantDelay"></a><h2>Formant Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        Mono delay lines runs into a Formant filter with 4 vowel sounds. The Filter control selects one of the vowels. The delay feedback is before the filter so setting high levels of feedback will allow modulation of the vowel type as the sound decays. Stereo out.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Selects one of 4 vowel sounds</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="dualRatioTappedDelay"></a><h2>Dual Ratio Tapped Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A dual tap delay line with 1.0x, 0.75x, 0.5x, 0.375x and 0.25x delay time taps.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Selects the combination of heads: 1.0x/0.75x, 1.0x/0.5x, 1.0x/0.375x, 1.0x/0.25x, 0.75x/0.375x, 0.75x/0.5x, 0.5x/0.375x, 0.375x/0.25x</td>
+        </tr>
+</table>
+      
+    </div>
+  </div>
+<br /><br /><a name="bandpassTapSelect"></a><h2>Bandpass Tap Select</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A multi-tap delay line with 1.0x, 0.75x, 0.5x, 0.375x delay time taps. Each tap has a bandpass filter. The Filter control selects which of the taps is used for feedback.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Selects one of the taps for the feedback loop</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="diffuseDelay"></a><h2>Diffuse Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A single mono delay line with stereo diffusion creates a reverberant wash as the repeats decay.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Cutoff of low pass filter</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="multiTapDiffuseBandDelays"></a><h2>Multi-Tap Diffuse Band Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        Multi-tap bandpassed delay with diffusion in the feedback path. Low feedback settings produce a rhythmic effect and increasing feedback turns into a more reverb like sound. The Filter control increases the modulation of diffusion so higher levels reduce the ringing of the delay feedback but can also introduce vibrato to pitched sounds.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Rate of modulation of the diffusion</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br />
+<h2>Pitch</h2><a name="monoPitchShiftDelay"></a><h2>Mono Pitch Shift Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A mono delay line into a single pitch shifter. The pitch shift is not quantized to intervals and has a range of -1 octave to +1 octave (-1200 to +1200 cents). Pitch shifting is after the delay feedback so the pitch is constant as the repeats decay.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Pitch shift amount</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="monoIntervalShiftDelay"></a><h2>Mono Interval Shift Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A mono delay line into a single pitch shifter. Pitch shifting is after the delay feedback so the pitch is constant as the repeats decay. The pitch shift is quantized to the following intervals: -12 -7 -5 -3 +3 +4 +7 +12
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Selects interval</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="chordDelay"></a><h2>Chord Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A mono delay line into a pair of pitch shifters panned left and right. Pitch shifting is after the delay feedback so the pitch is constant as the repeats decay. The pitch shift is quantized to the following intervals: -12/+12, -12/-7, -12/-5, -5/+3, -5/+4, +4/+7, +7/+12, +12/+12 (detuned)
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Selects interval</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="intervalFeedbackLoop"></a><h2>Interval Feedback Loop</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A mono delay line into a pair of pitch shifters panned left and right. Pitch shifting is inside the delay feedback so the pitch moves up or down as the repeats decay forming arpeggio patterns. The pitch shift is quantized to the following intervals: -12/+12, -12/-7, -12/-5, -5/+3, -5/+4, +4/+7, +7/+12, +12/+12 (detuned)
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Selects interval</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="dualMicroshiftDelay"></a><h2>Dual Microshift Delay</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        A mono delay line into a pair of micro pitch shifters. The pitch shifting is fixed to a slight detune on one side and small shift up on the other. The Filter control blends between the two with all the way counter-clockwise being only downward to only upward shift on the full clockwise. Both pitch shifters are in the feedback path so the pitch will continue to rise or drop as the repeats decay.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Mix of downward (CCW) to upward (CW) tuning</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="shimmerTaps"></a><h2>Shimmer Taps</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        Multi-tap delay with a single octave up pitch shifter. Based on the classic reverb ‘Shimmer’ effect the octave effect is in the feedback loop of the delay. The Filter control sets the amount of pitch shift in the feedback and combined with the Feedback control allows for a variable mix of delay and pitch shift.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Amount of pitch shift in the feedback loop</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="diffusePitchBandTaps"></a><h2>Diffuse Pitch Band Taps</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led red"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+        Multi-tap delay with a single variable pitch shifter. The taps have both diffusion and bandpass filters. Pitch shifting is not in the feedback path so the pitch remains constant as the repeats decay.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Pitch shift ammount</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br /><a name="detunedTaps"></a><h2>Detuned Taps</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Mode</h3>
+
+      <div class="leds">
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+
+        <div class="led yellow"></div>
+      </div>
+
+      <h3>Description</h3>
+      <p>
+       A multitap delay line with a pair of detuned pitch shifters and diffusion. Higher amounts of detuning create up/down glides. Higher feedback amounts add a reverberant wash to the repeats.
+      </p>
+
+      <h3>Controls</h3>
+
+      <p>
+        </p>
+<table>
+          <tr>
+            <td><b>TIME</b></td>
+            <td>Delay time</td>
+          </tr>
+          <tr>
+            <td><b>FILTER</b></td>
+            <td>Detuning amount for the pitch shifters</td>
+          </tr>
+          <tr>
+            <td><b>FEEDBACK</b></td>
+            <td>Amount of feedback into the delay line</td>
+          </tr>
+        </table>
+      
+    </div>
+  </div>
+<br /><br />
