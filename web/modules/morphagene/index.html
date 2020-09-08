@@ -32,6 +32,7 @@ td {
   border: 2px solid #000000;
   margin-top: 30px;
   padding: 5px;
+  color: black;
 }
 
 .dark_arrow_box:after, .dark_arrow_box:before {
@@ -65,6 +66,7 @@ td {
   border: 2px solid #777777;
   margin-top: 30px;
   padding: 5px;
+  color: black;
 }
 
 .light_arrow_box:after, .light_arrow_box:before {
@@ -185,6 +187,17 @@ img {
     height: auto;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: #1d1f21;
+    color: #dfdfe0;
+  }
+
+  h1, h2, h3 {
+    color: #ffffff;
+  }
+}
+
 .orange {
   background-color: #ff9e20;
 }
@@ -285,7 +298,7 @@ img {
 }
 
 .bordered {
-  border: 1px solid black;
+  border: 1px solid;
   border-collapse: collapse;
   padding: 3px;
 }
@@ -339,6 +352,12 @@ img {
   background-color: white;
   border: 5px solid;
   border-radius: 50%;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .knob {
+    background-color: black;
+  }
 }
 
 .knob-ccw {

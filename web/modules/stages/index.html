@@ -56,6 +56,17 @@ img {
     height: auto;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: #1d1f21;
+    color: #dfdfe0;
+  }
+
+  h1, h2, h3 {
+    color: #ffffff;
+  }
+}
+
 .orange {
   background-color: #ff9e20;
 }
@@ -156,7 +167,7 @@ img {
 }
 
 .bordered {
-  border: 1px solid black;
+  border: 1px solid;
   border-collapse: collapse;
   padding: 3px;
 }
@@ -210,6 +221,12 @@ img {
   background-color: white;
   border: 5px solid;
   border-radius: 50%;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .knob {
+    background-color: black;
+  }
 }
 
 .knob-ccw {

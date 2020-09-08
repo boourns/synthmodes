@@ -20,5 +20,5 @@ for converting SVG to PNG with resize, transparency, recolor:
 
 for i in *.svg; do 
   /Applications/Inkscape.app/Contents/MacOS/Inkscape-bin $i -w 1000 -h 1000 --export-file=out.png
-  convert out.png -background transparent -gravity center -resize 78x78 -extent 80x80 `echo $i | sed 's/svg/png/'` 
+  convert out.png -background transparent -gravity center -resize 78x78 -extent 80x80 `echo $i | sed 's/svg/png/' | sed 's/plaits/model/'` 
 done

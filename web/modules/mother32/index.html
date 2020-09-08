@@ -8,6 +8,17 @@ manufacturer: Moog
 	padding: 5;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  .tableHeader {
+  	background-color: #292a30; 
+  }
+
+  img {
+  	-webkit-filter: invert(100%);
+  	filter: invert(100%);
+  }
+}
+
 .knob {
 	margin: auto;
 	margin-top: 5px;
@@ -62,6 +73,7 @@ manufacturer: Moog
 .triangle-left:after {
 	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
 }
+
 body {
   font-family: -apple-system, sans-serif;
 }
@@ -87,6 +99,17 @@ table {
 img {
     max-width: 100%;
     height: auto;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: #1d1f21;
+    color: #dfdfe0;
+  }
+
+  h1, h2, h3 {
+    color: #ffffff;
+  }
 }
 
 .orange {
@@ -189,7 +212,7 @@ img {
 }
 
 .bordered {
-  border: 1px solid black;
+  border: 1px solid;
   border-collapse: collapse;
   padding: 3px;
 }
@@ -243,6 +266,12 @@ img {
   background-color: white;
   border: 5px solid;
   border-radius: 50%;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .knob {
+    background-color: black;
+  }
 }
 
 .knob-ccw {
