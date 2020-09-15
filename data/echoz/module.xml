@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Tape Echo" modelist="true">
+      <page name="Mono Tape Echo" content="monoTapeEcho.html"/>
+      <page name="Ping Pong Tape Echo" content="pingPongTapeEcho.html"/>
+      <page name="3 Head Mixed Echo" content="3headMixedEcho.html"/>
+      <page name="3 Head Switch Echo" content="3headSwitchEcho.html"/>
+      <page name="Chorus Echo" content="chorusEcho.html"/>
+      <page name="Diffuse Chorus Echo" content="diffuseChorusEcho.html"/>
+      <page name="Wobbly Tape Echo" content="wobblyTapeEcho.html"/>
+      <page name="Warp Pong" content="warpPong.html"/>
+    </section>
+    <section name="Digital Delay" modelist="true">
+      <page name="Mono Digital Delay" content="monoDigitalDelay.html"/>
+      <page name="Ping Pong Digital Delay" content="pingPongDigitalDelay.html"/>
+      <page name="Short BBD" content="shortBBD.html"/>
+      <page name="Formant Delay" content="formantDelay.html"/>
+      <page name="Dual Ratio Tapped Delay" content="dualRatioTappedDelay.html"/>
+      <page name="Bandpass Tap Select" content="bandpassTapSelect.html"/>
+      <page name="Diffuse Delay" content="diffuseDelay.html"/>
+      <page name="Multi-Tap Diffuse Band Delay" content="multiTapDiffuseBandDelays.html"/>
+    </section>
+    <section name="Pitch" modelist="true">
+      <page name="Mono Pitch Shift Delay" content="monoPitchShiftDelay.html"/>
+      <page name="Mono Interval Shift Delay" content="monoIntervalShiftDelay.html"/>
+      <page name="Chord Delay" content="chordDelay.html"/>
+      <page name="Interval Feedback Loop" content="intervalFeedbackLoop.html"/>
+      <page name="Dual Microshift Delay" content="dualMicroshiftDelay.html"/>
+      <page name="Shimmer Taps" content="shimmerTaps.html"/>
+      <page name="Diffuse Pitch Band Taps" content="diffusePitchBandTaps.html"/>
+      <page name="Detuned Taps" content="detunedTaps.html"/>
+    </section>
+  </sections>
+</module>

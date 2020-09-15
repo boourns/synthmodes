@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="70s" modelist="true">
+      <page name="Hall" content="hall.html"/>
+      <page name="Plate" content="plate.html"/>
+      <page name="Bright Plate" content="brightPlate.html"/>
+      <page name="Tape > Plate" content="tapePlate.html"/>
+      <page name="Earliest 'Verb" content="earliestVerb.html"/>
+      <page name="Space Station" content="spaceStation.html"/>
+      <page name="Prehistoric Exhibit A" content="prehistoricExhibitA.html"/>
+      <page name="Epic Mod Hall" content="epicModHall.html"/>
+    </section>
+    <section name="80s" modelist="true">
+      <page name="80s BarVerb" content="80sBarVerb.html"/>
+      <page name="Ambience" content="ambience.html"/>
+      <page name="Gated" content="gated.html"/>
+      <page name="Delay > Hall" content="delayHall.html"/>
+      <page name="Shimmer Octave Up/Down" content="shimmerOctaveUpDown.html"/>
+      <page name="Shimmer Pitch Adjust" content="shimmerPitchAdjust.html"/>
+      <page name="Blooming" content="blooming.html"/>
+      <page name="Pitch over Plate" content="pitchOverPlate.html"/>
+    </section>
+    <section name="90s" modelist="true">
+      <page name="Room" content="room.html"/>
+      <page name="Void" content="void.html"/>
+      <page name="Downward Spiral" content="downwardSpiral.html"/>
+      <page name="Random Hall" content="randomHall.html"/>
+      <page name="Pong Verb" content="pongVerb.html"/>
+      <page name="Chord Hall" content="chordHall.html"/>
+      <page name="Pitch > Chorus" content="pitchChorus.html"/>
+      <page name="Formant Verb" content="formantVerb.html"/>
+    </section>
+  </sections>
+</module>
