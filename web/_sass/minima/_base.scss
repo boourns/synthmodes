@@ -232,7 +232,6 @@ table {
   margin-bottom: 5px;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
   border-collapse: collapse;
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
