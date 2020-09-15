@@ -46,3 +46,6 @@ While explicit permission for writing documentation for someone else's module is
 - Andrew Ostler (Expert Sleepers)
 - Émilie Gillet (Mutable Instruments)
 - Matthias Puech (Parasites)
+- Jeannot Quenson (4ms Company)
+- Danjel Van Tijn (Intellijel)
+- Jason Justian (Hemisphere)
