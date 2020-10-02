@@ -49,3 +49,4 @@ While explicit permission for writing documentation for someone else's module is
 - Jeannot Quenson (4ms Company)
 - Danjel Van Tijn (Intellijel)
 - Jason Justian (Hemisphere)
+- Gur Milstein (Tiptop Audio)
