@@ -19,6 +19,9 @@ jobs:
       - name: Install libxml2
         run: sudo apt-get install -y libxml2-utils
 
+      - name: Bundle Install
+        run: bundle install
+
       - name: Run Tests
         run: ./test.sh
 
