@@ -18,3 +18,5 @@ done
 
 echo "running render_web_data"
 bundle exec ruby ./tools/render_web_data.rb 
+return 1
+
