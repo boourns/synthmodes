@@ -26,7 +26,7 @@ Run `bundle install` to set up dependencies. Run `./test.sh` to run some basic s
 
 ## Testing the documentation pages
 
-Unfortunately the app is set up right now to load third party module files, however since the styles are so simple, the best way to test is to just set up a narrow browser tab as your testing environment.  Safari would be the closest browser engine if possible, but generally speaking if the HTML/CSS is simple it should be cross-platform.
+Unfortunately the app is not set up right now to load third party module files, however since the styles are so simple, the best way to test is to just set up a narrow browser tab as your testing environment.  Safari would be the closest browser engine if possible, but generally speaking if the HTML/CSS is simple it should be cross-platform.
 
 The best test for how it will look in-app is to just open each page in your browser directly with the `file://` url pointing to the page on your hard drive.
 
