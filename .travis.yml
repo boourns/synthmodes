@@ -1,6 +1,0 @@
-language: ruby
-rvm:
-  - 2.5
-script: ./test.sh
-before_install:
-  - sudo apt-get install -y libxml2-utils
