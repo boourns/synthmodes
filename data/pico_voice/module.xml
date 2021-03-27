@@ -8,12 +8,12 @@
     <!-- <section name="Modes" modelist="false">
       <page name="Karplus Strong" icon="img/yellow.png" content="karplus.html"/>
       <page name="Chord" icon="img/red.png" content="chord.html"/>
-      <page name="Wavetable" content="wavetable.html"/>
+      <page name="Wavetable" icon="img/orange.png" content="wavetable.html"/>
       <page name="Bassline" icon="img/green.png" content="bassline.html"/>
-      <page name="PWM" content="pwm.html"/>
-      <page name="Supersaw" content="supersaw.html"/>
-      <page name="Wavefold" content="wavefold.html"/>
-      <page name="Harmonic" content="harmonic.html"/>
+      <page name="PWM" icon="img/light-blue.png" content="pwm.html"/>
+      <page name="Supersaw" icon="img/dark-blue.png" content="supersaw.html"/>
+      <page name="Wavefold" icon="img/purple.png" content="wavefold.html"/>
+      <page name="Harmonic" icon="img/pink.png" content="harmonic.html"/>
     </section> -->
   </sections>
 </module>

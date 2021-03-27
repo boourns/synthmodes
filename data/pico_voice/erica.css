@@ -2,25 +2,25 @@
   background-color: #000000;
 }
 .erica-red {
-  background-color: #B9242B;
+  background-color: #CC2025;
 }
 .erica-green {
-  background-color: #399945;
+  background-color: #39A340;
 }
 .erica-dark-blue {
-  background-color: #2A316A;
+  background-color: #0067B4;
 }
 .erica-yellow {
-  background-color: #FCEC24;
+  background-color: #FFF000;
 }
 .erica-light-blue {
-  background-color: #2C8FC1;
+  background-color: #00A4ED;
 }
 .erica-orange {
-  background-color: #D8552B;
+  background-color: #F6891C;
 }
 .erica-pink {
-  background-color: #E0719F;
+  background-color: #EB358B;
 }
 
 .blinking::after {
