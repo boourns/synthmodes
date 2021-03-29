@@ -7,25 +7,25 @@ manufacturer: Erica Synths
   background-color: #000000;
 }
 .erica-red {
-  background-color: #B9242B;
+  background-color: #CC2025;
 }
 .erica-green {
-  background-color: #399945;
+  background-color: #39A340;
 }
 .erica-dark-blue {
-  background-color: #2A316A;
+  background-color: #0067B4;
 }
 .erica-yellow {
-  background-color: #FCEC24;
+  background-color: #FFF000;
 }
 .erica-light-blue {
-  background-color: #2C8FC1;
+  background-color: #00A4ED;
 }
 .erica-orange {
-  background-color: #D8552B;
+  background-color: #F6891C;
 }
 .erica-pink {
-  background-color: #E0719F;
+  background-color: #EB358B;
 }
 
 .blinking::after {
@@ -393,7 +393,15 @@ img {
 a.button:visited {
   color:white;
 }</style><b>General</b><br /><a href="#info">Info</a><br />
-<a href="#configuration">Configuration Mode</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+<a href="#configuration">Configuration Mode</a><br />
+<b>Modes</b><br /><a href="#karplus">Karplus Strong</a><br />
+<a href="#chord">Chord</a><br />
+<a href="#wavetable">Wavetable</a><br />
+<a href="#bassline">Bassline</a><br />
+<a href="#pwm">PWM</a><br />
+<a href="#supersaw">Supersaw</a><br />
+<a href="#wavefold">Wavefold</a><br />
+<a href="#harmonic">Harmonic</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
   <div class="centered">
     <div class="content">
       <h3>Pico Voice</h3>
@@ -410,14 +418,14 @@ a.button:visited {
       <p>Use configuration mode to:</p>
       <ul>
         <li>Assign CV input to one of three parameters</li>
-        <li>Change the current algorithm's setting</li>
+        <li>Change the current algorithm's setting (see modes for details)</li>
       </ul>
       <p>To enter and exit configuration mode, push and hold the button for 1 second.</p>
       <h4>CV Assignments</h4>
       <table class="parameters">
         <tr>
           <td><div class="led blinking erica-red"></div></td>
-          <td class="centered">Tune Knob</td>
+          <td class="centered">Tune Knob (sums with 1v/oct input)</td>
         </tr>
         <tr>
           <td><div class="led blinking erica-green"></div></td>
@@ -428,6 +436,282 @@ a.button:visited {
           <td class="centered">Parameter 2</td>
         </tr>
       </table>
+    </div>
+  </div>
+<br /><br />
+<h2>Modes</h2><a name="karplus"></a><h2>Karplus Strong</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Karplus Strong</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Distortion</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Noise Burst</td>
+        </tr>
+      </table>
+      <p>This mode has no setting.</p>
+    </div>
+  </div>
+<br /><br /><a name="chord"></a><h2>Chord</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-red"></div>Chord</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>
+            <p>Chord type:</p>
+            <ol>
+              <li>M (major)</li>
+              <li>m (minor)</li>
+              <li>7 (seventh)</li>
+              <li>m7 (minor seventh)</li>
+              <li>M7 (major seventh)</li>
+              <li>mM7 (minor major seventh)</li>
+              <li>aug (augmented)</li>
+              <li>dim (diminished)</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>
+            <p>Waveform:</p>
+            <ol>
+              <li>Sine</li>
+              <li>Triangle</li>
+              <li>Saw</li>
+              <li>Square</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>      
+    </div>
+  </div>
+<br /><br /><a name="wavetable"></a><h2>Wavetable</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Wavetable</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Wave Surf</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>1 or 2 Notes</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="bassline"></a><h2>Bassline</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Bassline</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Resonance</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>Saw or Pulse</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="pwm"></a><h2>PWM</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>PWM</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>PWM!</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>1, 2, or 3 Notes</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="supersaw"></a><h2>Supersaw</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Supersaw</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Detune</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>Phase Lock On/Off</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="wavefold"></a><h2>Wavefold</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Wavefold</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Fold</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>
+            <ol>
+              <li>Sine</li>
+              <li>2x Sine</li>
+              <li>Triangle</li>
+              <li>2x Triangle</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="harmonic"></a><h2>Harmonic</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Harmonic</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Add Harmonics</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>Waveform</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
     </div>
   </div>
 <br /><br />

@@ -5,7 +5,7 @@
       <page name="Info" content="info.html"/>
       <page name="Configuration Mode" content="configuration.html"/>
     </section>
-    <!-- <section name="Modes" modelist="false">
+    <section name="Modes" modelist="false">
       <page name="Karplus Strong" icon="img/yellow.png" content="karplus.html"/>
       <page name="Chord" icon="img/red.png" content="chord.html"/>
       <page name="Wavetable" icon="img/orange.png" content="wavetable.html"/>
@@ -14,6 +14,6 @@
       <page name="Supersaw" icon="img/dark-blue.png" content="supersaw.html"/>
       <page name="Wavefold" icon="img/purple.png" content="wavefold.html"/>
       <page name="Harmonic" icon="img/pink.png" content="harmonic.html"/>
-    </section> -->
+    </section>
   </sections>
 </module>
