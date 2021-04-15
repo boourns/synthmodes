@@ -1,0 +1,41 @@
+.erica-black {
+  background-color: #000000;
+}
+.erica-red {
+  background-color: #CC2025;
+}
+.erica-green {
+  background-color: #39A340;
+}
+.erica-dark-blue {
+  background-color: #0067B4;
+}
+.erica-yellow {
+  background-color: #FFF000;
+}
+.erica-light-blue {
+  background-color: #00A4ED;
+}
+.erica-orange {
+  background-color: #F6891C;
+}
+.erica-pink {
+  background-color: #EB358B;
+}
+
+.blinking::after {
+  display: block;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  animation: blinking 0.8s infinite;
+}
+
+@keyframes blinking {
+  0% {opacity: 0}
+  49% {opacity: 0}
+  50% {opacity: 1}
+  100% {opacity: 1}
+}

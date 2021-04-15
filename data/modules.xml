@@ -4,7 +4,7 @@
     <module name="Black Hole DSP 2" id="black_hole_dsp_2" index="black_hole_dsp_2/module.xml"/>
     <module name="Pico Logic" id="pico_logic" index="pico_logic/module.xml"/>
     <module name="Pico Seq" id="pico_seq" index="pico_seq/module.xml"/>
-
+    <module name="Pico Voice" id="pico_voice" index="pico_voice/module.xml"/>
   </manufacturer>
   <manufacturer name="Expert Sleepers">
     <module name="Disting mk3" id="disting_mk3" index="disting_mk3/module.xml"/>

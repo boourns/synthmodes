@@ -1,0 +1,717 @@
+---
+layout: page
+title: Pico Voice
+manufacturer: Erica Synths
+---
+<style>.erica-black {
+  background-color: #000000;
+}
+.erica-red {
+  background-color: #CC2025;
+}
+.erica-green {
+  background-color: #39A340;
+}
+.erica-dark-blue {
+  background-color: #0067B4;
+}
+.erica-yellow {
+  background-color: #FFF000;
+}
+.erica-light-blue {
+  background-color: #00A4ED;
+}
+.erica-orange {
+  background-color: #F6891C;
+}
+.erica-pink {
+  background-color: #EB358B;
+}
+
+.blinking::after {
+  display: block;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  animation: blinking 0.8s infinite;
+}
+
+@keyframes blinking {
+  0% {opacity: 0}
+  49% {opacity: 0}
+  50% {opacity: 1}
+  100% {opacity: 1}
+}
+body {
+  font-family: -apple-system, sans-serif;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: #1d1f21;
+    color: #dfdfe0;
+  }
+
+  h1, h2, h3 {
+    color: #ffffff;
+  }
+}
+
+.orange {
+  background-color: #ff9e20;
+}
+
+.green {
+  background-color: #00ee00;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.darkgray {
+  background-color: #d5d5d5;
+}
+
+.flashing-green {
+  border: 0px;
+  background-color: #00ee00;
+  box-shadow: 0 0 10px #00ee00, inset 0 0 10px #00ee00;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.leds {
+  text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.chart tr th {
+  padding-right: 8px;
+}
+
+.chart tr td:first-child {
+  width:1%;
+}
+
+.bordered {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.led-small {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* just big circles - braids, clouds */
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .knob {
+    background-color: black;
+  }
+}
+
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
+}
+
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+.button-black {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: #999999;
+}
+
+.lcd {
+  width: 90%;
+  height: 90px;
+  border-radius: 5px;
+  border: 1px solid;
+  display: inline-block;
+  background-color: #eeeeee;
+}
+
+.slider {
+  margin: auto; 
+  margin-top: 10px;
+
+  width: 10px;
+  height: 100px;
+  border-radius: 2px;
+  background-color: black;
+  overflow: auto;
+}
+
+.slider-led {
+  width: 6px;
+  margin: 2px;
+  height: 10px;
+  border-radius: 0px;
+  background-color: white;
+  position: relative;
+}
+
+.jack {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: #888888;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: black;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     /*text-align: center; */
+     width: 25%;
+}
+
+/* iOS-like button */
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a.button:visited {
+  color:white;
+}</style><b>General</b><br /><a href="#info">Info</a><br />
+<a href="#configuration">Configuration Mode</a><br />
+<b>Modes</b><br /><a href="#karplus">Karplus Strong</a><br />
+<a href="#chord">Chord</a><br />
+<a href="#wavetable">Wavetable</a><br />
+<a href="#bassline">Bassline</a><br />
+<a href="#pwm">PWM</a><br />
+<a href="#supersaw">Supersaw</a><br />
+<a href="#wavefold">Wavefold</a><br />
+<a href="#harmonic">Harmonic</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Pico Voice</h3>
+      <p>Pico Voice is a synth voice with 8 sound generation algorithms, in 3hp.<br>
+      </p>
+      <h3>Links</h3>
+      <a class="button" href="https://www.ericasynths.lv/media/Pico_VOICE_Manual_Preview.pdf">Pico Voice Manual</a><br>
+    </div>
+  </div>
+<br /><br /><a name="configuration"></a><h2>Configuration Mode</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Configuration Mode</h3>
+      <p>Use configuration mode to:</p>
+      <ul>
+        <li>Assign CV input to one of three parameters</li>
+        <li>Change the current algorithm's setting (see modes for details)</li>
+      </ul>
+      <p>To enter and exit configuration mode, push and hold the button for 1 second.</p>
+      <h4>CV Assignments</h4>
+      <table class="parameters">
+        <tr>
+          <td><div class="led blinking erica-red"></div></td>
+          <td class="centered">Tune Knob (sums with 1v/oct input)</td>
+        </tr>
+        <tr>
+          <td><div class="led blinking erica-green"></div></td>
+          <td class="centered">Parameter 1</td>
+        </tr>
+        <tr>
+          <td><div class="led blinking erica-light-blue"></div></td>
+          <td class="centered">Parameter 2</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<br /><br />
+<h2>Modes</h2><a name="karplus"></a><h2>Karplus Strong</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Karplus Strong</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Distortion</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Noise Burst</td>
+        </tr>
+      </table>
+      <p>This mode has no setting.</p>
+    </div>
+  </div>
+<br /><br /><a name="chord"></a><h2>Chord</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-red"></div>Chord</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>
+            <p>Chord type:</p>
+            <ol>
+              <li>M (major)</li>
+              <li>m (minor)</li>
+              <li>7 (seventh)</li>
+              <li>m7 (minor seventh)</li>
+              <li>M7 (major seventh)</li>
+              <li>mM7 (minor major seventh)</li>
+              <li>aug (augmented)</li>
+              <li>dim (diminished)</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>
+            <p>Waveform:</p>
+            <ol>
+              <li>Sine</li>
+              <li>Triangle</li>
+              <li>Saw</li>
+              <li>Square</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>      
+    </div>
+  </div>
+<br /><br /><a name="wavetable"></a><h2>Wavetable</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Wavetable</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Wave Surf</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>1 or 2 Notes</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="bassline"></a><h2>Bassline</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Bassline</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Resonance</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>Saw or Pulse</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="pwm"></a><h2>PWM</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>PWM</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>PWM!</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>1, 2, or 3 Notes</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="supersaw"></a><h2>Supersaw</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Supersaw</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Detune</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>Phase Lock On/Off</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="wavefold"></a><h2>Wavefold</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Wavefold</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Fold</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>
+            <ol>
+              <li>Sine</li>
+              <li>2x Sine</li>
+              <li>Triangle</li>
+              <li>2x Triangle</li>
+            </ol>
+          </td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br /><a name="harmonic"></a><h2>Harmonic</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>
+<div class="led erica-yellow"></div>Harmonic</h3>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 1</th>
+        </tr>
+        <tr>
+          <td>Add Harmonics</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Parameter 2</th>
+        </tr>
+        <tr>
+          <td>Release</td>
+        </tr>
+      </table>
+      <table class="bordered">
+        <tr>
+          <th>Setting</th>
+        </tr>
+        <tr>
+          <td>Waveform</td>
+        </tr>
+      </table>
+      <p>Push and hold the button for 1 second to enter setting mode. Change setting with PAR2 knob.</p>
+    </div>
+  </div>
+<br /><br />
