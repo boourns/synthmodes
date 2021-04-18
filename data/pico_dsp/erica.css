@@ -51,7 +51,7 @@ table {
 
 @media (prefers-color-scheme: dark) {
   .highlighted-row {
-    background-color: #919191;
+    background-color: #303030;
     color: #ffffff;
   }
 }
