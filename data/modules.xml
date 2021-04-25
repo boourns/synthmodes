@@ -33,7 +33,6 @@
     <module name="Plaits" id="plaits" index="plaits_stock/module.xml"/>
     <module name="Rings" id="rings" index="rings/module.xml"/>
     <module name="Stages" id="stages" index="stages/module.xml"/>
-
     <module name="Streams" id="streams" index="streams/module.xml"/>
     <module name="Warps" id="warps_stock" index="warps_stock/module.xml"/>
     <module name="Warps (Parasites)" id="warps_parasites" index="warps_parasites/module.xml"/>
@@ -41,7 +40,6 @@
   <manufacturer name="Ornament &amp; Crime">
     <module name="Ornament &amp; Crime (Stock)" id="o_c_stock" index="o_c_stock/module.xml" />
     <module name="Ornament &amp; Crime (Hemisphere)" id="o_c_hemisphere" index="o_c_hemisphere/module.xml" />
-
   </manufacturer>
   <manufacturer name="TipTop Audio">
     <module name="ONE" id="one" index="one/module.xml"/>
@@ -53,5 +51,8 @@
   <manufacturer name="Whimsical Raps">
     <module name="Just Friends" id="just_friends" index="just_friends/module.xml" />
     <module name="W/" id="mannequins_w" index="mannequins_w/module.xml"/>
+  </manufacturer>
+  <manufacturer name="XAOC Devices">
+    <module name="Batumi" id="batumi" index="batumi/module.xml" />
   </manufacturer>
 </modules>
