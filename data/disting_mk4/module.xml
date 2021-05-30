@@ -310,7 +310,7 @@
           <tag>reference</tag>
         </tags>
       </page>
-      <page name="G6 MIDI Clock" content="g6_midi_clock.html" icon="img/g6.png">
+      <page name="G6 Clock" content="g6_midi_clock.html" icon="img/g6.png">
         <tags>
           <tag>utility</tag>
           <tag>midi</tag>
@@ -625,6 +625,11 @@
         <tags>
           <tag>utility</tag>
           <tag>logic</tag>
+        </tags>
+      </page>
+      <page name="N2 Rotary" content="n2_rotary.html" icon="img/n2.png">
+        <tags>
+          <tag>effect</tag>
         </tags>
       </page>
       <page name="N5 Pulsar VCO" content="n5_pulsar_vco.html" icon="img/n5.png">

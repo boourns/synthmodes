@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>envelope shape</td>
+      <td>Speed</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>clock input</td>
+      <td>Audio input</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>trigger input</td>
+      <td>Mix</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>envelope output</td>
+      <td>Left Output</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>envelope output</td>
+      <td>Right Output</td>
     </tr>
   </table>
 
@@ -84,15 +84,15 @@
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-15</td>
-
-      <td class="parameter">8</td>
-
       <td class="parameter">0</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Delay time multiplier.  See chart below</td>
+      <td colspan="4">Mix</td>
     </tr>
   </table>
 <br>
@@ -111,15 +111,17 @@
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-40</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">41</td>
+      <td class="parameter">63</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">24</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output A Attenuverter.  When 41, A emits an end-of-cycle trigger.</td>
+      <td colspan="4">
+        Depth
+      </td>
     </tr>
   </table>
 <br>
@@ -138,15 +140,16 @@
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-40</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">40</td>
+      <td class="parameter">99</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">10</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output B Attenuverter</td>
+      <td colspan="4">Slew
+      </td>
     </tr>
   </table>
 <br>
@@ -169,11 +172,12 @@
 
       <td class="parameter">32</td>
 
-      <td class="parameter">26</td>
+      <td class="parameter">15</td>
     </tr>
 
     <tr>
-      <td colspan="4">Attack shape.<br>0 = exponential curve<br>32 = linear</td>
+      <td colspan="4">Crossover frequency.  Bass frequencies are amplitude modulated, not pitch modulated.  
+      </td>
     </tr>
   </table>
 <br>
@@ -194,47 +198,17 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">64</td>
 
-      <td class="parameter">10</td>
+      <td class="parameter">15</td>
     </tr>
 
     <tr>
-      <td colspan="4">Release shape.<br>0 = exponential curve<br>32 = linear</td>
+      <td colspan="4">Bass amplitude modulation depth.
+      </td>
     </tr>
   </table>
 <br>
 
-  <h3>Description</h3>Tap tempo by pressing Z
-  <p>
-    <h3>Delay Multiplier</h3>
-    <table class="chart bordered">
-      <tr><th>Parameter&nbsp;0</th><th>Multiplier</th></tr>
-      <tr><td>-15</td><td>1/64</td></tr>
-      <tr><td>-14</td><td>1/48</td></tr>
-      <tr><td>-13</td><td>1/32</td></tr>
-      <tr><td>-12</td><td>1/24</td></tr>
-      <tr><td>-11</td><td>1/16</td></tr>
-      <tr><td>-10</td><td>1/12</td></tr>
-      <tr><td>-9</td><td>1/8</td></tr>
-      <tr><td>-8</td><td>1/6</td></tr>
-      <tr><td>-7</td><td>3/16</td></tr>
-      <tr><td>-6</td><td>1/4</td></tr>
-      <tr><td>-5</td><td>5/16</td></tr>
-      <tr><td>-4</td><td>1/3</td></tr>
-      <tr><td>-3</td><td>3/8</td></tr>
-      <tr><td>-2</td><td>1/2</td></tr>
-      <tr><td>-1</td><td>3/4</td></tr>
-      <tr><td>0</td><td>x1</td></tr>
-      <tr><td>1</td><td>x1.5</td></tr>
-      <tr><td>2</td><td>x2</td></tr>
-      <tr><td>3</td><td>x3</td></tr>
-      <tr><td>4</td><td>x4</td></tr>
-      <tr><td>5</td><td>x5</td></tr>
-      <tr><td>6</td><td>x6</td></tr>
-      <tr><td>7</td><td>x8</td></tr>
-      <tr><td>8</td><td>x16</td></tr>
-    </table>
-  </p>
 </body>
 </html>
