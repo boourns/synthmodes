@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>tune +/- 0.5 octave</td>
+      <td>Speed</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>V/oct input</td>
+      <td>Audio input</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>linear FM input</td>
+      <td>Mix</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>selectable output waveform</td>
+      <td>Left Output</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>selectable output waveform</td>
+      <td>Right Output</td>
     </tr>
   </table>
 
@@ -84,15 +84,15 @@
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-16</td>
-
-      <td class="parameter">8</td>
-
       <td class="parameter">0</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">octave shift</td>
+      <td colspan="4">Mix</td>
     </tr>
   </table>
 <br>
@@ -113,13 +113,15 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">63</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">24</td>
     </tr>
 
     <tr>
-      <td colspan="4">attenuation for output A</td>
+      <td colspan="4">
+        Depth
+      </td>
     </tr>
   </table>
 <br>
@@ -140,13 +142,14 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">99</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">10</td>
     </tr>
 
     <tr>
-      <td colspan="4">attenuation for output B</td>
+      <td colspan="4">Slew
+      </td>
     </tr>
   </table>
 <br>
@@ -167,19 +170,14 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">5</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">15</td>
     </tr>
 
     <tr>
-      <td colspan="4">waveform A.<br>
-      0: triangle<br>
-      1: sine<br>
-      2: square<br>
-      3: saw<br>
-      4: sub-octave square</td>
-      5: MIDI Gate<br>
+      <td colspan="4">Crossover frequency.  Bass frequencies are amplitude modulated, not pitch modulated.  
+      </td>
     </tr>
   </table>
 <br>
@@ -200,15 +198,17 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">4</td>
+      <td class="parameter">64</td>
 
-      <td class="parameter">3</td>
+      <td class="parameter">15</td>
     </tr>
 
     <tr>
-      <td colspan="4">waveform B. Same list as above.</td>
+      <td colspan="4">Bass amplitude modulation depth.
+      </td>
     </tr>
   </table>
 <br>
+
 </body>
 </html>
