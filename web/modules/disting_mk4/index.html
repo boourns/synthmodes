@@ -405,7 +405,7 @@ a.button:visited {
 <a href="#g3_pitch_reference">G3 Pitch Reference</a><br />
 <a href="#g4_frequency_reference">G4 Frequency Reference</a><br />
 <a href="#g5_tuner">G5 Tuner</a><br />
-<a href="#g6_midi_clock">G6 MIDI Clock</a><br />
+<a href="#g6_midi_clock">G6 Clock</a><br />
 <a href="#g7_midicv">G7 MIDI/CV</a><br />
 <a href="#g8_cvmidi">G8 CV/MIDI</a><br />
 <a href="#h1_crossfadepan">H1 Crossfade/Pan</a><br />
@@ -457,6 +457,7 @@ a.button:visited {
 <a href="#m7_granular_pitch_shifter">M7 Granular Pitch Shift</a><br />
 <a href="#m8_chaos">M8 Chaos</a><br />
 <a href="#n1_switch">N1 Switch</a><br />
+<a href="#n2_rotary">N2 Rotary</a><br />
 <a href="#n5_pulsar_vco">N5 Pulsar VCO</a><br />
 <a href="#n8_clockable_sd_ping_pong">N8 Clockable SD Ping Pong</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
   <div class="centered">
@@ -466,7 +467,7 @@ a.button:visited {
         The Disting firmware gets updated regularly, be sure to check the firmware page for the latest version and latest manual.
       </p>
       <p>
-        These cheat sheets cover firmware V4.16.
+        These cheat sheets cover firmware V4.19.1.
       </p>
       <p>
         To change algorithms, press S once to enter the menu, and a second time to select the first menu item.
@@ -683,6 +684,35 @@ a.button:visited {
     </tr>
   </table>
 <br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-10</td>
+
+      <td class="parameter">10</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Y offset
+    </td>
+</tr>
+  </table>
+<br>
+
 <br /><br /><a name="a3_full_wave_rectifier_abs"></a><h2>A3 Full-wave Rectifier / abs()</h2>
   <h3>Controls</h3>
 
@@ -2042,11 +2072,11 @@ a.button:visited {
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">40</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
@@ -2069,11 +2099,11 @@ a.button:visited {
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">40</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
@@ -2096,9 +2126,9 @@ a.button:visited {
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-31</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -2123,15 +2153,42 @@ a.button:visited {
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-31</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
       <td colspan="4">offset for output B, each step is 0.25V</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">-32</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Y offset, each step is 0.25V</td>
     </tr>
   </table>
 <br>
@@ -2426,7 +2483,7 @@ a.button:visited {
 
       <td class="parameter">0</td>
 
-      <td class="parameter">4</td>
+      <td class="parameter">5</td>
 
       <td class="parameter">1</td>
     </tr>
@@ -2438,6 +2495,7 @@ a.button:visited {
       2: square<br>
       3: saw<br>
       4: sub-octave square</td>
+      5: MIDI Gate<br>
     </tr>
   </table>
 <br>
@@ -2658,7 +2716,10 @@ a.button:visited {
       <td colspan="4">output waveforms.<br>
       0: A=triangle/saw, B= square/pulse<br>
       1: A=triangle/saw, B=sub-octave square<br>
-      2: A=square/pulse, B=sub octave square</td>
+      2: A=square/pulse, B=sub octave square<br>
+      3: A=triangle/saw, B=MIDI gate<br>
+      4: A=square/pulse, B=MIDI gate
+    </td>
     </tr>
   </table>
 <br>
@@ -3480,7 +3541,7 @@ a.button:visited {
         </div>
       </td>
 
-      <td>audio input</td>
+      <td>audio input (Mode 0) or trigger input (Mode 1)</td>
     </tr>
 
     <tr>
@@ -3539,6 +3600,33 @@ a.button:visited {
 
     <tr>
       <td colspan="4">Y input offset (semitones)</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Mode.  When 1, input X is a trigger input</td>
     </tr>
   </table>
 <br>
@@ -5016,15 +5104,15 @@ a.button:visited {
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">41</td>
 
       <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output A Attenuverter</td>
+      <td colspan="4">Output A Attenuverter.  When 41, Output A emits an end-of-cycle trigger.</td>
     </tr>
   </table>
 <br>
@@ -5043,9 +5131,9 @@ a.button:visited {
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">32</td>
     </tr>
@@ -5070,9 +5158,9 @@ a.button:visited {
     <tr>
       <td class="parameter">4</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -5097,9 +5185,9 @@ a.button:visited {
     <tr>
       <td class="parameter">5</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -5238,7 +5326,7 @@ a.button:visited {
 
       <td class="parameter">0</td>
 
-      <td class="parameter">2</td>
+      <td class="parameter">8</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -5249,6 +5337,8 @@ a.button:visited {
       trigger is high.<br>
       When 1, executes one full A/D when gate goes high.<br>
       When 2, loops A/D as long as the trigger is high.</td>
+      Modes 3, 4, 5 act like modes 0, 1, 2 except the trigger is derived from the envelope of input X.
+      Modes 6, 7, 8 act like modes 0, 1, 2 except the VCA input drives the envelope of input Y.
     </tr>
   </table>
 <br>
@@ -5297,15 +5387,15 @@ a.button:visited {
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">41</td>
 
       <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output A Attenuverter</td>
+      <td colspan="4">Output A Attenuverter.  When 41, A outputs an End-of-cycle trigger.</td>
     </tr>
   </table>
 <br>
@@ -5324,9 +5414,9 @@ a.button:visited {
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">32</td>
     </tr>
@@ -5351,9 +5441,9 @@ a.button:visited {
     <tr>
       <td class="parameter">4</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -5378,9 +5468,9 @@ a.button:visited {
     <tr>
       <td class="parameter">5</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -5578,9 +5668,9 @@ a.button:visited {
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">32</td>
     </tr>
@@ -5605,9 +5695,9 @@ a.button:visited {
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">32</td>
     </tr>
@@ -5632,9 +5722,9 @@ a.button:visited {
     <tr>
       <td class="parameter">4</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -5659,9 +5749,9 @@ a.button:visited {
     <tr>
       <td class="parameter">5</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -6326,6 +6416,32 @@ a.button:visited {
       </tr>
     </table>
 <br>
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">5</td>
+
+        <td class="parameter">-80</td>
+
+        <td class="parameter">12</td>
+
+        <td class="parameter">-80</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Side-chain mix (in 0.5dB)</td>
+      </tr>
+    </table>
+<br>
 <br /><br /><a name="e7_euro_to_buchla_converter"></a><h2>E7 Euro to Buchla Converter</h2>
   <h3>Controls</h3>
 
@@ -6409,6 +6525,119 @@ a.button:visited {
     </tr>
   </table>
 <br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-99</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">99</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Coarse</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">-99</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">10</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Fine</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">-99</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Offset</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">49</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Gate level</td>
+    </tr>
+  </table>
+<br>
+<h3>Scaling algorithm</h3>
+<p>
+  Scaling is calculated by the formula <i>scale = 1.0 + 0.002 * ( parameter 1 ) + 0.0002 * ( parameters 2 )</i>
+</p>
+
 <br /><br /><a name="e8_buchla_to_euro_converter"></a><h2>E8 Buchla to Euro Converter</h2>
   <h3>Controls</h3>
 
@@ -6590,15 +6819,15 @@ a.button:visited {
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">41</td>
 
       <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output A Attenuverter</td>
+      <td colspan="4">Output A Attenuverter. When 41, A emits an end-of-cycle trigger.</td>
     </tr>
   </table>
 <br>
@@ -6617,9 +6846,9 @@ a.button:visited {
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">32</td>
     </tr>
@@ -6890,15 +7119,15 @@ a.button:visited {
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">41</td>
 
       <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output A Attenuverter</td>
+      <td colspan="4">Output A Attenuverter.  When 41, A emits an end-of-cycle trigger.</td>
     </tr>
   </table>
 <br>
@@ -6917,9 +7146,9 @@ a.button:visited {
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">32</td>
     </tr>
@@ -7187,15 +7416,15 @@ a.button:visited {
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">41</td>
 
       <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output A Attenuverter</td>
+      <td colspan="4">Output A Attenuverter.  When 41, A emits an end-of-cycle trigger.</td>
     </tr>
   </table>
 <br>
@@ -7214,9 +7443,9 @@ a.button:visited {
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">32</td>
     </tr>
@@ -7486,15 +7715,15 @@ a.button:visited {
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">41</td>
 
       <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Output A Attenuverter</td>
+      <td colspan="4">Output A Attenuverter.  When 41, A emits an end-of-cycle trigger.</td>
     </tr>
   </table>
 <br>
@@ -7513,9 +7742,9 @@ a.button:visited {
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">32</td>
     </tr>
@@ -7785,7 +8014,7 @@ a.button:visited {
 
       <td class="parameter">1</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">8</td>
     </tr>
@@ -7837,11 +8066,11 @@ a.button:visited {
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
     </tr>
 
     <tr>
@@ -7864,9 +8093,9 @@ a.button:visited {
     <tr>
       <td class="parameter">4</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -7976,7 +8205,7 @@ a.button:visited {
 
       <td class="parameter">1</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">8</td>
     </tr>
@@ -8028,9 +8257,9 @@ a.button:visited {
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-40</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">40</td>
 
       <td class="parameter">32</td>
     </tr>
@@ -8381,7 +8610,7 @@ a.button:visited {
 
       <td class="parameter">1</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">8</td>
     </tr>
@@ -8520,7 +8749,7 @@ a.button:visited {
 
       <td class="parameter">1</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">8</td>
     </tr>
@@ -8547,7 +8776,7 @@ a.button:visited {
 
       <td class="parameter">1</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">8</td>
     </tr>
@@ -9000,7 +9229,7 @@ a.button:visited {
       <td>sine wave at tracked pitch</td>
     </tr>
   </table>
-<br /><br /><a name="g6_midi_clock"></a><h2>G6 MIDI Clock</h2>
+<br /><br /><a name="g6_midi_clock"></a><h2>G6 Clock</h2>
   <h3>Controls</h3>
 
   <table class="parameters bordered">
@@ -9011,7 +9240,7 @@ a.button:visited {
         </div>
       </td>
 
-      <td>unused</td>
+      <td>Push to start clock / tap tempo (see Z Mode)</td>
     </tr>
 
     <tr>
@@ -9057,117 +9286,240 @@ a.button:visited {
 
   <h3>Parameters</h3>
 
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">0</td>
+
+        <td class="parameter">0</td>
+
+        <td class="parameter">5</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Mode.  Chooses clock source for A/B, and MIDI out.<br>See chart below.</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">1</td>
+
+        <td class="parameter">-2</td>
+
+        <td class="parameter">14</td>
+
+        <td class="parameter">6</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Clock divisor for output A</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">2</td>
+
+        <td class="parameter">-2</td>
+
+        <td class="parameter">14</td>
+
+        <td class="parameter">-2</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Clock divisor for output B</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">3</td>
+
+        <td class="parameter">0</td>
+
+        <td class="parameter">11</td>
+
+        <td class="parameter">8</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Clock divisor for input X</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">4</td>
+
+        <td class="parameter">0</td>
+
+        <td class="parameter">3</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Y mode.<br>
+        When 0, Y is unused and output starts when clock is present
+        on X.<br>
+        When 1, output starts when Y goes high and stops when Y
+        low.</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">5</td>
+
+        <td class="parameter">-120</td>
+
+        <td class="parameter">120</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Tempo.  Sets internal clock speed, or adjusts tap tempo speed, in BPM.</td>
+      </tr>
+    </table>
+  <br>
+
+    <table class="bordered">
+      <tr>
+        <th width="25%">pos</th>
+
+        <th width="25%">min</th>
+
+        <th width="25%">max</th>
+
+        <th width="25%">default</th>
+      </tr>
+
+      <tr>
+        <td class="parameter">6</td>
+
+        <td class="parameter">0</td>
+
+        <td class="parameter">1</td>
+
+        <td class="parameter">0</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Z mode.</td>
+      </tr>
+    </table>
+    
+  <br>
+  <h3>Mode table (Parameter 0)</h3>
   <table class="bordered">
     <tr>
-      <th width="25%">pos</th>
-
-      <th width="25%">min</th>
-
-      <th width="25%">max</th>
-
-      <th width="25%">default</th>
+      <th>Value</th>
+<th>A/B source</th>
+<th>MIDI clock source</th>
     </tr>
-
     <tr>
-      <td class="parameter">0</td>
-
-      <td class="parameter">-2</td>
-
-      <td class="parameter">14</td>
-
-      <td class="parameter">6</td>
+      <td>0</td>
+<td>MIDI</td>
+<td>X</td>
     </tr>
-
     <tr>
-      <td colspan="4">Clock divisor for output A</td>
+      <td>1</td>
+<td>X</td>
+<td>X</td>
     </tr>
+    <tr>
+      <td>2</td>
+<td>Internal</td>
+<td>X</td>
+    </tr>
+    <tr>
+      <td>3</td>
+<td>MIDI</td>
+<td>Internal</td>
+    </tr>
+    <tr>
+      <td>4</td>
+<td>X</td>
+<td>Internal</td>
+    </tr>
+    <tr>
+      <td>5</td>
+<td>Internal</td>
+<td>Internal</td>
+    </tr>
+
   </table>
-<br>
 
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
 
-      <th width="25%">min</th>
-
-      <th width="25%">max</th>
-
-      <th width="25%">default</th>
-    </tr>
-
-    <tr>
-      <td class="parameter">1</td>
-
-      <td class="parameter">-2</td>
-
-      <td class="parameter">14</td>
-
-      <td class="parameter">-2</td>
-    </tr>
-
-    <tr>
-      <td colspan="4">Clock divisor for output B</td>
-    </tr>
-  </table>
-<br>
-
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
-
-      <th width="25%">min</th>
-
-      <th width="25%">max</th>
-
-      <th width="25%">default</th>
-    </tr>
-
-    <tr>
-      <td class="parameter">2</td>
-
-      <td class="parameter">0</td>
-
-      <td class="parameter">11</td>
-
-      <td class="parameter">8</td>
-    </tr>
-
-    <tr>
-      <td colspan="4">MIDI clock divisor</td>
-    </tr>
-  </table>
-<br>
-
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
-
-      <th width="25%">min</th>
-
-      <th width="25%">max</th>
-
-      <th width="25%">default</th>
-    </tr>
-
-    <tr>
-      <td class="parameter">3</td>
-
-      <td class="parameter">0</td>
-
-      <td class="parameter">1</td>
-
-      <td class="parameter">0</td>
-    </tr>
-
-    <tr>
-      <td colspan="4">Y mode.<br>
-      When 0, Y is unused and output starts when clock is present
-      on X.<br>
-      When 1, output starts when Y goes high and stops when Y
-      low.</td>
-    </tr>
-  </table>
-<br>
 <h3>Output Clock Divisors</h3>
 <table class="bordered">
   <tr>
@@ -9465,6 +9817,61 @@ a.button:visited {
     </tr>
   </table>
 <br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">100</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Interrupt</td>
+    </tr>
+  </table>
+<br>
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">5</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Note priority. Values are Last, Low, High.</td>
+    </tr>
+  </table>
+<br>
+
+
+
 <p>
   Outputs can be controlled by MIDI notes (pitch/gate), MIDI CCs 33/34 (-5v to +5v range), or MIDI CCs 35/36 (0v to 10v range).
 </p>
@@ -9509,7 +9916,7 @@ a.button:visited {
         </div>
       </td>
 
-      <td>not used</td>
+      <td>pass-through X</td>
     </tr>
 
     <tr>
@@ -9519,7 +9926,7 @@ a.button:visited {
         </div>
       </td>
 
-      <td>not used</td>
+      <td>pass-through Y</td>
     </tr>
   </table>
 
@@ -9577,7 +9984,7 @@ a.button:visited {
     <tr>
       <td colspan="4">Z mode.<br>
       When 0, Z sets velocity.<br>
-      When 1, Z generates mod wheel.</td>
+      Otherwise, Z generates CC messages and this parameter sets CC#.</td>
     </tr>
   </table>
 <br>
@@ -10079,11 +10486,11 @@ a.button:visited {
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
@@ -10106,11 +10513,11 @@ a.button:visited {
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
@@ -10317,11 +10724,11 @@ a.button:visited {
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
@@ -10344,11 +10751,11 @@ a.button:visited {
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
@@ -10513,6 +10920,15 @@ a.button:visited {
 <td>16</td>
 <td>harmonic minor scale</td>
 </tr>
+    <tr>
+<td>17</td>
+<td>MIDI input selects notes, any scale</td>
+</tr>
+    <tr>
+<td>18</td>
+<td>MIDI input selects exact notes</td>
+</tr>
+
   </table>
 
 <br /><br /><a name="h5_dual_euclidean_patterns"></a><h2>H5 Dual Euclidean Patterns</h2>
@@ -13690,7 +14106,7 @@ a.button:visited {
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">-3</td>
+      <td class="parameter">-4</td>
 
       <td class="parameter">99</td>
 
@@ -13699,6 +14115,7 @@ a.button:visited {
 
     <tr>
       <td colspan="4">Output B option/detune.  Only applies when Parameter 4 is -1.<br>
+      -4: MIDI gate<br>
       -3: squarewave 1 octave below A<br>
       -2: Wavetable VCO one octave below output A<br>
       -1: Wavetable VCO one octave above output A<br>
@@ -13725,7 +14142,7 @@ a.button:visited {
 
       <td class="parameter">-1</td>
 
-      <td class="parameter">99</td>
+      <td class="parameter">127</td>
 
       <td class="parameter">-1</td>
     </tr>
@@ -13733,7 +14150,7 @@ a.button:visited {
     <tr>
       <td colspan="4">Phase.<br>
         When -1, output B is selected by Parameter 3.<br>
-        When 0-99, output B is a 0-99% phase-offset output of output A.<br>
+        When 0-127, output B is a 0-360 degree phase-offset output of output A.<br>
 </td>
     </tr>
   </table>
@@ -14417,15 +14834,15 @@ a.button:visited {
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-1</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Input X attenuation<br>-1: completely attenuated.</td>
+      <td colspan="4">Input X attenuation<br>0: completely attenuated.</td>
     </tr>
   </table>
 <br>
@@ -14444,15 +14861,15 @@ a.button:visited {
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-2</td>
+      <td class="parameter">-1</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">32</td>
     </tr>
 
     <tr>
-      <td colspan="4">Input Y attenuation.<br>-2: Y acts as trigger, X only sampled when Y above 1V.</td>
+      <td colspan="4">Input Y attenuation.<br>-1: Y acts as trigger, X only sampled when Y above 1V.</td>
     </tr>
   </table>
 <br>
@@ -18052,7 +18469,7 @@ Scales are Scala files loaded off microSD card.
         </div>
       </td>
 
-      <td>Mix</td>
+      <td>Mix, or Freeze.  Press Z to freeze.</td>
     </tr>
 
     <tr>
@@ -18072,7 +18489,7 @@ Scales are Scala files loaded off microSD card.
         </div>
       </td>
 
-      <td>Pitch 1V/oct</td>
+      <td>Pitch 1 v/oct</td>
     </tr>
 
     <tr>
@@ -18082,7 +18499,7 @@ Scales are Scala files loaded off microSD card.
         </div>
       </td>
 
-      <td>Mix output</td>
+      <td>mix output</td>
     </tr>
 
     <tr>
@@ -18148,8 +18565,7 @@ Scales are Scala files loaded off microSD card.
 
     <tr>
       <td colspan="4">
-        Window type.<br>
-        Shape of the grain envelope
+        Window type.
       </td>
     </tr>
   </table>
@@ -18177,7 +18593,7 @@ Scales are Scala files loaded off microSD card.
     </tr>
 
     <tr>
-      <td colspan="4">Delay (maximum is 400ms)
+      <td colspan="4">Delay
       </td>
     </tr>
   </table>
@@ -18233,12 +18649,11 @@ Scales are Scala files loaded off microSD card.
     </tr>
 
     <tr>
-      <td colspan="4">Y Offset (semitones)
+      <td colspan="4">Y offset (semitones)
       </td>
     </tr>
   </table>
 <br>
-
 
   <table class="bordered">
     <tr>
@@ -18262,7 +18677,35 @@ Scales are Scala files loaded off microSD card.
     </tr>
 
     <tr>
-      <td colspan="4">Fine tune (cents)
+      <td colspan="4">Fine (cents)
+      </td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">6</td>
+
+      <td class="parameter">-65</td>
+
+      <td class="parameter">64</td>
+
+      <td class="parameter">-65</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Mix.  When -65, Z controls mix.  Otherwise Z controls freeze and mix set by parameter.
       </td>
     </tr>
   </table>
@@ -18339,9 +18782,9 @@ Scales are Scala files loaded off microSD card.
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-32</td>
+      <td class="parameter">-64</td>
 
-      <td class="parameter">32</td>
+      <td class="parameter">64</td>
 
       <td class="parameter">0</td>
     </tr>
@@ -18726,6 +19169,231 @@ Scales are Scala files loaded off microSD card.
 
     <tr>
       <td colspan="4">Fade
+      </td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">-1</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">99</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Chance.  Add 1 to get % chance of switch occurring.
+      </td>
+    </tr>
+  </table>
+<br>
+
+<br /><br /><a name="n2_rotary"></a><h2>N2 Rotary</h2>
+  <h3>Controls</h3>
+
+  <table class="parameters bordered">
+    <tr>
+      <td>
+        <div class="control">
+          Z
+        </div>
+      </td>
+
+      <td>Speed</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          X
+        </div>
+      </td>
+
+      <td>Audio input</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          Y
+        </div>
+      </td>
+
+      <td>Mix</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          A
+        </div>
+      </td>
+
+      <td>Left Output</td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="control">
+          B
+        </div>
+      </td>
+
+      <td>Right Output</td>
+    </tr>
+  </table>
+
+  <h3>Parameters</h3>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">0</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">32</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Mix</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">63</td>
+
+      <td class="parameter">24</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">
+        Depth
+      </td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">2</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">99</td>
+
+      <td class="parameter">10</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Slew
+      </td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">32</td>
+
+      <td class="parameter">15</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Crossover frequency.  Bass frequencies are amplitude modulated, not pitch modulated.  
+      </td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">4</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">64</td>
+
+      <td class="parameter">15</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Bass amplitude modulation depth.
       </td>
     </tr>
   </table>
