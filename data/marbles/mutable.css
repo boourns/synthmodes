@@ -1,0 +1,56 @@
+.led-red {
+  background-color: #d63d74;
+}
+.led-green {
+  background-color: #009996;
+}
+.led-orange {
+  background-color: #ecb527;
+}
+
+.blinking::after {
+  display: block;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #000000;
+  animation: blinking 0.3s infinite;
+}
+
+@keyframes blinking {
+  0% {opacity: 0}
+  49% {opacity: 0}
+  50% {opacity: 1}
+  100% {opacity: 1}
+}
+
+.slowblinking::after {
+  display: block;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #000000;
+  animation: blinking 1s infinite;
+}
+
+@keyframes slowblinking {
+  0% {opacity: 0}
+  49% {opacity: 0}
+  50% {opacity: 1}
+  100% {opacity: 1}
+}
+
+.sentences td {
+  text-align: left;
+}
+
+.license {
+  font-size: 12px;
+}
+
+.imgcont {
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
