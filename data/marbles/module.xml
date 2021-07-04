@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Sections" modelist="true">
+      <page name="t Generator" content="t-generator.html"/>
+      <page name="X Generator" content="x-generator.html"/>
+      <page name="Y Generator" content="y-generator.html"/>
+      <page name="Deja Vu" content="deja-vu.html"/>
+      <page name="Step Quantizer" content="quantizer.html"/>
+    </section>
+  </sections>
+</module>
