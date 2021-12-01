@@ -261,8 +261,35 @@
         <td colspan="4">Z mode.</td>
       </tr>
     </table>
-    
   <br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">7</td>
+
+      <td class="parameter">0</td>
+
+      <td class="parameter">6</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Ratchet mode.  When enabled, Z controls ratchet multiplier.  See table below.<br></td>
+    </tr>
+  </table>
+<br>
+
   <h3>Mode table (Parameter 0)</h3>
   <table class="bordered">
     <tr>
@@ -286,7 +313,6 @@
     <tr>
       <td>5</td><td>Internal</td><td>Internal</td>
     </tr>
-
   </table>
 
 
@@ -419,6 +445,34 @@
   <tr>
     <td>11</td>
     <td>1</td>
+  </tr>
+</table>
+
+<h3>Ratchet Modes (Parameter 7)</h3>
+<table class="bordered">
+  <tr>
+    <th>Value</th><th>Output A</th><th>Output B</th>
+  </tr>
+  <tr>
+    <td>0</td><td>Off</td><td>Off</td>
+  </tr>
+  <tr>
+    <td>1</td><td>2's</td><td>Off</td>
+  </tr>
+  <tr>
+    <td>2</td><td>Off</td><td>2's</td>
+  </tr>
+  <tr>
+    <td>3</td><td>2's</td><td>2's</td>
+  </tr>
+  <tr>
+    <td>4</td><td>2's/3's</td><td>Off</td>
+  </tr>
+  <tr>
+    <td>5</td><td>Off</td><td>2's/3's</td>
+  </tr>
+  <tr>
+    <td>6</td><td>2's/3's</td><td>2's/3's</td>
   </tr>
 </table>
 </body>
