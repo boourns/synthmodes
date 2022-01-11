@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>hysteresis</td>
+      <td>Not Used</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>input</td>
+      <td>Input</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>input</td>
+      <td>Input</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>gate when X &gt; Y (+5V)</td>
+      <td>X * scale + offset</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>gate when X &lt; Y (+5V)</td>
+      <td>Y * scale + offset</td>
     </tr>
   </table>
 
@@ -84,44 +84,102 @@
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-40</td>
+      <td class="parameter">-100</td>
 
-      <td class="parameter">40</td>
+      <td class="parameter">100</td>
+
+      <td class="parameter">50</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Attenuversion A (50 = 100%)</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">1</td>
+
+      <td class="parameter">-100</td>
+
+      <td class="parameter">100</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">X Offset (40 = 10v)</td>
+      <td colspan="4">
+        Offset A (100 = 10V)
+      </td>
     </tr>
   </table>
 <br>
 
 <table class="bordered">
-  <tr>
-    <th width="25%">pos</th>
+    <tr>
+      <th width="25%">pos</th>
 
-    <th width="25%">min</th>
+      <th width="25%">min</th>
 
-    <th width="25%">max</th>
+      <th width="25%">max</th>
 
-    <th width="25%">default</th>
-  </tr>
+      <th width="25%">default</th>
+    </tr>
 
-  <tr>
-    <td class="parameter">1</td>
+    <tr>
+      <td class="parameter">2</td>
 
-    <td class="parameter">-40</td>
+      <td class="parameter">-100</td>
 
-    <td class="parameter">40</td>
+      <td class="parameter">100</td>
 
-    <td class="parameter">0</td>
-  </tr>
+      <td class="parameter">50</td>
+    </tr>
 
-  <tr>
-    <td colspan="4">Y Offset (40 = 10v)</td>
-  </tr>
-</table>
+    <tr>
+      <td colspan="4">Attenuversion B (50 = 100%)</td>
+    </tr>
+  </table>
+<br>
+
+  <table class="bordered">
+    <tr>
+      <th width="25%">pos</th>
+
+      <th width="25%">min</th>
+
+      <th width="25%">max</th>
+
+      <th width="25%">default</th>
+    </tr>
+
+    <tr>
+      <td class="parameter">3</td>
+
+      <td class="parameter">-100</td>
+
+      <td class="parameter">100</td>
+
+      <td class="parameter">0</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">
+        Offset B (100 = 10V)
+      </td>
+    </tr>
+  </table>
 <br>
 
 </body>
