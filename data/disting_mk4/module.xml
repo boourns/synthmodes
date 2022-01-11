@@ -632,6 +632,18 @@
           <tag>effect</tag>
         </tags>
       </page>
+      <page name="N3 Attenuator/Offset" content="n3_attenuator.html" icon="img/n3.png">
+        <tags>
+          <tag>utility</tag>
+          <tag>logic</tag>
+        </tags>
+      </page>
+      <page name="N4 Low Pass Gate" content="n4_low_pass_gate.html" icon="img/n4.png">
+        <tags>
+          <tag>filter</tag>
+          <tag>VCA</tag>
+        </tags>
+      </page>
       <page name="N5 Pulsar VCO" content="n5_pulsar_vco.html" icon="img/n5.png">
         <tags>
           <tag>wave</tag>

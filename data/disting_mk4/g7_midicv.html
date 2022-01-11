@@ -245,21 +245,29 @@
 
     <td class="parameter">0</td>
 
-    <td class="parameter">1</td>
+    <td class="parameter">2</td>
 
     <td class="parameter">0</td>
   </tr>
 
   <tr>
-    <td colspan="4">Mode.  When 0, A is pitch / B is gate.<br>When 1, A is pitch, B is pitch from MIDI channel 1 higher.</td>
+    <td colspan="4">
+      Mode.  When 0, A is pitch / B is gate.<br>
+      When 1, A is pitch, B is pitch from MIDI channel 1 higher.<br>
+      When 2, A is pitch, B is a velocity gate.
+    </td>
   </tr>
 </table>
 <br>
 
-
-
 <p>
-  Outputs can be controlled by MIDI notes (pitch/gate), MIDI CCs 33/34 (-5v to +5v range), or MIDI CCs 35/36 (0v to 10v range).
+  Outputs can be controlled by MIDI notes (pitch/gate), or MIDI CCs as follows:
+  <ul>
+    <li>MIDI CCs 33/34 (-5v to +5v range)</li>
+    <li>MIDI CCs 35/36 (0v to 10v range)</li>
+    <li>MIDI CCs 37/38 (0v to 5v range)</li>
+    <li>MIDI CCs 39/40 (0v to 8v range)</li>
+  </ul>
 </p>
 </body>
 </html>
