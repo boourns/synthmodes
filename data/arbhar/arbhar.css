@@ -1,0 +1,173 @@
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.panel .knob {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.large-arrow {
+  font-size: 2.5em;
+}
+
+.knob-wiper + .knob-wiper {
+  opacity: 0.4;
+}
+
+.dark_arrow_box.contain_text,
+.light_arrow_box.contain_text {
+  max-width: 6em;
+}
+
+.light_arrow_box,
+.dark_arrow_box {
+  display: block;
+}
+
+.dark_arrow_box {
+  position: relative;
+  background: #d5d5d5;
+  border: 2px solid #000000;
+  margin: 0 auto;
+  padding: 5px;
+  color: black;
+  max-width: 10em;
+  width: fit-content;
+}
+
+.dark_arrow_box:after, .dark_arrow_box:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.dark_arrow_box:after {
+  border-color: rgba(213, 213, 213, 0);
+  border-bottom-color: #d5d5d5;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.dark_arrow_box:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: #000000;
+  border-width: 13px;
+  margin-left: -13px;
+}
+
+.light_arrow_box {
+  position: relative;
+  background: #f2f2f2;
+  border: 2px solid #777777;
+  margin: 0 auto;
+  padding: 5px;
+  color: black;
+  width: fit-content;
+}
+
+.light_arrow_box:after, .light_arrow_box:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.light_arrow_box:after {
+  border-color: rgba(213, 213, 213, 0);
+  border-bottom-color: #f2f2f2;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.light_arrow_box:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: #777777;;
+  border-width: 13px;
+  margin-left: -13px;
+}
+
+.pre-icon-alpha:before,
+.pre-icon-beta:before,
+.pre-icon-gamma:before,
+.pre-icon-delta:before,
+.pre-icon-epsilon:before,
+.pre-icon-zeta:before,
+.pre-icon-omega:before {
+  border: 1px solid;
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  line-height: 1;
+  border-radius: 100%;
+  font-size: 1.2em;
+  margin-right: 0.4em;
+}
+
+
+.pre-icon-block:before {
+  display: block;
+  margin: 0 auto;
+}
+
+.pre-icon-alpha:before {
+  content: 'α';
+}
+
+.pre-icon-beta:before {
+  content: 'β';
+}
+
+.pre-icon-gamma:before {
+  content: 'γ';
+}
+
+.pre-icon-delta:before {
+  content: 'δ';
+}
+
+.pre-icon-epsilon:before {
+  content: 'ε';
+}
+
+.pre-icon-zeta:before {
+  content: 'ζ';
+}
+
+.pre-icon-omega:before {
+  content: 'Ω';
+}
+
+.parameters--control-modes p:last-child {
+  margin-bottom: 0;
+}
+
+.knob-scan-realtime {
+  transform: translate(25px, 20px) rotate(
+    190deg) translateX(15px);
+  transform-origin: left;
+}
+
+.abxy-jumper {
+  border-collapse: collapse;
+}
+
+.abxy-jumper td {
+  width: 10px;
+  height: 10px;
+}
+
+.abxy-jumper td.fill {
+  background: #fff;
+}

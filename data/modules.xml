@@ -14,6 +14,9 @@
   <manufacturer name="Intellijel">
     <module name="Shapeshifter" id="shapeshifter" index="shapeshifter/module.xml"/>
   </manufacturer>
+  <manufacturer name="Instruo">
+    <module name="Arbhar" id="arbhar" index="arbhar/module.xml"/>
+  </manufacturer>
   <manufacturer name="Make Noise">
     <module name="Morphagene" id="morphagene" index="morphagene/module.xml"/>
     <module name="Tempi" id="tempi" index="tempi/module.xml"/>

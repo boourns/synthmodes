@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="MOD CV Parameters" content="mod_cv.html"/>
+    </section>
+    <section name="Capturing" modelist="false">
+      <page name="Dubbing" content="dubbing.html"/>
+      <page name="Erase &amp; Undo" content="erase_and_undo.html"/>
+      <page name="Onset Control Modes" content="onset_control_modes.html"/>
+    </section>
+    <section name="Playback" modelist="false">
+      <page name="Follow Mode &amp; Scan Mode" content="follow_mode_scan_mode.html"/>
+    </section>
+  </sections>
+</module>
