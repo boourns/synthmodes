@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="Cheat Sheet" modelist="false">
+      <page name="Cheat Sheet for things you might forget" content="cheat_sheet.html"/>
+    </section>
+    <section name="Total Recall Manual" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="Overview" content="overview.html"/>
+      <page name="Front Panel Controls" content="front_panel_controls.html"/>
+      <page name="Special Operation Modes" content="special_operation_modes.html"/>
+      <page name="Exteral CV and Audio Sources" content="external_cv_audiosources.html"/>
+      <page name="Firmware Update Instructions" content="firmware_update.html"/>
+	   </section>
+  </sections>
+</module>

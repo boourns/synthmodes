@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+    <section name="Cheat Sheet" modelist="false">
+      <page name="Cheat Sheet for things you might forget" content="cheat-sheet.html"/>
+    </section>
+    <section name="Squawk Dirty To Me Manual" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="Overview" content="overview.html"/>
+      <page name="Front Panel Controls" content="front_panel_controls.html"/>
+      <page name="Filter Types" content="filter_types.html"/>
+      <page name="Special Operation Modes" content="special_operation_modes.html"/>
+      <page name="Firmware Update Instructions" content="firmware_update.html"/>
+	   </section>
+  </sections>
+</module>

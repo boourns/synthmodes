@@ -1,0 +1,80 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+<div class="centered">
+	<div class="content">
+	<h2>Operation Modes & Pattern Types:</h2>
+	 <h3>Summary</h3>
+		<p style="text-align: left;">Running order has 2 main operating modes - Track Edit or Track mode and Live mode. <br>
+		<br>
+		Track edit mode is accessed by flipping the switch either to the left (Track 1) or to the right (Track 2). In this mode you are able to create new patterns or edit them using pattern modifiers.<br>
+		<br>
+		Live mode is accessed by keeping the switch in the middle position. This mode is the main performance mode where you can mute tracks and save / recall patterns for each track.<br>
+		<br>
+		</p>
+		
+	    <h3>101 style sequencing:</h3>
+			<p style="text-align: left;">This pattern mode is inspired by old school sequencing methods used in the 80s, allowing users to create patterns very quickly on the fly with arbitrary pattern length (128 steps maximum). The operation is very simple and involves 2 types of steps, namely Active and Rest steps. Active steps create a trigger and Rest steps create silence, by using these together you can build any type of sequence. This way you can also create odd length patterns that will rotate in time and give extra dynamics, also known as polyrhythms. <br>
+			<br>
+			To insert an active step all you need to do is press the Step button (S), to create a Rest tep - press the Rest button (R) . For example if you want to create a simple 4/4 kick pattern you would need to press these buttons in the following order: SRRR. Now let’s create an offbeat hi hat pattern on track 2, the pattern will look like this: RRSR. <br>
+			<br>
+			Now that you understand the logic behind how 101 style sequencing works, let’s dive deeper into the pattern modifiers, namely per step probability and ratcheting.<br>
+			<br>
+			<h5>Ratcheting per step:</h5> this works exactly the same as the probability per step, but now we can set the ratcheting amount per step with Repeats 1 for Track 1 and Repeats 2 for Track 2. The ratcheting value can be set in the range of 0 - 7, where 0 means the step will have no ratchets and 7 meaning that you will have 1 normal trigger + 7 ratchets. By default the ratcheting value is set to 0 and just as with probability, to set the ratcheting amount per step for Track 1 you first need to enter Track mode, tweak the Repeats 1 knob and insert an active step with Step button. Every next active step will borrow the ratcheting value from the last time you tweaked the Repeats 1 knob, so if you only want 1 step to have ratcheting enabled, make sure to turn the Repeats 2 knob fully CCW before you insert another active step.<br>
+			<br>
+			<h5>Probability per step:</h5> this modifier can be accessed in Track mode by Repeats 2 knob for track 1 and Repeats 1 knob for track 2. By default the probability is set to 100%, meaning that any active trigger that is inserted to the pattern will fire 100% of the time. If you want to set a different probability for an active step for Track 1, you have to first tweak the Repeats 2 knob and then insert an active step using the Step button (Repeats 2 at fully CCW is 0% probability, at 12:00 - 50% and fully CW - 100%). <br>
+			<br>
+			Every next active step that you insert will have the probability value equal to the last change of the Repeats 2 knob, so if you want other steps to have 100% probability you will need to return the Repeats 2 knob to fully CW position. This functionality for Track 2 is exactly the same, but now Repeats 1 knob sets the probability value instead. <br>
+			<br>
+			Note on Repeats knobs for Track 1 and Track 2 in track mode: to not get confused which knob controls what for each track you can think of Repeats 1 and 2 knobs as primary and secondary parameters. For Track 1 the primary modifier is Ratcheting, hence Repeats 1 controls this value. For Track 2 the primary modifier is also Ratcheting and is controlled by Repeats 2. Similarly for Probability, for Track 1 this is a secondary parameter and is controlled by Repeats 2; for Track 2 this is also a secondary parameter and is controlled by Repeats 1. Generally speaking pattern modifiers are inverted for Track 1 and Track 2. <br>
+			<br>
+			Once you are back to Live mode (switch in the middle position) Repeats 1 and Repeats 2 knobs control the number of step repeats. Step repeats add extra steps after the last active step, do not confuse this with ratchets that add extra triggers within one step. By adding step repeats you are extending the overall pattern length that can lead to many different variations of the patterns you create, this is where Track Resets are your friend to keep the pattern cycles synchronised for more of a structural feeling. <br>
+			<br>
+			<h5>Special case for the 101 mode, aka Tuplet mode:</h5> When the Running Order is externally clocked, you can set the Div / Mult knob to fully CCW position named Tuplets, this will switch the way repeats behave in the time domain. Usually repeats add extra steps to your sequence, but in Tuplet mode they are stretched within one beat or within one ¼ measure. This allows you to create new type of rhythms that are usually very hard to achieve using modular synthesisers. <br>
+			<br>
+			For example, with Tuplet mode engaged, if you set the Repeats knob to 3, these repeats will play as triplets. If you set Repeats to 4, you will get quadruplets and so on. This mode is global, so if both tracks are set to 101 style pattern mode, then the functionality of Repeats knobs for both tracks will change to Tuplet mode.<br>
+
+				
+		</p>
+
+		<h3>Euclidean Sequencing:</h3>
+			<p style="text-align: left;">The second pattern type is called Euclidean, which is programmed by setting 3 main parameters: Euclidean circle length, Euclidean fill amount and pattern offset / rotation. To access this mode you first have to enter the Track mode by flipping the switch to either Track 1 or Track 2 and hold pressing the Step / Rest button respectively for a few seconds until the main LED on the top lights up in fuchsia colour.<br>
+			<br>
+			By default the Euclidean circle length is set to 16 steps, but this can be overwritten by either pressing the Step button to increment the pattern length by 1 step or by pressing the Rest button, which will increment the pattern length by 16 steps. This way it is easy to create longer patterns, yet still having 1 step precision where you need it.<br>
+			<br>
+			To set the Euclidean Fill amount (the number of equally spaced active steps within the Euclidean circle), switch back to the live mode and now Repeats 1 will set the Fill amount for Track 1. If Track 2 is also set to Euclidean mode then Repeats 2 will control the Fill amount for Track 2. If the Repeats knob is fully CCW then the fill amount will be 0, meaning that you will not hear any active steps. <br>
+			<br>
+			Now that you understand the basics of this mode let’s dive deeper into the internal pattern modifiers available inside the Track mode for each of the tracks. As with the 101 pattern mode there are 2 internal pattern modifiers. This time the primary parameter controlled by Repeats 1 knob for Track 1 is the pattern rotation or pattern offset, this lets you shift your pattern to make it fit rhythmically with the other patterns. For example if you have the following Euclidean pattern X000X000, a pattern rotation by 1 step will make it look like this: 0X000X00. <br>
+			<br>
+			The second pattern modifier is probability, but this time it is applied to all the steps of the pattern. For Track 1 the pattern probability is set by Repeats 2 knob while you are in Track edit mode. Fully CCW means none of the steps will output a trigger and fully CW means the probability of each trigger is 100%. <br>
+			<br>
+			For Track 2 the pattern modifiers are reversed, Repeats 1 controls the pattern probability and Repeats 2 controls pattern rotation.<br>
+			<br>
+		</p>
+
+		<h4>Patterns</h4>
+			<p style="text-align: left;">Each track has 8 patterns selected by pressing both the STEP and the REST buttons and rotating the Repeats (1 or 2) knob at the same time. Patterns can be combined and are selected separately for track 1 and 2. Pattern sequences and last patterns selected are recalled on the next power cycle.<br>
+			<br>
+			The pattern is always stored to the currently selected slot, this is how the pattern saving works on the Running Order. The moment you change your pattern, the last changes are stored to memory first and then the new pattern is loaded.<br>
+			<br>
+			
+			
+		</p>
+	</p>
+  </div>
+</div>
+</body>
+</html>

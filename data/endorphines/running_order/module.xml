@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+  	<section name="Cheat Sheet" modelist="false">
+  		<page name="Cheat Sheet for things you might forget" content="front_panel_controls.html"/>
+  	</section>
+    <section name="Running Order Manual" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="Overview" content="overview.html"/>
+      <page name="Front Panel Controls" content="front_panel_controls.html"/>
+      <page name="Operation Modes and Patterns" content="special_operation_modes.html"/>
+      <page name="Firmware Update Instructions" content="firmware_update.html"/>
+	   </section>
+  </sections>
+</module>
