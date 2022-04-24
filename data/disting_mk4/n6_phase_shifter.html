@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>bit reduction</td>
+      <td>wet/dry</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>signal input</td>
+      <td>signal</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>sample rate input</td>
+      <td>phase shift (5V per 360°)</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>signal output</td>
+      <td>signal out (see params)</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>comparator out: +5V when A is above 0</td>
+      <td>signal out (see params)</td>
     </tr>
   </table>
 
@@ -84,15 +84,15 @@
     <tr>
       <td class="parameter">0</td>
 
-      <td class="parameter">-31</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">31</td>
+      <td class="parameter">1</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Y input offset</td>
+      <td colspan="4">Output mode.<br/>When 0, A is dry and B is shifted.<br />When 1, A is shifted in opposite direction.</td>
     </tr>
   </table>
 <br>
@@ -111,15 +111,15 @@
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">-32</td>
 
-      <td class="parameter">7</td>
+      <td class="parameter">32</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">bit reduction mode. See table below.</td>
+      <td colspan="4">Y phase offset</td>
     </tr>
   </table>
 <br>
@@ -140,17 +140,17 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">7</td>
+      <td class="parameter">1</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">bit mangling mode. See table below.</td>
+      <td colspan="4">LFO enable
+      </td>
     </tr>
   </table>
-
-  <br>
+<br>
 
   <table class="bordered">
     <tr>
@@ -166,54 +166,22 @@
     <tr>
       <td class="parameter">3</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">-99</td>
 
-      <td class="parameter">1</td>
+      <td class="parameter">99</td>
 
-      <td class="parameter">0</td>
+      <td class="parameter">50</td>
     </tr>
 
     <tr>
-      <td colspan="4">Stereo mode.  When 1, Y is second input and B is second output.</td>
+      <td colspan="4">LFO speed
+      </td>
     </tr>
   </table>
-
-  <p>
-    <h3>Bit Reduction Modes</h3>
-    There are 2 bit reduction modes.<br>
-    <b>Type I</b>: sample treated as 16 bit values, low bits thrown away.  Each step in bit reduction halves the resolution.<br>
-    <b>Type II</b>: sample is divided by a factor.  Allows for a smoother reduction of resolution.<br>
-    Parameter 1 controls which bit reduction type applies to negative and positive values.<br><br>
-    <table class="bordered chart">
-      <tr>
-        <th>Parameter&nbsp;1</th><th>Positive</th><th>Negative</th>
-      </tr>
-      <tr><td>0</td><td>Type I</td><td>Type I</td></tr>
-      <tr><td>1</td><td>Type II</td><td>Type II</td></tr>
-      <tr><td>2</td><td>Type I</td><td>Type II</td></tr>
-      <tr><td>3</td><td>Type II</td><td>Type I</td></tr>
-      <tr><td>4</td><td>Type I</td><td>None</td></tr>
-      <tr><td>5</td><td>Type II</td><td>None</td></tr>
-      <tr><td>6</td><td>None</td><td>Type I</td></tr>
-      <tr><td>7</td><td>None</td><td>Type I</td></tr>
-    </table>
-  </p>
-  <p>
-    <h3>Bit Mangling Modes</h3>
-    <table class="bordered chart">
-      <tr>
-        <th>Parameter&nbsp;2</th><th>Operation</th>
-      </tr>
-      <tr><td>0</td><td>None</td></tr>
-      <tr><td>1</td><td>Bit swap 1</td></tr>
-      <tr><td>2</td><td>Bit swap 1</td></tr>
-      <tr><td>3</td><td>Bit swap 1</td></tr>
-      <tr><td>4</td><td>Bit rotation</td></tr>
-      <tr><td>5</td><td>Previous sample XOR 1</td></tr>
-      <tr><td>6</td><td>Previous sample XOR 2</td></tr>
-      <tr><td>7</td><td>Previous sample XOR 3</td></tr>
-    </table>
-  </p>
 <br>
+
+
+
+
 </body>
 </html>

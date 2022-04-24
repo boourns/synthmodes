@@ -24,7 +24,7 @@
         </div>
       </td>
 
-      <td>mod wheel / velocity CV input</td>
+      <td>frequency shift</td>
     </tr>
 
     <tr>
@@ -34,7 +34,7 @@
         </div>
       </td>
 
-      <td>pitch CV input</td>
+      <td>input signal</td>
     </tr>
 
     <tr>
@@ -44,7 +44,7 @@
         </div>
       </td>
 
-      <td>gate input</td>
+      <td>frequency shift</td>
     </tr>
 
     <tr>
@@ -54,7 +54,7 @@
         </div>
       </td>
 
-      <td>pass-through X</td>
+      <td>signal out (see params)</td>
     </tr>
 
     <tr>
@@ -64,7 +64,7 @@
         </div>
       </td>
 
-      <td>pass-through Y</td>
+      <td>signal out (see params)</td>
     </tr>
   </table>
 
@@ -86,14 +86,13 @@
 
       <td class="parameter">0</td>
 
-      <td class="parameter">99</td>
+      <td class="parameter">3</td>
 
-      <td class="parameter">16</td>
+      <td class="parameter">1</td>
     </tr>
 
     <tr>
-      <td colspan="4">Gate delay. Used to let pitch CV settle
-      before sampling when gate arrives.</td>
+      <td colspan="4">Range.  From 1Hz/volt to 1Khz/volt.</td>
     </tr>
   </table>
 <br>
@@ -112,17 +111,15 @@
     <tr>
       <td class="parameter">1</td>
 
-      <td class="parameter">-127</td>
+      <td class="parameter">0</td>
 
-      <td class="parameter">127</td>
+      <td class="parameter">1</td>
 
       <td class="parameter">0</td>
     </tr>
 
     <tr>
-      <td colspan="4">Z mode.<br>
-      When 0, Z sets velocity.<br>
-      Otherwise, Z generates CC messages and this parameter sets CC#.</td>
+      <td colspan="4">B mode.  When 1, B out is shifted in opposite direction.</td>
     </tr>
   </table>
 <br>
@@ -141,51 +138,18 @@
     <tr>
       <td class="parameter">2</td>
 
-      <td class="parameter">-99</td>
-
-      <td class="parameter">99</td>
-
       <td class="parameter">0</td>
+
+      <td class="parameter">1</td>
+
+      <td class="parameter">1</td>
     </tr>
 
     <tr>
-      <td colspan="4">X CC #
+      <td colspan="4">Include Z.  When 1, shift is Y + Z.
+      </td>
     </tr>
   </table>
 <br>
-
-  <table class="bordered">
-    <tr>
-      <th width="25%">pos</th>
-
-      <th width="25%">min</th>
-
-      <th width="25%">max</th>
-
-      <th width="25%">default</th>
-    </tr>
-
-    <tr>
-      <td class="parameter">3</td>
-
-      <td class="parameter">-99</td>
-
-      <td class="parameter">99</td>
-
-      <td class="parameter">0</td>
-    </tr>
-
-    <tr>
-      <td colspan="4">Y CC #
-    </tr>
-  </table>
-<br>
-
-<p>
-  <h3>Note</h3>
-When parameter 1, 2, or 3 is positive, voltage range is 0 to 5v.<br>
-When parameter is negative, voltage range is -5 to 5v.
-</p>
-
 </body>
 </html>
