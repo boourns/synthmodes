@@ -1,0 +1,38 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+<div class="centered">
+	<div class="content">
+	<h2>Sample Banks:</h2>
+		<p style="text-align: left;">Two of Cups has 8 banks of samples, each bank holds 24 samples per voice. To switch the bank hold press the Bank button. Audio files need to be 8 or 16 bit PCM WAVE files with arbitrary sample rate. The sample order is automatically sorted by the module in the same order as you put them inside of the SD card.<br>
+		<br>
+		You can see which bank is selected by the colour and number of blinks of the LED.
+		For example Bank 1 will be shown by 1 blink of LED with Blue colour, Bank 2 will blink BLUE twice and bank 4 will blink BLUE 4 times. Banks 5-8 will blink RED 1-4 times.<br>
+		<br>
+		Additionally the SD card contains configuration files for Pitch scaling / Offset and Trigger delay, which are applied globally. These settings are created upon firmware update and can be changed only by either reflashing the new firmware or deleting them off the SD card:
+		<ul>
+			<li> /settings/pitch_1.txt and pitch_2.txt Sets the tuning stretch in case you wish to calibrate each of the 1v/oct pitch cv inputs. Default value is: -0.27 Values range: +/-0.5 </li> <br>
+			<br>
+			<li>/settings/pitch_offset1.txt and pitch_offset2.txt Sets the pitch offset value for each voice, provides additional control for 1v/oct calibration. This value is created after an update or after deleting these files from the SD card. Make sure no cable is patched to the 1v/oct input so that the module can set these offset correctly. </li> <br>
+			<br>
+			<li>/settings/delay_1.txt and delay_2.txt Value in the file sets the trigger delay amount in milliseconds. Default value is 0 msec. Max. value is 1000 msec (1 second). Average needed delay to sync the samples in time with your sequencer: around 20 msec.</li>
+		</ul>
+	</p>
+		
+  </div>
+</div>
+</body>
+</html>

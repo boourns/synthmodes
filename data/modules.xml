@@ -1,5 +1,15 @@
 <?xml version="1.0"?>
 <modules>
+  <manufacturer name="Endorphin.es" verified="true">
+      <module name="Cockpit2 3U:1U" id="cockpit2" index="endorphines/cockpit2/module.xml"/>
+      <module name="Godspeed" id="godspeed" index="endorphines/godspeed/module.xml"/>
+      <module name="Golden Master 3U:1U" id="golden_master" index="endorphines/golden_master/module.xml"/>
+      <module name="Milky Way 3U:1U" id="milky_way" index="endorphines/milky_way/module.xml"/>
+      <module name="Running Order" id="running_order" index="endorphines/running_order/module.xml"/>
+      <module name="Squawk Dirty" id="squawk_dirty" index="endorphines/squawk_dirty/module.xml"/>
+      <module name="Total Recall" id="total_recall" index="endorphines/total_recall/module.xml"/>
+      <module name="Two of Cups" id="two_of_cups" index="endorphines/two_of_cups/module.xml"/>
+  </manufacturer>
   <manufacturer name="Erica Synths">
     <module name="Black Hole DSP 2" id="black_hole_dsp_2" index="black_hole_dsp_2/module.xml"/>
     <module name="Pico DSP" id="pico_dsp" index="pico_dsp/module.xml"/>

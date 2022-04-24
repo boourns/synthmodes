@@ -1,0 +1,66 @@
+<html class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 16.1), see www.w3.org">
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta http-equiv="cleartype" content="on">
+  <link rel="stylesheet" href="../common.css" type="text/css">
+</head>
+
+<body>
+<div class="centered">
+	<div class="content">
+	  <h2>Front panel controls</h2>
+
+		
+		<p style="text-align: left;">
+			<b>Track buttons</b>: 
+			<ul>
+				<li>If in live mode, the buttons are individual Track 1 and 2 MUTE buttons.</li> 
+				<br>
+				<li>If in step record mode, the buttons are used for adding steps and rests.</li>
+				<br>
+				<li>If in Euclidean record mode, the buttons set the length of the Euclidean circle (+1 step pressing STEP and +16 steps by pressing REST).</li>
+			</ul>
+			<br>
+			<b>External Clock input</b>: 16th notes clock expected (PPQN24÷6) (0...+5V or +10V, 0.65V threshold).<br>
+			<br>
+			<b>Rate/divider knob</b>: 
+			<ul>
+				<li>If no clock cable is inserted, then this knob sets the speed of the internal clock in BPM, from 30 to 300.</li>
+				<br>
+				<li>If the clock is inserted via cable, this knob sets the clock division / multiplication of the pattern.</li>
+				<br>
+				<li>If the Rate knob is set to Tuplets (fully CCW), this activates a special mode where the Repeats for each track are now stretched within a beat, which lets you create triplets, quadruplets and other interesting and uncommon rhythms in eurorack.</li>
+			</ul>
+			<br>
+			<b>Repeats 1/2</b>: manual knobs with CV inputs. Set amount of active trigger repeats or Euclidean trigger fills. Additionally these are used to set internal pattern modifiers..<br>
+			<br>
+			<b>Repeats 1/2 CV inputs</b>: When a CV cable is inserted, the last position of the Repeats knob is remembered and each Repeats knob acts as a CV attenuator; expected CV range: 0...+5V. A simple formula for the Repeats parameter value with the cable inserted is:<br>
+			<br>
+			<ul>
+				<li>Repeats value = Last stored value + (CV input value x Attenuator amount).</li> 
+			</ul>
+			<br>
+			<b>Reset/synchronisation trigger inputs</b>: each trigger applied resets a certain track’s sequence to its first step. ‘Reset in 1’ is normalled to ‘Reset in 2’, if no cable is inserted into ‘reset in 2’<br>
+			<br>
+			<b>Clock output</b>: internal clock out jack: 30...300 BPM in 16th notes (PPQN24÷6) when no external clock applied; external clock output in 16th notes after divider; output range is 0...+10V.<br>
+			<br>
+			<b>Track selector switch</b>: record a trigger sequence or set the Euclidean length by switching to the left (track 1) or right (track 2);  playback live mode in the middle.<br>
+			<br>
+			<b>Track 1 and 2 trigger outputs:</b>: trigger output length of 10 msec with output range of 0...+10V.<br>
+			<br>
+			<b>LED indicator</b>: blinking to BPM in blue in live mode;  lights up red in step recording; fuchsia in euclidean recording.<br>
+			<br>
+		</p>
+
+    </div>
+  </div>
+</body>
+</html>

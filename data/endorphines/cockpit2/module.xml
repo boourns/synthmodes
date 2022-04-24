@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+  	<section name="Cheat Sheet" modelist="false">
+  		<page name="Cheat Sheet for things you might forget" content="cheat_sheet.html"/>
+  	</section>
+    <section name="Cockpit2 3U / 1U manual" modelist="false">
+      <page name="Info" content="info.html"/>
+      <page name="Overview" content="overview.html"/>
+      <page name="Front Panel Controls" content="front_panel_controls.html"/>
+      <page name="Rear Connections" content="rear_connections.html"/>
+      <page name="Compressor Modes" content="compressor_modes.html"/>
+	   </section>
+  </sections>
+</module>
