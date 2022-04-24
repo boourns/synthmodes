@@ -651,6 +651,16 @@
           <tag>sd</tag>
         </tags>
       </page>
+      <page name="N6 Phase Shifter" content="n6_phase_shifter.html" icon="img/n6.png">
+        <tags>
+          <tag>effect</tag>
+        </tags>
+      </page>
+      <page name="N7 Frequency Shifter" content="n7_frequency_shifter.html" icon="img/n7.png">
+        <tags>
+          <tag>effect</tag>
+        </tags>
+      </page>
       <page name="N8 Clockable SD Ping Pong" content="n8_clockable_sd_ping_pong.html" icon="img/n8.png">
         <tags>
           <tag>effect</tag>

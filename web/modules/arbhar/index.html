@@ -1,0 +1,1073 @@
+---
+layout: page
+title: Arbhar
+manufacturer: Instruo
+---
+<style>.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.panel .knob {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.large-arrow {
+  font-size: 2.5em;
+}
+
+.knob-wiper + .knob-wiper {
+  opacity: 0.4;
+}
+
+.dark_arrow_box.contain_text,
+.light_arrow_box.contain_text {
+  max-width: 6em;
+}
+
+.light_arrow_box,
+.dark_arrow_box {
+  display: block;
+}
+
+.dark_arrow_box {
+  position: relative;
+  background: #d5d5d5;
+  border: 2px solid #000000;
+  margin: 0 auto;
+  padding: 5px;
+  color: black;
+  max-width: 10em;
+  width: fit-content;
+}
+
+.dark_arrow_box:after, .dark_arrow_box:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.dark_arrow_box:after {
+  border-color: rgba(213, 213, 213, 0);
+  border-bottom-color: #d5d5d5;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.dark_arrow_box:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: #000000;
+  border-width: 13px;
+  margin-left: -13px;
+}
+
+.light_arrow_box {
+  position: relative;
+  background: #f2f2f2;
+  border: 2px solid #777777;
+  margin: 0 auto;
+  padding: 5px;
+  color: black;
+  width: fit-content;
+}
+
+.light_arrow_box:after, .light_arrow_box:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.light_arrow_box:after {
+  border-color: rgba(213, 213, 213, 0);
+  border-bottom-color: #f2f2f2;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
+.light_arrow_box:before {
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: #777777;;
+  border-width: 13px;
+  margin-left: -13px;
+}
+
+.pre-icon-alpha:before,
+.pre-icon-beta:before,
+.pre-icon-gamma:before,
+.pre-icon-delta:before,
+.pre-icon-epsilon:before,
+.pre-icon-zeta:before,
+.pre-icon-omega:before {
+  border: 1px solid;
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  line-height: 1;
+  border-radius: 100%;
+  font-size: 1.2em;
+  margin-right: 0.4em;
+}
+
+
+.pre-icon-block:before {
+  display: block;
+  margin: 0 auto;
+}
+
+.pre-icon-alpha:before {
+  content: 'α';
+}
+
+.pre-icon-beta:before {
+  content: 'β';
+}
+
+.pre-icon-gamma:before {
+  content: 'γ';
+}
+
+.pre-icon-delta:before {
+  content: 'δ';
+}
+
+.pre-icon-epsilon:before {
+  content: 'ε';
+}
+
+.pre-icon-zeta:before {
+  content: 'ζ';
+}
+
+.pre-icon-omega:before {
+  content: 'Ω';
+}
+
+.parameters--control-modes p:last-child {
+  margin-bottom: 0;
+}
+
+.knob-scan-realtime {
+  transform: translate(25px, 20px) rotate(
+    190deg) translateX(15px);
+  transform-origin: left;
+}
+
+.abxy-jumper {
+  border-collapse: collapse;
+}
+
+.abxy-jumper td {
+  width: 10px;
+  height: 10px;
+}
+
+.abxy-jumper td.fill {
+  background: #fff;
+}
+body {
+  font-family: -apple-system, sans-serif;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: #1d1f21;
+    color: #dfdfe0;
+  }
+
+  h1, h2, h3 {
+    color: #ffffff;
+  }
+}
+
+.orange {
+  background-color: #ff9e20;
+}
+
+.green {
+  background-color: #00ee00;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.darkgray {
+  background-color: #d5d5d5;
+}
+
+.flashing-green {
+  border: 0px;
+  background-color: #00ee00;
+  box-shadow: 0 0 10px #00ee00, inset 0 0 10px #00ee00;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.flashing-white {
+  border: 0px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff, inset 0 0 10px #ffffff;
+}
+
+.leds {
+  text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.chart tr th {
+  padding-right: 8px;
+}
+
+.chart tr td:first-child {
+  width:1%;
+}
+
+.bordered {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.led-small {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* just big circles - braids, clouds */
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .knob {
+    background-color: black;
+  }
+}
+
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
+}
+
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+.button-black {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: #999999;
+}
+
+.lcd {
+  width: 90%;
+  height: 90px;
+  border-radius: 5px;
+  border: 1px solid;
+  display: inline-block;
+  background-color: #eeeeee;
+}
+
+.slider {
+  margin: auto; 
+  margin-top: 10px;
+
+  width: 10px;
+  height: 100px;
+  border-radius: 2px;
+  background-color: black;
+  overflow: auto;
+}
+
+.slider-led {
+  width: 6px;
+  margin: 2px;
+  height: 10px;
+  border-radius: 0px;
+  background-color: white;
+  position: relative;
+}
+
+.jack {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: #888888;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: black;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     /*text-align: center; */
+     width: 25%;
+}
+
+/* iOS-like button */
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a.button:visited {
+  color:white;
+}</style><b>General</b><br /><a href="#info">Info</a><br />
+<a href="#mod_cv">MOD CV Parameters</a><br />
+<b>Capturing</b><br /><a href="#dubbing">Dubbing</a><br />
+<a href="#erase_and_undo">Erase & Undo</a><br />
+<a href="#onset_control_modes">Onset Control Modes</a><br />
+<b>Playback</b><br /><a href="#follow_mode_scan_mode">Follow Mode & Scan Mode</a><br /><h2>General</h2><a name="info"></a><h2>Info</h2>
+  <div class="centered">
+    <div class="content">
+      <h3>Arbhar</h3>
+      <p>arbhar heralds a new generation of granular processing in Eurorack. Sampled audio can be chopped into tiny grains, scattered, shaped, re-pitched, reversed, and layered for an endless range of audio manipulation from seamless frozen tones to mutated acousmatic madness. Each grain sounds with its defined specifications. When modulation is used, the “per-grain parameter” definition allows for true polyphonic layering.<br></p>
+      <p><small>Contributed by <a href="https://davenportsmith.com/">Josh Davenport-Smith</a></small></p>
+      <p>
+        </p>
+<h3>Links</h3>
+        <a class="button" href="https://www.instruomodular.com/product/arbhar/">Arbhar Page</a><br>
+        <a class="button" href="https://www.instruomodular.com/wp-content/uploads/2021/08/Arbhar-Manual-Firmware-1.6.a.pdf">Arbhar Manual</a><br>
+        <a class="button" href="https://www.instruomodular.com/wp-content/uploads/2019/12/Arbhar-Quickstart-Website.pdf">Arbhar Quick Start</a><br>
+      
+    </div>
+  </div>
+<br /><br /><a name="mod_cv"></a><h2>MOD CV Parameters</h2>
+  <div class="centered">
+    <div class="content">
+      <div>
+        <p>
+          </p>
+<h2>A/B X/Y Switch Positions</h2>
+          <p>MOD CV controls described parameter when jumpers are in the relevant positions.</p>
+          <p>MOD CV is avaiable as a jack in the expander only.</p>
+        
+        <table class="parameters parameters--control-modes">
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <p><b>A</b></p>
+                    <p><img src="img/mod-jumper-up.svg"></p>
+                    <p><b>B</b></p>
+                  </td>
+                  <td>
+                    <p><b>X</b></p>
+                    <p><img src="img/mod-jumper-up.svg"></p>
+                    <p><b>Y</b></p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <p><b>Stereo Panning</b></p>
+              <p>MOD CV values, interpolated:</p>
+              <p>5V: Mono</p>
+              <p>0V: Full Left/Right</p>
+              <p>-5V: Random Left/Right</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr></td>
+          </tr>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <p><b>A</b></p>
+                    <p><img src="img/mod-jumper-down.svg"></p>
+                    <p><b>B</b></p>
+                  </td>
+                  <td>
+                    <p><b>X</b></p>
+                    <p><img src="img/mod-jumper-down.svg"></p>
+                    <p><b>Y</b></p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <p><b>Reverb</b></p>
+              <p>MOD CV controls a reverb.</p>
+              <p>Positive voltage mixes reverb with dry signal.<br>Reverb freezes at +5V</p>
+              <p>Negative voltage omits the dry signal and only allows the wet signal to pass. The reverb has additional shimmering modulation.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr></td>
+          </tr>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <p><b>A</b></p>
+                    <p><img src="img/mod-jumper-down.svg"></p>
+                    <p><b>B</b></p>
+                  </td>
+                  <td>
+                    <p><b>X</b></p>
+                    <p><img src="img/mod-jumper-up.svg"></p>
+                    <p><b>Y</b></p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <p><b>Hold</b></p>
+              <p>MOD CV controls the hold parameter.</p>
+              <p>Positive voltage increases the set Hold time.</p>
+              <p>Negative voltage decreases the set Hold time.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr></td>
+          </tr>
+          <tr>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <p><b>A</b></p>
+                    <p><img src="img/mod-jumper-up.svg"></p>
+                    <p><b>B</b></p>
+                  </td>
+                  <td>
+                    <p><b>X</b></p>
+                    <p><img src="img/mod-jumper-down.svg"></p>
+                    <p><b>Y</b></p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td>
+              <p><b>Delay</b></p>
+              <p>MOD CV controls a delay.</p>
+              <p>Positive voltage controls delay times between 80-1000ms with fixed feedback level of 67% for a more standard echo effect.</p>
+              <p>Negative voltage controls delay times between 25-1ms with a fixed feedback level of 99% for some shimmering KarplusStrong effects.</p>
+              <p>A summed dry and wet signal will generate from Output 1 if it's the only Output connected.</p>
+              <p>When both are connected:<br>Output 1: Dry signal.<br>Output 2: Wet signal.</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+  </div>
+</div><br /><br />
+<h2>Capturing</h2><a name="dubbing"></a><h2>Dubbing</h2>
+  <div class="centered">
+    <div class="content">
+      <div>
+        <p>
+          </p>
+<h2>Dub Parameter</h2>
+        
+        <table class="panel">
+          <tr>
+            <td>
+              <b>Dub Knob</b><br>
+              <div class="knob">
+                <div class="knob-wiper knob-ccw"></div>
+              </div>
+            </td>
+            <td>
+              <b>Dub Knob</b><br>
+              <div class="knob">
+                <div class="knob-wiper knob-center"></div>
+              </div>
+            </td>
+            <td>
+              <b>Dub Knob</b><br>
+              <div class="knob">
+                <div class="knob-wiper knob-cw"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>New audio overwrites previous</p>
+            </td>
+            <td>
+              <p>Previous audio attenuated 50%, summed with new audio</p>
+            </td>
+            <td>
+              <p>New audio sums with previous audio</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+  </div>
+</div><br /><br /><a name="erase_and_undo"></a><h2>Erase & Undo</h2>
+  <div class="centered">
+    <div class="content">
+      <div>
+        <p>
+          </p>
+<h2>Undo</h2>
+        
+        <table class="panel">
+          <tr>
+            <td>
+              <b>Shift</b><br>
+              <div class="led black"></div>
+            </td>
+            <td>
+              <b>Capture</b><br>
+              <div class="led"></div>
+            </td>
+            <td>
+              <b>)) <sup>(Strike)</sup></b><br>
+              <div class="led darkgray"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="light_arrow_box">Hold</span>
+            </td>
+            <td></td>
+            <td>
+              <span class="dark_arrow_box">Press</span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          </p>
+<h3>Description</h3>
+          Hold <b>Shift</b> and press <b>Strike</b> to undo an overdub. Doing this a second time will erase the buffer completely.
+        
+        <p>
+          </p>
+<h2>Erase</h2>
+        
+        <table class="panel">
+          <tr>
+            <td>
+              <b>Shift</b><br>
+              <div class="led black"></div>
+            </td>
+            <td>
+              <b>Capture</b><br>
+              <div class="led"></div>
+            </td>
+            <td>
+              <b>)) <sup>(Strike)</sup></b><br>
+              <div class="led darkgray"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="light_arrow_box">Hold</span>
+            </td>
+            <td></td>
+            <td>
+              <span class="dark_arrow_box">Press x2</span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          </p>
+<h3>Description</h3>
+          After initiating undo and then repeating the action, the buffer is erased.
+        
+      </div>
+  </div>
+</div><br /><br /><a name="onset_control_modes"></a><h2>Onset Control Modes</h2>
+  <div class="centered">
+    <div class="content">
+      <div>
+        <p>
+          </p>
+<h2>Change Mode</h2>
+        
+        <table class="panel">
+          <tr>
+            <td>
+              <b>Shift</b><br>
+              <div class="led black"></div>
+            </td>
+            <td>
+              <b>Capture</b><br>
+              <div class="led darkgray"></div>
+            </td>
+            <td>
+              <b>)) <sup>(Strike)</sup></b><br>
+              <div class="led"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="light_arrow_box">Hold</span>
+            </td>
+            <td>
+              <span class="dark_arrow_box">Press</span>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+        <p>
+          </p>
+<h3>Description</h3>
+          Hold <b>Shift</b> and press <b>Capture</b> to change the onset capture mode then turning the layer knob.
+        
+        <p>
+          </p>
+<h2>Modes</h2>
+        
+        <table class="parameters parameters--control-modes">
+          <tr>
+            <td><span class="pre-icon-block pre-icon-alpha">Alpha</span></td>
+            <td>
+              <p><b>Capture Behaviour:</b><br>Capture activates upon onset detection.</p>
+              <p><b>Gate Output:</b><br>Beginning of each grain.</p>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="pre-icon-block pre-icon-beta">Beta</span></td>
+            <td>
+              <p><b>Capture Behaviour:</b><br>Capture activates upon onset detection.</p>
+              <p><b>Gate Output:</b><br>Beginning of each onset detection and is high for duration of time set by the <b>Hold</b> parameter.</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><hr></td>
+          </tr>
+          <tr>
+            <td><span class="pre-icon-block pre-icon-gamma">Gamma</span></td>
+            <td>
+              <p><b>Capture Behaviour:</b><br>Capture will not activate upon onset detection.</p>
+              <p><b>Gate Output:</b><br>Beginning of each grain.</p>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="pre-icon-block pre-icon-delta">Delta</span></td>
+            <td>
+              <p><b>Capture Behaviour:</b><br>Capture will not activate upon onset detection.</p>
+              <p><b>Gate Output:</b><br>Beginning of each onset detection and is high for duration of time set by the <b>Hold</b> parameter.</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+  </div>
+</div><br /><br />
+<h2>Playback</h2><a name="follow_mode_scan_mode"></a><h2>Follow Mode & Scan Mode</h2>
+  <div class="centered">
+    <div class="content">
+      <div>
+        <p>
+          Follow mode introduces automated movement of the playhead. In default (scan) mode movement of playhead is controlled by the scan know only.
+        </p>
+        <p>
+          </p>
+<h2>Change Mode</h2>
+        
+        <table class="panel">
+          <tr>
+            <td>
+              <b>Shift</b><br>
+              <div class="led black"></div>
+            </td>
+            <td>
+              <b>Capture</b><br>
+              <div class="led darkgray"></div>
+            </td>
+            <td>
+              <b>)) <sup>(Strike) LED</sup></b><br>
+              <div class="led"></div>
+            </td>
+            <td>
+              <p class="large-arrow">→</p>
+            </td>
+            <td>
+              <b>Scan Knob</b><br>
+              <div class="knob">
+                <div class="knob-wiper knob-ccw"></div>
+                <div class="knob-wiper knob-cw"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="light_arrow_box">Hold</span>
+            </td>
+            <td>
+              <span class="dark_arrow_box">Press</span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="dark_arrow_box contain_text">Turn Full Left/Right x2</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <hr>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Shift</b><br>
+              <div class="led"></div>
+            </td>
+            <td>
+              <b>Capture</b><br>
+              <div class="led"></div>
+            </td>
+            <td>
+              <b>)) <sup>(Strike) LED</sup></b><br>
+              <div class="led white flashing-white"></div>
+            </td>
+            <td>
+              <p class="large-arrow">→</p>
+            </td>
+            <td>
+              <b>Scan Knob</b><br>
+              <div class="knob">
+                <div class="knob-wiper knob-ccw"></div>
+                <div class="knob-wiper knob-cw"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="dark_arrow_box contain_text">Indicates Follow Mode Active</span>
+            </td>
+            <td></td>
+            <td>
+              <span class="dark_arrow_box contain_text">Turn Full Left/Right x2</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>Shift</b><br>
+              <div class="led"></div>
+            </td>
+            <td>
+              <b>Capture</b><br>
+              <div class="led"></div>
+            </td>
+            <td>
+              <b>)) <sup>(Strike) LED</sup></b><br>
+              <div class="led"></div>
+            </td>
+            <td>
+              <p class="large-arrow">→</p>
+            </td>
+            <td>
+              <b>Scan Knob</b><br>
+              <div class="knob">
+                <div class="knob-wiper knob-ccw"></div>
+                <div class="knob-wiper knob-cw"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <span class="dark_arrow_box contain_text">Indicates Scan Mode Active</span>
+            </td>
+            <td></td>
+            <td>
+              <span class="dark_arrow_box contain_text">Turn Full Left/Right x2</span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          </p>
+<h3>Description</h3>
+          Hold <b>Shift</b> and press <b>Capture</b>, then turn <b>Scan</b> full left or right twice. Strike LED will illuminate when follow mode is engaged.
+        
+        <p>
+          </p>
+<h2>Follow Mode: Change Playback Speed</h2>
+        
+        <table class="panel">
+          <tr>
+            <td><b>Scan Knob</b></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="knob">
+                <div class="knob-wiper knob-ccw"></div>
+              </div>
+            </td>
+            <td>
+              <div class="knob">
+                <div class="knob-wiper knob-scan-realtime"></div>
+              </div>
+            </td>
+            <td>
+              <div class="knob">
+                <div class="knob-wiper knob-cw"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="dark_arrow_box contain_text">Fastest</span>
+            </td>
+            <td>
+              <span class="dark_arrow_box contain_text">Real Time</span>
+            </td>
+            <td>
+              <span class="dark_arrow_box contain_text">Slowest</span>
+            </td>
+          </tr>
+        </table>
+        <p>
+          </p>
+<h2>Follow Mode: Button Behaviour</h2>
+        
+        <table class="panel">
+          <tr>
+            <td>
+              <b>Capture</b><br>
+              <div class="led darkgray"></div>
+            </td>
+            <td>
+              <b>)) <sup>(Strike)</sup></b><br>
+              <div class="led darkgray"></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="light_arrow_box">Press</span>
+            </td>
+            <td>
+              <span class="dark_arrow_box">Press</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Reset record and play head to start</p>
+            </td>
+            <td>
+              <p>Rest play head to start</p>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+  </div>
+</div><br /><br />
