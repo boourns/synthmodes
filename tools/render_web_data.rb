@@ -119,7 +119,7 @@ end
 modules.each do |m|
   dir = "web/modules/#{File.dirname(m.index)}"
   begin
-    FileUtils.mkdir(dir)
+    FileUtils.mkdir_p(dir)
   rescue Errno::EEXIST
   end
   if File.exist?(m.images_dir)
