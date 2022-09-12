@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<module>
+  <sections>
+  	<section name="General" modelist="false">
+      <page name="Info" content="info.html"/>
+    </section>
+    <section name="Modes" modelist="false">
+      <page name="Modes" content="modes.html"/>
+      <page name="Halls of Valhalla" content="halls_of_valhalla.html"/>
+    </section>
+  </sections>
+</module>

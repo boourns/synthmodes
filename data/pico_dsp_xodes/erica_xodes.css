@@ -1,0 +1,64 @@
+.erica-black {
+  background-color: #000000;
+}
+.erica-white {
+  background-color: #FFFFFF;
+}
+.erica-red {
+  background-color: #B9242B;
+}
+.erica-green {
+  background-color: #399945;
+}
+.erica-dark-blue {
+  background-color: #2A316A;
+}
+.erica-yellow {
+  background-color: #FCEC24;
+}
+.erica-light-blue {
+  background-color: #2C8FC1;
+}
+.erica-orange {
+  background-color: #D8552B;
+}
+.erica-pink {
+  background-color: #E0719F;
+}
+
+.blinking::after {
+  display: block;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  animation: blinking 0.8s infinite;
+}
+
+@keyframes blinking {
+  0% {opacity: 0}
+  49% {opacity: 0}
+  50% {opacity: 1}
+  100% {opacity: 1}
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table tr {
+  height: 46px;
+}
+
+.highlighted-row {
+  background-color: #e3e3e3;
+  color: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlighted-row {
+    background-color: #303030;
+    color: #ffffff;
+  }
+}
