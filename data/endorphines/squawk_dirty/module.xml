@@ -2,7 +2,7 @@
 <module>
   <sections>
     <section name="Cheat Sheet" modelist="false">
-      <page name="Cheat Sheet for things you might forget" content="cheat-sheet.html"/>
+      <page name="Cheat Sheet for things you might forget" content="cheat_sheet.html"/>
     </section>
     <section name="Squawk Dirty To Me Manual" modelist="false">
       <page name="Info" content="info.html"/>
