@@ -6,6 +6,8 @@
     </section>
     <section name="Modes" modelist="false">
       <page name="Modes" content="modes.html"/>
+    </section>
+    <section name="Specific Cards" modelist="false">
       <page name="Halls of Valhalla" content="halls_of_valhalla.html"/>
     </section>
   </sections>
