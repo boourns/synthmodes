@@ -50,3 +50,5 @@ While explicit permission for writing documentation for someone else's module is
 - Danjel Van Tijn (Intellijel)
 - Jason Justian (Hemisphere)
 - Gur Milstein (Tiptop Audio)
+- Endorphin.es
+- Matthew Allum (ALM / Busy Circuits)
