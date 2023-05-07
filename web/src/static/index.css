@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 600;
+    font-stretch: normal;
+    font-display: swap;
+    src: url("opensans.woff2") format('woff2');
+}
+
+.header {
+    background-color: #fff;
+    height: 40px;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 24;
+}
+
+.content {
+    background-color: #f5f5f5;
+    font: 400 16px/24px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+}
+
+.hero {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center;
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    padding: 4px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.moduleList {
+    list-style: none;
+    padding-inline-start: 4px;
+}

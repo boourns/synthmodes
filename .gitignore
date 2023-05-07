@@ -1,3 +1,9 @@
 .byebug_history
 .idea/
 .DS_Store
+web/build
+web/dist
+web/node_modules
+web/tsconfig.json
+web/yarn.lock
+
