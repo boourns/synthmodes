@@ -1,19 +1,14 @@
-import pkg from 'glob';
-import React from 'preact/compat';
 import path from "path"
 import { render } from 'preact-render-to-string';
 import {load} from 'cheerio';
 
 import xml2js from 'xml2js';
 
-const { sync } = pkg;
-
-import { readFileSync, existsSync, mkdirSync, writeFileSync, cpSync } from 'fs'
+import { readFileSync, existsSync, mkdirSync, writeFileSync, readdirSync } from 'fs'
 import {exec} from 'child_process'
 
 import { SynthModesIndex } from '.';
 import { PageView } from './page';
-import { __String } from 'typescript';
 
 export type PageEntry = {
     name: string
@@ -33,12 +28,14 @@ export class ModuleEntry {
     name: string
     id: string
     index: string
+    css: string
     sections: SectionEntry[] = []
 
     constructor(obj: any) {
         this.name = obj.$.name
         this.id = obj.$.id
         this.index = obj.$.index
+        this.css = ""
     }
 }
 
@@ -69,7 +66,6 @@ const loadData = async () => {
 
     for (let module of modules) {
         module.sections = await loadModule(module)
-        console.log(module.sections)
     }
 }
 
@@ -82,16 +78,18 @@ const loadPage = (index: string, name: string) => {
 
     // Get the HTML of a specific element
     const elementHtml = $('body').html();
-    
+
     return elementHtml
 }
 
 const loadModule = async (entry: ModuleEntry) => {
     const module = await xml2js.parseStringPromise(readFileSync(`../data/${entry.index}`, "utf8"))
+    const dir = `../data/${path.dirname(entry.index)}`;
 
     let sections: SectionEntry[] = []
 
     for (const sect of module.module.sections[0].section) {
+
         const s: SectionEntry = {
             name: sect.$.name,
             modelist: sect.$.modelist === "true",
@@ -101,11 +99,14 @@ const loadModule = async (entry: ModuleEntry) => {
                 }
             }),
         }
-
-        console.log(JSON.stringify(s))
         
         sections.push(s)
     }
+
+    // load base and custom css
+    const cssFiles = ['../data/common.css', ...(readdirSync(dir).filter(f => f.endsWith(".css")).map(c => `${dir}/${c}`))]
+
+    entry.css = cssFiles.map(f => readFileSync(f)).join("\n")
 
     return sections
 }

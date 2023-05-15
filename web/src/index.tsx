@@ -19,7 +19,7 @@ export class SynthModesIndex extends Component<SynthModesProps, any> {
 
             return <>
                 <h2>{manu.name}</h2>
-                <ol class="moduleList">
+                <ol class="synthmodes-moduleList">
                     {modules}
                 </ol>
             </>
@@ -30,12 +30,12 @@ export class SynthModesIndex extends Component<SynthModesProps, any> {
                 <title>Synth Modes</title>
                 <link rel="stylesheet" href="./static/index.css" />
             </head>
-            <body>
-                <div className="header">
-                    <span class="logo">Synth Modes</span>
+            <body className="synthmodes-body">
+                <div className="synthmodes-header">
+                    <span class="synthmodes-logo">Synth Modes</span>
                 </div>
-                <div className="content">
-                    <div className="hero">
+                <div className="synthmodes-content">
+                    <div className="synthmodes-hero">
                         Collection of mobile-friendly synthesizer cheat sheets. 
                     </div>
                     {list}

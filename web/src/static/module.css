@@ -1,0 +1,75 @@
+.contentWrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow:hidden;
+    height: 100%;
+}
+
+.mainWrapper {
+    padding: 4px;
+    overflow: scroll;
+    flex-grow: 1;
+}
+
+.main {
+    margin: auto;
+    max-width: 600px;
+}
+
+.sidebarSection {
+    padding-bottom: 4px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    min-width:400px;
+    max-width: 600px;
+    overflow: scroll;
+    line-height: 1.1em;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li a {
+    display: block;
+    text-decoration: none;
+    color: #eee;
+}
+
+.sidebar li a:hover {
+    background-color: #ddd;
+}
+
+.page {
+    padding-bottom: 15px;
+}
+
+.pageTitle {
+    text-decoration: underline;
+}
+
+.pageIcon {
+    height: 20px;
+    padding: 4px;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+    .contentWrapper {
+        flex-direction:column;
+        overflow: scroll;
+    }
+    .sidebar {
+        overflow: visible;
+        margin:0;
+    }
+    .main {
+        overflow: visible;
+        margin:0;
+    }
+}
