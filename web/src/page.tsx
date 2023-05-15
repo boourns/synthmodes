@@ -4,6 +4,7 @@ import { readFileSync } from 'fs'
 
 import { Component } from "preact";
 import { ModuleEntry } from "./render";
+import { Header } from './components/header';
 
 export type PageProps = {
     module: ModuleEntry
@@ -18,7 +19,7 @@ export class PageView extends Component<PageProps, any> {
                 const icon = p.icon ? <img class="pageIcon" src={p.icon}></img> : undefined
 
                 return <div class="page">
-                    <h3 class="pageTitle" id={`p-${p.name}`}>{icon} {p.name}</h3>
+                    <div class="pageTitleBlock"><a href={`#p-${p.name}`}><h3 class="pageTitle" id={`p-${p.name}`}>{icon} {p.name}</h3></a></div>
                     <div dangerouslySetInnerHTML={{__html: p.content}}></div>
                 </div>
             })
@@ -33,16 +34,18 @@ export class PageView extends Component<PageProps, any> {
         return <html>
             <head>
                 <title>Synth Modes</title>
+                <meta charSet="utf-8"></meta>
                 <link rel="stylesheet" href="../../static/index.css" />
                 <link rel="stylesheet" href="../../static/module.css" />
                 <style>
                     {module.css}
                 </style>
             </head>
-            <body>
+            <body class="page-body">
+                <Header />
+
                 <div class="contentWrapper">
                     <div class="sidebar">
-                        Sections<b />
                         <ul>
                             {module.sections.map(s => {
                                 return <div class="sidebarSection">

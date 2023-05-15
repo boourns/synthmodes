@@ -1,6 +1,5 @@
-import path from 'path';
-
 import { Component } from "preact";
+import { Header } from "./components/header";
 import { ModuleEntry, Manufacturer } from "./render";
 
 export type SynthModesProps = {
@@ -31,9 +30,7 @@ export class SynthModesIndex extends Component<SynthModesProps, any> {
                 <link rel="stylesheet" href="./static/index.css" />
             </head>
             <body className="synthmodes-body">
-                <div className="synthmodes-header">
-                    <span class="synthmodes-logo">Synth Modes</span>
-                </div>
+                <Header />
                 <div className="synthmodes-content">
                     <div className="synthmodes-hero">
                         Collection of mobile-friendly synthesizer cheat sheets. 

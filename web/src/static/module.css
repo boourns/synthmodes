@@ -1,3 +1,8 @@
+.page-body {
+    padding: 0;
+    margin: 0;
+}
+
 .contentWrapper {
     display: flex;
     flex-direction: row-reverse;
@@ -18,6 +23,7 @@
 
 .sidebarSection {
     padding-bottom: 4px;
+    padding-top: 4px;
 }
 
 .sidebar {
@@ -38,11 +44,11 @@
 .sidebar li a {
     display: block;
     text-decoration: none;
-    color: #eee;
+    color: var(--text-color);
 }
 
 .sidebar li a:hover {
-    background-color: #ddd;
+    background-color: var(--highlight-color);
 }
 
 .page {
@@ -50,12 +56,15 @@
 }
 
 .pageTitle {
-    text-decoration: underline;
+    color: var(--text-color)
+}
+
+.pageTitleBlock {
+    background-color: var(--header-background-color);
 }
 
 .pageIcon {
     height: 20px;
-    padding: 4px;
     vertical-align: middle;
 }
 
