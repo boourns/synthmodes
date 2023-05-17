@@ -68,34 +68,3 @@
     height: 20px;
     vertical-align: middle;
 }
-
-.synthmodes-footer {
-    display: flex;
-    flex-direction: row;
-}
-
-.synthmodes-footer-col {
-    flex: 1;
-    padding: 4px;
-    display: flex;
-    flex-direction: column;
-}
-
-@media screen and (max-width: 800px) {
-    .contentWrapper {
-        flex-direction: column;
-        overflow: auto;
-    }
-    .sidebar {
-        overflow:unset;
-        height: 100%;
-        margin:0;
-    }
-    .mainWrapper {
-        overflow:unset;
-        margin:0;
-    }
-    .synthmodes-footer {
-        flex-direction: column;
-    }
-}

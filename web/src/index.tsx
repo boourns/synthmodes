@@ -1,4 +1,5 @@
 import { Component } from "preact";
+import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { ModuleEntry, Manufacturer } from "./render";
 
@@ -37,6 +38,7 @@ export class SynthModesIndex extends Component<SynthModesProps, any> {
                     </div>
                     {list}
                 </div>
+                <Footer />
             </body>
         </html>
     }
