@@ -77,6 +77,8 @@
 .synthmodes-footer-col {
     flex: 1;
     padding: 4px;
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 800px) {
