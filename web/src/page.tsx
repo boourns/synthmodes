@@ -5,6 +5,7 @@ import { readFileSync } from 'fs'
 import { Component } from "preact";
 import { ModuleEntry } from "./render";
 import { Header } from './components/header';
+import { Footer } from './components/footer';
 
 export type PageProps = {
     module: ModuleEntry
@@ -33,7 +34,7 @@ export class PageView extends Component<PageProps, any> {
 
         return <html>
             <head>
-                <title>Synth Modes</title>
+                <title>{module.name} | Synth Modes</title>
                 <meta charSet="utf-8"></meta>
                 <link rel="stylesheet" href="../../static/index.css" />
                 <link rel="stylesheet" href="../../static/module.css" />
@@ -42,7 +43,7 @@ export class PageView extends Component<PageProps, any> {
                 </style>
             </head>
             <body class="page-body">
-                <Header />
+                <Header pageTitle={module.name}/>
 
                 <div class="contentWrapper">
                     <div class="sidebar">
@@ -64,10 +65,9 @@ export class PageView extends Component<PageProps, any> {
 
                     <div class="mainWrapper">
                         <div class="main">
-                            <h1>{module.name}</h1>
-
                             {body}
                         </div>
+                        <Footer></Footer>
                     </div>
                 </div>
             </body>

@@ -6,24 +6,25 @@
 .contentWrapper {
     display: flex;
     flex-direction: row-reverse;
-    overflow:hidden;
+    overflow: hidden;
     height: 100%;
 }
 
 .mainWrapper {
-    padding: 4px;
     overflow: scroll;
     flex-grow: 1;
 }
 
 .main {
+    padding: 4px;
     margin: auto;
     max-width: 600px;
 }
 
 .sidebarSection {
-    padding-bottom: 4px;
-    padding-top: 4px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    padding-left: 6px;
 }
 
 .sidebar {
@@ -68,17 +69,31 @@
     vertical-align: middle;
 }
 
+.synthmodes-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.synthmodes-footer-col {
+    flex: 1;
+    padding: 4px;
+}
+
 @media screen and (max-width: 800px) {
     .contentWrapper {
-        flex-direction:column;
-        overflow: scroll;
+        flex-direction: column;
+        overflow: auto;
     }
     .sidebar {
-        overflow: visible;
+        overflow:unset;
+        height: 100%;
         margin:0;
     }
-    .main {
-        overflow: visible;
+    .mainWrapper {
+        overflow:unset;
         margin:0;
+    }
+    .synthmodes-footer {
+        flex-direction: column;
     }
 }

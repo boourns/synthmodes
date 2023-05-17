@@ -25,9 +25,19 @@
 
 .synthmodes-header {
     padding: 4px;
+    padding-left: 12px;
     background-color: var(--header-background-color);
     height: 40px;
-    width: 100%;
+    display: flex;
+    align-items:center;
+}
+
+.synthmodes-header-left {
+    align-items: baseline;
+}
+
+.synthmodes-header-right {
+    margin-left: auto;
 }
 
 .synthmodes-logo {
@@ -35,6 +45,13 @@
     font-weight: 600;
     font-style: italic;
     font-size: 24;
+    color: var(--text-color);
+}
+
+.synthmodes-sublogo {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 22;
     color: var(--text-color);
 }
 
