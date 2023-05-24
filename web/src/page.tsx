@@ -1,7 +1,3 @@
-import path from 'path';
-import xml2js from 'xml2js';
-import { readFileSync } from 'fs'
-
 import { Component } from "preact";
 import { ModuleEntry } from "./render";
 import { Header } from './components/header';
@@ -36,6 +32,8 @@ export class PageView extends Component<PageProps, any> {
             <head>
                 <title>{module.name} | Synth Modes</title>
                 <meta charSet="utf-8"></meta>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="description" content={`Synthesizer cheat sheet for the ${module.manufacturer} ${module.name}`}></meta>
                 <link rel="stylesheet" href="../../static/index.css" />
                 <link rel="stylesheet" href="../../static/module.css" />
                 <style>

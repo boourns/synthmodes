@@ -26,15 +26,17 @@ export type SectionEntry = {
 
 export class ModuleEntry {
     name: string
+    manufacturer: string
     id: string
     index: string
     css: string
     sections: SectionEntry[] = []
 
-    constructor(obj: any) {
+    constructor(manufacturer: string, obj: any) {
         this.name = obj.$.name
         this.id = obj.$.id
         this.index = obj.$.index
+        this.manufacturer = manufacturer
         this.css = ""
     }
 }
@@ -47,7 +49,8 @@ export class Manufacturer {
         this.name = obj.$.name
 
         for (const module of obj.module) {
-            this.modules.push(new ModuleEntry(module))
+            const m = new ModuleEntry(this.name, module)
+            this.modules.push(m)
         }
     }
 }
@@ -125,12 +128,18 @@ const renderModule = async (entry: ModuleEntry) => {
         exec(`cp -r ../data/${dir}/img ${outdir}/img`)
     }
 
-    writeFileSync(path.join(outdir, "index.html"), module)
+    writeFileSync(path.join(outdir, "index.html"), `
+    <!DOCTYPE html>
+    ${module}
+    `)
 }
 
 const renderIndex = async () => { 
     const index = render(<SynthModesIndex modules={modules} manufacturers={manufacturers} />)
-    writeFileSync("../docs/index.html", index)
+    writeFileSync("../docs/index.html", `
+    <!DOCTYPE html>
+    ${index}
+    `)
 }
 
 const renderSite = async () => {

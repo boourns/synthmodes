@@ -29,6 +29,9 @@ export class SynthModesIndex extends Component<SynthModesProps, any> {
             <head>
                 <title>Synth Modes</title>
                 <link rel="stylesheet" href="./static/index.css" />
+                <meta charSet="utf-8"></meta>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="description" content="A collection of mobile-friendly synthesizer cheat sheets."></meta>
             </head>
             <body className="synthmodes-body">
                 <Header />
