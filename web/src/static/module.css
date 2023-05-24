@@ -1,0 +1,70 @@
+.page-body {
+    padding: 0;
+    margin: 0;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    height: 100%;
+}
+
+.mainWrapper {
+    overflow: scroll;
+    flex-grow: 1;
+}
+
+.main {
+    padding: 4px;
+    margin: auto;
+    max-width: 600px;
+}
+
+.sidebarSection {
+    padding-bottom: 6px;
+    padding-top: 6px;
+    padding-left: 6px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    min-width:400px;
+    max-width: 600px;
+    overflow: scroll;
+    line-height: 1.1em;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.sidebar li a:hover {
+    background-color: var(--highlight-color);
+}
+
+.page {
+    padding-bottom: 15px;
+}
+
+.pageTitle {
+    color: var(--text-color)
+}
+
+.pageTitleBlock {
+    background-color: var(--header-background-color);
+}
+
+.pageIcon {
+    height: 20px;
+    vertical-align: middle;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "synthmodes-web",
+  "version": "1.0.0",
+  "description": "web renderer for synthmodes",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild ./src/render.tsx --bundle --platform=node --packages=external --target=node14 --outfile=build/render.cjs",
+    "render": "rm -rf dist/static && cp -R src/static dist/static && yarn build && node build/render.cjs",
+    "watch": "nodemon --watch src --recursive --ext ts,tsx,css,json,xml --exec \"yarn render\""
+  },
+  "dependencies": {
+    "@types/xml2js": "^0.4.11",
+    "cheerio": "^1.0.0-rc.12",
+    "esbuild": "^0.17.13",
+    "glob": "^9.3.2",
+    "preact": "^10.13.1",
+    "preact-render-to-string": "^5.2.6",
+    "typescript": "^5.0.2",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
