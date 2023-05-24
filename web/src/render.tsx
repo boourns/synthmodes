@@ -115,7 +115,7 @@ const renderModule = async (entry: ModuleEntry) => {
     const module = render(<PageView module={entry} />)
     const dir = entry.id
 
-    const outdir = path.join("./dist/modules", dir)
+    const outdir = path.join("../docs/modules", dir)
     console.log("Making ", outdir)
     if (!existsSync(outdir)) {
         mkdirSync(outdir, { recursive: true })
@@ -130,7 +130,7 @@ const renderModule = async (entry: ModuleEntry) => {
 
 const renderIndex = async () => { 
     const index = render(<SynthModesIndex modules={modules} manufacturers={manufacturers} />)
-    writeFileSync("./dist/index.html", index)
+    writeFileSync("../docs/index.html", index)
 }
 
 const renderSite = async () => {

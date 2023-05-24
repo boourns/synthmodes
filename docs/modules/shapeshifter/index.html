@@ -1,0 +1,2401 @@
+<html><head><title>Shapeshifter | Synth Modes</title><meta charSet="utf-8" /><link rel="stylesheet" href="../../static/index.css" /><link rel="stylesheet" href="../../static/module.css" /><style>body {
+  font-family: -apple-system, sans-serif;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: #1d1f21;
+    color: #dfdfe0;
+  }
+
+  h1, h2, h3 {
+    color: #ffffff;
+  }
+}
+
+.orange {
+  background-color: #ff9e20;
+}
+
+.green {
+  background-color: #00ee00;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.darkgray {
+  background-color: #d5d5d5;
+}
+
+.flashing-green {
+  border: 0px;
+  background-color: #00ee00;
+  box-shadow: 0 0 10px #00ee00, inset 0 0 10px #00ee00;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.flashing-white {
+  border: 0px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff, inset 0 0 10px #ffffff;
+}
+
+.leds {
+  text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.chart tr th {
+  padding-right: 8px;
+}
+
+.chart tr td:first-child {
+  width:1%;
+}
+
+.bordered {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.led-small {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* just big circles - braids, clouds */
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .knob {
+    background-color: black;
+  }
+}
+
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
+}
+
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+.button-black {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: #999999;
+}
+
+.lcd {
+  width: 90%;
+  height: 90px;
+  border-radius: 5px;
+  border: 1px solid;
+  display: inline-block;
+  background-color: #eeeeee;
+}
+
+.slider {
+  margin: auto; 
+  margin-top: 10px;
+
+  width: 10px;
+  height: 100px;
+  border-radius: 2px;
+  background-color: black;
+  overflow: auto;
+}
+
+.slider-led {
+  width: 6px;
+  margin: 2px;
+  height: 10px;
+  border-radius: 0px;
+  background-color: white;
+  position: relative;
+}
+
+.jack {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: #888888;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: black;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     /*text-align: center; */
+     width: 25%;
+}
+
+/* iOS-like button */
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a.button:visited {
+  color:white;
+}
+.tableheader {
+	background-color: #eeeeee; 
+	padding: 5;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .tableHeader {
+  	background-color: #292a30; 
+  }
+
+  img {
+  	-webkit-filter: invert(100%);
+  	filter: invert(100%);
+  }
+}
+
+.widerChart tr td:first-child {
+  margin: 5px;
+  width: 25%;
+}
+
+.widerChart tr td {
+	padding: 5px;
+}
+
+.bordered tr {
+	border: 1px solid;
+}
+
+.preset {
+	background-color: #c63e61;
+	color: white;
+	margin: 2px;
+	border-radius: 5%;
+}
+</style></head><body class="page-body"><div class="synthmodes-header"><div class="synthmodes-header-left"><a href="/" class="synthmodes-logo">Synth Modes</a><span style="padding-left: 8px;"><a href="#" class="synthmodes-sublogo">● Shapeshifter</a></span></div><div class="synthmodes-header-right"><a href="https://github.com/boourns/synthmodes"><svg style="zoom:0.35;" width="98" height="96" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a></div></div><div class="contentWrapper"><div class="sidebar"><ul><div class="sidebarSection"><li><b><a href="s-General">General</a></b></li><ul><li><a href="#p-Info">Info</a></li></ul></div><div class="sidebarSection"><li><b><a href="s-Sections">Sections</a></b></li><ul><li><a href="#p-Frontpanel">Frontpanel</a></li><li><a href="#p-Combo Modes">Combo Modes</a></li><li><a href="#p-Sync Modes">Sync Modes</a></li><li><a href="#p-Pulse Modes">Pulse Modes</a></li><li><a href="#p-MOD A">MOD A</a></li><li><a href="#p-Wavetables">Wavetables</a></li><li><a href="#p-Chords">Chords</a></li><li><a href="#p-Presets">Presets</a></li></ul></div></ul></div><div class="mainWrapper"><div class="main"><div><h2 id="s-General">General</h2><div><div class="page"><div class="pageTitleBlock"><a href="#p-Info"><h3 class="pageTitle" id="p-Info"> Info</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+      <p>
+      </p><h3>Shapeshifter</h3>
+        Shapeshifter is a digital complex oscillator created by Intellijel and Cylonix.<br>
+      <p></p>
+      <p>
+        </p><h3>Links</h3>
+        <a class="button" href="https://intellijel.com/shop/eurorack/cylonix-shapeshifter/">Shapeshifter Home</a><br>
+        <a class="button" href="https://intellijel.com/downloads/manuals/cylonix-shapeshifter_manual_2.03_2020.03.10.pdf">Shapeshifter Manual</a><br>
+      <p></p>
+      <p>
+        Note: Some images are derived from the official Shapeshifter manual and are used with permission from Intellijel.
+      </p>
+    </div>
+  </div>
+
+</div></div></div></div><div><h2 id="s-Sections">Sections</h2><div><div class="page"><div class="pageTitleBlock"><a href="#p-Frontpanel"><h3 class="pageTitle" id="p-Frontpanel"> Frontpanel</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+
+      <table class="widerChart bordered">
+        <tbody><tr>
+          <td colspan="2" class="tableheader">
+            <b>Frontpanel</b>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            This section describes the frontpanel functionality of the Shapeshifter.  It also serves as a decent overview of the synthesis options available.<br>
+            After pressing a panel button, in most cases turn the left data encoder to change the value of the displayed parameter.<br>
+            Note: Preset mode is covered in it's own section.
+          </td>
+        </tr>
+      </tbody></table><br>
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Top Left</b>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <b>WAVE BANK</b>
+    </td>
+    <td>
+      <b>Press</b> to edit the wavetable bank for OSC1.  <b>Press</b> again to edit the wavetable bank for OSC2.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>SYNC / PULSE</b>
+    </td>
+    <td>
+      <b>Press</b> one or more times to edit (in order) OSC1 sync, OSC2 sync, Pulse output mode.  See the additional sections for description of sync and pulse modes.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>MOD A</b>
+    </td>
+    <td>
+      <b>Press</b> to edit the modulation destination for MODA input.  <b>Press</b> again to edit whether OSC2 output modifies SHAPE1, TILT, or nothing.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>MULTI / CHORD TYPE</b>
+    </td>
+    <td>
+      The MULTI setting for each oscillator joins subsequent waveforms from the wavetable into a single waveform.  For example when MULTI for OSC 1 is set to 2, OSC 1 will emit one cycle of the current waveform, then one cycle of the next waveform in the wavetable, then back to one cycle of the first waveform, etc.<br><br>
+      <b>Press</b> MULTI to edit OSC1 multi.  Press again to edit OSC2 multi.  If CHORD MODE is activated, press a third time to edit CHORD TYPE.  See "Chord Types" section for a description of all chord types available.
+    </td>
+  </tr>
+
+</tbody></table><br>
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Top Right</b>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <b>COMBO MODE</b>
+    </td>
+    <td>
+      <b>Press</b> to change the mode how OSC1 and OSC2 are combined before being sent to OUT1.<br><br>
+        <b>Press</b> a second time to enable MOD B control over COMBO MODE.  See "Combo Modes" sections for description of each combo mode.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>TILT / CHORD DRIVE</b>
+    </td>
+    <td>
+      TILT phase modulates OSC 1 with it's own output, effectively "tilting" the waveform.<br><br>
+      <b>Press</b> to modify the TILT level for OSC 1.    <b>Press</b> a second time to enable MOD B control over TILT.<br>
+      When CHORD MODE is active, this button edits CHORD DRIVE instead of TILT.  CHORD DRIVE amplifies, then clips, each voice in the chord.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>DELAY DEPTH</b>
+    </td>
+    <td>
+      OUT1 is optionally run through a delay line whose delay time is equal to OSC2 frequency.<br><br>
+
+      <b>Press</b> to edit delay depth, which sets both the amount of delay feedback and the wet/dry output ratio. <b>Press</b> again to enable MOD B modulation of DELAY DEPTH.<br><br>
+
+      Set OSC2 to LFO mode for a traditional delay effect, or set it to audio rate for the delay line to act as a resonator.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>CHORD DETUNE / PERC DECAY</b>
+    </td>
+    <td>
+      If CHORD MODE is enabled, <b>press</b> to edit CHORD DETUNE, which fattens the chord sound by detuning each oscillator.  <b>Press</b> a second time to enable MOD B modulation of CHORD DETUNE.<br><br>
+      If PERCUSSION MODE is enabled, the percussion envelope decay time (PERC DELAY) will be edited when this button is pressed instead.  <b>Press</b> a second time to enable MOD B modulation of PERC DELAY.<br>
+    </td>
+  </tr>
+
+</tbody></table><br>
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Middle Section</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>QUANT</b> and <b>RATIO/TIME</b>
+    </td>
+    <td>
+      When QUANT is disabled, OSC 2's frequency is controlled by PITCH 2, offset by RATIO.<br><br>
+      When QUANT is enabled, PITCH 2 input is ignored and OSC 2's frequency is a fixed fraction or multiple ratio OSC 1's frequency, controlled by RATIO.  The possible frequency ratios for OSC 2 are 1/8, 3/16, 1/4, 5/16, 3/8, 1/2, 5/8, 3/4, 1, 5/4, 3/2, 2, 3, 4, 6, 8.<br><br>
+      When QUANT is flashing, OSC 2's frequency is clocked to an incoming clock signal present on the PITCH 2 input.  RATIO controls a clock divider / multiplier with possible ratios of 1/24, 1/16, 1/12, 1/8, 1/6, 1/4, 1/3, 1/2, 1, 2, 3, 4, 6, 8, 12.  In this case, the LFO2 setting is ignored.<br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>INT FM</b>
+    </td>
+    <td>
+      This knob, combined with the INT. FM CV input, controls how much OSC 2's output modulates OSC 1's frequency.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>INT. SYNC</b>
+    </td>
+    <td>
+      When lit, both OSC 1 and OSC 2 are synced to an internal oscillator running at the same base frequency as OSC 1 (but not affected by OSC 1 FM inputs).<br><br>
+      When flashing, the internal oscillator is set to half of OSC 1's frequency.<br><br>
+      See "Sync Modes" to understand how OSC 1 and OSC 2 will react to sync.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>COARSE</b> / <b>FINE</b>
+    </td>
+    <td>
+      These provide an offset to both OSC 1 and OSC 2 frequency.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>LFO</b> / <b>1</b> / <b>2</b>
+    </td>
+    <td>
+      Press to cycle through setting OSC 2, OSC 1, or both to LFO speeds, lowered by 7 octaves.<br>
+      When LFO 2 is enabled and QUANT is disabled, OSC 2's frequency is no longer affected by COARSE and FINE knobs.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>CHORD MODE</b>
+    </td>
+    <td>
+      When enabled, OSC1 emits 8-oscillator chords, controlled by CHORD TYPE and CHORD DETUNE.<br><br>  
+      Some other frontpanel buttons change functionality with CHORD MODE enabled.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>SHAPE 1 / SHAPE 2</b>
+    </td>
+    <td>
+      SHAPE 1 and SHAPE 2 (combined with their respective CV inputs) choose a smoothly interpolated waveform for OSC 1 and OSC 2 from their currently selected wave banks.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>PERC MODE</b>
+    </td>
+    <td>
+      When PERCUSSION MODE enabled, an envelope controls the gain of OUT 1.  The envelope decay time is controlled by the PERC DECAY parameter.<br><br>
+      Press PERC MODE once to enable PERCUSSION MODE, where the decay envelope is triggered by a rising edge on the SYNC input.<br><br>
+      Press PERC MODE a second time and the decay envelope will remain high as long as SYNC input is high.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FOLD</b>
+    </td>
+    <td>
+      FOLD knob plus FOLD CV input controls the depth of the analog wavefolding applied to the FOLD input (which is normaled to OUT 1).
+    </td>
+  </tr>
+</tbody></table>
+<br>
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Modulation Row</b>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <b>RATIO</b>
+    </td>
+    <td>
+      Combines with RATIO knob.  See <b>QUANT</b> / <b>RATIO</b> above.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <b>INT. FM</b>
+    </td>
+    <td>
+      Combines with INT. FM knob to determine the depth of internal frequency modulation.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FM 1</b>
+    </td>
+    <td>
+      Modulates OSC 1 frequency.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FOLD CV</b>
+    </td>
+    <td>
+      Combines with FOLD knob to determine depth of wavefolding applied to FOLD input.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>MOD A</b>
+    </td>
+    <td>
+      AC-coupled input to the MOD A modulation bus.  Note that it is normaled to OUT 1, so even with nothing plugged in the MOD A attenuator controls the depth of modulation and a signal is present.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>SHAPE 1 / SHAPE 2</b>
+    </td>
+    <td>
+      Combines with SHAPE 1 / SHAPE 2 knobs to calculate OSC 1 and OSC 2 positions within their active wavetable banks.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>MOD B</b>
+    </td>
+    <td>
+      Combines with MOD B knob to determine the value of the MOD B modulation bus.
+    </td>
+  </tr>
+</tbody></table>
+<br>
+
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>Frontpanel: Bottom Row</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>PEAK / LFO 1</b>
+    </td>
+    <td>
+      When OSC 1 is not in LFO mode, this LED indicates either FM 1 or MOD A inputs are hitting the limits of their ranges and are clipping.<br>
+      When OSC 1 is in LFO mode, this LED is lit when OSC 1's polarity is positive.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>PITCH 1 / PITCH 2</b>
+    </td>
+    <td>
+      1V/oct voltage inputs for OSC 1 and OSC 2.  PITCH 2 is normalled to PITCH 1.  When QUANT mode is flashing, PITCH 2 expects a clock signal to sync to instead of a V/oct signal.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>SYNC</b>
+    </td>
+    <td>
+      Rising edges on this input will cause OSC 1 and OSC 2 to sync based on their active SYNC modes.<br><br>
+      When PERC mode is activated this input controls the percussion envelope.<br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FOLD IN</b>
+    </td>
+    <td>
+      Input to the onboard analog wavefolder, normalled to OUT 1.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>OUT 1</b>
+    </td>
+    <td>
+      Output 1, which is the result of OSC 1 optionally combined with OSC 2, optionally through the percussion mode envelope, then optionally through the delay line.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>OUT 2</b>
+    </td>
+    <td>
+      Oscillator 2 output.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>Pulse</b>
+    </td>
+    <td>
+      Configurable pulse (0-5v) output controlled by PULSE setting.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>FOLD</b>
+    </td>
+    <td>
+      Output of the analog wavefolder.
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>PULSE / LFO 2</b>
+    </td>
+    <td>
+      When OSC 2 is not in LFO mode, this LED indicates when the PULSE output is high.<br><br>
+      When OSC 2 is in LFO mode, this LED indicates when OSC 2 polarity is positive.
+    </td>
+  </tr>
+
+</tbody></table>
+
+
+</div>
+</div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Combo Modes"><h3 class="pageTitle" id="p-Combo Modes"> Combo Modes</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>Combo Modes</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      To change combo modes press <b>COMBO MODE</b> and rotate the data encoder.<br><br>Press <b>COMBO MODE</b> twice to modulate combo mode via <b>MOD B</b>.
+    </td>
+  </tr>
+</tbody></table><br>
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td class="tableheader">
+      <b>Mode</b>
+    </td>
+    <td class="tableheader">
+      <b>Description</b>
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <b>osc1</b>
+    </td>
+    <td>
+      <b>OUT1</b> is the bitwise result of OSC1 AND OSC2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>ring</b>
+    </td>
+    <td>
+      <b>OUT1</b> is OSC1 ring modulated (or multiplied) by OSC2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>min</b>
+    </td>
+    <td>
+      <b>OUT1</b> is equal to whichever OSC has a lower value.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>pong</b>
+    </td>
+    <td>
+      <b>OUT1</b> is OSC1 if it is positive, otherwise OSC2 if it is negative, otherwise 0.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>inlv</b>
+    </td>
+    <td>
+      <b>OUT1</b> is the result of interleaving the bits of OSC1 and OSC2's values.  First bit from OSC1, then a bit from OSC2, ...
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>and</b>
+    </td>
+    <td>
+      <b>OUT1</b> is the bitwise result of OSC1 AND OSC2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>xor</b>
+    </td>
+    <td>
+      <b>OUT1</b> is the bitwise result of OSC1 XOR OSC2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>gLcH</b>
+    </td>
+    <td>
+      <b>OUT1</b> is the result of a complex bitwise algorithm combining OSC1 and OSC2.
+    </td>
+  </tr>
+</tbody></table><br>
+
+</div>
+</div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Sync Modes"><h3 class="pageTitle" id="p-Sync Modes"> Sync Modes</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>Sync Modes</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      Both oscillators can be synced:<br>
+      <ul>
+        <li>Externally when a value greater than 0.2 volts is present on <b>SYNC</b> input.</li>
+        <li>To an internal oscillator when <b>INT SYNC</b> is enabled.</li>
+      </ul>
+      When <b>INT SYNC</b> is pressed once the internal sync oscillator is the same base frequency as OSC1.<br>
+      When <b>INT SYNC</b> is flashing, the internal sync oscillator is half the frequency as OSC1.<br>
+      Press <b>SYNC/PULSE/STEP</b> and turn data encoder to select sync modes for each oscillator.
+    </td>
+  </tr>
+</tbody></table><br>
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td class="tableheader">
+      <b>Mode</b>
+    </td>
+    <td class="tableheader">
+      <b>Description</b>
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <b>Hard</b>
+    </td>
+    <td>
+      Oscillator phase is reset to zero when sync occurs.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Soft</b>
+    </td>
+    <td>
+      Oscillator phase is reset to zero if it is within the first 1/4 of it's cycle when sync occurs.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Rev</b>
+    </td>
+    <td>
+      The oscillator direction is reversed when a sync event occurs.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Hold</b>
+    </td>
+    <td>
+      Oscillator switches between holding a steady value, and running normally, on each sync event.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>1shot</b>
+    </td>
+    <td>
+      Oscillator runs for one cycle of the waveform on each sync event.  Useful in LFO mode to act as a complex envelope.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Bump</b>
+    </td>
+    <td>
+      Oscillator's phase is incremented by 1/4 a wavecycle on each sync event.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>2=1 Sync</b>
+    </td>
+    <td>
+      Same as <b>Hard</b> mode, but also generates additional sync events on oscillator 2 whenever oscillator 2 and 1 have equal output values.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>1=2 Sync</b>
+    </td>
+    <td>
+      Same as <b>Hard</b> mode, but also generates additional sync events on oscillator 1 whenever oscillator 1 and 2 have equal output values.    
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Off</b>
+    </td>
+    <td>
+      Sync events have no effect on the oscillator.
+    </td>
+  </tr>
+</tbody></table><br>
+
+</div>
+</div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Pulse Modes"><h3 class="pageTitle" id="p-Pulse Modes"> Pulse Modes</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>Pulse Modes</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      Pulse mode controls the <b>PULSE</b> output signal functionality, which outputs either a 0v or 5v value.<br>
+      Press <b>SYNC/PULSE</b> twice and rotate data encoder to modify PULSE function.<br>
+    </td>
+  </tr>
+</tbody></table><br>
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td class="tableheader">
+      <b>Mode</b>
+    </td>
+    <td class="tableheader">
+      <b>PULSE output</b>
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <b>+o1</b>
+    </td>
+    <td>
+      high when either oscillator 1 is positive, otherwise 0.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>+o2</b>
+    </td>
+    <td>
+      high when either oscillator 2 is positive, otherwise 0.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>EOC</b>
+    </td>
+    <td>
+      high at the end of the <b>PERC MODE</b> envelope, low while <b>PERC MODE</b> envelope is decaying.  If <b>PERC MODE</b> is disabled, <b>PULSE</b> will always be high.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>-o2</b>
+    </td>
+    <td>
+      high when oscillator 2 is negative.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>OR</b>
+    </td>
+    <td>
+      high when oscillator 1 or 2 is positive.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>AND</b>
+    </td>
+    <td>
+      high when oscillator 1 and 2 is positive.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>XOR</b>
+    </td>
+    <td>
+      high when one of oscillator 1, or 2, but not both, are positive.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>gLcH</b>
+    </td>
+    <td>
+      high when the result of the gLcH combo mode would be positive.  This is available for PULSE even if gLcH is not the active COMBO MODE.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>sq1</b>
+    </td>
+    <td>
+      square wave with frequency equal to oscillator 1.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>sq2</b>
+    </td>
+    <td>
+      square wave with frequency equal to oscillator 2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>pmw1</b>
+    </td>
+    <td>
+      pulse width waveform with frequency equal to oscillator 1, and variable width controlled by <b>SHAPE 1</b>.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>pmw2</b>
+    </td>
+    <td>
+      pulse width waveform with frequency equal to oscillator 2, and variable width controlled by <b>SHAPE 2</b>.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>1&gt;2</b>
+    </td>
+    <td>
+      high when the value of oscillator 1 is higher than oscillator 2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>1&lt;2</b>
+    </td>
+    <td>
+      high when the value of oscillator 1 is lower than oscillator 2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>RND1</b>
+    </td>
+    <td>
+      random value, updated once at the start of every cycle of oscillator 1.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>RND2</b>
+    </td>
+    <td>
+      random value, updated once at the start of every cycle of oscillator 2.
+    </td>
+  </tr>
+  
+</tbody></table><br>
+
+</div>
+</div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-MOD A"><h3 class="pageTitle" id="p-MOD A"> MOD A</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>MOD A Destinations</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>MOD A</b> modulation input is high speed (96khz) and AC-coupled.  It is normalized to <b>OUT 1</b>, so even with nothing patched the <b>MOD A</b> attenuator is an important control for the output of the patch.<br>
+      To Change <b>MOD A</b> modulation destination, press <b>MOD A / MORPH</b> and turn the data encoder.<br>
+    </td>
+  </tr>
+</tbody></table><br>
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td class="tableheader">
+      <b>Mode</b>
+    </td>
+    <td class="tableheader">
+      <b>Description</b>
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <b>Phase2</b>
+    </td>
+    <td>
+      <b>MOD A</b> modulates the phase of oscillator 2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Combo 2</b>
+    </td>
+    <td>
+      <b>MOD A</b>'s signal is sent into the COMBO MODE oscillator combiner in place of oscillator 2.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Shaper 2</b>
+    </td>
+    <td>
+      <b>MOD A</b> is used to address the wavetable for oscillator 2.  PITCH 2 and RATIO have no effect, and instead the <b>MOD A</b> signal is converted to an address in oscillator 2's waveform.  For example, a rising sawtooth sent to <b>MOD A</b> would emit oscillator 2's waveform at the same rate as the input sawtooth.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Voc MOD</b>
+    </td>
+    <td>
+      <b>MOD A</b> is used as the modulation signal for the 64-band vocoder.  The output of the oscillator COMBO is used as the carrier signal.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Phase 1</b>
+    </td>
+    <td>
+      <b>MOD A</b> modulates the phase of oscillator 1.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Combo 1</b>
+    </td>
+    <td>
+      <b>MOD A</b>'s signal is sent into the COMBO MODE oscillator combiner in place of oscillator 1.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Shaper 1</b>
+    </td>
+    <td>
+      <b>MOD A</b> is used to address the wavetable for oscillator 1.  In Chord Mode only the first oscillator is affected.
+  </td></tr>
+  <tr>
+    <td>
+      <b>Voc CARR</b>
+    </td>
+    <td>
+      <b>MOD A</b> is used as the carrier signal for the 64-band vocoder.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Sync 2</b>
+    </td>
+    <td>
+      <b>MOD A</b> is used as the sync input for oscillator 2, allowing oscillators 1 and 2 to be syncronized to different signals.
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>PrstStep</b>
+    </td>
+    <td>
+      <b>MOD A</b> is used as a trigger to step in PRESET STEP mode.  This allows the SYNC input to be used for sync signals or preset stepping.
+    </td>
+  </tr>
+</tbody></table><br>
+
+</div>
+</div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Wavetables"><h3 class="pageTitle" id="p-Wavetables"> Wavetables</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+      <br>
+          <p>Basic1</p>
+          <img src="img/wave1/line1.png">
+      <br>
+          <p>Basic2</p>
+          <img src="img/wave1/line2.png">
+      <br>
+          <p>BasRec</p>
+          <img src="img/wave1/line3.png">
+      <br>
+          <p>BiPuls</p>
+          <img src="img/wave1/line4.png">
+      <br>
+          <p>BitCr1</p>
+          <img src="img/wave1/line5.png">
+      <br>
+          <p>BitCr2</p>
+          <img src="img/wave1/line6.png">
+      <br>
+          <p>BitCr3</p>
+          <img src="img/wave1/line7.png">
+      <br>
+          <p>BitCr4</p>
+          <img src="img/wave1/line8.png">
+      <br>
+          <p>Buzzer</p>
+          <img src="img/wave1/line9.png">
+      <br>
+          <p>Cello1</p>
+          <img src="img/wave1/line10.png">
+      <br>
+          <p>Cello2</p>
+          <img src="img/wave1/line11.png">
+      <br>
+          <p>Chip1</p>
+          <img src="img/wave1/line12.png">
+      <br>
+          <p>Chip2</p>
+          <img src="img/wave1/line13.png">
+      <br>
+          <p>Chip3</p>
+          <img src="img/wave2/line1.png">
+      <br>
+          <p>Chip4</p>
+          <img src="img/wave2/line2.png">
+      <br>
+          <p>Chip5</p>
+          <img src="img/wave2/line3.png">
+      <br>
+          <p>Chip6</p>
+          <img src="img/wave3/line1.png">
+      <br>
+          <p>Chirp1</p>
+          <img src="img/wave3/line2.png">
+      <br>
+          <p>Chirp2</p>
+          <img src="img/wave3/line3.png">
+      <br>
+          <p>Chirp3</p>
+          <img src="img/wave3/line4.png">
+      <br>
+          <p>Chirp4</p>
+          <img src="img/wave3/line5.png">
+      <br>
+          <p>Chirp5</p>
+          <img src="img/wave3/line6.png">
+      <br>
+          <p>Chirp6</p>
+          <img src="img/wave3/line7.png">
+      <br>
+          <p>Chirp7</p>
+          <img src="img/wave3/line8.png">
+      <br>
+          <p>Chirp8</p>
+          <img src="img/wave3/line9.png">
+      <br>
+          <p>Chirp9</p>
+          <img src="img/wave3/line10.png">
+      <br>
+          <p>Chrp10</p>
+          <img src="img/wave3/line11.png">
+      <br>
+          <p>Chrp11</p>
+          <img src="img/wave3/line12.png">
+      <br>
+          <p>Chrp12</p>
+          <img src="img/wave3/line13.png">
+      <br>
+          <p>Chrp13</p>
+          <img src="img/wave3/line14.png">
+      <br>
+          <p>Chrp14</p>
+          <img src="img/wave3/line15.png">
+      <br>
+          <p>Chrp15</p>
+          <img src="img/wave3/line16.png">
+      <br>
+          <p>Chrp16</p>
+          <img src="img/wave4/line1.png">
+      <br>
+          <p>Chrp17</p>
+          <img src="img/wave4/line2.png">
+      <br>
+          <p>Chrp18</p>
+          <img src="img/wave4/line3.png">
+      <br>
+          <p>Chrp19</p>
+          <img src="img/wave4/line4.png">
+      <br>
+          <p>Chrp20</p>
+          <img src="img/wave4/line5.png">
+      <br>
+          <p>Clmet</p>
+          <img src="img/wave4/line6.png">
+      <br>
+          <p>Clav1</p>
+          <img src="img/wave4/line7.png">
+      <br>
+          <p>Clav2</p>
+          <img src="img/wave4/line8.png">
+      <br>
+          <p>Dstrt1</p>
+          <img src="img/wave4/line9.png">
+      <br>
+          <p>Dstrt2</p>
+          <img src="img/wave4/line10.png">
+      <br>
+          <p>Dstrt3</p>
+          <img src="img/wave4/line11.png">
+      <br>
+          <p>eBass1</p>
+          <img src="img/wave4/line12.png">
+      <br>
+          <p>eBass2</p>
+          <img src="img/wave4/line13.png">
+      <br>
+          <p>eBass3</p>
+          <img src="img/wave4/line14.png">
+      <br>
+          <p>eBass4</p>
+          <img src="img/wave4/line15.png">
+      <br>
+          <p>ePian1</p>
+          <img src="img/wave4/line16.png">
+      <br>
+          <p>ePian2</p>
+          <img src="img/wave5/line1.png">
+      <br>
+          <p>ePian3</p>
+          <img src="img/wave5/line2.png">
+      <br>
+          <p>ePian4</p>
+          <img src="img/wave5/line3.png">
+      <br>
+          <p>ePian5</p>
+          <img src="img/wave5/line4.png">
+      <br>
+          <p>Flute1</p>
+          <img src="img/wave5/line5.png">
+      <br>
+          <p>GapSaw</p>
+          <img src="img/wave5/line6.png">
+      <br>
+          <p>Grain1</p>
+          <img src="img/wave5/line7.png">
+      <br>
+          <p>Grain2</p>
+          <img src="img/wave5/line8.png">
+      <br>
+          <p>Grain3</p>
+          <img src="img/wave5/line9.png">
+      <br>
+          <p>Gitar1</p>
+          <img src="img/wave5/line10.png">
+      <br>
+          <p>Gitar2</p>
+          <img src="img/wave5/line11.png">
+      <br>
+          <p>Gitar3</p>
+          <img src="img/wave5/line12.png">
+      <br>
+          <p>Gitar4</p>
+          <img src="img/wave5/line13.png">
+      <br>
+          <p>Harmo1</p>
+          <img src="img/wave5/line14.png">
+      <br>
+          <p>Harmo2</p>
+          <img src="img/wave5/line15.png">
+      <br>
+          <p>Harmo3</p>
+          <img src="img/wave5/line16.png">
+      <br>
+          <p>LFO1</p>
+          <img src="img/wave6/line1.png">
+      <br>
+          <p>LFO2</p>
+          <img src="img/wave6/line2.png">
+      <br>
+          <p>LFO3</p>
+          <img src="img/wave6/line3.png">
+      <br>
+          <p>LFO4</p>
+          <img src="img/wave6/line4.png">
+      <br>
+          <p>LFO5</p>
+          <img src="img/wave6/line5.png">
+      <br>
+          <p>LFO6</p>
+          <img src="img/wave6/line6.png">
+      <br>
+          <p>LFO7</p>
+          <img src="img/wave6/line7.png">
+      <br>
+          <p>LFO8</p>
+          <img src="img/wave6/line8.png">
+      <br>
+          <p>LFO9</p>
+          <img src="img/wave6/line9.png">
+      <br>
+          <p>LFO10</p>
+          <img src="img/wave6/line10.png">
+      <br>
+          <p>LFO11</p>
+          <img src="img/wave6/line11.png">
+      <br>
+          <p>LFO12</p>
+          <img src="img/wave6/line12.png">
+      <br>
+          <p>LFO13</p>
+          <img src="img/wave6/line13.png">
+      <br>
+          <p>LFO14</p>
+          <img src="img/wave6/line14.png">
+      <br>
+          <p>LFO15</p>
+          <img src="img/wave6/line15.png">
+      <br>
+          <p>LFO16</p>
+          <img src="img/wave6/line16.png">
+      <br>
+          <p>LFO17</p>
+          <img src="img/wave7/line1.png">
+      <br>
+          <p>LFO18</p>
+          <img src="img/wave7/line2.png">
+      <br>
+          <p>LFO19</p>
+          <img src="img/wave7/line3.png">
+      <br>
+          <p>LFO20</p>
+          <img src="img/wave7/line4.png">
+      <br>
+          <p>LFO21</p>
+          <img src="img/wave7/line5.png">
+      <br>
+          <p>Misc1</p>
+          <img src="img/wave7/line6.png">
+      <br>
+          <p>Misc2</p>
+          <img src="img/wave7/line7.png">
+      <br>
+          <p>Misc3</p>
+          <img src="img/wave7/line8.png">
+      <br>
+          <p>Misc4</p>
+          <img src="img/wave7/line9.png">
+      <br>
+          <p>Noise1</p>
+          <img src="img/wave7/line10.png">
+      <br>
+          <p>Noise2</p>
+          <img src="img/wave7/line11.png">
+      <br>
+          <p>Noise3</p>
+          <img src="img/wave7/line12.png">
+      <br>
+          <p>Noise4</p>
+          <img src="img/wave7/line13.png">
+      <br>
+          <p>Noise5</p>
+          <img src="img/wave7/line14.png">
+      <br>
+          <p>Noise6</p>
+          <img src="img/wave7/line15.png">
+      <br>
+          <p>Oboes</p>
+          <img src="img/wave7/line16.png">
+      <br>
+          <p>Chvlo1</p>
+          <img src="img/wave8/line1.png">
+      <br>
+          <p>Chvlo2</p>
+          <img src="img/wave8/line2.png">
+      <br>
+          <p>Raw1</p>
+          <img src="img/wave8/line3.png">
+      <br>
+          <p>Raw2</p>
+          <img src="img/wave8/line4.png">
+      <br>
+          <p>Raw3</p>
+          <img src="img/wave8/line5.png">
+      <br>
+          <p>ResPls</p>
+          <img src="img/wave8/line6.png">
+      <br>
+          <p>ResSaw</p>
+          <img src="img/wave8/line7.png">
+      <br>
+          <p>ResSqu</p>
+          <img src="img/wave8/line8.png">
+      <br>
+          <p>Saxoph</p>
+          <img src="img/wave8/line9.png">
+      <br>
+          <p>Symmtr</p>
+          <img src="img/wave8/line10.png">
+      <br>
+          <p>Thrmin</p>
+          <img src="img/wave8/line11.png">
+      <br>
+          <p>2Tone1</p>
+          <img src="img/wave8/line12.png">
+      <br>
+          <p>2Tone2</p>
+          <img src="img/wave8/line13.png">
+      <br>
+          <p>2Tone3</p>
+          <img src="img/wave8/line14.png">
+      <br>
+          <p>2Tone4</p>
+          <img src="img/wave8/line15.png">
+      <br>
+          <p>2Tone5</p>
+          <img src="img/wave8/line16.png">
+      <br>
+          <p>2Tone6</p>
+          <img src="img/wave9/line1.png">
+      <br>
+          <p>2Tone7</p>
+          <img src="img/wave9/line2.png">
+      <br>
+          <p>2Tone8</p>
+          <img src="img/wave9/line3.png">
+      <br>
+          <p>2Tone9</p>
+          <img src="img/wave9/line4.png">
+      <br>
+          <p>VidGm1</p>
+          <img src="img/wave9/line5.png">
+      <br>
+          <p>VidGm2</p>
+          <img src="img/wave9/line6.png">
+      <br>
+          <p>VidGm3</p>
+          <img src="img/wave9/line7.png">
+      <br>
+          <p>VidGm4</p>
+          <img src="img/wave9/line8.png">
+      <br>
+          <p>Violin</p>
+          <img src="img/wave9/line9.png">
+      <br>
+          <p>Vocal1</p>
+          <img src="img/wave9/line10.png">
+      <br>
+          <p>Vocal2</p>
+          <img src="img/wave9/line11.png">
+      <br>
+          <p>Vocal3</p>
+          <img src="img/wave9/line12.png">
+      <br>
+          <p>Vocal4</p>
+          <img src="img/wave9/line13.png">
+      <br>
+          <p>Vocal5</p>
+          <img src="img/wave9/line14.png">
+      <br>
+          <p>Vocal6</p>
+          <img src="img/wave9/line15.png">
+      <br>
+          <p>Vocal7</p>
+          <img src="img/wave9/line16.png">
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Chords"><h3 class="pageTitle" id="p-Chords"> Chords</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td colspan="2" class="tableheader">
+      <b>Chord Mode</b>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      When <b>CHORD MODE</b> is enabled, oscillator 1 emits 8 waveforms with the same shape, but different frequencies.<br>
+      Press <b>CHORD MODE</b> and rotate data encoder to pick the chord shape (see table below).<br>
+      Chord voices can also be detuned and overdriven via <b>CHORD DETUNE</b> and <b>CHORD DRIVE</b> functions which are active when <b>CHORD MODE</b> is active.<br>
+    </td>
+  </tr>
+</tbody></table><br>
+
+<table class="widerChart bordered">
+  <tbody><tr>
+    <td class="tableheader">
+      <b>Chord Mode</b>
+    </td>
+    <td class="tableheader">
+      <b>Description</b>
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <b>uniso</b>
+    </td>
+    <td>
+      Unison
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>m2nd</b>
+    </td>
+    <td>
+      Minor 2nd interval (1 semitone)
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>M2nd</b>
+    </td>
+    <td>
+      Major 2nd interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>m3rd</b>
+    </td>
+    <td>
+      Minor 3rd interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>M3rd</b>
+    </td>
+    <td>
+      Major 3rd interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>4th</b>
+    </td>
+    <td>
+      4th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>trito</b>
+    </td>
+    <td>
+      Tritone interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>5th</b>
+    </td>
+    <td>
+      5th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>aug5</b>
+    </td>
+    <td>
+      Augmented 5th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>6th</b>
+    </td>
+    <td>
+      6th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>m7th</b>
+    </td>
+    <td>
+      Minor 7th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>M7th</b>
+    </td>
+    <td>
+      Major 7th interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>octav</b>
+    </td>
+    <td>
+      Octave interval
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>suboc</b>
+    </td>
+    <td>
+      Suboctave
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>2oct</b>
+    </td>
+    <td>
+      Octave + 2octave
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>minor</b>
+    </td>
+    <td>
+      Minor triad
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>minI1</b>
+    </td>
+    <td>
+      Minor triad / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>minI2</b>
+    </td>
+    <td>
+      Minor triad / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>major</b>
+    </td>
+    <td>
+      Major triad
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>majI1</b>
+    </td>
+    <td>
+      Major triad / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>majI2</b>
+    </td>
+    <td>
+      Major triad / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>sus</b>
+    </td>
+    <td>
+      Suspended triad
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>aug</b>
+    </td>
+    <td>
+      Augmented triad
+    </td>
+  </tr>  
+  <tr>
+    <td>
+      <b>dim</b>
+    </td>
+    <td>
+      Diminished triad
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>maj6</b>
+    </td>
+    <td>
+      Major 6th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>maj7</b>
+    </td>
+    <td>
+      Major 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7M1st</b>
+    </td>
+    <td>
+      Major 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7M2nd</b>
+    </td>
+    <td>
+      Major 7th / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7M3rd</b>
+    </td>
+    <td>
+      Major 7th / 3rd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>dom</b>
+    </td>
+    <td>
+      Dominant 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7D1st</b>
+    </td>
+    <td>
+      Dominant 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7D2nd</b>
+    </td>
+    <td>
+      Dominant 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7D3rd</b>
+    </td>
+    <td>
+      Dominant 7th / 3rd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>min7</b>
+    </td>
+    <td>
+      Minor 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7m1st</b>
+    </td>
+    <td>
+      Minor 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7m2nd</b>
+    </td>
+    <td>
+      Minor 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7m3rd</b>
+    </td>
+    <td>
+      Minor 7th / 3rd inversion
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>hdim7</b>
+    </td>
+    <td>
+      Half diminished 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7h1st</b>
+    </td>
+    <td>
+      Half diminished 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7h2nd</b>
+    </td>
+    <td>
+      Half diminished 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7h3rd</b>
+    </td>
+    <td>
+      Half diminished 7th / 3rd inversion
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>dim7</b>
+    </td>
+    <td>
+      Diminished 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7d1st</b>
+    </td>
+    <td>
+      Diminished 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7d2nd</b>
+    </td>
+    <td>
+      Diminished 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7d3rd</b>
+    </td>
+    <td>
+      Diminished 7th / 3rd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7sus</b>
+    </td>
+    <td>
+      Suspended 7th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7s1st</b>
+    </td>
+    <td>
+      Suspended 7th / 1st inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>7s2nd</b>
+    </td>
+    <td>
+      Suspended 7th / 2nd inversion
+    </td>
+  </tr>  <tr>
+    <td>
+      <b>7s3rd</b>
+    </td>
+    <td>
+      Suspended 7th / 3rd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>D9th</b>
+    </td>
+    <td>
+      Dominant 9th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9D2nd</b>
+    </td>
+    <td>
+      Dominant 9th / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Dm9th</b>
+    </td>
+    <td>
+      Dominant minor 9th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Dm9-2</b>
+    </td>
+    <td>
+      Dominant minor 9th / 2nd inversion
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>maj9</b>
+    </td>
+    <td>
+      Major 9th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9M2nd</b>
+    </td>
+    <td>
+      Major 9th / 2nd inversion
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <b>min9</b>
+    </td>
+    <td>
+      Minor 9th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9m2nd</b>
+    </td>
+    <td>
+      Minor 9th / 2nd inversion
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>M6/9</b>
+    </td>
+    <td>
+      Major 6/9
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>m6/9</b>
+    </td>
+    <td>
+      Minor 6/9
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9b5</b>
+    </td>
+    <td>
+      9th, flat 5th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>9#5</b>
+    </td>
+    <td>
+      9th, sharp 5th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>D11th</b>
+    </td>
+    <td>
+      Dominant 11th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>m11th</b>
+    </td>
+    <td>
+      Minor 11th
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>CH*(...)</b>
+    </td>
+    <td>
+      When Chord type begins with a *, it is controlled by <b>MODB</b>.  Enable by selecting the last entry in the chord type list.
+    </td>
+  </tr>
+
+</tbody></table><br>
+
+</div>
+</div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Presets"><h3 class="pageTitle" id="p-Presets"> Presets</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+      <table class="widerChart bordered">
+        <tbody><tr>
+          <td class="tableheader">
+            <b>Preset Mode</b>
+          </td>
+        </tr>
+        
+        <tr>
+            <td>
+              <p>
+                Use Preset mode to load, save, sequence and morph between 100 stored presets.<br>
+                Press the left data entry encoder underneath the <span class="preset">PRESET MODE</span> LED to enable/disable Preset mode.  The red  <span class="preset">PRESET MODE</span> LED indicates when Preset mode is active.<br>
+              </p>
+              <p>
+                A preset contains values for every knob and patch setting.  When a preset is loaded, the physical knob positions are ignored until the knob is moved.
+              </p>
+              <p>
+                The last loaded preset is remembered by the Shapeshifter, and reloaded on powerup.
+              </p>
+            </td>
+        </tr>
+      </tbody></table>
+      <br>
+
+      <table class="widerChart bordered">
+        <tbody><tr>
+          <td colspan="2" class="tableheader">
+            <b>Preset: Key Combos</b>
+          </td>
+        </tr>
+        
+        <tr>
+          <td colspan="2">
+            Hold <b>COMBO MODE</b> and press <span class="preset">MORPH</span> to randomize all preset values.<br>
+            Hold <b>COMBO MODE</b> and press <span class="preset">LOAD</span> to initialize all preset values.<br>
+          </td>
+        </tr>
+      </tbody></table><br>
+
+      <table class="widerChart bordered">
+        <tbody><tr>
+          <td colspan="2" class="tableheader">
+            <b>Preset Mode: Controls</b>
+          </td>
+        </tr>
+        
+        <tr>
+            <td>
+              <span class="preset">SAVE</span>
+            </td>
+            <td>
+              <b>Press</b> to begin saving into the currently displayed "Preset ##"" slot number.<br>
+              The LCD will display "Save? No".  Rotate encoder until it the LCD displays "Save? YES".  Then <b>press</b> <span class="preset">SAVE</span> again.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+              <span class="preset">LOAD</span>
+            </td>
+            <td>
+              <b>Press</b> to load the currently displayed "Prset ##" slot number into the active patch.<br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+              <span class="preset">MORPH</span>
+            </td>
+            <td>
+              <b>Press</b> to begin morphing between the current panel settings and a chosen preset.<br>
+              Rotate the left data encoder to change presets.<br>
+              Use <b>MOD B</b> knob and CV input to morph between panel state (counter-clockwise) and the preset value (clockwise).<br>
+              Note: <b>INT SYNC</b> and <b>PERC MODE</b> are always read from the panel state and are not morphed.
+            </td>
+        </tr>
+      </tbody></table><br>
+
+      <table class="widerChart bordered">
+        <tbody><tr>
+          <td colspan="2" class="tableheader">
+            <b>Preset Stepping</b>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <b>Press</b> <span class="preset">STEP</span> to enter preset stepping mode.<br>In preset step mode, a series of presets are sequenced via either triggers sent to <b>SYNC</b> or by setting <b>MOD A</b> to "PrstStep".<br>
+
+            Turn the left rotary encoder to choose between the seven settings for preset step mode.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b>Fwd: NN</b>
+          </td>
+          <td>
+            <b>Press</b> <span class="preset">STEP</span> to step through presets in a forward direction when a trigger is sent to SYNC.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b>Rev: NN</b>
+          </td>
+          <td>
+            <b>Press</b> <span class="preset">STEP</span> to step through presets in a reverse direction when a trigger is sent to SYNC.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b>Fw/Rv: NN</b>
+          </td>
+          <td>
+            <b>Press</b> <span class="preset">STEP</span> to step through presets in a forward direction to the last preset, then reverse back to the first preset, when a trigger is sent to SYNC.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b>RandP: NN</b>
+          </td>
+          <td>
+            <b>Press</b> <span class="preset">STEP</span> to step through presets randomly between the beginning and ending preset number when a trigger is sent to SYNC.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b>RandS: NN</b>
+          </td>
+          <td>
+            <b>Press</b> <span class="preset">STEP</span> to randomize all preset parameters when a trigger is sent to SYNC.  Presets are not used.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b>Mod B: NN</b>
+          </td>
+          <td>
+            <b>Press</b> <span class="preset">STEP</span> to continuously select the preset by the value of MOD B knob and CV input.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b>Begin: NN</b>
+          </td>
+          <td>
+            <b>Press</b> <span class="preset">STEP</span> and rotate the left data encoder to select the starting preset number to sequence from.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b>End: NN</b>
+          </td>
+          <td>
+            <b>Press</b> <span class="preset">STEP</span> and rotate the left data encoder to select the ending preset number to sequence from.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <b>Div: NN</b>
+          </td>
+          <td>
+            <b>Press</b> <span class="preset">STEP</span> and rotate the left data encoder to configure a clock divider for incoming triggers on SYNC.  For example, when set to 8, the preset will change to the next in sequence after 8 incoming trigger pulses.
+          </td>
+        </tr>
+
+      </tbody></table><br>
+
+      <table class="widerChart bordered">
+        <tbody><tr>
+          <td colspan="2" class="tableheader">
+            <b>Preset Naming</b>
+          </td>
+        </tr>
+        
+        <tr>
+          <td colspan="2">
+            Hold down <b>COMBO MODE</b> and press <span class="preset">STEP</span> to edit the preset name.  Turn the encoder to change characters, and press <b>COMBO MODE</b> to edit the next character.
+          </td>
+        </tr>
+      </tbody></table><br>
+
+      
+</div>
+
+</div></div></div></div></div></div><div><a href="https://shop.burns.ca/products/modular-drums-001-bia-techno"><div class="samplepack"><div class="samplepack-content"><div class="samplepack-image"><img src="https://cdn.shopify.com/s/files/1/0169/5584/products/image_150x.jpg?v=1574437087" /></div><div class="samplepack-text"><b>500+ Samples of the Noise Engineering Basimilus Iteritas Alter for $5</b><p>Support SynthModes by buying our new sample pack.  Free demo pack available!</p></div></div></div></a><div class="synthmodes-footer"><div class="synthmodes-footer-col"><a href="https://itunes.apple.com/ca/app/modes/id1445358435?mt=8"><svg id="livetype" xmlns="http://www.w3.org/2000/svg" width="119.66407" height="40" viewBox="0 0 119.66407 40"><title>Download_on_the_App_Store_Badge_US-UK_RGB_blk_4SVG_092917</title><g><g><g><path d="M110.13477,0H9.53468c-.3667,0-.729,0-1.09473.002-.30615.002-.60986.00781-.91895.0127A13.21476,13.21476,0,0,0,5.5171.19141a6.66509,6.66509,0,0,0-1.90088.627A6.43779,6.43779,0,0,0,1.99757,1.99707,6.25844,6.25844,0,0,0,.81935,3.61816a6.60119,6.60119,0,0,0-.625,1.90332,12.993,12.993,0,0,0-.1792,2.002C.00587,7.83008.00489,8.1377,0,8.44434V31.5586c.00489.3105.00587.6113.01515.9219a12.99232,12.99232,0,0,0,.1792,2.0019,6.58756,6.58756,0,0,0,.625,1.9043A6.20778,6.20778,0,0,0,1.99757,38.001a6.27445,6.27445,0,0,0,1.61865,1.1787,6.70082,6.70082,0,0,0,1.90088.6308,13.45514,13.45514,0,0,0,2.0039.1768c.30909.0068.6128.0107.91895.0107C8.80567,40,9.168,40,9.53468,40H110.13477c.3594,0,.7246,0,1.084-.002.3047,0,.6172-.0039.9219-.0107a13.279,13.279,0,0,0,2-.1768,6.80432,6.80432,0,0,0,1.9082-.6308,6.27742,6.27742,0,0,0,1.6172-1.1787,6.39482,6.39482,0,0,0,1.1816-1.6143,6.60413,6.60413,0,0,0,.6191-1.9043,13.50643,13.50643,0,0,0,.1856-2.0019c.0039-.3106.0039-.6114.0039-.9219.0078-.3633.0078-.7246.0078-1.0938V9.53613c0-.36621,0-.72949-.0078-1.09179,0-.30664,0-.61426-.0039-.9209a13.5071,13.5071,0,0,0-.1856-2.002,6.6177,6.6177,0,0,0-.6191-1.90332,6.46619,6.46619,0,0,0-2.7988-2.7998,6.76754,6.76754,0,0,0-1.9082-.627,13.04394,13.04394,0,0,0-2-.17676c-.3047-.00488-.6172-.01074-.9219-.01269-.3594-.002-.7246-.002-1.084-.002Z" style="fill: #a6a6a6"></path><path d="M8.44483,39.125c-.30468,0-.602-.0039-.90429-.0107a12.68714,12.68714,0,0,1-1.86914-.1631,5.88381,5.88381,0,0,1-1.65674-.5479,5.40573,5.40573,0,0,1-1.397-1.0166,5.32082,5.32082,0,0,1-1.02051-1.3965,5.72186,5.72186,0,0,1-.543-1.6572,12.41351,12.41351,0,0,1-.1665-1.875c-.00634-.2109-.01464-.9131-.01464-.9131V8.44434S.88185,7.75293.8877,7.5498a12.37039,12.37039,0,0,1,.16553-1.87207,5.7555,5.7555,0,0,1,.54346-1.6621A5.37349,5.37349,0,0,1,2.61183,2.61768,5.56543,5.56543,0,0,1,4.01417,1.59521a5.82309,5.82309,0,0,1,1.65332-.54394A12.58589,12.58589,0,0,1,7.543.88721L8.44532.875H111.21387l.9131.0127a12.38493,12.38493,0,0,1,1.8584.16259,5.93833,5.93833,0,0,1,1.6709.54785,5.59374,5.59374,0,0,1,2.415,2.41993,5.76267,5.76267,0,0,1,.5352,1.64892,12.995,12.995,0,0,1,.1738,1.88721c.0029.2832.0029.5874.0029.89014.0079.375.0079.73193.0079,1.09179V30.4648c0,.3633,0,.7178-.0079,1.0752,0,.3252,0,.6231-.0039.9297a12.73126,12.73126,0,0,1-.1709,1.8535,5.739,5.739,0,0,1-.54,1.67,5.48029,5.48029,0,0,1-1.0156,1.3857,5.4129,5.4129,0,0,1-1.3994,1.0225,5.86168,5.86168,0,0,1-1.668.5498,12.54218,12.54218,0,0,1-1.8692.1631c-.2929.0068-.5996.0107-.8974.0107l-1.084.002Z"></path></g><g id="_Group_" data-name="&lt;Group>"><g id="_Group_2" data-name="&lt;Group>"><g id="_Group_3" data-name="&lt;Group>"><path id="_Path_" data-name="&lt;Path>" d="M24.76888,20.30068a4.94881,4.94881,0,0,1,2.35656-4.15206,5.06566,5.06566,0,0,0-3.99116-2.15768c-1.67924-.17626-3.30719,1.00483-4.1629,1.00483-.87227,0-2.18977-.98733-3.6085-.95814a5.31529,5.31529,0,0,0-4.47292,2.72787c-1.934,3.34842-.49141,8.26947,1.3612,10.97608.9269,1.32535,2.01018,2.8058,3.42763,2.7533,1.38706-.05753,1.9051-.88448,3.5794-.88448,1.65876,0,2.14479.88448,3.591.8511,1.48838-.02416,2.42613-1.33124,3.32051-2.66914a10.962,10.962,0,0,0,1.51842-3.09251A4.78205,4.78205,0,0,1,24.76888,20.30068Z" style="fill: #fff"></path><path id="_Path_2" data-name="&lt;Path>" d="M22.03725,12.21089a4.87248,4.87248,0,0,0,1.11452-3.49062,4.95746,4.95746,0,0,0-3.20758,1.65961,4.63634,4.63634,0,0,0-1.14371,3.36139A4.09905,4.09905,0,0,0,22.03725,12.21089Z" style="fill: #fff"></path></g></g><g><path d="M42.30227,27.13965h-4.7334l-1.13672,3.35645H34.42727l4.4834-12.418h2.083l4.4834,12.418H43.438ZM38.0591,25.59082h3.752l-1.84961-5.44727h-.05176Z" style="fill: #fff"></path><path d="M55.15969,25.96973c0,2.81348-1.50586,4.62109-3.77832,4.62109a3.0693,3.0693,0,0,1-2.84863-1.584h-.043v4.48438h-1.8584V21.44238H48.4302v1.50586h.03418a3.21162,3.21162,0,0,1,2.88281-1.60059C53.645,21.34766,55.15969,23.16406,55.15969,25.96973Zm-1.91016,0c0-1.833-.94727-3.03809-2.39258-3.03809-1.41992,0-2.375,1.23047-2.375,3.03809,0,1.82422.95508,3.0459,2.375,3.0459C52.30227,29.01563,53.24953,27.81934,53.24953,25.96973Z" style="fill: #fff"></path><path d="M65.12453,25.96973c0,2.81348-1.50586,4.62109-3.77832,4.62109a3.0693,3.0693,0,0,1-2.84863-1.584h-.043v4.48438h-1.8584V21.44238H58.395v1.50586h.03418A3.21162,3.21162,0,0,1,61.312,21.34766C63.60988,21.34766,65.12453,23.16406,65.12453,25.96973Zm-1.91016,0c0-1.833-.94727-3.03809-2.39258-3.03809-1.41992,0-2.375,1.23047-2.375,3.03809,0,1.82422.95508,3.0459,2.375,3.0459C62.26711,29.01563,63.21438,27.81934,63.21438,25.96973Z" style="fill: #fff"></path><path d="M71.71047,27.03613c.1377,1.23145,1.334,2.04,2.96875,2.04,1.56641,0,2.69336-.80859,2.69336-1.91895,0-.96387-.67969-1.541-2.28906-1.93652l-1.60937-.3877c-2.28027-.55078-3.33887-1.61719-3.33887-3.34766,0-2.14258,1.86719-3.61426,4.51855-3.61426,2.624,0,4.42285,1.47168,4.4834,3.61426h-1.876c-.1123-1.23926-1.13672-1.9873-2.63379-1.9873s-2.52148.75684-2.52148,1.8584c0,.87793.6543,1.39453,2.25488,1.79l1.36816.33594c2.54785.60254,3.60645,1.626,3.60645,3.44238,0,2.32324-1.85059,3.77832-4.79395,3.77832-2.75391,0-4.61328-1.4209-4.7334-3.667Z" style="fill: #fff"></path><path d="M83.34621,19.2998v2.14258h1.72168v1.47168H83.34621v4.99121c0,.77539.34473,1.13672,1.10156,1.13672a5.80752,5.80752,0,0,0,.61133-.043v1.46289a5.10351,5.10351,0,0,1-1.03223.08594c-1.833,0-2.54785-.68848-2.54785-2.44434V22.91406H80.16262V21.44238H81.479V19.2998Z" style="fill: #fff"></path><path d="M86.065,25.96973c0-2.84863,1.67773-4.63867,4.29395-4.63867,2.625,0,4.29492,1.79,4.29492,4.63867,0,2.85645-1.66113,4.63867-4.29492,4.63867C87.72609,30.6084,86.065,28.82617,86.065,25.96973Zm6.69531,0c0-1.9541-.89551-3.10742-2.40137-3.10742s-2.40039,1.16211-2.40039,3.10742c0,1.96191.89453,3.10645,2.40039,3.10645S92.76027,27.93164,92.76027,25.96973Z" style="fill: #fff"></path><path d="M96.18606,21.44238h1.77246v1.541h.043a2.1594,2.1594,0,0,1,2.17773-1.63574,2.86616,2.86616,0,0,1,.63672.06934v1.73828a2.59794,2.59794,0,0,0-.835-.1123,1.87264,1.87264,0,0,0-1.93652,2.083v5.37012h-1.8584Z" style="fill: #fff"></path><path d="M109.3843,27.83691c-.25,1.64355-1.85059,2.77148-3.89844,2.77148-2.63379,0-4.26855-1.76465-4.26855-4.5957,0-2.83984,1.64355-4.68164,4.19043-4.68164,2.50488,0,4.08008,1.7207,4.08008,4.46582v.63672h-6.39453v.1123a2.358,2.358,0,0,0,2.43555,2.56445,2.04834,2.04834,0,0,0,2.09082-1.27344Zm-6.28223-2.70215h4.52637a2.1773,2.1773,0,0,0-2.2207-2.29785A2.292,2.292,0,0,0,103.10207,25.13477Z" style="fill: #fff"></path></g></g></g><g id="_Group_4" data-name="&lt;Group>"><g><path d="M37.82619,8.731a2.63964,2.63964,0,0,1,2.80762,2.96484c0,1.90625-1.03027,3.002-2.80762,3.002H35.67092V8.731Zm-1.22852,5.123h1.125a1.87588,1.87588,0,0,0,1.96777-2.146,1.881,1.881,0,0,0-1.96777-2.13379h-1.125Z" style="fill: #fff"></path><path d="M41.68068,12.44434a2.13323,2.13323,0,1,1,4.24707,0,2.13358,2.13358,0,1,1-4.24707,0Zm3.333,0c0-.97607-.43848-1.54687-1.208-1.54687-.77246,0-1.207.5708-1.207,1.54688,0,.98389.43457,1.55029,1.207,1.55029C44.57522,13.99463,45.01369,13.42432,45.01369,12.44434Z" style="fill: #fff"></path><path d="M51.57326,14.69775h-.92187l-.93066-3.31641h-.07031l-.92676,3.31641h-.91309l-1.24121-4.50293h.90137l.80664,3.436h.06641l.92578-3.436h.85254l.92578,3.436h.07031l.80273-3.436h.88867Z" style="fill: #fff"></path><path d="M53.85354,10.19482H54.709v.71533h.06641a1.348,1.348,0,0,1,1.34375-.80225,1.46456,1.46456,0,0,1,1.55859,1.6748v2.915h-.88867V12.00586c0-.72363-.31445-1.0835-.97168-1.0835a1.03294,1.03294,0,0,0-1.0752,1.14111v2.63428h-.88867Z" style="fill: #fff"></path><path d="M59.09377,8.437h.88867v6.26074h-.88867Z" style="fill: #fff"></path><path d="M61.21779,12.44434a2.13346,2.13346,0,1,1,4.24756,0,2.1338,2.1338,0,1,1-4.24756,0Zm3.333,0c0-.97607-.43848-1.54687-1.208-1.54687-.77246,0-1.207.5708-1.207,1.54688,0,.98389.43457,1.55029,1.207,1.55029C64.11232,13.99463,64.5508,13.42432,64.5508,12.44434Z" style="fill: #fff"></path><path d="M66.4009,13.42432c0-.81055.60352-1.27783,1.6748-1.34424l1.21973-.07031v-.38867c0-.47559-.31445-.74414-.92187-.74414-.49609,0-.83984.18213-.93848.50049h-.86035c.09082-.77344.81836-1.26953,1.83984-1.26953,1.12891,0,1.76563.562,1.76563,1.51318v3.07666h-.85547v-.63281h-.07031a1.515,1.515,0,0,1-1.35254.707A1.36026,1.36026,0,0,1,66.4009,13.42432Zm2.89453-.38477v-.37646l-1.09961.07031c-.62012.0415-.90137.25244-.90137.64941,0,.40527.35156.64111.835.64111A1.0615,1.0615,0,0,0,69.29543,13.03955Z" style="fill: #fff"></path><path d="M71.34816,12.44434c0-1.42285.73145-2.32422,1.86914-2.32422a1.484,1.484,0,0,1,1.38086.79h.06641V8.437h.88867v6.26074h-.85156v-.71143h-.07031a1.56284,1.56284,0,0,1-1.41406.78564C72.0718,14.772,71.34816,13.87061,71.34816,12.44434Zm.918,0c0,.95508.4502,1.52979,1.20313,1.52979.749,0,1.21191-.583,1.21191-1.52588,0-.93848-.46777-1.52979-1.21191-1.52979C72.72121,10.91846,72.26613,11.49707,72.26613,12.44434Z" style="fill: #fff"></path><path d="M79.23,12.44434a2.13323,2.13323,0,1,1,4.24707,0,2.13358,2.13358,0,1,1-4.24707,0Zm3.333,0c0-.97607-.43848-1.54687-1.208-1.54687-.77246,0-1.207.5708-1.207,1.54688,0,.98389.43457,1.55029,1.207,1.55029C82.12453,13.99463,82.563,13.42432,82.563,12.44434Z" style="fill: #fff"></path><path d="M84.66945,10.19482h.85547v.71533h.06641a1.348,1.348,0,0,1,1.34375-.80225,1.46456,1.46456,0,0,1,1.55859,1.6748v2.915H87.605V12.00586c0-.72363-.31445-1.0835-.97168-1.0835a1.03294,1.03294,0,0,0-1.0752,1.14111v2.63428h-.88867Z" style="fill: #fff"></path><path d="M93.51516,9.07373v1.1416h.97559v.74854h-.97559V13.2793c0,.47168.19434.67822.63672.67822a2.96657,2.96657,0,0,0,.33887-.02051v.74023a2.9155,2.9155,0,0,1-.4834.04541c-.98828,0-1.38184-.34766-1.38184-1.21582v-2.543h-.71484v-.74854h.71484V9.07373Z" style="fill: #fff"></path><path d="M95.70461,8.437h.88086v2.48145h.07031a1.3856,1.3856,0,0,1,1.373-.80664,1.48339,1.48339,0,0,1,1.55078,1.67871v2.90723H98.69v-2.688c0-.71924-.335-1.0835-.96289-1.0835a1.05194,1.05194,0,0,0-1.13379,1.1416v2.62988h-.88867Z" style="fill: #fff"></path><path d="M104.76125,13.48193a1.828,1.828,0,0,1-1.95117,1.30273A2.04531,2.04531,0,0,1,100.73,12.46045a2.07685,2.07685,0,0,1,2.07617-2.35254c1.25293,0,2.00879.856,2.00879,2.27V12.688h-3.17969v.0498a1.1902,1.1902,0,0,0,1.19922,1.29,1.07934,1.07934,0,0,0,1.07129-.5459Zm-3.126-1.45117h2.27441a1.08647,1.08647,0,0,0-1.1084-1.1665A1.15162,1.15162,0,0,0,101.63527,12.03076Z" style="fill: #fff"></path></g></g></g></svg><div>Get SynthModes for iOS</div></a></div><div class="synthmodes-footer-col"><div>By <b>tom@burns.ca</b></div><a href="https://github.com/boourns">Github</a><a href="https://instagram.com/gravitronic">Instagram</a><a href="https://twitter.com/burnsAudio">Twitter</a></div><div class="synthmodes-footer-col"><a href="https://sequencer.party">Sequencer Party: a multiplayer audio, midi, and video web platform</a></div></div></div></div></div></body></html>

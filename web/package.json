@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "esbuild ./src/render.tsx --bundle --platform=node --packages=external --target=node14 --outfile=build/render.cjs",
-    "render": "rm -rf dist/static && cp -R src/static dist/static && yarn build && node build/render.cjs",
+    "render": "rm -rf ../docs && mkdir ../docs && cp -R src/static ../docs/static && yarn build && node build/render.cjs",
     "watch": "nodemon --watch src --recursive --ext ts,tsx,css,json,xml --exec \"yarn render\""
   },
   "dependencies": {

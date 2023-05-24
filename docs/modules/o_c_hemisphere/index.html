@@ -1,0 +1,2584 @@
+<html><head><title>Ornament &amp; Crime (Hemisphere) | Synth Modes</title><meta charSet="utf-8" /><link rel="stylesheet" href="../../static/index.css" /><link rel="stylesheet" href="../../static/module.css" /><style>body {
+  font-family: -apple-system, sans-serif;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 2px;
+}
+
+h3 {
+  text-align: left;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: #1d1f21;
+    color: #dfdfe0;
+  }
+
+  h1, h2, h3 {
+    color: #ffffff;
+  }
+}
+
+.orange {
+  background-color: #ff9e20;
+}
+
+.green {
+  background-color: #00ee00;
+}
+
+.red {
+  background-color: #f41252;
+}
+
+.blue {
+  background-color: #00928f;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.darkgray {
+  background-color: #d5d5d5;
+}
+
+.flashing-green {
+  border: 0px;
+  background-color: #00ee00;
+  box-shadow: 0 0 10px #00ee00, inset 0 0 10px #00ee00;
+}
+
+.flashing-orange {
+  border: 0px;
+  background-color: #ff9e20;
+  box-shadow: 0 0 10px #ff9e20, inset 0 0 10px #ff9e20;
+}
+
+.flashing-red {
+  border: 0px;
+  background-color: #f41252;
+  box-shadow: 0 0 10px #f41252, inset 0 0 10px #f41252;
+}
+
+.flashing-white {
+  border: 0px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff, inset 0 0 10px #ffffff;
+}
+
+.leds {
+  text-align: center;
+}
+
+/* Page Layout */
+.content {
+  max-width: 700px;
+  align-self: center;
+  display: inline-block;
+  text-align: left;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .content {
+    min-width: 375px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .content {
+    width: 100%;
+  }
+}
+
+/* Main element groupings */
+
+.panel td {
+    text-align: center;
+    vertical-align: top;
+}
+
+.parameters tr td:first-child {
+    text-align: center;
+    vertical-align: top;
+    width:1%;
+}
+
+.chart tr th {
+  padding-right: 8px;
+}
+
+.chart tr td:first-child {
+  width:1%;
+}
+
+.bordered {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 3px;
+}
+
+.led {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+.led-small {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* just big circles - braids, clouds */
+
+.bigknob {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.smallknob {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* white knobs with wipers -rings, peaks */
+.knob {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 5px solid;
+  border-radius: 50%;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .knob {
+    background-color: black;
+  }
+}
+
+.knob-ccw {
+  transform: translate(25px, 20px) rotate(140deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-cw {
+  transform: translate(25px, 20px) rotate(40deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-center {
+  transform: translate(25px, 20px) rotate(-90deg) translateX(15px);
+  transform-origin: left;
+}
+
+.knob-wiper {
+  width: 22px;
+  display: block;
+  height: 6px;
+  background-color: white;
+  color: green;
+}
+
+.att {
+  margin: auto; /* this centers the block within it's container (usually a td) */
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.att-center {
+  transform: translate(10px, 8px) rotate(-90deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-ccw {
+  transform: translate(10px, 8px) rotate(140deg) translateX(6px);
+  transform-origin: left;
+}
+
+.att-cw {
+  transform: translate(10px, 8px) rotate(40deg) translateX(6px);
+  transform-origin: left;
+}
+
+.steel {
+  background-color: #bbbbbb;
+  text-align: center;
+  max-width: 300px;
+}
+
+.att-wiper {
+  width: 5px;
+  display: block;
+  height: 3px;
+  background-color: white;
+  color: green;
+}
+
+.button-black {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: #999999;
+}
+
+.lcd {
+  width: 90%;
+  height: 90px;
+  border-radius: 5px;
+  border: 1px solid;
+  display: inline-block;
+  background-color: #eeeeee;
+}
+
+.slider {
+  margin: auto; 
+  margin-top: 10px;
+
+  width: 10px;
+  height: 100px;
+  border-radius: 2px;
+  background-color: black;
+  overflow: auto;
+}
+
+.slider-led {
+  width: 6px;
+  margin: 2px;
+  height: 10px;
+  border-radius: 0px;
+  background-color: white;
+  position: relative;
+}
+
+.jack {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 4px solid;
+  border-color: #888888;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+  background-color: black;
+}
+
+/* Disting I/o labels and text params */
+
+.control {
+     background-color: #000000;
+     color: #ffffff;
+     padding: 10px;
+     margin: 3px;
+     display: inline-block;
+     border-radius: 4px;
+     font-size: large;
+}
+
+.parameter {
+     /*text-align: center; */
+     width: 25%;
+}
+
+/* iOS-like button */
+
+.button {
+  background-color: #007dd8;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+a.button:visited {
+  color:white;
+}</style></head><body class="page-body"><div class="synthmodes-header"><div class="synthmodes-header-left"><a href="/" class="synthmodes-logo">Synth Modes</a><span style="padding-left: 8px;"><a href="#" class="synthmodes-sublogo">● Ornament &amp; Crime (Hemisphere)</a></span></div><div class="synthmodes-header-right"><a href="https://github.com/boourns/synthmodes"><svg style="zoom:0.35;" width="98" height="96" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#24292f"></path></svg></a></div></div><div class="contentWrapper"><div class="sidebar"><ul><div class="sidebarSection"><li><b><a href="s-General">General</a></b></li><ul><li><a href="#p-Info">Info</a></li><li><a href="#p-Usage">Usage</a></li></ul></div><div class="sidebarSection"><li><b><a href="s-Modes">Modes</a></b></li><ul><li><a href="#p-ASR">ASR</a></li><li><a href="#p-AD EG">AD EG</a></li><li><a href="#p-ADSR EG">ADSR EG</a></li><li><a href="#p-Annular Fusion Euclidean Drummer">Annular Fusion Euclidean Drummer</a></li><li><a href="#p-AttenOff">AttenOff</a></li><li><a href="#p-Backup and Restore">Backup and Restore</a></li><li><a href="#p-Binary Counter">Binary Counter</a></li><li><a href="#p-BootsNCat">BootsNCat</a></li><li><a href="#p-Brancher">Brancher</a></li><li><a href="#p-Burst">Burst</a></li><li><a href="#p-CV Recorder">CV Recorder</a></li><li><a href="#p-Calculate">Calculate</a></li><li><a href="#p-Captain MIDI">Captain MIDI</a></li><li><a href="#p-Carpeggio Cartesian Arpeggiator">Carpeggio Cartesian Arpeggiator</a></li><li><a href="#p-Clock Divider Multiplier">Clock Divider Multiplier</a></li><li><a href="#p-Clock Skipper">Clock Skipper</a></li><li><a href="#p-Compare">Compare</a></li><li><a href="#p-Dr. Crusher">Dr. Crusher</a></li><li><a href="#p-Dual Quantizer">Dual Quantizer</a></li><li><a href="#p-Enigma, Jr.">Enigma, Jr.</a></li><li><a href="#p-Enigma">Enigma</a></li><li><a href="#p-Envelope Follower">Envelope Follower</a></li><li><a href="#p-Gate Delay">Gate Delay</a></li><li><a href="#p-Gated VCA">Gated VCA</a></li><li><a href="#p-LoFi Tape">LoFi Tape</a></li><li><a href="#p-Logic">Logic</a></li><li><a href="#p-LowerRenz">LowerRenz</a></li><li><a href="#p-MIDI In">MIDI In</a></li><li><a href="#p-MIDI Out">MIDI Out</a></li><li><a href="#p-Metronome">Metronome</a></li><li><a href="#p-Mixer:Balance">Mixer:Balance</a></li><li><a href="#p-Neural Net">Neural Net</a></li><li><a href="#p-Palimpsest Accent Sequencer">Palimpsest Accent Sequencer</a></li><li><a href="#p-Pong">Pong</a></li><li><a href="#p-RunglBook">RunglBook</a></li><li><a href="#p-Scale Duet Quantizer">Scale Duet Quantizer</a></li><li><a href="#p-Scale Editor">Scale Editor</a></li><li><a href="#p-Schmitt Trigger">Schmitt Trigger</a></li><li><a href="#p-Scope">Scope</a></li><li><a href="#p-Sequence5">Sequence5</a></li><li><a href="#p-Shift Register (formerly Turing)">Shift Register (formerly Turing)</a></li><li><a href="#p-ShiftGate">ShiftGate</a></li><li><a href="#p-Shuffle">Shuffle</a></li><li><a href="#p-Skewed LFO">Skewed LFO</a></li><li><a href="#p-Slew">Slew</a></li><li><a href="#p-Squanch Shifting Quantizer">Squanch Shifting Quantizer</a></li><li><a href="#p-Switch">Switch</a></li><li><a href="#p-The Darkest Timeline 2.0">The Darkest Timeline 2.0</a></li><li><a href="#p-Threshold Logic Neuron">Threshold Logic Neuron</a></li><li><a href="#p-Trending">Trending</a></li><li><a href="#p-Trigger Sequencer 16">Trigger Sequencer 16</a></li><li><a href="#p-Trigger Sequencer">Trigger Sequencer</a></li><li><a href="#p-Tuner">Tuner</a></li><li><a href="#p-VectMorph">VectMorph</a></li><li><a href="#p-VectorEG">VectorEG</a></li><li><a href="#p-VectorLFO">VectorLFO</a></li><li><a href="#p-VectorMod">VectorMod</a></li><li><a href="#p-Voltage">Voltage</a></li><li><a href="#p-Waveform Editor">Waveform Editor</a></li></ul></div></ul></div><div class="mainWrapper"><div class="main"><div><h2 id="s-General">General</h2><div><div class="page"><div class="pageTitleBlock"><a href="#p-Info"><h3 class="pageTitle" id="p-Info"> Info</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+      <h3>Hemisphere Suite</h3>
+      <p>
+        Hemisphere Suite is an alternate firmware for the Ornament and Crime eurorack module.
+      </p>
+
+      <p>
+        Hemisphere Suite is an open-source project by Jason Justian (aka chysn).
+      </p>
+
+      <p>Ornament and Crime is a collaborative open-source project by Patrick Dowling (aka pld), Max Stadler (aka mxmxmx) and Tim Churches (aka bennelong.bicyclist).</p>
+
+      <p>
+        This cheat-sheet is based on the Hemisphere Suite Wiki which is under MIT license and used with permission.
+      </p>
+
+      <p>
+
+</p><h3>Links</h3>
+      <a class="button" href="https://github.com/Chysn/O_C-HemisphereSuite">Hemisphere Suite Home</a>
+
+      <a class="button" href="https://github.com/Chysn/O_C-HemisphereSuite/wiki">Hemisphere Suite Wiki</a><br>
+      
+<h3>License</h3>
+
+<p>
+Copyright 2018, Jason Justian
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Usage"><h3 class="pageTitle" id="p-Usage"> Usage</h3></a></div><div>
+  <div class="centered">
+    <div class="content">
+      <h2>
+          Launching Hemisphere
+      </h2>
+      <p>Hemisphere is an app for Ornament and Crime. To launch Hemisphere, long-press the right encoder button and release after about 2 seconds. At the application selection menu, use the right encoder wheel to position the cursor over Hemisphere and press the right encoder button.</p>
+      <h2>
+          Selecting Applets
+      </h2>
+      <p>
+          <a href="https://youtu.be/nB_nk_f3hzo" rel="nofollow">https://youtu.be/nB_nk_f3hzo</a>
+      </p>
+      <p>You may enter selection mode for one side of Hemisphere by pressing the Up or Down control button. The Up button enters Selection Mode for the left hemisphere. Down for the right hemisphere. In selection mode, a frame will appear around the side of the screen for the hemisphere you're selecting. Turn the corresponding hemisphere's encoder knob to cycle through available applets.</p>
+      <p>While one hemisphere is in Selection Mode, the opposite hemisphere can continue to be used as normal (Beta 2).</p>
+      <p>To leave Selection Mode, (1) press the Up or Down button corresponding to the hemisphere being selected, or (2) press the encoder button corresponding to the hemisphere being selected. (3) If you push the opposite Up or Down button, Selection Mode will switch to that hemisphere.</p>
+      <h2>
+          <a id="user-content-2-saving-state" class="anchor" href="#2-saving-state" aria-hidden="true">
+              <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+              </svg>
+          </a>
+          2. Saving State
+      </h2>
+      <p>
+          <a href="https://youtu.be/uc1rcwqUbL0" rel="nofollow">https://youtu.be/uc1rcwqUbL0</a>
+      </p>
+      <p>To save Hemisphere settings, long-press the right encoder button and release after about 2 seconds. Then long-press the right encoder button again on the application selection menu. This will save the state of all Ornament and Crime apps that are capable of saving state.</p>
+      <p>For Hemisphere, the two selected applets and their save-able settings will be saved. Most applets will save all settings. If an applet's data set is particularly large (for example, that of Lofi Tape), that applet will not save its data. But most applets will return to their saved state at launch.</p>
+      <h3>
+          <a id="user-content-system-exclusive" class="anchor" href="#system-exclusive" aria-hidden="true">
+              <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+              </svg>
+          </a>
+          System Exclusive
+      </h3>
+      <p>
+          <a href="https://youtu.be/6R99A0Yvqlk" rel="nofollow">https://youtu.be/6R99A0Yvqlk</a>
+      </p>
+      <p>As of Hemisphere 1.3 (release date August 10, 2018), you may also save Hemisphere setups via system exclusive over USB MIDI. To save a setup, do the following:</p>
+      <ol>
+          <li>Prepare your MIDI librarian software to receive a system exclusive dump</li>
+          <li>Make your applet settings in Hemisphere</li>
+          <li>Long-press the right encoder button to go to the main menu</li>
+          <li>Your librarian should receive the dump that Hemisphere initiates when it is suspended</li>
+      </ol>
+      <p>To restore the settings, simply dump the system exclusive message back while Hemisphere is running. You may send multiple dumps in succession to restore settings for any number of applets.</p>
+      <h2>
+          <a id="user-content-3-help-screens" class="anchor" href="#3-help-screens" aria-hidden="true">
+              <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+              </svg>
+          </a>
+          3. Help Screens
+      </h2>
+      <p>
+          <a href="https://youtu.be/3I734jXkrvA" rel="nofollow">https://youtu.be/3I734jXkrvA</a>
+      </p>
+      <p>Each applet has a help screen. To access a help screen, double-click the Up or Down encoder button that corresponds to the hemisphere for which you'd like help. Pressing that button again will turn off the help screen. Pressing the opposite button will show the help screen for the other applet.</p>
+      <p>Both applets will continue to function normally, but "in the blind," while a help screen is displayed.</p>
+      <h2>
+          <a id="user-content-4-master-clock-forwarding" class="anchor" href="#4-master-clock-forwarding" aria-hidden="true">
+              <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+              </svg>
+          </a>
+          4. Master Clock Forwarding
+      </h2>
+      <p>
+          <a href="https://youtu.be/WgqHVCxjSXc" rel="nofollow">https://youtu.be/WgqHVCxjSXc</a>
+      </p>
+      <p>Master Clock Forwarding allows you to avoid the use of stacked cables or mults if you want both hemispheres to sync to the same clock. When Master Clock Forwarding is active, any applet in the right hemisphere that responds to clock at Digital In 3 will respond to clock at Digital In 1 instead. Master Clock Forwarding applies only to clock signals and not gate signals, and it applies only to the first digital input for the hemisphere.</p>
+      <p>To activate Master Clock Forwarding, long-press the left encoder button for about two seconds. When you release the button, a clock icon will appear in the center of the menu bar. To exit Master Clock Forwarding, long press the left encoder button again. Note that you can hold down the button as long as you want to, in order to time the transition of the clock from one state (or one input) to another. Thus, Master Clock Forwarding is a performance control.</p>
+      <p>Master Clock Forwarding remains in effect as you change applets. The state of Master Clock Forwarding is not saved when you save the O_C's state.</p>
+      <h2>
+          <a id="user-content-5-internal-clock" class="anchor" href="#5-internal-clock" aria-hidden="true">
+              <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+              </svg>
+          </a>
+          5. Internal Clock
+      </h2>
+      <p>
+          <strong>
+              <em>
+                  Note: Older versions of Hemisphere Suite (v1.3 to v1.7) have Category Filtering instead of Internal Clock. See 
+                  <a href="https://youtu.be/6545D9zRVIQ" rel="nofollow">https://youtu.be/6545D9zRVIQ</a>
+                   for more information.
+              </em>
+          </strong>
+      </p>
+      <p>
+          <a href="https://youtu.be/HND6HpVVtyo" rel="nofollow">https://youtu.be/HND6HpVVtyo</a>
+      </p>
+      <p>The internal clock provides a way to use Hemisphere's sequencers and other clocked applets without an external clock source. A Clock Setup screen allows changes to tempo and clock multiplier.</p>
+      <p>To access the Clock Setup screen, long-hold the Down control button for about two seconds. When you release it, the Clock Setup screen will appear. Use either encoder button to move the cursor between the clock source, tempo (in beats per minute), and multiplier (from x 1 to x 24). Turn either encoder to change the value at the cursor. Push either the Up or Down control button to return to Hemisphere's main screen.</p>
+      <p>If the clock source is set to Internal, you'll see a small metronome icon on the main screen. To start or stop the clock, long-hold the left encoder button. The clock will start or stop when you release the button. While the internal clock is running, any digital input that expects a "clock" signal will respond as though a clock signal is present at the jack.</p>
+      <p>If you need the tempo control available, you may use the Metronome applet to change the clock tempo. The Metronome applet also outputs the multiplied and beat clocks at its outputs.</p>
+      <h2>
+          <a id="user-content-6-screen-blanking" class="anchor" href="#6-screen-blanking" aria-hidden="true">
+              <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z"></path>
+              </svg>
+          </a>
+          6. Screen Blanking
+      </h2>
+      <p>To protect your OLED against long-term burn-in, the screen will blank (darken) after a configurable period of inactivity. All running applications will continue to function as normal while the screen is blanked. Set the screen blanking time, in minutes, during the configuration procedure.</p>
+      <p>You may blank the screen manually at any time by long-pressing the Up button. Pressing any button or turning any encoder will return the module to normal operation.</p>
+
+                                                  
+    </div>
+  </div>
+
+</div></div></div></div><div><h2 id="s-Modes">Modes</h2><div><div class="page"><div class="pageTitleBlock"><a href="#p-ASR"><h3 class="pageTitle" id="p-ASR"> ASR</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>"A"SR is an "Analog" Shift Register simulation with a 256-step ring buffer. When selected in one hemisphere, it has two indexed outputs. When selected in both hemispheres, the same buffer is used across all four outputs.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock pulse at Digital 1 advances the buffer, and a gate at Digital 2 freezes the buffer to writing</li>
+<li>CV Ins: CV 1 is the signal to be sampled, and CV 2 is bi-polar modulation of the index between -32 and 32 steps</li>
+<li>Outputs: Indexed outputs (see below)</li>
+<li>Encoders: Set index and scale</li>
+</ul>
+
+<h2>Unlinked Operation</h2>
+
+<p>When "A"SR is selected in one hemisphere (whether the left or the right), it operates as described above. The Out A/C is the most recent value, and Out B/D is a previous value based on the index; an index of <em>n</em> indicates that B/D will play <em>n</em> step(s) back. At an index of 0, both outputs will be the same. When the index value is modulated by CV, a small <em>CV</em> indicator displays below the value.</p>
+
+<h2>Linked Operation</h2>
+
+<p>When "A"SR is selected in both hemispheres, it becomes a "linked" applet. A link icon will appear in the upper right corner of the screen.</p>
+
+<p>When linked, the scale may be different for each hemisphere, but the base index will be the same. Digital 1, Digital 2, and CV 1 do nothing. The index for each side may be modulated independently using CV 2. When the index value is modulated by CV, a small <em>CV</em> indicator displays below the value.</p>
+
+<p>Linked outputs are routed as follows:</p>
+
+<ul>
+<li>Out A: The most recent sample</li>
+<li>Out B: <em>n</em> steps back</li>
+<li>Out C: <em>2n</em> steps back</li>
+<li>Out D: <em>3n</em> steps back</li>
+</ul>
+
+<p>where <em>n</em> is the index.</p>
+
+<p>"A"SR is in Hemisphere Suite from v1.5.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-AD EG"><h3 class="pageTitle" id="p-AD EG"> AD EG</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>AD EG is an attack/decay envelope generator with forward and reverse trigger inputs, and end-of-cycle trigger output.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Input 1 triggers the AD envelope, and Input 2 triggers the envelope in reverse (DA)</li>
+<li>CV Ins: CV 1 is bi-polar modulation for attack, and CV 2 is bi-polar modulation of decay</li>
+<li>Outputs: Output A/C is the envelope signal, and Output B/C emits a trigger at the end of the cycle</li>
+</ul>
+
+<p>Note that triggering the envelope in reverse does not change the CV modulation controls, meaning that CV 1 controls the effective "attack" segment regardless of direction.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-ADSR EG"><h3 class="pageTitle" id="p-ADSR EG"> ADSR EG</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><a href="https://youtu.be/3bh5BNiCVLQ">Video</a>
+
+<p>ADSR EG is a straightforward linear envelope generator. It has a single envelope, but responds independently on two channels.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Gate Channels 1 and 2</li>
+<li>CV Ins: CV 1 is bi-polar modification for attack, and CV 2 is bi-polar modification for release</li>
+<li>Outputs: Amplitude for channels 1 and 2</li>
+<li>Encoder Push: Cycles cursor between Attack, Decay, Sustain, and Release</li>
+<li>Encoder Turn: Increases or decreases selected parameter</li>
+</ul>
+
+<p>Note that CV inputs <em>modify</em> the attack and release rates over a range of about -2.5 volts to about 2.5 volts. There is a small center detent in the middle of the range, at which point no modification will be made.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Annular Fusion Euclidean Drummer"><h3 class="pageTitle" id="p-Annular Fusion Euclidean Drummer"> Annular Fusion Euclidean Drummer</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><em>Annular Fusion</em> is a dual Euclidean trigger generator. It can be used to generate Euclidean rhythms of up to 32 steps in length.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 clocks <em>Annular Fusion</em>, and Digital 2 resets</li>
+<li>CV Ins: CV 1 is bipolar rotation for the outer ring, and CV 2 is bipolar rotation for the inner ring</li>
+<li>Outputs: Output A/C is trigger output for the outer ring, and Output B/D is trigger output for the inner ring</li>
+<li>Encoder push: Cycles cursor through outer ring length, outer ring hits, inner ring length, and inner ring hits</li>
+<li>Encoder turn: Increases or decreases the selected value </li>
+</ul>
+
+<p>The cursor will appear under the parameter that you're editing (length on top, hits on the bottom), and a ring indicator will show the ring (outer or inner) that you're currently editing as brighter.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-AttenOff"><h3 class="pageTitle" id="p-AttenOff"> AttenOff</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>AttenOff is a dual attenuator/offset.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>CV Ins: Inputs for each channel</li>
+<li>CV Outs: For each channel, outputs voltage attenuated by the level, with the offset voltage added</li>
+<li>Encoder: Move cursor</li>
+</ul>
+
+<p>The offset voltage range is -3V to +5V, selectable in 1 semitone (approx. .08V) increments.</p>
+
+<p>Level has 64 increments, and shows between 0% and 100%.</p>
+
+<p>AttenOff is available in Hemisphere Suite from v1.8.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Backup and Restore"><h3 class="pageTitle" id="p-Backup and Restore"> Backup and Restore</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Backup/Restore is a utility that allows you to transfer complete sets of app and/or calibration data to and from your module. Possible uses include</p>
+
+<ul>
+<li>Transferring app data to a new O_C module,</li>
+<li>Moving calibration to a replacement Teensy for the same O_C module, </li>
+<li>Changing settings between pieces during live shows,</li>
+<li>Intercontinental internet-based collaboration with other Hemisphere Suite users, or</li>
+<li>Simply preparing for inevitable disaster.</li>
+</ul>
+
+<h2>Backing Up Your Module</h2>
+
+<p>Backup/Restore backs up data as it exists in the EEPROM. So if you want to take a backup of the O<em>C's _current</em> state, save the module's state by long-pressing the right button from the main menu.</p>
+
+<p>Connect your computer or tablet to the module and enter the Backup/Restore app on your module. Turn either encoder to choose "Data" or "Calibration." Enable recording on your SysEx Librarian software, and then press the right encoder button ([BACKUP]). The size of the data dump will be 172 bytes for Calibration, and about 2.5K for Data.</p>
+
+<h2>Restoring Your Module</h2>
+
+<p>Connect your computer or tablet to the module and enter the Backup/Restore app on your module. Press the left encoder button ([RESTORE]). Backup/Restore will indicate that it is listening for SysEx data. From your SysEx Librarian software, initiate the dump. The module's screen should indicate a progress bar. When the restore is successful, the module returns to the saved state.</p>
+
+<p><em><strong>If you use Backup/Restore to restore calibration settings, you'll need to cycle the power on your module for the restored calibration settings to become active.</strong></em></p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Binary Counter"><h3 class="pageTitle" id="p-Binary Counter"> Binary Counter</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Binary Counter is weird. It takes four logic inputs (high or low) and provides a binary-summed output and a count output.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 is Bit 3, Digital 2 is Bit 2,</li>
+<li>CV Ins: CV 1 is Bit 1 and CV 2 is Bit 0</li>
+<li>Outputs: A/C is the binary sum of the inputs, and B/D is the count of the inputs</li>
+</ul>
+
+<h2>Binary Sum (Output A/C)</h2>
+
+<p>Each bit contributes a value to Output A/C based on its bit number. Approximate voltages are as follows:</p>
+
+<ul>
+<li>Bit 0 contributes .33V</li>
+<li>Bit 1 contributes .67V</li>
+<li>Bit 2 contributes 1.33V</li>
+<li>Bit 3 contributes 2.67V</li>
+</ul>
+
+<h2>Count (Output B/D)</h2>
+
+<p>Each bit contributes the same value (approximately 1.25V) to Output B/D.</p>
+
+<p>Binary Counter is in Hemisphere Suite from v1.4.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-BootsNCat"><h3 class="pageTitle" id="p-BootsNCat"> BootsNCat</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Boots 'n Cats (BootsNCat) is a simple bass/snare drum synthesizer with stereo audio outputs.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Triggers, where Digital 1 fires the bass drum, and Digital 2 fires the snare drum</li>
+<li>CV Ins: Attenuation Levels, where CV 1 attenuates the bass drum, and CV 2 attenuates the snare drum</li>
+<li>Outputs: Audio outputs, where A/C is the bass drum output and B/D is the snare drum output, but see <strong>Blend</strong> below</li>
+<li>Encoder: Sets Tone and Decay for drums, and Blend</li>
+</ul>
+
+<h2>Tone</h2>
+
+<p>Each drum has a Tone control that sets the basic sound of the drum. For the bass drum, Tone controls the frequency, with higher values indicating a higher frequency. For the snare drum, the Tone control is more like a low-pass filter, with high values indicating a higher cutoff frequency.</p>
+
+<h2>Decay</h2>
+
+<p>Each drum has a Decay control that sets the decay of the drum between about 1/10 of a second and 1 second, with higher values indicating longer decay.</p>
+
+<h2>Blend</h2>
+
+<p>At a Blend level of 0, the bass drum and snare drum are totally isolated on Outputs A/C and B/D, respectively. As the Blend is increased, some of the signal from the opposite channel will be fed into each channel. A Blend level of 63 results in a 50/50 mix on both outputs.</p>
+
+<p>Boots 'n Cats is available in Hemisphere Suite starting with V1.6.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Brancher"><h3 class="pageTitle" id="p-Brancher"> Brancher</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Brancher is a Bernoulli Gate, inspired by Mutable Instruments Branches. It sends incoming gate or clock to one of two outputs, based on selected probability.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 is the signal (clock or gate) that will be routed to A/C or B/D</li>
+<li>CV Ins: CV 1 is a bi-polar voltage that modulates the probability</li>
+<li>Outputs: A/C or B/D mirrors Digital 1. Only one will be in use at a time.</li>
+<li>Encoder Push: Overrides the probability-selected output and switches to the other one</li>
+<li>Encoder Turn: Sets probability from 0% to 100%</li>
+</ul>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Burst"><h3 class="pageTitle" id="p-Burst"> Burst</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Burst is a burst generator based loosely on the Ladik S-075.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 is an optional timing clock, and Digital 2 triggers the bursts</li>
+<li>CV Ins: CV 1 sets the Number of bursts and CV 2 is bi-polar modulation of the Spacing</li>
+<li>Outputs: Output 1 is a series of 2ms triggers, and Output 2 is a gate that remains high while a series of bursts is in progress</li>
+<li>Encoder Push: Move cursor between Number and Spacing</li>
+<li>Encoder Turn: Update Number (1-12) and Spacing (8ms-500ms) settings. If Burst is clocked (see below), and the cursor is on Spacing, then clocked is turned off.</li>
+</ul>
+
+<p>When Burst receives a trigger at Digital 2, it begins a series of 2ms triggers from Output 1 and a gate from Output 2. The number of triggers is the Number setting. The time between each trigger (in milliseconds) is the Spacing setting. The Output 2 gate remains high until the final trigger has fired.</p>
+
+<p>If Burst receives another trigger at Digital 2 before the burst sequence has finished, a new sequence will start.</p>
+
+<p>When CV is received at CV 1, the Number setting at the panel is overridden. There is a center detent around 0V, so slightly more than 0V is required to change the Number.</p>
+
+<p>When CV is received at CV 2, the Spacing setting at the panel is modulated. There is a center detent around 0V, so slightly more than 0V is required to change the Spacing.</p>
+
+<p>When a clock signal is received at Digital 1, Burst becomes clocked. At the second clock, the Spacing value is calculated to be the clock tempo divided by Number. When Burst is clocked, this calculated Spacing value overrides both the panel and the signal at CV 2. Burst will remain clocked until you move the cursor to the Spacing value and change it. You probably want to stop the clock first, though, or Burst will become clocked again immediately.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-CV Recorder"><h3 class="pageTitle" id="p-CV Recorder"> CV Recorder</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><em>Hemisphere Suite 1.7 Update (Nov. 30, 2018)</em>: CV Recorder is a two-track 384-step CV recorder with smoothing (linear interpolation) and adjustable start/end points.</p>
+
+<h2>Controls</h2>
+
+<p>
+</p><ul>
+<li>Digital Ins: A clock to Digital 1 advances the sequencer, and a trigger to Digital 2 resets to the start step.</li>
+<li>CV Ins: CV1 is the input for Track 1, and CV2 is the input for Track 2</li>
+<li>Outputs: A/C is the output for Track 1, and B/D is the output for Track 2</li>
+<li>Encoder Push: Advance cursor (Start Point, End Point, Smoothing on/off, transport control)</li>
+<li>Encoder Turn: Set value</li>
+</ul>
+<p></p>
+
+<h2>Recording</h2>
+
+<p>To start recording, choose a length by setting the Start and End points. Advance the cursor down to the transport control (which will usually just say "Play"). Turn the encoder to choose which track or tracks you wish to record (1, 2, 1+2). When you press the encoder button, recording will begin. An indicator bar will display on top of the transport control line to indicate remaining steps.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Calculate"><h3 class="pageTitle" id="p-Calculate"> Calculate</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><a href="https://youtu.be/CZAyNngrg1c">Video</a>
+
+<p>Calculate is a series of utilities for performing arithmetical operations on two CV inputs.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Clock input for Channel 1 and Channel 2, to hold input voltage or clocked random voltage</li>
+<li>CV Ins: Calculation operand CV values</li>
+<li>Outputs: A/C Channel 1 result, B/D Channel 2 result</li>
+<li>Encoder Push: Switch cursor between Channel 1 and Channel 2 operator selection</li>
+<li>Encoder Turn: Select operator</li>
+</ul>
+
+<p>The following operators are available:</p>
+
+<ul>
+<li><strong>Min</strong>: The result is the lower voltage of the two operands</li>
+<li><strong>Max</strong>: The result is the higher voltage of the two operands</li>
+<li><strong>Sum</strong>: The result is the sum of the two operands, up to 5 volts</li>
+<li><strong>Diff</strong>: The result is the absolute value of the difference between the two operands</li>
+<li><strong>Mean</strong>: The result is the mean (average) of the two operands (that is, Sum divided by 2)</li>
+<li><strong>S&amp;H</strong>: When the channel is clocked, the output is held at the voltage of the corresponding input</li>
+<li><strong>Rnd</strong>: A random value between 0 and 5 volts appears at the corresponding output. When the channel is clocked, a random value is held at the corresponding output until the next clock. To reset the input (that is, to turn off clocked operation), place the cursor on the Rnd operator and turn the encoder. If you turn the encoder clockwise, clocked operation will be turned off without changing away from the Rnd operator. When Rnd is clocked, a clock icon will appear to the right of the operator selector.</li>
+</ul>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Captain MIDI"><h3 class="pageTitle" id="p-Captain MIDI"> Captain MIDI</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Captain MIDI is a highly-configurable CV-to-MIDI and MIDI-to-CV interface. It supports four outputs for MIDI-to-CV and four inputs for CV-to-MIDI. It features multi-channel operation, polyphonic note distribution (up to four notes), transposition, and note-range for layers and/or splits. It keeps a log of the last 100 MIDI messages. Up to four complete Setups can be saved in memory. Setups can be copied from the panel, or saved and retrieved via MIDI system exclusive dump.</p>
+
+<p>Captain MIDI is a standalone Ornament and Crime application with a classic O_C-style interface. It is included with Hemisphere Suite, starting at v1.3.</p>
+
+<h2>Videos</h2>
+
+<ul>
+<li><a href="https://youtu.be/PN6EEVkcqJ8">https://youtu.be/PN6EEVkcqJ8</a></li>
+<li><a href="https://youtu.be/l1i4FIAcubw">https://youtu.be/l1i4FIAcubw</a></li>
+</ul>
+
+<h2>References</h2>
+
+<ul>
+<li><a href="https://madskjeldgaard.dk/posts/hemisphere/">Blog post on Captain MIDI with SuperCollider</a></li>
+</ul>
+
+<h2>Connection</h2>
+
+<p>The back of the Ornament and Crime module has a micro USB port. This is what you use to make a MIDI connection to a USB host, usually a Windows, macOS, or Linux computer. Hemisphere Suite uses a class-compliant MIDI interface, which should be recognized as "Hemisphere" by your operating system and DAW/MIDI software.</p>
+
+<h2>Basic Controls and Navigation</h2>
+
+<ul>
+<li>Right Encoder: Selects parameter or value. Pushing the right encoder switches between parameter selection and value editing.</li>
+<li>Left Encoder: Selects Setup screen (Assign, Channel, Transpose, Range High, Range Low). Pushing the right encoder toggles between the Setup screen and the Log Display. When the log is displayed, the left encoder scrolls through the last 100 MIDI events sent and/or received. A left encoder button long-press (held for about 2 seconds, and released) initiates a <em>Panic!</em> function: Captain MIDI sends Note Off for all notes and on all channels.</li>
+<li>Up/Down Buttons: Selects which Setup (from 1-4) is active. If the down button is long-pressed, the active Setup may be copied to another Setup.</li>
+</ul>
+
+<h2>Setup Screen Basics</h2>
+
+<p>Each of the Setup screens has eight parameters. The input or output (I/O) name is shown on the left, and the value is on the right. The parameters are arranged in groups of four, with the MIDI-to-CV parameters and then CV-to-MIDI parameters:</p>
+
+<ul>
+<li>A name like "MIDI &gt; ?" indicates that a MIDI message of the assigned type, on the assigned channel, is routed to the corresponding letter output.</li>
+<li>A name like "? &gt; MIDI" indicates that a MIDI message of the assigned type, on the assigned channel, is sent when the voltage at the corresponding CV input changes or, in the case of notes, when a gate is received at the corresponding digital input.</li>
+</ul>
+
+<p>If the assigned type is Note or Legato, <em>and</em> a MIDI channel is set, an eighth note icon appears next to the parameter name. This indicates that note-specific parameters (transpose, range) apply to the assignment.</p>
+
+<p>Each parameter line also displays a MIDI indicator icon when its assignment is sending or receiving MIDI data. For note assignments, a note name is displayed instead of a MIDI icon.</p>
+
+<h2>Assign Setup Screen</h2>
+
+<p>On this screen, you determine which MIDI messages are sent or received.</p>
+
+<h3>MIDI-to-CV (MIDI In) Types</h3>
+
+<ul>
+<li><strong>Note</strong>: When a Note On message is received on the specified channel, the assigned output sends a quantized pitch value corresponding to the message's MIDI note number. <strong>Note</strong> may be assigned to any number of outputs. If <strong>Note</strong> is assigned to multiple outputs on the same channel, reception will be polyphonic; each new simultaneous note will be picked up by a different output until no more <strong>Note</strong> outputs are available. You may have up to four notes of polyphony by assigning all four outputs on the same MIDI channel; but you'll have to find another way to control your VCAs, since you won't have any outputs for gates.</li>
+<li><strong>Gate</strong>: When a Note On message is received on the specified channel, the assigned output sends a high (approx. 5 volt) signal, which remains high until the corresponding Note Off message is received.</li>
+<li><strong>Trig</strong>: When a Note On message is received on the specified channel, a trigger is sent on the assigned output.</li>
+<li><strong>Veloc</strong>: When a Note On message is received on the specified channel, the assigned output sends CV between 0 and 5 volts proportional to the velocity of the Note On message. When the corresponding Note Off message is received, the assigned output goes to 0V.</li>
+<li><strong>Mod</strong>: When a continuous controller message is received for CC#1 (modulation wheel) on the assigned MIDI channel, the assigned output sends CV between 0 and 5 volts proportional to the CC value.</li>
+<li><strong>Aft</strong>: When aftertouch is received on the assigned MIDI channel, the assigned output sends CV between 0 and 5 volts proportional to the aftertouch value.</li>
+<li><strong>Bend</strong>: When pitch bend is received on the assigned MIDI channel, the assigned output sends CV between about -3V and 3V proportional to the pitch bend value.</li>
+<li><strong>Expr</strong>, <strong>Pan</strong>, <strong>Brth</strong>: Similar to <strong>Mod</strong>, but with different controller numbers (Expression: #11, Pan: #10, Breath: #2). These output values are maintained until the controller changes.</li>
+<li><strong>Hold</strong>: When a hold pedal controller message is received on the assigned MIDI channel, the assigned output sends 5V until the pedal is released.</li>
+<li><strong>yAxis</strong>: Similar to <strong>Mod</strong>, with with controller number #74. This is used as the Y-Axis controller for three-directional controllers that support MPE.</li>
+<li><strong>Clock</strong>: There are four clock settings, which send triggers to the assigned CV output at various divisions of an incoming MIDI beat clock. The settings are: <strong>Qtr</strong> (which triggers every 24 clocks), <strong>8th</strong> (12 clocks), <strong>16th</strong> (6 clocks), and <strong>24ppq</strong> (sends a trigger with every clock). Note that clock is a real-time message, and doesn't require a MIDI channel to be assigned. A clock indicator on the parameter line moves every eighth note.</li>
+</ul>
+
+<h3>CV-to-MIDI (MIDI Out) Types</h3>
+
+<ul>
+<li><strong>Note</strong>: When <strong>Note</strong> or <strong>Leg.</strong> (Legato) is assigned to an input, the digital input and the CV input are used at the same time. When the digital input goes high, the voltage at the CV input is quantized into a MIDI note number, and a Note On message is sent on the specified channel. When the digital input goes low, a Note Off message is sent.</li>
+<li><strong>Leg.</strong> (Legato): Works like <strong>Note</strong>, except that Captain MIDI watches the CV input for pitch changes. If the pitch changes by a semitone or more, a Note Off is sent (regardless of whether the gate has gone low) and a new Note On is sent for the new pitch. This is a more natural setting for humans playing CV controllers (like Pressure Points, Tetrapad, Keystep) because it doesn't require a player to completely disengage the controller before playing another note. The <strong>Note</strong> setting is more appropriate for sequenced melodies.</li>
+<li><strong>Veloc</strong>: Usually, a Note On message uses a default velocity of 100. However, if <strong>Veloc</strong> is assigned to the same channel as a <strong>Note</strong> or <strong>Leg.</strong> assignment, the Note On velocity will be proportional to the voltage at the assigned input. Note that if two <strong>Veloc</strong> assignments are made on the same channel, only the lowest-numbered assignment will be used for Note On velocity.</li>
+<li><strong>Mod</strong>: A change in positive voltage at the assigned input will cause a MIDI controller change for CC#1 (modulation wheel) to be sent on the specified channel.</li>
+<li><strong>Aft</strong>: A change in positive voltage at the assigned input will cause a MIDI channel aftertouch message to be sent on the specified channel.</li>
+<li><strong>Bend</strong>: A change in bi-polar voltage at the assigned input will cause a MIDI pitch bend message to be sent on the specified channel. Positive voltage is positive bend, and negative voltage is negative bend. The range is about -3V to +3V.</li>
+<li><strong>Hold</strong>: Voltage over around 2.5 volts at the assigned input will cause a MIDI Hold "on" (127) controller message to be sent. When the assigned input goes to 0 volts, a MIDI Hold "off" (0) message is sent.</li>
+<li><strong>Expr</strong>, <strong>Pan</strong>, <strong>Brth</strong>, <strong>yAxis</strong>: Similar to <strong>Mod</strong>, but with different controller numbers (Expression: #11, Pan: #10, Breath: #2, Y-Axis: #74).</li>
+</ul>
+
+<h2>MIDI Channel Setup Screen</h2>
+
+<p>This screen sets the MIDI channel for each assignment. For the MIDI-to-CV ("MIDI &gt; ?") assignments, this determines which channel Captain MIDI is listening on. For the MIDI-to-CV  ("? &gt; MIDI") assignments, this determines which channel Captain MIDI is transmitting on.</p>
+
+<p>When the channel is set to "Off" the assignment is effectively muted; no MIDI data will be received or sent.</p>
+
+<h2>Transpose Setup Screen</h2>
+
+<p>The transpose screen sets transpose values over a four-octave (-24 to +24 semitone) range. The transpose value is added to outgoing voltage for MIDI-to-CV assignments, and is added to MIDI note numbers for CV-to-MIDI assignments.</p>
+
+<p>Transpose is a note-specific screen, and only assignments set to Note or Legato, and have a MIDI channel set, will be shown.</p>
+
+<h2>Note Range Low/High Setup Screens</h2>
+
+<p>These screens set the low and high values transmitted or recognized by the assignment, between the lowest MIDI note (C -1) and the highest (G9). Values outside the range will be ignored. Range checking is <em>applied</em> after transposition. So if a Note On is out of range, but transposition takes it into range, the note will be played; if a Note On is in range, but transposition would take it out of range, the note will be ignored.</p>
+
+<p>Range screens are note-specific screens, and only assignments set to Note or Legato, and have a MIDI channel set, will be shown.</p>
+
+<h2>Setups</h2>
+
+<p>Captain MIDI has four independent Setups. A Setup consists of information for assignments, channels, transposition, and note range for all eight inputs and outputs. Use the Up and Down buttons to change the active Setup. The active Setup number is shown at the top of all of the Setup screens.</p>
+
+<h3>Copying Setups</h3>
+
+<p>To copy the information for the active Setup to another Setup, long-press the Down button. When you release the button, a Copy screen will open. Choose the copy's destination with the Up and Down buttons, and then push the right encoder ("[Copy]") to execute the copy. To leave the Copy screen without changing any data, push the left encoder ("[Cancel]") or long-press the Down button again.</p>
+
+<p>If you select a Setup as its own copy destination, the display will change to a SysEx dump screen. The right encoder option becomes "[Dump]". If you push the right encoder, Captain MIDI will send a system exclusive file containing the data for the active Setup.</p>
+
+<h3>Saving Setups</h3>
+
+<p>There are two ways to save Setup data.</p>
+
+<p><strong>Save all four Setups in the module:</strong> Long-press the left encoder to get to the main menu, then long-press the left encoder again to save data for all apps. A solid rectangle will expand from the middle of the screen to confirm the save operation. The Ornament and Crime module will recall the saved Setups on power-up.</p>
+
+<p><strong>Save using MIDI system exclusive:</strong> Follow the SysEx dump procedure from the Copying Setups section above, and capture the system exclusive dump with SysEx librarian software. The restore a Setup from a SysEx dump, simply send the SysEx file back to the module whenever Captain MIDI is running.</p>
+
+<p><em>Shortcut: When you long-press the right encoder to go to the main menu, the current Setup's data also is dumped via SysEx.</em></p>
+
+<p>Notes about System Exclusive:</p>
+
+<ul>
+<li>A Setup from a received SysEx dump will always be placed in the active Setup, <em>regardless of the Setup's original location.</em></li>
+<li>You can use system exclusive to change Captain MIDI's handling of MIDI data in an automated way during a performance.</li>
+<li>Data received from a SysEx dump will overwrite Setups in memory, but not data saved via the first save method; that is, unless you long-press to save the new Setup data, Captain MIDI will return to its previously-saved state at the next power-up.</li>
+</ul>
+
+<h2>Log Display</h2>
+
+<p>Captain MIDI logs the most recent 100 MIDI messages, in and out. Push the left encoder button to see the MIDI log. When the log is being displayed, use the left encoder to scroll through the events. Push the left encoder button again to return to the Setup screens.</p>
+
+<p>Captain MIDI can be used to identify the applications associated with Hemisphere Suite system exclusive data. Open the log and send the system exclusive file to Captain MIDI. If it's a Hemisphere Suite file, Captain MIDI will identify it. Note that SysEx messages are logged <em>only</em> while you are viewing the Log Display.</p>
+
+<h2><em>Panic!</em> Function</h2>
+
+<p>Long-press the left encoder if notes get hung. Captain MIDI will send Note Off messages on all 16 MIDI channels for all MIDI notes.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Carpeggio Cartesian Arpeggiator"><h3 class="pageTitle" id="p-Carpeggio Cartesian Arpeggiator"> Carpeggio Cartesian Arpeggiator</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><em>Thanks to Roel Das for writing the chord pattern code, and generously allowing it to be used here.</em></p>
+
+<p>Carpeggio is an arpeggiator/sequencer that uses coordinates on a 4x4 Cartesian plane to select notes. Notes can be assigned to the plane from among 55 chord patterns. Carpeggio can also be clocked and reset, to function as a more traditional arpeggiator. Additionally, any of the 16 notes may be edited on the fly, allowing Carpeggio to function as a Cartesian or traditional 16-step sequencer.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock to Digital 1 plays the CV at the current position and advances to the next step (<em>x</em>, then <em>y</em>), and Digital 2 resets to (1,1)</li>
+<li>CV Ins: CV 1 is the <em>x</em> position on the plane, and CV 2 is the <em>y</em> position</li>
+<li>Outputs: Output 1 is the quantized pitch, Output 2 is a modulation output proportional to <em>x</em>*<em>y</em></li>
+<li>Encoder Push: Cycles the cursor between note, chord, and transpose</li>
+</ul>
+
+<h2>Cartesian Operation</h2>
+
+<p>Provide <em>x</em> and <em>y</em> CV (0-5V) to the CV inputs. The position will be displayed with cross hairs on the grid. To select the note at the current position for playing, provide a clock signal to Digital 1.</p>
+
+<h2>Linear Operation</h2>
+
+<p>To use Carpeggio as a more traditional linear arpeggiator or sequencer, disconnect the <em>x</em> and <em>y</em> CV (or set them both to 0V). A clock to Digital 1 will play the note at the current position, and then advance to the next position, from left to right, and top to bottom.</p>
+
+<p>A clock at Digital 2 will reset Carpeggio to (1,1), or upper-left.</p>
+
+<h2>Note Editing</h2>
+
+<p>When the cursor is flashing under the note number near the bottom of the screen, the note at the current step may be edited with the encoder. Such edits will be lost on power-down, or when the chord is changed.</p>
+
+<h2>Changing Chords</h2>
+
+<p>When the cursor is flashing under the chord name, select a chord with the encoder. If you change the chord and push the encoder, the sixteen steps will be filled with notes from that chord, removing any note edits you've made. When you're changing chords, a checkmark will appear next to the currently-selected chord. If you press the encoder button at this chord, your note changes will <em>not</em> be overwritten.</p>
+
+<p>When you push the encoder button to change a chord, the cursor will remain at the chord selection setting, so that you can change chords multiple times without delay. To move the cursor to the Transpose setting, press the encoder button without changing the chord.</p>
+
+<h2>Transposition</h2>
+
+<p>Carpeggio has a four octave transposition range, 24 semitones in either direction.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Clock Divider Multiplier"><h3 class="pageTitle" id="p-Clock Divider Multiplier"> Clock Divider Multiplier</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/uhvLdBEP2Qo">Video</a></p>
+
+<p>Clock Div is a two-way clock divider and multiplier, using a single clock source. It can divide from 1:1 to 1:8, and multiply from 2:1 to 8:1. Each channel can be set from the panel, or via CV.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 clocks the divider/multiplier, and Digital 2 resets the divider </li>
+<li>CV Ins: Bi-polar voltage sets the division or multiplication for each channel</li>
+<li>Outputs: A/C outputs triggers for the top section, B/D outputs triggers for the bottom section</li>
+<li>Encoder Push: Changes cursor between top and bottom sections</li>
+<li>Encoder Turn: Selects the division or multiplication for the selected section</li>
+</ul>
+
+<p>Division works by counting clocks and sending a trigger on the <em>n</em>th clock. When the encoder is turned, the counter is reset.</p>
+
+<p>Multiplication works by counting interrupt cycles (<em>c</em>) between the last two clock inputs, and sending a trigger every <em>c/n</em> cycles.</p>
+
+<p>CV inputs are bipolar, with a range of about -2.5 volts to about 2.5 volts. Positive values set clock division, and negative values set clock multiplication. There's a small center detent CV range, over which range control is only set from the panel. This is done because O_C can't sense whether a jack is patched.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Clock Skipper"><h3 class="pageTitle" id="p-Clock Skipper"> Clock Skipper</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Clock Skipper is a dual probability skipper.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Clock input for each channel</li>
+<li>CV Ins: Bi-polar probability modulation for each channel</li>
+<li>Outputs: Clock output (based on probability) for each channel</li>
+<li>Encoder: Set probability for each channel</li>
+</ul>
+
+<p>Both channels are identical. When an incoming clock is received at the digital input, that clock may or may not be sent to the corresponding output, depending on the probability. A probability of 100% means that the gate will always be passed along. Probability can be modified with voltage to the CV inputs. Negative voltage decreases probability, and positive voltage increases probability.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Compare"><h3 class="pageTitle" id="p-Compare"> Compare</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Compare is a comparator applet with complementary gate outputs.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>CV Ins: CV 1 is the input, and CV 2 is a bi-polar level modification</li>
+<li>Outputs: A/C is a gate (high) if CV 1 is greater than the modified level. B/C is gate if the modified level is equal to or greater than CV 1.</li>
+<li>Encoder turn: Set the level</li>
+</ul>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Dr. Crusher"><h3 class="pageTitle" id="p-Dr. Crusher"> Dr. Crusher</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Dr. Crusher is a single-channel sample rate and bit resolution reducer for CV or audio signals.</p>
+
+<h2>Controls</h2>
+
+<p>
+</p><ul>
+  <li>Digital Ins: A gate signal to Digital 1 defeats the effect and passes the signal from Out A at maximum rate and resolution</li>
+<li>CV Ins: CV 1 is the signal input</li>
+<li>Outputs: Out A/C is the output with rate and resolution reduction applied, and Out B/D is the signal at maximum rate and resolution</li>
+<li>Encoder: Alternate between sample rate (.5kHz ~ 16.7kHz) and bit resolution (2-bit ~ 14-bit) selection</li>
+</ul>
+<p></p>
+
+<p>Note that the maximum rate (16.7kHz) and resolution (14-bit) values are the maximum values available to the firmware, so some "crushing" will always be applied, no matter what, including when the "defeat" is activated and when monitoring Out B/D.</p>
+
+<p>If you're not getting any signal at lower bit resolutions, increase the input amplitude.</p>
+
+<p>Dr. Crusher is in Hemisphere Suite starting with v1.7.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Dual Quantizer"><h3 class="pageTitle" id="p-Dual Quantizer"> Dual Quantizer</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/GkV-rB4ntho">Video</a></p>
+
+<p>Dual Quantizer converts CV input to pitches of specific musical scales.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Clock for each channel</li>
+<li>CV Ins: Unquantized CV for each channel</li>
+<li>Outputs: Quantized CV for each channel</li>
+<li>Encoder Push: Alternate cursor between Channel 1 and Channel 2</li>
+<li>Encoder Turn: Select scale and reset channel to continuous operation</li>
+</ul>
+
+<p>Each channel begins in continuous operation. That is, the incoming CV is quantized at a rate of about 16667 times per second. This might result in undesirable slippage between notes, so clocked operation is available on a per-channel basis.</p>
+
+<p>To enter clocked operation, send a clock signal to a digital input. A clock icon will appear next to the selector for the corresponding channel to indicate that that quantizer is in clocked mode.</p>
+
+<p>To return to continuous operation, stop sending clock to the channel, and then change the scale. As long as no additional clock signals are received at the channel, the quantizer will remain in continuous operation.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Enigma, Jr."><h3 class="pageTitle" id="p-Enigma, Jr."> Enigma, Jr.</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>While Enigma imposes a track-song workflow, Enigma, Jr. allows you to organize your Turing Machines via CV. It allows playback and temporary manipulation of registers in your Enigma Register Library.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 advances the register</li>
+<li>CV Ins: CV 1 is a bi-polar modulation of the pitch, and CV 2 is the Organize modulation (see below)</li>
+<li>CV Outs: Assignable</li>
+<li>Encoder: Choose Register, probability, or assign outputs</li>
+</ul>
+
+<p>In many respects, Enigma, Jr. is similar to ShiftReg. But instead of generating a random sixteen-bit register, Enigma, Jr. uses a Register from the Enigma Register Library. Enigma may be used to shape and curate this Library (see https://github.com/Chysn/O_C-HemisphereSuite/wiki/Enigma).</p>
+
+<p>Both outputs are assignable to any of the CV values that Enigma can use. These are:</p>
+
+<ul>
+<li><strong>Note</strong>: There are five depths of note data, from 3 bits to 7 bits. At 3-bit depth, melodies will be constrained to 8 notes of the selected scale. At 4-bit depth, 16 notes; at 5-bit depth, 32 notes; at 6-bit depth, 64 notes; and, at 7-bit depth, 128 notes (or the entire MIDI note range) is available. The note types look at the least-significant bits of the current Register.</li>
+<li><strong>Modulation/Expression</strong>: The least-significant 8 bits are used to generate a modulation value that's scaled to 0-5 volts. Modulation and Expression are identical for CV.</li>
+<li><strong>Gate</strong>: When bit 0 is 1, the assigned output emits 5V until the next time bit 0 is 0. That is, a high gate will span multiple rotations of the Register</li>
+<li><strong>Trigger</strong>: When bit 0 is 1, a trigger pulse is emitted at the assigned output</li>
+</ul>
+
+<h2>Organize</h2>
+
+<p>CV 2 is the Organize control. When a Register has advanced to the end of its length, CV 2 is read, and a new Register is loaded, based on the CV 2 modulation. If your Library has Registers marked as Favorites, the CV will choose from among your Favorites. If you have no Favorites selected, the CV will choose at random from among all 40 Registers in the Library.</p>
+
+<p>Enigma, Jr. is in Hemisphere Suite from v1.5.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Enigma"><h3 class="pageTitle" id="p-Enigma"> Enigma</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Enigma is a Shift Register (a.k.a. "Turing Machine") Workstation, designed to enable (nearly) repeatable full compositions by curating a Turing Machine library and chaining Turing Machines into songs. Enigma is in Hemisphere Suite starting with v1.5.</p>
+
+<h2>Workflow</h2>
+
+<p>Enigma's workflow involves four screens:</p>
+
+<ul>
+<li><p><strong>Library</strong> contains 40 Turing Machines (hereafter called "Registers"). As you audition a Register in the Library, you may change its length, probability, and rotation. You may "lock" a Register by designating it as a Favorite.</p></li>
+<li><p><strong>Assign</strong> allows you to choose the function of each of the Ornament and Crime's four outputs (A, B, C, D). Each output may be assigned to a source track, a type (note, modulation, gate, or trigger), a scale (for note types), and a MIDI channel (1-16, or Off). On the Assign screen, you may choose whether you're auditioning the Library or the current Song.</p></li>
+<li><p><strong>Song</strong> allows you to chain Registers together on up to four tracks. Each track may contain up to 99 steps, for a total of 396 steps. Each step specifies a <strong>Register,</strong> the number of times that Register <strong>repeats</strong>, the <strong>probability</strong> of a bit flip at each step (see "How a Turing Machine Works," below), and the <strong>transposition</strong> of notes played.</p></li>
+<li><p><strong>Play</strong> allows you to control the playback of the song by choosing clock divide and loop per track, resetting and starting the song. It also allows you to visually monitor the song's position.</p></li>
+</ul>
+
+<h2>Navigation and Control Overview</h2>
+
+<p>The <strong>left encoder</strong> chooses screens and screen-level selection. Each press of the left encoder button moves to the next screen (in the order Library -&gt; Assign -&gt; Song -&gt; Play). Turning the left encoder selects items as follows:</p>
+
+<ul>
+<li>Library Screen: The Register (A-1 through E-8)</li>
+<li>Assign Screen: The output (A, B, C, D)</li>
+<li>Song/Play: The track (Track 1 through Track 4)</li>
+</ul>
+
+<p>The <strong>right encoder</strong> chooses parameters and values on each screen. Each press of the right encoder button moves to the next parameter from left-to-right, top-to-bottom. Turing the right encoder changes the selected value.</p>
+
+<p>The <strong>up and down buttons</strong> have different functions on each screen. Each screen will display the function of these buttons for a few seconds. You can dismiss this help by moving any control. During each session, Enigma will pay attention to how long you view the help text and will adjust the time accordingly. If you dismiss a help screen within one second, Enigma will stop showing them to you.</p>
+
+<p><strong>Long-pressing the down button</strong> allows you to erase the current song and start over. You will be asked to confirm this action. On the confirmation screen, press the right encoder to erase the song, and the left encoder to cancel.</p>
+
+<p><strong>Long-pressing the left encoder button</strong> will send data related to the screen via system exclusive (SysEx) dump. Library, output assignment, and song data can be sent and received separately. Long-pressing the right encoder will return you to th main menu, and send <em>all</em> data via SysEx dump.</p>
+
+<h2>How a Turing Machine Works</h2>
+
+<p>The original Turing Machine circuit, by Music Thing's Tom Whitwell, works like this: A random sixteen-bit number is generated. On an incoming clock signal, the binary representation of that number is shifted to the left by one bit. A probability check determines whether the last bit (bit 15) of the pre-shifted number is moved back to the beginning (bit 0) during this rotation, or it changes its value. Then, an output value is determined based on the new sixteen-bit number. Originally, this was the bottom eight bits scaled to a voltage output.</p>
+
+<h3>How Enigma is Different</h3>
+
+<p>Enigma uses Turing Machine-like registers as its source material for composition. In a traditional Turing Machine or Turing Machine-like system, the starting register is different with each session. So if your Turing Machine hits upon a melody or modulation pattern that you like, you need to record it somehow, either with an audio recorder or CV recorder. The philosophy of Enigma is that Turing Machines can be durable and re-usable. When you find something you like, you can lock it in place and save it for later, and use it as part of a larger composition.</p>
+
+<h2>Library</h2>
+
+<p>The Library is where you manage your Registers. Forty registers are arranged in five banks (A-E) of eight registers (1-8). Use the left encoder to select a register. When you first select a register, it starts with a random sixteen-bit number.</p>
+
+<p>Registers are stored with three pieces of information: The register value itself, the length, and the Favorite status of the Register. Two other controls in the Library (probability and rotation) are only used for shaping the Register.</p>
+
+<p><em>Note: The Library cannot be accessed or auditioned while a song is playing. If you're trying to get to the Library, but can't, go to the Play screen and stop the playback.</em></p>
+
+<h3>Auditioning the Register</h3>
+
+<p>A clock signal into Digital 1 will advance the register and calculate a change based on the probability value. The CV at Outputs A-D will be updated. The voltage present at the outputs is determined by the output assignments (see the <strong>Assign</strong> screen). By default, the assignments are as follows:</p>
+
+<ul>
+<li>Output A: A note quantized to a semitone scale</li>
+<li>Output B: A modulation amount from 0V-5V</li>
+<li>Output C: A gate (goes high when bit 0 is on, and low when bit 0 is off, capable of spanning multiple advances)</li>
+<li>Output D: A trigger (fired when bit 0 is on)</li>
+</ul>
+
+<h3>Favorites</h3>
+
+<p>If you find a melody, modulation pattern, or trigger pattern that you want to keep, press the up button. This will mark the pattern as a Favorite (a heart icon will indicate this status for each pattern). When a pattern is a Favorite, the following things apply:</p>
+
+<ul>
+<li>Probability will no longer alter the pattern</li>
+<li>The pattern cannot be overwritten by single-Register SysEx dumps</li>
+<li>The pattern may now be reset using the down button</li>
+<li>The pattern may now be rotated with the right encoder when the "rotate" icons are shown</li>
+</ul>
+
+<p>When a Register is a Favorite, you may turn off Favorite status by pressing the up button again. When you do this, the probability will always start out at 0%.</p>
+
+<h2>Assign</h2>
+
+<p>The Assign screen is used to specify how the Ornament and Crime's outputs are used. You select the output with the left encoder, and choose and change parameters with the right encoder. The parameters on the Assign screen, from top to bottom, are as follows:</p>
+
+<ul>
+<li><strong>Source</strong>: Specifies which Track is routed to the output. A Track may be assigned to any number of outputs.</li>
+<li><strong>Type</strong>: Specifies the type of CV that will be generated by the output.  See the <strong>Types</strong> section below.</li>
+<li><strong>Scale</strong>: Available only for note Types, chooses the scale to which the output is quantized</li>
+<li><strong>MIDI Channel</strong>: Specifies the MIDI channel for the output, or Off</li>
+</ul>
+
+<p>While you are on the Assign screen, you may audition from two sets of data, the Library or the Song. Press the up button to audition from the Library (default), and the down button to audition from the Song. If the song isn't playing, all CV outputs will be at 0V.</p>
+
+<h3>Types</h3>
+
+<p>The following types of CV output are available, based on the current state of the Register that's being auditioned:</p>
+
+<ul>
+<li><strong>Note</strong>: There are five depths of note data, from 3 bits to 7 bits. At 3-bit depth, melodies will be constrained to 8 notes of the selected scale. At 4-bit depth, 16 notes; at 5-bit depth, 32 notes; at 6-bit depth, 64 notes; and, at 7-bit depth, 128 notes (or the entire MIDI note range) is available. The note types look at the least-significant bits of the current Register.</li>
+<li><strong>Modulation/Expression</strong>: The least-significant 8 bits are used to generate a modulation value that's scaled to 0-5 volts. Modulation and Expression are identical for CV, but generate different MIDI messages (see below).</li>
+<li><strong>Gate</strong>: When bit 0 is 1, the assigned output emits 5V until the next time bit 0 is 0. That is, a high gate will span multiple rotations of the Register</li>
+<li><strong>Trigger</strong>: When bit 0 is 1, a trigger pulse is emitted at the assigned output</li>
+</ul>
+
+<p>When the MIDI channel is set (that is, it's not Off), the Type also determines the MIDI event that's generated:</p>
+
+<ul>
+<li><strong>Note</strong>: Sends a Note Off for the output's previous note (if any), and a Note On message based on the specified bit depth. For depths of 3-6, the note is above Middle C (that is, if a three-bit value is 5, the MIDI note number is 65 (Middle C, 60, plus 5). For a depth of 7, the seven-bit value determines the raw MIDI note number. If you want to play notes in rhythm, then set the MIDI Channel of the output to "Off" and specify a MIDI Channel for the next Gate or Trigger output (see below). Note that MIDI output does not observe the Scale setting used by the CV output.</li>
+<li><strong>Modulation/Expression</strong>: The least-significant 8 bits are scaled down to a seven-bit number (0-127) for sending a MIDI modulation or expression event. Modulation is a continuous controller number of 1, and Expression is a continuous controller number of 11, which is often used for relative volume changes.</li>
+<li><strong>Gate/Trigger</strong>: If a Note value was calculated in a previous output, but the MIDI Channel is Off, then that note is considered "deferred." A deferred note will be played if a MIDI Channel is assigned to a subsequent Gate or Trigger output. For MIDI output, Gate and Trigger do the same thing.</li>
+</ul>
+
+<h2>Song</h2>
+
+<p>Song mode allows you to chain Registers together into long (or short) compositions of up to four Tracks. This is done by creating a series of "Steps" on each Track.</p>
+
+<p>Use the left encoder to choose the Track (Track 1 - Track 4). The right encoder will cycle through the following settings:</p>
+
+<ul>
+<li><strong>Step Number</strong>: The Step number cursor is a blinking highlighted number showing the current Step number. Use the right encoder to move through the existing steps.</li>
+<li><strong>Register</strong>: Choose a Register (from A-1 to E-8). When the cursor is over the Register selection, the Favorite status and length of the Register will be shown to the right.</li>
+<li><strong>Probability</strong>: Probability is checked each time the Register is advanced, allowing the Register to randomly change over time. Note that this only changes the Register on playback, and not in the Library, regardless of the Register's Favorite status. When a new step starts, each Register is returned to its original form in the Library.</li>
+<li><strong>Number of Plays</strong>: A Register can be played between 1 and 99 times for a single Step.</li>
+<li><strong>Transposition</strong>: For each Step, notes played from the Track can be transposed over an eight-octave range, from -48 semitones to +48 semitones. Transposition is in semitones, regardless of the scale used, allowing you to use this value to specify a diatonic root.</li>
+</ul>
+
+<h3>Adding and Deleting Steps</h3>
+
+<p>A Track starts out with no Steps. To add a Step, press the up button. This will insert a step <em>after</em> the selected step. The default Register of your new step will be randomly selected from among your Favorite Registers. If you have no Favorites, the default will be A-1.</p>
+
+<p>To delete a Step, press the down button. This will delete the currently-selected step, and the next Step up will now be selected.</p>
+
+<h2>Play</h2>
+
+<p>Songs may be played from the Assign or Song screens, but the Play screen provides some extra setup and playback control.</p>
+
+<p>As with the Song screen, the right encoder is used to select the Track. This screen is formatted a bit differently, as a table with the following information:</p>
+
+<ul>
+<li><strong>Track Number</strong></li>
+<li><strong>Track Step Location</strong>: Shows the Step number, and the number of times the Register has started playing during this step, after the semicolon</li>
+<li><strong>Clock Divide value</strong>: Specifies how many clock pulses are required to advance the Register on this track</li>
+<li><strong>One Shot/Loop</strong>: Specifies whether the Track plays once and stops, or loops. You can set up a short looping triggered rhythm that plays alongside a longer melody; or, a looping melodic ostinato that goes on throughout a composition.</li>
+<li><strong>Play Status</strong>: The play icon, solid, indicates that the Track is playing. The play icon, blinking, indicates that the Track is paused, but will continue playback when the up button is pressed. The stop icon indicates that the Track has run out of material to play.</li>
+</ul>
+
+<p>Pressing the right encoder button alternates between the Clock Divide and the Loop setting on the selected channel.</p>
+
+<p>On the Play screen, the up button toggles between playback and pause. The current status is shown with an icon in the upper-right corner of the screen. The down button resets the song to the beginning.</p>
+
+<h3>CV Control</h3>
+
+<p>The Digital and CV inputs have the same function whenever a song is being played. These controls are as follows:</p>
+
+<ul>
+<li><strong>Digital 1</strong>: The master clock. Advances all Tracks, observing the Clock Division of each Track. <em>This is the only CV control that works in the Library</em></li>
+<li><strong>Digital 2</strong>: Reset the song</li>
+<li><strong>Digital 3</strong>: Reset the song and start playback</li>
+<li><strong>Digital 4</strong>: Toggle between playback and pause</li>
+<li><strong>CV 1</strong>: Gate Song End. When a high signal is sent to this input, the song will stop playing when all non-looping Tracks have ended. This can be used to end a song for recording, without having to fade out.</li>
+<li><strong>CV 2</strong>: Gate Song Repeat: When a high signal is sent to this input, the song will start over from the beginning when all non-looping Tracks have ended. <em>When both CV 1 and CV 2 are un-gated, the default behavior is for looping Tracks to just continue looping until otherwise stopped.</em></li>
+</ul>
+
+<h2>Storage</h2>
+
+<h3>Internal Storage</h3>
+
+<p>As with other Ornament and Crime applications, the state of the Ornament and Crime can be stored by long-pressing the right encoder button, and then long-pressing it a second time at the main menu. This will store the following data for Enigma:</p>
+
+<ul>
+<li>All 40 Registers in the Register Library</li>
+<li>The current output assignments (as seen on the Assign screen)</li>
+<li>32 Steps of the current Song</li>
+<li>The Track settings, Clock Division and One-Shot/Loop (as seen on the Play screen)</li>
+</ul>
+
+<p>The Ornament and Crime's internal EEPROM is too small to save all 396 possible song Steps, so it only saves the first 32 Steps. If the Song is longer than that, then only 32 Steps will be restored when the module is powered up again. To help determine whether your entire song will be saved, there is a percentage counter in the upper-right corner of the Song screen. When your song exceeds 32 steps in length, the percentage will be highlighted. To save the entire song, you'll need to use System Exclusive storage (see below).</p>
+
+<h3>System Exclusive Storage</h3>
+
+<p>As with all Hemisphere Suite applications, returning to the main menu with a long-press of the right encoder will initiate a SysEx dump of all app data. For Enigma, this includes the entire Register Library, the current output assignments, all Steps of the current song, and the Track settings. If you save this data with a SysEx Librarian, you can dump it back any time Enigma is running to restore the entire app state.</p>
+
+<p>You may initiate dumps of subsets of information by long-pressing the <em>left</em> encoder button. In the Library, this will dump all 40 Registers; on the Assign screen, it will dump the output assignments; on the Song or Play screen, this will dump the Song's steps <em>and</em> Track settings.</p>
+
+<p>When you mark a Register as a Favorite in the Library, Enigma will send SysEx for the single Register. If you send this SysEx back while in the Library, it will be saved to the current Register location, <em>provided that is not marked as a Favorite</em>. If it is, the incoming dump will be ignored.</p>
+
+<p>A single Register dump received <em>outside</em> the Library will be stored in its original location and--again--only if the current occupant of that location is not a Favorite.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Envelope Follower"><h3 class="pageTitle" id="p-Envelope Follower"> Envelope Follower</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>EnvFollow is an envelope follower and ducker.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>CV Inputs: Signal inputs for channels 1 and 2</li>
+<li>Outputs: Output 1's output increases as the amplitude of Input 1 increases. Output 2's output decreases as the amplitude of Input 2 increases.</li>
+<li>Encoder: Gain per channel</li>
+</ul>
+
+<p>Since audio signals are typically much lower than the typical CV range, a gain of up to 31x is provided.</p>
+
+<p>EnvFollow is in Hemisphere Suite starting at v1.4.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Gate Delay"><h3 class="pageTitle" id="p-Gate Delay"> Gate Delay</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Gate Delay is a dual trigger/gate delay loosely based on the Ladik S-189.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Clock/Trigger input per channel</li>
+<li>CV Ins: Bi-polar time modulation per channel</li>
+<li>Outputs: Delayed clock/trigger output</li>
+<li>Encoder Push: Move cursor between channels</li>
+<li>Encoder Turn: Set delay time, from 0ms to 2000ms</li>
+</ul>
+
+<p>Gate Delay has a 1ms resolution and a 2 second recording time. Modulation is bi-polar and can change the time by up to 1000ms.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Gated VCA"><h3 class="pageTitle" id="p-Gated VCA"> Gated VCA</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Gated VCA is a VCA for CV, with the ability to gate the first output. It can sort of be used for audio, but works best as an extra CV VCA.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 gates Output A</li>
+<li>CV Ins: Input 1 is the CV signal and Input 2 is the CV amount</li>
+<li>Outputs: A/C is silent until Digital In 1 is gated, and B/D is always the VCA output</li>
+<li>Encoder Turn: Increase and decrease CV Offset</li>
+</ul>
+
+<p>This works like a fairly simple VCA, with the ability to suppress one of the outputs completely, regardless of the CV amount.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-LoFi Tape"><h3 class="pageTitle" id="p-LoFi Tape"> LoFi Tape</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/p1SUj-F7i28">Video</a></p>
+
+<p>LoFi Tape is an audio-rate looper for audio or CV.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Both digital ins expect a gate signal. Digital 1 pauses playback while the gate is high. Digital 2 records from CV 1 while the gate is high.</li>
+<li>CV Ins: CV 1 is the signal, which can be an audio or CV signal. CV 2 is Sound-On-Sound, or the balance between the incoming signal and the looped signal.</li>
+<li>Outputs: A/C is the main output, and B/D is an end-of-cycle trigger</li>
+<li>Encoder Push: Resets the buffer and records one complete buffer cycle (about 1 second)</li>
+<li>Encoder Turn: Sets the end point of the buffer</li>
+</ul>
+
+<p>LoFi Tape records at a sampling rate of 2kHz for about one second. Incoming signals are down sampled to 8 bits of resolution.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Logic"><h3 class="pageTitle" id="p-Logic"> Logic</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/mHZCaMH_Dgk">Video</a></p>
+
+<p>Logic is a two-input logic module that performs two logical operations at once.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Two logical operands, in the form of gate signals with high being True and low being False</li>
+<li>CV Ins: Inputs 1 and 2 set the logical gate when the gate selected for the corresponding channel is "CV"</li>
+<li>Outputs: Results of the logical operations as a high (5 volt, when True) or low (0 volt, when False) signal</li>
+<li>Encoder Push: Alternates the cursor between the two channels</li>
+<li>Encoder Turn: Selects the logical gate or "CV" for each channel</li>
+</ul>
+
+<p>Available gate types are
+  </p><ul>
+<li><strong>AND</strong>: True when both inputs are True</li>
+<li><strong>OR</strong>: True when either or both inputs are True</li>
+<li><strong>XOR</strong>: True when exactly one of the inputs is True</li>
+<li><strong>NAND</strong>: True when either input is False</li>
+<li><strong>NOR</strong>: True when both inputs are False</li>
+<li><strong>XNOR</strong>: True when both inputs are the same</li>
+</ul>
+<p></p>
+
+<p>Another option, "CV," is available. When set to "CV," the logical gate type will be set via CV using the corresponding CV input.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-LowerRenz"><h3 class="pageTitle" id="p-LowerRenz"> LowerRenz</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>LowerRenz is a single Lorenz-only modulation generator based on the O_C's own Low-Rentz Dual Lorenz/Rössler Generator, which is itself based on an Easter Egg from Mutable Instruments Streams.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A trigger at Digital 1 resets the generator, and a gate at Digital 2 freezes the outputs until the gate goes low.</li>
+<li>CV Ins: CV 1 is bi-polar modulation for Frequency, and CV 2 is bi-polar modulation for Rho, whatever Rho is</li>
+<li>Outputs: A/C is the Lorenz X value, and B/D is the Y value</li>
+<li>Encoder Push: Alternates the cursor between Frequency and Rho, whatever Rho is</li>
+<li>Encoder Turn: Sets the value at the cursor, either Frequency or Rho. Whatever Rho is.</li>
+</ul>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-MIDI In"><h3 class="pageTitle" id="p-MIDI In"> MIDI In</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/Hfowo8vF7CE">Video</a></p>
+
+<p>MIDI In is a monophonic MIDI-to-CV interface that uses the USB port on the back of the Ornament and Crime module. The MIDI interface will appear in your computer as "Hemisphere".</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Outputs: Assignable</li>
+<li>Encoder Push: Cycle cursor between MIDI channel, Out A assignment, and Out B assignment</li>
+<li>Encoder Turn: Change channel or assignment</li>
+</ul>
+
+<p>Accepts MIDI data from the USB port on the back of the O_C module. If you installed Hemisphere Suite from a hex file, the MIDI driver will be called Hemisphere. If you compiled Hemisphere Suite from source, it will probably be Teensy MIDI.</p>
+
+<p>The following types of MIDI data are assignable to the outputs:</p>
+
+<ul>
+<li><strong>Note#</strong>: The output is a quantized value based on the MIDI note number</li>
+<li><strong>Trg</strong>: The output is a trigger signal on a MIDI note on message</li>
+<li><strong>Gate</strong>: The output is a 5 volt gate signal, starting at a note on, and ending at the corresponding note off. Since the applet is monophonic, the gate will only pay attention to one note at a time.</li>
+<li><strong>Veloc</strong>: The output is a scaled voltage (0-5 volts) corresponding the to last note's velocity</li>
+<li><strong>Mod</strong>: The output is a scaled voltage (0-5 volts) corresponding to the position of CC#1 (modulation wheel)</li>
+<li><strong>Aft</strong>: The output is a scaled voltage (0-5 volts) corresponding to the aftertouch value</li>
+<li><strong>Bend</strong>: The output is a scaled voltage (-3 to 5 volts) corresponding to the pitch bend value</li>
+<li><strong>Clock</strong>: The output is a clock signal every twelve pulses (eight notes). The clock can be reset by turning the encoder to the right.</li>
+</ul>
+
+<p>The screensaver for MIDI In displays the last six MIDI messages. It will always display note activity on the selected channel. Other data (note off, aftertouch, pitch bend, modulation) will only be shown if that data type is assigned to a CV output.</p>
+
+<p>MIDI In is available in Hemisphere Suite.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-MIDI Out"><h3 class="pageTitle" id="p-MIDI Out"> MIDI Out</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/cVnJ3RqdbJU">Video</a></p>
+
+<p>MIDI Out is a monophonic CV-to-MIDI interface that uses the USB port on the back of the Ornament and Crime module. The MIDI interface will appear in your computer as "Hemisphere".</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 is a gate. A new gate causes MIDI Out to send a new Note On message, with the note based on CV 1</li>
+<li>CV Ins: CV 1 will be quantized to a MIDI note number, which will be sent when Digital 1 goes high. CV 2 is assignable.</li>
+<li>Encoder Push: Toggles the cursor between MIDI Out channel, CV 2 function, transposition, and legato</li>
+<li>Encoder Turn: Set channel, function, transposition, or legato</li>
+</ul>
+
+<p>The CV 2 input may be assigned to one of the following MIDI messages:</p>
+
+<ul>
+<li><strong>Mod</strong>: Incoming CV will be converted to a CC#1 (modulation wheel) coarse value message</li>
+<li><strong>Aft</strong>: Incoming CV will be converted to an aftertouch message</li>
+<li><strong>Bend</strong>: Incoming CV will be converted a pitch bend message. Pitch bend can be positive or negative, so MIDI Out expects a bi-polar voltage</li>
+<li><strong>Veloc</strong>: Incoming CV will be used to set the velocity value of outgoing Note On messages. If Veloc is not assigned to CV 2, Note On messages will have velocity of 100.</li>
+</ul>
+
+<h2>Transposition</h2>
+
+<p>Transposition has a range of -24 to +24 semitones, and this number is simply added to the computed note number.</p>
+
+<h2>Legato</h2>
+
+<p>When Legato is Off, a Note On message is only sent when the gate goes from low to high. In other words, one note needs to be released before the next note can be sent. This option is useful for playing MIDI Out with sequencers, or when using things like LFOs for pitch.</p>
+
+<p>When Legato is On, once the gate goes high, a Note On message is sent. If the note changes, then a Note Off message is sent for the previous note, and a new Note On message is sent for the new note. This option is useful for playing MIDI Out with a CV controller (Tetrapad, Pressure Points, KeyStep, etc.).</p>
+
+<h2>Notes</h2>
+
+<p>Note 1: There is a ~3 millisecond delay between the time the gate goes high and the note value is read from CV 1. This is because Ornament and Crime has some latency in the ADCs which causes the digital inputs to register first; so some delay is required to give us the best chance of getting the right note.</p>
+
+<p>Note 2: Unlike MIDI In, MIDI Out can be used in pairs.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Metronome"><h3 class="pageTitle" id="p-Metronome"> Metronome</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Metronome is a control system for the Hemisphere internal clock ()</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>CV Outs: Out 1 sends a clock pulse on the specified multiples of the beat, and Out 2 sends a clock pulse on each beat.</li>
+<li>Encoder: Sets the tempo of the internal clock</li>
+</ul>
+
+<p>The internal clock provides a way to use Hemisphere's sequencers and other clocked applets without an external clock source. A Clock Setup screen allows changes to tempo and clock multiplier.</p>
+
+<p>To access the Clock Setup screen, long-hold the Down control button for about two seconds. When you release it, the Clock Setup screen will appear. Use either encoder button to move the cursor between the clock source, tempo (in beats per minute), and multiplier (from x 1 to x 24). Turn either encoder to change the value at the cursor. Push either the Up or Down control button to return to Hemisphere's main screen.</p>
+
+<p>If the clock source is set to Internal, you'll see a small metronome icon on the main screen. To start or stop the clock, long-hold the left encoder button. The clock will start or stop when you release the button. While the internal clock is running, any digital input that expects a "clock" signal will respond as though a clock signal is present at the jack.</p>
+
+<p>Metronome is in Hemisphere Suite starting at v1.6.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Mixer:Balance"><h3 class="pageTitle" id="p-Mixer:Balance"> Mixer:Balance</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Mixer:Balance is a two-input CV mixer with a balance control and two complementary outputs.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Inputs: CV 1 and CV 2 are the input signals</li>
+<li>Outputs: Complementary mixed outputs</li>
+<li>Encoder: Determines the balance between CV 1 and CV 2</li>
+</ul>
+
+<p>The balance indicator, controlled by the encoder, shows the relationship between the CV 1 and CV 2 signals' relative levels at Output A/C. With the indicator all the way to the left, only CV 1's signal appears at A/C; all the way to the right, only CV 2's signal appears at A/C.</p>
+
+<p>Output B/D is the complement of A/C. That is, the relative levels of CV 1 and CV 2 are the opposite, so that with the balance indicator at the left, only CV 2's signal appears at B/D, etc.</p>
+
+<p>In Mixer:Balance, all signals are attenuated by 50% before being sent to the mix.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Neural Net"><h3 class="pageTitle" id="p-Neural Net"> Neural Net</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Neural Net is a highly-configurable logic processor with six <em>Neurons</em>, each of which can contain one of <a href="#logic-gate-reference">11 different logic gates</a>, including a Threshold Logic Neuron. Sources for each logic gate can be any of the eight inputs, any of the six Neurons, or a consistent ON/OFF value. Four Setups can be saved for later use, and Setups can be saved and loaded via MIDI system exclusive.</p>
+
+<h2>Basic Controls and Navigation</h2>
+
+<p>Neural Net has two basic setup screens, the Selection Screen (which shows all six Neurons), and the Edit Screen (which allows editing and monitoring of a single Neuron). The controls work exactly the same way on both screens, but some changes are only visible from the Edit Screen.</p>
+
+<ul>
+<li>Left Encoder: Specifies what is being edited. It can be any of the six Neurons, or the Output assignments.</li>
+<li>Left Encoder Press: Alternates between the Selection Screen and the Edit Screen.</li>
+<li>Left Encoder Long-Press: Toggles the All Connections display.</li>
+<li>Right Encoder: Changes the value at the cursor.</li>
+<li>Right Encoder Press: Advances the cursor.</li>
+<li>Up/Down Buttons: Selects which Setup (from 1-4) is active. If the down button is long-pressed, the active Setup may be copied to another Setup.</li>
+</ul>
+
+<h2>Selection Screen</h2>
+
+<p>The Selection Screen shows an overview of all six Neurons, all inputs, and all outputs. Use the left encoder to choose a different Neuron, or the outputs.</p>
+
+<p>The inputs are on the left side, with the Digital inputs (1-4) under the D, and the Control Voltage inputs (1-4) under the V. When an input is high, its corresponding number's display is reversed.</p>
+
+<p>The outputs (A-D) are on the right side. When an output is high, its corresponding letter's display is reversed. If the outputs are selected, a blinking line will appear to the left of the outputs.</p>
+
+<p>The six Neurons are in the center, with Neurons #1, #3, and #5 at the top, and Neurons #2, #4, and #6 at the bottom. Each Neuron shows the symbol of its selected logic gate. If a Neuron is selected, the logic gate type's name will blink, and lines from the Neuron's source(s) and dotted lines to assigned outputs (if any) will be displayed.</p>
+
+<p><strong>Note</strong>: When a new Neuron is selected, the Neuron's editing cursor is reset to the logic gate type. This means that you can use the right encoder to set the gate type without having to go to the Edit screen.</p>
+
+<p><strong>Another Note</strong>: Actually, you never <em>have</em> to go to the edit screen. Since the controls work the same way on both screens, you can cursor through the parameters and change everything right from the Selection Screen. But it's hard to do that blind, and you'll probably want to go to the Edit Screen.</p>
+
+<p>Long-press the left encoder to turn on All Connections. This will show source and assignment lines for all Neurons and outputs. Long-press the left encoder again to turn off All Connections.</p>
+
+<h2>Edit Screen</h2>
+
+<p>Press the left encoder button to alternate between the Selection Screen and the Edit Screen.</p>
+
+<p>The Edit Screen is split into two halves. The left half of the screen shows the logic gate type and the Neuron's parameters. The right half of the screen shows the logic gate symbol, along with its inputs and output state. For the Threshold Logic Neuron, the right half of the screen also allows editing of weights and threshold.</p>
+
+<p>Press the right encoder button to advance the cursor, and turn the right encoder to change the value. The following sources are available: <strong>Dig 1, Dig 2, Dig 3, Dig 4, CV 1, CV 2, CV 3, CV 4, Neuron 1, Neuron 2, Neuron 3, Neuron 4, ON, and OFF</strong>.</p>
+
+<h3>Edit Screen Parameter Names</h3>
+
+<p>The meanings of the parameters you'll see on the Edit Screen are below. See <a href="#logic-gate-reference">Logic Gate Reference</a> for details about what the settings actually do.</p>
+
+<ul>
+<li><strong>Opd</strong>: Source of an operand of a logical operation (NOT, AND, OR, XOR, etc.). All operands in a logical gate are "commutative," meaning that the resulting state will be the same regardless of the order of the operands.</li>
+<li><strong>Data</strong>: Source of the Data input for the Data Flip-Flop.</li>
+<li><strong>Toggl</strong>: Source of the Toggle input for the Toggle Flip-Flop.</li>
+<li><strong>Clock</strong>: Source of the Clock input for the Flip-Flop.</li>
+<li><strong>Set</strong>: Source of the Set input for the Set-Reset Latch.</li>
+<li><strong>Reset</strong>: Source of the Reset input for the Set-Reset Latch.</li>
+<li><strong>Den 1-3</strong>: Source of a Dendrite input for the Threshold Logic Neuron.</li>
+</ul>
+
+<h3>Output Assignment</h3>
+
+<p>When the outputs are selected, the Edit Screen shows Outputs A-D, with a Neuron assigned to each. The state of the selected Neurons will be sent to the specified outputs.</p>
+
+<h2>Logic Gate Reference</h2>
+
+<ul>
+<li><strong>NOT</strong> is a unary (single-input) gate whose state is the opposite of its operand.</li>
+<li><strong>AND</strong> is a binary (two-input) gate whose state is ON if and only if both of its operands are ON.</li>
+<li><strong>OR</strong> is a binary gate whose state is ON if and only if at least one of its operands are ON.</li>
+<li><strong>XOR</strong> is a binary gate whose state is ON if and only if exactly one of its operands is ON.</li>
+<li><strong>NAND</strong> is a binary gate whose state is ON if and only if at least one of its operands are OFF.</li>
+<li><strong>NOR</strong>  is a binary gate whose state is ON if and only if both of its operands are OFF.</li>
+<li><strong>XNOR</strong> is a binary gate whose state is ON if and only if both of its operands are the same value.</li>
+<li><strong>D-FF</strong> is a <em>Data Flip-Flop</em>. When its Clock input goes high, its state becomes the value of its Data input.</li>
+<li><strong>T-FF</strong> is a <em>Toggle Flip-Flop</em>. When its Clock input goes high, its state flips if the value of its Toggle input is ON.</li>
+<li><strong>Latch</strong> is a <em>Set-Reset NOR Latch</em>. When its Set input goes ON, its state becomes ON. When its Reset input goes ON, its state becomes OFF.</li>
+<li><strong>TL Neuron</strong> is a Threshold Logic Neuron, a ternary (triple-input) gate whose state is ON if and only if the sum of the weights of ON inputs (dendrites) exceeds its specified threshold. <a href="https://github.com/Chysn/O_C-HemisphereSuite/wiki/Threshold-Logic-Neuron">See here</a> for more information about Threshold Logic Neurons.</li>
+</ul>
+
+<h2>Setups</h2>
+
+<p>Neural Net has four independent Setups. A Setup consists of information for Neuron logic gate assignments, source assignments, and output assignments. Use the Up and Down buttons to change the active Setup. The active Setup number is shown at the top of all of the Setup screens.</p>
+
+<h3>Copying Setups</h3>
+
+<p>To copy the information for the active Setup to another Setup, long-press the Down button. When you release the button, a Copy screen will open. Choose the copy's destination with the Up and Down buttons, and then push the right encoder ("[Copy]") to execute the copy. To leave the Copy screen without changing any data, push the left encoder ("[Cancel]") or long-press the Down button again.</p>
+
+<p>If you select a Setup as its own copy destination, the display will change to a SysEx dump screen. The right encoder option becomes "[Dump]". If you push the right encoder, Neural Net will send a system exclusive file containing the data for the active Setup.</p>
+
+<h3>Saving Setups</h3>
+
+<p>There are two ways to save Setup data.</p>
+
+<p><strong>Save all four Setups in the module:</strong> Long-press the left encoder to get to the main menu, then long-press the left encoder again to save data for all apps. A solid rectangle will expand from the middle of the screen to confirm the save operation. The Ornament and Crime module will recall the saved Setups on power-up.</p>
+
+<p><strong>Save using MIDI system exclusive:</strong> Follow the SysEx dump procedure from the Copying Setups section above, and capture the system exclusive dump with SysEx librarian software. The restore a Setup from a SysEx dump, simply send the SysEx file back to the module whenever Neural Net is running.</p>
+
+<p><em>Shortcut: When you long-press the right encoder to go to the main menu, the current Setup's data also is dumped via SysEx.</em></p>
+
+<p>Notes about System Exclusive:</p>
+
+<ul>
+<li>A Setup from a received SysEx dump will always be placed in the active Setup, <em>regardless of the Setup's original location.</em></li>
+<li>You can use system exclusive to change Neural Net in an automated way during a performance.</li>
+<li>Data received from a SysEx dump will overwrite Setups in memory, but not data saved via the first save method; that is, unless you long-press to save the new Setup data, Neural Net will return to its previously-saved state at the next power-up.</li>
+</ul>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Palimpsest Accent Sequencer"><h3 class="pageTitle" id="p-Palimpsest Accent Sequencer"> Palimpsest Accent Sequencer</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><em>Palimpsest</em> is an accent sequencer that composes a pattern by way of a repeated sequence of trigger impressions.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Clock to Digital 1 advances the sequence step. Digital 2 is the "Brush" input.</li>
+<li>CV Ins: CV 1 modulates Decompose, and CV 2 modulates Compose</li>
+<li>CV Outs: A/C is the accent output, and B/D is a trigger output sent when the level of the composed step is around 3V</li>
+<li>Encoder Push: Moves cursor between Compose, Decompose, and Length settings</li>
+</ul>
+
+<p><em>Palimpsest</em> for Ornament and Crime is a port of this developer's alternate firmware for Mutable Instruments Peaks.</p>
+
+<p>The idea behind Palimpsest is to write sequences gradually, using a pair of trigger signals. One of the triggers (Digital 1) clocks the sequencer. The other trigger (Digital 2) is a "Brush," which adds a CV value ("Compose") to the current step. If the sequencer is clocked without a brush trigger having arrived during that step, a CV value ("Decompose") is <em>subtracted</em> from that step.</p>
+
+<p>The results can be subtle, with a small Compose value and small or zero Decompose value. Or more dramatic shifts can be made, with larger values.</p>
+
+<p>The sequence length can be between 2 and 16 steps. <em>When the cursor is on the Length setting, the sequence is locked, and incoming triggers will not affect it.</em></p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Pong"><h3 class="pageTitle" id="p-Pong"> Pong</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Like twenty years ago, I owned a Kurzweil K2000. It had what we call today--but didn't call back then--an Easter Egg. It was a Pong game that you could play from the panel, and it generated MIDI notes when the ball bounced off a wall.</p>
+
+<p>This is the Pong we all know and love, with a few twists. As a ball bounces its way across the screen, the player defends the left side of the screen with a "paddle," and the module defends the right side. It's an unfair game, though, because the module can't lose. As you return the ball and level up, the ball gets faster, and your paddle gets smaller and closer to your opponent. The odds are not in your favor!</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Up/Down Buttons: Move the paddle up and down. This is really to illustrate the use of the buttons' event handler, and you really don't want to play the game with these things.</li>
+<li>Encoders: Both encoders move the paddle up and down.</li>
+<li>CV Input 1: Negative values move the paddle up, and positive values move the paddle down. There's a "center detent," a small range that doesn't move the paddle at all. This is to compensate for noise that gets into the ADC.</li>
+<li>Output A: When the ball bounces off your paddle, a short 5V trigger is sent to Output A.</li>
+<li>Output B: When the ball bounces off anything else, a short 5V trigger is sent to Output B.</li>
+<li>Output C: Sends 0 to 4-ish volts, based on the Y position of the ball. 0V is the top of the screen.</li>
+<li>Output D: Sends 0 to 4-ish volts, based on the Y position of the player paddle. 0V is the top of the screen.</li>
+</ul>
+
+<p>Exercises
+1. Create a patch that can be played by this game
+1. Create a patch that can play this game</p>
+
+<p>My patch's high score is <strong>24</strong>, using Maths and Distro. <strong>Update 8/31/2018: 27 with just Maths!</strong></p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-RunglBook"><h3 class="pageTitle" id="p-RunglBook"> RunglBook</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>RunglBook is a chaotic shift-register modulation based on Rob Hordijk's rungler circuit.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 is the clock, and Digital 2 freezes the shift register to writing</li>
+<li>CV Ins: CV 1 is the signal</li>
+<li>CV Outs: A/C is the Rungle output based on the low three bits, and B/D is the Rungle output based on the high three bits</li>
+<li>Encoder: Set threshold in semitone increments</li>
+</ul>
+
+<p>When Digital 1 is clocked, the register is shifted one bit to the left, and the signal is read. If the signal exceeds the voltage threshold, bit low bit of the shift register is set to 1. Otherwise, it is set to 0.</p>
+
+<p>If Digital 2 is receiving a gate at the time the clock is received, the register is shifted, but no read is done; instead, the high bit is moved to bit 0.</p>
+
+<p>Three bits of the eight-bit register are scaled to 8 possible values between 0V and 5V, and sent to the outputs. These are the Rungle outputs.</p>
+
+<p>RunglBook is in Hemisphere Suite starting with v1.5.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Scale Duet Quantizer"><h3 class="pageTitle" id="p-Scale Duet Quantizer"> Scale Duet Quantizer</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Scale Duet is a single-channel quantizer that allows you to switch between two user-defined scales. The scales are edited with an on-screen keyboard.</p>
+
+<h2>Controls</h2>
+
+<p>
+  </p><ul>
+    <li>Digital Ins: Digital 1 clocks the quantizer, and Digital 2 is a gate that chooses between Scale 1 (low) and Scale 2 (high)</li>
+<li>CV Ins: CV 1 is the signal to be quantized.</li>
+<li>Outputs: A/C is the quantized output for the selected scale</li>
+<li>Encoder Push: Toggles the note above the cursor ON or OFF. A small square will appear on the keyboard for notes that will be played when that scale is selected.</li>
+<li>Encoder Turn: Moves through the notes for each scale, and between Scales 1 and 2.</li>
+</ul>
+<p></p>
+
+<p>Scale Duet differs from Dual Quantizer in a few important ways:</p>
+
+<ul>
+<li>Scale Duet plays from two user-defined scales, rather than pre-programmed scales</li>
+<li>It quantizes only one value at a time</li>
+<li>It does not have a continuous mode; it only quantizes when clocked</li>
+</ul>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Scale Editor"><h3 class="pageTitle" id="p-Scale Editor"> Scale Editor</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>https://www.youtube.com/watch?v=UKX79rkSdIQ</p>
+
+<p>Scale Editor is a standalone application for editing and managing user-defined microtonal scales, and importing scales from the internal scale library, or via system exclusive. A web-based Scala-to-Hemisphere Suite converter is available (<a href="http://www.beigemaze.com/scala">http://www.beigemaze.com/scala</a>), which can generate system exclusive files from Scala documents.</p>
+
+<h2>Basic Controls and Navigation</h2>
+
+<ul>
+<li>CV Input 1/Output A: CV 1 is input for unquantized pitch CV. The quantized pitch appears at Output A, using the currently-selected user scale. Pitch is quantized in real time</li>
+<li>CV Output B: Quantized pitch for the currently-selected user scale and the selected note. </li>
+<li>Right Encoder: Selects note or length. Push the right encoder button to toggle between those two functions. For Output B, note selection can be used to set the octave of the currently-selected note's output. On the Import screen, the right encoder chooses the scale, and the right encoder button executes the import.</li>
+<li>Left Encoder: Changes the value of the currently-selected note by as little as 1.28 cents sharp or flat. Pressing the left encoder undoes the most recent note value change. Long-pressing the left encoder sends a system exclusive dump of the current scale data.</li>
+<li>Up/Down: Chooses the user scale. Long-pressing the Down button opens the Import screen.</li>
+</ul>
+
+<h2>Choosing a User Scale</h2>
+
+<p>Press the Up and Down buttons to choose a scale (from USER1 to USER4).</p>
+
+<h2>Selecting and Editing Notes</h2>
+
+<p>Use the right encoder to choose which note you're currently editing. The value of the note, in cents from the root, is shown at the bottom of the display.</p>
+
+<p>Turn the left encoder to change the value by as little as 1.28 cents. Turn clockwise for sharp, and counterclockwise for flat. Note values cannot overlap or exceed adjacent nodes, so the range of each note will be constrained based on the settings of the next note.</p>
+
+<h2>Undo</h2>
+
+<p>If you make a mistake, you don't need to remember the old value of the note. Press the left encoder button to undo a note value change. You can undo a change until you select a different note.</p>
+
+<h2>Monitoring</h2>
+
+<p>You can hear the changes you're making in real time with two different monitoring methods. Both methods update pitch in real time as you make changes:</p>
+
+<ul>
+<li>Full Scale Monitoring: Patch unquantized CV into Input 1, and patch Output A into an oscillator. Output A will continuously quantize Input 1 according to the currently-selected scale. The octave played will correspond to the input.</li>
+<li>Selected Note Monitoring: Output B will continuously output the quantized value of the currently-selected note. You can change the note's octave (within a 5-octave range) by turning the right encoder beyond the first or last note.</li>
+</ul>
+
+<h2>Changing Scale Length</h2>
+
+<p>User scales may contain between 4 and 16 notes. Press the right encoder button to enter the Scale Length screen. The display will show the number of notes. Now, use the right encoder to choose the number of notes. When you're done, press the right encoder to return to the Note Edit screen.</p>
+
+<h2>Importing Scales</h2>
+
+<p>The Import screen allows you to copy any scale in the scale library to the currently-selected user scale. Long-press the Down button to enter the Import screen. Then use the right encoder to choose a scale. To import the specified scale into the current user scale, press the right encoder ("[IMPORT]"). If you change your mind, press the left encoder ("[CANCEL]").</p>
+
+<h2>System Exclusive</h2>
+
+<p>You may initiate a MIDI system exclusive dump of the current scale by long-pressing the left encoder, or by long-pressing the right encoder to return to the main menu. You may capture the system exclusive dump with a sysex librarian program on a connected computer.</p>
+
+<p>To restore a scale from a sysex dump, simply initiate the dump from the computer while Scale Editor is running. The received scale will be placed into the currently-selected scale.</p>
+
+<h2>Scala Format Import</h2>
+
+<p>With the help of a web-based tool (http://www.beigemaze.com/scala), you can bring Scala scales into Scale Editor. Upload (or paste) your Scala into the tool, and download the SysEx file. See "System Exclusive" (above) for how to send the file to Scale Editor.</p>
+
+<p>For your convenience, sysex files for about 3000 scales from the Scala Scale Archive are available here, along with the original Scala files and instructions:</p>
+
+<p><a href="http://beigemaze.com/downloads/HS_Scala_Archive.zip">http://beigemaze.com/downloads/HS<em>Scala</em>Archive.zip</a></p>
+
+<p>These scales are distributed with the kind permission of Manuel Op de Coul</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Schmitt Trigger"><h3 class="pageTitle" id="p-Schmitt Trigger"> Schmitt Trigger</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>This applet is a dual Schmitt Trigger with a programmable threshold range.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>CV Inputs: Input for each channel</li>
+<li>Outputs: Gate signal for each channel</li>
+<li>Encoder push: Alternates between Low threshold, High threshold, and locked</li>
+<li>Encoder turn: Set Low and High thresholds</li>
+</ul>
+
+<p>A Schmitt Trigger is a type of comparator that provides hysteresis in a modular patch. Each Schmitt Trigger's output goes high when its input crosses the High threshold (default of 2.6V), and stays high until the input goes back below the Low threshold (default of 2.1V).</p>
+
+<p>Schmitt Trigger is in Hemisphere Suite from v1.4.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Scope"><h3 class="pageTitle" id="p-Scope"> Scope</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Scope is a simple CV and clock monitoring tool.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Digital 1 is a clock for the BPM display. Digital 2 determines the wavelength for the visual display of CV 1 data (as of Hemisphere Suite 1.1)</li>
+<li>CV Ins: CV 1 goes to the scope, and CV 2 goes to the numeric CV monitor</li>
+<li>CV Outs: A/C passes CV 1 and B/D passes CV 2</li>
+<li>Encoder Push: Freezes and unfreezes scope and CV monitor. BPM will continue to function</li>
+<li>Encoder Turn: Sample rate</li>
+</ul>
+
+<p>The value of the CV monitor is a direct reflection of the O_C's pitch value. It isn't a measurement in any particular units, but 5 volts will be around 7700 or so.</p>
+
+<p>The "sample rate" shown when the encoder is turned is the number of 60µs "ticks" that will elapse between samples. 64 samples will be shown on the display at any time. The display is bi-polar. You can use the encoder to find the best rate at which to view a waveform. <em>Starting at Hemisphere Suite 1.1: If you send a clock to Digital 2 with the same period as the signal to CV 1 (for example, EOR trigger of Maths while viewing a waveform from Maths), Scope is automatically adjust the sample rate for the best view.</em></p>
+
+<p><em>Note: Everything's approximate, including the CV passthru.</em></p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Sequence5"><h3 class="pageTitle" id="p-Sequence5"> Sequence5</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/zsqAbNRgHJI">Video</a></p>
+
+<p>Sequence5 is a five-step quantized sequencer.</p>
+
+<h3>Controls</h3>
+<ul>
+<li>Digital Ins: A clock at Digital 1 advances the sequencer, and a clock at Digital 2 resets to the first step</li>
+<li>CV Ins: (As of Hemisphere 1.3) CV 1 is a bi-polar transposition control over a two-octave range from -12 to +12 semitones, with CV between -2.5V and +2.5V</li>
+<li>Outputs: A/C is the quantized CV. B/D sends a trigger when the sequencer gets back to the first step.</li>
+<li>Encoder Push: Moves the cursor through the note sliders</li>
+<li>Encoder Turn: Selects the note or mutes the step</li>
+</ul>
+
+<p>Each step is a semitone increment over a 2.5 octave (32-note) range. To change the length of the sequence, you can mute one or more steps by moving the slider all the way down until the slider handle disappears. The clock will skip muted steps.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Shift Register (formerly Turing)"><h3 class="pageTitle" id="p-Shift Register (formerly Turing)"> Shift Register (formerly Turing)</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/RNWCq8mW5wE">Video</a></p>
+
+<p>ShiftReg ("Turing" prior to v1.4C) is a faithful implementation based on Tom Whitwell's original Turing Machine circuit.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock at Digital 1 shifts all bits left, after performing a probability calculation to determine whether the last bit should flip. A gate signal at Digital 2 unlocks probability changes.</li>
+<li>CV Inputs: CV 1 sets the length. CV 2 is bi-polar modulation of probability.</li>
+<li>Outputs: A/C is quantized output based on 5 bits, and B/D is voltage output based on 8 bits</li>
+<li>Encoder Push: Cycles cursor between Length and Probability settings</li>
+<li>Encoder Turn: Change the selected setting</li>
+</ul>
+
+<p>ShiftReg starts out with a random 16-bit register. The synthesist sets the pattern length and probability.</p>
+
+<p>When a clock is received at digital input 1, ShiftReg determines whether to change the value of the last bit in the pattern (bit <em>length</em> - 1) based on the set probability. At a probability of 0, the bit will never be changed, and at a probability of 100, the bit will always be changed. The entire 16-bit register is shifted, and the last bit's newly-calculated state is added to bit 0.</p>
+
+<p>Note that the old Turing Machine trick of getting a repeating 32-step pattern with a 100% probability is possible here.</p>
+
+<p><em>The sequence may be "frozen" by setting the probability to 0, or by moving the cursor to the Length setting. When the cursor is at the Length setting, the sequence will not change <strong>unless</strong> a high gate signal is present at Digital 2. *</em></p>
+
+<p>ShiftReg has two outputs. The first output is quantized to semitones over a 2.5 octave (32-note) range, and uses the first five bits of the register. The second output uses the first 8 bits of the register, and is proportioned to 5 volts. This output is similar to the output of the original Turing Machine.</p>
+
+<p>* <strong>Fun tip!</strong> To have total control over when a sequence is changed, set probability to 100%, then move the cursor to the length parameter to lock the probability. Now a high gate signal at Digital 2 will <em>always</em> flip bit 0.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-ShiftGate"><h3 class="pageTitle" id="p-ShiftGate"> ShiftGate</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>ShiftGate is a dual shift register-based gate/trigger sequencer for creating aleatoric rhythm patterns.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Inputs: Digital 1 clocks the sequencer by shifting both registers to the left, and Digital 2 freezes the sequencer and locks out changes.</li>
+<li>CV Inputs: Flip input for each channel. When CV is high, the bit rotating off the left side of the corresponding channel's register will be replaced at bit 0 with the opposite value.</li>
+<li>Outputs: Trigger or gate output for each channel</li>
+<li>Encoders: Change the length and output type for each channel</li>
+</ul>
+
+<p>ShiftGate has two channels controlled by a single clock input. Each channel starts with a random 16-bit register*. When a clock is received at Digital 1, the following things happen:</p>
+
+<ol>
+<li>The register is shifted to the left. </li>
+<li>If Digital 2 is high, the register is frozen; the high bit (based on length) of the previous value is moved back to the beginning (bit 0), and skip to 4.</li>
+<li>If the CV input for the corresponding channel is low, the high bit (based on length) of the previous value is moved back to the beginning (bit 0). If the CV input is high, the high bit is flipped, and that value is put at the beginning. This is known as an XOR operation.</li>
+<li>The value of bit 0 is examined. If the channel's Type is set to "Trig," then a trigger will be sent from the channel's output if the value is 1. If the channel's type is set to "Gate," the gate state is high if the value is 1. The gate will then <em>remain</em> high until the next time the register's bit 0 is 0.</li>
+</ol>
+
+<p>ShiftGate is in Hemisphere Suite from v1.5.</p>
+
+<p><em>* When ShiftGate's state is saved via SysEx or system save, Output A's register is saved, and Output B's register is randomized.</em></p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Shuffle"><h3 class="pageTitle" id="p-Shuffle"> Shuffle</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Shuffle is a two-step clock offset. Each step can be delayed by between 0% and 99% of the incoming clock tempo.</p>
+
+<h2>Controls</h2>
+
+<p>
+  </p><ul>
+
+<li>Digital Ins: Digital 1 is the clock, and a trigger to Digital 2 resets to the first-numbered step</li>
+  <li>CV Ins: Bi-polar modulation of the percentage delay for each step</li>
+<li>Outputs: Output 1 is the outgoing, potentially-delayed, clock</li>
+<li>Encoder: Set the percentage delay of each step</li>
+</ul>
+
+<p>Note that reset does not, itself, trigger a clock. It just brings the step back to the beginning so that another clock can trigger the first step.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Skewed LFO"><h3 class="pageTitle" id="p-Skewed LFO"> Skewed LFO</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/N0Cii0Hq2Ls">Video</a></p>
+
+<p>Skewed LFO is a low frequency oscillator with a waveshape that's adjustable from sawtooth, to triangle, to ramp.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock at Digital 1 resets the LFO</li>
+<li>CV Ins: CV 1 modifies the rate, and CV 2 modifies the skew</li>
+<li>Outputs: A/C is the bi-polar CV output, and B/D sends an end-of cycle trigger</li>
+<li>Encoder Push: Alternates cursor between setting rate and skew</li>
+<li>Encoder Turn: Adjusts the selected setting</li>
+</ul>
+
+<p>Note the the CV inputs <em>modify</em> the settings with bi-polar CV input between about -2.5 volts and about 2.5 volts. There is a small center detent in the middle of the range in which no modification is made.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Slew"><h3 class="pageTitle" id="p-Slew"> Slew</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Slew is a simple slew (or lag) processor. Two independent channels share the same settings. Channel 1's output is linear, and Channel 2's output is exponential.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Slew defeat for Channels 1 and 2</li>
+<li>CV Ins: Input signals for Channels 1 and 2</li>
+<li>Outputs: A/C is the linear Channel 1 output, and B/D is the exponential Channel 2 output</li>
+<li>Encoder Push: Select between Rise and Fall</li>
+<li>Encoder Turn: Increase and decrease Rise or Fall time</li>
+</ul>
+
+<p>When Rise or Fall values are changed, a time (in ms) will briefly appear on the display. This indicates the approximate time that it would take for the linear signal to rise or fall 5 volts. The time between actual voltages will be proportionate to this time, and the exponential signal will take less time.</p>
+
+<p>When a high gate is present at either digital input, the corresponding channel's slew will be defeated. That is, the input will pass through to the output.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Squanch Shifting Quantizer"><h3 class="pageTitle" id="p-Squanch Shifting Quantizer"> Squanch Shifting Quantizer</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Squanch is a pitch-shifting quantizer with a single input and two pitch-shifted outputs. It can be used as a voltage adder.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock pulse at Digital 1 causes Squanch to sample the signal at CV 1 and quantize it. A gate at Digital 2 adds one octave to the output at A/C.</li>
+<li>CV Ins: CV 1 is the signal to be quantized. CV 2 is a bi-polar shift input that adds (or subtracts, if negative) voltage to or from the output at B/D.</li>
+<li>CV Outs: Quantized output, pitch-shifted as noted above</li>
+<li>Encoder: Set shift for each output, or scale</li>
+</ul>
+
+<p>Each channel begins in continuous operation. That is, the incoming CV is quantized at a rate of about 16667 times per second. This might result in undesirable slippage between notes, so clocked operation is available.</p>
+
+<p>To enter clocked operation, send a clock signal to Digital 1. A clock icon will appear next to the selector for the scale to indicate that that quantizer is in clocked mode.</p>
+
+<p>To return to continuous operation, stop sending clock to the quantizer, and then change the scale. As long as no additional clock signals are received, the quantizer will remain in continuous operation.</p>
+
+<p>Squanch is in Hemisphere Suite starting with v1.5.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Switch"><h3 class="pageTitle" id="p-Switch"> Switch</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/juu65pJyXlY">Video</a></p>
+
+<p>Switch is a two-channel switch with two switching methods: sequential and gated.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock at Digital 1 switches the A/C output between Signal 1 and Signal 2. A gate at Digital 2 switches the B/D output to Signal 2 .</li>
+<li>CV Ins: CV 1 is Signal 1, and CV 2 is Signal 2</li>
+<li>Outputs: A/C is the sequentially-selected output, and B/D is the gated output. The sequential output alternates between Signal 1 and Signal 2, and the gated output sends Signal 1 when digital Digital 2 is low, and Signal 2 when high.</li>
+</ul>
+
+<p>Switch uses a Skyline display to indicate status of each channel. The indicator for each channel also specifies whether Signal 1 or Signal 2 is currently selected.</p>
+
+<p><strong>Note</strong>: <em>The Ornament and Crime's circuitry is not made for precision 1:1 reproduction of voltages. The outputs will not exactly match the inputs, so Switch is not suitable for pitch CV. This is inherent to the O</em>C's design and does not indicate poor calibration._</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-The Darkest Timeline 2.0"><h3 class="pageTitle" id="p-The Darkest Timeline 2.0"> The Darkest Timeline 2.0</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>The Darkest Timeline is a CV/MIDI sequencer application for Ornament and Crime. It is included in the Hemisphere Suite firmware from version 1.4.</p>
+
+<h2>Functional Concepts</h2>
+
+<h3>Timelines</h3>
+
+<p>Two timelines, each of up to 32 steps, run simultaneously. The timeline at the top of the screen is the Pitch Timeline. The timeline at the bottom of the screen is the Probability Timeline.</p>
+
+<h3>Pitch Timeline</h3>
+
+<p>The Pitch Timeline controls pitch data. The CV output can be quantized to a specific scale and root note. The MIDI output sends Note On and Note Off messages whose notes are based on the Pitch Timeline. The Pitch Timeline is shown on the top half of the screen, and each step on the timeline is shown as a vertical bar, with taller bars corresponding to higher pitches (or voltages).</p>
+
+<h3>Probability Timeline</h3>
+
+<p>The Probability Timeline controls the probability of trigger CV firing and of MIDI Note On events being sent. For MIDI notes, the Probability Timeline also determines the velocity of the Note On messages. The Probability Timeline is shown on the bottom half of the screen, and each step on the timeline is shown as a vertical bar, with taller bars corresponding to greater probability of the event being fired (from 0% to 100%).</p>
+
+<h3>Length</h3>
+
+<p><em>Set the sequence length by turning the left encoder.</em></p>
+
+<p>The sequence has a single length value, from 1 to 32 steps. If the sequencer is advanced past the last step, it will return to the first step of the sequence (see "Index" below). If the sequencer is running in reverse, and is reverse past the first step, it will return to the last step of the sequence.</p>
+
+<h3>Index</h3>
+
+<p><em>To set the index, press the right encoder to enable the index cursor (a flashing vertical line), and then turn the right encoder to change the index. The index can also be set by providing positive voltage to CV Input 3</em></p>
+
+<p>Most sequencers have adjustable sequence lengths, but the sequence usually starts at the first step. The Darkest Timeline allows you to choose the sequence's first step, or index, either from the panel or via CV. When the sequence is reset, it will go back to the index. When the sequence is advance past its last step, it will go back to the index.</p>
+
+<p>The index is shown as a dashed vertical line. Pressing the right encoder button will toggle the right encoder's function between scrubbing through the sequence and setting the index.</p>
+
+<h2>Outputs</h2>
+
+<h3>Pitch Timeline Universe</h3>
+
+<p>Outputs A and B are connected to the Pitch Timeline. Output A is the pitch of the left-most step on the display. This is the "Normal Universe" output.</p>
+
+<p>Output B is the "Parallel Universe," which is the corresponding step in the set of steps <em>after</em> the last step in the sequence. Okay, that sounds confusing, so here's an example. Let's say you have a length of 8, and your index is step 1. So your Normal Universe is steps 1, 2, 3, 4, 5, 6, 7, and 8. Meanwhile, Output B will play steps 9, 10, 11, 12, 13, 14, 15, 16.</p>
+
+<p>If the length is greater than 16, the Normal and Parallel Universes will share steps. If the length is 32, the Normal and Parallel Universes will be identical.</p>
+
+<h3>Probability Timeline Universes</h3>
+
+<p>Outputs C and D are connected to the Probability Timeline. When the sequencer is advanced to a step, a probability is calculated based on the value in the Probability Timeline. Output C emits a trigger based on this probability; the higher the bar, the higher the probability of C emitting a trigger. At its maximum, the trigger will always fire. At its minimum, the trigger will never fire. This is the "Normal Universe" probability output.</p>
+
+<p>Output D is the "Alternate Universe," which is a trigger based on the <em>complementary</em> probability of the Probability Timeline; if a trigger has a 70% chance of firing in the Normal Universe, it has a 30% chance of firing in the Alternate Universe. The probabilities for both universes are calculated independently, so it's possible for both outputs to fire, or both outputs to not fire on the same step.</p>
+
+<h3>MIDI Output Universes</h3>
+
+<p><em>To set MIDI channels, press the left encoder button to enter the Setup screen, and keep pressing the button until you get to the MIDI settings. Then use the left encoder to change the channel.</em></p>
+
+<p>The Darkest Timeline may send notes independently on up to two MIDI channels. The first of these is the Normal Universe, which is a Note On message that may (or may not) be sent, depending on the probability in the Probability Timeline.</p>
+
+<p>The other MIDI out channel is the Alternate Universe, which uses the Parallel Universe's Pitch Timeline values and the Alternate Universe's Probability Timeline values.</p>
+
+<p>In both cases, the velocity of the Note Out message is proportional to the Probability Timeline value used for the calculation.</p>
+
+<h3>Setup Screen</h3>
+
+<p><em>To access the Setup screen, press the left encoder button.</em></p>
+
+<p>The Setup screen allows you to set the tuning and MIDI settings. Use the left encoder button to move through the settings (and back to the main screen), and use the left encoder to change the selected value. After a short period of inactivity on the Setup screen, you'll be returned to the main screen. Available settings are:</p>
+
+<ul>
+<li><strong>Scale</strong>: Chooses one of the User or built-in scales. This will be used to quantize the CV outputs. It does not affect MIDI output.</li>
+<li><strong>Root</strong>: Sets the diatonic root note based on the selected scale. This will be used to quantize the CV outputs. It does not affect MIDI output.</li>
+<li><strong>MIDI Out</strong>: Sets the MIDI channel for the Normal Universe MIDI output, as described above. If this is set to Off, there will be no MIDI notes sent from that universe.</li>
+<li><strong>MIDI Out Alt</strong>: Sets the MIDI channel for the Alternate Universe MIDI output, as described above. This this is set to Off, there will be no MIDI notes sent from that universe.</li>
+<li><strong>MIDI In</strong>: Determines whether the recording source is CV or MIDI. If you're recording from CV, this should be set to "Off." Otherwise, input for recording will be expected on the specified channel.</li>
+<li><strong>Gate/Trigger</strong>: Determines whether the Probability Timeline (outputs C and D) will send a 6ms trigger, or a gate that's a percentage of the clock period.</li>
+</ul>
+
+<h2>Playback Controls</h2>
+
+<h3>CV Control of Playback</h3>
+
+<p>Inputs:
+* Digital 1: A trigger will advance the sequencer forward (by default) or backward
+* Digital 2: When gated, a trigger at Digital 1 will move the sequencer backward
+* Digital 3: Reset the sequencer to index
+* Digital 4: When gated, all probabilities are 100%
+* CV 1: CV record value for Pitch Timeline
+* CV 2: CV record value for Probability Timeline
+* CV 3: Set the index (0V ~ 5V)
+* CV 4: Transpose by adding positive or negative voltage to the Pitch timeline</p>
+
+<p>Outputs:
+* Output A: CV: Pitch Timeline, Normal Universe
+* Output B: CV: Pitch Timeline, Parallel Universe
+* Output C: Trigger: Probability Timeline, Normal Universe
+* Output D: Trigger: Probability Timeline, Alternate Universe (complementary probability of Output C)</p>
+
+<h3>Panel Control of Playback</h3>
+
+<ul>
+<li>Left Encoder: Change sequence length (clockwise to decrease, counterclockwise to increase) from 1 to 32 steps</li>
+<li>Press Right Encoder: Toggle Index editing</li>
+<li>Right Encoder with Index editing off: Scrub through the sequence. If the sequencer is not being clocked with CV 1, calculate probabilities and potentially fire triggers.</li>
+<li>Right Encoder with Index editing on: Change the index. If the sequencer is not being clocked with CV 1, calculate probabilities and potentially fire triggers.</li>
+</ul>
+
+<h2>Recording</h2>
+
+<p><em>Recording is enabled independently for each timeline. Press the Up button to enable recording for the Pitch Timeline, and the Down button to enable recording for the Probability Timeline. Pressing the button a second time will disable recording on the corresponding timeline.</em></p>
+
+<h3>CV Recording</h3>
+
+<p>If the MIDI In channel is not set on the Setup screen, recording is done via CV. Connect CV sources to CV 1 (for recording into the Pitch Timeline) and/or CV 2 (for recording into the Probability Timeline), and enable recording on one or two timelines, as specified above. When recording is enabled for a timeline, the leftmost step will display a flashing cursor.</p>
+
+<p>When recording is enabled, and set to record CV, a small "CV" icon will appear at the top of the screen.</p>
+
+<p>To record data to the cursor point(s), set the CV at the corresponding input(s), and then advance the sequencer. You can advance the sequencer with a trigger to Digital 1, or by turning the right encoder.</p>
+
+<h3>MIDI Recording</h3>
+
+<p>If the MIDI In channel is set on the Setup screen, recording is done via MIDI. Connect your O_C module to a MIDI host (usually a computer), choose "Hemisphere" as the MIDI device, and set the output channel to correspond to The Darkest Timeline's MIDI In channel. When recording is enabled for a timeline, the leftmost step will display a flashing cursor.</p>
+
+<p>When recording is enabled, and set to record MIDI, a small MIDI DIN icon will appear at the top of the screen.</p>
+
+<p>To record data to the cursor point(s), play a note. A value proportional to the note number will be recorded to the Pitch Timeline (if recording is enabled), and a value proportional to the velocity will be recorded to the Probability Timeline (if recording is enabled). The sequencer will advance automatically with each note.</p>
+
+<p><em>Please note that a trigger at Digital 1 will also advance the sequencer, so you probably want to turn off these triggers while recording MIDI data.</em></p>
+
+<h2>Saving The Darkest Timeline Data</h2>
+
+<p>The Darkest Timeline's data can be saved in two ways:</p>
+
+<p>(1) <strong>With the built-in Ornament and Crime data storage system</strong> Return to the main menu by long-pressing the right encoder. Then, long-press the right encoder again. This will save the state of all applications in the module.</p>
+
+<p>(2) <strong>System Exclusive Librarian</strong> Your current sequence (both Timelines, length, index, scale, and root) can be dumped to a system exclusive librarian program on a computer for (somewhat) permanent storage. When you long-press the right button to return to the main menu, the sysex dump will be initiated. When setting up your librarian software, select Hemisphere as the MIDI device.</p>
+
+<p>The Darkest Timeline sends your sequence as five sysex messages, so make sure that your librarian captures all of them and stores them in the same file.</p>
+
+<p>To restore your sequence, simply send the dump back any time The Darkest Timeline is running.</p>
+
+<p><strong>Compatibility Note:</strong> The Darkest Timeline 2.0 is fully-compatible with sysex files from the previous version. The only difference is that scale and root will not be changed.</p>
+
+<h2>Misc. Controls</h2>
+
+<ul>
+<li>Long-Press Left Encoder: Randomize both timelines.</li>
+<li>Long-Press Down Button: Clear both timelines.</li>
+</ul>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Threshold Logic Neuron"><h3 class="pageTitle" id="p-Threshold Logic Neuron"> Threshold Logic Neuron</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/NdHY-eDipkY">Video</a></p>
+
+<p>Threshold Logic Neuron is a three-input programmable logic gate.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Logical states of Dendrites 1 and 2</li>
+<li>CV Ins: CV 1 is the logical state of Dendrite 3 (5 volts is high, or True)</li>
+<li>Outputs: A/C and B/D are the output of the Axon. Both outputs are the same so that one may be patched back to an input, if desired.</li>
+<li>Encoder Push: Cycle cursor between Dendrite 1, 2, and 3 weight, and Axon threshold</li>
+<li>Encoder Turn: Set the selected weight or threshold</li>
+</ul>
+
+<p>Threshold Logic Neuron is a three-input/single-output logic gate. Each of three inputs ("Dendrites") is given a weight (in the case of Hemisphere, a weight of between -9 and 9). The output ("Axon") is given a threshold (in Hemisphere, between -27 and 27). When the sum of the weights of high inputs exceeds the threshhold, the output goes high.</p>
+
+<p>The neuron can be used to reproduce common logic gates; for example:</p>
+
+<ul>
+<li>Dendrite 1: w=3</li>
+<li>Dendrite 2: w=3</li>
+<li>Dendrite 3: w=3</li>
+<li>Axon Output: t=8</li>
+</ul>
+
+<p>This reproduces and AND gate, because all Dendrites need to go high (for a sum of 9) to exceed the threshold of 8.</p>
+
+<ul>
+<li>Dendrite 1: w=3</li>
+<li>Dendrite 2: w=3</li>
+<li>Dendrite 3: w=3</li>
+<li>Axon Output: t=2</li>
+</ul>
+
+<p>This reproduces an OR gate, because only one Dendrite needs to go high to exceed the threshold of 2.</p>
+
+<p>The values can also be negative. So</p>
+
+<ul>
+<li>Dendrite 1: w=-3</li>
+<li>Dendrite 2: w=-3</li>
+<li>Axon Output: t=-5</li>
+</ul>
+
+<p>This is a two-input NAND gate, because the output is high (because 0&gt;-5) unless both Dendrite 1 and 2 are high, which brings the sum below the threshold.</p>
+
+<p>But you're not limited to reproducing standard Boolean operations. You can create your own logical operations. For example, you can do this:</p>
+
+<ul>
+<li>Dendrite 1: w=2</li>
+<li>Dendrite 2: w=2</li>
+<li>Dendrite 3: w=5</li>
+<li>Axon Output: t=3, and mult the output into Dendrite 3</li>
+</ul>
+
+<p>This creates a type of state memory: when Dendrites 1 and 2 go high, the output goes high (2+2&gt;3), and the output is sent back to Dendrite 3, which forces the output to remain high, whatever happens to Dendrites 1 and 2 later.</p>
+
+<p>A variation of that theme is</p>
+
+<ul>
+<li>Dendrite 1: w=2</li>
+<li>Dendrite 2: w=-2</li>
+<li>Dendrite 3: w=2</li>
+<li>Axon Output: t=1, and mult the output into Dendrite 3</li>
+</ul>
+
+<p>Now, Dendrite 1 fires the axon, which feeds back into itself. Dendrite 1 can go low again and the output stays high. But a high signal at Dendrite 2 will reset the memory unless Dendrite 1 is still on.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Trending"><h3 class="pageTitle" id="p-Trending"> Trending</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Trending is a dual slope detector with assignable outputs.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Inputs: CV 1 and CV 2 are the incoming signals for each channel</li>
+<li>Outputs: Outputs A/C and B/D are assignable, and correspond to CV 1 and CV 2 channels</li>
+<li>Encoder: Assigns output functions, sets Sensitivity</li>
+</ul>
+
+<p>The following functions can be assigned to each output:</p>
+
+<ul>
+<li>Rising: The assigned output is a gate, which is high when the signal is rising</li>
+<li>Falling: The assigned output is a gate, which is high when the signal is falling</li>
+<li>Steady: The assigned output is a gate, which is high when the signal is steady</li>
+<li>Moving: The assigned output is a gate, which is high when the signal is rising or falling</li>
+<li>ChgState: The assigned output emits a trigger when the signal changes from one state to another (e.g., rising to steady, steady to falling, falling to rising, etc.)</li>
+<li>ChgValue: The assigned output emits a trigger when the signal changes its value by more than 1/4 semitone (or about .02V)</li>
+</ul>
+
+<h2>Sensitivity</h2>
+
+<p>The sensitivity control can be used to fine-tune the response of the slope detector. At lower settings, the detector will respond more slowly, but will be more consistent. At higher settings, the detector will respond faster, but may change direction more erratically.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Trigger Sequencer 16"><h3 class="pageTitle" id="p-Trigger Sequencer 16"> Trigger Sequencer 16</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Trigger Sequencer 16 is a 16-step trigger sequencer. It's visually and functionally similar to Trigger Sequencer, except it's 1x16 instead of 2x8.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock at Digital 1 advances the sequence. A trigger at Digital 2 resets sequence.</li>
+<li>CV Ins: While a gate is present at CV 1, the A/C and B/D outputs are swapped</li>
+<li>Outputs: A/C is the sequence's trigger output, and B/D the NOT trigger output</li>
+<li>Encoder Push: Cycles cursor between editing 4-step parts of the sequence and sequence length</li>
+<li>Encoder Turn: Adjust the selected setting</li>
+</ul>
+
+<p>The cursor appears over four steps at a time. Turning the encoder selects a binary representation of the bit pattern. Each quarter of the sequence has sixteen possible values. That is, turning the encoder clockwise will cycle through</p>
+
+<ul>
+<li>(silence)</li>
+<li>---X</li>
+<li>--X-</li>
+<li>--XX</li>
+<li>-X--</li>
+<li>-X-X</li>
+<li>-XX-</li>
+<li>-XXX</li>
+<li>X---</li>
+<li>X--X</li>
+<li>X-X-</li>
+<li>X-XX</li>
+<li>XX--</li>
+<li>XX-X</li>
+<li>XXX-</li>
+<li>XXXX</li>
+</ul>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Trigger Sequencer"><h3 class="pageTitle" id="p-Trigger Sequencer"> Trigger Sequencer</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/qPRspJApd1Y">Video</a></p>
+
+<p>Trigger Sequencer is a dual eight-step trigger sequencer.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A clock at Digital 1 advances both sequences. A trigger at Digital 2 resets both sequences to the top.</li>
+<li>CV Ins: While a gate is present at CV 1, the A/C and B/D outputs are swapped</li>
+<li>Outputs: A/C is Channel 1's trigger output, and B/D is Channel 2's trigger output</li>
+<li>Encoder Push: Cycles cursor between editing first and second half of Channel 1, length of Channel 1, first and second half of Channel 2, and length of Channel 2.</li>
+<li>Encoder Turn: Adjust the selected setting</li>
+</ul>
+
+<p>The cursor appears over four steps at a time. Turning the encoder selects a binary representation of the bit pattern. Each half of the sequence has sixteen possible values. That is, turning the encoder clockwise will cycle through</p>
+
+<ul>
+<li>(silence)</li>
+<li>---X</li>
+<li>--X-</li>
+<li>--XX</li>
+<li>-X--</li>
+<li>-X-X</li>
+<li>-XX-</li>
+<li>-XXX</li>
+<li>X---</li>
+<li>X--X</li>
+<li>X-X-</li>
+<li>X-XX</li>
+<li>XX--</li>
+<li>XX-X</li>
+<li>XXX-</li>
+<li>XXXX</li>
+</ul>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Tuner"><h3 class="pageTitle" id="p-Tuner"> Tuner</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Tuner is a chromatic tuner with adjustable A4 setting.</p>
+
+<p><em>Important: Tuner can only run in the right hemisphere. It will remind you if you try to place it in the left. This is because technical reasons beyond my control.</em></p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Inputs: Digital 2 is the oscillator input</li>
+<li>Encoder: Set A4 frequency</li>
+<li>Encoder push: Reset tuner</li>
+</ul>
+
+<p>The A4 frequency has a range of 400-500Hz. The closest note is displayed under the frequency. Under that, it shows how far off from that note in cents the input is. When the note is in tune, it will become highlighted.</p>
+
+<p>If Tuner seems to stop responding, push the encoder button to reset it.</p>
+
+<p>Yeah, that's about it. It's a tuner.</p>
+
+<p>Tuner is available from Hemisphere Suite v1.4.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-VectMorph"><h3 class="pageTitle" id="p-VectMorph"> VectMorph</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><a href="https://youtu.be/WrENiAQHhq0">Video</a></p>
+
+<p>VectMorph is morph controller inspired by the Doepfer A-144, and based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the <a href="https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor">Waveform Editor</a>.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>CV Ins: With Linked Mode enabled, CV 1 controls the phase of A/C and B/D outputs. With Linked Mode disabled, CV 1 controls the phase of A/C and CV 2 controls the phase of B/D (see Linked Mode below)</li>
+<li>CV Outs: Morph controller outputs</li>
+<li>Encoders: Alternate between Phase Offset and waveform for each channel</li>
+</ul>
+
+<p>The Vector Morph Controller (VectMorph) is a modulation source for sending phase-offset output to one or more destinations. A typical use case would involve sending overlapping phased triangular waves to control a voltage-controlled mixer.</p>
+
+<p>Each channel can be assigned a Phase Offset, in degrees. This offset is added to the voltage-determined phase to determine the current amplitude of the channel's output.</p>
+
+<h2>Linked Mode</h2>
+
+<p>By default, CV 1 controls the phase of both channels. This is Linked Mode. You can use two instances of the Vector Morph Controller, one in each hemisphere, to control up to four things. To use Linked Mode in both hemispheres, mult one hemisphere's CV 1 input to the other hemisphere's CV 1 input (as demonstrated in the video).</p>
+
+<p>If you wish to control the phase of each channel independently, just send some voltage to CV 2. This will disable Linked Mode, and the Link icon will disappear. To return to Linked Mode, stop sending voltage to CV 2, and use the encoder to change the waveform of either channel.</p>
+
+<p>Vector Morph Controller is in Hemisphere Suite starting with v1.6.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-VectorEG"><h3 class="pageTitle" id="p-VectorEG"> VectorEG</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>VectorEG is a dual envelope generator based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the <a href="https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor">Waveform Editor</a>.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A gate at each input starts and sustains the corresponding EG.</li>
+<li>Outputs: Output A/C is the signal for EG 1, and Output B/D is the signal for EG 2</li>
+<li>Encoders: Push to alternate the cursor between EG 1 frequency, EG 1 waveform select, EG 2 frequency and EG 2 waveform select.</li>
+</ul>
+
+<p>The EG runs freely until it gets to the second-to-last segment, and sustains at that point. When released, it proceeds to the level of the final segment at the speed specified by the final segment.</p>
+
+<p>Unlike a traditional envelope generator, the speed of the envelope is determined with a single frequency control. The higher the frequency, the faster the envelope will run.</p>
+
+<p>The outputs are uni-polar, and with positive offset, so that a level of -128 in the Waveform Editor corresponds to 0V, and a level of 127 is 5V.</p>
+
+<p>VectorEG is in Hemisphere Suite starting with v1.6.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-VectorLFO"><h3 class="pageTitle" id="p-VectorLFO"> VectorLFO</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Vector LFO is a dual low-frequency oscillator based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the <a href="https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor">Waveform Editor</a>.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A trigger at each channel syncs the corresponding LFO</li>
+<li>CV Ins: CV 1 is bi-polar modulation of the frequency of LFO 1. CV2 is attenuation of the amount of LFO 1 that's fed into Output B/D.</li>
+<li>Outputs: Output A/C is the signal for LFO 1. Output B/D is the signal for LFO 2 mixed with the signal for LFO 1, with the mix based on the input to CV 2.</li>
+<li>Encoders: Push to alternate the cursor between LFO 1 frequency, LFO 1 waveform select, LFO 2 frequency and LFO 2 waveform select.</li>
+</ul>
+
+<p>The LFO range is from .10Hz to 999Hz.</p>
+
+<h2>Output A/C and LFO 1</h2>
+
+<p>Output A/C is a the output of only LFO 1. LFO 1 can be synchronized with an external clock at Digital 1, and its frequency can be modulated over a 30Hz bi-polar range with CV 1.</p>
+
+<h2>Output B/D and LFO 2</h2>
+
+<p>Output B/D is a mixed output. By default, it is a 50%/50% mix of LFO 1 and LFO 2. Increasing voltage to CV 2 causes increasing attenuation of the LFO 1 signal. At 5V, the LFO 1 signal will be absent at Output B/D.</p>
+
+<h2>Manual Oscillator Reset</h2>
+
+<p>When a new waveshape is selected from the panel, both LFO 1 and LFO 2 will be reset to the beginning of their respective cycles.</p>
+
+<p>VectorLFO is in Hemisphere Suite starting with v1.6.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-VectorMod"><h3 class="pageTitle" id="p-VectorMod"> VectorMod</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>VectorMod is a dual triggered one-shot or cycling modulation source based on Vector Oscillator waveforms. There is a variety of built-in waveforms from which to choose, or you can create your own with the <a href="https://github.com/Chysn/O_C-HemisphereSuite/wiki/Waveform-Editor">Waveform Editor</a>.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: A trigger at each input starts the corresponding Modulator</li>
+<li>CV Ins: A high signal (gate) at each input causes the corresponding Modulator to cycle</li>
+<li>Outputs: Output A/C is bi-polar the signal for Mod 1, and Output B/D is the bi-polar signal for Mod 2</li>
+<li>Encoders: Push to alternate the cursor between Mod 1 frequency, Mod 1 waveform select, Mod 2 frequency and Mod 2 waveform select</li>
+</ul>
+
+<p>The speed of the Modulator is determined with a single frequency control. The higher the frequency, the faster the Modulator will run.</p>
+
+<p>VectorMod is in Hemisphere Suite starting with v1.6.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Voltage"><h3 class="pageTitle" id="p-Voltage"> Voltage</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p>Voltage is a dual gate-activated fixed-voltage emitter.</p>
+
+<h2>Controls</h2>
+
+<ul>
+<li>Digital Ins: Gate for each channel</li>
+<li>CV Outs: For each channel, outputs specified voltage or 0V, depending on gate state</li>
+<li>Encoder: Determine gate behavior for each channel</li>
+</ul>
+
+<p>The voltage range is -3V to +5V, selectable in 1 semitone (approx. .08V) increments.</p>
+
+<p>For output, there are two gate states available:</p>
+
+<ul>
+<li><strong>G-On</strong>: When the gate of the corresponding digital input is high, the output is the specified voltage. Otherwise, it's 0V.</li>
+<li><strong>G-Off</strong>: When the gate of the corresponding digital input is low, the output is the specified voltage. Otherwise, it's 0V.</li>
+</ul>
+
+<p>The indicator over the output name (A,B,C,D) will display when the corresponding output is emitting non-zero voltage.</p>
+
+<p>Voltage is available in Hemisphere Suite from v1.4.</p>
+    </div>
+  </div>
+
+</div></div><div class="page"><div class="pageTitleBlock"><a href="#p-Waveform Editor"><h3 class="pageTitle" id="p-Waveform Editor"> Waveform Editor</h3></a></div><div>
+  <div class="centered">
+    <div class="content"><p><strong><em>Note: This documentation is for an unreleased feature in Hemisphere Suite. It will be released with Hemisphere Suite 1.6 on October 26, 2018.</em></strong></p>
+
+<p>Waveform Editor is an application for creating, editing, and saving Vector Oscillator waveforms.</p>
+
+<h2>What is a Vector Oscillator Waveform?</h2>
+
+<p>Waveforms are described by as few as two, and up to twelve segments. Each segment has a bi-polar <em>level</em> (between -128 and 127) and a <em>time</em> (between 0 and 9). The level and time are not fixed values, but depend on the application and its settings.</p>
+
+<p>Vector Oscillators are used in four Hemisphere applets:</p>
+
+<ul>
+<li>VectorLFO, as a cycling bi-polar modulation source</li>
+<li>VectorEG, as a non-cycling uni-polar gated envelope generator with sustain and release</li>
+<li>VectorMod, as a bi-polar triggered modulation source that can be either cycling or non-cycling</li>
+<li>Boots 'n Cats, as an audio oscillator and drum envelope generators</li>
+</ul>
+
+<h2>Level</h2>
+
+<p>The Level (-128 to 127) is scaled to the specific application. For example, the VectorLFO's range is -3V to 3V. When a Vector Oscillator is started, its signal level is set to the Level of the <em>last</em> segment, and immediately starts moving to the Level of the first segment, based on the segment's Time (see below).</p>
+
+<h2>Time</h2>
+
+<p>The Time of a segment specifies time relative to other segments in the waveform. Two segments with the same Time value will take the same time to complete, regardless of what that value actually is. The total time that it takes a segment to reach its Level will depend upon the Time value (specifically, its ratio to the sum of all Time values in the waveform) and the waveform's frequency (see below).</p>
+
+<h2>Frequency</h2>
+
+<p>Each Vector Oscillator application provides one or more ways to affect an oscillator's frequency. In most cases, a value in Hertz (cycles per second) is provided, which expresses how fast the oscillator will cycle (if it is cycling). Each segment in the waveform will be scaled based on its Time and the current frequency. Note that Hz values are approximate, due to hardware and software numeric precision limits.</p>
+
+<h2>Basic Controls and Navigation</h2>
+
+<ul>
+<li>Left Encoder: Turn to move through the waveform's segments. The selected segment will be a solid line. Press the left encoder button to insert a new segment after the selected segment. Long-press the left encoder button to delete the selected segment. <strong>Note</strong>: You cannot delete a segment if it would leave the waveform with fewer than 2 segments, or if it would leave the waveform with a total Time of 0.</li>
+<li>Right Encoder: Press to switch the cursor between editing of Level and Time. Turn the right encoder to set the selected segment's Level between -128 and 128, or the selected segment's Time between 0 and 9.</li>
+<li>Up/Down Buttons: Press to select a waveform. Long-press the Down button to activate a page to add a new waveform, or delete a waveform. <strong>Note</strong>: You cannot delete the last waveform, and you cannot add a waveform if there are fewer than 3 segments remaining.</li>
+<li>For jack I/O functions, see <strong>Monitoring</strong> below.</li>
+</ul>
+
+<h2>Segment Memory</h2>
+
+<p>Hemisphere Suite allocates 63 segments of waveform memory. The upper-right corner of the screen shows how many segments are remaining. You may add as many waveforms as you like, with the following limitations:</p>
+
+<ul>
+<li>At least 3 segments must be available to create a new waveform. This is because each waveform uses one segment as a table-of-contents entry, and each waveform must have at least two Level/Time segments.</li>
+<li>Each waveform may use up to 12 Level/Time segments</li>
+</ul>
+
+<h2>Choosing a Waveform</h2>
+
+<p>Press the Up and Down buttons to choose a waveform.</p>
+
+<h2>Selecting and Editing Segments</h2>
+
+<p>Use the left encoder to move through the segments. The selected segment will be shown as a solid line.</p>
+
+<p>Press the right encoder button to alternate the cursor between Level and Time. Turn the right encoder to set that value for the selected segment.</p>
+
+<h2>Adding and Deleting Segments</h2>
+
+<p>To add a new segment, press the left encoder button. A new segment will be inserted after the selected segment, and the newly-created segment will become selected. You cannot add a segment if the waveform already has 12 segments.</p>
+
+<p>To delete a segment, long-press the left encoder button. The selected segment will be deleted, and the next segment will become selected. You cannot delete a segment if doing so would leave only one segment in the waveform. You also cannot delete a segment if doing so would leave the waveform with a total Time of 0.</p>
+
+<h2>Monitoring</h2>
+
+<p>You may monitor the waveform you're editing in four different ways, one for each output:</p>
+
+<ul>
+<li>Out A: Bi-polar LFO (default 1Hz) - <em>Modulated by CV 1</em></li>
+<li>Out B: Bi-polar audio rate oscillator (default 440Hz) - <em>Modulated by CV 2</em></li>
+<li>Out C: Uni-polar gated EG with sustain and release - <em>Gated by Digital 3</em></li>
+<li>Out D: Bi-polar triggered one-shot modulation - <em>Triggered by Digital 4</em></li>
+</ul>
+
+<h2>Saving Waveforms</h2>
+
+<p>Waveform data can be saved in two ways:</p>
+
+<p>(1) <strong>With the built-in Ornament and Crime storage system</strong> Return to the main menu by long-pressing the right encoder. Then, long-press the right encoder again. This will save the state of all applications in the module.</p>
+
+<p>(2) <strong>System Exclusive Librarian</strong> Your current waveform library can be dumped to a system exclusive librarian program on a computer for permanent storage. When you long-press the right button to return to the main menu, the sysex dump will be initiated. When setting up your librarian software, select Hemisphere as the MIDI device.</p>
+
+<p>Waveform Editor sends your waveform library as four sysex messages, so make sure that your librarian captures all of them and stores them in the same file.</p>
+
+<p>To restore your waveforms, simply send the dump back any time Waveform Editor is running.</p>
+    </div>
+  </div>
+
+</div></div></div></div></div><div><a href="https://shop.burns.ca/products/modular-drums-001-bia-techno"><div class="samplepack"><div class="samplepack-content"><div class="samplepack-image"><img src="https://cdn.shopify.com/s/files/1/0169/5584/products/image_150x.jpg?v=1574437087" /></div><div class="samplepack-text"><b>500+ Samples of the Noise Engineering Basimilus Iteritas Alter for $5</b><p>Support SynthModes by buying our new sample pack.  Free demo pack available!</p></div></div></div></a><div class="synthmodes-footer"><div class="synthmodes-footer-col"><a href="https://itunes.apple.com/ca/app/modes/id1445358435?mt=8"><svg id="livetype" xmlns="http://www.w3.org/2000/svg" width="119.66407" height="40" viewBox="0 0 119.66407 40"><title>Download_on_the_App_Store_Badge_US-UK_RGB_blk_4SVG_092917</title><g><g><g><path d="M110.13477,0H9.53468c-.3667,0-.729,0-1.09473.002-.30615.002-.60986.00781-.91895.0127A13.21476,13.21476,0,0,0,5.5171.19141a6.66509,6.66509,0,0,0-1.90088.627A6.43779,6.43779,0,0,0,1.99757,1.99707,6.25844,6.25844,0,0,0,.81935,3.61816a6.60119,6.60119,0,0,0-.625,1.90332,12.993,12.993,0,0,0-.1792,2.002C.00587,7.83008.00489,8.1377,0,8.44434V31.5586c.00489.3105.00587.6113.01515.9219a12.99232,12.99232,0,0,0,.1792,2.0019,6.58756,6.58756,0,0,0,.625,1.9043A6.20778,6.20778,0,0,0,1.99757,38.001a6.27445,6.27445,0,0,0,1.61865,1.1787,6.70082,6.70082,0,0,0,1.90088.6308,13.45514,13.45514,0,0,0,2.0039.1768c.30909.0068.6128.0107.91895.0107C8.80567,40,9.168,40,9.53468,40H110.13477c.3594,0,.7246,0,1.084-.002.3047,0,.6172-.0039.9219-.0107a13.279,13.279,0,0,0,2-.1768,6.80432,6.80432,0,0,0,1.9082-.6308,6.27742,6.27742,0,0,0,1.6172-1.1787,6.39482,6.39482,0,0,0,1.1816-1.6143,6.60413,6.60413,0,0,0,.6191-1.9043,13.50643,13.50643,0,0,0,.1856-2.0019c.0039-.3106.0039-.6114.0039-.9219.0078-.3633.0078-.7246.0078-1.0938V9.53613c0-.36621,0-.72949-.0078-1.09179,0-.30664,0-.61426-.0039-.9209a13.5071,13.5071,0,0,0-.1856-2.002,6.6177,6.6177,0,0,0-.6191-1.90332,6.46619,6.46619,0,0,0-2.7988-2.7998,6.76754,6.76754,0,0,0-1.9082-.627,13.04394,13.04394,0,0,0-2-.17676c-.3047-.00488-.6172-.01074-.9219-.01269-.3594-.002-.7246-.002-1.084-.002Z" style="fill: #a6a6a6"></path><path d="M8.44483,39.125c-.30468,0-.602-.0039-.90429-.0107a12.68714,12.68714,0,0,1-1.86914-.1631,5.88381,5.88381,0,0,1-1.65674-.5479,5.40573,5.40573,0,0,1-1.397-1.0166,5.32082,5.32082,0,0,1-1.02051-1.3965,5.72186,5.72186,0,0,1-.543-1.6572,12.41351,12.41351,0,0,1-.1665-1.875c-.00634-.2109-.01464-.9131-.01464-.9131V8.44434S.88185,7.75293.8877,7.5498a12.37039,12.37039,0,0,1,.16553-1.87207,5.7555,5.7555,0,0,1,.54346-1.6621A5.37349,5.37349,0,0,1,2.61183,2.61768,5.56543,5.56543,0,0,1,4.01417,1.59521a5.82309,5.82309,0,0,1,1.65332-.54394A12.58589,12.58589,0,0,1,7.543.88721L8.44532.875H111.21387l.9131.0127a12.38493,12.38493,0,0,1,1.8584.16259,5.93833,5.93833,0,0,1,1.6709.54785,5.59374,5.59374,0,0,1,2.415,2.41993,5.76267,5.76267,0,0,1,.5352,1.64892,12.995,12.995,0,0,1,.1738,1.88721c.0029.2832.0029.5874.0029.89014.0079.375.0079.73193.0079,1.09179V30.4648c0,.3633,0,.7178-.0079,1.0752,0,.3252,0,.6231-.0039.9297a12.73126,12.73126,0,0,1-.1709,1.8535,5.739,5.739,0,0,1-.54,1.67,5.48029,5.48029,0,0,1-1.0156,1.3857,5.4129,5.4129,0,0,1-1.3994,1.0225,5.86168,5.86168,0,0,1-1.668.5498,12.54218,12.54218,0,0,1-1.8692.1631c-.2929.0068-.5996.0107-.8974.0107l-1.084.002Z"></path></g><g id="_Group_" data-name="&lt;Group>"><g id="_Group_2" data-name="&lt;Group>"><g id="_Group_3" data-name="&lt;Group>"><path id="_Path_" data-name="&lt;Path>" d="M24.76888,20.30068a4.94881,4.94881,0,0,1,2.35656-4.15206,5.06566,5.06566,0,0,0-3.99116-2.15768c-1.67924-.17626-3.30719,1.00483-4.1629,1.00483-.87227,0-2.18977-.98733-3.6085-.95814a5.31529,5.31529,0,0,0-4.47292,2.72787c-1.934,3.34842-.49141,8.26947,1.3612,10.97608.9269,1.32535,2.01018,2.8058,3.42763,2.7533,1.38706-.05753,1.9051-.88448,3.5794-.88448,1.65876,0,2.14479.88448,3.591.8511,1.48838-.02416,2.42613-1.33124,3.32051-2.66914a10.962,10.962,0,0,0,1.51842-3.09251A4.78205,4.78205,0,0,1,24.76888,20.30068Z" style="fill: #fff"></path><path id="_Path_2" data-name="&lt;Path>" d="M22.03725,12.21089a4.87248,4.87248,0,0,0,1.11452-3.49062,4.95746,4.95746,0,0,0-3.20758,1.65961,4.63634,4.63634,0,0,0-1.14371,3.36139A4.09905,4.09905,0,0,0,22.03725,12.21089Z" style="fill: #fff"></path></g></g><g><path d="M42.30227,27.13965h-4.7334l-1.13672,3.35645H34.42727l4.4834-12.418h2.083l4.4834,12.418H43.438ZM38.0591,25.59082h3.752l-1.84961-5.44727h-.05176Z" style="fill: #fff"></path><path d="M55.15969,25.96973c0,2.81348-1.50586,4.62109-3.77832,4.62109a3.0693,3.0693,0,0,1-2.84863-1.584h-.043v4.48438h-1.8584V21.44238H48.4302v1.50586h.03418a3.21162,3.21162,0,0,1,2.88281-1.60059C53.645,21.34766,55.15969,23.16406,55.15969,25.96973Zm-1.91016,0c0-1.833-.94727-3.03809-2.39258-3.03809-1.41992,0-2.375,1.23047-2.375,3.03809,0,1.82422.95508,3.0459,2.375,3.0459C52.30227,29.01563,53.24953,27.81934,53.24953,25.96973Z" style="fill: #fff"></path><path d="M65.12453,25.96973c0,2.81348-1.50586,4.62109-3.77832,4.62109a3.0693,3.0693,0,0,1-2.84863-1.584h-.043v4.48438h-1.8584V21.44238H58.395v1.50586h.03418A3.21162,3.21162,0,0,1,61.312,21.34766C63.60988,21.34766,65.12453,23.16406,65.12453,25.96973Zm-1.91016,0c0-1.833-.94727-3.03809-2.39258-3.03809-1.41992,0-2.375,1.23047-2.375,3.03809,0,1.82422.95508,3.0459,2.375,3.0459C62.26711,29.01563,63.21438,27.81934,63.21438,25.96973Z" style="fill: #fff"></path><path d="M71.71047,27.03613c.1377,1.23145,1.334,2.04,2.96875,2.04,1.56641,0,2.69336-.80859,2.69336-1.91895,0-.96387-.67969-1.541-2.28906-1.93652l-1.60937-.3877c-2.28027-.55078-3.33887-1.61719-3.33887-3.34766,0-2.14258,1.86719-3.61426,4.51855-3.61426,2.624,0,4.42285,1.47168,4.4834,3.61426h-1.876c-.1123-1.23926-1.13672-1.9873-2.63379-1.9873s-2.52148.75684-2.52148,1.8584c0,.87793.6543,1.39453,2.25488,1.79l1.36816.33594c2.54785.60254,3.60645,1.626,3.60645,3.44238,0,2.32324-1.85059,3.77832-4.79395,3.77832-2.75391,0-4.61328-1.4209-4.7334-3.667Z" style="fill: #fff"></path><path d="M83.34621,19.2998v2.14258h1.72168v1.47168H83.34621v4.99121c0,.77539.34473,1.13672,1.10156,1.13672a5.80752,5.80752,0,0,0,.61133-.043v1.46289a5.10351,5.10351,0,0,1-1.03223.08594c-1.833,0-2.54785-.68848-2.54785-2.44434V22.91406H80.16262V21.44238H81.479V19.2998Z" style="fill: #fff"></path><path d="M86.065,25.96973c0-2.84863,1.67773-4.63867,4.29395-4.63867,2.625,0,4.29492,1.79,4.29492,4.63867,0,2.85645-1.66113,4.63867-4.29492,4.63867C87.72609,30.6084,86.065,28.82617,86.065,25.96973Zm6.69531,0c0-1.9541-.89551-3.10742-2.40137-3.10742s-2.40039,1.16211-2.40039,3.10742c0,1.96191.89453,3.10645,2.40039,3.10645S92.76027,27.93164,92.76027,25.96973Z" style="fill: #fff"></path><path d="M96.18606,21.44238h1.77246v1.541h.043a2.1594,2.1594,0,0,1,2.17773-1.63574,2.86616,2.86616,0,0,1,.63672.06934v1.73828a2.59794,2.59794,0,0,0-.835-.1123,1.87264,1.87264,0,0,0-1.93652,2.083v5.37012h-1.8584Z" style="fill: #fff"></path><path d="M109.3843,27.83691c-.25,1.64355-1.85059,2.77148-3.89844,2.77148-2.63379,0-4.26855-1.76465-4.26855-4.5957,0-2.83984,1.64355-4.68164,4.19043-4.68164,2.50488,0,4.08008,1.7207,4.08008,4.46582v.63672h-6.39453v.1123a2.358,2.358,0,0,0,2.43555,2.56445,2.04834,2.04834,0,0,0,2.09082-1.27344Zm-6.28223-2.70215h4.52637a2.1773,2.1773,0,0,0-2.2207-2.29785A2.292,2.292,0,0,0,103.10207,25.13477Z" style="fill: #fff"></path></g></g></g><g id="_Group_4" data-name="&lt;Group>"><g><path d="M37.82619,8.731a2.63964,2.63964,0,0,1,2.80762,2.96484c0,1.90625-1.03027,3.002-2.80762,3.002H35.67092V8.731Zm-1.22852,5.123h1.125a1.87588,1.87588,0,0,0,1.96777-2.146,1.881,1.881,0,0,0-1.96777-2.13379h-1.125Z" style="fill: #fff"></path><path d="M41.68068,12.44434a2.13323,2.13323,0,1,1,4.24707,0,2.13358,2.13358,0,1,1-4.24707,0Zm3.333,0c0-.97607-.43848-1.54687-1.208-1.54687-.77246,0-1.207.5708-1.207,1.54688,0,.98389.43457,1.55029,1.207,1.55029C44.57522,13.99463,45.01369,13.42432,45.01369,12.44434Z" style="fill: #fff"></path><path d="M51.57326,14.69775h-.92187l-.93066-3.31641h-.07031l-.92676,3.31641h-.91309l-1.24121-4.50293h.90137l.80664,3.436h.06641l.92578-3.436h.85254l.92578,3.436h.07031l.80273-3.436h.88867Z" style="fill: #fff"></path><path d="M53.85354,10.19482H54.709v.71533h.06641a1.348,1.348,0,0,1,1.34375-.80225,1.46456,1.46456,0,0,1,1.55859,1.6748v2.915h-.88867V12.00586c0-.72363-.31445-1.0835-.97168-1.0835a1.03294,1.03294,0,0,0-1.0752,1.14111v2.63428h-.88867Z" style="fill: #fff"></path><path d="M59.09377,8.437h.88867v6.26074h-.88867Z" style="fill: #fff"></path><path d="M61.21779,12.44434a2.13346,2.13346,0,1,1,4.24756,0,2.1338,2.1338,0,1,1-4.24756,0Zm3.333,0c0-.97607-.43848-1.54687-1.208-1.54687-.77246,0-1.207.5708-1.207,1.54688,0,.98389.43457,1.55029,1.207,1.55029C64.11232,13.99463,64.5508,13.42432,64.5508,12.44434Z" style="fill: #fff"></path><path d="M66.4009,13.42432c0-.81055.60352-1.27783,1.6748-1.34424l1.21973-.07031v-.38867c0-.47559-.31445-.74414-.92187-.74414-.49609,0-.83984.18213-.93848.50049h-.86035c.09082-.77344.81836-1.26953,1.83984-1.26953,1.12891,0,1.76563.562,1.76563,1.51318v3.07666h-.85547v-.63281h-.07031a1.515,1.515,0,0,1-1.35254.707A1.36026,1.36026,0,0,1,66.4009,13.42432Zm2.89453-.38477v-.37646l-1.09961.07031c-.62012.0415-.90137.25244-.90137.64941,0,.40527.35156.64111.835.64111A1.0615,1.0615,0,0,0,69.29543,13.03955Z" style="fill: #fff"></path><path d="M71.34816,12.44434c0-1.42285.73145-2.32422,1.86914-2.32422a1.484,1.484,0,0,1,1.38086.79h.06641V8.437h.88867v6.26074h-.85156v-.71143h-.07031a1.56284,1.56284,0,0,1-1.41406.78564C72.0718,14.772,71.34816,13.87061,71.34816,12.44434Zm.918,0c0,.95508.4502,1.52979,1.20313,1.52979.749,0,1.21191-.583,1.21191-1.52588,0-.93848-.46777-1.52979-1.21191-1.52979C72.72121,10.91846,72.26613,11.49707,72.26613,12.44434Z" style="fill: #fff"></path><path d="M79.23,12.44434a2.13323,2.13323,0,1,1,4.24707,0,2.13358,2.13358,0,1,1-4.24707,0Zm3.333,0c0-.97607-.43848-1.54687-1.208-1.54687-.77246,0-1.207.5708-1.207,1.54688,0,.98389.43457,1.55029,1.207,1.55029C82.12453,13.99463,82.563,13.42432,82.563,12.44434Z" style="fill: #fff"></path><path d="M84.66945,10.19482h.85547v.71533h.06641a1.348,1.348,0,0,1,1.34375-.80225,1.46456,1.46456,0,0,1,1.55859,1.6748v2.915H87.605V12.00586c0-.72363-.31445-1.0835-.97168-1.0835a1.03294,1.03294,0,0,0-1.0752,1.14111v2.63428h-.88867Z" style="fill: #fff"></path><path d="M93.51516,9.07373v1.1416h.97559v.74854h-.97559V13.2793c0,.47168.19434.67822.63672.67822a2.96657,2.96657,0,0,0,.33887-.02051v.74023a2.9155,2.9155,0,0,1-.4834.04541c-.98828,0-1.38184-.34766-1.38184-1.21582v-2.543h-.71484v-.74854h.71484V9.07373Z" style="fill: #fff"></path><path d="M95.70461,8.437h.88086v2.48145h.07031a1.3856,1.3856,0,0,1,1.373-.80664,1.48339,1.48339,0,0,1,1.55078,1.67871v2.90723H98.69v-2.688c0-.71924-.335-1.0835-.96289-1.0835a1.05194,1.05194,0,0,0-1.13379,1.1416v2.62988h-.88867Z" style="fill: #fff"></path><path d="M104.76125,13.48193a1.828,1.828,0,0,1-1.95117,1.30273A2.04531,2.04531,0,0,1,100.73,12.46045a2.07685,2.07685,0,0,1,2.07617-2.35254c1.25293,0,2.00879.856,2.00879,2.27V12.688h-3.17969v.0498a1.1902,1.1902,0,0,0,1.19922,1.29,1.07934,1.07934,0,0,0,1.07129-.5459Zm-3.126-1.45117h2.27441a1.08647,1.08647,0,0,0-1.1084-1.1665A1.15162,1.15162,0,0,0,101.63527,12.03076Z" style="fill: #fff"></path></g></g></g></svg><div>Get SynthModes for iOS</div></a></div><div class="synthmodes-footer-col"><div>By <b>tom@burns.ca</b></div><a href="https://github.com/boourns">Github</a><a href="https://instagram.com/gravitronic">Instagram</a><a href="https://twitter.com/burnsAudio">Twitter</a></div><div class="synthmodes-footer-col"><a href="https://sequencer.party">Sequencer Party: a multiplayer audio, midi, and video web platform</a></div></div></div></div></div></body></html>
